@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">SAPA Stats</string>
+    <string name="title_activity_main">SAPA Stats</string>
+    <string name="package_name">com.sapastats.app</string>
+    <string name="custom_url_scheme">com.sapastats.app</string>
+</resources>
