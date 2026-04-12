@@ -1,11 +1,8 @@
 [build]
 builder = "NIXPACKS"
+buildCommand = "cd backend && pip install -r requirements.txt"
 
 [deploy]
-startCommand = "gunicorn app.main:app --workers 2 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:$PORT"
+startCommand = "cd backend && python -m uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000} --workers 2"
 healthcheckPath = "/health"
 restartPolicyType = "ON_FAILURE"
-
-[[services]]
-name = "backend"
-rootDir = "backend"
