@@ -6,6 +6,8 @@ import { AuthProvider } from './hooks/useAuth'
 import App from './App'
 import './index.css'
 
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/'
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: { staleTime: 30_000, retry: 1 },
@@ -15,7 +17,7 @@ const queryClient = new QueryClient({
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <AuthProvider>
           <App />
         </AuthProvider>
