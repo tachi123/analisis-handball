@@ -10,7 +10,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 export default defineConfig(({ command }) => ({
   plugins: [react()],
   // GitHub Pages sirve desde /analisis-handball/ — solo en build
-  base: command === 'build' ? (process.env.VITE_BASE ?? '/') : '/',
+  base: command === 'build' ? '/analisis-handball/' : '/',
   css: {
     postcss: {
       plugins: [

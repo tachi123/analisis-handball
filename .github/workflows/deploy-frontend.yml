@@ -35,8 +35,7 @@ jobs:
 
       - run: npm run build
         env:
-          VITE_API_URL: ${{ vars.VITE_API_URL }}
-          VITE_BASE: ${{ vars.VITE_BASE || '/' }}
+          VITE_API_URL: ${{ vars.VITE_API_URL || 'https://analisis-handball-production.up.railway.app' }}
 
       - uses: actions/upload-pages-artifact@v3
         with:
