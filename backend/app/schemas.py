@@ -282,3 +282,38 @@ class ChangePasswordRequest(BaseModel):
         if len(v) < 8:
             raise ValueError("password must be at least 8 characters")
         return v
+
+# ─── Goalkeeper shots ─────────────────────────────────────────────────────────
+
+GoalkeeperOriginZone = Literal[
+    "6m_left", "6m_center", "6m_right",
+    "9m_left", "9m_center", "9m_right",
+    "wing_left", "wing_right", "seven_meter", "counter",
+]
+GoalkeeperTargetZone = Literal[
+    "high_left", "high_center", "high_right",
+    "low_left", "low_center", "low_right",
+]
+GoalkeeperShotType = Literal["power", "spin", "lob"]
+GoalkeeperOutcome = Literal["goal", "saved", "missed", "woodwork", "blocked"]
+
+
+class GoalkeeperShotCreate(BaseModel):
+    shooter_player_id: Optional[int] = None
+    shooter_label: Optional[str] = Field(default=None, max_length=16)
+    period: Optional[int] = None
+    video_timestamp: Optional[float] = Field(default=None, ge=0)
+    origin_zone: Optional[GoalkeeperOriginZone] = None
+    target_zone: Optional[GoalkeeperTargetZone] = None
+    shot_type: Optional[GoalkeeperShotType] = None
+    outcome: Optional[GoalkeeperOutcome] = None
+    note: Optional[str] = None
+
+
+class GoalkeeperShot(GoalkeeperShotCreate):
+    id: int
+    match_id: int
+    created_at: datetime
+
+    class Config:
+        from_attributes = True

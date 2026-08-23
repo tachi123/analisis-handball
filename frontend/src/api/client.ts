@@ -1,5 +1,6 @@
 import axios from 'axios'
 import type {
+import type { GoalkeeperShot, GoalkeeperShotCreate } from '../types'
   Tournament, Team, Player, Match, MatchSquad, Event, Clip,
   TokenResponse, UserRead,
 } from '../types'
@@ -101,3 +102,11 @@ export const parsePDF = (file: File) => {
   form.append('file', file)
   return http.post('/pdf/parse', form).then(r => r.data)
 }
+
+// ─── Goalkeeper shots ─────────────────────────────────────────────────────────
+export const createGoalkeeperShot = (matchId: number, d: Partial<GoalkeeperShotCreate>) =>
+  http.post<GoalkeeperShot>(`/matches/${matchId}/goalkeeper-shots`, d).then(r => r.data)
+export const listGoalkeeperShots = (matchId: number) =>
+  http.get<GoalkeeperShot[]>(`/matches/${matchId}/goalkeeper-shots`).then(r => r.data)
+export const deleteGoalkeeperShot = (matchId: number, shotId: number) =>
+  http.delete(`/matches/${matchId}/goalkeeper-shots/${shotId}`)

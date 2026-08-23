@@ -9,6 +9,7 @@ import PlayersPage from './pages/PlayersPage'
 import MatchLive from './pages/MatchLive'
 import StatisticsPage from './pages/StatisticsPage'
 import SquadPage from './pages/SquadPage'
+import GoalkeeperMode from './pages/GoalkeeperMode'
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
       <Route path="/match/:matchId/live" element={<ProtectedRoute><MatchLive /></ProtectedRoute>} />
       <Route path="/match/:matchId/stats" element={<ProtectedRoute><StatisticsPage /></ProtectedRoute>} />
       <Route path="/match/:matchId/squad" element={<ProtectedRoute><SquadPage /></ProtectedRoute>} />
+      <Route path="/match/:matchId/goalkeeper" element={<ProtectedRoute><GoalkeeperMode /></ProtectedRoute>} />
 
       {/* Main layout with bottom nav */}
       <Route element={<ProtectedRoute><Layout /></ProtectedRoute>}>

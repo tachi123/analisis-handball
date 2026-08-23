@@ -74,6 +74,7 @@ class Match(Base):
     home_score = Column(Integer, default=0)
     away_score = Column(Integer, default=0)
     pdf_file_path = Column(String, nullable=True)
+    goalkeeper_shots = relationship("GoalkeeperShot", back_populates="match", cascade="all, delete-orphan")
 
     tournament = relationship("Tournament", back_populates="matches")
     home_team = relationship("Team", foreign_keys=[home_team_id], back_populates="home_matches")
@@ -143,3 +144,23 @@ class Clip(Base):
     player_tags = Column(String, nullable=True)
 
     match = relationship("Match", back_populates="clips")
+
+class GoalkeeperShot(Base):
+    __tablename__ = "goalkeeper_shots"
+
+    id = Column(Integer, primary_key=True, index=True)
+    match_id = Column(Integer, ForeignKey("matches.id"), nullable=False, index=True)
+    shooter_player_id = Column(Integer, ForeignKey("players.id"), nullable=True)
+    shooter_label = Column(String(16), nullable=True)
+    period = Column(Integer, nullable=True)  # 1 or 2
+    video_timestamp = Column(Float, nullable=True)  # reserved for future video sync
+    origin_zone = Column(String(24), nullable=True)
+    target_zone = Column(String(16), nullable=True)
+    shot_type = Column(String(8), nullable=True)
+    outcome = Column(String(12), nullable=True)
+    note = Column(Text, nullable=True)
+    created_by_user_id = Column(Integer, ForeignKey("users.id"), nullable=True)
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
+
+    match = relationship("Match", back_populates="goalkeeper_shots")
+    shooter_player = relationship("Player")

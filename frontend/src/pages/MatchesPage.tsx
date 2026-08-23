@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
-import { Play, Trash2, Plus, FileInput, Users } from 'lucide-react'
+import { Play, Trash2, Plus, FileInput, Users, Shield } from 'lucide-react'
 import { getMatches, createMatch, deleteMatch, getTeams, getTournaments, importPDF } from '../api/client'
 
 export default function MatchesPage() {
@@ -92,6 +92,9 @@ export default function MatchesPage() {
               <div className="flex gap-2 shrink-0">
                 <button onClick={() => navigate(`/match/${m.id}/squad`)} className="btn btn-ghost px-3 py-2 gap-1 text-sm">
                   <Users size={15} /> Plantel
+                </button>
+                <button onClick={() => navigate(`/match/${m.id}/goalkeeper`)} className="btn btn-warning px-3 py-2 gap-1 text-sm">
+                  <Shield size={15} /> Arquero
                 </button>
                 <button onClick={() => navigate(`/match/${m.id}/live`)} className="btn btn-success px-3 py-2 gap-1 text-sm">
                   <Play size={15} /> Analizar

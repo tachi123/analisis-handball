@@ -161,3 +161,36 @@ export const INITIAL_TAG_STATE: TagState = {
   subOutPlayerId: null,
   subInPlayerId: null,
 }
+
+// ─── Goalkeeper mode ──────────────────────────────────────────────────────────
+
+export type GoalkeeperOriginZone =
+  | '6m_left' | '6m_center' | '6m_right'
+  | '9m_left' | '9m_center' | '9m_right'
+  | 'wing_left' | 'wing_right' | 'seven_meter' | 'counter'
+
+export type GoalkeeperTargetZone =
+  | 'high_left' | 'high_center' | 'high_right'
+  | 'low_left' | 'low_center' | 'low_right'
+
+export type GoalkeeperShotType = 'power' | 'spin' | 'lob'
+
+export type GoalkeeperOutcome = 'goal' | 'saved' | 'missed' | 'woodwork' | 'blocked'
+
+export interface GoalkeeperShotCreate {
+  shooter_player_id: number | null
+  shooter_label: string | null
+  period: number | null
+  video_timestamp: number | null
+  origin_zone: GoalkeeperOriginZone | null
+  target_zone: GoalkeeperTargetZone | null
+  shot_type: GoalkeeperShotType | null
+  outcome: GoalkeeperOutcome | null
+  note: string | null
+}
+
+export interface GoalkeeperShot extends GoalkeeperShotCreate {
+  id: number
+  match_id: number
+  created_at: string
+}

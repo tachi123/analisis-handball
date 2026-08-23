@@ -8,7 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 load_dotenv()
 
 from .database import engine, Base, SessionLocal
-from .api.routes import tournaments, teams, players, matches, events, clips, pdf, auth
+from .api.routes import tournaments, teams, players, matches, events, clips, pdf, auth, goalkeeper_shots
 
 # Import all models so SQLAlchemy knows about them before create_all
 from . import models  # noqa: F401
@@ -68,6 +68,7 @@ app.include_router(matches.router, prefix="/api/v1")
 app.include_router(events.router, prefix="/api/v1")
 app.include_router(clips.router, prefix="/api/v1")
 app.include_router(pdf.router, prefix="/api/v1")
+app.include_router(goalkeeper_shots.router, prefix="/api/v1")
 
 
 @app.get("/health")
