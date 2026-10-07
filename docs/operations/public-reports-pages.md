@@ -19,7 +19,7 @@ The workflow runs on every push to `main` that changes files under `reports/` or
 
 | Step | What happens |
 |---|---|
-| `npm --prefix reports run build` | Vite + TypeScript build; `report.json` is copied from `backend/data/public-report.json` into `dist/` |
+| `npm --prefix reports run build` | Vite + TypeScript build; `report.json` is copied from `reports/public/report.json` into `dist/` by Vite |
 | `actions/upload-pages-artifact` | Uploads `reports/dist` as the Pages site root |
 
 **Important:** Do **not** select `frontend/` or `reports/` as a branch folder in the Pages Settings UI.
@@ -40,7 +40,7 @@ npm --prefix reports run build
 The built `reports/dist/` contains:
 - `index.html` — the SPA entry point
 - `assets/` — bundled CSS and JS
-- `report.json` — the canonical public report JSON (embedded at build time from the backend projection)
+- `report.json` — the canonical public report JSON (embedded at build time from the tracked repository file)
 
 ## Report default — no env var required
 
@@ -56,9 +56,10 @@ This is **not** required for basic deployment.
 
 ## Local JSON source
 
-The `report.json` embedded in `dist/` is a deterministic copy from `backend/data/public-report.json`
-(the allowlisted public projection sample). No duplicated or divergent example data is committed; the
-backend is the single canonical source, and the copy is generated automatically by the build script.
+The `report.json` embedded in `dist/` is a deterministic copy from `reports/public/report.json`,
+committed to the repository and copied by Vite at build time. No backend, Docker volume, or untracked
+local file is required. The JSON is the safe public projection sample validated by the projection
+tests and used at runtime as the static report artifact.
 
 ## Verification
 

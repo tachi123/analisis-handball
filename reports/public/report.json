@@ -1,0 +1,53 @@
+{
+  "coaching": {
+    "action": {"kind": "change", "text": "Close the pivot lane."},
+    "pattern_statement": "Three visible actions need adjustment.",
+    "question": "How do we defend the pivot?"
+  },
+  "coverage": {
+    "analyzed_periods": [1],
+    "status": "partial",
+    "label": "First half analysis"
+  },
+  "evidence": [
+    {"clock_unverified": false, "media_available": false, "observation": "Pivot lane remained open.", "period": 1, "reference": "Defensive sequence", "regulation_seconds": 120.0},
+    {"clock_unverified": true, "media_available": true, "media_url": "https://example.test/approved", "observation": "Recovery followed the turnover.", "period": 2, "reference": "Recovery sequence", "regulation_seconds": null},
+    {"clock_unverified": false, "media_available": false, "observation": "Transition recovered shape.", "period": 2, "reference": "Transition sequence", "regulation_seconds": 130.0}
+  ],
+  "match": {"away_team": "Banfield", "date": "2026-08-22", "home_team": "SAPA"},
+  "metrics": {"defensive_action": {"count": 3, "denominator": null}},
+  "players": [
+    {
+      "slug": "john-doe",
+      "name": "John Doe",
+      "jersey_number": "10",
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {"shot_conversion": 0.25, "defensive_action": 3},
+      "evidence": [{"reference": "Defensive sequence", "period": 1}]
+    },
+    {
+      "slug": "jane-smith",
+      "name": "Jane Smith",
+      "jersey_number": "7",
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {"shot_conversion": 0.18, "defensive_action": 2},
+      "evidence": [{"reference": "Recovery sequence", "period": 2}]
+    },
+    {
+      "slug": "gk-1",
+      "name": "Goalkeeper",
+      "jersey_number": "1",
+      "team_side": "home",
+      "role": "goalkeeper",
+      "metrics": {"saves": 7, "save_rate": 0.75, "goals_conceded": 2, "shots_faced": 20},
+      "evidence": [{"reference": "Sequence 3", "period": 1}]
+    }
+  ],
+  "reconciliation": [{"analytical": 27, "official": 28, "side": "home"}],
+  "report_version": 1,
+  "schema_version": "public-report-v1",
+  "source": {"label": "Match broadcast", "status": "public_reference"},
+  "uncertainty_disclosure": "One observation was outside the camera view."
+}
