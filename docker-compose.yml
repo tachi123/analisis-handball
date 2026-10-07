@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   db:
     image: postgres:15
@@ -19,8 +17,32 @@ services:
 
   backend:
     build: ./backend
+    image: analisis-handball-backend
+    env_file:
+      - ${BACKEND_ENV_FILE:-./backend/.env}
     ports:
       - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - ./resources:/app/resources:ro
+    depends_on:
+      db:
+        condition: service_healthy
+      migrate:
+        condition: service_completed_successfully
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/sapa_stats
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  migrate:
+    image: analisis-handball-backend
+    env_file:
+      - ${BACKEND_ENV_FILE:-./backend/.env}
     volumes:
       - ./backend:/app
     depends_on:
@@ -28,11 +50,7 @@ services:
         condition: service_healthy
     environment:
       DATABASE_URL: postgresql://postgres:postgres@db:5432/sapa_stats
-    healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost:8000/health || exit 1"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
+    command: alembic upgrade head
 
   frontend:
     build: ./frontend

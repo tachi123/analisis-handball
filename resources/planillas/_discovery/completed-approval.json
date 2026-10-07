@@ -1,0 +1,191 @@
+{
+  "approval_required": true,
+  "approver": "local-operator",
+  "bootstrap_manifest_sha256": "e3dbac48d17063c098e9089de71cffe73497cecf7fbc9b55f67cf5ce0a6728ef",
+  "bootstrap_report_sha256": "673364b00061f3c0021fc2c71bbf85a190332b3240619577244299086a50886b",
+  "completed_at": "2026-08-26T00:00:00Z",
+  "derived_sha256": "37d9f91d4f119f106afe1d18980ff08941766d259d0efb17eb09e3a9bd2f509a",
+  "manifest_sha256": "073577361393f977603acda98a51599bd1b93e065fb71e9c8ce8615f796e27a4",
+  "mapping_sha256": "3299db0dbca2c6b1c47965a715c772a27ccee5865b5694aa0d0b68d508ad3dc0",
+  "mappings": [
+    {
+      "external_code": "APE_2026_3M_Argentinos_Juniors_D",
+      "source_label": "A.A. Argentinos Juniors D",
+      "stage_key": "apertura-3m-2026"
+    },
+    {
+      "external_code": "APE_2026_3M_AACF_Quilmes_C",
+      "source_label": "A.A.C.F. Quilmes C",
+      "stage_key": "apertura-3m-2026"
+    },
+    {
+      "external_code": "APE_2026_3M_Argentinos_Juniors_D",
+      "source_label": "Argentinos Juniors D",
+      "stage_key": "apertura-3m-2026"
+    },
+    {
+      "external_code": "APE_2026_3M_Banfield_B",
+      "source_label": "C.A. Banfield B",
+      "stage_key": "apertura-3m-2026"
+    },
+    {
+      "external_code": "APE_2026_3M_Defensores_de_Moreno_MAIN",
+      "source_label": "C.A. Defensores de Moreno",
+      "stage_key": "apertura-3m-2026"
+    },
+    {
+      "external_code": "APE_2026_3M_San_Telmo_B",
+      "source_label": "C.A. San Telmo B",
+      "stage_key": "apertura-3m-2026"
+    },
+    {
+      "external_code": "APE_2026_3M_Temperley_MAIN",
+      "source_label": "C.A. Temperley",
+      "stage_key": "apertura-3m-2026"
+    },
+    {
+      "external_code": "APE_2026_3M_Villa_Calzada_MAIN",
+      "source_label": "C.A. y S. Villa Calzada",
+      "stage_key": "apertura-3m-2026"
+    },
+    {
+      "external_code": "APE_2026_3M_Deportivo_Laferrere_MAIN",
+      "source_label": "C.S. y C. Deportivo Laferrere",
+      "stage_key": "apertura-3m-2026"
+    },
+    {
+      "external_code": "APE_2026_3M_CS_y_D_Defensores_de_Banfield_MAIN",
+      "source_label": "C.S. y D. Defensores de Banfield",
+      "stage_key": "apertura-3m-2026"
+    },
+    {
+      "external_code": "APE_2026_3M_CiDeCo_B",
+      "source_label": "Ci.De.Co. B",
+      "stage_key": "apertura-3m-2026"
+    },
+    {
+      "external_code": "APE_2026_3M_Club_Comunicaciones_C",
+      "source_label": "Club Comunicaciones C",
+      "stage_key": "apertura-3m-2026"
+    },
+    {
+      "external_code": "APE_2026_3M_Club_Deportivo_Moron_MAIN",
+      "source_label": "Club Deportivo Morón",
+      "stage_key": "apertura-3m-2026"
+    },
+    {
+      "external_code": "APE_2026_3M_Municipalidad_de_Avellaneda_MAIN",
+      "source_label": "Municipalidad de Avellaneda",
+      "stage_key": "apertura-3m-2026"
+    },
+    {
+      "external_code": "APE_2026_3M_Muñiz_Handball_B",
+      "source_label": "Muñiz Handball B",
+      "stage_key": "apertura-3m-2026"
+    },
+    {
+      "external_code": "APE_2026_3M_SAPA_MAIN",
+      "source_label": "S.A.P.A.",
+      "stage_key": "apertura-3m-2026"
+    },
+    {
+      "external_code": "APE_2026_3M_UNLaM_MAIN",
+      "source_label": "U.N.La.M.",
+      "stage_key": "apertura-3m-2026"
+    },
+    {
+      "external_code": "PER_2026_3M_Argentinos_Juniors_D",
+      "source_label": "A.A. Argentinos Juniors D",
+      "stage_key": "permanencia-3m-2026"
+    },
+    {
+      "external_code": "PER_2026_3M_Banfield_B",
+      "source_label": "C.A. Banfield B",
+      "stage_key": "permanencia-3m-2026"
+    },
+    {
+      "external_code": "PER_2026_3M_Defensores_de_Moreno_MAIN",
+      "source_label": "C.A. Defensores de Moreno",
+      "stage_key": "permanencia-3m-2026"
+    },
+    {
+      "external_code": "PER_2026_3M_Ituzaingo_MAIN",
+      "source_label": "C.A. Ituzaingó",
+      "stage_key": "permanencia-3m-2026"
+    },
+    {
+      "external_code": "PER_2026_3M_Lanus_C",
+      "source_label": "C.A. Lanús C",
+      "stage_key": "permanencia-3m-2026"
+    },
+    {
+      "external_code": "PER_2026_3M_CS_y_D_Defensores_de_Banfield_MAIN",
+      "source_label": "C.S. y D. Defensores de Banfield",
+      "stage_key": "permanencia-3m-2026"
+    },
+    {
+      "external_code": "PER_2026_3M_Club_Deportivo_Moron_MAIN",
+      "source_label": "Club Deportivo Morón",
+      "stage_key": "permanencia-3m-2026"
+    },
+    {
+      "external_code": "PER_2026_3M_Municipalidad_de_Pilar_MAIN",
+      "source_label": "Municipalidad de Pilar",
+      "stage_key": "permanencia-3m-2026"
+    },
+    {
+      "external_code": "PER_2026_3M_Municipalidad_de_San_Martin_CeMEF_MAIN",
+      "source_label": "Municipalidad de San Martín (Ce.M.E.F)",
+      "stage_key": "permanencia-3m-2026"
+    },
+    {
+      "external_code": "PER_2026_3M_Municipalidad_de_Tres_de_Febrero_B",
+      "source_label": "Municipalidad de Tres de Febrero B",
+      "stage_key": "permanencia-3m-2026"
+    },
+    {
+      "external_code": "PER_2026_3M_Municipalidad_de_Vicente_Lopez_C",
+      "source_label": "Municipalidad de Vicente López C",
+      "stage_key": "permanencia-3m-2026"
+    },
+    {
+      "external_code": "PER_2026_3M_Muñiz_Handball_B",
+      "source_label": "Muñiz Handball B",
+      "stage_key": "permanencia-3m-2026"
+    },
+    {
+      "external_code": "PER_2026_3M_Palermo_Handball_MAIN",
+      "source_label": "Palermo Handball",
+      "stage_key": "permanencia-3m-2026"
+    },
+    {
+      "external_code": "PER_2026_3M_SAG_Polvorines_D",
+      "source_label": "S.A.G. Polvorines D",
+      "stage_key": "permanencia-3m-2026"
+    },
+    {
+      "external_code": "PER_2026_3M_SAPA_MAIN",
+      "source_label": "S.A.P.A.",
+      "stage_key": "permanencia-3m-2026"
+    },
+    {
+      "external_code": "PER_2026_3M_UNLaM_MAIN",
+      "source_label": "U.N.La.M.",
+      "stage_key": "permanencia-3m-2026"
+    }
+  ],
+  "pre_derivation_approval_sha256": "4ee0d0850b4e7248debae3c55dd6c8b83fc406d88936ce180bdf161776bf7f79",
+  "reconciliation_report_sha256": "40fc921b31177206a7c7248ead6f4e7bd47a67d1285000b1dc5ce531e9ee1952",
+  "schema_version": 2,
+  "stages": [
+    {
+      "id": 8,
+      "key": "apertura-3m-2026"
+    },
+    {
+      "id": 9,
+      "key": "permanencia-3m-2026"
+    }
+  ],
+  "status": "completed"
+}

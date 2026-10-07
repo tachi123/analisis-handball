@@ -2,7 +2,18 @@
 __pycache__/
 *.pyc
 *.pyo
+# Local environment files, including backend/.env.
 .env
+backend/.env.local
+reports/.env.local
+
+# Generated local public-report projections. Keep the directory convention tracked.
+backend/data/*
+!backend/data/.gitkeep
+
+# Local Google service-account keys. Keep the setup guidance tracked.
+backend/secrets/*
+!backend/secrets/README.md
 
 # Node
 node_modules/
@@ -21,3 +32,6 @@ Thumbs.db
 frontend/android/app/build/
 frontend/android/.gradle/
 frontend/android/build/
+
+# Local agent registry
+.atl/

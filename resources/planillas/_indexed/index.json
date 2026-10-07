@@ -1,0 +1,1231 @@
+{
+  "schema_version": 1,
+  "entries": [
+    {
+      "alias": "2026-03-29_R02_c-a-banfield-b_vs_c-s-y-d-defensores-de-banfield__06e4c463.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/6f168c0ec9b85fe2.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/6f168c0ec9b85fe2.pdf"
+      ],
+      "sha256": "06e4c463611ebffe71b4f3bf397d49aab007cc15ec5f45e5a10f0df0ff6b3f29",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-04-26_R05_c-s-y-d-defensores-de-banfield_vs_c-a-defensores-de-moreno__0a696099.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/b864a52aab3bfaba.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/b864a52aab3bfaba.pdf"
+      ],
+      "sha256": "0a696099cd58dfaefc8084bd229d381d39b5c644668d32c1b8b2227dfba3a846",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-07-05_R14_c-a-san-telmo-b_vs_s-a-p-a__0e537f2b.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/56d571bf94cbbbb9.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/56d571bf94cbbbb9.pdf"
+      ],
+      "sha256": "0e537f2b3856858425f906482b09cc62eb61feef533ec9111a3234b16636810c",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-06-19_R13_s-a-p-a_vs_c-a-defensores-de-moreno__0eb7448c.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/ba02911b82ccf22d.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/ba02911b82ccf22d.pdf"
+      ],
+      "sha256": "0eb7448c991e608e89253e55d6a6b2602cdff9d23af01a52177f795f8ddb54c4",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-04-12_R03_muniz-handball-b_vs_c-a-banfield-b__0fc00279.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/829098b1eeccf484.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/829098b1eeccf484.pdf"
+      ],
+      "sha256": "0fc00279fb787b754aeb1e0d5928a545adf617dc9c6795c889a564c83b4a500f",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-06-28_R13_c-a-temperley_vs_muniz-handball-b__1278e86e.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/6bff97f80652b974.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/6bff97f80652b974.pdf"
+      ],
+      "sha256": "1278e86e9e521523e9a6955acddf7b261cd3b557529d7220613ae357ff339449",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-04-26_R05_c-a-temperley_vs_s-a-p-a__13d2a4c1.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/13634cb9265fb639.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/13634cb9265fb639.pdf"
+      ],
+      "sha256": "13d2a4c1d53bf1e446259766b3786cef520ad082d807806fc2ddcc0caf319d8b",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-06-14_R12_c-a-y-s-villa-calzada_vs_a-a-argentinos-juniors-d__16279ade.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/2f3b3adfa6080a74.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/2f3b3adfa6080a74.pdf"
+      ],
+      "sha256": "16279ade5fb74f21bf420e4d9ddae41cee32e6c37bcad81dec286961166fd156",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-04-12_R03_a-a-c-f-quilmes-c_vs_c-s-y-c-deportivo-laferrere__168b3d46.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/a1f001feaf543c73.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/a1f001feaf543c73.pdf"
+      ],
+      "sha256": "168b3d46d6c85885a06f4a1d2c2ff433beec63922bd6ae073294c319bc20b2bf",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-04-12_R03_c-s-y-d-defensores-de-banfield_vs_c-a-y-s-villa-calzada__1bf41516.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/df5dca93a384e19f.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/df5dca93a384e19f.pdf"
+      ],
+      "sha256": "1bf41516f6be75a9d72ac0eede645437033a6015acf91a0a67a64b300ff1385b",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-17_R08_c-a-y-s-villa-calzada_vs_c-a-temperley__1fbbb383.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/fe9ebf5eb3272f61.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/fe9ebf5eb3272f61.pdf"
+      ],
+      "sha256": "1fbbb38361b8f25e0563756de70f194682de91896ab01a999631af013400a677",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-10_R07_ci-de-co-b_vs_club-comunicaciones-c__207bdc5f.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/486d6ca266fcb9bb.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/486d6ca266fcb9bb.pdf"
+      ],
+      "sha256": "207bdc5fa31ccf658448c3b7a3226da34632d35c0cd99a499c5ea4d9be4df042",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-04-12_R03_municipalidad-de-avellaneda_vs_argentinos-juniors-d__207f1af4.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/a74f5a30a394c7af.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/a74f5a30a394c7af.pdf"
+      ],
+      "sha256": "207f1af47e6bc068ad280ee0a3a5dcdd6ae5c12683b2722587d6df62c8caeacd",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-03-22_R01_club-comunicaciones-c_vs_u-n-la-m__21948b1a.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/dc06c1178a1a2a91.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/dc06c1178a1a2a91.pdf"
+      ],
+      "sha256": "21948b1ae52b2c0d0b2e07b792c3b2830ef7d367d0b8e6ed5725aa160fd7514c",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-24_R09_s-a-p-a_vs_a-a-argentinos-juniors-d__23b5eb48.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/38021ea069fd0156.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/38021ea069fd0156.pdf"
+      ],
+      "sha256": "23b5eb48bb4e7beac720c4109f2f532666635b53b46d6218b0ca155f9ef8ec87",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-31_R10_c-a-san-telmo-b_vs_a-a-c-f-quilmes-c__24e27472.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/07f2e237db40587a.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/07f2e237db40587a.pdf"
+      ],
+      "sha256": "24e274727bcc3201f68420b64b7b1080b977f91dd88193d8cbad0285fa5b2d14",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-17_R08_c-a-banfield-b_vs_club-deportivo-moron__24e9dcbb.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/9a1c89fe8c27704f.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/9a1c89fe8c27704f.pdf"
+      ],
+      "sha256": "24e9dcbb7ab0718fb7d04d56f247c737e21a414d5350d85a982a0d2d941666bb",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-07-05_R14_muniz-handball-b_vs_club-deportivo-moron__24ebf1c0.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/7ac88fd662d58aec.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/7ac88fd662d58aec.pdf"
+      ],
+      "sha256": "24ebf1c0a0a7c8c1866e3bf26d79e597b4e09277d9408a6cf16a8c1987507ee7",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-06-14_R12_u-n-la-m_vs_c-a-banfield-b__25f922e7.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/d95a36836377514b.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/d95a36836377514b.pdf"
+      ],
+      "sha256": "25f922e7569d1a9700d6f774c831719430d5e5488e71994f8af7b3064188c803",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-07-12_R15_c-a-banfield-b_vs_c-a-defensores-de-moreno__26504f88.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/ce47040500bfe0e6.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/ce47040500bfe0e6.pdf"
+      ],
+      "sha256": "26504f886b3f243b0bc3644ed074228e43fc39c6da3a40cd36bb92f2911bfc9e",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-08-09_R01_municipalidad-de-vicente-lopez-c_vs_a-a-argentinos-juniors-d__2ce572e6.pdf",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/16d6148cbc7781f1.pdf",
+      "source_aliases": [
+        "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/16d6148cbc7781f1.pdf"
+      ],
+      "sha256": "2ce572e6f8645e7f16e4d82c20dc51e6590c5b5001070b6170e5d7d2b164ff52",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-17_R08_club-comunicaciones-c_vs_a-a-c-f-quilmes-c__2dcf5fd7.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/d4ff0312de1eb6d7.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/d4ff0312de1eb6d7.pdf"
+      ],
+      "sha256": "2dcf5fd7262251c696ea480d249ca1eadc77bac7e4844d3417e37fb171671fc7",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-08-23_R03_u-n-la-m_vs_c-a-lanus-c__2fc5d985.pdf",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/062fd3f3ce3e2a7d.pdf",
+      "source_aliases": [
+        "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/062fd3f3ce3e2a7d.pdf"
+      ],
+      "sha256": "2fc5d9859ad96c6c83f95f6496b5e0bd1a76064c5983aff71b5fd01ee6976bfa",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-06-07_R11_s-a-p-a_vs_c-a-y-s-villa-calzada__333556da.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/7164158c7b0e9b17.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/7164158c7b0e9b17.pdf"
+      ],
+      "sha256": "333556da08f99ab942a23426cad608f619fdd5dc4675be6d464f5583e4cac8a3",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-08-09_R01_c-a-banfield-b_vs_c-a-lanus-c__35b39177.pdf",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/d8ef269c971ea205.pdf",
+      "source_aliases": [
+        "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/d8ef269c971ea205.pdf"
+      ],
+      "sha256": "35b3917707dd4c46976425bd0b770563f4e8472a7fc4c898113f2e452d275ac1",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-07-05_R14_club-comunicaciones-c_vs_c-a-banfield-b__35fa364c.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/6d7ccc8fe30831cf (1).pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/6d7ccc8fe30831cf (1).pdf",
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/6d7ccc8fe30831cf.pdf"
+      ],
+      "sha256": "35fa364c0f53986a721029922ce4d3b8cc4ae7c294d8168126a3728debd35d69",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-31_R10_club-comunicaciones-c_vs_club-deportivo-moron__369eac01.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/ca55f65bd7134370.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/ca55f65bd7134370.pdf"
+      ],
+      "sha256": "369eac01bed1021b9d99704da60e4f6668ebf0574c18bd946e9759fc6e9dfb05",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-03-22_R01_a-a-c-f-quilmes-c_vs_c-a-temperley__3b7a8440.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/6d9931ada2d7734a.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/6d9931ada2d7734a.pdf"
+      ],
+      "sha256": "3b7a8440422c3bbb3e2686f73174e513b71134c3f718ff8b5514989ac1b6369b",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-06-28_R13_ci-de-co-b_vs_u-n-la-m__3cfe5c6d.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/152f984e63657c8c.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/152f984e63657c8c.pdf"
+      ],
+      "sha256": "3cfe5c6d756c3639cc40674ef9c381200940af7c7f4e1736858323b8082140d0",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-17_R08_c-a-san-telmo-b_vs_municipalidad-de-avellaneda__3e781047.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/49f6754370f5d551.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/49f6754370f5d551.pdf"
+      ],
+      "sha256": "3e7810474762db54f0f9a0db84b838324c62a05cf4d318a292cbb92cf81e7f65",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-06-07_R11_a-a-c-f-quilmes-c_vs_c-s-y-d-defensores-de-banfield__3ed3d994.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/59b673d51da07b1f.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/59b673d51da07b1f.pdf"
+      ],
+      "sha256": "3ed3d994a805eb2bd0c12a3a5eca1d462f99baa3b07bcc41f8032704e8baf71b",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-06-07_R11_ci-de-co-b_vs_muniz-handball-b__40ab36dc.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/0c79b219b176862c.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/0c79b219b176862c.pdf"
+      ],
+      "sha256": "40ab36dc9297a4d9fcababf3e5e830d805cb63ce79bf62d4ada4b2b12fb7f986",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-06-28_R13_club-deportivo-moron_vs_c-s-y-d-defensores-de-banfield__40b613ae.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/852be694ed6784f8.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/852be694ed6784f8.pdf"
+      ],
+      "sha256": "40b613aeb7d29354443811cb6da6cd6369a6c36fcaaefb54225ce7cf45c2ac39",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-04-26_R05_muniz-handball-b_vs_club-comunicaciones-c__4151405e.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/f2c384032d4a4985.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/f2c384032d4a4985.pdf"
+      ],
+      "sha256": "4151405ebcc47970b8daa6a19fb361aaa1b250ea5465039ab5951cae8aa3d26f",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-06-07_R11_c-a-temperley_vs_c-a-san-telmo-b__47ded21b.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/3f70e14e20353910.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/3f70e14e20353910.pdf"
+      ],
+      "sha256": "47ded21b080d14f8c4a6b7770530ee8950b1c82e31d8f194ae422acdff664c38",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-10_R07_c-s-y-c-deportivo-laferrere_vs_s-a-p-a__49675794.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/285dd1fa68a692f2.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/285dd1fa68a692f2.pdf"
+      ],
+      "sha256": "49675794cc227b894bb2c8dd22e51b206e6fbb9d46b61def8bf7e052e604cb95",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-03_R06_c-a-y-s-villa-calzada_vs_ci-de-co-b__4a589170.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/58ee9bd4531ecd7a.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/58ee9bd4531ecd7a.pdf"
+      ],
+      "sha256": "4a5891705bf61bfae652269f3da86a34e2baeb06bfb50dc4ba487b9a6498f32f",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-03-29_R02_c-s-y-c-deportivo-laferrere_vs_ci-de-co-b__4fcc6f38.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/d2b6e958d4a840f7.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/d2b6e958d4a840f7.pdf"
+      ],
+      "sha256": "4fcc6f3889f5bec4996c41a2d066b76980f80faff017b1c39faf15deae69cd1f",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-06-07_R11_a-a-argentinos-juniors-d_vs_c-a-banfield-b__51b6349b.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/f96c81b6a0f137ed.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/f96c81b6a0f137ed.pdf"
+      ],
+      "sha256": "51b6349b1e8f6f1419a723ac52fb9830e78aa29086465240512000646b66fbc3",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-08-23_R03_c-a-banfield-b_vs_a-a-argentinos-juniors-d__5400cb62.pdf",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/bda2a671671299ab.pdf",
+      "source_aliases": [
+        "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/bda2a671671299ab.pdf"
+      ],
+      "sha256": "5400cb62deebca2df67d907ecff6d913e3e9e678ecf666f5ef7f0b52d7308361",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-07-12_R15_a-a-c-f-quilmes-c_vs_u-n-la-m__573c78c3.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/4a07ff340fa7fe4b.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/4a07ff340fa7fe4b.pdf"
+      ],
+      "sha256": "573c78c394d710be6107b20ea2fbfb60afee8d25824d9bd580037bfb537272b3",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-17_R08_c-a-defensores-de-moreno_vs_ci-de-co-b__58cb62e2.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/a646d2dc7b0e0ee9.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/a646d2dc7b0e0ee9.pdf"
+      ],
+      "sha256": "58cb62e2fd0319c80bafa7e06d9324849c2c27703ddf48fd62fdf90bc14f5ade",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-08-23_R03_s-a-p-a_vs_muniz-handball-b__59c228ac.pdf",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/5496c027c6078240.pdf",
+      "source_aliases": [
+        "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/5496c027c6078240.pdf"
+      ],
+      "sha256": "59c228ac46e374907c264c8ce05fc5f20f00904d4b95fc08e8433da48d223ff5",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-07-12_R15_s-a-p-a_vs_c-s-y-d-defensores-de-banfield__5acbd4c9.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/27b54eb4419ddf53.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/27b54eb4419ddf53.pdf"
+      ],
+      "sha256": "5acbd4c9f7ac6a9ef3f9fb7fc0c274645dfb07fddfbbc48ea46f0dd825e55367",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-04-19_R04_a-a-argentinos-juniors-d_vs_ci-de-co-b__5c2c13fe.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/c525323af9c720b4.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/c525323af9c720b4.pdf"
+      ],
+      "sha256": "5c2c13fe86a932a169b00bdc8247936c4fc44df18c00c4506678893d4a964a66",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-06-14_R12_c-a-san-telmo-b_vs_club-deportivo-moron__5c36c5a2.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/1aa27e69f63bbc90.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/1aa27e69f63bbc90.pdf"
+      ],
+      "sha256": "5c36c5a2dc36f7f61c6ad692ae5698b8bb29b77f9bdfc146030506b572239cdd",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-07-12_R15_c-a-temperley_vs_ci-de-co-b__5e3e128b.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/107d56dce23e03a2.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/107d56dce23e03a2.pdf"
+      ],
+      "sha256": "5e3e128bd36babde193e15fda96ff8032f43024037e09233fb49d09bd0b212f4",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-06-14_R12_club-comunicaciones-c_vs_s-a-p-a__5eff874a.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/73e30be34e88b1f7.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/73e30be34e88b1f7.pdf"
+      ],
+      "sha256": "5eff874a37b19c1bfaec602a13f7038402efb9dc925357a749bb17e329b50ed4",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-24_R09_c-a-temperley_vs_club-comunicaciones-c__5f22abc9.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/2e8ba29b821a9ca8.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/2e8ba29b821a9ca8.pdf"
+      ],
+      "sha256": "5f22abc924afc68c2cda3d5f7cbbba3c28c56fd0b524a43eb6aa5d7e1255b2ba",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-03_R06_a-a-argentinos-juniors-d_vs_c-a-temperley__6284e655.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/be3f3e7b7706bf68.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/be3f3e7b7706bf68.pdf"
+      ],
+      "sha256": "6284e655afffe3a2d36c3376e040449ea7ef46998a502a4698b6207f874e5d8d",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-08-16_R02_c-a-defensores-de-moreno_vs_u-n-la-m__629f2340.pdf",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/a6227725aac5bc59.pdf",
+      "source_aliases": [
+        "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/a6227725aac5bc59.pdf"
+      ],
+      "sha256": "629f23407c7ac6102bc47bcb28f24e33a7f2967e912d7506de631b00517998b9",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-31_R10_muniz-handball-b_vs_municipalidad-de-avellaneda__62d83c69.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/8ab24fcfd9e7d8a3.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/8ab24fcfd9e7d8a3.pdf"
+      ],
+      "sha256": "62d83c69f68e76ec52f42ef8965ba7878a338b7a15e6bd02cb64ba9ede89ad96",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-31_R10_c-a-banfield-b_vs_s-a-p-a__64ce7031.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/760f1559d6a28dd0.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/760f1559d6a28dd0.pdf",
+        "planilla_banfield_b_vs_sapa.pdf"
+      ],
+      "sha256": "64ce70311809d0ac249b41f9de8887fef30eeccd6d61665b51e723f6cc4fc9b6",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-03_R06_u-n-la-m_vs_c-s-y-c-deportivo-laferrere__66dda079.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/9533753659dd2ba3.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/9533753659dd2ba3.pdf"
+      ],
+      "sha256": "66dda0793c607e759009f7dd4e94c5325257c2fc5567c5a1db035cea12d8b8d6",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-08-16_R02_c-s-y-d-defensores-de-banfield_vs_c-a-banfield-b__68ff5491.pdf",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/ba47c22446ddfec7.pdf",
+      "source_aliases": [
+        "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/ba47c22446ddfec7.pdf"
+      ],
+      "sha256": "68ff54917ff3bca24b1ca596028fc4351fa0ad7bfd8dcbd39700adf408f1bd92",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-07-12_R15_c-s-y-c-deportivo-laferrere_vs_muniz-handball-b__6ae20454.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/f246d7fe19772536.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/f246d7fe19772536.pdf"
+      ],
+      "sha256": "6ae20454d2f66b799d2544b0d156413f685717a9e56f5c189742380b9f211174",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-04-12_R03_c-a-san-telmo-b_vs_club-comunicaciones-c__6b407604.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/c91e2d641fa4347b.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/c91e2d641fa4347b.pdf"
+      ],
+      "sha256": "6b407604088b7ac617b18d78172fe260351ee53dcc390e56c18c63728698c54d",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-08-09_R01_s-a-p-a_vs_c-s-y-d-defensores-de-banfield__6cbc0df9.pdf",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/28eb0a019866deed.pdf",
+      "source_aliases": [
+        "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/28eb0a019866deed.pdf"
+      ],
+      "sha256": "6cbc0df978251a5e498ca0b0471223160890d08ef2f2e30576cadf8e5226ea53",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-04-19_R04_c-a-banfield-b_vs_municipalidad-de-avellaneda__6d8042d7.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/f3dbf03107fb5e66.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/f3dbf03107fb5e66.pdf"
+      ],
+      "sha256": "6d8042d7620cce4bfcdc8d3b6b5ad07acb8b729b15288130710624e992789ed7",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-08-16_R02_palermo-handball_vs_municipalidad-de-tres-de-febrero-b__7149f4f5.pdf",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/9ebcc92895809e94.pdf",
+      "source_aliases": [
+        "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/9ebcc92895809e94.pdf"
+      ],
+      "sha256": "7149f4f5b8b4c7d8e7bfa79bece9dfa97d6ebd610cf10947f1dae3cdd96e9b71",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-07-12_R15_c-a-y-s-villa-calzada_vs_club-comunicaciones-c__72468515.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/075a20f0eb61114c.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/075a20f0eb61114c.pdf"
+      ],
+      "sha256": "7246851534eb0b040bdf5b182d3d721b06c7836e13b704a0466bedacfc027bcc",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-04-26_R05_c-a-san-telmo-b_vs_u-n-la-m__726e96bc.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/4e0e79fca48f40da.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/4e0e79fca48f40da.pdf"
+      ],
+      "sha256": "726e96bcff3fbcd8308ceed0267f358ca3052aeb53b107909737173275c66705",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-10_R07_a-a-c-f-quilmes-c_vs_c-a-y-s-villa-calzada__73352d17.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/d149e8c065449b31.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/d149e8c065449b31.pdf"
+      ],
+      "sha256": "73352d17ecc67898464170352fa69ab883d73b7dd22af50b02d8d4b5bf9bbf13",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-06-28_R13_a-a-argentinos-juniors-d_vs_club-comunicaciones-c__77424089.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/f75fea69d701b510.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/f75fea69d701b510.pdf"
+      ],
+      "sha256": "77424089104bd2c6811dd9ecbe3d1c56d4722084093254da1d02a2945ee6bb15",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-08-09_R01_municipalidad-de-san-martin-ce-m-e-f_vs_muniz-handball-b__7a49553e.pdf",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/3f5eaaba59088ddd.pdf",
+      "source_aliases": [
+        "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/3f5eaaba59088ddd.pdf"
+      ],
+      "sha256": "7a49553ec91c5edac287caa86fd0672f67095419171b396153c4294d05e0f05b",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-06-14_R12_c-a-defensores-de-moreno_vs_c-s-y-c-deportivo-laferrere__7a9c7958.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/731692322570333c.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/731692322570333c.pdf"
+      ],
+      "sha256": "7a9c79580e92d685684773a130bd602359e49e53e08bef9e09fee1ea83239f52",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-08-23_R03_municipalidad-de-pilar_vs_c-s-y-d-defensores-de-banfield__7ab5b597.pdf",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/769472d0e4b72468.pdf",
+      "source_aliases": [
+        "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/769472d0e4b72468.pdf"
+      ],
+      "sha256": "7ab5b597381d2b4880558fbdd0f734a41138ddbcafcb9460516b6a6e117fd962",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-24_R09_club-deportivo-moron_vs_c-a-y-s-villa-calzada__7bd6a7c3.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/07a6f30eb09c43e6.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/07a6f30eb09c43e6.pdf"
+      ],
+      "sha256": "7bd6a7c3e2393eff27537b5b126da170a02308c3c9550cedbea3f3df1a587865",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-04-19_R04_u-n-la-m_vs_club-deportivo-moron__7d88cf33.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/73c2a3c011610d93.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/73c2a3c011610d93.pdf"
+      ],
+      "sha256": "7d88cf33d53487dc729c2e67d39e070ec6ab0990047600e97f4f4d5a3375f509",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-31_R10_u-n-la-m_vs_a-a-argentinos-juniors-d__7e5e3b0c.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/27652047cf48aab4.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/27652047cf48aab4.pdf"
+      ],
+      "sha256": "7e5e3b0ca0b928e8dad35f62ae48ab11239d6bfa79fd0aa764caf13abb5fbf21",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-06-28_R13_c-a-banfield-b_vs_c-a-y-s-villa-calzada__7eec69c5.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/b89e63b13f85e678.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/b89e63b13f85e678.pdf"
+      ],
+      "sha256": "7eec69c58a502f72479ca99ea01d67392c57bccd25b347d4a8798519c7935a48",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-03-22_R01_muniz-handball-b_vs_s-a-p-a__848869e1.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/ca4285cc142a7d07.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/ca4285cc142a7d07.pdf"
+      ],
+      "sha256": "848869e1938524f63cbcad9dd83298ed5a728ffde2fcc7468f5cd2b62961a71a",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-06-14_R12_muniz-handball-b_vs_a-a-c-f-quilmes-c__86fa9bd6.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/8baf1c2c9f2936d6.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/8baf1c2c9f2936d6.pdf"
+      ],
+      "sha256": "86fa9bd649d333348e851b04e5816e70881346ba23daf039eac33a2349afa3e6",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-24_R09_a-a-c-f-quilmes-c_vs_c-a-defensores-de-moreno__87824fd1.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/e8b78dd8140fa793.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/e8b78dd8140fa793.pdf"
+      ],
+      "sha256": "87824fd17be7fe2f5908dde8c41b0d8b71c32d624d10d389509719d5c633ddc3",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-06-28_R13_a-a-c-f-quilmes-c_vs_municipalidad-de-avellaneda__8d91507b.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/73c03adb2d6f34b5.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/73c03adb2d6f34b5.pdf"
+      ],
+      "sha256": "8d91507bec063d92bd0b8469ba415eb35697f6dcd653d9b2552db1644eacf444",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-03-22_R01_c-s-y-d-defensores-de-banfield_vs_argentinos-juniors-d__8ec581e2.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/feb5147ee3367f25.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/feb5147ee3367f25.pdf"
+      ],
+      "sha256": "8ec581e2c8eef1b9ea577506daf3f427669516dc393378ba285c491016637ad3",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-10_R07_c-a-temperley_vs_c-a-banfield-b__91d1ec26.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/f34e7f2d817356d8.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/f34e7f2d817356d8.pdf"
+      ],
+      "sha256": "91d1ec2661b0eac75eafe162d700cd92345724b7c14bd6e1399af8d6421a87a3",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-06-14_R12_municipalidad-de-avellaneda_vs_ci-de-co-b__92933072.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/e7af9229557c9b31.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/e7af9229557c9b31.pdf"
+      ],
+      "sha256": "929330722769e9c2d60dbf6130a1ff5f22e09f63f2585ef847098de6f4db9f17",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-03-24_R01_municipalidad-de-avellaneda_vs_c-s-y-c-deportivo-laferrere__92dd6bc0.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/d98260ff3e2a810f.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/d98260ff3e2a810f.pdf"
+      ],
+      "sha256": "92dd6bc0c3c82217a74c36ba329933a8d02bd542c0b00e251b8855d97b15f4e2",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-06-07_R11_c-s-y-c-deportivo-laferrere_vs_club-comunicaciones-c__95c1fb04.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/1fd5469b0d096f59.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/1fd5469b0d096f59.pdf"
+      ],
+      "sha256": "95c1fb044a60c98a920ced7a51e792ae44720a1f06e9afb66e1070695fe1104f",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-04-12_R03_ci-de-co-b_vs_s-a-p-a__98ef619a.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/600386bb48697fb3.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/600386bb48697fb3.pdf"
+      ],
+      "sha256": "98ef619a66a6d75b88e3dbc705e50b744f43badd320b9479fe7013e2ca4e2bad",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-06-19_R11_municipalidad-de-avellaneda_vs_u-n-la-m__9cb2938d.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/3ce5159c415f4ab5.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/3ce5159c415f4ab5.pdf"
+      ],
+      "sha256": "9cb2938d67bb3a329c7cab72acab0714c20bafb36e9c076be4a4b4247bfaee93",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-31_R10_c-a-y-s-villa-calzada_vs_c-s-y-c-deportivo-laferrere__9d109e9c.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/7b4203641dec5ee1.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/7b4203641dec5ee1.pdf"
+      ],
+      "sha256": "9d109e9c3d000b5a34b23a2cac3b61657ac673c0ced294bb3b0d647c51d82235",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-03-22_R01_c-a-san-telmo-b_vs_c-a-banfield-b__9f647422.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/ddb06de14b9e9ee3.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/ddb06de14b9e9ee3.pdf"
+      ],
+      "sha256": "9f647422d2cf9806b44fd5e1239175af2d0550790d548a542ae9daa032e75e06",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-03_R06_c-a-san-telmo-b_vs_c-s-y-d-defensores-de-banfield__a29fcdc5.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/19bb02a37243c1b9.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/19bb02a37243c1b9.pdf"
+      ],
+      "sha256": "a29fcdc545dabacfa3247949c938978ecb3d3e860530abe07b46104c70772eec",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-03-29_R02_argentinos-juniors-d_vs_muniz-handball-b__a949ee93.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/f9f70e0a8b46cdb8.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/f9f70e0a8b46cdb8.pdf"
+      ],
+      "sha256": "a949ee93405e0ad055035a4dc8c654bc3d2e86a6f7e6d738df699a077b5f0bc3",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-03-29_R02_u-n-la-m_vs_c-a-temperley__aad5d5fc.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/59c7bc06d2947da6.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/59c7bc06d2947da6.pdf"
+      ],
+      "sha256": "aad5d5fcd3b7d13772fa068bd4ad3e91453b4edbfbe35a71b3ab521d9df618d0",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-04-26_R05_municipalidad-de-avellaneda_vs_c-a-y-s-villa-calzada__acb26c27.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/2f9955aed9c3138a.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/2f9955aed9c3138a.pdf"
+      ],
+      "sha256": "acb26c275e09260df7b27ff7c1c36cfb761bd737693780482e480540d10822ed",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-04-12_R03_c-a-temperley_vs_club-deportivo-moron__acd221a1.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/048280668b7266a7.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/048280668b7266a7.pdf"
+      ],
+      "sha256": "acd221a117387c16cbffb8bf312f46e7926a834a752f0963dc05f37fb81c89b2",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-31_R10_c-a-defensores-de-moreno_vs_c-a-temperley__adfcc64d.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/8d97937d243c4bae.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/8d97937d243c4bae.pdf"
+      ],
+      "sha256": "adfcc64daa6a2beb88f3aa5d005bef3e4baf654c997d31e1cbfaed1eee84a06f",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-07-05_R14_c-s-y-d-defensores-de-banfield_vs_c-s-y-c-deportivo-laferrere__ae1c18ce.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/38e94855d6d7db44.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/38e94855d6d7db44.pdf"
+      ],
+      "sha256": "ae1c18cea00eb07e07784d7bd5c1a1e61fe51314fc757d9b1c9fbdc7a77ee3de",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-03_R06_club-comunicaciones-c_vs_municipalidad-de-avellaneda__ae2bd97e.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/4ef41f86fcc73b84.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/4ef41f86fcc73b84.pdf"
+      ],
+      "sha256": "ae2bd97e1259f78a7b55c31baa1e76c7d0d70ca73126abee03aad8ba17dc0f83",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-24_R09_muniz-handball-b_vs_u-n-la-m__afba0afa.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/91a481d90a7ccda4.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/91a481d90a7ccda4.pdf"
+      ],
+      "sha256": "afba0afa1a0d556e5c340a469553d9370b0a583055fa36c945a783a151751c13",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-03-22_R01_ci-de-co-b_vs_club-deportivo-moron__b0f82e93.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/b02ec3ecfca5a20f.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/b02ec3ecfca5a20f.pdf"
+      ],
+      "sha256": "b0f82e93711d98e0e932f18a80088d1c768405611e5d10958d1f3e5fb8c07f99",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-04-19_R04_c-a-y-s-villa-calzada_vs_muniz-handball-b__b10d3f19.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/dbdc158bab89b5f6.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/dbdc158bab89b5f6.pdf"
+      ],
+      "sha256": "b10d3f19c38be6d771b40eed61c79eae58888a10e4fad2d1eb15b1dcd5b0073b",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-03-29_R02_c-a-y-s-villa-calzada_vs_c-a-san-telmo-b__b1b49ab3.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/2544f9a0d8515f4c.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/2544f9a0d8515f4c.pdf"
+      ],
+      "sha256": "b1b49ab362c6e6c4c0c646fdba8ed43abe4db54e470179fde6b61cc413c52d6d",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-03_R06_s-a-p-a_vs_club-deportivo-moron__b479b20b.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/4e57a28379baf053.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/4e57a28379baf053.pdf"
+      ],
+      "sha256": "b479b20bba81781022173fa2c4aaa1815fb3ea045cf700c4c79cbd3158da7976",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-08-09_R01_club-deportivo-moron_vs_s-a-g-polvorines-d__b671e5ea.pdf",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/f0c3941767714bf6.pdf",
+      "source_aliases": [
+        "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/f0c3941767714bf6.pdf"
+      ],
+      "sha256": "b671e5ea47863918bfbbd13647e4ef6c504970765588101d21a036091ec13b43",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-04-19_R04_c-s-y-c-deportivo-laferrere_vs_c-a-temperley__bac63f38.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/9246e0c40f302f5e.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/9246e0c40f302f5e.pdf"
+      ],
+      "sha256": "bac63f38d87620acf20b73e82d643903ef4d294752442ed465f191ea4c490b21",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-04-19_R04_s-a-p-a_vs_a-a-c-f-quilmes-c__bcdcb21d.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/3323cdc2ffebe0e4.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/3323cdc2ffebe0e4.pdf"
+      ],
+      "sha256": "bcdcb21d8e6c11964bd15cf13789c25507cedd0a01834f49ec3bd719b0a524b1",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-10_R07_municipalidad-de-avellaneda_vs_c-a-defensores-de-moreno__c034f812.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/8850883e58984186.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/8850883e58984186.pdf"
+      ],
+      "sha256": "c034f812d5cd826f47c135e9d564e081cab560b39261f901a6941276e3c4cbb4",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-03_R06_c-a-banfield-b_vs_a-a-c-f-quilmes-c__c18ecfc5.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/910fbf161aeed0e2.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/910fbf161aeed0e2.pdf"
+      ],
+      "sha256": "c18ecfc5bea6529273ee7a7de25e6626716973fc5da03bc915d08c3ec3ee58d2",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-08-23_R03_municipalidad-de-vicente-lopez-c_vs_s-a-g-polvorines-d__c30c4379.pdf",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/32698c71c384949a.pdf",
+      "source_aliases": [
+        "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/32698c71c384949a.pdf"
+      ],
+      "sha256": "c30c4379f29f2885ee96a7374c2996fc126dce7755e20f1db213f6bbb4091463",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-03-29_R02_club-deportivo-moron_vs_a-a-c-f-quilmes-c__c3de1466.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/021adbf9990aac5b.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/021adbf9990aac5b.pdf"
+      ],
+      "sha256": "c3de14669da71c8500dd344bc88cc1d0791886338992daf2fec5c65407fd50cb",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-08-16_R02_c-a-ituzaingo_vs_club-deportivo-moron__c4dea1da.pdf",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/a0fc60ac53863c11.pdf",
+      "source_aliases": [
+        "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/a0fc60ac53863c11.pdf"
+      ],
+      "sha256": "c4dea1da1688098f36a1b7e57d539668a160162397ffb8470ff11d997c2aafa2",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-08-09_R01_c-a-ituzaingo_vs_palermo-handball__c5307793.pdf",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/277644beeb561522.pdf",
+      "source_aliases": [
+        "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/277644beeb561522.pdf"
+      ],
+      "sha256": "c5307793b530c0e3569bbcf7a53604a613c5c424e6290887166ac38ae6f7a6c3",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-10_R07_club-deportivo-moron_vs_a-a-argentinos-juniors-d__c7242176.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/a92d0a053284c3d5.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/a92d0a053284c3d5.pdf"
+      ],
+      "sha256": "c72421762c780b6a546556079c01199aa7e55f8d0ef2db630d2ffc634c0d1869",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-17_R08_u-n-la-m_vs_s-a-p-a__cc3657f5.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/d65190be9bc034bc.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/d65190be9bc034bc.pdf"
+      ],
+      "sha256": "cc3657f52f992f834826082564bea8efefd3936375fdd9b6be037cbc69fa4909",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-08-16_R02_c-a-lanus-c_vs_municipalidad-de-pilar__ccebe436.pdf",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/9948c687d1279129.pdf",
+      "source_aliases": [
+        "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/9948c687d1279129.pdf"
+      ],
+      "sha256": "ccebe43635a2980de6dde9f544f34ef967e114c5b1f2bd99c9df835476442f7c",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-08-23_R03_municipalidad-de-tres-de-febrero-b_vs_c-a-defensores-de-moreno__cfa52ff0.pdf",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/62a013053c381a16.pdf",
+      "source_aliases": [
+        "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/62a013053c381a16.pdf"
+      ],
+      "sha256": "cfa52ff02e0a230e3f8cf330dda2230f9c9cc2b7d26a6bbd4fc1fb3f7ae89f34",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-04-26_R05_club-deportivo-moron_vs_c-s-y-c-deportivo-laferrere__d073a201.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/7156c327e6d4a89b.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/7156c327e6d4a89b.pdf"
+      ],
+      "sha256": "d073a20170c1343e7f28723b42d426f0113e4524211c3e195e1fa5a0dcb1f130",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-08-16_R02_s-a-g-polvorines-d_vs_municipalidad-de-san-martin-ce-m-e-f__d14d6166.pdf",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/c66bb34afbd5a079.pdf",
+      "source_aliases": [
+        "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/c66bb34afbd5a079.pdf"
+      ],
+      "sha256": "d14d61662d3ca15d8dc90b56e691183c4bb79af12d5d30bf51c8940f7248e376",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-31_R10_c-s-y-d-defensores-de-banfield_vs_ci-de-co-b__d1f0916e.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/22cc05f8cf53e235.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/22cc05f8cf53e235.pdf"
+      ],
+      "sha256": "d1f0916e4049caf2a33c9364be72a9835dfc746a2f306257e9a6afc43f56a6d5",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-07-05_R14_u-n-la-m_vs_c-a-y-s-villa-calzada__d335c238.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/0ea68a8254312817.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/0ea68a8254312817.pdf"
+      ],
+      "sha256": "d335c2380e3e35faff92e611aaca29f138298ac53629c006ee6973f69f3189e9",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-07-12_R15_a-a-argentinos-juniors-d_vs_c-a-san-telmo-b__d5aef2fc.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/7c5e0248513cd3b0.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/7c5e0248513cd3b0.pdf"
+      ],
+      "sha256": "d5aef2fcdbcd21063dd95d70356ad090d2e95c7f9314873c52eebdb46de1c9dc",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-07-05_R14_c-a-defensores-de-moreno_vs_a-a-argentinos-juniors-d__d6e5fa90.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/835c72c27d759de9.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/835c72c27d759de9.pdf"
+      ],
+      "sha256": "d6e5fa90fe1113eab052e177b8c1b5f1e865fc498d48b63a2ad92caee4d0be28",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-10_R07_c-s-y-d-defensores-de-banfield_vs_u-n-la-m__d88ad5ec.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/a5a7d0c99421248e.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/a5a7d0c99421248e.pdf"
+      ],
+      "sha256": "d88ad5ec04d0867a3752b0244c023297fd5d40c35f7c74b40a79e59848a44657",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-08-09_R01_u-n-la-m_vs_municipalidad-de-tres-de-febrero-b__dab3bc3b.pdf",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/e1a2e2079f645b1d.pdf",
+      "source_aliases": [
+        "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/e1a2e2079f645b1d.pdf"
+      ],
+      "sha256": "dab3bc3b3092b44581a7c810b820d343ac338932d15402817ff69318ec509c46",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-04-26_R05_a-a-c-f-quilmes-c_vs_a-a-argentinos-juniors-d__de06d6df.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/a85ecb9045c545ee.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/a85ecb9045c545ee.pdf"
+      ],
+      "sha256": "de06d6df1822cb9ad07b751b69d9f82cf57124cce84d616af369a39bbef390bc",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-03-29_R02_s-a-p-a_vs_municipalidad-de-avellaneda__e046de08.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/135f1af6612d7ca7.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/135f1af6612d7ca7.pdf"
+      ],
+      "sha256": "e046de08e924eb96af2c9f2619f910b8ab96d997e8bab66d3835008e1daa7cc6",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-17_R08_a-a-argentinos-juniors-d_vs_c-s-y-c-deportivo-laferrere__e35d0597.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/6a6446252113c34f.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/6a6446252113c34f.pdf"
+      ],
+      "sha256": "e35d05976f541e1a32e13276911feef9dd8160a5480bfd930e0fe40cfbb3fbaa",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-08-16_R02_a-a-argentinos-juniors-d_vs_s-a-p-a__e65db31c.pdf",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/7a5c70319fd0a5f7.pdf",
+      "source_aliases": [
+        "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/7a5c70319fd0a5f7.pdf"
+      ],
+      "sha256": "e65db31c23bf4728dafd704b8151294a87574a1f29844e0eb614345acb2b7b72",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-24_R09_ci-de-co-b_vs_c-a-san-telmo-b__eae57aaf.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/15e851a7b0502fb8.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/15e851a7b0502fb8.pdf"
+      ],
+      "sha256": "eae57aaf3c2dfdfdf7b5e0d590936332bedc6a7a71e57f80af65c84441d13d82",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-04-19_R04_club-comunicaciones-c_vs_c-s-y-d-defensores-de-banfield__eb70dcd0.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/69d66d337b6ee8c5.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/69d66d337b6ee8c5.pdf"
+      ],
+      "sha256": "eb70dcd052a44522331ed6bba8203f3aad6a2dc7ddacfb6dea83c0262d28b8b9",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-07-09_R15_club-deportivo-moron_vs_municipalidad-de-avellaneda__ef1e286c.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/137dc3e499801ab7.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/137dc3e499801ab7.pdf"
+      ],
+      "sha256": "ef1e286c7a2010a15fc985b404461aaf057e7f54c19fe69b034d1ffb8706042b",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-10_R07_muniz-handball-b_vs_c-a-san-telmo-b__ef9c32b8.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/3b93f6432cc1dade.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/3b93f6432cc1dade.pdf"
+      ],
+      "sha256": "ef9c32b896be3ecfe3c519e41da2963a0f2b9bbd021c25a77207e0c508016127",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-03_R06_c-a-defensores-de-moreno_vs_muniz-handball-b__f01ed450.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/c8c333326efec4eb.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/c8c333326efec4eb.pdf"
+      ],
+      "sha256": "f01ed4501289e5308c0d75b10e029f3bbef5eb0329566019ebc1f8fdc5a5496d",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-04-26_R05_ci-de-co-b_vs_c-a-banfield-b__f64408c3.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/3943afc11ad1bb9b.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/3943afc11ad1bb9b.pdf"
+      ],
+      "sha256": "f64408c3a6d05852c0ad7ee721bbeeebca1811ea09610fcad57e8783c2e6355b",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-08-09_R01_municipalidad-de-pilar_vs_c-a-defensores-de-moreno__f803f086.pdf",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/c1d2687ec375be3e.pdf",
+      "source_aliases": [
+        "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/c1d2687ec375be3e.pdf"
+      ],
+      "sha256": "f803f0865bf4a7a1cbcf00868f5dbc1f69ba6ce3a117225565ed38275fc3c137",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-06-15_R12_c-s-y-d-defensores-de-banfield_vs_c-a-temperley__f98382b1.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/dca930bc43f82399.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/dca930bc43f82399.pdf"
+      ],
+      "sha256": "f98382b1110c65560ff4565f601fed18927753fdb1f97410acf812d061777cd0",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-07-05_R14_ci-de-co-b_vs_a-a-c-f-quilmes-c__fb055858.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/df56638d4f600620.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/df56638d4f600620.pdf"
+      ],
+      "sha256": "fb05585875369acc4644a05887ef301a58fad1eaab4cce15c1f062e1df86e50b",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-06-07_R11_club-deportivo-moron_vs_c-a-defensores-de-moreno__fb0f8683.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/020924c1e932fdb0.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/020924c1e932fdb0.pdf"
+      ],
+      "sha256": "fb0f86838f3b436f8dc97c7a3df69b360e2150ebbda48ce62d6d148cedee4a74",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-17_R08_c-s-y-d-defensores-de-banfield_vs_muniz-handball-b__fbe11e0d.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/8eb2bc1f3f8fadde.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/8eb2bc1f3f8fadde.pdf"
+      ],
+      "sha256": "fbe11e0d91d9050adcc7cee20a0107e0c828f588b2414f44a0d13dc2afe2299e",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-06-27_R13_c-s-y-c-deportivo-laferrere_vs_c-a-san-telmo-b__fe38e946.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/a6f34e0c4a7d950a.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/a6f34e0c4a7d950a.pdf"
+      ],
+      "sha256": "fe38e946f29eb36b13f0974c2eaa05dd9ef39e3070aae37892cef11cc77d1260",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-05-24_R09_municipalidad-de-avellaneda_vs_c-s-y-d-defensores-de-banfield__feebb0e7.pdf",
+      "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/25108c23d7d16040.pdf",
+      "source_aliases": [
+        "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/25108c23d7d16040.pdf"
+      ],
+      "sha256": "feebb0e7d9344f7a191d0c4e101d1df58618ef71412135e39649f3e24548b525",
+      "materialization": "hardlink-or-copy"
+    },
+    {
+      "alias": "2026-08-23_R03_club-deportivo-moron_vs_palermo-handball__ffc6d3f7.pdf",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/7c6e5c2a41d052bd.pdf",
+      "source_aliases": [
+        "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/7c6e5c2a41d052bd.pdf"
+      ],
+      "sha256": "ffc6d3f7ae52a29a33469b7c7e2f9d708b21e553bda2d1ce221fbc341ddf5e15",
+      "materialization": "hardlink-or-copy"
+    }
+  ]
+}

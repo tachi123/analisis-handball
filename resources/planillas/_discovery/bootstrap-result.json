@@ -1,0 +1,274 @@
+{
+  "bootstrap_manifest_sha256": "e3dbac48d17063c098e9089de71cffe73497cecf7fbc9b55f67cf5ce0a6728ef",
+  "schema_version": 2,
+  "stages": [
+    {
+      "id": 8,
+      "key": "apertura-3m-2026",
+      "teams": [
+        {
+          "club": "A.A.C.F. Quilmes",
+          "club_id": 87,
+          "competition_team_id": 111,
+          "external_code": "APE_2026_3M_AACF_Quilmes_C",
+          "registration_id": 111,
+          "variant": "C"
+        },
+        {
+          "club": "Argentinos Juniors",
+          "club_id": 88,
+          "competition_team_id": 112,
+          "external_code": "APE_2026_3M_Argentinos_Juniors_D",
+          "registration_id": 112,
+          "variant": "D"
+        },
+        {
+          "club": "Banfield",
+          "club_id": 89,
+          "competition_team_id": 114,
+          "external_code": "APE_2026_3M_Banfield_B",
+          "registration_id": 114,
+          "variant": "B"
+        },
+        {
+          "club": "C.S. y D. Defensores de Banfield",
+          "club_id": 97,
+          "competition_team_id": 124,
+          "external_code": "APE_2026_3M_CS_y_D_Defensores_de_Banfield_MAIN",
+          "registration_id": 124,
+          "variant": null
+        },
+        {
+          "club": "Ci.De.Co.",
+          "club_id": 98,
+          "competition_team_id": 126,
+          "external_code": "APE_2026_3M_CiDeCo_B",
+          "registration_id": 126,
+          "variant": "B"
+        },
+        {
+          "club": "Club Comunicaciones",
+          "club_id": 99,
+          "competition_team_id": 127,
+          "external_code": "APE_2026_3M_Club_Comunicaciones_C",
+          "registration_id": 127,
+          "variant": "C"
+        },
+        {
+          "club": "Club Deportivo Morón",
+          "club_id": 100,
+          "competition_team_id": 128,
+          "external_code": "APE_2026_3M_Club_Deportivo_Moron_MAIN",
+          "registration_id": 128,
+          "variant": null
+        },
+        {
+          "club": "Defensores de Moreno",
+          "club_id": 90,
+          "competition_team_id": 116,
+          "external_code": "APE_2026_3M_Defensores_de_Moreno_MAIN",
+          "registration_id": 116,
+          "variant": null
+        },
+        {
+          "club": "Deportivo Laferrere",
+          "club_id": 96,
+          "competition_team_id": 123,
+          "external_code": "APE_2026_3M_Deportivo_Laferrere_MAIN",
+          "registration_id": 123,
+          "variant": null
+        },
+        {
+          "club": "Municipalidad de Avellaneda",
+          "club_id": 101,
+          "competition_team_id": 130,
+          "external_code": "APE_2026_3M_Municipalidad_de_Avellaneda_MAIN",
+          "registration_id": 130,
+          "variant": null
+        },
+        {
+          "club": "Muñiz Handball",
+          "club_id": 106,
+          "competition_team_id": 135,
+          "external_code": "APE_2026_3M_Muñiz_Handball_B",
+          "registration_id": 135,
+          "variant": "B"
+        },
+        {
+          "club": "S.A.P.A.",
+          "club_id": 109,
+          "competition_team_id": 139,
+          "external_code": "APE_2026_3M_SAPA_MAIN",
+          "registration_id": 139,
+          "variant": null
+        },
+        {
+          "club": "San Telmo",
+          "club_id": 93,
+          "competition_team_id": 120,
+          "external_code": "APE_2026_3M_San_Telmo_B",
+          "registration_id": 120,
+          "variant": "B"
+        },
+        {
+          "club": "Temperley",
+          "club_id": 94,
+          "competition_team_id": 121,
+          "external_code": "APE_2026_3M_Temperley_MAIN",
+          "registration_id": 121,
+          "variant": null
+        },
+        {
+          "club": "U.N.La.M.",
+          "club_id": 110,
+          "competition_team_id": 141,
+          "external_code": "APE_2026_3M_UNLaM_MAIN",
+          "registration_id": 141,
+          "variant": null
+        },
+        {
+          "club": "Villa Calzada",
+          "club_id": 95,
+          "competition_team_id": 122,
+          "external_code": "APE_2026_3M_Villa_Calzada_MAIN",
+          "registration_id": 122,
+          "variant": null
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "key": "permanencia-3m-2026",
+      "teams": [
+        {
+          "club": "Argentinos Juniors",
+          "club_id": 88,
+          "competition_team_id": 113,
+          "external_code": "PER_2026_3M_Argentinos_Juniors_D",
+          "registration_id": 113,
+          "variant": "D"
+        },
+        {
+          "club": "Banfield",
+          "club_id": 89,
+          "competition_team_id": 115,
+          "external_code": "PER_2026_3M_Banfield_B",
+          "registration_id": 115,
+          "variant": "B"
+        },
+        {
+          "club": "C.S. y D. Defensores de Banfield",
+          "club_id": 97,
+          "competition_team_id": 125,
+          "external_code": "PER_2026_3M_CS_y_D_Defensores_de_Banfield_MAIN",
+          "registration_id": 125,
+          "variant": null
+        },
+        {
+          "club": "Club Deportivo Morón",
+          "club_id": 100,
+          "competition_team_id": 129,
+          "external_code": "PER_2026_3M_Club_Deportivo_Moron_MAIN",
+          "registration_id": 129,
+          "variant": null
+        },
+        {
+          "club": "Defensores de Moreno",
+          "club_id": 90,
+          "competition_team_id": 117,
+          "external_code": "PER_2026_3M_Defensores_de_Moreno_MAIN",
+          "registration_id": 117,
+          "variant": null
+        },
+        {
+          "club": "Ituzaingó",
+          "club_id": 91,
+          "competition_team_id": 118,
+          "external_code": "PER_2026_3M_Ituzaingo_MAIN",
+          "registration_id": 118,
+          "variant": null
+        },
+        {
+          "club": "Lanús",
+          "club_id": 92,
+          "competition_team_id": 119,
+          "external_code": "PER_2026_3M_Lanus_C",
+          "registration_id": 119,
+          "variant": "C"
+        },
+        {
+          "club": "Municipalidad de Pilar",
+          "club_id": 102,
+          "competition_team_id": 131,
+          "external_code": "PER_2026_3M_Municipalidad_de_Pilar_MAIN",
+          "registration_id": 131,
+          "variant": null
+        },
+        {
+          "club": "Municipalidad de San Martín (Ce.M.E.F)",
+          "club_id": 103,
+          "competition_team_id": 132,
+          "external_code": "PER_2026_3M_Municipalidad_de_San_Martin_CeMEF_MAIN",
+          "registration_id": 132,
+          "variant": null
+        },
+        {
+          "club": "Municipalidad de Tres de Febrero",
+          "club_id": 104,
+          "competition_team_id": 133,
+          "external_code": "PER_2026_3M_Municipalidad_de_Tres_de_Febrero_B",
+          "registration_id": 133,
+          "variant": "B"
+        },
+        {
+          "club": "Municipalidad de Vicente López",
+          "club_id": 105,
+          "competition_team_id": 134,
+          "external_code": "PER_2026_3M_Municipalidad_de_Vicente_Lopez_C",
+          "registration_id": 134,
+          "variant": "C"
+        },
+        {
+          "club": "Muñiz Handball",
+          "club_id": 106,
+          "competition_team_id": 136,
+          "external_code": "PER_2026_3M_Muñiz_Handball_B",
+          "registration_id": 136,
+          "variant": "B"
+        },
+        {
+          "club": "Palermo Handball",
+          "club_id": 107,
+          "competition_team_id": 137,
+          "external_code": "PER_2026_3M_Palermo_Handball_MAIN",
+          "registration_id": 137,
+          "variant": null
+        },
+        {
+          "club": "S.A.G. Polvorines",
+          "club_id": 108,
+          "competition_team_id": 138,
+          "external_code": "PER_2026_3M_SAG_Polvorines_D",
+          "registration_id": 138,
+          "variant": "D"
+        },
+        {
+          "club": "S.A.P.A.",
+          "club_id": 109,
+          "competition_team_id": 140,
+          "external_code": "PER_2026_3M_SAPA_MAIN",
+          "registration_id": 140,
+          "variant": null
+        },
+        {
+          "club": "U.N.La.M.",
+          "club_id": 110,
+          "competition_team_id": 142,
+          "external_code": "PER_2026_3M_UNLaM_MAIN",
+          "registration_id": 142,
+          "variant": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,12 +1,14 @@
 from fastapi import APIRouter, Depends, HTTPException
+from fastapi.responses import FileResponse
 from sqlalchemy.orm import Session
 from typing import List
 
 from ...database import get_db
 from ...deps import get_current_user, require_role
 from ...models import User
-from ...schemas import Match, MatchCreate, MatchUpdate, MatchSquad, MatchSquadCreate
+from ...schemas import Match, MatchCreate, MatchUpdate, MatchSquad, MatchSquadCreate, OfficialSheet
 from ...services.match_service import MatchService
+from ...services.pdf_service import PDFService
 
 router = APIRouter(prefix="/matches", tags=["matches"])
 
@@ -24,14 +26,41 @@ def get_match(match_id: int, db: Session = Depends(get_db), _user: User = Depend
     return obj
 
 
+@router.get("/{match_id}/official-sheet", response_model=OfficialSheet)
+def get_official_sheet(match_id: int, db: Session = Depends(get_db), _user: User = Depends(get_current_user)):
+    snapshot = PDFService.official_sheet(db, match_id)
+    if snapshot is None:
+        raise HTTPException(status_code=404, detail="official_sheet_not_found")
+    return PDFService.official_sheet_read(snapshot)
+
+
+@router.get("/{match_id}/official-sheet/pdf")
+def get_official_sheet_pdf(match_id: int, db: Session = Depends(get_db), _user: User = Depends(get_current_user)):
+    snapshot = PDFService.official_sheet(db, match_id)
+    if snapshot is None:
+        raise HTTPException(status_code=404, detail="official_sheet_not_found")
+    path = PDFService.official_sheet_pdf_path(snapshot)
+    if path is None:
+        raise HTTPException(status_code=409, detail="source_unavailable")
+    return FileResponse(path, media_type="application/pdf", filename=snapshot.source_filename, content_disposition_type="inline")
+
+
 @router.post("/", response_model=Match, status_code=201)
-def create_match(data: MatchCreate, db: Session = Depends(get_db), _user: User = Depends(require_role("superadmin", "admin"))):
-    return MatchService.create(db, data)
+def create_match(data: MatchCreate, db: Session = Depends(get_db), _user: User = Depends(get_current_user)):
+    try:
+        return MatchService.create(db, data, _user)
+    except ValueError as error:
+        raise HTTPException(status_code=422, detail=str(error)) from error
 
 
 @router.patch("/{match_id}", response_model=Match)
 def update_match(match_id: int, data: MatchUpdate, db: Session = Depends(get_db), _user: User = Depends(get_current_user)):
-    obj = MatchService.update(db, match_id, data)
+    try:
+        obj = MatchService.update(db, match_id, data, _user)
+    except PermissionError as error:
+        raise HTTPException(status_code=403, detail=str(error)) from error
+    except ValueError as error:
+        raise HTTPException(status_code=422, detail=str(error)) from error
     if not obj:
         raise HTTPException(status_code=404, detail="Partido no encontrado")
     return obj

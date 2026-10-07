@@ -1,10 +1,11 @@
-name: Deploy Frontend to GitHub Pages
+name: Deploy Reports to GitHub Pages
 
 on:
   push:
     branches: [main]
     paths:
-      - 'frontend/**'
+      - 'reports/**'
+      - '.github/workflows/deploy-frontend.yml'
   workflow_dispatch:
 
 permissions:
@@ -19,9 +20,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: frontend
     steps:
       - uses: actions/checkout@v4
 
@@ -29,17 +27,15 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: frontend/package-lock.json
+          cache-dependency-path: reports/package-lock.json
 
-      - run: npm ci
+      - run: npm ci --prefix reports
 
-      - run: npm run build
-        env:
-          VITE_API_URL: ${{ vars.VITE_API_URL || 'https://analisis-handball-production.up.railway.app' }}
+      - run: npm --prefix reports run build
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: frontend/dist
+          path: reports/dist
 
   deploy:
     needs: build

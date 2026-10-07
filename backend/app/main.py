@@ -2,16 +2,16 @@ from contextlib import asynccontextmanager
 import os
 import logging
 from dotenv import load_dotenv
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 
 load_dotenv()
 
-from .database import engine, Base, SessionLocal
-from .api.routes import tournaments, teams, players, matches, events, clips, pdf, auth, goalkeeper_shots
-
-# Import all models so SQLAlchemy knows about them before create_all
-from . import models  # noqa: F401
+from .database import SessionLocal
+from .api.routes import analysis, analysis_events, canonical_analysis, tournaments, teams, players, matches, events, clips, pdf, auth, reports, goalkeeper_shots, stage_performance
+from .services.canonical_analysis_service import LegacyWriteBlockedError
+from .services.sheets_service import validate_report_publisher_configuration
 
 logger = logging.getLogger(__name__)
 
@@ -35,7 +35,7 @@ def _seed_superadmin():
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    Base.metadata.create_all(bind=engine)
+    validate_report_publisher_configuration()
     _seed_superadmin()
     yield
 
@@ -66,9 +66,20 @@ app.include_router(teams.router, prefix="/api/v1")
 app.include_router(players.router, prefix="/api/v1")
 app.include_router(matches.router, prefix="/api/v1")
 app.include_router(events.router, prefix="/api/v1")
+app.include_router(analysis_events.router, prefix="/api/v1")
+app.include_router(analysis.router, prefix="/api/v1")
 app.include_router(clips.router, prefix="/api/v1")
 app.include_router(pdf.router, prefix="/api/v1")
+app.include_router(reports.router, prefix="/api/v1")
 app.include_router(goalkeeper_shots.router, prefix="/api/v1")
+app.include_router(canonical_analysis.router, prefix="/api/v1")
+app.include_router(stage_performance.router, prefix="/api/v1")
+
+
+@app.exception_handler(LegacyWriteBlockedError)
+def legacy_write_blocked_handler(_request: Request, error: LegacyWriteBlockedError):
+    """Shared cutover boundary: legacy analytical writes answer 409 once canonical."""
+    return JSONResponse(status_code=409, content={"detail": str(error)})
 
 
 @app.get("/health")

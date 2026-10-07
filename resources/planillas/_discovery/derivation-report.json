@@ -1,0 +1,18 @@
+{
+  "counts": {
+    "fixtures_by_stage": {
+      "Apertura Zona A 2026 3ªM": 114,
+      "Torneo Permanencia 2026 3ªM": 22
+    },
+    "reconciled": 0,
+    "resolved_by_mapping": 136,
+    "rounds_by_stage": {
+      "Apertura Zona A 2026 3ªM": 20,
+      "Torneo Permanencia 2026 3ªM": 3
+    },
+    "unresolved": 0
+  },
+  "manifest_sha256": "073577361393f977603acda98a51599bd1b93e065fb71e9c8ce8615f796e27a4",
+  "schema_version": 1,
+  "unresolved": []
+}

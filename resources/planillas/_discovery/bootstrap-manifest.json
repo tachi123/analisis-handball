@@ -1,0 +1,297 @@
+{
+  "aliases": [
+    {
+      "club": "A.A.C.F. Quilmes",
+      "external_codes": {
+        "apertura-3m-2026": "APE_2026_3M_AACF_Quilmes_C"
+      },
+      "source_label": "A.A.C.F. Quilmes C",
+      "stage_keys": [
+        "apertura-3m-2026"
+      ],
+      "variant": "C"
+    },
+    {
+      "club": "Argentinos Juniors",
+      "external_codes": {
+        "apertura-3m-2026": "APE_2026_3M_Argentinos_Juniors_D",
+        "permanencia-3m-2026": "PER_2026_3M_Argentinos_Juniors_D"
+      },
+      "source_label": "A.A. Argentinos Juniors D",
+      "stage_keys": [
+        "apertura-3m-2026",
+        "permanencia-3m-2026"
+      ],
+      "variant": "D"
+    },
+    {
+      "club": "Argentinos Juniors",
+      "external_codes": {
+        "apertura-3m-2026": "APE_2026_3M_Argentinos_Juniors_D"
+      },
+      "source_label": "Argentinos Juniors D",
+      "stage_keys": [
+        "apertura-3m-2026"
+      ],
+      "variant": "D"
+    },
+    {
+      "club": "Banfield",
+      "external_codes": {
+        "apertura-3m-2026": "APE_2026_3M_Banfield_B",
+        "permanencia-3m-2026": "PER_2026_3M_Banfield_B"
+      },
+      "source_label": "C.A. Banfield B",
+      "stage_keys": [
+        "apertura-3m-2026",
+        "permanencia-3m-2026"
+      ],
+      "variant": "B"
+    },
+    {
+      "club": "Defensores de Moreno",
+      "external_codes": {
+        "apertura-3m-2026": "APE_2026_3M_Defensores_de_Moreno_MAIN",
+        "permanencia-3m-2026": "PER_2026_3M_Defensores_de_Moreno_MAIN"
+      },
+      "source_label": "C.A. Defensores de Moreno",
+      "stage_keys": [
+        "apertura-3m-2026",
+        "permanencia-3m-2026"
+      ],
+      "variant": null
+    },
+    {
+      "club": "Ituzaingó",
+      "external_codes": {
+        "permanencia-3m-2026": "PER_2026_3M_Ituzaingo_MAIN"
+      },
+      "source_label": "C.A. Ituzaingó",
+      "stage_keys": [
+        "permanencia-3m-2026"
+      ],
+      "variant": null
+    },
+    {
+      "club": "Lanús",
+      "external_codes": {
+        "permanencia-3m-2026": "PER_2026_3M_Lanus_C"
+      },
+      "source_label": "C.A. Lanús C",
+      "stage_keys": [
+        "permanencia-3m-2026"
+      ],
+      "variant": "C"
+    },
+    {
+      "club": "San Telmo",
+      "external_codes": {
+        "apertura-3m-2026": "APE_2026_3M_San_Telmo_B"
+      },
+      "source_label": "C.A. San Telmo B",
+      "stage_keys": [
+        "apertura-3m-2026"
+      ],
+      "variant": "B"
+    },
+    {
+      "club": "Temperley",
+      "external_codes": {
+        "apertura-3m-2026": "APE_2026_3M_Temperley_MAIN"
+      },
+      "source_label": "C.A. Temperley",
+      "stage_keys": [
+        "apertura-3m-2026"
+      ],
+      "variant": null
+    },
+    {
+      "club": "Villa Calzada",
+      "external_codes": {
+        "apertura-3m-2026": "APE_2026_3M_Villa_Calzada_MAIN"
+      },
+      "source_label": "C.A. y S. Villa Calzada",
+      "stage_keys": [
+        "apertura-3m-2026"
+      ],
+      "variant": null
+    },
+    {
+      "club": "Deportivo Laferrere",
+      "external_codes": {
+        "apertura-3m-2026": "APE_2026_3M_Deportivo_Laferrere_MAIN"
+      },
+      "source_label": "C.S. y C. Deportivo Laferrere",
+      "stage_keys": [
+        "apertura-3m-2026"
+      ],
+      "variant": null
+    },
+    {
+      "club": "C.S. y D. Defensores de Banfield",
+      "external_codes": {
+        "apertura-3m-2026": "APE_2026_3M_CS_y_D_Defensores_de_Banfield_MAIN",
+        "permanencia-3m-2026": "PER_2026_3M_CS_y_D_Defensores_de_Banfield_MAIN"
+      },
+      "source_label": "C.S. y D. Defensores de Banfield",
+      "stage_keys": [
+        "apertura-3m-2026",
+        "permanencia-3m-2026"
+      ],
+      "variant": null
+    },
+    {
+      "club": "Ci.De.Co.",
+      "external_codes": {
+        "apertura-3m-2026": "APE_2026_3M_CiDeCo_B"
+      },
+      "source_label": "Ci.De.Co. B",
+      "stage_keys": [
+        "apertura-3m-2026"
+      ],
+      "variant": "B"
+    },
+    {
+      "club": "Club Comunicaciones",
+      "external_codes": {
+        "apertura-3m-2026": "APE_2026_3M_Club_Comunicaciones_C"
+      },
+      "source_label": "Club Comunicaciones C",
+      "stage_keys": [
+        "apertura-3m-2026"
+      ],
+      "variant": "C"
+    },
+    {
+      "club": "Club Deportivo Morón",
+      "external_codes": {
+        "apertura-3m-2026": "APE_2026_3M_Club_Deportivo_Moron_MAIN",
+        "permanencia-3m-2026": "PER_2026_3M_Club_Deportivo_Moron_MAIN"
+      },
+      "source_label": "Club Deportivo Morón",
+      "stage_keys": [
+        "apertura-3m-2026",
+        "permanencia-3m-2026"
+      ],
+      "variant": null
+    },
+    {
+      "club": "Municipalidad de Avellaneda",
+      "external_codes": {
+        "apertura-3m-2026": "APE_2026_3M_Municipalidad_de_Avellaneda_MAIN"
+      },
+      "source_label": "Municipalidad de Avellaneda",
+      "stage_keys": [
+        "apertura-3m-2026"
+      ],
+      "variant": null
+    },
+    {
+      "club": "Municipalidad de Pilar",
+      "external_codes": {
+        "permanencia-3m-2026": "PER_2026_3M_Municipalidad_de_Pilar_MAIN"
+      },
+      "source_label": "Municipalidad de Pilar",
+      "stage_keys": [
+        "permanencia-3m-2026"
+      ],
+      "variant": null
+    },
+    {
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
+      "external_codes": {
+        "permanencia-3m-2026": "PER_2026_3M_Municipalidad_de_San_Martin_CeMEF_MAIN"
+      },
+      "source_label": "Municipalidad de San Martín (Ce.M.E.F)",
+      "stage_keys": [
+        "permanencia-3m-2026"
+      ],
+      "variant": null
+    },
+    {
+      "club": "Municipalidad de Tres de Febrero",
+      "external_codes": {
+        "permanencia-3m-2026": "PER_2026_3M_Municipalidad_de_Tres_de_Febrero_B"
+      },
+      "source_label": "Municipalidad de Tres de Febrero B",
+      "stage_keys": [
+        "permanencia-3m-2026"
+      ],
+      "variant": "B"
+    },
+    {
+      "club": "Municipalidad de Vicente López",
+      "external_codes": {
+        "permanencia-3m-2026": "PER_2026_3M_Municipalidad_de_Vicente_Lopez_C"
+      },
+      "source_label": "Municipalidad de Vicente López C",
+      "stage_keys": [
+        "permanencia-3m-2026"
+      ],
+      "variant": "C"
+    },
+    {
+      "club": "Muñiz Handball",
+      "external_codes": {
+        "apertura-3m-2026": "APE_2026_3M_Muñiz_Handball_B",
+        "permanencia-3m-2026": "PER_2026_3M_Muñiz_Handball_B"
+      },
+      "source_label": "Muñiz Handball B",
+      "stage_keys": [
+        "apertura-3m-2026",
+        "permanencia-3m-2026"
+      ],
+      "variant": "B"
+    },
+    {
+      "club": "Palermo Handball",
+      "external_codes": {
+        "permanencia-3m-2026": "PER_2026_3M_Palermo_Handball_MAIN"
+      },
+      "source_label": "Palermo Handball",
+      "stage_keys": [
+        "permanencia-3m-2026"
+      ],
+      "variant": null
+    },
+    {
+      "club": "S.A.G. Polvorines",
+      "external_codes": {
+        "permanencia-3m-2026": "PER_2026_3M_SAG_Polvorines_D"
+      },
+      "source_label": "S.A.G. Polvorines D",
+      "stage_keys": [
+        "permanencia-3m-2026"
+      ],
+      "variant": "D"
+    },
+    {
+      "club": "S.A.P.A.",
+      "external_codes": {
+        "apertura-3m-2026": "APE_2026_3M_SAPA_MAIN",
+        "permanencia-3m-2026": "PER_2026_3M_SAPA_MAIN"
+      },
+      "source_label": "S.A.P.A.",
+      "stage_keys": [
+        "apertura-3m-2026",
+        "permanencia-3m-2026"
+      ],
+      "variant": null
+    },
+    {
+      "club": "U.N.La.M.",
+      "external_codes": {
+        "apertura-3m-2026": "APE_2026_3M_UNLaM_MAIN",
+        "permanencia-3m-2026": "PER_2026_3M_UNLaM_MAIN"
+      },
+      "source_label": "U.N.La.M.",
+      "stage_keys": [
+        "apertura-3m-2026",
+        "permanencia-3m-2026"
+      ],
+      "variant": null
+    }
+  ],
+  "discovery_manifest_sha256": "073577361393f977603acda98a51599bd1b93e065fb71e9c8ce8615f796e27a4",
+  "schema_version": 1
+}

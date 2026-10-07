@@ -10,7 +10,10 @@
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center rounded-xl font-semibold transition-all duration-100 select-none cursor-pointer;
+    @apply inline-flex min-h-11 min-w-11 items-center justify-center rounded-xl px-3 font-semibold transition-all duration-100 select-none cursor-pointer;
+  }
+  .review-target {
+    @apply min-h-11 min-w-11;
   }
   .btn:active {
     @apply scale-95;

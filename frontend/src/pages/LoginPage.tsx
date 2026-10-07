@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { BarChart2, LogIn, AlertCircle } from 'lucide-react'
+import { isAxiosError } from 'axios'
 import { login } from '../api/client'
 import { useAuth } from '../hooks/useAuth'
 
@@ -20,8 +21,8 @@ export default function LoginPage() {
       const res = await login(email, password)
       signIn(res.access_token, res.user)
       navigate('/matches', { replace: true })
-    } catch (err: any) {
-      setError(err.response?.data?.detail ?? 'Error de conexión')
+    } catch (err: unknown) {
+      setError(isAxiosError<{ detail?: string }>(err) ? (err.response?.data?.detail ?? 'Error de conexión') : 'Error de conexión')
     } finally {
       setLoading(false)
     }

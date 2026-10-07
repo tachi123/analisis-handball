@@ -1,0 +1,17 @@
+services:
+  backend:
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/sapa_stats
+      APP_ENV: development
+      REPORT_PUBLISHER: file
+      LOCAL_PUBLIC_REPORT_FILE: /app/data/public-report.json
+      PUBLIC_REPORT_URL: http://localhost:8000/api/v1/public/reports/current
+      OFFICIAL_EVIDENCE_ROOTS: /app/resources/planillas
+
+  migrate:
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/sapa_stats
+      APP_ENV: development
+      REPORT_PUBLISHER: file
+      LOCAL_PUBLIC_REPORT_FILE: /app/data/public-report.json
+      OFFICIAL_EVIDENCE_ROOTS: /app/resources/planillas

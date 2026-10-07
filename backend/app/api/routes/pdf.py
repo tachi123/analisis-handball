@@ -1,113 +1,217 @@
-import io
-from fastapi import APIRouter, Depends, File, UploadFile, HTTPException
+import json
+from typing import Optional
+
+from fastapi import APIRouter, Depends, File, Form, HTTPException, Query, UploadFile
 from sqlalchemy.orm import Session
 
 from ...database import get_db
 from ...deps import get_current_user, require_role
-from ...models import User
-from ...services.pdf_service import PDFService
+from ...models import FixtureImportEntry, User
+from ...schemas import FixtureConfirmResult, FixtureConfirmation, FixturePreviewResult, FixtureRosterRead, FixtureRosterResolveRequest, FixtureRosterResolveResult, MatchPDFConfirmation, MatchPDFConfirmResult, MatchPDFPreviewResult, PDFImportConfirmation, PDFImportResult, PDFPreview, ScheduledFixtureRead
+from ...services.pdf_service import PDFParseError, PDFService
 from ...services.match_service import MatchService
-from ...services.team_service import TeamService
-from ...services.player_service import PlayerService
-from ...schemas import MatchCreate, TeamCreate, PlayerCreate, MatchSquadCreate
+
 
 router = APIRouter(prefix="/pdf", tags=["pdf"])
 
 
-@router.post("/parse")
+@router.post("/matches/{match_id}/preview", response_model=MatchPDFPreviewResult)
+async def preview_match_pdf(match_id: int, file: UploadFile = File(...), db: Session = Depends(get_db), _user: User = Depends(get_current_user)):
+    try:
+        MatchService.require_manual_owner(db, match_id, _user)
+        return PDFService.match_preview(db, match_id, await file.read(), file.filename or "", file.content_type)
+    except PermissionError as error:
+        raise HTTPException(status_code=403, detail=str(error)) from error
+    except (ValueError, PDFParseError) as error:
+        raise HTTPException(status_code=422, detail=str(error)) from error
+
+
+@router.post("/matches/{match_id}/confirm", response_model=MatchPDFConfirmResult, status_code=201)
+async def confirm_match_pdf(match_id: int, file: UploadFile = File(...), confirmation_json: str = Form(...), db: Session = Depends(get_db), _user: User = Depends(get_current_user)):
+    try:
+        MatchService.require_manual_owner(db, match_id, _user)
+        confirmation = MatchPDFConfirmation.model_validate_json(confirmation_json)
+        return PDFService.confirm_match_pdf(db, match_id, await file.read(), file.filename or "", file.content_type, confirmation)
+    except PermissionError as error:
+        raise HTTPException(status_code=403, detail=str(error)) from error
+    except (ValueError, json.JSONDecodeError, PDFParseError) as error:
+        db.rollback()
+        raise HTTPException(status_code=422, detail=str(error)) from error
+
+
+@router.get("/fixtures", response_model=list[ScheduledFixtureRead])
+def list_fixtures(
+    status: Optional[str] = Query(default="pending", pattern="^(pending|all)$"),
+    db: Session = Depends(get_db),
+    _user: User = Depends(get_current_user),
+):
+    fixtures = PDFService.list_fixtures(db)
+    if status == "pending":
+        fixtures = [f for f in fixtures if f.result_status != "confirmed"]
+    return [PDFService.fixture_read(fixture) for fixture in fixtures]
+
+
+@router.get("/fixtures/{fixture_key}", response_model=ScheduledFixtureRead)
+def select_preloaded_fixture(fixture_key: str, db: Session = Depends(get_db), _user: User = Depends(get_current_user)):
+    try:
+        return PDFService.fixture_read(PDFService.preloaded_fixture(db, fixture_key))
+    except ValueError as error:
+        raise HTTPException(status_code=409, detail="no_confirmed_official_data") from error
+
+
+@router.get("/fixtures/{fixture_key}/roster", response_model=FixtureRosterRead)
+def get_fixture_roster(fixture_key: str, db: Session = Depends(get_db), _user: User = Depends(get_current_user)):
+    try:
+        return PDFService.fixture_roster(db, fixture_key)
+    except ValueError as error:
+        raise HTTPException(status_code=409, detail=str(error)) from error
+
+
+@router.get("/fixtures/{fixture_key}/review", response_model=FixturePreviewResult)
+def review_fixture_pdf(fixture_key: str, db: Session = Depends(get_db), _user: User = Depends(require_role("superadmin", "admin"))):
+    """
+    Load PDF from indexed path and return preview with compatibility analysis.
+    Rejects 409 if fixture is already confirmed or is a bye.
+    """
+    try:
+        fixture = PDFService._fixture(db, fixture_key)
+    except ValueError as error:
+        raise HTTPException(status_code=404, detail=str(error)) from error
+
+    # Reject if already confirmed
+    if fixture.result_status == "confirmed":
+        raise HTTPException(status_code=409, detail="fixture_already_confirmed")
+
+    # Reject if bye
+    fixture_entry = db.query(FixtureImportEntry).filter(
+        FixtureImportEntry.scheduled_match_id == fixture.id,
+        FixtureImportEntry.kind == "bye"
+    ).first()
+    if fixture_entry:
+        raise HTTPException(status_code=404, detail="Fixture es un bye, no tiene planilla")
+
+    # Load PDF bytes from indexed path
+    try:
+        file_bytes, filename = PDFService._load_fixture_pdf_bytes(db, fixture_key)
+    except ValueError as error:
+        raise HTTPException(status_code=404, detail=str(error)) from error
+
+    # Call fixture_preview
+    try:
+        return PDFService.fixture_preview(db, fixture_key, file_bytes, filename, "application/pdf")
+    except (ValueError, PDFParseError) as error:
+        raise HTTPException(status_code=422, detail=str(error)) from error
+
+
+@router.post("/fixtures/{fixture_key}/review", response_model=FixtureConfirmResult, status_code=201)
+def confirm_fixture_review(fixture_key: str, confirmation: FixtureConfirmation, db: Session = Depends(get_db), _user: User = Depends(require_role("superadmin", "admin"))):
+    """
+    Confirm fixture using PDF from indexed path.
+    Auto-fills home_team_id/away_team_id from fixture registrations.
+    Returns {match_id, snapshot_id, reused: boolean}.
+    """
+    try:
+        fixture = PDFService._fixture(db, fixture_key)
+    except ValueError as error:
+        raise HTTPException(status_code=404, detail=str(error)) from error
+
+    # Reject if already confirmed
+    if fixture.result_status == "confirmed":
+        raise HTTPException(status_code=409, detail="fixture_already_confirmed")
+
+    # Reject if bye
+    fixture_entry = db.query(FixtureImportEntry).filter(
+        FixtureImportEntry.scheduled_match_id == fixture.id,
+        FixtureImportEntry.kind == "bye"
+    ).first()
+    if fixture_entry:
+        raise HTTPException(status_code=404, detail="Fixture es un bye, no tiene planilla")
+
+    # Auto-fill team IDs from fixture registrations (find or create Team by club name)
+    home_club_name = fixture.home_registration.competition_team.club.name
+    away_club_name = fixture.away_registration.competition_team.club.name
+    home_team = PDFService._get_or_create_team_by_club(db, home_club_name)
+    away_team = PDFService._get_or_create_team_by_club(db, away_club_name)
+    if home_team.id == away_team.id:
+        raise HTTPException(status_code=422, detail="Los equipos confirmados deben ser distintos")
+    confirmation.home_team_id = home_team.id
+    confirmation.away_team_id = away_team.id
+
+    # Load PDF bytes from indexed path
+    try:
+        file_bytes, filename = PDFService._load_fixture_pdf_bytes(db, fixture_key)
+    except ValueError as error:
+        raise HTTPException(status_code=404, detail=str(error)) from error
+
+    # Call confirm_fixture
+    try:
+        return PDFService.confirm_fixture(db, fixture_key, file_bytes, filename, "application/pdf", confirmation)
+    except (ValueError, PDFParseError) as error:
+        db.rollback()
+        raise HTTPException(status_code=422, detail=str(error)) from error
+
+
+@router.post("/fixtures/{fixture_key}/roster-resolution", response_model=FixtureRosterResolveResult)
+def resolve_fixture_roster(fixture_key: str, request: FixtureRosterResolveRequest, db: Session = Depends(get_db), _user: User = Depends(require_role("superadmin", "admin"))):
+    try:
+        return PDFService.resolve_fixture_roster(db, fixture_key, request.resolutions)
+    except ValueError as error:
+        db.rollback()
+        raise HTTPException(status_code=422, detail=str(error)) from error
+
+
+@router.post("/fixture-preview", response_model=FixturePreviewResult)
+async def preview_fixture_pdf(fixture_key: str = Form(...), file: UploadFile = File(...), db: Session = Depends(get_db), _user: User = Depends(get_current_user)):
+    try:
+        return PDFService.fixture_preview(db, fixture_key, await file.read(), file.filename or "", file.content_type)
+    except (ValueError, PDFParseError) as error:
+        raise HTTPException(status_code=422, detail=str(error)) from error
+
+
+@router.post("/fixture-confirm", response_model=FixtureConfirmResult, status_code=201)
+async def confirm_fixture_pdf(fixture_key: str = Form(...), file: UploadFile = File(...), confirmation_json: str = Form(...), db: Session = Depends(get_db), _user: User = Depends(require_role("superadmin", "admin"))):
+    try:
+        confirmation = FixtureConfirmation.model_validate_json(confirmation_json)
+        return PDFService.confirm_fixture(db, fixture_key, await file.read(), file.filename or "", file.content_type, confirmation)
+    except (ValueError, json.JSONDecodeError, PDFParseError) as error:
+        db.rollback()
+        raise HTTPException(status_code=422, detail=str(error)) from error
+
+
+@router.post("/parse", response_model=PDFPreview)
 async def parse_pdf(file: UploadFile = File(...), _user: User = Depends(get_current_user)):
-    """Parsea una planilla Femebal y devuelve los datos sin persistir nada."""
+    """Devuelve una vista previa sin persistir datos oficiales ni identidades."""
     if not file.filename or not file.filename.lower().endswith(".pdf"):
         raise HTTPException(status_code=400, detail="El archivo debe ser un PDF")
-    contents = await file.read()
-    data = PDFService.parse_femebal_sheet(io.BytesIO(contents))
-    return data
+
+    try:
+        return PDFService.preview_femebal_sheet(
+            await file.read(), file.filename, file.content_type
+        )
+    except PDFParseError as error:
+        raise HTTPException(status_code=422, detail=str(error)) from error
 
 
-@router.post("/import")
-async def import_pdf(
+@router.post("/confirm", response_model=PDFImportResult, status_code=201)
+async def confirm_pdf(
     file: UploadFile = File(...),
+    confirmation_json: str = Form(...),
     db: Session = Depends(get_db),
     _user: User = Depends(require_role("superadmin", "admin")),
 ):
-    """Parsea una planilla Femebal y crea/actualiza el partido en la base de datos."""
     if not file.filename or not file.filename.lower().endswith(".pdf"):
         raise HTTPException(status_code=400, detail="El archivo debe ser un PDF")
-
-    contents = await file.read()
-    data = PDFService.parse_femebal_sheet(io.BytesIO(contents))
-    match_info = data.get("match_info", {})
-
-    # Resolve or create home team
-    home_team_name = data["home_team"].get("name", "").strip()
-    away_team_name = data["away_team"].get("name", "").strip()
-
-    home_team = next((t for t in TeamService.get_all(db) if t.name == home_team_name), None)
-    if not home_team and home_team_name:
-        home_team = TeamService.create(db, TeamCreate(name=home_team_name))
-
-    away_team = next((t for t in TeamService.get_all(db) if t.name == away_team_name), None)
-    if not away_team and away_team_name:
-        away_team = TeamService.create(db, TeamCreate(name=away_team_name))
-
-    # Save PDF file
-    file_path = PDFService.save_pdf(contents, file.filename)
-
-    # Parse date
-    from datetime import date as date_type
-    raw_date = match_info.get("date", "")
     try:
-        parsed_date = date_type.fromisoformat(raw_date)
-    except (ValueError, TypeError):
-        parsed_date = date_type.today()
+        confirmation = PDFImportConfirmation.model_validate_json(confirmation_json)
+        snapshot = PDFService.confirm_import(
+            db, await file.read(), file.filename, file.content_type, confirmation
+        )
+        return PDFImportResult(match_id=snapshot.match_id, snapshot_id=snapshot.id)
+    except (ValueError, json.JSONDecodeError) as error:
+        db.rollback()
+        raise HTTPException(status_code=422, detail=str(error)) from error
 
-    # Create match
-    match_data = MatchCreate(
-        date=parsed_date,
-        home_team_id=home_team.id if home_team else None,
-        away_team_id=away_team.id if away_team else None,
-        venue=match_info.get("venue"),
-        court=match_info.get("court"),
-        match_time=match_info.get("time"),
-        category_label=match_info.get("category"),
-        match_number_label=str(match_info.get("match_number", "")),
-        home_score=int(match_info.get("home_score", 0)),
-        away_score=int(match_info.get("away_score", 0)),
-        pdf_file_path=file_path,
-    )
-    match = MatchService.create(db, match_data)
 
-    # Add players to squad
-    for team_key, team_obj in [("home_team", home_team), ("away_team", away_team)]:
-        if not team_obj:
-            continue
-        for p_data in data[team_key]["players"]:
-            # Find or create global player
-            all_players = PlayerService.get_by_team(db, team_obj.id)
-            player = next((p for p in all_players if p.name == p_data["name"]), None)
-            if not player:
-                player = PlayerService.create(
-                    db,
-                    PlayerCreate(
-                        name=p_data["name"],
-                        default_jersey_number=p_data["number"],
-                        global_position=None,
-                        team_id=team_obj.id,
-                    ),
-                )
-            # Upsert squad entry with official stats from PDF
-            MatchService.upsert_squad_player(
-                db,
-                MatchSquadCreate(
-                    match_id=match.id,
-                    player_id=player.id,
-                    jersey_number=p_data["number"],
-                    official_goals=p_data["goals"],
-                    official_yellow=p_data["yellow"],
-                    official_2min=p_data["two_min"],
-                    official_red=p_data["red"],
-                    official_blue=p_data["blue"],
-                ),
-            )
-
-    return MatchService.get_by_id(db, match.id)
+@router.post("/import")
+async def import_pdf(_user: User = Depends(require_role("superadmin", "admin"))):
+    raise HTTPException(status_code=409, detail="Use /pdf/confirm con valores confirmados por el analista")

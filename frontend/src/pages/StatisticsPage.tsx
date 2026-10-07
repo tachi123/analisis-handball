@@ -1,16 +1,135 @@
 import { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { useQuery } from '@tanstack/react-query'
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
+import axios from 'axios'
 import { ChevronLeft } from 'lucide-react'
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip,
   ResponsiveContainer, PieChart, Pie, Cell, Legend,
   LineChart, Line,
 } from 'recharts'
-import { getMatch, getEvents } from '../api/client'
-import type { Event } from '../types'
+import { approveReportPackage, attestRecoveryArtifact, createReportPackage, getCanonicalMetrics, getCanonicalReconciliation, getEvents, getMatch, getPublicationStatus, getReviewedMetrics, getWarningsSummary, publishReportPackage } from '../api/client'
+import WarningsPanel from '../components/WarningsPanel'
+import PdfReportExport from '../components/PdfReportExport'
+import type { Event, ReportPackageActionKind, ReportPackageEvidenceInput, ReportPublicationStatus, ReviewedMetric, ReviewedReportPackage } from '../types'
 
 const COLORS = ['#2563eb', '#dc2626', '#16a34a', '#d97706', '#7c3aed', '#0891b2']
+
+const METRIC_LABELS: Record<string, string> = {
+  shot_conversion: 'Conversión de lanzamientos',
+  seven_meter_conversion: 'Conversión de 7 metros',
+  observed_goalkeeper_save_rate: 'Atajadas por decisión observada',
+  confirmed_assist: 'Asistencias confirmadas',
+  recovery: 'Recuperaciones',
+  defensive_action: 'Acciones defensivas visibles',
+  foul_sanction: 'Faltas o sanciones',
+  transition_outcome: 'Resultados de transición',
+  goalkeeper_outcome: 'Resultados de arquero',
+}
+
+function metricLabel(key: string) {
+  if (key.startsWith('turnover:')) return `Pérdidas: ${key.slice('turnover:'.length).replace(/_/g, ' ')}`
+  return METRIC_LABELS[key] ?? key
+}
+
+function MetricContext({ metric }: { metric: ReviewedMetric }) {
+  const denominator = metric.denominator
+  const hasDenominator = typeof denominator === 'number'
+  const rate = hasDenominator && denominator > 0
+    ? `${Math.round((metric.numerator / denominator) * 100)}%`
+    : null
+
+  return <li className="rounded-lg border border-gray-100 p-3">
+    <div className="flex items-baseline justify-between gap-3">
+      <span className="font-medium text-gray-800">{metricLabel(metric.name)}</span>
+      <span className="font-bold text-indigo-700">{rate ?? `${metric.count} conteo`}</span>
+    </div>
+    <p className="mt-1 text-xs text-gray-600">
+      Conteo: {metric.count} · Numerador: {metric.numerator} · Denominador: {hasDenominator ? denominator : 'no aplicable'}
+    </p>
+    <p className="mt-1 text-xs text-gray-500">
+      Excluidos: {metric.excluded} · Desconocidos: {metric.unknown} · Reloj no verificado: {metric.clock_unverified}
+    </p>
+  </li>
+}
+
+const ACTIONS: { value: ReportPackageActionKind; label: string }[] = [
+  { value: 'keep', label: 'Mantener' }, { value: 'do', label: 'Hacer' }, { value: 'change', label: 'Cambiar' },
+]
+
+function validationMessage(error: unknown) {
+  if (axios.isAxiosError(error) && typeof error.response?.data?.detail === 'string') return error.response.data.detail
+  return error instanceof Error ? error.message : 'No se pudo validar el paquete.'
+}
+
+function emptyEvidence(): ReportPackageEvidenceInput {
+  return { reference: '', period: 1, regulation_seconds: null, clock_unverified: false, public_observation: null, public_approved: false }
+}
+
+function PublicationControls({ packageRecord }: { packageRecord: ReviewedReportPackage }) {
+  const queryClient = useQueryClient()
+  const [dumpLocation, setDumpLocation] = useState('')
+  const [pdfLocation, setPdfLocation] = useState('')
+  const status = useQuery({ queryKey: ['publication-status', packageRecord.id], queryFn: () => getPublicationStatus(packageRecord.id), enabled: Boolean(packageRecord.approved_at) })
+  const attest = useMutation({
+    mutationFn: ({ artifactType, location }: { artifactType: 'postgres_dump' | 'imported_pdf_export'; location: string }) => attestRecoveryArtifact(packageRecord.id, artifactType, location),
+    onSuccess: () => status.refetch(),
+  })
+  const publish = useMutation({
+    mutationFn: () => publishReportPackage(packageRecord.id),
+    onSuccess: (result) => queryClient.setQueryData<ReportPublicationStatus>(['publication-status', packageRecord.id], result),
+  })
+  const current = status.data
+  const publishable = current?.status === 'ready' || current?.status === 'failed' || current?.status === 'published'
+  const error = status.error ?? attest.error ?? publish.error
+
+  return <section className="rounded-lg border border-indigo-100 bg-indigo-50/40 p-3 space-y-3" aria-label="Publicación del informe">
+    <div className="flex items-start justify-between gap-3"><div><h3 className="font-medium">Publicación del informe</h3><p className="text-xs text-gray-600">Las ubicaciones son declaraciones del operador; no se verifican archivos.</p></div><button type="button" className="text-sm text-indigo-700" onClick={() => status.refetch()}>Actualizar estado</button></div>
+    {status.isLoading ? <p className="text-sm text-gray-500">Consultando preparación...</p> : current && <div role="status" className="text-sm"><p>Estado: {current.status}</p>{current.missing_recovery_artifacts.length > 0 && <p className="text-amber-700">Faltan: {current.missing_recovery_artifacts.join(', ')}</p>}{current.published_at && <p>Publicado: {new Date(current.published_at).toLocaleString()} · versión {current.report_version}</p>}</div>}
+    <div className="grid gap-2 md:grid-cols-2"><label className="text-sm">Ubicación del dump PostgreSQL<input aria-label="Ubicación del dump PostgreSQL" className="mt-1 w-full rounded border p-2" value={dumpLocation} onChange={event => setDumpLocation(event.target.value)} /></label><label className="text-sm">Ubicación de la exportación PDF<input aria-label="Ubicación de la exportación PDF" className="mt-1 w-full rounded border p-2" value={pdfLocation} onChange={event => setPdfLocation(event.target.value)} /></label></div>
+    <div className="flex flex-wrap gap-2"><button type="button" className="btn" disabled={!dumpLocation.trim() || attest.isPending} onClick={() => attest.mutate({ artifactType: 'postgres_dump', location: dumpLocation })}>Registrar dump</button><button type="button" className="btn" disabled={!pdfLocation.trim() || attest.isPending} onClick={() => attest.mutate({ artifactType: 'imported_pdf_export', location: pdfLocation })}>Registrar exportación PDF</button><button type="button" className="btn btn-primary" disabled={!publishable || publish.isPending} onClick={() => publish.mutate()}>{publish.isPending ? 'Publicando...' : current?.status === 'published' || current?.status === 'failed' ? 'Reintentar publicación' : 'Publicar'}</button></div>
+    {error && <p role="alert" className="text-sm text-red-600">{validationMessage(error)}</p>}
+    {current?.failure_message && <p role="alert" className="text-sm text-red-600">{current.failure_message}</p>}
+    {current?.status === 'published' && current.public_url && <a className="text-sm font-medium text-indigo-700 underline" href={current.public_url} target="_blank" rel="noreferrer">Abrir informe público actual</a>}
+  </section>
+}
+
+function PackageControls({ matchId, reviewedMetrics, canonicalEventIds = [] }: { matchId: number; reviewedMetrics: Record<string, ReviewedMetric> | undefined; canonicalEventIds?: number[] }) {
+  const [question, setQuestion] = useState('')
+  const [pattern, setPattern] = useState('')
+  const [action, setAction] = useState<ReportPackageActionKind | null>(null)
+  const [actionText, setActionText] = useState('')
+  const [uncertainty, setUncertainty] = useState('')
+  const [evidence, setEvidence] = useState<ReportPackageEvidenceInput[]>([emptyEvidence(), emptyEvidence(), emptyEvidence()])
+  const [packageRecord, setPackageRecord] = useState<ReviewedReportPackage | null>(null)
+  const selectedEvidence = evidence.filter(item => item.public_approved && item.reference.trim())
+  const create = useMutation({
+    mutationFn: (data: Parameters<typeof createReportPackage>[1]) => createReportPackage(matchId, data),
+    onSuccess: setPackageRecord,
+  })
+  const approve = useMutation({ mutationFn: approveReportPackage, onSuccess: setPackageRecord })
+  const submit = () => {
+    if (!action || canonicalEventIds.length === 0) return
+    create.mutate({ coaching_question: question, pattern_statement: pattern, action_kind: action, action_text: actionText, uncertainty_disclosure: uncertainty, metrics: reviewedMetrics ?? {}, reconciliation: [], source_label: null, source_status: 'canonical', canonical_event_ids: canonicalEventIds, evidence: selectedEvidence })
+  }
+  const updateEvidence = (index: number, patch: Partial<ReportPackageEvidenceInput>) => setEvidence(current => current.map((item, itemIndex) => itemIndex === index ? { ...item, ...patch } : item))
+  const error = create.error ?? approve.error
+  const approved = packageRecord?.approved_at !== null && packageRecord?.approved_at !== undefined
+
+  return <section className="card space-y-3" aria-label="Paquete de revisión para coaching">
+    <div><h2 className="font-semibold">Paquete de revisión</h2><p className="text-xs text-gray-500">Seleccioná únicamente evidencia aprobada para publicación. No se muestran notas privadas ni archivos multimedia.</p></div>
+    {canonicalEventIds.length === 0 && <p role="alert" className="text-sm text-amber-700">No hay evidencia canónica elegible: se bloquean las afirmaciones tácticas.</p>}
+    <label className="block text-sm">Pregunta de coaching<input className="mt-1 w-full rounded border p-2" value={question} onChange={event => setQuestion(event.target.value)} /></label>
+    <label className="block text-sm">Patrón observado<textarea className="mt-1 w-full rounded border p-2" value={pattern} onChange={event => setPattern(event.target.value)} /></label>
+    <fieldset><legend className="text-sm">Una acción</legend><div className="mt-1 flex gap-2">{ACTIONS.map(item => <label key={item.value} className="rounded border px-3 py-2 text-sm"><input type="radio" name="package-action" checked={action === item.value} onChange={() => setAction(item.value)} /> {item.label}</label>)}</div></fieldset>
+    <label className="block text-sm">Acción concreta<input className="mt-1 w-full rounded border p-2" value={actionText} onChange={event => setActionText(event.target.value)} /></label>
+    <label className="block text-sm">Incertidumbre o cobertura<textarea className="mt-1 w-full rounded border p-2" value={uncertainty} onChange={event => setUncertainty(event.target.value)} /></label>
+    <div className="space-y-2"><h3 className="text-sm font-medium">Evidencia pública ({selectedEvidence.length}/3 mínimo, 8 máximo)</h3>{evidence.map((item, index) => <div key={index} className="grid gap-2 rounded border p-2 sm:grid-cols-[1fr_80px_auto]"><input aria-label={`Referencia de evidencia ${index + 1}`} className="rounded border p-2 text-sm" placeholder="Referencia observable" value={item.reference} onChange={event => updateEvidence(index, { reference: event.target.value })} /><input aria-label={`Período de evidencia ${index + 1}`} className="rounded border p-2 text-sm" type="number" min="1" value={item.period} onChange={event => updateEvidence(index, { period: Number(event.target.value) })} /><label className="text-sm"><input type="checkbox" checked={item.public_approved} onChange={event => updateEvidence(index, { public_approved: event.target.checked })} /> Pública aprobada</label></div>)}{evidence.length < 8 && <button type="button" className="text-sm text-indigo-700" onClick={() => setEvidence(current => [...current, emptyEvidence()])}>Agregar evidencia</button>}</div>
+    {!action && <p className="text-sm text-amber-700">Elegí exactamente una acción: mantener, hacer o cambiar.</p>}
+    {error && <p role="alert" className="text-sm text-red-600">{validationMessage(error)}</p>}
+    {!packageRecord ? <button className="btn btn-primary" disabled={!action || canonicalEventIds.length === 0 || create.isPending} onClick={submit}>{create.isPending ? 'Guardando...' : 'Crear paquete para revisión'}</button> : <><div className="flex flex-wrap items-center gap-2"><span className="text-sm">Paquete v{packageRecord.report_version}: {approved ? 'aprobado y listo para publicación' : 'pendiente de aprobación'}</span>{!approved && <button className="btn btn-primary" disabled={approve.isPending} onClick={() => approve.mutate(packageRecord.id)}>{approve.isPending ? 'Validando...' : 'Aprobar paquete'}</button>}</div>{approved && <PublicationControls packageRecord={packageRecord} />}</>}
+  </section>
+}
 
 // ── Player stats ──────────────────────────────────────────────────────────────
 
@@ -136,7 +255,7 @@ type StatsTab = 'general' | 'portero' | 'fases'
 
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-export default function StatisticsPage() {
+export function LegacyStatisticsPage() {
   const { matchId } = useParams<{ matchId: string }>()
   const id = Number(matchId)
   const navigate = useNavigate()
@@ -145,6 +264,10 @@ export default function StatisticsPage() {
 
   const { data: match } = useQuery({ queryKey: ['match', id], queryFn: () => getMatch(id) })
   const { data: allEvents = [], isLoading } = useQuery({ queryKey: ['events', id], queryFn: () => getEvents(id) })
+  const { data: reviewedMetrics, isLoading: reviewedMetricsLoading } = useQuery({
+    queryKey: ['reviewed-metrics', id],
+    queryFn: () => getReviewedMetrics(id),
+  })
 
   const homeName = match?.home_team?.name ?? ''
   const awayName = match?.away_team?.name ?? ''
@@ -242,8 +365,37 @@ export default function StatisticsPage() {
       {/* ── GENERAL TAB ──────────────────────────────────────────────────── */}
       {tab === 'general' && (
         <>
+          <section className="card space-y-3" aria-label="Métricas analíticas revisadas">
+            <div>
+              <h2 className="font-semibold">Métricas analíticas revisadas</h2>
+              <p className="text-xs text-gray-500">Solo observaciones activas, incluidas y confirmadas. Los conteos no implican una tasa de oportunidades.</p>
+            </div>
+            {reviewedMetricsLoading ? <p className="text-sm text-gray-400">Cargando métricas revisadas…</p> : (
+              <>
+                <ul className="grid gap-2 md:grid-cols-2">
+                  {Object.entries(reviewedMetrics?.metrics ?? {}).map(([key, metric]) => <MetricContext key={key} metric={metric} />)}
+                </ul>
+                {!reviewedMetrics || Object.keys(reviewedMetrics.metrics).length === 0 ? <p className="text-sm text-gray-500">Todavía no hay observaciones analíticas revisadas.</p> : null}
+                <div className="rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm">
+                  <h3 className="font-semibold text-amber-900">Conciliación con planilla oficial</h3>
+                  {reviewedMetrics?.official ? <>
+                    <p className="mt-1 text-amber-900">Planilla oficial (snapshot {reviewedMetrics.official.snapshot_id}): {reviewedMetrics.official.home_score} - {reviewedMetrics.official.away_score}. La observación analítica no modifica estos valores.</p>
+                    <ul className="mt-2 space-y-1 text-amber-900">
+                      {reviewedMetrics.reconciliation.map(item => <li key={item.side}>
+                        {item.side === 'home' ? homeName || 'Local' : awayName || 'Visitante'}: oficial {item.official} · analítico confirmado {item.analytical} · {item.discrepancy === 0 ? 'sin discrepancia' : `discrepancia ${item.discrepancy > 0 ? '+' : ''}${item.discrepancy}; revisar la evidencia analítica y su cobertura`}
+                      </li>)}
+                    </ul>
+                  </> : <p className="mt-1 text-amber-900">No hay snapshot oficial para conciliar. Las métricas analíticas no sustituyen una planilla oficial.</p>}
+                </div>
+              </>
+            )}
+          </section>
+          <PackageControls matchId={id} reviewedMetrics={reviewedMetrics?.metrics} />
+
           {/* Summary cards */}
-          <div className="grid grid-cols-5 gap-2">
+          <div>
+            <p className="mb-2 text-xs text-gray-500">Registro histórico sin revisión analítica ni conciliación oficial</p>
+            <div className="grid grid-cols-5 gap-2">
             {[
               { label: 'Goles', value: goals, color: 'text-green-700' },
               { label: 'Lanz.', value: shots.length, color: 'text-blue-700' },
@@ -256,6 +408,7 @@ export default function StatisticsPage() {
                 <p className="text-[10px] text-gray-500 mt-0.5">{s.label}</p>
               </div>
             ))}
+            </div>
           </div>
 
           {/* Score timeline */}
@@ -455,4 +608,40 @@ export default function StatisticsPage() {
       )}
     </div>
   )
+}
+
+export default function StatisticsPage() {
+  const { matchId } = useParams<{ matchId: string }>()
+  const id = Number(matchId)
+  const navigate = useNavigate()
+  const { data: match } = useQuery({ queryKey: ['match', id], queryFn: () => getMatch(id) })
+  const { data: canonical, isLoading } = useQuery({ queryKey: ['canonical-metrics', id], queryFn: () => getCanonicalMetrics(id) })
+  const { data: reconciliation } = useQuery({ queryKey: ['canonical-reconciliation', id], queryFn: () => getCanonicalReconciliation(id) })
+  const warnings = useQuery({ queryKey: ['warnings-summary', id], queryFn: () => getWarningsSummary(id), enabled: Number.isInteger(id) && id > 0, retry: false })
+  const eligibility = canonical?.eligibility
+  const eventIds = Object.values(canonical?.metrics ?? {}).flatMap(metric => metric.evidence ?? []).map(item => item.event_id).filter((id, index, values) => values.indexOf(id) === index)
+
+  if (isLoading) return <div className="p-4 text-gray-400">Cargando estadísticas canónicas…</div>
+  return <div className="max-w-3xl mx-auto p-4 space-y-5">
+    <div className="flex items-center gap-3">
+      <button onClick={() => navigate(`/match/${id}/live`)} className="text-gray-400 hover:text-gray-700 p-1"><ChevronLeft size={24} /></button>
+      <div><h1 className="text-xl font-bold text-gray-900">{match?.home_team?.name ?? '?'} vs {match?.away_team?.name ?? '?'}</h1><p className="text-sm text-gray-500">Estadísticas derivadas únicamente de evidencia canónica elegible.</p></div>
+      <PdfReportExport matchId={id} />
+    </div>
+    <section className="card space-y-3" aria-label="Elegibilidad y métricas canónicas">
+      <div><h2 className="font-semibold">Cobertura analítica</h2><p className="text-xs text-gray-500">Los registros desconocidos, no resueltos y con reloj no verificado se muestran como límites, no como afirmaciones tácticas.</p></div>
+      <div className="grid grid-cols-2 gap-2 text-sm md:grid-cols-5"><span>Elegibles: {eligibility?.eligible ?? 0}</span><span>Excluidos: {eligibility?.excluded ?? 0}</span><span>Desconocidos: {eligibility?.unknown ?? 0}</span><span>No resueltos: {eligibility?.unresolved ?? 0}</span><span>Reloj no verificado: {eligibility?.clock_unverified ?? 0}</span></div>
+      {eventIds.length === 0 && <p role="alert" className="rounded border border-amber-200 bg-amber-50 p-2 text-sm text-amber-800">No hay evidencia elegible; las conclusiones tácticas están bloqueadas.</p>}
+      <ul className="grid gap-2 md:grid-cols-2">{Object.entries(canonical?.metrics ?? {}).map(([key, metric]) => <MetricContext key={key} metric={metric} />)}</ul>
+    </section>
+    <section className="rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm" aria-label="Conciliación con planilla oficial">
+      <h2 className="font-semibold text-amber-900">Conciliación con planilla oficial inmutable</h2>
+      {reconciliation?.official ? <><p className="mt-1">Snapshot {reconciliation.official.snapshot_id}: {reconciliation.official.home_score} - {reconciliation.official.away_score}. La analítica nunca modifica esta planilla.</p><ul className="mt-2">{reconciliation.reconciliation.map(item => <li key={item.side}>{item.side}: oficial {item.official} · analítico {item.analytical} · {item.discrepancy === 0 ? 'sin discrepancia' : `discrepancia ${item.discrepancy}`}</li>)}</ul>
+        {reconciliation.discipline && reconciliation.discipline.length > 0 && <div className="mt-3 border-t border-amber-200 pt-2" aria-label="Conciliación de sanciones"><p className="font-semibold">Sanciones (amarillas / exclusiones / rojas)</p><ul className="mt-1">{reconciliation.discipline.map(item => <li key={item.side}>{item.side === 'home' ? match?.home_team?.name || 'Local' : match?.away_team?.name || 'Visitante'}: oficial {item.official.yellow}/{item.official.two_minute}/{item.official.red} vs observado {item.observed.yellow}/{item.observed.two_minute}/{item.observed.red} · {item.status === 'match' ? 'coincide' : 'discrepancia; revisar cobertura y evidencia'} ({item.coverage.eligible_discipline_events} eventos elegibles)</li>)}</ul></div>}
+      </> : <p>No hay snapshot oficial; los datos analíticos no sustituyen resultados oficiales.</p>}
+    </section>
+    {warnings.isError ? <p role="alert" className="text-sm text-red-700">No se pudo cargar el resumen de advertencias.</p> : warnings.data && <WarningsPanel matchId={id} summary={warnings.data} />}
+    <section className="card text-sm" aria-label="Evidencia canónica"><h2 className="font-semibold">Evidencia trazable</h2><p className="mt-1 text-gray-600">Eventos elegibles para este informe: {eventIds.length ? eventIds.map(eventId => `#${eventId}`).join(', ') : 'ninguno'}.</p></section>
+    <PackageControls matchId={id} reviewedMetrics={canonical?.metrics} canonicalEventIds={eventIds} />
+  </div>
 }

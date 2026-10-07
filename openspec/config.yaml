@@ -1,0 +1,59 @@
+# Project SDD configuration. Global OpenCode configuration is inherited.
+schema: spec-driven
+
+context: |
+  Tech stack: React 18, TypeScript, Vite, Tailwind CSS, and Capacitor frontend.
+  Backend: FastAPI, SQLAlchemy, and PostgreSQL.
+  Architecture: Vite SPA consumes FastAPI REST endpoints under /api/v1.
+  Deployment: GitHub Pages frontend; Railway-ready backend; Docker Compose local stack.
+  Style: TypeScript strict mode; React function components; Python service and API modules.
+  Testing: pytest backend suite and Vitest frontend suite are configured.
+
+execution:
+  mode: auto
+  delivery_strategy: ask-always
+  review_budget_lines: 400
+  skill_resolution: paths-injected
+
+strict_tdd: false
+
+testing:
+  test_command: "python -m pytest (backend); npm --prefix frontend test -- --run"
+  strict_tdd_reason: Strict TDD was not adopted for this project; real runners exist.
+  layers:
+    unit: available
+    integration: available
+    e2e: unavailable
+  coverage:
+    available: false
+    command: ""
+  quality:
+    linter: "npm --prefix frontend run lint"
+    type_checker: "npm --prefix frontend run build"
+    formatter: ""
+
+rules:
+  proposal:
+    - State affected frontend, backend, database, and deployment boundaries.
+    - Include a rollback plan for risky or data-changing work.
+  specs:
+    - Use RFC 2119 keywords and Given/When/Then scenarios.
+  design:
+    - Document API, schema, and mobile-client impacts when applicable.
+    - Include rationale for changes spanning frontend and backend.
+  tasks:
+    - Group work by phase and keep each task completable in one session.
+  apply:
+    requirements:
+      - Follow existing React, TypeScript, FastAPI, and SQLAlchemy patterns.
+      - Add a suitable test runner before enforcing RED-GREEN-REFACTOR.
+    tdd: false
+    test_command: "python -m pytest (backend); npm --prefix frontend test -- --run"
+  verify:
+    test_command: "python -m pytest (backend); npm --prefix frontend test -- --run"
+    build_command: "npm --prefix frontend run build"
+    coverage_threshold: 0
+    notes:
+      - Run available quality commands and report configuration failures.
+  archive:
+    - Warn before merging destructive deltas into main specifications.
