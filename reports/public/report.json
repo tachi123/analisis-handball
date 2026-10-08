@@ -2363,5 +2363,10 @@
       "player_slug": "delpieri-mateo",
       "event_kind": "shot"
     }
-  ]
+  ],
+  "video": {
+    "provider": "youtube",
+    "video_id": "GP4HwGTxVlo",
+    "availability": "player_error"
+  }
 }

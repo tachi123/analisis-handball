@@ -49,6 +49,7 @@ export type PublicReport = {
   evidence: Array<{ reference: string; period: number | null; regulation_seconds: number | null; clock_unverified: boolean; observation: string | null; media_available: boolean; media_url?: string }>
   team_summary: { home: TeamSummary | null; away: TeamSummary | null } | null
   incidents: Array<Incident>
+  video: { provider: 'youtube'; video_id: string; availability: string } | null
 }
 
 const forbidden = /^(private_note|raw_events?|analysis_event_id|credentials?|api_?key|token|database|local_database|operational_api_url)$/i
@@ -80,7 +81,7 @@ function requiredArray(value: unknown) { if (!Array.isArray(value)) throw new Er
 export function decodePublicReport(value: unknown): PublicReport {
   if (!isRecord(value)) throw new Error('The public report is not a JSON object.')
   // Validate root allowlist
-  const rootAllowed = ['schema_version', 'report_version', 'match', 'source', 'coaching', 'metrics', 'players', 'reconciliation', 'uncertainty_disclosure', 'coverage', 'evidence', 'team_summary', 'incidents']
+  const rootAllowed = ['schema_version', 'report_version', 'match', 'source', 'coaching', 'metrics', 'players', 'reconciliation', 'uncertainty_disclosure', 'coverage', 'evidence', 'team_summary', 'incidents', 'video']
   fields(value as Record<string, unknown>, rootAllowed, forbidden)
   if (value.schema_version !== 'public-report-v1' || typeof value.report_version !== 'number') throw new Error('Unsupported public report version.')
   const match = requiredRecord(value.match)
@@ -265,6 +266,13 @@ export function decodePublicReport(value: unknown): PublicReport {
       } as Incident
     }).filter((item): item is Incident => item.reference !== undefined)
   }
+  let video: PublicReport['video'] = null
+  if (isRecord(value.video)) {
+    fields(value.video, ['provider', 'video_id', 'availability'], forbidden)
+    if (value.video.provider === 'youtube' && isString(value.video.video_id) && /^[A-Za-z0-9_-]{6,}$/.test(value.video.video_id) && isString(value.video.availability)) {
+      video = { provider: 'youtube', video_id: value.video.video_id, availability: value.video.availability }
+    } else throw new Error('The public report has invalid video data.')
+  }
   return {
     schema_version: value.schema_version,
     report_version: value.report_version,
@@ -292,6 +300,7 @@ metrics: normalizedMetrics,
     coverage,
     team_summary,
     incidents,
+    video,
     evidence,
   } as PublicReport
 }

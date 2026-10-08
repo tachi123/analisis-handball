@@ -204,6 +204,16 @@ if match.canonical_analysis_enabled:
     source_label = 'Canonical eligible event ledger'
     source_status = 'canonical-eligible'
 
+# The report exposes only a validated public YouTube id, never the stored source URL.
+video_source = db.query(VideoSource).filter_by(match_id=99, provider='youtube').first()
+public_video = None
+if video_source and re.fullmatch(r'[A-Za-z0-9_-]{6,}', video_source.provider_video_id or ''):
+    public_video = {
+        'provider': 'youtube',
+        'video_id': video_source.provider_video_id,
+        'availability': video_source.availability_state,
+    }
+
 # ── Build team_summary ─────────────────────────────────────────────
 home_eligible = [e for e in eligible_events if e['payload'].get('team_id') == match.home_team_id]
 away_eligible = [e for e in eligible_events if e['payload'].get('team_id') == match.away_team_id]
@@ -347,6 +357,7 @@ package_dict = {
     'players': players_data,
     'team_summary': team_summary,
     'incidents': incidents,
+    'video': public_video,
 }
 
 # Now run public_projection_from_package_type logic
@@ -416,6 +427,7 @@ report = {
     'coverage': coverage,
     'team_summary': team_summary,
     'incidents': incidents,
+    'video': public_video,
 }
 
 # Verify all player slugs pass the regex
