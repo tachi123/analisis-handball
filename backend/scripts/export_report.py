@@ -19,9 +19,7 @@ def slugify(name: str) -> str:
 
 db = SessionLocal()
 
-# Override DATABASE_URL
 import os
-os.environ['DATABASE_URL'] = 'postgresql://postgres:postgres@localhost:5435/sapa_stats'
 
 match = db.get(Match, 99)
 print('Exporting Match ' + str(match.id))
@@ -97,7 +95,8 @@ for s in squad:
                     gk_metrics['saves'] += 1
                 elif outcome == 'goal':
                     gk_metrics['goals_conceded'] += 1
-                gk_metrics['shots_faced'] += 1
+                if outcome in {'save', 'goal'}:
+                    gk_metrics['shots_faced'] += 1
 
         denom = gk_metrics['saves'] + gk_metrics['goals_conceded']
         if denom:
@@ -131,6 +130,9 @@ for s in squad:
         field_turnovers = 0
         field_recoveries = 0
         field_sanctions = 0
+        field_on_target = 0
+        field_saves_against = 0
+        field_outside_or_woodwork = 0
 
         for event in eligible_events:
             payload = event['payload']
@@ -143,6 +145,12 @@ for s in squad:
                     field_shots += 1
                     if outcome == 'goal':
                         field_goals += 1
+                        field_on_target += 1
+                    elif outcome == 'save':
+                        field_on_target += 1
+                        field_saves_against += 1
+                    elif outcome in {'miss', 'woodwork'}:
+                        field_outside_or_woodwork += 1
                 elif kind == 'turnover':
                     field_turnovers += 1
                 elif kind == 'recovery':
@@ -175,6 +183,9 @@ for s in squad:
             'metrics': {
                 'shot_conversion': shot_conversion,
                 'shots': field_shots,
+                'shots_on_target': field_on_target,
+                'saves_against': field_saves_against,
+                'outside_or_woodwork': field_outside_or_woodwork,
                 'goals': field_goals,
                 'assists': field_assists,
                 'turnovers': field_turnovers,
@@ -198,7 +209,7 @@ home_eligible = [e for e in eligible_events if e['payload'].get('team_id') == ma
 away_eligible = [e for e in eligible_events if e['payload'].get('team_id') == match.away_team_id]
 
 def team_stats(events):
-    shots = 0; goals = 0; turnovers = 0; recoveries = 0; sanctions = 0
+    shots = 0; goals = 0; turnovers = 0; recoveries = 0; sanctions = 0; shots_on_target = 0; saves_against = 0; outside_or_woodwork = 0
     for ev in events:
         payload = ev['payload']
         kind = payload.get('kind')
@@ -209,13 +220,19 @@ def team_stats(events):
             shots += 1
             if outcome == 'goal':
                 goals += 1
+                shots_on_target += 1
+            elif outcome == 'save':
+                shots_on_target += 1
+                saves_against += 1
+            elif outcome in {'miss', 'woodwork'}:
+                outside_or_woodwork += 1
         elif kind == 'turnover':
             turnovers += 1
         elif kind == 'recovery':
             recoveries += 1
         elif kind == 'foul_sanction':
             sanctions += 1
-    return {'shots': shots, 'goals': goals, 'turnovers': turnovers, 'recoveries': recoveries, 'sanctions': sanctions}
+    return {'shots': shots, 'goals': goals, 'turnovers': turnovers, 'recoveries': recoveries, 'sanctions': sanctions, 'shots_on_target': shots_on_target, 'saves_against': saves_against, 'outside_or_woodwork': outside_or_woodwork}
 
 home_stats = team_stats(home_eligible)
 away_stats = team_stats(away_eligible)
@@ -414,12 +431,12 @@ if all_slugs_valid:
     print('  All player slugs are valid (pass /^[a-z0-9-]+$/ regex)')
 
 # Write the report
-output_path = 'reports/public/report.json'
+output_path = os.getenv('PUBLIC_REPORT_OUTPUT', 'reports/public/report.json')
 with open(output_path, 'w', encoding='utf-8', newline='') as f:
     json.dump(report, f, ensure_ascii=False, indent=2)
 
 # Also write the legacy-matched path for compatibility
-legacy_path = 'reports/public/report_match99.json'
+legacy_path = os.path.join(os.path.dirname(output_path), 'report_match99.json')
 import shutil
 shutil.copy(output_path, legacy_path)
 

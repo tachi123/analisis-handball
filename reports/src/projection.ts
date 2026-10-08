@@ -16,6 +16,9 @@ export type TeamSummary = {
   turnovers: number
   recoveries: number
   sanctions: number
+  shots_on_target: number
+  saves_against: number
+  outside_or_woodwork: number
 }
 
 export type Incident = {
@@ -77,7 +80,7 @@ function requiredArray(value: unknown) { if (!Array.isArray(value)) throw new Er
 export function decodePublicReport(value: unknown): PublicReport {
   if (!isRecord(value)) throw new Error('The public report is not a JSON object.')
   // Validate root allowlist
-  const rootAllowed = ['schema_version', 'report_version', 'match', 'source', 'coaching', 'metrics', 'players', 'reconciliation', 'uncertainty_disclosure', 'coverage', 'evidence']
+  const rootAllowed = ['schema_version', 'report_version', 'match', 'source', 'coaching', 'metrics', 'players', 'reconciliation', 'uncertainty_disclosure', 'coverage', 'evidence', 'team_summary', 'incidents']
   fields(value as Record<string, unknown>, rootAllowed, forbidden)
   if (value.schema_version !== 'public-report-v1' || typeof value.report_version !== 'number') throw new Error('Unsupported public report version.')
   const match = requiredRecord(value.match)
@@ -207,6 +210,9 @@ export function decodePublicReport(value: unknown): PublicReport {
           turnovers: typeof raw.turnovers === 'number' ? raw.turnovers : 0,
           recoveries: typeof raw.recoveries === 'number' ? raw.recoveries : 0,
           sanctions: typeof raw.sanctions === 'number' ? raw.sanctions : 0,
+          shots_on_target: typeof raw.shots_on_target === 'number' ? raw.shots_on_target : 0,
+          saves_against: typeof raw.saves_against === 'number' ? raw.saves_against : 0,
+          outside_or_woodwork: typeof raw.outside_or_woodwork === 'number' ? raw.outside_or_woodwork : 0,
         }
       }
       const home = readSummary(ts.home, 'home')
