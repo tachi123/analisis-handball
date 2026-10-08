@@ -33,6 +33,7 @@ export type Incident = {
   player_name: string | null
   player_slug: string | null
   event_kind: string
+  video_seconds: number | null
 }
 
 export type PublicReport = {
@@ -261,8 +262,9 @@ export function decodePublicReport(value: unknown): PublicReport {
         outcome: outcome_map[outcome] || outcome || '',
         team_side: it.team_side as 'home' | 'away' | 'unknown' || 'unknown',
         player_name: it.player_name as string | null,
-        player_slug: it.player_slug as string | null,
-        event_kind: kind,
+      player_slug: it.player_slug as string | null,
+      event_kind: kind,
+      video_seconds: typeof it.video_seconds === 'number' ? it.video_seconds : null,
       } as Incident
     }).filter((item): item is Incident => item.reference !== undefined)
   }

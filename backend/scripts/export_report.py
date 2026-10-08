@@ -34,6 +34,22 @@ events = metrics_data.get('events', [])
 eligible_events = [e for e in events if e.get('active') and e.get('payload', {}).get('fact_kind') == 'observed'
                    and e.get('payload', {}).get('evidence_state') == 'confirmed']
 
+# Video review persists the exact player position as evidence. Publish that
+# timestamp only for the matching active revision, never an inferred clock map.
+eligible_by_id = {event['id']: event for event in eligible_events}
+video_seconds_by_event = {}
+if eligible_by_id:
+    revisions = db.query(CanonicalEventRevision).options(jl(CanonicalEventRevision.evidence)).filter(
+        CanonicalEventRevision.event_id.in_(eligible_by_id)
+    ).all()
+    for revision in revisions:
+        event = eligible_by_id.get(revision.event_id)
+        if not event or revision.revision != event.get('revision'):
+            continue
+        evidence = next((item for item in revision.evidence if item.kind == 'video' and item.video_anchor_seconds is not None), None)
+        if evidence:
+            video_seconds_by_event[revision.event_id] = evidence.video_anchor_seconds
+
 evidence_rows = []
 seq = 1
 for event in eligible_events:
@@ -332,6 +348,7 @@ for ev in eligible_events:
         'player_name': player_name,
         'player_slug': player_slug,
         'event_kind': kind,
+        'video_seconds': video_seconds_by_event.get(ev['id']),
     })
 
 # Sort incidents by period and regulation_seconds, then sequence

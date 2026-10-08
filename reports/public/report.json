@@ -1308,7 +1308,8 @@
       "team_side": "away",
       "player_name": null,
       "player_slug": null,
-      "event_kind": "other"
+      "event_kind": "other",
+      "video_seconds": 246.407336
     },
     {
       "reference": "Sequence 69",
@@ -1321,7 +1322,8 @@
       "team_side": "away",
       "player_name": "Gigante, Roberto Juan",
       "player_slug": "gigante-roberto-juan",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 2028.377054
     },
     {
       "reference": "Sequence 70",
@@ -1334,7 +1336,8 @@
       "team_side": "home",
       "player_name": "Ramirez, Gaston",
       "player_slug": "ramirez-gaston",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 2074.162644
     },
     {
       "reference": "Sequence 71",
@@ -1347,7 +1350,8 @@
       "team_side": "away",
       "player_name": "Innella, Gaston",
       "player_slug": "innella-gaston",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 2089.548295
     },
     {
       "reference": "Sequence 72",
@@ -1360,7 +1364,8 @@
       "team_side": "away",
       "player_name": "Delmoro, Lucas",
       "player_slug": "delmoro-lucas",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 2093.557636
     },
     {
       "reference": "Sequence 73",
@@ -1373,7 +1378,8 @@
       "team_side": "home",
       "player_name": "Mollo Skripnik Strelecki, Juan Ig...",
       "player_slug": "mollo-skripnik-strelecki-juan-ig",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 2104.251725
     },
     {
       "reference": "Sequence 74",
@@ -1386,7 +1392,8 @@
       "team_side": "home",
       "player_name": "Ramirez, Gaston",
       "player_slug": "ramirez-gaston",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 2106.640193
     },
     {
       "reference": "Sequence 75",
@@ -1399,7 +1406,8 @@
       "team_side": "home",
       "player_name": "Mollo Skripnik Strelecki, Juan Ig...",
       "player_slug": "mollo-skripnik-strelecki-juan-ig",
-      "event_kind": "foul_sanction"
+      "event_kind": "foul_sanction",
+      "video_seconds": 2143.010426
     },
     {
       "reference": "Sequence 76",
@@ -1412,7 +1420,8 @@
       "team_side": "away",
       "player_name": "Gimenez Asciutto, Mateo",
       "player_slug": "gimenez-asciutto-mateo",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 2173.609325
     },
     {
       "reference": "Sequence 77",
@@ -1425,7 +1434,8 @@
       "team_side": "home",
       "player_name": "Chavez, Alexis Ezequiel",
       "player_slug": "chavez-alexis-ezequiel",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 2205.010684
     },
     {
       "reference": "Sequence 78",
@@ -1438,7 +1448,8 @@
       "team_side": "away",
       "player_name": "Allerborn, Joaquin",
       "player_slug": "allerborn-joaquin",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 2213.119237
     },
     {
       "reference": "Sequence 79",
@@ -1451,7 +1462,8 @@
       "team_side": "home",
       "player_name": "Gonzalez, Ezequiel Matias",
       "player_slug": "gonzalez-ezequiel-matias",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 2240.043547
     },
     {
       "reference": "Sequence 80",
@@ -1464,7 +1476,8 @@
       "team_side": "away",
       "player_name": "Innella, Gaston",
       "player_slug": "innella-gaston",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 2333.536501
     },
     {
       "reference": "Sequence 81",
@@ -1477,7 +1490,8 @@
       "team_side": "home",
       "player_name": "Delpieri, Mateo",
       "player_slug": "delpieri-mateo",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 2351.682468
     },
     {
       "reference": "Sequence 82",
@@ -1490,7 +1504,8 @@
       "team_side": "away",
       "player_name": null,
       "player_slug": null,
-      "event_kind": "other"
+      "event_kind": "other",
+      "video_seconds": 2359.209538
     },
     {
       "reference": "Sequence 2",
@@ -1503,7 +1518,8 @@
       "team_side": "away",
       "player_name": "Viggiano, Valentin Nicolas",
       "player_slug": "viggiano-valentin-nicolas",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 278.119455
     },
     {
       "reference": "Sequence 3",
@@ -1516,7 +1532,8 @@
       "team_side": "home",
       "player_name": "Martinez, Milo Ulises",
       "player_slug": "martinez-milo-ulises",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 311.417599
     },
     {
       "reference": "Sequence 4",
@@ -1529,7 +1546,8 @@
       "team_side": "home",
       "player_name": "Sarrailh, Pablo Eduardo",
       "player_slug": "sarrailh-pablo-eduardo",
-      "event_kind": "recovery"
+      "event_kind": "recovery",
+      "video_seconds": 322.53877
     },
     {
       "reference": "Sequence 5",
@@ -1542,7 +1560,8 @@
       "team_side": "home",
       "player_name": "Ferrari, Jonas Horacio",
       "player_slug": "ferrari-jonas-horacio",
-      "event_kind": "turnover"
+      "event_kind": "turnover",
+      "video_seconds": 350.356912
     },
     {
       "reference": "Sequence 6",
@@ -1555,7 +1574,8 @@
       "team_side": "home",
       "player_name": "Mollo Skripnik Strelecki, Juan Ig...",
       "player_slug": "mollo-skripnik-strelecki-juan-ig",
-      "event_kind": "recovery"
+      "event_kind": "recovery",
+      "video_seconds": 355.645694
     },
     {
       "reference": "Sequence 7",
@@ -1568,7 +1588,8 @@
       "team_side": "home",
       "player_name": "Mollo Skripnik Strelecki, Juan Ig...",
       "player_slug": "mollo-skripnik-strelecki-juan-ig",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 384.150391
     },
     {
       "reference": "Sequence 8",
@@ -1581,7 +1602,8 @@
       "team_side": "away",
       "player_name": "Murino, Lautaro Ezequiel",
       "player_slug": "murino-lautaro-ezequiel",
-      "event_kind": "turnover"
+      "event_kind": "turnover",
+      "video_seconds": 395.63274
     },
     {
       "reference": "Sequence 9",
@@ -1594,7 +1616,8 @@
       "team_side": "home",
       "player_name": "Ferrari, Jonas Horacio",
       "player_slug": "ferrari-jonas-horacio",
-      "event_kind": "turnover"
+      "event_kind": "turnover",
+      "video_seconds": 444.810884
     },
     {
       "reference": "Sequence 10",
@@ -1607,7 +1630,8 @@
       "team_side": "away",
       "player_name": "Innella, Gaston",
       "player_slug": "innella-gaston",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 457.146563
     },
     {
       "reference": "Sequence 11",
@@ -1620,7 +1644,8 @@
       "team_side": "home",
       "player_name": "Martinez, Milo Ulises",
       "player_slug": "martinez-milo-ulises",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 468.704861
     },
     {
       "reference": "Sequence 12",
@@ -1633,7 +1658,8 @@
       "team_side": "home",
       "player_name": "Delpieri, Mateo",
       "player_slug": "delpieri-mateo",
-      "event_kind": "foul_sanction"
+      "event_kind": "foul_sanction",
+      "video_seconds": 504.581399
     },
     {
       "reference": "Sequence 13",
@@ -1646,7 +1672,8 @@
       "team_side": "away",
       "player_name": "Romero, Elias Josue",
       "player_slug": "romero-elias-josue",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 516.903172
     },
     {
       "reference": "Sequence 14",
@@ -1659,7 +1686,8 @@
       "team_side": "home",
       "player_name": "Delpieri, Mateo",
       "player_slug": "delpieri-mateo",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 529.085176
     },
     {
       "reference": "Sequence 15",
@@ -1672,7 +1700,8 @@
       "team_side": "away",
       "player_name": "Viggiano, Valentin Nicolas",
       "player_slug": "viggiano-valentin-nicolas",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 535.229713
     },
     {
       "reference": "Sequence 16",
@@ -1685,7 +1714,8 @@
       "team_side": "home",
       "player_name": "Martinez, Milo Ulises",
       "player_slug": "martinez-milo-ulises",
-      "event_kind": "turnover"
+      "event_kind": "turnover",
+      "video_seconds": 561.365402
     },
     {
       "reference": "Sequence 17",
@@ -1698,7 +1728,8 @@
       "team_side": "away",
       "player_name": null,
       "player_slug": null,
-      "event_kind": "turnover"
+      "event_kind": "turnover",
+      "video_seconds": 571.927016
     },
     {
       "reference": "Sequence 18",
@@ -1711,7 +1742,8 @@
       "team_side": "home",
       "player_name": "Correa, Marcos Isauro",
       "player_slug": "correa-marcos-isauro",
-      "event_kind": "turnover"
+      "event_kind": "turnover",
+      "video_seconds": 576.921199
     },
     {
       "reference": "Sequence 19",
@@ -1724,7 +1756,8 @@
       "team_side": "away",
       "player_name": "Alonso, Julian",
       "player_slug": "alonso-julian",
-      "event_kind": "turnover"
+      "event_kind": "turnover",
+      "video_seconds": 607.215633
     },
     {
       "reference": "Sequence 20",
@@ -1737,7 +1770,8 @@
       "team_side": "home",
       "player_name": "Delpieri, Mateo",
       "player_slug": "delpieri-mateo",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 644.216682
     },
     {
       "reference": "Sequence 21",
@@ -1750,7 +1784,8 @@
       "team_side": "away",
       "player_name": "Romero, Elias Josue",
       "player_slug": "romero-elias-josue",
-      "event_kind": "turnover"
+      "event_kind": "turnover",
+      "video_seconds": 653.751825
     },
     {
       "reference": "Sequence 22",
@@ -1763,7 +1798,8 @@
       "team_side": "home",
       "player_name": "Sarrailh, Pablo Eduardo",
       "player_slug": "sarrailh-pablo-eduardo",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 697.877282
     },
     {
       "reference": "Sequence 23",
@@ -1776,7 +1812,8 @@
       "team_side": "away",
       "player_name": "Viggiano, Valentin Nicolas",
       "player_slug": "viggiano-valentin-nicolas",
-      "event_kind": "turnover"
+      "event_kind": "turnover",
+      "video_seconds": 736.974807
     },
     {
       "reference": "Sequence 24",
@@ -1789,7 +1826,8 @@
       "team_side": "home",
       "player_name": "Mollo Skripnik Strelecki, Lucian...",
       "player_slug": "mollo-skripnik-strelecki-lucian",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 760.24028
     },
     {
       "reference": "Sequence 25",
@@ -1802,7 +1840,8 @@
       "team_side": "away",
       "player_name": "Murino, Lautaro Ezequiel",
       "player_slug": "murino-lautaro-ezequiel",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 774.529652
     },
     {
       "reference": "Sequence 26",
@@ -1815,7 +1854,8 @@
       "team_side": "home",
       "player_name": "Martinez, Milo Ulises",
       "player_slug": "martinez-milo-ulises",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 810.55116
     },
     {
       "reference": "Sequence 27",
@@ -1828,7 +1868,8 @@
       "team_side": "away",
       "player_name": "Borrelli, Matias Exequiel Tomas",
       "player_slug": "borrelli-matias-exequiel-tomas",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 863.514477
     },
     {
       "reference": "Sequence 28",
@@ -1841,7 +1882,8 @@
       "team_side": "home",
       "player_name": "Martinez, Milo Ulises",
       "player_slug": "martinez-milo-ulises",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 875.11617
     },
     {
       "reference": "Sequence 29",
@@ -1854,7 +1896,8 @@
       "team_side": "away",
       "player_name": "Innella, Gaston",
       "player_slug": "innella-gaston",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 882.700617
     },
     {
       "reference": "Sequence 30",
@@ -1867,7 +1910,8 @@
       "team_side": "home",
       "player_name": "Martinez, Milo Ulises",
       "player_slug": "martinez-milo-ulises",
-      "event_kind": "turnover"
+      "event_kind": "turnover",
+      "video_seconds": 912.587223
     },
     {
       "reference": "Sequence 31",
@@ -1880,7 +1924,8 @@
       "team_side": "home",
       "player_name": "Mollo Skripnik Strelecki, Lucian...",
       "player_slug": "mollo-skripnik-strelecki-lucian",
-      "event_kind": "recovery"
+      "event_kind": "recovery",
+      "video_seconds": 916.969403
     },
     {
       "reference": "Sequence 32",
@@ -1893,7 +1938,8 @@
       "team_side": "home",
       "player_name": "Chavez, Alexis Ezequiel",
       "player_slug": "chavez-alexis-ezequiel",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 943.061032
     },
     {
       "reference": "Sequence 33",
@@ -1906,7 +1952,8 @@
       "team_side": "away",
       "player_name": "Romero, Elias Josue",
       "player_slug": "romero-elias-josue",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 978.348021
     },
     {
       "reference": "Sequence 34",
@@ -1919,7 +1966,8 @@
       "team_side": "home",
       "player_name": "Ramirez, Gaston",
       "player_slug": "ramirez-gaston",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 986.974343
     },
     {
       "reference": "Sequence 35",
@@ -1932,7 +1980,8 @@
       "team_side": "away",
       "player_name": "Romero, Elias Josue",
       "player_slug": "romero-elias-josue",
-      "event_kind": "turnover"
+      "event_kind": "turnover",
+      "video_seconds": 996.174534
     },
     {
       "reference": "Sequence 36",
@@ -1945,7 +1994,8 @@
       "team_side": "home",
       "player_name": "Delpieri, Mateo",
       "player_slug": "delpieri-mateo",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 1002.763562
     },
     {
       "reference": "Sequence 37",
@@ -1958,7 +2008,8 @@
       "team_side": "away",
       "player_name": "Alonso, Julian",
       "player_slug": "alonso-julian",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 1050.53043
     },
     {
       "reference": "Sequence 38",
@@ -1971,7 +2022,8 @@
       "team_side": "home",
       "player_name": "Ferrari, Jonas Horacio",
       "player_slug": "ferrari-jonas-horacio",
-      "event_kind": "turnover"
+      "event_kind": "turnover",
+      "video_seconds": 1061.170829
     },
     {
       "reference": "Sequence 39",
@@ -1984,7 +2036,8 @@
       "team_side": "away",
       "player_name": "Viggiano, Valentin Nicolas",
       "player_slug": "viggiano-valentin-nicolas",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 1094.716677
     },
     {
       "reference": "Sequence 40",
@@ -1997,7 +2050,8 @@
       "team_side": "home",
       "player_name": null,
       "player_slug": null,
-      "event_kind": "other"
+      "event_kind": "other",
+      "video_seconds": 1106.097378
     },
     {
       "reference": "Sequence 42",
@@ -2010,7 +2064,8 @@
       "team_side": "home",
       "player_name": "Delpieri, Mateo",
       "player_slug": "delpieri-mateo",
-      "event_kind": "turnover"
+      "event_kind": "turnover",
+      "video_seconds": 1205.399462
     },
     {
       "reference": "Sequence 41",
@@ -2023,7 +2078,8 @@
       "team_side": "home",
       "player_name": "Correa, Marcos Isauro",
       "player_slug": "correa-marcos-isauro",
-      "event_kind": "goalkeeper_change"
+      "event_kind": "goalkeeper_change",
+      "video_seconds": 247.90469
     },
     {
       "reference": "Sequence 43",
@@ -2036,7 +2092,8 @@
       "team_side": "away",
       "player_name": "Borrelli, Matias Exequiel Tomas",
       "player_slug": "borrelli-matias-exequiel-tomas",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 1216.550014
     },
     {
       "reference": "Sequence 44",
@@ -2049,7 +2106,8 @@
       "team_side": "home",
       "player_name": "Martinez, Milo Ulises",
       "player_slug": "martinez-milo-ulises",
-      "event_kind": "turnover"
+      "event_kind": "turnover",
+      "video_seconds": 1251.167989
     },
     {
       "reference": "Sequence 45",
@@ -2062,7 +2120,8 @@
       "team_side": "away",
       "player_name": "Allerborn, Joaquin",
       "player_slug": "allerborn-joaquin",
-      "event_kind": "turnover"
+      "event_kind": "turnover",
+      "video_seconds": 1251.805268
     },
     {
       "reference": "Sequence 46",
@@ -2075,7 +2134,8 @@
       "team_side": "home",
       "player_name": "Gonzalez, Ezequiel Matias",
       "player_slug": "gonzalez-ezequiel-matias",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 1264.080662
     },
     {
       "reference": "Sequence 47",
@@ -2088,7 +2148,8 @@
       "team_side": "away",
       "player_name": "Borrelli, Matias Exequiel Tomas",
       "player_slug": "borrelli-matias-exequiel-tomas",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 1322.278905
     },
     {
       "reference": "Sequence 48",
@@ -2101,7 +2162,8 @@
       "team_side": "away",
       "player_name": "Murino, Lautaro Ezequiel",
       "player_slug": "murino-lautaro-ezequiel",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 1342.605567
     },
     {
       "reference": "Sequence 49",
@@ -2114,7 +2176,8 @@
       "team_side": "away",
       "player_name": "Murino, Lautaro Ezequiel",
       "player_slug": "murino-lautaro-ezequiel",
-      "event_kind": "turnover"
+      "event_kind": "turnover",
+      "video_seconds": 1343.003904
     },
     {
       "reference": "Sequence 50",
@@ -2127,7 +2190,8 @@
       "team_side": "home",
       "player_name": "Sarrailh, Pablo Eduardo",
       "player_slug": "sarrailh-pablo-eduardo",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 1395.694513
     },
     {
       "reference": "Sequence 51",
@@ -2140,7 +2204,8 @@
       "team_side": "away",
       "player_name": "Borrelli, Matias Exequiel Tomas",
       "player_slug": "borrelli-matias-exequiel-tomas",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 1436.906436
     },
     {
       "reference": "Sequence 52",
@@ -2153,7 +2218,8 @@
       "team_side": "home",
       "player_name": "Delpieri, Mateo",
       "player_slug": "delpieri-mateo",
-      "event_kind": "turnover"
+      "event_kind": "turnover",
+      "video_seconds": 1446.010421
     },
     {
       "reference": "Sequence 53",
@@ -2166,7 +2232,8 @@
       "team_side": "away",
       "player_name": "Borrelli, Matias Exequiel Tomas",
       "player_slug": "borrelli-matias-exequiel-tomas",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 1478.917992
     },
     {
       "reference": "Sequence 54",
@@ -2179,7 +2246,8 @@
       "team_side": "home",
       "player_name": "Martinez, Milo Ulises",
       "player_slug": "martinez-milo-ulises",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 1511.912231
     },
     {
       "reference": "Sequence 55",
@@ -2192,7 +2260,8 @@
       "team_side": "away",
       "player_name": "Iglesias, Genaro",
       "player_slug": "iglesias-genaro",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 1541.424447
     },
     {
       "reference": "Sequence 56",
@@ -2205,7 +2274,8 @@
       "team_side": "away",
       "player_name": "Iglesias, Genaro",
       "player_slug": "iglesias-genaro",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 1542.206545
     },
     {
       "reference": "Sequence 57",
@@ -2218,7 +2288,8 @@
       "team_side": "home",
       "player_name": "Chavez, Alexis Ezequiel",
       "player_slug": "chavez-alexis-ezequiel",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 1604.878508
     },
     {
       "reference": "Sequence 58",
@@ -2231,7 +2302,8 @@
       "team_side": "away",
       "player_name": "Innella, Gaston",
       "player_slug": "innella-gaston",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 1616.339326
     },
     {
       "reference": "Sequence 59",
@@ -2244,7 +2316,8 @@
       "team_side": "home",
       "player_name": "Martinez, Milo Ulises",
       "player_slug": "martinez-milo-ulises",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 1631.412307
     },
     {
       "reference": "Sequence 60",
@@ -2257,7 +2330,8 @@
       "team_side": "away",
       "player_name": "Iglesias, Genaro",
       "player_slug": "iglesias-genaro",
-      "event_kind": "turnover"
+      "event_kind": "turnover",
+      "video_seconds": 1656.993973
     },
     {
       "reference": "Sequence 61",
@@ -2270,7 +2344,8 @@
       "team_side": "home",
       "player_name": "Martinez, Milo Ulises",
       "player_slug": "martinez-milo-ulises",
-      "event_kind": "turnover"
+      "event_kind": "turnover",
+      "video_seconds": 1665.534605
     },
     {
       "reference": "Sequence 62",
@@ -2283,7 +2358,8 @@
       "team_side": "away",
       "player_name": "Murino, Lautaro Ezequiel",
       "player_slug": "murino-lautaro-ezequiel",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 1694.914687
     },
     {
       "reference": "Sequence 63",
@@ -2296,7 +2372,8 @@
       "team_side": "home",
       "player_name": "Gonzalez, Ezequiel Matias",
       "player_slug": "gonzalez-ezequiel-matias",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 1726.331423
     },
     {
       "reference": "Sequence 64",
@@ -2309,7 +2386,8 @@
       "team_side": "away",
       "player_name": null,
       "player_slug": null,
-      "event_kind": "other"
+      "event_kind": "other",
+      "video_seconds": 1750.020644
     },
     {
       "reference": "Sequence 65",
@@ -2322,7 +2400,8 @@
       "team_side": "away",
       "player_name": "Gimenez Asciutto, Mateo",
       "player_slug": "gimenez-asciutto-mateo",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 1837.272269
     },
     {
       "reference": "Sequence 66",
@@ -2335,7 +2414,8 @@
       "team_side": "home",
       "player_name": "Mollo Skripnik Strelecki, Lucian...",
       "player_slug": "mollo-skripnik-strelecki-lucian",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 1881.594155
     },
     {
       "reference": "Sequence 67",
@@ -2348,7 +2428,8 @@
       "team_side": "away",
       "player_name": "Gimenez Asciutto, Mateo",
       "player_slug": "gimenez-asciutto-mateo",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 1946.031087
     },
     {
       "reference": "Sequence 68",
@@ -2361,7 +2442,8 @@
       "team_side": "home",
       "player_name": "Delpieri, Mateo",
       "player_slug": "delpieri-mateo",
-      "event_kind": "shot"
+      "event_kind": "shot",
+      "video_seconds": 1977.408337
     }
   ],
   "video": {
