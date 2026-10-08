@@ -35,13 +35,14 @@ export default function App() {
   const [visible, setVisible] = useState(BATCH)
 
   useEffect(() => { fetch('report.json').then((response) => response.ok ? response.json() : Promise.reject()).then((data) => { setReport(decodePublicReport(data)); setMessage('') }).catch(() => setMessage('No se pudo abrir el informe. Actualizá la página o volvé a intentar.')) }, [])
+  const reportIncidents = report?.incidents ?? []
+  const types = useMemo(() => [...new Set(reportIncidents.map((incident) => incident.incident_type))], [reportIncidents])
+  const incidents = useMemo(() => reportIncidents.filter((incident) => (team === 'all' || incident.team_side === team) && (playerSlug === 'all' || incident.player_slug === playerSlug) && (kind === 'all' || incident.incident_type === kind)), [reportIncidents, team, playerSlug, kind])
   if (!report) return <main className="report-status"><p role="status">{message}</p></main>
 
   const players = report.players ?? []
   const fields = players.filter((player) => player.role === 'field_player' && (team === 'all' || player.team_side === team))
   const keepers = players.filter((player) => player.role === 'goalkeeper' && (team === 'all' || player.team_side === team))
-  const types = useMemo(() => [...new Set(report.incidents.map((incident) => incident.incident_type))], [report.incidents])
-  const incidents = useMemo(() => report.incidents.filter((incident) => (team === 'all' || incident.team_side === team) && (playerSlug === 'all' || incident.player_slug === playerSlug) && (kind === 'all' || incident.incident_type === kind)), [report.incidents, team, playerSlug, kind])
   const reset = (callback: () => void) => { callback(); setVisible(BATCH) }
   const selected = players.find((player) => player.slug === playerSlug) ?? null
 
