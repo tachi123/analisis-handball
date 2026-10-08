@@ -158,9 +158,9 @@
       "role": "goalkeeper",
       "metrics": {
         "saves": 8,
-        "shots_faced": 18,
-        "goals_conceded": 10,
-        "save_rate": 0.4444
+        "shots_faced": 20,
+        "goals_conceded": 12,
+        "save_rate": 0.4
       },
       "evidence": []
     },
