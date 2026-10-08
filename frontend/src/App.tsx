@@ -18,6 +18,7 @@ import FixtureRosterPage from './pages/FixtureRosterPage'
 import FixtureReviewPage from './pages/FixtureReviewPage'
 import FixturePreparationPage from './pages/FixturePreparationPage'
 import ManualMatchPreparationPage from './pages/ManualMatchPreparationPage'
+import DashboardPage from './pages/DashboardPage'
 
 export default function App() {
   return (
@@ -45,6 +46,7 @@ export default function App() {
         <Route path="/tournaments" element={<TournamentsPage />} />
         <Route path="/teams" element={<TeamsPage />} />
         <Route path="/players" element={<PlayersPage />} />
+        <Route path="/match/:matchId/dashboard" element={<DashboardPage />} />
         <Route path="*" element={<Navigate to="/matches" replace />} />
       </Route>
     </Routes>

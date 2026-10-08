@@ -8,6 +8,30 @@
   evidence: Array<{ reference: string; period: number | null }>
 }
 
+export type TeamSummary = {
+  name: string
+  side: 'home' | 'away'
+  shots: number
+  goals: number
+  turnovers: number
+  recoveries: number
+  sanctions: number
+}
+
+export type Incident = {
+  reference: string
+  period: number | null
+  regulation_seconds: number | null
+  clock_unverified: boolean
+  clock_label: string | null
+  incident_type: string
+  outcome: string
+  team_side: 'home' | 'away' | 'unknown'
+  player_name: string | null
+  player_slug: string | null
+  event_kind: string
+}
+
 export type PublicReport = {
   schema_version: 'public-report-v1'
   report_version: number
@@ -20,6 +44,8 @@ export type PublicReport = {
   uncertainty_disclosure: string | null
   coverage: { analyzed_periods: number[] | null; status: 'partial' | 'complete' | null; label: string | null } | null
   evidence: Array<{ reference: string; period: number | null; regulation_seconds: number | null; clock_unverified: boolean; observation: string | null; media_available: boolean; media_url?: string }>
+  team_summary: { home: TeamSummary | null; away: TeamSummary | null } | null
+  incidents: Array<Incident>
 }
 
 const forbidden = /^(private_note|raw_events?|analysis_event_id|credentials?|api_?key|token|database|local_database|operational_api_url)$/i
@@ -167,6 +193,72 @@ export function decodePublicReport(value: unknown): PublicReport {
       }
     }
   }
+  // Optional team_summary (nested home/away)
+  let team_summary: PublicReport['team_summary'] = null
+  if ('team_summary' in value && value.team_summary !== null) {
+    const ts = value.team_summary
+    if (isRecord(ts)) {
+      const readSummary = (raw: unknown, side: 'home' | 'away'): TeamSummary | null => {
+        if (!isRecord(raw)) return null
+        return {
+          name: isString(raw.name) ? raw.name : '', side,
+          shots: typeof raw.shots === 'number' ? raw.shots : 0,
+          goals: typeof raw.goals === 'number' ? raw.goals : 0,
+          turnovers: typeof raw.turnovers === 'number' ? raw.turnovers : 0,
+          recoveries: typeof raw.recoveries === 'number' ? raw.recoveries : 0,
+          sanctions: typeof raw.sanctions === 'number' ? raw.sanctions : 0,
+        }
+      }
+      const home = readSummary(ts.home, 'home')
+      const away = readSummary(ts.away, 'away')
+      if (home || away) {
+        team_summary = { home, away } as PublicReport['team_summary']
+      }
+    }
+  }
+  // Optional incidents (chronological, period-separated events)
+  let incidents: PublicReport['incidents'] = []
+  if ('incidents' in value && Array.isArray(value.incidents)) {
+    incidents = value.incidents.map((item: unknown) => {
+      const it = requiredRecord(item) as Record<string, unknown>
+      const incident_type_map: Record<string, string> = {
+        'shot': 'Lanzamiento',
+        'turnover': 'Pérdida',
+        'recovery': 'Recuperación',
+        'foul_sanction': 'Sanción',
+        'other': 'Incidencia de juego',
+      }
+      const outcome_map: Record<string, string> = {
+        'goal': 'Gol',
+        'save': 'Atajada',
+        'miss': 'Fuera',
+        'woodwork': 'Palo/Travesaño',
+        'blocked': 'Bloqueado',
+        'bad_pass': 'Pase perdido',
+        'bad_reception': 'Recepción perdida',
+        'foul': 'Falta',
+        'yellow_card': 'Tarjeta amarilla',
+        'red_card': 'Tarjeta roja',
+        'two_minute_exclusion': 'Exclusión 2 min',
+        'blue_card': 'Tarjeta azul',
+      }
+      const kind = it.event_kind as string || 'other'
+      const outcome = it.outcome as string || ''
+      return {
+        reference: it.reference as string || 'Sequence',
+        period: it.period !== undefined ? Number(it.period) : null,
+        regulation_seconds: it.regulation_seconds !== undefined ? Number(it.regulation_seconds) : null,
+        clock_unverified: Boolean(it.clock_unverified),
+        clock_label: it.clock_label as string | null,
+        incident_type: incident_type_map[kind] || 'Incidencia',
+        outcome: outcome_map[outcome] || outcome || '',
+        team_side: it.team_side as 'home' | 'away' | 'unknown' || 'unknown',
+        player_name: it.player_name as string | null,
+        player_slug: it.player_slug as string | null,
+        event_kind: kind,
+      } as Incident
+    }).filter((item): item is Incident => item.reference !== undefined)
+  }
   return {
     schema_version: value.schema_version,
     report_version: value.report_version,
@@ -192,6 +284,8 @@ metrics: normalizedMetrics,
     reconciliation: reconciliation as PublicReport['reconciliation'],
     uncertainty_disclosure: value.uncertainty_disclosure ?? null,
     coverage,
+    team_summary,
+    incidents,
     evidence,
   } as PublicReport
 }

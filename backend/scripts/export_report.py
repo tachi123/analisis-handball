@@ -193,6 +193,123 @@ if match.canonical_analysis_enabled:
     source_label = 'Canonical eligible event ledger'
     source_status = 'canonical-eligible'
 
+# ── Build team_summary ─────────────────────────────────────────────
+home_eligible = [e for e in eligible_events if e['payload'].get('team_id') == match.home_team_id]
+away_eligible = [e for e in eligible_events if e['payload'].get('team_id') == match.away_team_id]
+
+def team_stats(events):
+    shots = 0; goals = 0; turnovers = 0; recoveries = 0; sanctions = 0
+    for ev in events:
+        payload = ev['payload']
+        kind = payload.get('kind')
+        outcome = payload.get('outcome')
+        pid = payload.get('player_id')
+        tid = payload.get('team_id')
+        if kind == 'shot':
+            shots += 1
+            if outcome == 'goal':
+                goals += 1
+        elif kind == 'turnover':
+            turnovers += 1
+        elif kind == 'recovery':
+            recoveries += 1
+        elif kind == 'foul_sanction':
+            sanctions += 1
+    return {'shots': shots, 'goals': goals, 'turnovers': turnovers, 'recoveries': recoveries, 'sanctions': sanctions}
+
+home_stats = team_stats(home_eligible)
+away_stats = team_stats(away_eligible)
+
+team_summary = {
+    'home': {
+        'name': home_team.name,
+        'side': 'home',
+        **home_stats,
+    },
+    'away': {
+        'name': away_team.name,
+        'side': 'away',
+        **away_stats,
+    },
+}
+
+# ── Build incidents ──────────────────────────────────────────────────
+# Incidents are chronological, period-separated events with public-safe data
+incidents = []
+for ev in eligible_events:
+    payload = ev['payload']
+    kind = payload.get('kind')
+    outcome = payload.get('outcome')
+    player_id = payload.get('player_id')
+    team_id = payload.get('team_id')
+    period = payload.get('period')
+    reg_seconds = payload.get('regulation_seconds')
+    clock_unverified = bool(payload.get('clock_unverified'))
+
+    # Get player name safely
+    player_name = None
+    player_slug = None
+    if player_id is not None:
+        player = next((p for p in players_data if p.get('jersey_number') or p.get('role')), None)
+        # Find by player_id in squad
+        for s in squad:
+            if s.player_id == player_id and s.player:
+                player_name = s.player.name
+                player_slug = slugify(s.player.name)[:32]
+                break
+
+    # Map kind+outcome to incident type (Spanish labels)
+    incident_type_map = {
+        'shot': 'Lanzamiento',
+        'turnover': 'Pérdida',
+        'recovery': 'Recuperación',
+        'foul_sanction': 'Sanción',
+        'other': 'Incidencia de juego',
+    }
+    incident_type = incident_type_map.get(kind, 'Incidencia')
+
+    # Map outcome to result description
+    outcome_map = {
+        'goal': 'Gol',
+        'save': 'Atajada',
+        'miss': 'Fuera',
+        'woodwork': 'Palo/Travesaño',
+        'blocked': 'Bloqueado',
+        'bad_pass': 'Pase perdido',
+        'bad_reception': 'Recepción perdida',
+        'foul': 'Falta',
+        'yellow_card': 'Tarjeta amarilla',
+        'red_card': 'Tarjeta roja',
+        'two_minute_exclusion': 'Exclusión 2 min',
+        'blue_card': 'Tarjeta azul',
+    }
+    outcome_desc = outcome_map.get(outcome, outcome or '')
+
+    # Clock source label
+    if reg_seconds is not None and not clock_unverified:
+        clock_label = 'Tiempo oficial ' + str(reg_seconds // 60) + ':' + str(reg_seconds % 60).zfill(2)
+    elif clock_unverified:
+        clock_label = 'Reloj sin verificar'
+    else:
+        clock_label = None
+
+    incidents.append({
+        'reference': 'Sequence ' + str(ev.get('sequence', 1)),
+        'period': period,
+        'regulation_seconds': reg_seconds,
+        'clock_unverified': clock_unverified,
+        'clock_label': clock_label,
+        'incident_type': incident_type,
+        'outcome': outcome_desc,
+        'team_side': 'home' if team_id == match.home_team_id else ('away' if team_id == match.away_team_id else 'unknown'),
+        'player_name': player_name,
+        'player_slug': player_slug,
+        'event_kind': kind,
+    })
+
+# Sort incidents by period and regulation_seconds, then sequence
+incidents.sort(key=lambda x: (x['period'] or 0, x['regulation_seconds'] or 0, x['reference']))
+
 package_dict = {
     'match_id': 99,
     'report_version': 1,
@@ -211,6 +328,8 @@ package_dict = {
     'reconciliation': recon_data.get('discrepancies', []),
     'evidence': evidence_rows,
     'players': players_data,
+    'team_summary': team_summary,
+    'incidents': incidents,
 }
 
 # Now run public_projection_from_package_type logic
@@ -278,6 +397,8 @@ report = {
     'players': package_dict.get('players'),
     'evidence': evidence_items,
     'coverage': coverage,
+    'team_summary': team_summary,
+    'incidents': incidents,
 }
 
 # Verify all player slugs pass the regex
@@ -293,11 +414,17 @@ if all_slugs_valid:
     print('  All player slugs are valid (pass /^[a-z0-9-]+$/ regex)')
 
 # Write the report
-output_path = 'reports/public/report_match99.json'
+output_path = 'reports/public/report.json'
 with open(output_path, 'w', encoding='utf-8', newline='') as f:
     json.dump(report, f, ensure_ascii=False, indent=2)
 
+# Also write the legacy-matched path for compatibility
+legacy_path = 'reports/public/report_match99.json'
+import shutil
+shutil.copy(output_path, legacy_path)
+
 print('Report exported to ' + output_path)
+print('Legacy path also updated: ' + legacy_path)
 
 # Print summary
 print()
@@ -315,6 +442,8 @@ summary = {
     'metrics_count': len(metrics),
     'home_team_name': match.home_team.name,
     'away_team_name': match.away_team.name,
+    'team_summary': team_summary,
+    'incidents_count': len(incidents),
 }
 print(json.dumps(summary, ensure_ascii=False))
 

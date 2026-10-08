@@ -7,7 +7,9 @@ from .canonical_analysis_service import read_metrics, read_reconciliation
 PUBLIC_REPORT_SCHEMA_VERSION = "public-report-v1"
 REQUIRED_RECOVERY_ARTIFACTS = {"postgres_dump", "imported_pdf_export"}
 PUBLIC_METRIC_FIELDS = ("count", "numerator", "denominator", "excluded", "unknown", "clock_unverified")
+# Core public metrics that are safe to expose — no internal keys (player:/team:/goalkeeper:)
 PUBLIC_METRIC_NAMES = {
+    "shots", "turnovers", "recoveries", "discipline", "possessions",
     "shot_conversion", "seven_meter_conversion", "observed_goalkeeper_save_rate",
     "confirmed_assist", "recovery", "defensive_action", "foul_sanction",
     "transition_outcome", "goalkeeper_outcome",
@@ -15,7 +17,8 @@ PUBLIC_METRIC_NAMES = {
 
 
 def is_public_metric(name):
-    return name in PUBLIC_METRIC_NAMES or name.startswith(("turnover:", "team:", "player:", "goalkeeper:")) or name in {"shots", "turnovers", "recoveries", "discipline", "possessions"}
+    # Strictly allow only known public metric names — reject player:/team:/goalkeeper: keys
+    return name in PUBLIC_METRIC_NAMES
 
 
 class ReportService:
