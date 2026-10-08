@@ -405,7 +405,7 @@
   "uncertainty_disclosure": "Generated from canonical analysis; partial data may apply",
   "players": [
     {
-      "slug": "ramirez-lorca,-jaime-nahuel",
+      "slug": "ramirez-lorca-jaime-nahuel",
       "name": "Ramirez Lorca, Jaime Nahuel",
       "jersey_number": 1,
       "team_side": "home",
@@ -419,7 +419,7 @@
       "evidence": []
     },
     {
-      "slug": "ruano,-matheo",
+      "slug": "ruano-matheo",
       "name": "Ruano, Matheo",
       "jersey_number": 2,
       "team_side": "home",
@@ -436,7 +436,7 @@
       "evidence": []
     },
     {
-      "slug": "gonzalez,-ezequiel-matias",
+      "slug": "gonzalez-ezequiel-matias",
       "name": "Gonzalez, Ezequiel Matias",
       "jersey_number": 10,
       "team_side": "home",
@@ -453,7 +453,7 @@
       "evidence": []
     },
     {
-      "slug": "sarrailh,-pablo-eduardo",
+      "slug": "sarrailh-pablo-eduardo",
       "name": "Sarrailh, Pablo Eduardo",
       "jersey_number": 11,
       "team_side": "home",
@@ -470,7 +470,7 @@
       "evidence": []
     },
     {
-      "slug": "correa,-marcos-isauro",
+      "slug": "correa-marcos-isauro",
       "name": "Correa, Marcos Isauro",
       "jersey_number": 33,
       "team_side": "home",
@@ -484,7 +484,7 @@
       "evidence": []
     },
     {
-      "slug": "delpieri,-mateo",
+      "slug": "delpieri-mateo",
       "name": "Delpieri, Mateo",
       "jersey_number": 38,
       "team_side": "home",
@@ -501,7 +501,7 @@
       "evidence": []
     },
     {
-      "slug": "chavez,-alexis-ezequiel",
+      "slug": "chavez-alexis-ezequiel",
       "name": "Chavez, Alexis Ezequiel",
       "jersey_number": 66,
       "team_side": "home",
@@ -518,7 +518,7 @@
       "evidence": []
     },
     {
-      "slug": "ramirez,-gaston",
+      "slug": "ramirez-gaston",
       "name": "Ramirez, Gaston",
       "jersey_number": 80,
       "team_side": "home",
@@ -535,7 +535,7 @@
       "evidence": []
     },
     {
-      "slug": "mollo-skripnik-strelecki,-lucian",
+      "slug": "mollo-skripnik-strelecki-lucian",
       "name": "Mollo Skripnik Strelecki, Lucian...",
       "jersey_number": 87,
       "team_side": "home",
@@ -552,7 +552,7 @@
       "evidence": []
     },
     {
-      "slug": "ferrari,-jonas-horacio",
+      "slug": "ferrari-jonas-horacio",
       "name": "Ferrari, Jonas Horacio",
       "jersey_number": 97,
       "team_side": "home",
@@ -569,7 +569,7 @@
       "evidence": []
     },
     {
-      "slug": "mollo-skripnik-strelecki,-juan-i",
+      "slug": "mollo-skripnik-strelecki-juan-ig",
       "name": "Mollo Skripnik Strelecki, Juan Ig...",
       "jersey_number": 7,
       "team_side": "home",
@@ -586,7 +586,7 @@
       "evidence": []
     },
     {
-      "slug": "martinez,-milo-ulises",
+      "slug": "martinez-milo-ulises",
       "name": "Martinez, Milo Ulises",
       "jersey_number": 17,
       "team_side": "home",
@@ -603,7 +603,7 @@
       "evidence": []
     },
     {
-      "slug": "grisolia,-geronimo-gabriel",
+      "slug": "grisolia-geronimo-gabriel",
       "name": "Grisolia, Geronimo Gabriel",
       "jersey_number": 27,
       "team_side": "home",
@@ -620,7 +620,7 @@
       "evidence": []
     },
     {
-      "slug": "otegui,-juan",
+      "slug": "otegui-juan",
       "name": "Otegui, Juan",
       "jersey_number": 2,
       "team_side": "away",
@@ -637,7 +637,7 @@
       "evidence": []
     },
     {
-      "slug": "viggiano,-valentin-nicolas",
+      "slug": "viggiano-valentin-nicolas",
       "name": "Viggiano, Valentin Nicolas",
       "jersey_number": 3,
       "team_side": "away",
@@ -654,7 +654,7 @@
       "evidence": []
     },
     {
-      "slug": "alonso,-julian",
+      "slug": "alonso-julian",
       "name": "Alonso, Julian",
       "jersey_number": 4,
       "team_side": "away",
@@ -671,7 +671,7 @@
       "evidence": []
     },
     {
-      "slug": "gimenez-asciutto,-mateo",
+      "slug": "gimenez-asciutto-mateo",
       "name": "Gimenez Asciutto, Mateo",
       "jersey_number": 5,
       "team_side": "away",
@@ -688,7 +688,7 @@
       "evidence": []
     },
     {
-      "slug": "delmoro,-lucas",
+      "slug": "delmoro-lucas",
       "name": "Delmoro, Lucas",
       "jersey_number": 6,
       "team_side": "away",
@@ -705,7 +705,7 @@
       "evidence": []
     },
     {
-      "slug": "innella,-gaston",
+      "slug": "innella-gaston",
       "name": "Innella, Gaston",
       "jersey_number": 7,
       "team_side": "away",
@@ -722,7 +722,7 @@
       "evidence": []
     },
     {
-      "slug": "romero,-elias-josue",
+      "slug": "romero-elias-josue",
       "name": "Romero, Elias Josue",
       "jersey_number": 9,
       "team_side": "away",
@@ -739,7 +739,7 @@
       "evidence": []
     },
     {
-      "slug": "gigante,-roberto-juan",
+      "slug": "gigante-roberto-juan",
       "name": "Gigante, Roberto Juan",
       "jersey_number": 11,
       "team_side": "away",
@@ -756,7 +756,7 @@
       "evidence": []
     },
     {
-      "slug": "allerborn,-joaquin",
+      "slug": "allerborn-joaquin",
       "name": "Allerborn, Joaquin",
       "jersey_number": 13,
       "team_side": "away",
@@ -773,7 +773,7 @@
       "evidence": []
     },
     {
-      "slug": "iglesias,-genaro",
+      "slug": "iglesias-genaro",
       "name": "Iglesias, Genaro",
       "jersey_number": 14,
       "team_side": "away",
@@ -790,7 +790,7 @@
       "evidence": []
     },
     {
-      "slug": "borrelli,-matias-exequiel-tomas",
+      "slug": "borrelli-matias-exequiel-tomas",
       "name": "Borrelli, Matias Exequiel Tomas",
       "jersey_number": 15,
       "team_side": "away",
@@ -807,7 +807,7 @@
       "evidence": []
     },
     {
-      "slug": "lovera,-alan-jorge-leonel",
+      "slug": "lovera-alan-jorge-leonel",
       "name": "Lovera, Alan Jorge Leonel",
       "jersey_number": 16,
       "team_side": "away",
@@ -824,7 +824,7 @@
       "evidence": []
     },
     {
-      "slug": "murino,-lautaro-ezequiel",
+      "slug": "murino-lautaro-ezequiel",
       "name": "Murino, Lautaro Ezequiel",
       "jersey_number": 17,
       "team_side": "away",
@@ -841,7 +841,7 @@
       "evidence": []
     },
     {
-      "slug": "ibarra,-steven-yoel",
+      "slug": "ibarra-steven-yoel",
       "name": "Ibarra, Steven Yoel",
       "jersey_number": 53,
       "team_side": "away",

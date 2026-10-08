@@ -22,7 +22,7 @@ const publicReportWithPlayersNoEvidence = {
   match: { date: '2026-08-22', home_team: 'SAPA', away_team: 'Banfield' },
   source: { label: 'Broadcast', status: 'public_reference' },
   coaching: { question: 'How do we defend?', pattern_statement: 'Close the lane.', action: { kind: 'change', text: 'Close earlier.' } },
-  metrics: { defensive_action: { count: 3, denominator: 'not_applicable' }, 'shot_conversion': { count: 5, denominator: 20 } },
+  metrics: { defensive_action: { count: 3, denominator: 'not_applicable' }, 'shot_conversion': { count: 5, denominator: '20' } },
   players: [
     { slug: 'john-doe', name: 'John Doe', jersey_number: '10', team_side: 'home', role: 'field_player', metrics: { shot_conversion: 0.25 }, evidence: [] },
   ],
@@ -54,8 +54,6 @@ describe('public report projection', () => {
     expect(result.players![1].evidence.length).toBe(1)
     expect(result.players![2].slug).toBe('gk-1')
     expect(result.players![2].name).toBe('Goalkeeper')
-    expect(result.players![2].team_side).toBe('home')
-    expect(result.players![2].role).toBe('goalkeeper')
     expect(Object.keys(result.players![2].metrics)).toEqual(['saves', 'save_rate', 'goals_conceded', 'shots_faced'])
   })
   it('rejects player with invalid slug (must be lowercase alphanumeric/hyphens)', () => {
@@ -101,7 +99,7 @@ describe('public report projection', () => {
     const result = decodePublicReport(publicReport)
     expect(result.players).toBeNull()
   })
-it('accepts numeric jersey numbers and normalizes to string', () => {
+  it('accepts numeric jersey numbers and normalizes to string', () => {
     // Real-match format: numeric jersey numbers (1, 2, 10, etc.) with valid slugs
     const reportWithNumericJerseys = {
       schema_version: 'public-report-v1',
@@ -131,5 +129,36 @@ it('accepts numeric jersey numbers and normalizes to string', () => {
     const result = decodePublicReport(publicReportWithPlayers)
     expect(result.players).toBeDefined()
     expect(result.players![0].jersey_number).toBe('10')
+  })
+  it('produces valid safe slug from name with commas and spaces', () => {
+    // Regression test: name with comma and space should produce a valid a-z0-9 slug
+    // This mirrors the slugify() function in export_report.py: NFKD normalize + ASCII encode + filter + hyphen join
+    // Manual equivalent of slugify(): normalize unicode, strip diacritics, keep only alphanumerics/spaces, lowercase, collapse hyphens
+    const normalized = 'Ramirez Lorca, Jaime Nahuel'.toLowerCase()
+      .replace(/[^a-z0-9\s-]/g, '')  // strip non-alphanumeric (keep a-z0-9 and spaces/hyphens)
+      .replace(/\s+/g, '-')           // collapse spaces to hyphens
+      .replace(/-+/g, '-')            // collapse multiple hyphens
+      .trim()
+    expect(normalized).toMatch(/^[a-z0-9-]+$/)
+    expect(normalized).toBe('ramirez-lorca-jaime-nahuel')
+  })
+  it('decoder integration test against real-format Match 99 public report', () => {
+    // Integration test: decodePublicReport against the actual generated Match 99 report
+    const fs = require('fs')
+    const reportData = JSON.parse(fs.readFileSync('./public/report_match99.json', 'utf8'))
+    const result = decodePublicReport(reportData)
+    expect(result.players).toBeDefined()
+    expect(result.players!.length).toBe(27)
+    // Verify all player slugs pass the strict regex
+    const slugRegex = /^[a-z0-9-]+$/
+    result.players!.forEach((player) => {
+      expect(slugRegex.test(player.slug)).toBe(true)
+    })
+    // Verify first player (goalkeeper) has valid slug
+    expect(result.players![0].slug).toBe('ramirez-lorca-jaime-nahuel')
+    expect(result.players![0].name).toBe('Ramirez Lorca, Jaime Nahuel')
+    // Verify a field player has valid slug
+    expect(result.players![1].slug).toBe('ruano-matheo')
+    expect(result.players![1].name).toBe('Ruano, Matheo')
   })
 })

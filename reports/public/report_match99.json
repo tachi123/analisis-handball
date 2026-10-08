@@ -405,7 +405,7 @@
   "uncertainty_disclosure": "Generated from canonical analysis; partial data may apply",
   "players": [
     {
-      "slug": "ramirez-lorca,-jaime-nahuel",
+      "slug": "ramirez-lorca-jaime-nahuel",
       "name": "Ramirez Lorca, Jaime Nahuel",
       "jersey_number": 1,
       "team_side": "home",
@@ -419,7 +419,7 @@
       "evidence": []
     },
     {
-      "slug": "ruano,-matheo",
+      "slug": "ruano-matheo",
       "name": "Ruano, Matheo",
       "jersey_number": 2,
       "team_side": "home",
@@ -436,7 +436,7 @@
       "evidence": []
     },
     {
-      "slug": "gonzalez,-ezequiel-matias",
+      "slug": "gonzalez-ezequiel-matias",
       "name": "Gonzalez, Ezequiel Matias",
       "jersey_number": 10,
       "team_side": "home",
@@ -453,7 +453,7 @@
       "evidence": []
     },
     {
-      "slug": "sarrailh,-pablo-eduardo",
+      "slug": "sarrailh-pablo-eduardo",
       "name": "Sarrailh, Pablo Eduardo",
       "jersey_number": 11,
       "team_side": "home",
@@ -470,7 +470,7 @@
       "evidence": []
     },
     {
-      "slug": "correa,-marcos-isauro",
+      "slug": "correa-marcos-isauro",
       "name": "Correa, Marcos Isauro",
       "jersey_number": 33,
       "team_side": "home",
@@ -484,7 +484,7 @@
       "evidence": []
     },
     {
-      "slug": "delpieri,-mateo",
+      "slug": "delpieri-mateo",
       "name": "Delpieri, Mateo",
       "jersey_number": 38,
       "team_side": "home",
@@ -501,7 +501,7 @@
       "evidence": []
     },
     {
-      "slug": "chavez,-alexis-ezequiel",
+      "slug": "chavez-alexis-ezequiel",
       "name": "Chavez, Alexis Ezequiel",
       "jersey_number": 66,
       "team_side": "home",
@@ -518,7 +518,7 @@
       "evidence": []
     },
     {
-      "slug": "ramirez,-gaston",
+      "slug": "ramirez-gaston",
       "name": "Ramirez, Gaston",
       "jersey_number": 80,
       "team_side": "home",
@@ -535,7 +535,7 @@
       "evidence": []
     },
     {
-      "slug": "mollo-skripnik-strelecki,-lucian",
+      "slug": "mollo-skripnik-strelecki-lucian",
       "name": "Mollo Skripnik Strelecki, Lucian...",
       "jersey_number": 87,
       "team_side": "home",
@@ -552,7 +552,7 @@
       "evidence": []
     },
     {
-      "slug": "ferrari,-jonas-horacio",
+      "slug": "ferrari-jonas-horacio",
       "name": "Ferrari, Jonas Horacio",
       "jersey_number": 97,
       "team_side": "home",
@@ -569,7 +569,7 @@
       "evidence": []
     },
     {
-      "slug": "mollo-skripnik-strelecki,-juan-i",
+      "slug": "mollo-skripnik-strelecki-juan-ig",
       "name": "Mollo Skripnik Strelecki, Juan Ig...",
       "jersey_number": 7,
       "team_side": "home",
@@ -586,7 +586,7 @@
       "evidence": []
     },
     {
-      "slug": "martinez,-milo-ulises",
+      "slug": "martinez-milo-ulises",
       "name": "Martinez, Milo Ulises",
       "jersey_number": 17,
       "team_side": "home",
@@ -603,7 +603,7 @@
       "evidence": []
     },
     {
-      "slug": "grisolia,-geronimo-gabriel",
+      "slug": "grisolia-geronimo-gabriel",
       "name": "Grisolia, Geronimo Gabriel",
       "jersey_number": 27,
       "team_side": "home",
@@ -620,7 +620,7 @@
       "evidence": []
     },
     {
-      "slug": "otegui,-juan",
+      "slug": "otegui-juan",
       "name": "Otegui, Juan",
       "jersey_number": 2,
       "team_side": "away",
@@ -637,7 +637,7 @@
       "evidence": []
     },
     {
-      "slug": "viggiano,-valentin-nicolas",
+      "slug": "viggiano-valentin-nicolas",
       "name": "Viggiano, Valentin Nicolas",
       "jersey_number": 3,
       "team_side": "away",
@@ -654,7 +654,7 @@
       "evidence": []
     },
     {
-      "slug": "alonso,-julian",
+      "slug": "alonso-julian",
       "name": "Alonso, Julian",
       "jersey_number": 4,
       "team_side": "away",
@@ -671,7 +671,7 @@
       "evidence": []
     },
     {
-      "slug": "gimenez-asciutto,-mateo",
+      "slug": "gimenez-asciutto-mateo",
       "name": "Gimenez Asciutto, Mateo",
       "jersey_number": 5,
       "team_side": "away",
@@ -688,7 +688,7 @@
       "evidence": []
     },
     {
-      "slug": "delmoro,-lucas",
+      "slug": "delmoro-lucas",
       "name": "Delmoro, Lucas",
       "jersey_number": 6,
       "team_side": "away",
@@ -705,7 +705,7 @@
       "evidence": []
     },
     {
-      "slug": "innella,-gaston",
+      "slug": "innella-gaston",
       "name": "Innella, Gaston",
       "jersey_number": 7,
       "team_side": "away",
@@ -722,7 +722,7 @@
       "evidence": []
     },
     {
-      "slug": "romero,-elias-josue",
+      "slug": "romero-elias-josue",
       "name": "Romero, Elias Josue",
       "jersey_number": 9,
       "team_side": "away",
@@ -739,7 +739,7 @@
       "evidence": []
     },
     {
-      "slug": "gigante,-roberto-juan",
+      "slug": "gigante-roberto-juan",
       "name": "Gigante, Roberto Juan",
       "jersey_number": 11,
       "team_side": "away",
@@ -756,7 +756,7 @@
       "evidence": []
     },
     {
-      "slug": "allerborn,-joaquin",
+      "slug": "allerborn-joaquin",
       "name": "Allerborn, Joaquin",
       "jersey_number": 13,
       "team_side": "away",
@@ -773,7 +773,7 @@
       "evidence": []
     },
     {
-      "slug": "iglesias,-genaro",
+      "slug": "iglesias-genaro",
       "name": "Iglesias, Genaro",
       "jersey_number": 14,
       "team_side": "away",
@@ -790,7 +790,7 @@
       "evidence": []
     },
     {
-      "slug": "borrelli,-matias-exequiel-tomas",
+      "slug": "borrelli-matias-exequiel-tomas",
       "name": "Borrelli, Matias Exequiel Tomas",
       "jersey_number": 15,
       "team_side": "away",
@@ -807,7 +807,7 @@
       "evidence": []
     },
     {
-      "slug": "lovera,-alan-jorge-leonel",
+      "slug": "lovera-alan-jorge-leonel",
       "name": "Lovera, Alan Jorge Leonel",
       "jersey_number": 16,
       "team_side": "away",
@@ -824,7 +824,7 @@
       "evidence": []
     },
     {
-      "slug": "murino,-lautaro-ezequiel",
+      "slug": "murino-lautaro-ezequiel",
       "name": "Murino, Lautaro Ezequiel",
       "jersey_number": 17,
       "team_side": "away",
@@ -841,7 +841,7 @@
       "evidence": []
     },
     {
-      "slug": "ibarra,-steven-yoel",
+      "slug": "ibarra-steven-yoel",
       "name": "Ibarra, Steven Yoel",
       "jersey_number": 53,
       "team_side": "away",
@@ -860,6 +860,7 @@
   ],
   "evidence": [
     {
+      "reference": "Sequence 1",
       "period": 1,
       "regulation_seconds": 0.0,
       "clock_unverified": false,
@@ -867,6 +868,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 2",
       "period": 1,
       "regulation_seconds": 61.0,
       "clock_unverified": false,
@@ -874,6 +876,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 3",
       "period": 1,
       "regulation_seconds": 94.0,
       "clock_unverified": false,
@@ -881,6 +884,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 4",
       "period": 1,
       "regulation_seconds": 105.0,
       "clock_unverified": false,
@@ -888,6 +892,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 5",
       "period": 1,
       "regulation_seconds": 133.0,
       "clock_unverified": false,
@@ -895,6 +900,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 6",
       "period": 1,
       "regulation_seconds": 138.0,
       "clock_unverified": false,
@@ -902,6 +908,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 7",
       "period": 1,
       "regulation_seconds": 167.0,
       "clock_unverified": false,
@@ -909,6 +916,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 8",
       "period": 1,
       "regulation_seconds": 178.0,
       "clock_unverified": false,
@@ -916,6 +924,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 9",
       "period": 1,
       "regulation_seconds": 227.0,
       "clock_unverified": false,
@@ -923,6 +932,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 10",
       "period": 1,
       "regulation_seconds": 240.0,
       "clock_unverified": false,
@@ -930,6 +940,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 11",
       "period": 1,
       "regulation_seconds": 251.0,
       "clock_unverified": false,
@@ -937,6 +948,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 12",
       "period": 1,
       "regulation_seconds": 287.0,
       "clock_unverified": false,
@@ -944,6 +956,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 13",
       "period": 1,
       "regulation_seconds": 299.0,
       "clock_unverified": false,
@@ -951,6 +964,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 14",
       "period": 1,
       "regulation_seconds": 312.0,
       "clock_unverified": false,
@@ -958,6 +972,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 15",
       "period": 1,
       "regulation_seconds": 318.0,
       "clock_unverified": false,
@@ -965,6 +980,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 16",
       "period": 1,
       "regulation_seconds": 344.0,
       "clock_unverified": false,
@@ -972,6 +988,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 17",
       "period": 1,
       "regulation_seconds": 355.0,
       "clock_unverified": false,
@@ -979,6 +996,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 18",
       "period": 1,
       "regulation_seconds": 360.0,
       "clock_unverified": false,
@@ -986,6 +1004,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 19",
       "period": 1,
       "regulation_seconds": 390.0,
       "clock_unverified": false,
@@ -993,6 +1012,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 20",
       "period": 1,
       "regulation_seconds": 427.0,
       "clock_unverified": false,
@@ -1000,6 +1020,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 21",
       "period": 1,
       "regulation_seconds": 436.0,
       "clock_unverified": false,
@@ -1007,6 +1028,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 22",
       "period": 1,
       "regulation_seconds": 480.0,
       "clock_unverified": false,
@@ -1014,6 +1036,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 23",
       "period": 1,
       "regulation_seconds": 520.0,
       "clock_unverified": false,
@@ -1021,6 +1044,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 24",
       "period": 1,
       "regulation_seconds": 543.0,
       "clock_unverified": false,
@@ -1028,6 +1052,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 25",
       "period": 1,
       "regulation_seconds": 557.0,
       "clock_unverified": false,
@@ -1035,6 +1060,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 26",
       "period": 1,
       "regulation_seconds": 593.0,
       "clock_unverified": false,
@@ -1042,6 +1068,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 27",
       "period": 1,
       "regulation_seconds": 646.0,
       "clock_unverified": false,
@@ -1049,6 +1076,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 28",
       "period": 1,
       "regulation_seconds": 658.0,
       "clock_unverified": false,
@@ -1056,6 +1084,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 29",
       "period": 1,
       "regulation_seconds": 665.0,
       "clock_unverified": false,
@@ -1063,6 +1092,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 30",
       "period": 1,
       "regulation_seconds": 695.0,
       "clock_unverified": false,
@@ -1070,6 +1100,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 31",
       "period": 1,
       "regulation_seconds": 700.0,
       "clock_unverified": false,
@@ -1077,6 +1108,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 32",
       "period": 1,
       "regulation_seconds": 726.0,
       "clock_unverified": false,
@@ -1084,6 +1116,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 33",
       "period": 1,
       "regulation_seconds": 761.0,
       "clock_unverified": false,
@@ -1091,6 +1124,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 34",
       "period": 1,
       "regulation_seconds": 770.0,
       "clock_unverified": false,
@@ -1098,6 +1132,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 35",
       "period": 1,
       "regulation_seconds": 779.0,
       "clock_unverified": false,
@@ -1105,6 +1140,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 36",
       "period": 1,
       "regulation_seconds": 785.0,
       "clock_unverified": false,
@@ -1112,6 +1148,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 37",
       "period": 1,
       "regulation_seconds": 833.0,
       "clock_unverified": false,
@@ -1119,6 +1156,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 38",
       "period": 1,
       "regulation_seconds": 844.0,
       "clock_unverified": false,
@@ -1126,6 +1164,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 39",
       "period": 1,
       "regulation_seconds": 877.0,
       "clock_unverified": false,
@@ -1133,6 +1172,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 40",
       "period": 1,
       "regulation_seconds": 889.0,
       "clock_unverified": false,
@@ -1140,6 +1180,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 41",
       "period": 1,
       "regulation_seconds": 989.0,
       "clock_unverified": false,
@@ -1147,6 +1188,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 42",
       "period": 1,
       "regulation_seconds": 988.0,
       "clock_unverified": false,
@@ -1154,6 +1196,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 43",
       "period": 1,
       "regulation_seconds": 999.0,
       "clock_unverified": false,
@@ -1161,6 +1204,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 44",
       "period": 1,
       "regulation_seconds": 1034.0,
       "clock_unverified": false,
@@ -1168,6 +1212,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 45",
       "period": 1,
       "regulation_seconds": 1034.0,
       "clock_unverified": false,
@@ -1175,6 +1220,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 46",
       "period": 1,
       "regulation_seconds": 1047.0,
       "clock_unverified": false,
@@ -1182,6 +1228,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 47",
       "period": 1,
       "regulation_seconds": 1105.0,
       "clock_unverified": false,
@@ -1189,6 +1236,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 48",
       "period": 1,
       "regulation_seconds": 1125.0,
       "clock_unverified": false,
@@ -1196,6 +1244,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 49",
       "period": 1,
       "regulation_seconds": 1126.0,
       "clock_unverified": false,
@@ -1203,6 +1252,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 50",
       "period": 1,
       "regulation_seconds": 1178.0,
       "clock_unverified": false,
@@ -1210,6 +1260,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 51",
       "period": 1,
       "regulation_seconds": 1219.0,
       "clock_unverified": false,
@@ -1217,6 +1268,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 52",
       "period": 1,
       "regulation_seconds": 1229.0,
       "clock_unverified": false,
@@ -1224,6 +1276,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 53",
       "period": 1,
       "regulation_seconds": 1262.0,
       "clock_unverified": false,
@@ -1231,6 +1284,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 54",
       "period": 1,
       "regulation_seconds": 1295.0,
       "clock_unverified": false,
@@ -1238,6 +1292,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 55",
       "period": 1,
       "regulation_seconds": 1324.0,
       "clock_unverified": false,
@@ -1245,6 +1300,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 56",
       "period": 1,
       "regulation_seconds": 1325.0,
       "clock_unverified": false,
@@ -1252,6 +1308,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 57",
       "period": 1,
       "regulation_seconds": 1387.0,
       "clock_unverified": false,
@@ -1259,6 +1316,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 58",
       "period": 1,
       "regulation_seconds": 1399.0,
       "clock_unverified": false,
@@ -1266,6 +1324,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 59",
       "period": 1,
       "regulation_seconds": 1414.0,
       "clock_unverified": false,
@@ -1273,6 +1332,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 60",
       "period": 1,
       "regulation_seconds": 1440.0,
       "clock_unverified": false,
@@ -1280,6 +1340,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 61",
       "period": 1,
       "regulation_seconds": 1448.0,
       "clock_unverified": false,
@@ -1287,6 +1348,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 62",
       "period": 1,
       "regulation_seconds": 1478.0,
       "clock_unverified": false,
@@ -1294,6 +1356,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 63",
       "period": 1,
       "regulation_seconds": 1509.0,
       "clock_unverified": false,
@@ -1301,6 +1364,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 64",
       "period": 1,
       "regulation_seconds": 1533.0,
       "clock_unverified": false,
@@ -1308,6 +1372,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 65",
       "period": 1,
       "regulation_seconds": 1620.0,
       "clock_unverified": false,
@@ -1315,6 +1380,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 66",
       "period": 1,
       "regulation_seconds": 1664.0,
       "clock_unverified": false,
@@ -1322,6 +1388,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 67",
       "period": 1,
       "regulation_seconds": 1729.0,
       "clock_unverified": false,
@@ -1329,6 +1396,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 68",
       "period": 1,
       "regulation_seconds": 1760.0,
       "clock_unverified": false,
@@ -1336,6 +1404,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 69",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1343,6 +1412,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 70",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1350,6 +1420,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 71",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1357,6 +1428,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 72",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1364,6 +1436,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 73",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1371,6 +1444,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 74",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1378,6 +1452,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 75",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1385,6 +1460,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 76",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1392,6 +1468,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 77",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1399,6 +1476,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 78",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1406,6 +1484,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 79",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1413,6 +1492,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 80",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1420,6 +1500,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 81",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1427,6 +1508,7 @@
       "media_available": false
     },
     {
+      "reference": "Sequence 82",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
