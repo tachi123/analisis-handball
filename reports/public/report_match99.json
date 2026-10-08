@@ -860,7 +860,6 @@
   ],
   "evidence": [
     {
-      "reference": "Sequence 1",
       "period": 1,
       "regulation_seconds": 0.0,
       "clock_unverified": false,
@@ -868,7 +867,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 2",
       "period": 1,
       "regulation_seconds": 61.0,
       "clock_unverified": false,
@@ -876,7 +874,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 3",
       "period": 1,
       "regulation_seconds": 94.0,
       "clock_unverified": false,
@@ -884,7 +881,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 4",
       "period": 1,
       "regulation_seconds": 105.0,
       "clock_unverified": false,
@@ -892,7 +888,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 5",
       "period": 1,
       "regulation_seconds": 133.0,
       "clock_unverified": false,
@@ -900,7 +895,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 6",
       "period": 1,
       "regulation_seconds": 138.0,
       "clock_unverified": false,
@@ -908,7 +902,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 7",
       "period": 1,
       "regulation_seconds": 167.0,
       "clock_unverified": false,
@@ -916,7 +909,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 8",
       "period": 1,
       "regulation_seconds": 178.0,
       "clock_unverified": false,
@@ -924,7 +916,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 9",
       "period": 1,
       "regulation_seconds": 227.0,
       "clock_unverified": false,
@@ -932,7 +923,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 10",
       "period": 1,
       "regulation_seconds": 240.0,
       "clock_unverified": false,
@@ -940,7 +930,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 11",
       "period": 1,
       "regulation_seconds": 251.0,
       "clock_unverified": false,
@@ -948,7 +937,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 12",
       "period": 1,
       "regulation_seconds": 287.0,
       "clock_unverified": false,
@@ -956,7 +944,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 13",
       "period": 1,
       "regulation_seconds": 299.0,
       "clock_unverified": false,
@@ -964,7 +951,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 14",
       "period": 1,
       "regulation_seconds": 312.0,
       "clock_unverified": false,
@@ -972,7 +958,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 15",
       "period": 1,
       "regulation_seconds": 318.0,
       "clock_unverified": false,
@@ -980,7 +965,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 16",
       "period": 1,
       "regulation_seconds": 344.0,
       "clock_unverified": false,
@@ -988,7 +972,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 17",
       "period": 1,
       "regulation_seconds": 355.0,
       "clock_unverified": false,
@@ -996,7 +979,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 18",
       "period": 1,
       "regulation_seconds": 360.0,
       "clock_unverified": false,
@@ -1004,7 +986,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 19",
       "period": 1,
       "regulation_seconds": 390.0,
       "clock_unverified": false,
@@ -1012,7 +993,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 20",
       "period": 1,
       "regulation_seconds": 427.0,
       "clock_unverified": false,
@@ -1020,7 +1000,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 21",
       "period": 1,
       "regulation_seconds": 436.0,
       "clock_unverified": false,
@@ -1028,7 +1007,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 22",
       "period": 1,
       "regulation_seconds": 480.0,
       "clock_unverified": false,
@@ -1036,7 +1014,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 23",
       "period": 1,
       "regulation_seconds": 520.0,
       "clock_unverified": false,
@@ -1044,7 +1021,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 24",
       "period": 1,
       "regulation_seconds": 543.0,
       "clock_unverified": false,
@@ -1052,7 +1028,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 25",
       "period": 1,
       "regulation_seconds": 557.0,
       "clock_unverified": false,
@@ -1060,7 +1035,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 26",
       "period": 1,
       "regulation_seconds": 593.0,
       "clock_unverified": false,
@@ -1068,7 +1042,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 27",
       "period": 1,
       "regulation_seconds": 646.0,
       "clock_unverified": false,
@@ -1076,7 +1049,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 28",
       "period": 1,
       "regulation_seconds": 658.0,
       "clock_unverified": false,
@@ -1084,7 +1056,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 29",
       "period": 1,
       "regulation_seconds": 665.0,
       "clock_unverified": false,
@@ -1092,7 +1063,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 30",
       "period": 1,
       "regulation_seconds": 695.0,
       "clock_unverified": false,
@@ -1100,7 +1070,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 31",
       "period": 1,
       "regulation_seconds": 700.0,
       "clock_unverified": false,
@@ -1108,7 +1077,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 32",
       "period": 1,
       "regulation_seconds": 726.0,
       "clock_unverified": false,
@@ -1116,7 +1084,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 33",
       "period": 1,
       "regulation_seconds": 761.0,
       "clock_unverified": false,
@@ -1124,7 +1091,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 34",
       "period": 1,
       "regulation_seconds": 770.0,
       "clock_unverified": false,
@@ -1132,7 +1098,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 35",
       "period": 1,
       "regulation_seconds": 779.0,
       "clock_unverified": false,
@@ -1140,7 +1105,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 36",
       "period": 1,
       "regulation_seconds": 785.0,
       "clock_unverified": false,
@@ -1148,7 +1112,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 37",
       "period": 1,
       "regulation_seconds": 833.0,
       "clock_unverified": false,
@@ -1156,7 +1119,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 38",
       "period": 1,
       "regulation_seconds": 844.0,
       "clock_unverified": false,
@@ -1164,7 +1126,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 39",
       "period": 1,
       "regulation_seconds": 877.0,
       "clock_unverified": false,
@@ -1172,7 +1133,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 40",
       "period": 1,
       "regulation_seconds": 889.0,
       "clock_unverified": false,
@@ -1180,7 +1140,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 41",
       "period": 1,
       "regulation_seconds": 989.0,
       "clock_unverified": false,
@@ -1188,7 +1147,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 42",
       "period": 1,
       "regulation_seconds": 988.0,
       "clock_unverified": false,
@@ -1196,7 +1154,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 43",
       "period": 1,
       "regulation_seconds": 999.0,
       "clock_unverified": false,
@@ -1204,7 +1161,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 44",
       "period": 1,
       "regulation_seconds": 1034.0,
       "clock_unverified": false,
@@ -1212,7 +1168,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 45",
       "period": 1,
       "regulation_seconds": 1034.0,
       "clock_unverified": false,
@@ -1220,7 +1175,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 46",
       "period": 1,
       "regulation_seconds": 1047.0,
       "clock_unverified": false,
@@ -1228,7 +1182,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 47",
       "period": 1,
       "regulation_seconds": 1105.0,
       "clock_unverified": false,
@@ -1236,7 +1189,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 48",
       "period": 1,
       "regulation_seconds": 1125.0,
       "clock_unverified": false,
@@ -1244,7 +1196,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 49",
       "period": 1,
       "regulation_seconds": 1126.0,
       "clock_unverified": false,
@@ -1252,7 +1203,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 50",
       "period": 1,
       "regulation_seconds": 1178.0,
       "clock_unverified": false,
@@ -1260,7 +1210,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 51",
       "period": 1,
       "regulation_seconds": 1219.0,
       "clock_unverified": false,
@@ -1268,7 +1217,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 52",
       "period": 1,
       "regulation_seconds": 1229.0,
       "clock_unverified": false,
@@ -1276,7 +1224,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 53",
       "period": 1,
       "regulation_seconds": 1262.0,
       "clock_unverified": false,
@@ -1284,7 +1231,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 54",
       "period": 1,
       "regulation_seconds": 1295.0,
       "clock_unverified": false,
@@ -1292,7 +1238,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 55",
       "period": 1,
       "regulation_seconds": 1324.0,
       "clock_unverified": false,
@@ -1300,7 +1245,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 56",
       "period": 1,
       "regulation_seconds": 1325.0,
       "clock_unverified": false,
@@ -1308,7 +1252,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 57",
       "period": 1,
       "regulation_seconds": 1387.0,
       "clock_unverified": false,
@@ -1316,7 +1259,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 58",
       "period": 1,
       "regulation_seconds": 1399.0,
       "clock_unverified": false,
@@ -1324,7 +1266,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 59",
       "period": 1,
       "regulation_seconds": 1414.0,
       "clock_unverified": false,
@@ -1332,7 +1273,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 60",
       "period": 1,
       "regulation_seconds": 1440.0,
       "clock_unverified": false,
@@ -1340,7 +1280,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 61",
       "period": 1,
       "regulation_seconds": 1448.0,
       "clock_unverified": false,
@@ -1348,7 +1287,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 62",
       "period": 1,
       "regulation_seconds": 1478.0,
       "clock_unverified": false,
@@ -1356,7 +1294,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 63",
       "period": 1,
       "regulation_seconds": 1509.0,
       "clock_unverified": false,
@@ -1364,7 +1301,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 64",
       "period": 1,
       "regulation_seconds": 1533.0,
       "clock_unverified": false,
@@ -1372,7 +1308,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 65",
       "period": 1,
       "regulation_seconds": 1620.0,
       "clock_unverified": false,
@@ -1380,7 +1315,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 66",
       "period": 1,
       "regulation_seconds": 1664.0,
       "clock_unverified": false,
@@ -1388,7 +1322,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 67",
       "period": 1,
       "regulation_seconds": 1729.0,
       "clock_unverified": false,
@@ -1396,7 +1329,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 68",
       "period": 1,
       "regulation_seconds": 1760.0,
       "clock_unverified": false,
@@ -1404,7 +1336,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 69",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1412,7 +1343,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 70",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1420,7 +1350,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 71",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1428,7 +1357,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 72",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1436,7 +1364,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 73",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1444,7 +1371,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 74",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1452,7 +1378,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 75",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1460,7 +1385,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 76",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1468,7 +1392,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 77",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1476,7 +1399,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 78",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1484,7 +1406,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 79",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1492,7 +1413,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 80",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1500,7 +1420,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 81",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
@@ -1508,7 +1427,6 @@
       "media_available": false
     },
     {
-      "reference": "Sequence 82",
       "period": 1,
       "regulation_seconds": null,
       "clock_unverified": true,
