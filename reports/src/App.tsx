@@ -14,7 +14,15 @@ function TeamDashboard({ report }: { report: PublicReport }) {
   const summary = report.team_summary
   if (!summary?.home || !summary.away) return null
   const { home, away } = summary
-  return <section className="dashboard-section"><div className="section-heading"><div><p className="eyebrow">Panorama</p><h2>Comparativa de equipos</h2></div><div className="pyramid-chart">
+  return <section className="dashboard-section">
+  <div className="section-heading">
+    <div>
+      <p className="eyebrow">Panorama</p>
+      <h2>Comparativa de equipos</h2>
+      <small>{home.name} ← comparación → {away.name}</small>
+    </div>
+  </div>
+  <div className="pyramid-chart">
     <Comparison label="Goles" home={home.goals} away={away.goals} />
     <Comparison label="Tiros" home={home.shots} away={away.shots} />
     <Comparison label="Eficacia" home={home.shots ? Math.round(home.goals / home.shots * 100) : 0} away={away.shots ? Math.round(away.goals / away.shots * 100) : 0} suffix="%" />
@@ -24,7 +32,8 @@ function TeamDashboard({ report }: { report: PublicReport }) {
     <Comparison label="Pérdidas" home={home.turnovers} away={away.turnovers} />
     <Comparison label="Recuperaciones" home={home.recoveries} away={away.recoveries} />
     <Comparison label="Sanciones" home={home.sanctions} away={away.sanctions} />
-  </div></div></section>
+  </div>
+</section>
 }
 
 type IncidentCardProps = {
@@ -149,9 +158,10 @@ export default function App() {
   const [report, setReport] = useState<PublicReport | null>(null)
   const [message, setMessage] = useState('Cargando informe público…')
   const [playerSlug, setPlayerSlug] = useState('all')
-  const [kind, setKind] = useState('all')
-  const [videoSeconds, setVideoSeconds] = useState<number | null>(null)
-  const [selectedIncidentRef, setSelectedIncidentRef] = useState<{ reference: string | null; videoSeconds: number } | null>(null)
+const [kind, setKind] = useState('all')
+const [team, setTeam] = useState<'all' | 'home' | 'away'>('all')
+const [videoSeconds, setVideoSeconds] = useState<number | null>(null)
+const [selectedIncidentRef, setSelectedIncidentRef] = useState<{ reference: string | null; videoSeconds: number } | null>(null)
   
 
   useEffect(() => {
@@ -169,6 +179,8 @@ export default function App() {
 
   const players = report.players ?? []
   const keepers = players.filter((player) => player.role === 'goalkeeper')
+  const fields = players.filter((player) => player.role === 'field_player' && (team === 'all' || player.team_side === team))
+  const selected = players.find((player) => player.slug === playerSlug) ?? null
   const keeperAttribution = report.team_summary ? (['home', 'away'] as const).map((side) => {
     const assigned = players.filter((player) => player.role === 'goalkeeper' && player.team_side === side).reduce((total, player) => total + n(player.metrics.shots_faced), 0)
     const opponent = side === 'home' ? report.team_summary?.away : report.team_summary?.home
@@ -183,6 +195,57 @@ export default function App() {
   return <main className="report-shell" aria-labelledby="report-header">
     <header className="hero"><p className="eyebrow">Informe de partido</p><div className="match-line"><h1 id="report-header">{report.match.home_team} <span>vs</span> {report.match.away_team}</h1><select aria-label="Seleccionar partido" defaultValue="current"><option value="current">{report.match.date ?? 'Partido actual'} · Partido 1</option></select></div><p>{report.coverage?.label ?? 'Cobertura del análisis no especificada'}</p>{report.coverage?.status === 'partial' && <strong className="coverage-badge">Análisis parcial · sólo períodos cargados</strong>}{report.video && <a className="video-link" href={`https://www.youtube.com/watch?v=${report.video.video_id}`} target="_blank" rel="noreferrer">▶ Abrir video del partido</a>}</header>
     <TeamDashboard report={report} />
+    <section className="dashboard-section">
+      <div className="section-heading">
+        <div>
+          <p className="eyebrow">Plantel</p>
+          <h2>Jugadores de campo</h2>
+        </div>
+        <div className="filter-row">
+          <button className={team === 'all' ? 'active' : ''} onClick={() => setTeam('all')}>Todos</button>
+          <button className={team === 'home' ? 'active' : ''} onClick={() => setTeam('home')}>{report.match.home_team}</button>
+          <button className={team === 'away' ? 'active' : ''} onClick={() => setTeam('away')}>{report.match.away_team}</button>
+        </div>
+      </div>
+      <div className="table-wrap">
+      <table className="player-table">
+        <thead>
+          <tr>
+            <th>Jugador</th>
+            <th>Tot.</th>
+            <th>Al arco</th>
+            <th>Goles</th>
+            <th>Efic.</th>
+            <th>Atajadas rival</th>
+            <th>Afuera / palo</th>
+            <th>Pérdidas</th>
+            <th>Recup.</th>
+          </tr>
+        </thead>
+        <tbody>
+          {fields.map((player) => (
+            <tr className={playerSlug === player.slug ? 'selected' : ''} key={player.slug} onClick={() => setPlayerSlug(player.slug)}>
+              <td>#{player.jersey_number ?? '—'} · <strong>{player.name}</strong></td>
+              <td>{n(player.metrics.shots)}</td>
+              <td>{n(player.metrics.shots_on_target)}</td>
+              <td>{n(player.metrics.goals)}</td>
+              <td>{pct(n(player.metrics.goals), n(player.metrics.shots))}</td>
+              <td>{n(player.metrics.saves_against)}</td>
+              <td>{n(player.metrics.outside_or_woodwork)}</td>
+              <td>{n(player.metrics.turnovers)}</td>
+              <td>{n(player.metrics.recoveries)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    {selected?.role === 'field_player' && (
+      <div className="selected-panel">
+        <strong>{playerLabel(selected)}</strong>
+        <span>{n(selected.metrics.goals)} goles / {n(selected.metrics.shots)} tiros · {pct(n(selected.metrics.goals), n(selected.metrics.shots))} eficacia</span>
+      </div>
+    )}
+    </section>
     <section className="dashboard-section keeper-section"><div className="section-heading"><div><p className="eyebrow">Defensa</p><h2>Arqueros</h2></div><small>Atajadas sobre tiros al arco asignados</small></div><div className="keeper-grid">{keepers.map((player) => <article className="keeper-card" key={player.slug}><span>ARQ · #{player.jersey_number ?? '—'}</span><h3>{player.name}</h3><strong>{n(player.metrics.saves)} atajadas <em>{pct(n(player.metrics.saves), n(player.metrics.shots_faced))}</em></strong><p>{n(player.metrics.shots_faced)} tiros al arco asignados · {n(player.metrics.goals_conceded)} goles recibidos</p></article>)}</div>{keeperAttribution.map((item) => <p className="keeper-note" key={item.team}>{item.team}: {item.unassigned} tiros al arco sin arquero asignado; no se atribuyen a un jugador.</p>)}</section>
     <section className="dashboard-section"><div className="section-heading"><div><p className="eyebrow">Video y análisis</p><h2>Incidencias del partido</h2></div><small>{filteredIncidents.length} incidencias</small></div>
 
