@@ -101,4 +101,35 @@ describe('public report projection', () => {
     const result = decodePublicReport(publicReport)
     expect(result.players).toBeNull()
   })
+it('accepts numeric jersey numbers and normalizes to string', () => {
+    // Real-match format: numeric jersey numbers (1, 2, 10, etc.) with valid slugs
+    const reportWithNumericJerseys = {
+      schema_version: 'public-report-v1',
+      report_version: 1,
+      match: { date: '2026-10-04', home_team: 'S.A.P.A.', away_team: 'Palermo Handball' },
+      source: { label: 'Canonical eligible event ledger', status: 'canonical-eligible' },
+      coaching: { question: 'Analysis of Match 99', pattern_statement: 'Match analysis covering 82 approved canonical events', action: { kind: 'keep', text: 'Export approved facts for public report' } },
+      metrics: { shots: { count: 53, numerator: 25, denominator: 53, excluded: 0, unknown: 0, clock_unverified: 0 } },
+      players: [
+        { slug: 'ramirez-lorca-jaime-nahuel', name: 'Ramirez Lorca, Jaime Nahuel', jersey_number: 1, team_side: 'home', role: 'goalkeeper', metrics: { saves: 0, shots_faced: 1, goals_conceded: 1, save_rate: 0.0 }, evidence: [] },
+        { slug: 'ruano-matheo', name: 'Ruano, Matheo', jersey_number: 2, team_side: 'home', role: 'field_player', metrics: { shot_conversion: null, shots: 0, goals: 0, assists: 0, turnovers: 0, recoveries: 0, sanctions: 0 }, evidence: [] },
+        { slug: 'gonzalez-ezequiel-matias', name: 'Gonzalez, Ezequiel Matias', jersey_number: 10, team_side: 'home', role: 'field_player', metrics: { shot_conversion: 0.6667, shots: 3, goals: 2, assists: 0, turnovers: 0, recoveries: 0, sanctions: 0 }, evidence: [] },
+      ],
+      reconciliation: [{ side: 'home', official: 29, analytical: 12, discrepancy: -17 }],
+      uncertainty_disclosure: 'Generated from canonical analysis; partial data may apply',
+      evidence: [{ reference: 'Sequence 1', period: 1, regulation_seconds: 0.0, clock_unverified: false, observation: 'Canonical observation', media_available: false }]
+    }
+    const result = decodePublicReport(reportWithNumericJerseys)
+    expect(result.players).toBeDefined()
+    expect(result.players!.length).toBe(3)
+    // Verify jersey numbers are normalized to strings
+    expect(result.players![0].jersey_number).toBe('1')
+    expect(result.players![1].jersey_number).toBe('2')
+    expect(result.players![2].jersey_number).toBe('10')
+  })
+  it('accepts string jersey numbers (backward compatible)', () => {
+    const result = decodePublicReport(publicReportWithPlayers)
+    expect(result.players).toBeDefined()
+    expect(result.players![0].jersey_number).toBe('10')
+  })
 })

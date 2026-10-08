@@ -74,6 +74,15 @@ export function decodePublicReport(value: unknown): PublicReport {
     }
     metrics[name] = m
   }
+// Normalize top-level metric names: filter out internal-looking player:<db-id>:
+  // and team:<db-id> keys since player details already carry public names/roles
+  // in the players array; keep only public-friendly metric names.
+  const normalizedMetrics: Record<string, Record<string, string | number | null>> = {}
+  for (const [name, metric] of Object.entries(metrics) as [string, Record<string, string | number | null>][]) {
+    // Skip metric keys that expose internal database IDs
+    if (/^player:/i.test(name) || /^team:/i.test(name)) continue
+    normalizedMetrics[name] = metric
+  }
 // Optional players: explicit array of public player summaries; role must be explicitly provided
   let players: PublicReport['players'] = null
   if ('players' in value && value.players !== null) {
@@ -86,7 +95,9 @@ export function decodePublicReport(value: unknown): PublicReport {
         const { slug, name, jersey_number, team_side, role, metrics: metricsRaw, evidence: evidenceRaw } = item
         if (!isSlug(slug)) throw new Error('Player slug must be a safe public slug (lowercase alphanumeric and hyphens).')
         if (!isString(name)) throw new Error('Player name must be a string.')
-        if (jersey_number !== null && !isString(jersey_number)) throw new Error('Player jersey_number must be a string or null.')
+        // Accept numeric or string jersey number, normalize to string for display
+        const normalizedJersey = jersey_number !== null ? String(jersey_number) : null
+        if (normalizedJersey !== null && !isString(normalizedJersey)) throw new Error('Player jersey_number must be a string or null.')
         if (team_side !== 'home' && team_side !== 'away') throw new Error('Player team_side must be "home" or "away".')
         // Validate role is explicitly provided and is a valid value
         if (!role) throw new Error('Player role is required and must be "goalkeeper" or "field_player".')
@@ -117,7 +128,7 @@ export function decodePublicReport(value: unknown): PublicReport {
           if ('media_url' in e) e.media_url = String(e.media_url)
           return e as PublicReport['evidence'][number]
         })
-        validatedPlayers.push({ slug, name, jersey_number: jersey_number ?? null, team_side, role, metrics: metricsValidated, evidence: evidenceValidated } as PlayerPublic)
+        validatedPlayers.push({ slug, name, jersey_number: normalizedJersey, team_side, role, metrics: metricsValidated, evidence: evidenceValidated } as PlayerPublic)
       }
       // If we validated players, set the result
       if (validatedPlayers.length > 0) {
@@ -176,7 +187,7 @@ export function decodePublicReport(value: unknown): PublicReport {
         text: action.text ?? null,
       } as PublicReport['coaching']['action'],
     },
-    metrics,
+metrics: normalizedMetrics,
     players,
     reconciliation: reconciliation as PublicReport['reconciliation'],
     uncertainty_disclosure: value.uncertainty_disclosure ?? null,
