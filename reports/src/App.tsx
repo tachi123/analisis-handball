@@ -4,6 +4,7 @@ import { Timeline } from './Timeline'
 
 const n = (value: unknown) => typeof value === 'number' ? value : 0
 const pct = (numerator: number, denominator: number) => denominator ? `${Math.round((numerator / denominator) * 100)}%` : '—'
+const VIDEO_PREROLL_SECONDS = 3
 const playerLabel = (player: PlayerPublic) => `${player.name}${player.jersey_number ? ` · #${player.jersey_number}` : ''}`
 const goalkeeperSplit = (player: PlayerPublic, suffix: '7m' | 'counterattack', label: string) => {
   const faced = n(player.metrics[`shots_faced_${suffix}`])
@@ -198,10 +199,11 @@ const [selectedIncidentRef, setSelectedIncidentRef] = useState<{ reference: stri
   // Determinar el video actual: si hay un incidente seleccionado, usar su segundos;
   // sino el default; sino null.
   const currentVideoSeconds = selectedIncidentRef?.videoSeconds ?? videoSeconds ?? defaultVideoSeconds
+  const cueVideo = (seconds: number) => setVideoSeconds(Math.max(0, seconds - VIDEO_PREROLL_SECONDS))
 
   // Cuando se hace clic en un marcador del timeline, seek al video_seconds del evento
   function handleMarkerClick(reference: string, videoSeconds: number | null) {
-    setVideoSeconds(videoSeconds ?? 0)
+    cueVideo(videoSeconds ?? 0)
     setSelectedIncidentRef({ reference, videoSeconds: videoSeconds ?? 0 })
   }
 
@@ -296,7 +298,7 @@ const [selectedIncidentRef, setSelectedIncidentRef] = useState<{ reference: stri
               key={incident.reference}
               incident={incident}
               videoSeconds={incident.video_seconds ?? 0}
-              onSeek={(sec) => setVideoSeconds(sec)}
+              onSeek={cueVideo}
               onSelect={(ref) => setSelectedIncidentRef({ reference: ref, videoSeconds: incident.video_seconds ?? 0 })}
               isSelected={selectedIncidentRef?.reference === incident.reference}
               report={report}
