@@ -17,6 +17,7 @@ const markerColor = (event: MomentumEvent) => {
 }
 const markerLabel = (event: MomentumEvent) => ({ goal: 'Gol', recovery: 'Recuperación', turnover: 'Pérdida', passive: 'Pasivo', sanction: 'Sanción', other: 'Incidencia' }[event.kind])
 type MarkerFilter = 'summary' | 'goal' | 'turnover' | 'recovery' | 'sanction' | 'passive'
+type TeamFilter = 'all' | 'home' | 'away'
 const filters: Array<{ value: MarkerFilter; label: string }> = [
   { value: 'summary', label: 'Resumen' }, { value: 'goal', label: 'Goles' }, { value: 'turnover', label: 'Pérdidas' },
   { value: 'recovery', label: 'Recuperaciones' }, { value: 'sanction', label: 'Sanciones' }, { value: 'passive', label: 'Pasivo' },
@@ -24,6 +25,7 @@ const filters: Array<{ value: MarkerFilter; label: string }> = [
 
 export function Timeline({ report, onSeek }: { report: PublicReport; onSeek: (reference: string, videoSeconds: number) => void }) {
   const [filter, setFilter] = useState<MarkerFilter>('summary')
+  const [teamFilter, setTeamFilter] = useState<TeamFilter>('all')
   const events = deriveMomentum(report.incidents)
   if (!events.length) return null
   const relevant = events.filter((event) => event.kind !== 'other')
@@ -41,6 +43,7 @@ export function Timeline({ report, onSeek }: { report: PublicReport; onSeek: (re
   const scoreIsComplete = scoreMatchesSummary(events, report.team_summary)
   const lastGoal = relevant.filter((event) => event.kind === 'goal').at(-1)
   const markers = relevant.filter((event, index) => {
+    if (teamFilter !== 'all' && event.teamSide !== teamFilter) return false
     if (filter !== 'summary') return event.kind === filter
     if (event.kind !== 'goal') return false
     const previousGoal = relevant.slice(0, index).reverse().find((item) => item.kind === 'goal')
@@ -52,6 +55,7 @@ export function Timeline({ report, onSeek }: { report: PublicReport; onSeek: (re
     <div className="section-heading"><div><p className="eyebrow">Desarrollo</p><h2 id="momentum-title">Historia del partido</h2></div><small>La línea sube con {report.match.home_team} y baja con {report.match.away_team}</small></div>
     <div className="momentum-legend" aria-label="Referencias"><span className="home-key">● {report.match.home_team}</span><span className="away-key">● {report.match.away_team}</span><span>● Recuperación</span><span>● Pérdida</span><span>◆ Pasivo</span><span>● Sanción</span></div>
     <div className="momentum-filters" aria-label="Filtrar marcadores de la historia del partido">{filters.map((item) => <button key={item.value} className={filter === item.value ? 'active' : ''} aria-pressed={filter === item.value} onClick={() => setFilter(item.value)}>{item.label}</button>)}</div>
+    <div className="momentum-filters momentum-team-filters" aria-label="Filtrar marcadores por equipo"><span>Equipo:</span><button className={teamFilter === 'all' ? 'active' : ''} aria-pressed={teamFilter === 'all'} onClick={() => setTeamFilter('all')}>Ambos</button><button className={teamFilter === 'home' ? 'active home-filter' : 'home-filter'} aria-pressed={teamFilter === 'home'} onClick={() => setTeamFilter('home')}>{report.match.home_team}</button><button className={teamFilter === 'away' ? 'active away-filter' : 'away-filter'} aria-pressed={teamFilter === 'away'} onClick={() => setTeamFilter('away')}>{report.match.away_team}</button></div>
     <div className="momentum-scroll"><svg className="momentum-chart" viewBox={`0 0 ${WIDTH} ${HEIGHT}`} role="img" aria-label="Evolución de la diferencia de goles durante el partido">
       <rect x={PAD.left} y={PAD.top} width={plotWidth} height={y(0) - PAD.top} fill="#62c5ff" opacity=".08" />
       <rect x={PAD.left} y={y(0)} width={plotWidth} height={PAD.top + plotHeight - y(0)} fill="#ffd166" opacity=".08" />
