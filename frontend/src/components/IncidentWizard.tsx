@@ -52,6 +52,7 @@ const TURNOVER_REASONS = [
   { value: 'steal', label: 'Intercepción / Robo', icon: UserPlus },
   { value: 'three_seconds', label: '3 segundos', icon: Timer },
   { value: 'area_violation', label: 'Pisar el área', icon: Ban },
+  { value: 'passive', label: 'Pasivo', icon: Timer },
   { value: 'technical', label: 'Otro error técnico', icon: Ban },
 ]
 

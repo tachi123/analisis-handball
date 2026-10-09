@@ -233,7 +233,7 @@ def _validate_transition_outcome(command: CanonicalEventCommand) -> None:
     """Keep the accepted command vocabulary beside the transition that consumes it."""
     allowed = {
         "shot": {"goal", "save", "miss", "woodwork", "blocked"},
-        "turnover": {"bad_pass", "bad_reception", "walking", "double_dribble", "offensive_foul", "steal", "three_seconds", "area_violation",
+        "turnover": {"bad_pass", "bad_reception", "walking", "double_dribble", "offensive_foul", "steal", "three_seconds", "area_violation", "passive",
                       "technical", "interception", "unresolved_loss"},
         "recovery": {"bad_pass", "bad_reception", "walking", "double_dribble", "offensive_foul", "steal", "three_seconds", "area_violation",
                       "technical", "interception"},

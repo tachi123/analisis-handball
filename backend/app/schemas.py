@@ -259,7 +259,7 @@ class CanonicalRecoveryRequest(BaseModel):
 
 EvidenceState = Literal["confirmed", "no_visible", "ambiguous", "replay"]
 CodebookCode = Literal["shot", "seven_meter", "confirmed_assist", "turnover", "recovery", "defensive_action", "foul_sanction", "transition_outcome", "goalkeeper_outcome"]
-TurnoverCause = Literal["bad_control", "bad_pass", "interception", "steal", "offensive_foul", "technical_violation", "out_of_play", "other_visible", "ambiguous"]
+TurnoverCause = Literal["bad_control", "bad_pass", "interception", "steal", "offensive_foul", "technical_violation", "out_of_play", "passive", "other_visible", "ambiguous"]
 AnalysisOutcome = Literal["goal", "saved", "missed", "woodwork", "blocked", "goal_conceded"]
 CanonicalKind = Literal["shot", "turnover", "recovery", "lineup_change", "goalkeeper_change", "foul_sanction", "other"]
 CanonicalFactKind = Literal["observed", "inference"]

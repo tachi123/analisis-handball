@@ -320,6 +320,7 @@ for ev in eligible_events:
         'blocked': 'Bloqueado',
         'bad_pass': 'Pase perdido',
         'bad_reception': 'Recepción perdida',
+        'passive': 'Pasivo',
         'foul': 'Falta',
         'yellow_card': 'Tarjeta amarilla',
         'red_card': 'Tarjeta roja',

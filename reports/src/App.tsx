@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, useMemo } from 'react'
 import { decodePublicReport, type PlayerPublic, type PublicReport } from './projection'
+import { Timeline } from './Timeline'
 
 const n = (value: unknown) => typeof value === 'number' ? value : 0
 const pct = (numerator: number, denominator: number) => denominator ? `${Math.round((numerator / denominator) * 100)}%` : '—'
@@ -192,9 +193,16 @@ const [selectedIncidentRef, setSelectedIncidentRef] = useState<{ reference: stri
   // sino el default; sino null.
   const currentVideoSeconds = selectedIncidentRef?.videoSeconds ?? videoSeconds ?? defaultVideoSeconds
 
+  // Cuando se hace clic en un marcador del timeline, seek al video_seconds del evento
+  function handleMarkerClick(reference: string, videoSeconds: number | null) {
+    setVideoSeconds(videoSeconds ?? 0)
+    setSelectedIncidentRef({ reference, videoSeconds: videoSeconds ?? 0 })
+  }
+
   return <main className="report-shell" aria-labelledby="report-header">
     <header className="hero"><p className="eyebrow">Informe de partido</p><div className="match-line"><h1 id="report-header">{report.match.home_team} <span>vs</span> {report.match.away_team}</h1><select aria-label="Seleccionar partido" defaultValue="current"><option value="current">{report.match.date ?? 'Partido actual'} · Partido 1</option></select></div><p>{report.coverage?.label ?? 'Cobertura del análisis no especificada'}</p>{report.coverage?.status === 'partial' && <strong className="coverage-badge">Análisis parcial · sólo períodos cargados</strong>}{report.video && <a className="video-link" href={`https://www.youtube.com/watch?v=${report.video.video_id}`} target="_blank" rel="noreferrer">▶ Abrir video del partido</a>}</header>
     <TeamDashboard report={report} />
+    <Timeline report={report} onSeek={handleMarkerClick} />
     <section className="dashboard-section">
       <div className="section-heading">
         <div>
