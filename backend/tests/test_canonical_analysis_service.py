@@ -124,6 +124,15 @@ def test_kickoff_turnover_recovery_transfers_possession_with_observed_bases():
     ]
 
 
+def test_passive_is_an_explicit_turnover_cause():
+    state = CanonicalMatchState()
+    transition(state, 1, kind="other", team_id=1, outcome="kickoff")
+    transition(state, 2, kind="turnover", team_id=1, outcome="passive")
+
+    assert state.possession is not None
+    assert state.possession.terminal_basis == "turnover:2"
+
+
 def test_pre_match_kickoff_command_keeps_video_evidence_and_establishes_possession():
     kickoff = CanonicalEventCommand(
         kind="other", period=1, regulation_seconds=None, clock_unverified=True, team_id=1,

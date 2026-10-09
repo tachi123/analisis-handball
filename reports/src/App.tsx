@@ -5,6 +5,12 @@ import { Timeline } from './Timeline'
 const n = (value: unknown) => typeof value === 'number' ? value : 0
 const pct = (numerator: number, denominator: number) => denominator ? `${Math.round((numerator / denominator) * 100)}%` : '—'
 const playerLabel = (player: PlayerPublic) => `${player.name}${player.jersey_number ? ` · #${player.jersey_number}` : ''}`
+const goalkeeperSplit = (player: PlayerPublic, suffix: '7m' | 'counterattack', label: string) => {
+  const faced = n(player.metrics[`shots_faced_${suffix}`])
+  if (!faced) return null
+  const saves = n(player.metrics[`saves_${suffix}`])
+  return <span>{label}: {saves}/{faced} · {pct(saves, faced)}</span>
+}
 
 function Comparison({ label, home, away, suffix = '' }: { label: string; home: number; away: number; suffix?: string }) {
   const max = Math.max(home, away, 1)
@@ -254,7 +260,7 @@ const [selectedIncidentRef, setSelectedIncidentRef] = useState<{ reference: stri
       </div>
     )}
     </section>
-    <section className="dashboard-section keeper-section"><div className="section-heading"><div><p className="eyebrow">Defensa</p><h2>Arqueros</h2></div><small>Atajadas sobre tiros al arco asignados</small></div><div className="keeper-grid">{keepers.map((player) => <article className="keeper-card" key={player.slug}><span>ARQ · #{player.jersey_number ?? '—'}</span><h3>{player.name}</h3><strong>{n(player.metrics.saves)} atajadas <em>{pct(n(player.metrics.saves), n(player.metrics.shots_faced))}</em></strong><p>{n(player.metrics.shots_faced)} tiros al arco asignados · {n(player.metrics.goals_conceded)} goles recibidos</p></article>)}</div>{keeperAttribution.map((item) => <p className="keeper-note" key={item.team}>{item.team}: {item.unassigned} tiros al arco sin arquero asignado; no se atribuyen a un jugador.</p>)}</section>
+    <section className="dashboard-section keeper-section"><div className="section-heading"><div><p className="eyebrow">Defensa</p><h2>Arqueros</h2></div><small>Atajadas sobre tiros al arco asignados</small></div><div className="keeper-grid">{keepers.map((player) => <article className="keeper-card" key={player.slug}><span>ARQ · #{player.jersey_number ?? '—'}</span><h3>{player.name}</h3><strong>{n(player.metrics.saves)} atajadas <em>{pct(n(player.metrics.saves), n(player.metrics.shots_faced))}</em></strong><p>{n(player.metrics.shots_faced)} tiros al arco asignados · {n(player.metrics.goals_conceded)} goles recibidos</p><div className="keeper-splits">{goalkeeperSplit(player, '7m', '7 m')}{goalkeeperSplit(player, 'counterattack', 'Contra')}</div></article>)}</div>{keeperAttribution.map((item) => <p className="keeper-note" key={item.team}>{item.team}: {item.unassigned} tiros al arco sin arquero asignado; no se atribuyen a un jugador.</p>)}</section>
     <section className="dashboard-section"><div className="section-heading"><div><p className="eyebrow">Video y análisis</p><h2>Incidencias del partido</h2></div><small>{filteredIncidents.length} incidencias</small></div>
 
       {/* Persistent video player - single iframe, not remounted on key change */}

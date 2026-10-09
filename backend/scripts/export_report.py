@@ -99,7 +99,11 @@ for s in squad:
 
     if is_gk or gk_designated:
         role = 'goalkeeper'
-        gk_metrics = {'saves': 0, 'shots_faced': 0, 'goals_conceded': 0, 'save_rate': None}
+        gk_metrics = {
+            'saves': 0, 'shots_faced': 0, 'goals_conceded': 0, 'save_rate': None,
+            'saves_7m': 0, 'shots_faced_7m': 0, 'goals_conceded_7m': 0, 'save_rate_7m': None,
+            'saves_counterattack': 0, 'shots_faced_counterattack': 0, 'goals_conceded_counterattack': 0, 'save_rate_counterattack': None,
+        }
         gk_count = 0
 
         for event in eligible_events:
@@ -107,16 +111,27 @@ for s in squad:
             if payload.get('kind') == 'shot' and payload.get('goalkeeper_id') == player_id:
                 gk_count += 1
                 outcome = payload.get('outcome')
+                shot_zone = payload.get('shot_zone')
                 if outcome == 'save':
                     gk_metrics['saves'] += 1
                 elif outcome == 'goal':
                     gk_metrics['goals_conceded'] += 1
                 if outcome in {'save', 'goal'}:
                     gk_metrics['shots_faced'] += 1
+                    if shot_zone == 7:
+                        gk_metrics['shots_faced_7m'] += 1
+                        gk_metrics['saves_7m' if outcome == 'save' else 'goals_conceded_7m'] += 1
+                    elif shot_zone == 8:
+                        gk_metrics['shots_faced_counterattack'] += 1
+                        gk_metrics['saves_counterattack' if outcome == 'save' else 'goals_conceded_counterattack'] += 1
 
         denom = gk_metrics['saves'] + gk_metrics['goals_conceded']
         if denom:
             gk_metrics['save_rate'] = round(gk_metrics['saves'] / denom, 4)
+        for suffix in ('7m', 'counterattack'):
+            faced = gk_metrics[f'shots_faced_{suffix}']
+            if faced:
+                gk_metrics[f'save_rate_{suffix}'] = round(gk_metrics[f'saves_{suffix}'] / faced, 4)
 
         player_name = player.name if player else ('Goalkeeper ' + (str(player.default_jersey_number) if player and player.default_jersey_number else '1'))
 
