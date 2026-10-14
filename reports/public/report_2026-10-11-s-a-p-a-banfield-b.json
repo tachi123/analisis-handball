@@ -2214,10 +2214,10 @@
       },
       {
         "team_side": "away",
-        "goals": 3,
+        "goals": 2,
         "start": {
-          "period": 1,
-          "seconds": 2027
+          "period": 2,
+          "seconds": 100
         },
         "end": {
           "period": 2,

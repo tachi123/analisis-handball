@@ -2347,18 +2347,6 @@
         }
       },
       {
-        "team_side": "away",
-        "goals": 2,
-        "start": {
-          "period": 1,
-          "seconds": 1729
-        },
-        "end": {
-          "period": 2,
-          "seconds": 68
-        }
-      },
-      {
         "team_side": "home",
         "goals": 5,
         "start": {

@@ -377,16 +377,17 @@ def build_phase_analysis(events):
 
     scoring_runs = []
     current_side = None
+    current_period = None
     current_goals = []
     for event in timed:
         payload = event['payload']
         if payload.get('kind') != 'shot' or payload.get('outcome') != 'goal' or public_side(payload) == 'unknown':
             continue
         side = public_side(payload)
-        if side != current_side:
+        if side != current_side or payload['period'] != current_period:
             if len(current_goals) >= 2:
                 scoring_runs.append(scoring_run_entry(current_goals, current_side))
-            current_side, current_goals = side, [event]
+            current_side, current_period, current_goals = side, payload['period'], [event]
         else:
             current_goals.append(event)
     if len(current_goals) >= 2:
