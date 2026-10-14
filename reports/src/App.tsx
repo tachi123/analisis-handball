@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useMemo, startTransition } from 'react'
+import { Fragment, useEffect, useRef, useState, useMemo, startTransition } from 'react'
 import { decodePublicReportCatalog, reportFileName, reportLabel, type PublicReportCatalog, type PublicReportCatalogEntry } from './catalog'
 import { decodePublicReport, type PhaseStats, type PlayerPublic, type PossessionSummary, type PublicReport } from './projection'
 import { Timeline } from './Timeline'
@@ -7,13 +7,6 @@ const n = (value: unknown) => typeof value === 'number' ? value : 0
 const pct = (numerator: number, denominator: number) => denominator ? `${Math.round((numerator / denominator) * 100)}%` : '—'
 const VIDEO_PREROLL_SECONDS = 3
 const playerLabel = (player: PlayerPublic) => `${player.name}${player.jersey_number ? ` · #${player.jersey_number}` : ''}`
-const goalkeeperSplit = (player: PlayerPublic, suffix: '7m' | 'counterattack', label: string) => {
-  const faced = n(player.metrics[`shots_faced_${suffix}`])
-  if (!faced) return null
-  const saves = n(player.metrics[`saves_${suffix}`])
-  return <span>{label}: {saves} atajadas / {faced} · {pct(saves, faced)}</span>
-}
-
 function Comparison({ label, home, away, suffix = '' }: { label: string; home: number; away: number; suffix?: string }) {
   const max = Math.max(home, away, 1)
   return <article className="pyramid-row"><strong className="pyramid-value home-value">{home}{suffix}</strong><i className="pyramid-bar home-bar" style={{ width: `${home / max * 100}%` }} /><span>{label}</span><i className="pyramid-bar away-bar" style={{ width: `${away / max * 100}%` }} /><strong className="pyramid-value away-value">{away}{suffix}</strong></article>
@@ -341,11 +334,14 @@ const [selectedIncidentRef, setSelectedIncidentRef] = useState<{ reference: stri
   const keepers = players.filter((player) => player.role === 'goalkeeper')
   const fields = players.filter((player) => player.role === 'field_player' && (team === 'all' || player.team_side === team))
   const selected = players.find((player) => player.slug === playerSlug) ?? null
-  const keeperAttribution = report.team_summary ? (['home', 'away'] as const).map((side) => {
-    const assigned = players.filter((player) => player.role === 'goalkeeper' && player.team_side === side).reduce((total, player) => total + n(player.metrics.shots_faced), 0)
+  const keeperGroups = report.team_summary ? (['home', 'away'] as const).map((side) => {
+    const team = side === 'home' ? report.match.home_team ?? 'Local' : report.match.away_team ?? 'Visitante'
     const opponent = side === 'home' ? report.team_summary?.away : report.team_summary?.home
-    return { team: side === 'home' ? report.match.home_team : report.match.away_team, assigned, unassigned: Math.max(0, n(opponent?.shots_on_target) - assigned) }
-  }).filter((item) => item.assigned > 0 && item.unassigned > 0) : []
+    const rows = keepers.filter((player) => player.team_side === side)
+    const assigned = rows.reduce((total, player) => total + n(player.metrics.shots_faced), 0)
+    const faced = n(opponent?.shots_on_target)
+    return { side, team, rows, faced, saves: n(opponent?.saves_against), goals: n(opponent?.goals), unassigned: Math.max(0, faced - assigned) }
+  }).filter((group) => group.rows.length > 0 || group.faced > 0) : []
   
 
   // Determinar el video actual: si hay un incidente seleccionado, usar su segundos;
@@ -418,7 +414,7 @@ const [selectedIncidentRef, setSelectedIncidentRef] = useState<{ reference: stri
       </div>
     )}
     </section>
-    <section className="dashboard-section keeper-section"><div className="section-heading"><div><p className="eyebrow">Defensa</p><h2>Arqueros por jugador</h2></div><small>Goles y atajadas sobre los mismos tiros al arco asignados.</small></div><div className="keeper-grid">{keepers.map((player) => <article className="keeper-card" key={player.slug}><span>ARQ · #{player.jersey_number ?? '—'}</span><h3>{player.name}</h3><p><strong>{n(player.metrics.shots_faced)}</strong> tiros al arco asignados</p><p><strong>{n(player.metrics.saves)} atajadas / {n(player.metrics.shots_faced)}</strong> · {pct(n(player.metrics.saves), n(player.metrics.shots_faced))}</p><p><strong>{n(player.metrics.goals_conceded)} goles / {n(player.metrics.shots_faced)}</strong> · {pct(n(player.metrics.goals_conceded), n(player.metrics.shots_faced))}</p><div className="keeper-splits">{goalkeeperSplit(player, '7m', '7 m')}{goalkeeperSplit(player, 'counterattack', 'Contra')}</div></article>)}</div>{keeperAttribution.map((item) => <p className="keeper-note" key={item.team}>{item.unassigned} tiros al arco de {item.team} quedaron sin arquero asignado; no se atribuyen a un jugador.</p>)}</section>
+    <section className="dashboard-section keeper-section"><div className="section-heading"><div><p className="eyebrow">Defensa</p><h2>Arqueros por equipo</h2></div><small>Atajadas y goles se calculan sobre los mismos tiros al arco.</small></div><div className="table-wrap"><table className="player-table keeper-table"><thead><tr><th>Equipo · arquero</th><th>Tiros al arco</th><th>Atajadas</th><th>% atajadas</th><th>Goles recibidos</th><th>7 m</th><th>Contra</th></tr></thead><tbody>{keeperGroups.map((group) => <Fragment key={group.side}><tr className={`keeper-team-total ${group.side}`}><td><strong>{group.team} · Total</strong></td><td>{group.faced}</td><td>{group.saves}</td><td><strong>{pct(group.saves, group.faced)}</strong></td><td>{group.goals}</td><td>—</td><td>—</td></tr>{group.rows.map((player) => { const faced = n(player.metrics.shots_faced); const saves = n(player.metrics.saves); return <tr key={player.slug}><td><span className={`team-dot ${group.side}`} /> {group.team} · #{player.jersey_number ?? '—'} {player.name}</td><td>{faced}</td><td>{saves}</td><td><strong>{pct(saves, faced)}</strong> <small>{saves}/{faced}</small></td><td>{n(player.metrics.goals_conceded)}</td><td>{n(player.metrics.shots_faced_7m) ? `${n(player.metrics.saves_7m)}/${n(player.metrics.shots_faced_7m)}` : '—'}</td><td>{n(player.metrics.shots_faced_counterattack) ? `${n(player.metrics.saves_counterattack)}/${n(player.metrics.shots_faced_counterattack)}` : '—'}</td></tr> })}{group.unassigned > 0 && <tr className="keeper-unassigned" key={`${group.side}-unassigned`}><td><strong>{group.team} · Sin arquero asignado</strong></td><td>{group.unassigned}</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>}</Fragment>)}</tbody></table></div><p className="keeper-note">“Sin arquero asignado” indica tiros observados que no se atribuyen a ningún jugador y se excluyen de sus porcentajes individuales.</p></section>
     <section className="dashboard-section"><div className="section-heading"><div><p className="eyebrow">Video y análisis</p><h2>Incidencias del partido</h2></div><small>{filteredIncidents.length} incidencias</small></div>
 
       {/* Persistent video player - single iframe, not remounted on key change */}
