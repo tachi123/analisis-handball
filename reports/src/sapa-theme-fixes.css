@@ -1,0 +1,2 @@
+/* Legends are text keys, not colored blocks. Team dots remain readable without a background. */
+.home-key{background:transparent;color:#ff8c98}.away-key{background:transparent;color:#8fb4f3}.team-dot{display:inline;color:inherit;background:transparent}.team-dot::before{content:'●'}.team-dot.home{background:transparent;color:#ff8c98}.team-dot.away{background:transparent;color:#8fb4f3}.home-bar{background:#d52b42}.away-bar{background:#315b9b}

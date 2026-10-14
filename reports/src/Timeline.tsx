@@ -5,7 +5,7 @@ import { deriveMomentum, scoreMatchesSummary, type MomentumEvent } from './timel
 const WIDTH = 980
 const HEIGHT = 260
 const PAD = { top: 28, right: 30, bottom: 42, left: 42 }
-const COLORS = { home: '#62c5ff', away: '#ffd166', recovery: '#44d49a', turnover: '#ff7a7a', passive: '#fb923c', sanction: '#c084fc', line: '#f4f8ff', muted: '#8eacc2' }
+const COLORS = { home: '#d52b42', away: '#315b9b', recovery: '#44d49a', turnover: '#ff7a7a', passive: '#fb923c', sanction: '#c084fc', line: '#f8fafc', muted: '#aab5c9' }
 
 const markerColor = (event: MomentumEvent) => {
   if (event.kind === 'goal') return event.teamSide === 'home' ? COLORS.home : COLORS.away
@@ -57,8 +57,8 @@ export function Timeline({ report, onSeek }: { report: PublicReport; onSeek: (re
     <div className="momentum-filters" aria-label="Filtrar marcadores de la historia del partido">{filters.map((item) => <button key={item.value} className={filter === item.value ? 'active' : ''} aria-pressed={filter === item.value} onClick={() => setFilter(item.value)}>{item.label}</button>)}</div>
     <div className="momentum-filters momentum-team-filters" aria-label="Filtrar marcadores por equipo"><span>Equipo:</span><button className={teamFilter === 'all' ? 'active' : ''} aria-pressed={teamFilter === 'all'} onClick={() => setTeamFilter('all')}>Ambos</button><button className={teamFilter === 'home' ? 'active home-filter' : 'home-filter'} aria-pressed={teamFilter === 'home'} onClick={() => setTeamFilter('home')}>{report.match.home_team}</button><button className={teamFilter === 'away' ? 'active away-filter' : 'away-filter'} aria-pressed={teamFilter === 'away'} onClick={() => setTeamFilter('away')}>{report.match.away_team}</button></div>
     <div className="momentum-scroll"><svg className="momentum-chart" viewBox={`0 0 ${WIDTH} ${HEIGHT}`} role="img" aria-label="Evolución de la diferencia de goles durante el partido">
-      <rect x={PAD.left} y={PAD.top} width={plotWidth} height={y(0) - PAD.top} fill="#62c5ff" opacity=".08" />
-      <rect x={PAD.left} y={y(0)} width={plotWidth} height={PAD.top + plotHeight - y(0)} fill="#ffd166" opacity=".08" />
+      <rect x={PAD.left} y={PAD.top} width={plotWidth} height={y(0) - PAD.top} fill={COLORS.home} opacity=".08" />
+      <rect x={PAD.left} y={y(0)} width={plotWidth} height={PAD.top + plotHeight - y(0)} fill={COLORS.away} opacity=".08" />
       <line x1={PAD.left} x2={WIDTH - PAD.right} y1={y(0)} y2={y(0)} className="momentum-zero" />
       <text x={PAD.left} y={y(0) - 7} className="momentum-axis-label">{report.match.home_team} arriba</text>
       <text x={PAD.left} y={y(0) + 16} className="momentum-axis-label">Empate / {report.match.away_team} arriba</text>
