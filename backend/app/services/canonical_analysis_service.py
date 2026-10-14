@@ -322,7 +322,7 @@ def _player_team_ids(db: Session, player_ids: Mapping[int, str]) -> dict[int, in
 
 
 def _payload_with_roster_sources(command: CanonicalEventCommand, roster_sources: Mapping[int, str]) -> dict:
-    payload = command.model_dump(mode="json", exclude={"evidence"})
+    payload: dict = command.model_dump(mode="json", exclude={"evidence"})
     if command.player_id is not None:
         payload["roster_source"] = roster_sources[command.player_id]
     if command.related_player_id is not None:
@@ -462,8 +462,22 @@ def revise_event(db: Session, event_id: int, revision_input: CanonicalEventRevis
         raise PermissionError("only the recording analyst may revise this event")
     _validate_projected_match(db, event.match_id, event.run_id, replacement_event_id=event.id, replacement=revision_input,
                               replacement_active=latest.payload.get("active", True))
-    payload = revision_payload(revision_input)
-    payload.update(_payload_with_roster_sources(revision_input, roster_sources))
+    # Preserve the latest revision payload for all omitted fields,
+    # then override only the fields explicitly set in the request
+    payload = dict(latest.payload)
+    explicit_fields = revision_input.model_dump(exclude={"reason", "evidence"}, exclude_unset=True)
+    payload.update(explicit_fields)
+    # Update roster-source keys only when their player field was included in the PATCH.
+    if "player_id" in explicit_fields:
+        if revision_input.player_id is not None:
+            payload["roster_source"] = roster_sources[revision_input.player_id]
+        else:
+            payload.pop("roster_source", None)
+    if "related_player_id" in explicit_fields:
+        if revision_input.related_player_id is not None:
+            payload["related_player_roster_source"] = roster_sources[revision_input.related_player_id]
+        else:
+            payload.pop("related_player_roster_source", None)
     payload["active"] = latest.payload.get("active", True)
     try:
         revision = CanonicalEventRevision(event_id=event.id, revision=latest.revision + 1, actor_id=actor.id,

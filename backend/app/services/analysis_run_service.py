@@ -45,8 +45,8 @@ def require_writable_run(db: Session, match: Match, run_id: int | None, user: Us
             return run
         raise AnalysisRunError("a draft analysis run is required for writes")
     run = resolve_run(db, match.id, run_id)
-    if run.status != "draft":
-        raise AnalysisRunError("only draft analysis runs are writable")
+    if run.status not in ("draft", "active"):
+        raise AnalysisRunError("only draft and active analysis runs are writable")
     if run.created_by_user_id != user.id and user.role not in {"superadmin", "admin"}:
         raise PermissionError("only the run creator or an admin can write to this analysis run")
     return run
