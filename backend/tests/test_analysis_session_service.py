@@ -3,7 +3,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from app.database import Base
-from app.models import Match, User, VideoSource
+from app.models import AnalysisRun, Match, User, VideoSource
 from app.schemas import AnalysisSession as AnalysisSessionRead, AnalysisSessionUpdate, TimeAnchorInput, TimeSegmentInput, VideoSourceInput
 from app.services.analysis_session_service import AnalysisSessionService
 
@@ -35,6 +35,21 @@ def test_session_recovers_source_position_and_period_anchors_without_touching_ev
 def test_session_rejects_unsupported_video_source():
     with pytest.raises(ValueError, match="supported YouTube"):
         AnalysisSessionService._source_identity("https://example.com/video")
+
+
+def test_session_is_scoped_to_the_explicit_draft_run():
+    engine = create_engine("sqlite://")
+    session = sessionmaker(bind=engine)()
+    Base.metadata.create_all(engine)
+    analyst = User(id=1, email="analyst@example.com", hashed_password="x", full_name="Analyst")
+    draft = AnalysisRun(id=8, match_id=1, mode="video", status="draft", created_by_user_id=1)
+    session.add_all([analyst, Match(id=1), draft])
+    session.commit()
+
+    saved = AnalysisSessionService.save(session, 1, AnalysisSessionUpdate(mode="video"), analyst, run_id=draft.id)
+
+    assert saved.run_id == draft.id
+    engine.dispose()
 
 
 def test_direct_stale_replacement_payload_cannot_persist_cross_source_calibration():

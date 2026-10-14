@@ -1,15 +1,16 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import {
   confirmMatchPDF,
-  enableCanonicalAnalysis,
+  createAnalysisRun,
+  getAnalysisRuns,
   getMatch,
   getOfficialSheet,
   previewMatchPDF,
   saveAnalysisSession,
 } from "../api/client";
-import type { MatchPDFPreviewResult } from "../types";
+import type { AnalysisProfile, AnalysisRun, MatchPDFPreviewResult } from "../types";
 
 const player = (
   row: MatchPDFPreviewResult["preview"]["home_team"]["players"][number],
@@ -35,8 +36,8 @@ export default function ManualMatchPreparationPage() {
   const [file, setFile] = useState<File | null>(null);
   const [preview, setPreview] = useState<MatchPDFPreviewResult | null>(null);
   const [ack, setAck] = useState(false);
-  const [canonicalEnabled, setCanonicalEnabled] = useState(false);
-  const canonicalEnabledRef = useRef(false);
+  const [mode, setMode] = useState<"video" | "manual" | "live">("video");
+  const [pendingRun, setPendingRun] = useState<AnalysisRun | null>(null);
   const match = useQuery({
     queryKey: ["match", id],
     queryFn: () => getMatch(id),
@@ -46,6 +47,12 @@ export default function ManualMatchPreparationPage() {
     queryKey: ["official-sheet", id],
     queryFn: () => getOfficialSheet(id),
     enabled: Boolean(id),
+    retry: false,
+  });
+  const runs = useQuery({
+    queryKey: ["analysis-runs", id],
+    queryFn: () => getAnalysisRuns(id),
+    enabled: Boolean(id) && Boolean(sheet.data),
     retry: false,
   });
   const parse = useMutation({
@@ -63,26 +70,43 @@ export default function ManualMatchPreparationPage() {
   });
   const start = useMutation({
     mutationFn: async () => {
-      if (!canonicalEnabledRef.current) {
-        await enableCanonicalAnalysis(id);
-        canonicalEnabledRef.current = true;
-        setCanonicalEnabled(true);
+      const retryingPendingRun = pendingRun?.mode === mode;
+      const persistedRun = retryingPendingRun
+        ? undefined
+        : (await runs.refetch()).data?.find(
+          (run) => run.match_id === id && run.mode === mode && run.status === "draft",
+        );
+      if (persistedRun) return persistedRun;
+      const run = pendingRun?.mode === mode
+        ? pendingRun
+        : await createAnalysisRun(id, mode);
+      try {
+        await saveAnalysisSession(id, {
+          mode,
+          profile: "complete" as AnalysisProfile,
+          source: mode === "video" && match.data?.youtube_link
+            ? { url: match.data.youtube_link, availability_state: "unknown" }
+            : null,
+          video_position_seconds: null,
+          clock_start_video_seconds: null,
+          angle: null,
+          filters: {},
+          draft: {},
+          queue: [],
+          anchors: [],
+          time_segments: [],
+        }, run.id);
+      } catch (error) {
+        // Keep the draft so a retry cannot create a second analysis run.
+        setPendingRun(run);
+        throw error;
       }
-      return saveAnalysisSession(id, {
-        mode: "video",
-        profile: "complete",
-        source: null,
-        video_position_seconds: null,
-        clock_start_video_seconds: null,
-        angle: null,
-        filters: {},
-        draft: {},
-        queue: [],
-        anchors: [],
-        time_segments: [],
-      });
+      return run;
     },
-    onSuccess: () => navigate(`/match/${id}/review`),
+    onSuccess: (run) => {
+      setPendingRun(null);
+      navigate(`/match/${id}/review?run=${run.id}`);
+    },
   });
   if (match.isLoading) return <main className="p-4">Cargando partido…</main>;
   if (!match.data)
@@ -98,6 +122,9 @@ export default function ManualMatchPreparationPage() {
       404;
   const startError =
     start.error instanceof Error ? start.error.message : "Intentá nuevamente.";
+  const matchingDraft = runs.data?.find(
+    (run) => run.match_id === id && run.mode === mode && run.status === "draft",
+  );
   return (
     <main className="max-w-4xl mx-auto space-y-4 p-4">
       <Link className="btn" to="/matches">
@@ -121,22 +148,33 @@ export default function ManualMatchPreparationPage() {
               {sheet.data.away.score} {sheet.data.away.name}
             </p>
           </section>
-          <button
-            className="btn btn-primary"
-            onClick={() => start.mutate()}
-            disabled={start.isPending}
-          >
-            {start.isError && canonicalEnabled
-              ? "Reintentar inicio de análisis"
-              : "Iniciar análisis de video"}
-          </button>
+          <section className="card space-y-3">
+            <h2 className="font-semibold">Iniciar análisis</h2>
+            <p className="text-sm text-gray-600">Elegí cómo vas a registrar el partido. En Video YouTube vas a cargar o reutilizar el enlace en la revisión.</p>
+            <fieldset className="grid gap-2 md:grid-cols-3">
+              <legend className="sr-only">Modo de análisis</legend>
+              {[
+                ["video", "Video YouTube"],
+                ["manual", "Video local manual"],
+                ["live", "En vivo"],
+              ].map(([value, label]) => <label key={value} className={`cursor-pointer rounded border p-3 ${mode === value ? "border-indigo-600 bg-indigo-50" : "bg-white"}`}><input className="mr-2" type="radio" name="mode" value={value} checked={mode === value} onChange={() => setMode(value as "video" | "manual" | "live")} />{label}</label>)}
+            </fieldset>
+            <button className="btn btn-primary" onClick={() => start.mutate()} disabled={start.isPending}>{start.isPending ? "Iniciando análisis…" : start.isError && pendingRun ? "Reintentar inicio de análisis" : matchingDraft ? "Retomar borrador" : "Crear borrador"}</button>
+          </section>
           {start.isError && (
             <p role="alert" className="text-red-700">
-              {canonicalEnabled
-                ? `El análisis canónico ya fue habilitado, pero no se pudo guardar la sesión inicial: ${startError} Reintentá para crear la sesión. La habilitación no se revirtió.`
-                : `No se pudo habilitar el análisis canónico: ${startError}`}
+              {pendingRun
+                ? `El borrador ya fue creado, pero no se pudo guardar la sesión inicial: ${startError} Reintentá para continuar con el mismo borrador.`
+                : `No se pudo crear el borrador: ${startError}`}
             </p>
           )}
+          {runs.data?.filter((run) => run.status === "draft").map((run) => (
+            <section key={run.id} className="card flex flex-wrap items-center justify-between gap-3">
+              <p><b>Borrador existente:</b> {run.mode}</p>
+              <button className="btn" onClick={() => navigate(`/match/${id}/review?run=${run.id}`)}>Retomar borrador</button>
+            </section>
+          ))}
+          {runs.data?.some((run) => run.status === "active") && <button className="btn" onClick={() => navigate(`/match/${id}/review`)}>Abrir análisis canónico activo</button>}
         </>
       ) : sheet.isError && !sheetMissing ? (
         <section className="card space-y-3" role="alert">

@@ -9,7 +9,7 @@ from fastapi.responses import JSONResponse
 load_dotenv()
 
 from .database import SessionLocal
-from .api.routes import analysis, analysis_events, canonical_analysis, tournaments, teams, players, matches, events, clips, pdf, auth, reports, goalkeeper_shots, stage_performance
+from .api.routes import analysis, analysis_events, analysis_runs, canonical_analysis, tournaments, teams, players, matches, events, clips, pdf, auth, reports, goalkeeper_shots, stage_performance
 from .services.canonical_analysis_service import LegacyWriteBlockedError
 from .services.sheets_service import validate_report_publisher_configuration
 
@@ -68,6 +68,7 @@ app.include_router(matches.router, prefix="/api/v1")
 app.include_router(events.router, prefix="/api/v1")
 app.include_router(analysis_events.router, prefix="/api/v1")
 app.include_router(analysis.router, prefix="/api/v1")
+app.include_router(analysis_runs.router, prefix="/api/v1")
 app.include_router(clips.router, prefix="/api/v1")
 app.include_router(pdf.router, prefix="/api/v1")
 app.include_router(reports.router, prefix="/api/v1")

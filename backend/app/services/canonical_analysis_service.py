@@ -7,8 +7,9 @@ from sqlalchemy.orm import Session, joinedload
 
 from app.models import (AnalysisEvent, AnalysisSession, CanonicalEvent, CanonicalEventRevision, CanonicalEvidence,
                           Event, GoalkeeperShot, Match, MatchSquad, OfficialSnapshot,
-                          OfficialSnapshotPlayer, Player, ScheduledMatch, StageRoster, VideoSource)
+                           OfficialSnapshotPlayer, Player, ScheduledMatch, StageRoster, User, VideoSource)
 from app.schemas import CanonicalEventCommand, CanonicalEventRevisionInput
+from app.services.analysis_run_service import AnalysisRunError, require_writable_run, resolve_run
 
 
 class CanonicalValidationError(ValueError):
@@ -69,10 +70,12 @@ def validate_command(
     if command.kind == "other" and command.outcome == "kickoff":
         if command.team_id is None:
             raise CanonicalValidationError("kickoff requires a match home or away team")
-        if not any(item.kind == "video" and isinstance(item.reference, str) and item.reference.strip()
-                   and item.video_source_id is not None and item.video_anchor_seconds is not None
-                   for item in command.evidence):
-            raise CanonicalValidationError("kickoff requires usable video evidence with a source and anchor")
+        has_video_anchor = any(item.kind == "video" and isinstance(item.reference, str) and item.reference.strip()
+                               and item.video_source_id is not None and item.video_anchor_seconds is not None
+                               for item in command.evidence)
+        has_live_observation = any(item.kind == "unavailable" and "live_observation" in item.uncertainty for item in command.evidence)
+        if not has_video_anchor and not has_live_observation:
+            raise CanonicalValidationError("kickoff requires usable video evidence or an explicit live observation")
 
 
 def revision_payload(revision: CanonicalEventRevisionInput) -> dict:
@@ -252,9 +255,18 @@ def _latest_revision(event: CanonicalEvent) -> CanonicalEventRevision:
     return max(event.revisions, key=lambda revision: revision.revision)
 
 
-def read_events(db: Session, match_id: int, include_inactive: bool = True) -> list[dict]:
-    events = (db.query(CanonicalEvent).options(joinedload(CanonicalEvent.revisions).joinedload(CanonicalEventRevision.evidence))
-              .filter_by(match_id=match_id).order_by(CanonicalEvent.sequence).all())
+def read_events(db: Session, match_id: int, include_inactive: bool = True, run_id: int | None = None) -> list[dict]:
+    try:
+        run = resolve_run(db, match_id, run_id)
+        query = db.query(CanonicalEvent).filter_by(run_id=run.id)
+    except AnalysisRunError:
+        # Metadata-only historical fixtures can contain canonical rows before the
+        # migration exists. Production migration makes this branch unreachable.
+        if run_id is not None or db.query(CanonicalEvent).filter_by(match_id=match_id, run_id=None).count() == 0:
+            raise
+        query = db.query(CanonicalEvent).filter_by(match_id=match_id, run_id=None)
+    events = (query.options(joinedload(CanonicalEvent.revisions).joinedload(CanonicalEventRevision.evidence))
+              .order_by(CanonicalEvent.sequence).all())
     result = []
     for event in events:
         revision = _latest_revision(event)
@@ -359,12 +371,12 @@ def _validate_active_match_events(projected: list[tuple[int, int, CanonicalEvent
     return _project_match_state(projected)
 
 
-def _validate_projected_match(db: Session, match_id: int, *, replacement_event_id: int | None,
+def _validate_projected_match(db: Session, match_id: int, run_id: int, *, replacement_event_id: int | None,
                               replacement: CanonicalEventCommand, replacement_active: bool) -> CanonicalMatchState:
     """Validate the complete active match projection before any canonical mutation commits."""
     projected = []
     found_replacement = replacement_event_id is None
-    for item in read_events(db, match_id, include_inactive=True):
+    for item in read_events(db, match_id, include_inactive=True, run_id=run_id):
         if item["id"] == replacement_event_id:
             found_replacement = True
             if replacement_active:
@@ -395,8 +407,6 @@ def _lock_match(db: Session, match_id: int) -> Match:
     match = db.query(Match).filter_by(id=match_id).with_for_update().one_or_none()
     if match is None:
         raise CanonicalValidationError("match not found")
-    if not match.canonical_analysis_enabled:
-        raise CanonicalValidationError("canonical analysis is disabled for this match; use legacy read-only fallback")
     return match
 
 
@@ -410,18 +420,19 @@ def require_canonical_cutover(db: Session, match_id: int) -> Match:
     return match
 
 
-def create_event(db: Session, match_id: int, command: CanonicalEventCommand, actor_id: int) -> dict:
+def create_event(db: Session, match_id: int, command: CanonicalEventCommand, actor: User, run_id: int | None = None) -> dict:
     match = _lock_match(db, match_id)
+    run = require_writable_run(db, match, run_id, actor)
     _, team_ids, roster_sources = _match_context(db, match_id)
-    validate_command(command, actor_id=actor_id, match_team_ids=team_ids, roster_sources=roster_sources,
+    validate_command(command, actor_id=actor.id, match_team_ids=team_ids, roster_sources=roster_sources,
                      player_team_ids=_player_team_ids(db, roster_sources))
-    _validate_projected_match(db, match_id, replacement_event_id=None, replacement=command, replacement_active=True)
-    sequence = (db.query(func.max(CanonicalEvent.sequence)).filter_by(match_id=match_id).scalar() or 0) + 1
+    _validate_projected_match(db, match_id, run.id, replacement_event_id=None, replacement=command, replacement_active=True)
+    sequence = (db.query(func.max(CanonicalEvent.sequence)).filter_by(run_id=run.id).scalar() or 0) + 1
     try:
-        event = CanonicalEvent(match_id=match_id, sequence=sequence)
+        event = CanonicalEvent(match_id=match_id, run_id=run.id, sequence=sequence)
         db.add(event)
         db.flush()
-        revision = CanonicalEventRevision(event_id=event.id, revision=1, actor_id=actor_id,
+        revision = CanonicalEventRevision(event_id=event.id, revision=1, actor_id=actor.id,
                                           payload=_payload_with_roster_sources(command, roster_sources), reason="created")
         db.add(revision)
         db.flush()
@@ -433,28 +444,29 @@ def create_event(db: Session, match_id: int, command: CanonicalEventCommand, act
     except Exception:
         db.rollback()
         raise
-    return read_events(db, match_id)[-1]
+    return read_events(db, match_id, run_id=run.id)[-1]
 
 
-def revise_event(db: Session, event_id: int, revision_input: CanonicalEventRevisionInput, actor_id: int) -> dict:
+def revise_event(db: Session, event_id: int, revision_input: CanonicalEventRevisionInput, actor: User) -> dict:
     event = db.get(CanonicalEvent, event_id)
     if event is None:
         raise CanonicalValidationError("canonical event not found")
-    _lock_match(db, event.match_id)
+    match = _lock_match(db, event.match_id)
+    require_writable_run(db, match, event.run_id, actor)
     db.refresh(event)
     match, team_ids, roster_sources = _match_context(db, event.match_id)
-    validate_command(revision_input, actor_id=actor_id, match_team_ids=team_ids, roster_sources=roster_sources,
+    validate_command(revision_input, actor_id=actor.id, match_team_ids=team_ids, roster_sources=roster_sources,
                      player_team_ids=_player_team_ids(db, roster_sources))
     latest = _latest_revision(event)
-    if latest.actor_id != actor_id:
+    if latest.actor_id != actor.id:
         raise PermissionError("only the recording analyst may revise this event")
-    _validate_projected_match(db, event.match_id, replacement_event_id=event.id, replacement=revision_input,
+    _validate_projected_match(db, event.match_id, event.run_id, replacement_event_id=event.id, replacement=revision_input,
                               replacement_active=latest.payload.get("active", True))
     payload = revision_payload(revision_input)
     payload.update(_payload_with_roster_sources(revision_input, roster_sources))
     payload["active"] = latest.payload.get("active", True)
     try:
-        revision = CanonicalEventRevision(event_id=event.id, revision=latest.revision + 1, actor_id=actor_id,
+        revision = CanonicalEventRevision(event_id=event.id, revision=latest.revision + 1, actor_id=actor.id,
                                           payload=payload, reason=revision_input.reason)
         db.add(revision)
         db.flush()
@@ -466,24 +478,25 @@ def revise_event(db: Session, event_id: int, revision_input: CanonicalEventRevis
     except Exception:
         db.rollback()
         raise
-    return next(item for item in read_events(db, event.match_id) if item["id"] == event_id)
+    return next(item for item in read_events(db, event.match_id, run_id=event.run_id) if item["id"] == event_id)
 
 
-def deactivate_event(db: Session, event_id: int, reason: str, actor_id: int) -> dict:
+def deactivate_event(db: Session, event_id: int, reason: str, actor: User) -> dict:
     event = db.get(CanonicalEvent, event_id)
     if event is None:
         raise CanonicalValidationError("canonical event not found")
-    _lock_match(db, event.match_id)
+    match = _lock_match(db, event.match_id)
+    require_writable_run(db, match, event.run_id, actor)
     db.refresh(event)
     latest = _latest_revision(event)
-    if latest.actor_id != actor_id:
+    if latest.actor_id != actor.id:
         raise PermissionError("only the recording analyst may deactivate this event")
-    _validate_projected_match(db, event.match_id, replacement_event_id=event.id,
+    _validate_projected_match(db, event.match_id, event.run_id, replacement_event_id=event.id,
                               replacement=CanonicalEventCommand(**latest.payload), replacement_active=False)
     payload = dict(latest.payload)
     payload["active"] = False
     try:
-        db.add(CanonicalEventRevision(event_id=event.id, revision=latest.revision + 1, actor_id=actor_id,
+        db.add(CanonicalEventRevision(event_id=event.id, revision=latest.revision + 1, actor_id=actor.id,
                                       payload=payload, reason=reason))
         db.commit()
     except IntegrityError as error:
@@ -492,40 +505,42 @@ def deactivate_event(db: Session, event_id: int, reason: str, actor_id: int) -> 
     except Exception:
         db.rollback()
         raise
-    return next(item for item in read_events(db, event.match_id) if item["id"] == event_id)
+    return next(item for item in read_events(db, event.match_id, run_id=event.run_id) if item["id"] == event_id)
 
 
-def deactivate_last_event(db: Session, match_id: int, reason: str, actor_id: int) -> dict:
+def deactivate_last_event(db: Session, match_id: int, reason: str, actor: User, run_id: int | None = None) -> dict:
     """Deactivate only the latest active canonical identity, never delete its history."""
-    _lock_match(db, match_id)
-    active = [item for item in read_events(db, match_id, include_inactive=False)]
+    match = _lock_match(db, match_id)
+    run = require_writable_run(db, match, run_id, actor)
+    active = [item for item in read_events(db, match_id, include_inactive=False, run_id=run.id)]
     if not active:
         raise CanonicalValidationError("there is no active canonical incident to delete")
     latest = max(active, key=lambda item: item["sequence"])
-    if latest["actor_id"] != actor_id:
+    if latest["actor_id"] != actor.id:
         raise CanonicalValidationError("the latest active canonical incident belongs to another analyst")
-    return deactivate_event(db, latest["id"], reason, actor_id)
+    return deactivate_event(db, latest["id"], reason, actor)
 
 
-def reset_analyst_review(db: Session, match_id: int, reason: str, actor_id: int) -> dict:
+def reset_analyst_review(db: Session, match_id: int, reason: str, actor: User, run_id: int | None = None) -> dict:
     """Reset one analyst's workspace and audit-deactivate only their active facts atomically."""
-    _lock_match(db, match_id)
-    owned = sorted((item for item in read_events(db, match_id, include_inactive=False) if item["actor_id"] == actor_id), key=lambda item: item["sequence"], reverse=True)
+    match = _lock_match(db, match_id)
+    run = require_writable_run(db, match, run_id, actor)
+    owned = sorted((item for item in read_events(db, match_id, include_inactive=False, run_id=run.id) if item["actor_id"] == actor.id), key=lambda item: item["sequence"], reverse=True)
     try:
         owned_ids = {item["id"] for item in owned}
         _validate_active_match_events([
             (item["sequence"], item["id"], CanonicalEventCommand(**item["payload"]))
-            for item in read_events(db, match_id, include_inactive=False) if item["id"] not in owned_ids
+            for item in read_events(db, match_id, include_inactive=False, run_id=run.id) if item["id"] not in owned_ids
         ])
         for item in owned:
             event = db.get(CanonicalEvent, item["id"])
             revision = _latest_revision(event)
             payload = dict(revision.payload)
             payload["active"] = False
-            db.add(CanonicalEventRevision(event_id=event.id, revision=revision.revision + 1, actor_id=actor_id,
+            db.add(CanonicalEventRevision(event_id=event.id, revision=revision.revision + 1, actor_id=actor.id,
                                           payload=payload, reason=reason))
 
-        session = db.query(AnalysisSession).filter_by(match_id=match_id, analyst_id=actor_id).one_or_none()
+        session = db.query(AnalysisSession).filter_by(run_id=run.id, analyst_id=actor.id).one_or_none()
         if session is not None:
             session.video_source_id = None
             session.video_position_seconds = None
@@ -546,18 +561,18 @@ def reset_analyst_review(db: Session, match_id: int, reason: str, actor_id: int)
     return {"deactivated_events": len(owned), "session_reset": session is not None}
 
 
-def read_state(db: Session, match_id: int) -> dict:
+def read_state(db: Session, match_id: int, run_id: int | None = None) -> dict:
     state = _project_match_state([
         (item["sequence"], item["id"], CanonicalEventCommand(**item["payload"]))
-        for item in read_events(db, match_id, include_inactive=False)
+        for item in read_events(db, match_id, include_inactive=False, run_id=run_id)
     ])
     return {"analytical_score": state.analytical_score, "possession": vars(state.possession) if state.possession else None,
             "active_goalkeepers": state.active_goalkeepers, "player_states": state.player_states,
             "discipline": state.discipline}
 
 
-def read_metrics(db: Session, match_id: int) -> dict:
-    events = read_events(db, match_id)
+def read_metrics(db: Session, match_id: int, run_id: int | None = None) -> dict:
+    events = read_events(db, match_id, run_id=run_id)
     eligible, excluded, unknown, clock_unverified = [], 0, 0, 0
     for event in events:
         payload = event["payload"]
@@ -633,9 +648,9 @@ def _sanction_bucket(outcome: str | None) -> str | None:
             "blue_card": "blue"}.get(outcome or "")
 
 
-def read_reconciliation(db: Session, match_id: int) -> dict:
+def read_reconciliation(db: Session, match_id: int, run_id: int | None = None) -> dict:
     snapshot = db.query(OfficialSnapshot).filter_by(match_id=match_id).order_by(OfficialSnapshot.created_at.desc()).first()
-    metrics = read_metrics(db, match_id)
+    metrics = read_metrics(db, match_id, run_id)
     score: dict[int, int] = {}
     evidence = []
     discipline_events = []
@@ -736,14 +751,14 @@ def _warning_metrics(canonical: dict | None, official: dict | None) -> dict:
             for metric in _WARNING_METRICS}
 
 
-def read_warnings_summary(db: Session, match_id: int) -> dict:
+def read_warnings_summary(db: Session, match_id: int, run_id: int | None = None) -> dict:
     """Compare eligible canonical player facts with the latest immutable official snapshot."""
     match = require_canonical_cutover(db, match_id)
     snapshot = db.query(OfficialSnapshot).filter_by(match_id=match_id).order_by(OfficialSnapshot.created_at.desc()).first()
     canonical_players: dict[int, dict] = {}
     canonical_total = _warning_bucket()
 
-    for event in read_metrics(db, match_id)["events"]:
+    for event in read_metrics(db, match_id, run_id)["events"]:
         metric = _warning_metric(event["payload"])
         if metric is None:
             continue
@@ -811,6 +826,7 @@ def read_player_projection(
     period: int | None = None,
     from_regulation_seconds: float | None = None,
     to_regulation_seconds: float | None = None,
+    run_id: int | None = None,
 ) -> dict:
     """Replay current canonical facts without inferring goalkeeper participation."""
     require_canonical_cutover(db, match_id)
@@ -849,7 +865,7 @@ def read_player_projection(
                 "clock_unverified": item["payload"].get("clock_unverified", False), "payload": item["payload"],
                 "evidence": item["evidence"]}
 
-    for item in read_events(db, match_id, include_inactive=False):
+    for item in read_events(db, match_id, include_inactive=False, run_id=run_id):
         payload = item["payload"]
         eligible = payload.get("fact_kind") == "observed" and payload.get("evidence_state") == "confirmed"
         if payload.get("kind") == "goalkeeper_change":
@@ -941,7 +957,7 @@ def read_player_projection(
                         "to_regulation_seconds": to_regulation_seconds},
             "participation": participation, "metrics": metrics, "discipline": discipline, "shot_map": shot_map,
             "evidence": evidence_events,
-            "unfiltered_context": {"canonical_metrics": read_metrics(db, match_id), "reconciliation": read_reconciliation(db, match_id)}}
+            "unfiltered_context": {"canonical_metrics": read_metrics(db, match_id, run_id), "reconciliation": read_reconciliation(db, match_id, run_id)}}
 
 
 def legacy_dry_run(db: Session, match_id: int) -> list[dict]:

@@ -96,6 +96,7 @@ class Match(Base):
     report_packages = relationship("ReportPackage", back_populates="match", cascade="all, delete-orphan")
     goalkeeper_shots = relationship("GoalkeeperShot", back_populates="match", cascade="all, delete-orphan")
     canonical_events = relationship("CanonicalEvent", back_populates="match", cascade="all, delete-orphan")
+    analysis_runs = relationship("AnalysisRun", back_populates="match", cascade="all, delete-orphan")
     scheduled_match = relationship("ScheduledMatch", back_populates="analysis_match")
     created_by = relationship("User", foreign_keys=[created_by_user_id])
 
@@ -264,11 +265,13 @@ class CanonicalEvent(Base):
 
     id = Column(Integer, primary_key=True)
     match_id = Column(Integer, ForeignKey("matches.id"), nullable=False, index=True)
+    run_id = Column(Integer, ForeignKey("analysis_runs.id"), nullable=True, index=True)
     sequence = Column(Integer, nullable=False)
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
-    __table_args__ = (UniqueConstraint("match_id", "sequence", name="uq_canonical_event_sequence"),)
+    __table_args__ = (UniqueConstraint("run_id", "sequence", name="uq_canonical_event_sequence"),)
 
     match = relationship("Match", back_populates="canonical_events")
+    run = relationship("AnalysisRun", back_populates="canonical_events")
     revisions = relationship("CanonicalEventRevision", back_populates="event", cascade="all, delete-orphan")
 
 
@@ -345,6 +348,7 @@ class AnalysisSession(Base):
 
     id = Column(Integer, primary_key=True)
     match_id = Column(Integer, ForeignKey("matches.id"), nullable=False)
+    run_id = Column(Integer, ForeignKey("analysis_runs.id"), nullable=True, index=True)
     analyst_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     video_source_id = Column(Integer, ForeignKey("video_sources.id"), nullable=True)
     mode = Column(String, nullable=False, default="live")
@@ -358,9 +362,27 @@ class AnalysisSession(Base):
     updated_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), onupdate=lambda: datetime.now(timezone.utc), nullable=False)
 
     match = relationship("Match", back_populates="analysis_sessions")
+    run = relationship("AnalysisRun", back_populates="analysis_sessions")
     video_source = relationship("VideoSource")
     anchors = relationship("TimeAnchor", back_populates="session", cascade="all, delete-orphan")
     time_segments = relationship("TimeSegment", back_populates="session", cascade="all, delete-orphan")
+
+
+class AnalysisRun(Base):
+    __tablename__ = "analysis_runs"
+
+    id = Column(Integer, primary_key=True)
+    match_id = Column(Integer, ForeignKey("matches.id"), nullable=False, index=True)
+    mode = Column(String, nullable=False)
+    status = Column(String, nullable=False, index=True)
+    created_by_user_id = Column(Integer, ForeignKey("users.id"), nullable=True)
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
+    promoted_at = Column(DateTime, nullable=True)
+    superseded_at = Column(DateTime, nullable=True)
+
+    match = relationship("Match", back_populates="analysis_runs")
+    canonical_events = relationship("CanonicalEvent", back_populates="run")
+    analysis_sessions = relationship("AnalysisSession", back_populates="run")
 
 
 class TimeAnchor(Base):

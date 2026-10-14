@@ -29,6 +29,7 @@ interface Props {
   currentVideoTime: number
   videoSourceId: number | null
   videoUrl: string | null
+  manualVideo?: boolean
 }
 
 const SHOT_ZONES: { value: ShotZone; label: string }[] = [
@@ -158,7 +159,9 @@ export default function IncidentWizard({
   currentVideoTime,
   videoSourceId,
   videoUrl,
+  manualVideo = false,
 }: Props) {
+  const [manualVideoSeconds, setManualVideoSeconds] = useState('')
   const [step, setStep] = useState<WizardStep>('category')
   const [formData, setFormData] = useState<Partial<CanonicalEventCommand>>({
     kind: undefined,
@@ -220,7 +223,9 @@ export default function IncidentWizard({
       alert('Seleccioná un equipo primero')
       return
     }
-    onSubmit(formData as CanonicalEventCommand)
+    const manualSeconds = Number(manualVideoSeconds)
+    if (manualVideo && (!Number.isFinite(manualSeconds) || manualSeconds < 0)) { alert('Ingresá el tiempo del video local en segundos.'); return }
+    onSubmit({ ...formData, evidence: manualVideo ? [{ kind: 'video', reference: 'local-manual', video_anchor_seconds: manualSeconds, uncertainty: ['manual_local_video'] }] : formData.evidence } as CanonicalEventCommand)
     onClose()
   }
 
@@ -477,6 +482,7 @@ export default function IncidentWizard({
         </header>
 
         <div className="p-4 space-y-4 overflow-y-auto max-h-[calc(90vh-120px)]">
+          {manualVideo && <label className="block text-sm font-medium text-gray-700">Tiempo de video local (segundos)<input aria-label="Tiempo de video local" type="number" min="0" step="0.1" value={manualVideoSeconds} onChange={event => setManualVideoSeconds(event.target.value)} className="mt-1 w-full rounded border p-2" placeholder="Ej. 123.4" /></label>}
           {/* Team selector (always visible) */}
           <div className="rounded-xl border p-3 bg-gray-50">
             <p className="text-sm font-medium text-gray-700 mb-2">Equipo</p>

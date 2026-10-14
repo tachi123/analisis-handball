@@ -3,12 +3,13 @@ sys.path.insert(0, '/app/app')
 sys.path.insert(0, '/app/scripts')
 from sqlalchemy.orm import joinedload as jl
 from app.database import SessionLocal
-from app.models import Match, MatchSquad, CanonicalEvent, CanonicalEventRevision, CanonicalEvidence, OfficialSnapshot, AnalysisSession, VideoSource, GoalkeeperShot, ScheduledMatch
+from app.models import Match, MatchSquad, CanonicalEvent, CanonicalEventRevision, CanonicalEvidence, OfficialSnapshot, AnalysisSession, AnalysisRun, VideoSource, GoalkeeperShot, ScheduledMatch
 from app.services.canonical_analysis_service import read_metrics, read_reconciliation, read_state
 from app.services.report_service import ReportService, PUBLIC_METRIC_NAMES, is_public_metric
 from unicodedata import normalize
 import json
 import re
+from pathlib import Path
 
 def slugify(name: str) -> str:
     nfkd = normalize('NFKD', name)
@@ -17,18 +18,57 @@ def slugify(name: str) -> str:
     parts = ''.join(char if char.isalnum() or char == ' ' else ' ' for char in lowered).split()
     return '-'.join(parts) or 'unknown'
 
+def public_report_key(report: dict) -> str:
+    match = report['match']
+    return '-'.join((match.get('date') or 'undated', slugify(match.get('home_team') or 'home'), slugify(match.get('away_team') or 'away')))
+
+def write_public_catalog(directory: Path) -> None:
+    entries = []
+    for path in directory.glob('report_*.json'):
+        try:
+            candidate = json.loads(path.read_text(encoding='utf-8'))
+            if candidate.get('schema_version') != 'public-report-v1':
+                continue
+            key = public_report_key(candidate)
+            if path.name != f'report_{key}.json':
+                continue
+            match = candidate.get('match', {})
+            home_team, away_team = match.get('home_team'), match.get('away_team')
+            if not isinstance(home_team, str) or not isinstance(away_team, str):
+                continue
+            entries.append({'key': key, 'date': match.get('date'), 'home_team': home_team, 'away_team': away_team})
+        except (OSError, ValueError, TypeError):
+            continue
+    entries.sort(key=lambda entry: (entry['date'] or '', entry['home_team'], entry['away_team'], entry['key']), reverse=True)
+    (directory / 'reports.json').write_text(json.dumps({'schema_version': 'public-report-catalog-v1', 'reports': entries}, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+def public_output_paths(output_path: Path, catalog_directory: Path | None = None) -> tuple[Path, Path]:
+    """Return the fallback report path and the directory containing all catalog artifacts."""
+    directory = catalog_directory or output_path.parent
+    return output_path, directory
+
 db = SessionLocal()
 
 import os
 
-match = db.get(Match, 99)
-print('Exporting Match ' + str(match.id))
+try:
+    match_id = int(os.getenv('PUBLIC_REPORT_MATCH_ID', '99'))
+except ValueError as error:
+    raise RuntimeError('PUBLIC_REPORT_MATCH_ID must be an integer') from error
 
-metrics_data = read_metrics(db, 99)
+match = db.get(Match, match_id)
+if match is None:
+    raise RuntimeError('Match ' + str(match_id) + ' was not found')
+print('Exporting Match ' + str(match.id))
+active_run = db.query(AnalysisRun).filter_by(match_id=match_id, status='active').one_or_none()
+if match.canonical_analysis_enabled and active_run is None:
+    raise RuntimeError('Match ' + str(match_id) + ' has canonical analysis enabled but no active analysis run')
+
+metrics_data = read_metrics(db, match_id)
 eligibility = metrics_data.get('eligibility', {})
 print('Eligible events: ' + str(eligibility.get('eligible', 0)))
 
-recon_data = read_reconciliation(db, 99)
+recon_data = read_reconciliation(db, match_id)
 
 events = metrics_data.get('events', [])
 eligible_events = [e for e in events if e.get('active') and e.get('payload', {}).get('fact_kind') == 'observed'
@@ -75,7 +115,7 @@ for event in eligible_events:
 
 # Build players from match squad
 players_data = []
-squad = db.query(MatchSquad).options(jl(MatchSquad.player)).filter_by(match_id=99).all()
+squad = db.query(MatchSquad).options(jl(MatchSquad.player)).filter_by(match_id=match_id).all()
 
 gk_designated_players = set()
 if match.canonical_analysis_enabled:
@@ -236,7 +276,15 @@ if match.canonical_analysis_enabled:
     source_status = 'canonical-eligible'
 
 # The report exposes only a validated public YouTube id, never the stored source URL.
-video_source = db.query(VideoSource).filter_by(match_id=99, provider='youtube').first()
+# Use the active run's session video source for deterministic output.
+video_source = None
+if active_run:
+    session = db.query(AnalysisSession).filter_by(match_id=match_id, run_id=active_run.id).first()
+    if session and session.video_source_id:
+        video_source = db.get(VideoSource, session.video_source_id)
+if video_source is None:
+    # Fallback to any YouTube source for this match (legacy data)
+    video_source = db.query(VideoSource).filter_by(match_id=match_id, provider='youtube').first()
 public_video = None
 if video_source and re.fullmatch(r'[A-Za-z0-9_-]{6,}', video_source.provider_video_id or ''):
     public_video = {
@@ -371,13 +419,13 @@ for ev in eligible_events:
 incidents.sort(key=lambda x: (x['period'] or 0, x['regulation_seconds'] or 0, x['reference']))
 
 package_dict = {
-    'match_id': 99,
+    'match_id': match_id,
     'report_version': 1,
     'schema_version': 'public-report-v1',
     'match': match,
     'home_team': home_team,
     'away_team': away_team,
-    'coaching_question': 'Analysis of Match ' + str(match.id),
+    'coaching_question': 'Match analysis',
     'pattern_statement': 'Match analysis covering ' + str(len(eligible_events)) + ' approved canonical events',
     'action_kind': 'keep',
     'action_text': 'Export approved facts for public report',
@@ -475,18 +523,31 @@ for p in report.get('players', []):
 if all_slugs_valid:
     print('  All player slugs are valid (pass /^[a-z0-9-]+$/ regex)')
 
-# Write the report
-output_path = os.getenv('PUBLIC_REPORT_OUTPUT', 'reports/public/report.json')
-with open(output_path, 'w', encoding='utf-8', newline='') as f:
-    json.dump(report, f, ensure_ascii=False, indent=2)
+# Write the fallback report and the complete catalog artifact set. When the
+# catalog directory differs, keep the explicit output path as a compatible copy.
+output_path, output_directory = public_output_paths(
+    Path(os.getenv('PUBLIC_REPORT_OUTPUT', 'reports/public/report.json')),
+    Path(os.environ['PUBLIC_REPORT_CATALOG_OUTPUT']) if os.getenv('PUBLIC_REPORT_CATALOG_OUTPUT') else None,
+)
+output_directory.mkdir(parents=True, exist_ok=True)
+serialized_report = json.dumps(report, ensure_ascii=False, indent=2)
+fallback_path = output_directory / 'report.json'
+fallback_path.write_text(serialized_report, encoding='utf-8')
+if output_path != fallback_path:
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(serialized_report, encoding='utf-8')
 
-# Also write the legacy-matched path for compatibility
-legacy_path = os.path.join(os.path.dirname(output_path), 'report_match99.json')
-import shutil
-shutil.copy(output_path, legacy_path)
+# Store each exported match under a deterministic public key; no database ID
+# appears in static filenames or the catalog.
+public_path = output_directory / ('report_' + public_report_key(report) + '.json')
+if public_path != fallback_path:
+    public_path.write_text(serialized_report, encoding='utf-8')
+write_public_catalog(output_directory)
 
-print('Report exported to ' + output_path)
-print('Legacy path also updated: ' + legacy_path)
+print('Report exported to ' + str(output_path))
+print('Public fallback report updated: ' + str(fallback_path))
+print('Public match report updated: ' + str(public_path))
+print('Public report catalog updated: ' + str(output_directory / 'reports.json'))
 
 # Print summary
 print()

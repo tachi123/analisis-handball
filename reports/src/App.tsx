@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState, useMemo } from 'react'
+import { useEffect, useRef, useState, useMemo, startTransition } from 'react'
+import { decodePublicReportCatalog, reportFileName, reportLabel, type PublicReportCatalog } from './catalog'
 import { decodePublicReport, type PlayerPublic, type PublicReport } from './projection'
 import { Timeline } from './Timeline'
 
@@ -165,6 +166,9 @@ function VideoPlayer({ videoId, videoSeconds }: VideoPlayerProps) {
 export default function App() {
   const [report, setReport] = useState<PublicReport | null>(null)
   const [message, setMessage] = useState('Cargando informe público…')
+  const [catalog, setCatalog] = useState<PublicReportCatalog | null>(null)
+  const [catalogLoaded, setCatalogLoaded] = useState(false)
+  const [selectedReportKey, setSelectedReportKey] = useState<string | null>(null)
   const [playerSlug, setPlayerSlug] = useState('all')
 const [kind, setKind] = useState('all')
 const [team, setTeam] = useState<'all' | 'home' | 'away'>('all')
@@ -173,11 +177,47 @@ const [selectedIncidentRef, setSelectedIncidentRef] = useState<{ reference: stri
   
 
   useEffect(() => {
-    fetch('report.json').then((response) => response.ok ? response.json() : Promise.reject()).then((data) => {
-      setReport(decodePublicReport(data))
-      setMessage('')
-    }).catch(() => setMessage('No se pudo abrir el informe. Actualizá la página o volvé a intentar.'))
+    let active = true
+    fetch('reports.json')
+      .then((response) => response.ok ? response.json() : Promise.reject())
+      .then((data) => {
+        const decoded = decodePublicReportCatalog(data)
+        if (!active) return
+        setCatalog(decoded)
+        setSelectedReportKey(decoded.reports[0]?.key ?? null)
+      })
+      .catch(() => { if (active) setCatalog(null) })
+      .finally(() => { if (active) setCatalogLoaded(true) })
+    return () => { active = false }
   }, [])
+
+  useEffect(() => {
+    if (!catalogLoaded || (catalog && catalog.reports.length > 0 && !selectedReportKey)) return
+    let active = true
+    const file = selectedReportKey ? reportFileName(selectedReportKey) : 'report.json'
+    setReport(null)
+    setMessage('Cargando informe público…')
+    fetch(file)
+      .then((response) => response.ok ? response.json() : Promise.reject())
+      .then((data) => {
+        if (!active) return
+        setReport(decodePublicReport(data))
+        setMessage('')
+      })
+      .catch(() => { if (active) setMessage('No se pudo abrir el informe. Actualizá la página o volvé a intentar.') })
+    return () => { active = false }
+  }, [catalog, catalogLoaded, selectedReportKey])
+
+  function selectReport(key: string) {
+    startTransition(() => {
+      setSelectedReportKey(key)
+      setPlayerSlug('all')
+      setKind('all')
+      setTeam('all')
+      setVideoSeconds(null)
+      setSelectedIncidentRef(null)
+    })
+  }
 
   const reportIncidents = report?.incidents ?? []
   const types = useMemo(() => [...new Set(reportIncidents.map((incident) => incident.incident_type))], [reportIncidents])
@@ -208,7 +248,7 @@ const [selectedIncidentRef, setSelectedIncidentRef] = useState<{ reference: stri
   }
 
   return <main className="report-shell" aria-labelledby="report-header">
-    <header className="hero"><p className="eyebrow">Informe de partido</p><div className="match-line"><h1 id="report-header">{report.match.home_team} <span>vs</span> {report.match.away_team}</h1><select aria-label="Seleccionar partido" defaultValue="current"><option value="current">{report.match.date ?? 'Partido actual'} · Partido 1</option></select></div><p>{report.coverage?.label ?? 'Cobertura del análisis no especificada'}</p>{report.coverage?.status === 'partial' && <strong className="coverage-badge">Análisis parcial · sólo períodos cargados</strong>}{report.video && <a className="video-link" href={`https://www.youtube.com/watch?v=${report.video.video_id}`} target="_blank" rel="noreferrer">▶ Abrir video del partido</a>}</header>
+    <header className="hero"><p className="eyebrow">Informe de partido</p><div className="match-line"><h1 id="report-header">{report.match.home_team} <span>vs</span> {report.match.away_team}</h1>{catalog && catalog.reports.length > 1 && <select aria-label="Seleccionar partido" value={selectedReportKey ?? ''} onChange={(event) => selectReport(event.target.value)}>{catalog.reports.map((entry) => <option key={entry.key} value={entry.key}>{reportLabel(entry)}</option>)}</select>}</div><p>{report.coverage?.label ?? 'Cobertura del análisis no especificada'}</p>{report.coverage?.status === 'partial' && <strong className="coverage-badge">Análisis parcial · sólo períodos cargados</strong>}{report.video && <a className="video-link" href={`https://www.youtube.com/watch?v=${report.video.video_id}`} target="_blank" rel="noreferrer">▶ Abrir video del partido</a>}</header>
     <TeamDashboard report={report} />
     <Timeline report={report} onSeek={handleMarkerClick} />
     <section className="dashboard-section">

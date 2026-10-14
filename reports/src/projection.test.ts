@@ -31,6 +31,21 @@ const publicReportWithPlayersNoEvidence = {
 
 describe('public report projection', () => {
   it('accepts only the public-report-v1 allowlist', () => expect(decodePublicReport(publicReport)).toMatchObject({ schema_version: 'public-report-v1', evidence: [{ reference: 'Sequence 1' }] }))
+  it('rejects private or unknown fields nested in public evidence', () => {
+    expect(() => decodePublicReport({ ...publicReport, evidence: [{ ...publicReport.evidence[0], analysis_event_id: 99 }] })).toThrow('restricted field')
+    expect(() => decodePublicReport({ ...publicReport, evidence: [{ ...publicReport.evidence[0], raw_url: 'https://private.example/video?token=secret' }] })).toThrow('restricted field')
+    expect(() => decodePublicReport({ ...publicReportWithPlayers, players: [{ ...publicReportWithPlayers.players[0], evidence: [{ reference: 'Sequence 1', period: 1, private_note: 'internal note' }] }] })).toThrow('restricted field')
+  })
+  it('rejects private or unknown fields nested in reconciliation and incidents', () => {
+    expect(() => decodePublicReport({ ...publicReport, reconciliation: [{ side: 'home', official: 20, analytical: 19, database_id: 7 }] })).toThrow('restricted field')
+    expect(() => decodePublicReport({ ...publicReport, incidents: [{ reference: 'Sequence 1', period: 1, regulation_seconds: 10, clock_unverified: false, clock_label: '0:10', incident_type: 'Lanzamiento', outcome: 'Gol', team_side: 'home', player_name: 'Player', player_slug: 'player', event_kind: 'shot', video_seconds: 10, raw_payload: { token: 'secret' } }] })).toThrow('restricted field')
+  })
+  it('keeps known evidence, reconciliation, and incident fields', () => {
+    const result = decodePublicReport({ ...publicReport, reconciliation: [{ side: 'home', official: 20, analytical: 19, discrepancy: -1 }], incidents: [{ reference: 'Sequence 1', period: 1, regulation_seconds: 10, clock_unverified: false, clock_label: '0:10', incident_type: 'Lanzamiento', outcome: 'Gol', team_side: 'home', player_name: 'Player', player_slug: 'player', event_kind: 'shot', video_seconds: 10 }] })
+    expect(result.evidence[0]).toMatchObject(publicReport.evidence[0])
+    expect(result.reconciliation[0]).toEqual({ side: 'home', official: 20, analytical: 19, discrepancy: -1 })
+    expect(result.incidents[0]).toMatchObject({ event_kind: 'shot', video_seconds: 10 })
+  })
   it('accepts absent players (legacy reports backward-compatible)', () => {
     // Legacy reports without players should work fine
     const result = decodePublicReport(publicReport)
@@ -143,9 +158,9 @@ describe('public report projection', () => {
     expect(normalized).toBe('ramirez-lorca-jaime-nahuel')
   })
   it('decoder integration test against real-format Match 99 public report', () => {
-    // Integration test: decodePublicReport against the actual generated Match 99 report
+    // Integration test: decodePublicReport against the actual generated public report.
     const fs = require('fs')
-    const reportData = JSON.parse(fs.readFileSync('./public/report_match99.json', 'utf8'))
+    const reportData = JSON.parse(fs.readFileSync('./public/report_2026-10-04-s-a-p-a-palermo-handball.json', 'utf8'))
     const result = decodePublicReport(reportData)
     expect(result.players).toBeDefined()
     expect(result.players!.length).toBe(27)
@@ -157,8 +172,7 @@ describe('public report projection', () => {
     // Verify first player (goalkeeper) has valid slug
     expect(result.players![0].slug).toBe('ramirez-lorca-jaime-nahuel')
     expect(result.players![0].name).toBe('Ramirez Lorca, Jaime Nahuel')
-    // Verify a field player has valid slug
-    expect(result.players![1].slug).toBe('ruano-matheo')
-    expect(result.players![1].name).toBe('Ruano, Matheo')
+    // Verify a field player is present without relying on squad ordering.
+    expect(result.players!.find((player) => player.slug === 'ruano-matheo')?.name).toBe('Ruano, Matheo')
   })
 })

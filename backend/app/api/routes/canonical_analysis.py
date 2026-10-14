@@ -6,6 +6,7 @@ from ...deps import get_current_user, require_role
 from ...models import Match, OfficialSnapshot, User
 from ...schemas import CanonicalCutoverUpdate, CanonicalEventCommand, CanonicalEventRevisionInput, CanonicalRecoveryRequest
 from ...services import canonical_analysis_service as service
+from ...services import analysis_run_service
 from ...services.match_service import MatchService
 
 router = APIRouter(tags=["canonical-analysis"])
@@ -24,9 +25,9 @@ def _require_cutover(db: Session, match_id: int) -> None:
 
 
 @router.post("/matches/{match_id}/canonical-events", status_code=201)
-def create(match_id: int, data: CanonicalEventCommand, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+def create(match_id: int, data: CanonicalEventCommand, run_id: int | None = None, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     try:
-        return service.create_event(db, match_id, data, user.id)
+        return service.create_event(db, match_id, data, user, run_id)
     except (ValueError, PermissionError) as error:
         _error(error)
 
@@ -34,7 +35,7 @@ def create(match_id: int, data: CanonicalEventCommand, db: Session = Depends(get
 @router.patch("/canonical-events/{event_id}")
 def revise(event_id: int, data: CanonicalEventRevisionInput, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     try:
-        return service.revise_event(db, event_id, data, user.id)
+        return service.revise_event(db, event_id, data, user)
     except (ValueError, PermissionError) as error:
         _error(error)
 
@@ -42,65 +43,65 @@ def revise(event_id: int, data: CanonicalEventRevisionInput, db: Session = Depen
 @router.delete("/canonical-events/{event_id}")
 def deactivate(event_id: int, reason: str, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     try:
-        return service.deactivate_event(db, event_id, reason, user.id)
+        return service.deactivate_event(db, event_id, reason, user)
     except (ValueError, PermissionError) as error:
         _error(error)
 
 
 @router.delete("/matches/{match_id}/canonical-events/last")
-def deactivate_last(match_id: int, data: CanonicalRecoveryRequest, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+def deactivate_last(match_id: int, data: CanonicalRecoveryRequest, run_id: int | None = None, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     try:
-        return service.deactivate_last_event(db, match_id, data.reason, user.id)
+        return service.deactivate_last_event(db, match_id, data.reason, user, run_id)
     except (ValueError, PermissionError) as error:
         _error(error)
 
 
 @router.post("/matches/{match_id}/canonical-analysis/reset")
-def reset_review(match_id: int, data: CanonicalRecoveryRequest, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+def reset_review(match_id: int, data: CanonicalRecoveryRequest, run_id: int | None = None, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     try:
-        return service.reset_analyst_review(db, match_id, data.reason, user.id)
+        return service.reset_analyst_review(db, match_id, data.reason, user, run_id)
     except (ValueError, PermissionError) as error:
         _error(error)
 
 
 @router.get("/matches/{match_id}/canonical-events")
-def events(match_id: int, db: Session = Depends(get_db), _user: User = Depends(get_current_user)):
-    _require_cutover(db, match_id)
-    return service.read_events(db, match_id)
+def events(match_id: int, run_id: int | None = None, db: Session = Depends(get_db), _user: User = Depends(get_current_user)):
+    if run_id is None: _require_cutover(db, match_id)
+    return service.read_events(db, match_id, run_id=run_id)
 
 
 @router.get("/matches/{match_id}/canonical-state")
-def state(match_id: int, db: Session = Depends(get_db), _user: User = Depends(get_current_user)):
-    _require_cutover(db, match_id)
-    return service.read_state(db, match_id)
+def state(match_id: int, run_id: int | None = None, db: Session = Depends(get_db), _user: User = Depends(get_current_user)):
+    if run_id is None: _require_cutover(db, match_id)
+    return service.read_state(db, match_id, run_id)
 
 
 @router.get("/matches/{match_id}/canonical-metrics")
-def metrics(match_id: int, db: Session = Depends(get_db), _user: User = Depends(get_current_user)):
-    _require_cutover(db, match_id)
-    return service.read_metrics(db, match_id)
+def metrics(match_id: int, run_id: int | None = None, db: Session = Depends(get_db), _user: User = Depends(get_current_user)):
+    if run_id is None: _require_cutover(db, match_id)
+    return service.read_metrics(db, match_id, run_id)
 
 
 @router.get("/matches/{match_id}/canonical-reconciliation")
-def reconciliation(match_id: int, db: Session = Depends(get_db), _user: User = Depends(get_current_user)):
-    _require_cutover(db, match_id)
-    return service.read_reconciliation(db, match_id)
+def reconciliation(match_id: int, run_id: int | None = None, db: Session = Depends(get_db), _user: User = Depends(get_current_user)):
+    if run_id is None: _require_cutover(db, match_id)
+    return service.read_reconciliation(db, match_id, run_id)
 
 
 @router.get("/matches/{match_id}/warnings-summary")
-def warnings_summary(match_id: int, db: Session = Depends(get_db), _user: User = Depends(get_current_user)):
-    _require_cutover(db, match_id)
-    return service.read_warnings_summary(db, match_id)
+def warnings_summary(match_id: int, run_id: int | None = None, db: Session = Depends(get_db), _user: User = Depends(get_current_user)):
+    if run_id is None: _require_cutover(db, match_id)
+    return service.read_warnings_summary(db, match_id, run_id)
 
 
 @router.get("/matches/{match_id}/canonical-player-projection")
 def player_projection(match_id: int, player_id: int, team_id: int | None = None, period: int | None = None,
                       from_regulation_seconds: float | None = None, to_regulation_seconds: float | None = None,
-                      db: Session = Depends(get_db), _user: User = Depends(get_current_user)):
+                       run_id: int | None = None, db: Session = Depends(get_db), _user: User = Depends(get_current_user)):
     try:
         return service.read_player_projection(db, match_id, player_id, team_id=team_id, period=period,
                                               from_regulation_seconds=from_regulation_seconds,
-                                              to_regulation_seconds=to_regulation_seconds)
+                                               to_regulation_seconds=to_regulation_seconds, run_id=run_id)
     except (ValueError, PermissionError) as error:
         _error(error)
 
@@ -126,4 +127,8 @@ def set_cutover(match_id: int, data: CanonicalCutoverUpdate, db: Session = Depen
         raise HTTPException(status_code=403, detail="No tenés permiso para esta acción")
     match.canonical_analysis_enabled = data.enabled
     db.commit()
-    return {"match_id": match_id, "canonical_analysis_enabled": match.canonical_analysis_enabled, "reason": data.reason}
+    run = None
+    if data.enabled and not analysis_run_service.list_runs(db, match_id):
+        run = analysis_run_service.create_draft(db, match_id, "video", user)
+    return {"match_id": match_id, "canonical_analysis_enabled": match.canonical_analysis_enabled, "reason": data.reason,
+            "draft_run_id": run.id if run else None}

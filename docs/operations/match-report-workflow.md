@@ -6,7 +6,7 @@ Use this runbook to turn a reviewed match into a safe public static report.
 
 1. Finish both periods in private review.
 2. Confirm coverage and canonical events.
-3. Export `reports/public/report.json`.
+3. Export the complete public report catalog.
 4. Run report tests and build.
 5. Review the static report locally before any push.
 
@@ -31,12 +31,14 @@ Do not claim a match is complete merely because the final score is present.
 
 ## Export the public report
 
-The exporter reads canonical eligible events and writes a privacy-safe, static projection.
+The exporter reads canonical eligible events and writes a privacy-safe static projection, the fallback `report.json`, a deterministic per-match file, and `reports.json`. Copy all of those artifacts from one temporary directory.
 
 ```powershell
-docker exec -e PUBLIC_REPORT_OUTPUT=/tmp/report.json "analisis-handball-backend-1" python /app/scripts/export_report.py
-docker cp "analisis-handball-backend-1:/tmp/report.json" "reports/public/report.json"
+docker exec -e PUBLIC_REPORT_OUTPUT=/tmp/report.json -e PUBLIC_REPORT_CATALOG_OUTPUT=/tmp/public-report "analisis-handball-backend-1" python /app/scripts/export_report.py
+docker cp "analisis-handball-backend-1:/tmp/public-report/." "reports/public"
 ```
+
+`PUBLIC_REPORT_OUTPUT` writes a compatible single fallback copy. `PUBLIC_REPORT_CATALOG_OUTPUT` is the directory to copy: it contains `report.json`, `reports.json`, and each `report_<public-key>.json`. Do not copy only `/tmp/report.json`, because the catalog and match files are required for multi-match navigation.
 
 The container name can differ locally. Check `docker ps` if necessary.
 
@@ -47,7 +49,7 @@ npm --prefix reports test
 npm --prefix reports run build
 ```
 
-Expected result: the tests pass and `reports/dist/` contains `index.html`, assets, and `report.json`.
+Expected result: the tests pass and `reports/dist/` contains `index.html`, assets, `report.json`, `reports.json`, and the referenced per-match reports.
 
 For canonical rule changes, also run:
 

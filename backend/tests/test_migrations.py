@@ -255,6 +255,29 @@ def test_match_audit_timestamp_migration_backfills_only_missing_values(alembic_c
         engine.dispose()
 
 
+def test_analysis_runs_migration_preserves_legacy_canonical_ids_and_activates_match_99(alembic_config):
+    config, database_url = alembic_config
+    command.upgrade(config, "20261004_0022")
+    engine = create_engine(database_url)
+    try:
+        with engine.begin() as connection:
+            connection.execute(text("INSERT INTO users (id, email, hashed_password, full_name, role) VALUES (1, 'analyst@example.com', 'x', 'Analyst', 'analyst')"))
+            connection.execute(text("INSERT INTO matches (id, canonical_analysis_enabled) VALUES (99, 1)"))
+            connection.execute(text("INSERT INTO canonical_events (id, match_id, sequence, created_at) VALUES (77, 99, 3, '2026-10-01 10:00:00')"))
+            connection.execute(text("INSERT INTO canonical_event_revisions (id, event_id, revision, actor_id, payload, reason, created_at) VALUES (88, 77, 2, 1, '{\"kind\":\"shot\",\"outcome\":\"goal\"}', 'corrected', '2026-10-01 10:01:00')"))
+            connection.execute(text("INSERT INTO canonical_evidence (id, revision_id, kind, reference, uncertainty, created_at) VALUES (99, 88, 'video', 'https://youtu.be/abcdefghijk', '[]', '2026-10-01 10:01:00')"))
+            connection.execute(text("INSERT INTO analysis_sessions (id, match_id, analyst_id, mode, profile, filters, draft, queue, updated_at) VALUES (66, 99, 1, 'video', 'complete', '{}', '{}', '[]', '2026-10-01 10:01:00')"))
+        command.upgrade(config, "head")
+        with engine.connect() as connection:
+            run_id = connection.execute(text("SELECT id FROM analysis_runs WHERE match_id = 99 AND status = 'active'")).scalar_one()
+            assert connection.execute(text("SELECT id, run_id FROM canonical_events WHERE id = 77")).one() == (77, run_id)
+            assert connection.execute(text("SELECT id, event_id, payload FROM canonical_event_revisions WHERE id = 88")).one() == (88, 77, '{"kind":"shot","outcome":"goal"}')
+            assert connection.execute(text("SELECT id, revision_id FROM canonical_evidence WHERE id = 99")).one() == (99, 88)
+            assert connection.execute(text("SELECT id, run_id FROM analysis_sessions WHERE id = 66")).one() == (66, run_id)
+    finally:
+        engine.dispose()
+
+
 def test_match_fixture_link_migration_is_unique_and_reversible(alembic_config):
     config, database_url = alembic_config
     command.upgrade(config, "20260824_0013")

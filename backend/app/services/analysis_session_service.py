@@ -4,8 +4,9 @@ from urllib.parse import parse_qs, urlparse
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session, joinedload
 
-from ..models import AnalysisSession, TimeAnchor, TimeSegment, User, VideoSource
+from ..models import AnalysisSession, Match, TimeAnchor, TimeSegment, User, VideoSource
 from ..schemas import AnalysisSessionUpdate
+from .analysis_run_service import require_writable_run, resolve_run
 
 
 class AnalysisSessionService:
@@ -26,12 +27,13 @@ class AnalysisSessionService:
         return "youtube", video_id
 
     @staticmethod
-    def _get(db: Session, match_id: int, analyst_id: int):
-        return db.query(AnalysisSession).options(joinedload(AnalysisSession.video_source), joinedload(AnalysisSession.anchors), joinedload(AnalysisSession.time_segments)).filter_by(match_id=match_id, analyst_id=analyst_id).one_or_none()
+    def _get(db: Session, match_id: int, analyst_id: int, run_id: int | None = None):
+        run = resolve_run(db, match_id, run_id)
+        return db.query(AnalysisSession).options(joinedload(AnalysisSession.video_source), joinedload(AnalysisSession.anchors), joinedload(AnalysisSession.time_segments)).filter_by(run_id=run.id, analyst_id=analyst_id).one_or_none()
 
     @classmethod
-    def get(cls, db: Session, match_id: int, analyst: User):
-        return cls._get(db, match_id, analyst.id)
+    def get(cls, db: Session, match_id: int, analyst: User, run_id: int | None = None):
+        return cls._get(db, match_id, analyst.id, run_id)
 
     @staticmethod
     def _find_or_create_source(db: Session, match_id: int, provider: str, video_id: str, url: str, availability_state: str) -> VideoSource:
@@ -59,11 +61,15 @@ class AnalysisSessionService:
         return source
 
     @classmethod
-    def save(cls, db: Session, match_id: int, data: AnalysisSessionUpdate, analyst: User):
+    def save(cls, db: Session, match_id: int, data: AnalysisSessionUpdate, analyst: User, run_id: int | None = None):
         source_identity = cls._source_identity(data.source.url) if data.source else None
-        session = cls._get(db, match_id, analyst.id)
+        match = db.get(Match, match_id)
+        if match is None:
+            raise ValueError("match not found")
+        run = require_writable_run(db, match, run_id, analyst)
+        session = cls._get(db, match_id, analyst.id, run.id)
         if session is None:
-            session = AnalysisSession(match_id=match_id, analyst_id=analyst.id)
+            session = AnalysisSession(match_id=match_id, run_id=run.id, analyst_id=analyst.id)
             db.add(session)
         values = data.model_dump(exclude={"source", "anchors", "time_segments"})
         for field, value in values.items():
@@ -89,4 +95,4 @@ class AnalysisSessionService:
         if not source_changed and data.time_segments is not None:
             session.time_segments[:] = [TimeSegment(analyst_id=analyst.id, **segment.model_dump()) for segment in data.time_segments]
         db.commit()
-        return cls._get(db, match_id, analyst.id)
+        return cls._get(db, match_id, analyst.id, run.id)

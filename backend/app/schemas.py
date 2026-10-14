@@ -255,6 +255,28 @@ class CanonicalRecoveryRequest(BaseModel):
     reason: str = Field(min_length=3)
 
 
+AnalysisRunMode = Literal["video", "manual", "live", "legacy"]
+AnalysisRunStatus = Literal["draft", "active", "superseded"]
+
+
+class AnalysisRunCreate(BaseModel):
+    mode: Literal["video", "manual", "live"]
+
+
+class AnalysisRun(BaseModel):
+    id: int
+    match_id: int
+    mode: AnalysisRunMode
+    status: AnalysisRunStatus
+    created_by_user_id: Optional[int] = None
+    created_at: datetime
+    promoted_at: Optional[datetime] = None
+    superseded_at: Optional[datetime] = None
+
+    class Config:
+        from_attributes = True
+
+
 # ─── Analytical events ─────────────────────────────────────────────────────────
 
 EvidenceState = Literal["confirmed", "no_visible", "ambiguous", "replay"]
@@ -466,7 +488,7 @@ class TimeSegment(TimeSegmentInput):
 
 
 class AnalysisSessionUpdate(BaseModel):
-    mode: Literal["live", "video"] = "live"
+    mode: Literal["live", "video", "manual"] = "live"
     profile: AnalysisProfile = "complete"
     source: Optional[VideoSourceInput] = None
     video_position_seconds: Optional[float] = Field(default=None, ge=0)
@@ -482,6 +504,7 @@ class AnalysisSessionUpdate(BaseModel):
 class AnalysisSession(AnalysisSessionUpdate):
     id: int
     match_id: int
+    run_id: int
     analyst_id: int
     source: Optional[VideoSource] = Field(default=None, validation_alias="video_source")
     anchors: List[TimeAnchor] = []

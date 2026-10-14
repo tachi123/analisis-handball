@@ -30,7 +30,7 @@ describe('MatchReportsTimeline', () => {
 
   it('loads canonical reads, seeks only a usable anchor, and keeps the server context unfiltered', async () => {
     renderPage()
-    const anchoredButton = await screen.findByRole('button', { name: /#1/ })
+    const anchoredButton = await screen.findByRole('button', { name: /#1 · Lanzamiento/ })
     fireEvent.click(anchoredButton)
     expect(seekTo).toHaveBeenCalledWith(10)
     fireEvent.change(screen.getByLabelText('Filtrar por estado de evidencia'), { target: { value: 'ambiguous' } })
@@ -41,7 +41,7 @@ describe('MatchReportsTimeline', () => {
 
   it('selects an unanchored event without moving playback and explains why', async () => {
     renderPage()
-    fireEvent.click(await screen.findByRole('button', { name: /#2/ }))
+    fireEvent.click(await screen.findByRole('button', { name: /#2 · Pérdida/ }))
     expect(seekTo).not.toHaveBeenCalled()
     expect(screen.getByRole('status').textContent).toContain('no tiene un ancla utilizable')
   })
@@ -49,7 +49,7 @@ describe('MatchReportsTimeline', () => {
   it('keeps details usable when the player is unavailable and explains the no-seek result', async () => {
     playerState.availability = 'unavailable'
     renderPage()
-    fireEvent.click(await screen.findByRole('button', { name: /#1/ }))
+    fireEvent.click(await screen.findByRole('button', { name: /#1 · Lanzamiento/ }))
     expect(seekTo).not.toHaveBeenCalled()
     expect(screen.getByRole('status').textContent).toContain('el reproductor no está disponible')
   })

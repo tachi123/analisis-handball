@@ -50,7 +50,7 @@ describe('analytical event API', () => {
 
     saveAnalysisSession(42, replacement)
 
-    expect(put).toHaveBeenCalledWith('/matches/42/analysis-session', replacement)
+    expect(put).toHaveBeenCalledWith('/matches/42/analysis-session', replacement, { params: {} })
   })
 
   it('posts the observation to the match-scoped analytical contract', () => {
@@ -74,12 +74,12 @@ describe('analytical event API', () => {
     getCanonicalReconciliation(42)
     getWarningsSummary(42)
 
-    expect(post).toHaveBeenCalledWith('/matches/42/canonical-events', command)
-    expect(get).toHaveBeenNthCalledWith(1, '/matches/42/canonical-events')
-    expect(get).toHaveBeenNthCalledWith(2, '/matches/42/canonical-state')
-    expect(get).toHaveBeenNthCalledWith(3, '/matches/42/canonical-metrics')
-    expect(get).toHaveBeenNthCalledWith(4, '/matches/42/canonical-reconciliation')
-    expect(get).toHaveBeenNthCalledWith(5, '/matches/42/warnings-summary')
+    expect(post).toHaveBeenCalledWith('/matches/42/canonical-events', command, { params: {} })
+    expect(get).toHaveBeenNthCalledWith(1, '/matches/42/canonical-events', { params: {} })
+    expect(get).toHaveBeenNthCalledWith(2, '/matches/42/canonical-state', { params: {} })
+    expect(get).toHaveBeenNthCalledWith(3, '/matches/42/canonical-metrics', { params: {} })
+    expect(get).toHaveBeenNthCalledWith(4, '/matches/42/canonical-reconciliation', { params: {} })
+    expect(get).toHaveBeenNthCalledWith(5, '/matches/42/warnings-summary', { params: {} })
   })
 
   it('enables the canonical cutover through the explicit preparation transition', () => {

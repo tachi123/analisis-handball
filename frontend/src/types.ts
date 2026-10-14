@@ -317,8 +317,9 @@ export interface TimeSegment {
 export interface AnalysisSession {
   id: number
   match_id: number
+  run_id: number
   analyst_id: number
-  mode: 'live' | 'video'
+  mode: 'live' | 'video' | 'manual'
   profile: AnalysisProfile
   source: VideoSource | null
   video_position_seconds: number | null
@@ -331,8 +332,19 @@ export interface AnalysisSession {
   time_segments: TimeSegment[]
 }
 
+export interface AnalysisRun {
+  id: number
+  match_id: number
+  mode: 'video' | 'manual' | 'live' | 'legacy'
+  status: 'draft' | 'active' | 'superseded'
+  created_by_user_id: number | null
+  created_at: string
+  promoted_at: string | null
+  superseded_at: string | null
+}
+
 export interface AnalysisSessionUpdate {
-  mode: 'live' | 'video'
+  mode: 'live' | 'video' | 'manual'
   profile: AnalysisProfile
   source?: { url: string; availability_state: VideoAvailabilityState } | null
   video_position_seconds: number | null

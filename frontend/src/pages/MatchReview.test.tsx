@@ -19,7 +19,7 @@ import MatchReview from './MatchReview'
 const event: CanonicalEvent = { id: 7, sequence: 1, active: true, payload: { kind: 'other', period: 1, regulation_seconds: 0, clock_unverified: false, team_id: 10, player_id: null, related_player_id: null, outcome: 'kickoff', fact_kind: 'observed', evidence_state: 'confirmed', uncertainty: [], note: null }, evidence: [{ id: 1, kind: 'video', reference: 'https://youtu.be/abcdefghijk', video_source_id: 4, video_anchor_seconds: 50, uncertainty: [] }] }
 const pendingKickoff: CanonicalEvent = { ...event, payload: { ...event.payload, regulation_seconds: null, clock_unverified: true }, evidence: [{ ...event.evidence![0], video_anchor_seconds: 17 }] }
 const session = (profile: 'complete' | 'classic' | 'goalkeepers' = 'complete', clockStart: number | null = 0) => ({ id: 2, match_id: 1, analyst_id: 1, mode: 'video' as const, profile, source: { id: 4, original_url: 'https://youtu.be/abcdefghijk', provider: 'youtube', provider_video_id: 'abcdefghijk', availability_state: 'ready' as const }, video_position_seconds: 50, clock_start_video_seconds: clockStart, angle: null, filters: {}, draft: {}, queue: [], anchors: [], time_segments: [] })
-const renderWorkspace = () => render(<QueryClientProvider client={new QueryClient({ defaultOptions: { queries: { retry: false } } })}><MemoryRouter initialEntries={['/match/1/review']}><Routes><Route path="/match/:matchId/review" element={<MatchReview />} /></Routes></MemoryRouter></QueryClientProvider>)
+const renderWorkspace = (entry = '/match/1/review') => render(<QueryClientProvider client={new QueryClient({ defaultOptions: { queries: { retry: false } } })}><MemoryRouter initialEntries={[entry]}><Routes><Route path="/match/:matchId/review" element={<MatchReview />} /></Routes></MemoryRouter></QueryClientProvider>)
 
 describe('MatchReview', () => {
   beforeEach(() => { vi.clearAllMocks(); playerState.currentTime = 50; playerState.freshTime = 50; playerState.availability = 'ready'; getMatch.mockResolvedValue({ id: 1, canonical_analysis_enabled: true, home_team: { id: 10, name: 'Local' }, away_team: { id: 11, name: 'Visitante' } }); getOfficialSheet.mockResolvedValue({ home: { name: 'Local', score: 20, players: [] }, away: { name: 'Visitante', score: 19, players: [] }, provenance: { filename: 'official.pdf' } }); getCanonicalEvents.mockResolvedValue([event]); getAnalysisSession.mockResolvedValue(session()); createCanonicalEvent.mockResolvedValue(event); reviseCanonicalEvent.mockResolvedValue(event); saveAnalysisSession.mockResolvedValue(session()); enableCanonicalAnalysis.mockResolvedValue({ canonical_analysis_enabled: true }); deactivateLastCanonicalEvent.mockResolvedValue(event) })
@@ -70,6 +70,16 @@ describe('MatchReview', () => {
     expect(await screen.findByRole('button', { name: /nuevo incidente/i })).toBeTruthy()
   })
 
+  it('persists session checkpoints in the selected draft run', async () => {
+    getAnalysisSession.mockResolvedValue(session('complete', 17))
+    renderWorkspace('/match/1/review?run=21')
+    fireEvent.click(await screen.findByRole('button', { name: 'Ajustar posición de video' }))
+    fireEvent.change(screen.getByLabelText(/posición de video \(mm:ss o segundos\)/i), { target: { value: '83' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Guardar posición de video' }))
+
+    await waitFor(() => expect(saveAnalysisSession).toHaveBeenCalledWith(1, expect.objectContaining({ video_position_seconds: 83 }), 21))
+  })
+
   it('seeks and pauses at an event evidence timestamp from the visible video action', async () => {
     renderWorkspace()
     fireEvent.click(await screen.findByRole('button', { name: 'Ver en video' }))
@@ -83,6 +93,16 @@ describe('MatchReview', () => {
     fireEvent.click(await screen.findByRole('button', { name: 'Iniciar análisis' }))
     await waitFor(() => expect(enableCanonicalAnalysis).toHaveBeenCalledWith(1))
     expect(getCanonicalEvents).not.toHaveBeenCalled()
+  })
+
+  it('loads a draft review even before canonical analysis is promoted', async () => {
+    getMatch.mockResolvedValue({ id: 1, canonical_analysis_enabled: false, home_team: { id: 10, name: 'Local' }, away_team: { id: 11, name: 'Visitante' } })
+    renderWorkspace('/match/1/review?run=21')
+
+    expect(await screen.findByText('Borrador #21')).toBeTruthy()
+    expect(getAnalysisSession).toHaveBeenCalledWith(1, 21)
+    expect(getCanonicalEvents).toHaveBeenCalledWith(1, 21)
+    expect(screen.queryByRole('button', { name: 'Iniciar análisis' })).toBeNull()
   })
 
   it('keeps a disabled match read-only when its official sheet is unavailable', async () => {
@@ -172,6 +192,16 @@ describe('MatchReview', () => {
     await waitFor(() => expect(reviseCanonicalEvent).toHaveBeenCalledWith(7, expect.objectContaining({ regulation_seconds: 0, clock_unverified: false, reason: expect.stringMatching(/calibración/i) })))
     await waitFor(() => expect(getAnalysisSession).toHaveBeenCalledTimes(2))
     await screen.findByRole('button', { name: /nuevo incidente/i })
+  })
+
+  it('persists kickoff calibration in the selected draft run', async () => {
+    getAnalysisSession.mockResolvedValue(session('complete', null))
+    getCanonicalEvents.mockResolvedValue([pendingKickoff])
+    renderWorkspace('/match/1/review?run=21')
+
+    fireEvent.click(await screen.findByRole('button', { name: /declarar este saque inicial como 00:00/i }))
+
+    await waitFor(() => expect(saveAnalysisSession).toHaveBeenCalledWith(1, expect.objectContaining({ clock_start_video_seconds: 17 }), 21))
   })
 
   it('does not offer a pending kickoff from another video source for calibration', async () => {

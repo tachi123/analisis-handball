@@ -31,12 +31,14 @@ Do not make the public report depend on the private frontend, backend runtime, D
 ## Public-report workflow
 
 1. Confirm canonical coverage is complete.
-2. Export Match 99 from the backend container:
+2. Export Match 99 into one temporary artifact directory, then copy the complete directory:
 
    ```powershell
-   docker exec -e PUBLIC_REPORT_OUTPUT=/tmp/report.json "analisis-handball-backend-1" python /app/scripts/export_report.py
-   docker cp "analisis-handball-backend-1:/tmp/report.json" "reports/public/report.json"
+   docker exec -e PUBLIC_REPORT_OUTPUT=/tmp/report.json -e PUBLIC_REPORT_CATALOG_OUTPUT=/tmp/public-report "analisis-handball-backend-1" python /app/scripts/export_report.py
+   docker cp "analisis-handball-backend-1:/tmp/public-report/." "reports/public"
    ```
+
+   `PUBLIC_REPORT_OUTPUT` remains a compatible single fallback copy. `PUBLIC_REPORT_CATALOG_OUTPUT` contains the fallback `report.json`, the per-match `report_<public-key>.json` files, and `reports.json`; copy that directory, not only the fallback file.
 
 3. Validate the static application:
 
@@ -45,7 +47,7 @@ Do not make the public report depend on the private frontend, backend runtime, D
    npm --prefix reports run build
    ```
 
-4. Inspect `reports/public/report.json` before publishing. It is the exact static data that Vite copies to `reports/dist/report.json`.
+4. Inspect `reports/public/reports.json` and every referenced report before publishing. Vite copies the complete directory to `reports/dist/`.
 
 See `docs/operations/match-report-workflow.md` for details and recovery checks.
 

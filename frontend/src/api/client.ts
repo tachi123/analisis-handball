@@ -1,7 +1,7 @@
 import axios from 'axios'
 import type {
   Tournament, Team, Player, Match, MatchSquad, Event, Clip, PDFImportConfirmation, PDFImportResult, PDFPreview, MatchPDFConfirmation, MatchPDFConfirmResult, MatchPDFPreviewResult,
-  TokenResponse, UserRead, AnalysisEvent, AnalysisEventInput, CanonicalEvent, CanonicalEventCommand, CanonicalEventRevisionInput, CanonicalMatchState, ReviewedMetrics, AnalysisSession, AnalysisSessionUpdate,
+  TokenResponse, UserRead, AnalysisEvent, AnalysisEventInput, CanonicalEvent, CanonicalEventCommand, CanonicalEventRevisionInput, CanonicalMatchState, ReviewedMetrics, AnalysisSession, AnalysisSessionUpdate, AnalysisRun,
   ReportPackageInput, ReportPublicationStatus, ReviewedReportPackage,
     GoalkeeperShot, GoalkeeperShotCreate, FixtureConfirmation, FixtureConfirmResult, FixturePreviewResult, FixtureRoster, FixtureRosterResolution, ScheduledFixture, CanonicalPlayerProjection, WarningsSummary, OfficialSheet,
 } from '../types'
@@ -107,34 +107,37 @@ export const deactivateAnalysisEvent = (eventId: number, reason: string) =>
   http.delete<AnalysisEvent>(`/analysis-events/${eventId}`, { params: { reason } }).then(r => r.data)
 export const restoreAnalysisEvent = (eventId: number, reason: string) =>
   http.post<AnalysisEvent>(`/analysis-events/${eventId}/restore`, null, { params: { reason } }).then(r => r.data)
-export const getCanonicalEvents = (matchId: number) =>
-  http.get<CanonicalEvent[]>(`/matches/${matchId}/canonical-events`).then(r => r.data)
-export const getCanonicalState = (matchId: number) =>
-  http.get<CanonicalMatchState>(`/matches/${matchId}/canonical-state`).then(r => r.data)
-export const getCanonicalMetrics = (matchId: number) =>
-  http.get<ReviewedMetrics>(`/matches/${matchId}/canonical-metrics`).then(r => r.data)
+export const getCanonicalEvents = (matchId: number, runId?: number) =>
+  http.get<CanonicalEvent[]>(`/matches/${matchId}/canonical-events`, { params: runId ? { run_id: runId } : {} }).then(r => r.data)
+export const getCanonicalState = (matchId: number, runId?: number) =>
+  http.get<CanonicalMatchState>(`/matches/${matchId}/canonical-state`, { params: runId ? { run_id: runId } : {} }).then(r => r.data)
+export const getCanonicalMetrics = (matchId: number, runId?: number) =>
+  http.get<ReviewedMetrics>(`/matches/${matchId}/canonical-metrics`, { params: runId ? { run_id: runId } : {} }).then(r => r.data)
 export const deactivateCanonicalEvent = (eventId: number, reason: string) =>
   http.delete<CanonicalEvent>(`/canonical-events/${eventId}`, { params: { reason } }).then(r => r.data)
-export const deactivateLastCanonicalEvent = (matchId: number, reason: string) =>
-  http.delete<CanonicalEvent>(`/matches/${matchId}/canonical-events/last`, { data: { reason } }).then(r => r.data)
-export const resetCanonicalAnalysis = (matchId: number, reason: string) =>
-  http.post<{ deactivated_events: number; session_reset: boolean }>(`/matches/${matchId}/canonical-analysis/reset`, { reason }).then(r => r.data)
-export const getCanonicalReconciliation = (matchId: number) =>
-  http.get<{ official: ReviewedMetrics['official']; discrepancies: ReviewedMetrics['reconciliation']; discipline: ReviewedMetrics['discipline'] }>(`/matches/${matchId}/canonical-reconciliation`).then(r => ({ official: r.data.official, reconciliation: r.data.discrepancies, discipline: r.data.discipline ?? [] }))
-export const getWarningsSummary = (matchId: number) =>
-  http.get<WarningsSummary>(`/matches/${matchId}/warnings-summary`).then(r => r.data)
+export const deactivateLastCanonicalEvent = (matchId: number, reason: string, runId?: number) =>
+  http.delete<CanonicalEvent>(`/matches/${matchId}/canonical-events/last`, { data: { reason }, params: runId ? { run_id: runId } : {} }).then(r => r.data)
+export const resetCanonicalAnalysis = (matchId: number, reason: string, runId?: number) =>
+  http.post<{ deactivated_events: number; session_reset: boolean }>(`/matches/${matchId}/canonical-analysis/reset`, { reason }, { params: runId ? { run_id: runId } : {} }).then(r => r.data)
+export const getCanonicalReconciliation = (matchId: number, runId?: number) =>
+  http.get<{ official: ReviewedMetrics['official']; discrepancies: ReviewedMetrics['reconciliation']; discipline: ReviewedMetrics['discipline'] }>(`/matches/${matchId}/canonical-reconciliation`, { params: runId ? { run_id: runId } : {} }).then(r => ({ official: r.data.official, reconciliation: r.data.discrepancies, discipline: r.data.discipline ?? [] }))
+export const getWarningsSummary = (matchId: number, runId?: number) =>
+  http.get<WarningsSummary>(`/matches/${matchId}/warnings-summary`, { params: runId ? { run_id: runId } : {} }).then(r => r.data)
 export const enableCanonicalAnalysis = (matchId: number) =>
   http.put<{ match_id: number; canonical_analysis_enabled: boolean; reason: string }>(`/matches/${matchId}/canonical-cutover`, { enabled: true, reason: 'analysis preparation started' }).then(r => r.data)
-export const createCanonicalEvent = (matchId: number, data: CanonicalEventCommand) =>
-  http.post<CanonicalEvent>(`/matches/${matchId}/canonical-events`, data).then(r => r.data)
+export const createCanonicalEvent = (matchId: number, data: CanonicalEventCommand, runId?: number) =>
+  http.post<CanonicalEvent>(`/matches/${matchId}/canonical-events`, data, { params: runId ? { run_id: runId } : {} }).then(r => r.data)
 export const reviseCanonicalEvent = (eventId: number, data: CanonicalEventRevisionInput) =>
   http.patch<CanonicalEvent>(`/canonical-events/${eventId}`, data).then(r => r.data)
 export const getCanonicalPlayerProjection = (matchId: number, params: { player_id: number; team_id?: number; period?: number; from_regulation_seconds?: number; to_regulation_seconds?: number }) =>
   http.get<CanonicalPlayerProjection>(`/matches/${matchId}/canonical-player-projection`, { params }).then(r => r.data)
-export const getAnalysisSession = (matchId: number) =>
-  http.get<AnalysisSession>(`/matches/${matchId}/analysis-session`).then(r => r.data)
-export const saveAnalysisSession = (matchId: number, data: AnalysisSessionUpdate) =>
-  http.put<AnalysisSession>(`/matches/${matchId}/analysis-session`, data).then(r => r.data)
+export const getAnalysisSession = (matchId: number, runId?: number) =>
+  http.get<AnalysisSession>(`/matches/${matchId}/analysis-session`, { params: runId ? { run_id: runId } : {} }).then(r => r.data)
+export const saveAnalysisSession = (matchId: number, data: AnalysisSessionUpdate, runId?: number) =>
+  http.put<AnalysisSession>(`/matches/${matchId}/analysis-session`, data, { params: runId ? { run_id: runId } : {} }).then(r => r.data)
+export const getAnalysisRuns = (matchId: number) => http.get<AnalysisRun[]>(`/matches/${matchId}/analysis-runs`).then(r => r.data)
+export const createAnalysisRun = (matchId: number, mode: 'video' | 'manual' | 'live') => http.post<AnalysisRun>(`/matches/${matchId}/analysis-runs`, { mode }).then(r => r.data)
+export const promoteAnalysisRun = (matchId: number, runId: number) => http.post<AnalysisRun>(`/matches/${matchId}/analysis-runs/${runId}/promote`).then(r => r.data)
 export const createReportPackage = (matchId: number, data: ReportPackageInput) =>
   http.post<ReviewedReportPackage>(`/matches/${matchId}/report-packages`, data).then(r => r.data)
 export const approveReportPackage = (packageId: number) =>

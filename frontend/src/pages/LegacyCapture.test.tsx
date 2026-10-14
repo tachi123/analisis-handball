@@ -18,7 +18,7 @@ describe('legacy capture routes', () => {
     api.getMatch.mockResolvedValue({ id: 7, home_team: { id: 1, name: 'SAPA' }, away_team: { id: 2, name: 'Rival' }, home_score: 0, away_score: 0, squad: [] })
     api.getCanonicalEvents.mockResolvedValue([])
     api.getCanonicalState.mockResolvedValue({ analytical_score: {}, possession: null, active_goalkeepers: {}, player_states: {}, discipline: [] })
-    render(<QueryClientProvider client={new QueryClient()}><MemoryRouter initialEntries={['/match/7/live']}><Routes><Route path="/match/:matchId/live" element={<MatchLive />} /></Routes></MemoryRouter></QueryClientProvider>)
+    render(<QueryClientProvider client={new QueryClient()}><MemoryRouter initialEntries={['/match/7/live']}><Routes><Route path="/match/:matchId/live" element={<MatchLive />} /><Route path="/match/:matchId/review" element={<p>Nueva observación canónica</p>} /></Routes></MemoryRouter></QueryClientProvider>)
     expect(await screen.findByText('Nueva observación canónica')).toBeTruthy()
   })
 })

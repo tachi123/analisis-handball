@@ -4,10 +4,10 @@ import { MemoryRouter, Route, Routes } from 'react-router-dom'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import ManualMatchPreparationPage from './ManualMatchPreparationPage'
 
-const api = vi.hoisted(() => ({ confirmMatchPDF: vi.fn(), enableCanonicalAnalysis: vi.fn(), getMatch: vi.fn(), getOfficialSheet: vi.fn(), previewMatchPDF: vi.fn(), saveAnalysisSession: vi.fn() }))
+const api = vi.hoisted(() => ({ confirmMatchPDF: vi.fn(), createAnalysisRun: vi.fn(), getAnalysisRuns: vi.fn(), getMatch: vi.fn(), getOfficialSheet: vi.fn(), previewMatchPDF: vi.fn(), saveAnalysisSession: vi.fn() }))
 vi.mock('../api/client', () => api)
 
-const match = { id: 7, home_team: { id: 1, name: 'Home' }, away_team: { id: 2, name: 'Away' }, tournament: null }
+const match = { id: 7, home_team: { id: 1, name: 'Home' }, away_team: { id: 2, name: 'Away' }, tournament: null, youtube_link: null }
 const preview = (overrides = {}) => ({
   match_id: 7,
   preview: { match_info: { home_score: 2, away_score: 1 }, home_team: { name: 'Home', players: [] }, away_team: { name: 'Away', players: [] }, warnings: ['parser warning'] },
@@ -28,7 +28,8 @@ describe('ManualMatchPreparationPage', () => {
     api.getOfficialSheet.mockRejectedValue({ response: { status: 404 } })
     api.previewMatchPDF.mockResolvedValue(preview())
     api.confirmMatchPDF.mockResolvedValue({ match_id: 7, snapshot_id: 'sheet', reused: false })
-    api.enableCanonicalAnalysis.mockResolvedValue({ canonical_analysis_enabled: true })
+    api.getAnalysisRuns.mockResolvedValue([])
+    api.createAnalysisRun.mockResolvedValue({ id: 21, mode: 'video', status: 'draft' })
     api.saveAnalysisSession.mockResolvedValue({})
   })
 
@@ -57,14 +58,56 @@ describe('ManualMatchPreparationPage', () => {
     expect((confirm as HTMLButtonElement).disabled).toBe(false)
   })
 
-  it('hands a confirmed manual match to canonical video analysis', async () => {
+  it('creates a selected draft and its session before opening the review', async () => {
     api.getOfficialSheet.mockResolvedValue({ home: { name: 'Home', score: 2 }, away: { name: 'Away', score: 1 } })
     renderPage()
     await screen.findByText('Planilla oficial confirmada')
-    fireEvent.click(screen.getByRole('button', { name: 'Iniciar análisis de video' }))
+    fireEvent.click(screen.getByRole('radio', { name: 'Video local manual' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Crear borrador' }))
 
-    await waitFor(() => expect(api.enableCanonicalAnalysis).toHaveBeenCalledWith(7))
-    await waitFor(() => expect(api.saveAnalysisSession).toHaveBeenCalledWith(7, expect.objectContaining({ mode: 'video', profile: 'complete' })))
+    await waitFor(() => expect(api.createAnalysisRun).toHaveBeenCalledWith(7, 'manual'))
+    await waitFor(() => expect(api.saveAnalysisSession).toHaveBeenCalledWith(7, expect.objectContaining({ mode: 'manual', profile: 'complete' }), 21))
+    expect(await screen.findByText('review')).toBeTruthy()
+  })
+
+  it('seeds a video draft session with the imported YouTube link', async () => {
+    api.getMatch.mockResolvedValue({ ...match, youtube_link: 'https://youtu.be/abcdefghijk' })
+    api.getOfficialSheet.mockResolvedValue({ home: { name: 'Home', score: 2 }, away: { name: 'Away', score: 1 } })
+    renderPage()
+    await screen.findByText('Planilla oficial confirmada')
+    fireEvent.click(screen.getByRole('button', { name: 'Crear borrador' }))
+
+    await waitFor(() => expect(api.saveAnalysisSession).toHaveBeenCalledWith(7, expect.objectContaining({
+      mode: 'video',
+      source: { url: 'https://youtu.be/abcdefghijk', availability_state: 'unknown' },
+    }), 21))
+  })
+
+  it('resumes a persisted draft after reload without recreating or reseeding it', async () => {
+    api.getMatch.mockResolvedValue({ ...match, youtube_link: 'https://youtu.be/abcdefghijk' })
+    api.getOfficialSheet.mockResolvedValue({ home: { name: 'Home', score: 2 }, away: { name: 'Away', score: 1 } })
+    api.getAnalysisRuns.mockResolvedValue([{ id: 34, match_id: 7, mode: 'video', status: 'draft' }])
+    renderPage()
+    await screen.findByText('Planilla oficial confirmada')
+    await screen.findByText('Borrador existente:')
+
+    fireEvent.click(screen.getAllByRole('button', { name: 'Retomar borrador' })[0])
+
+    expect(await screen.findByText('review')).toBeTruthy()
+    expect(api.createAnalysisRun).not.toHaveBeenCalled()
+    expect(api.saveAnalysisSession).not.toHaveBeenCalled()
+  })
+
+  it('creates a draft when persisted drafts use a different mode', async () => {
+    api.getOfficialSheet.mockResolvedValue({ home: { name: 'Home', score: 2 }, away: { name: 'Away', score: 1 } })
+    api.getAnalysisRuns.mockResolvedValue([{ id: 34, match_id: 7, mode: 'manual', status: 'draft' }])
+    renderPage()
+    await screen.findByText('Planilla oficial confirmada')
+    await screen.findByText('Borrador existente:')
+    fireEvent.click(screen.getByRole('button', { name: 'Crear borrador' }))
+
+    await waitFor(() => expect(api.createAnalysisRun).toHaveBeenCalledWith(7, 'video'))
+    await waitFor(() => expect(api.saveAnalysisSession).toHaveBeenCalledWith(7, expect.objectContaining({ mode: 'video' }), 21))
     expect(await screen.findByText('review')).toBeTruthy()
   })
 
@@ -78,33 +121,33 @@ describe('ManualMatchPreparationPage', () => {
     await waitFor(() => expect(api.getOfficialSheet).toHaveBeenCalledTimes(2))
   })
 
-  it('surfaces a cutover or session-creation failure', async () => {
+  it('surfaces a draft-creation failure without trying to save a session', async () => {
     api.getOfficialSheet.mockResolvedValue({ home: { name: 'Home', score: 2 }, away: { name: 'Away', score: 1 } })
-    api.enableCanonicalAnalysis.mockRejectedValue(new Error('cutover denied'))
+    api.createAnalysisRun.mockRejectedValue(new Error('draft denied'))
     renderPage()
     await screen.findByText('Planilla oficial confirmada')
-    fireEvent.click(screen.getByRole('button', { name: 'Iniciar análisis de video' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Crear borrador' }))
 
-    expect((await screen.findByRole('alert')).textContent).toContain('cutover denied')
+    expect((await screen.findByRole('alert')).textContent).toContain('draft denied')
     expect(api.saveAnalysisSession).not.toHaveBeenCalled()
   })
 
-  it('preserves a successful cutover when creating the initial session fails and retries only the session', async () => {
+  it('keeps a created draft when creating its initial session fails', async () => {
     api.getOfficialSheet.mockResolvedValue({ home: { name: 'Home', score: 2 }, away: { name: 'Away', score: 1 } })
     api.saveAnalysisSession.mockRejectedValueOnce(new Error('session unavailable')).mockResolvedValueOnce({})
     renderPage()
     await screen.findByText('Planilla oficial confirmada')
-    fireEvent.click(screen.getByRole('button', { name: 'Iniciar análisis de video' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Crear borrador' }))
 
     const alert = await screen.findByRole('alert')
-    expect(alert.textContent).toContain('El análisis canónico ya fue habilitado')
-    expect(alert.textContent).toContain('La habilitación no se revirtió')
-    expect(api.enableCanonicalAnalysis).toHaveBeenCalledTimes(1)
+    expect(alert.textContent).toContain('El borrador ya fue creado')
+    expect(alert.textContent).toContain('mismo borrador')
+    expect(api.createAnalysisRun).toHaveBeenCalledTimes(1)
     expect(api.saveAnalysisSession).toHaveBeenCalledTimes(1)
 
     fireEvent.click(screen.getByRole('button', { name: 'Reintentar inicio de análisis' }))
     await waitFor(() => expect(api.saveAnalysisSession).toHaveBeenCalledTimes(2))
-    expect(api.enableCanonicalAnalysis).toHaveBeenCalledTimes(1)
+    expect(api.createAnalysisRun).toHaveBeenCalledTimes(1)
     expect(await screen.findByText('review')).toBeTruthy()
   })
 })

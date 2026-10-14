@@ -11,16 +11,21 @@ router = APIRouter(tags=["analysis"])
 
 
 @router.get("/matches/{match_id}/analysis-session", response_model=AnalysisSession)
-def get_session(match_id: int, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
-    session = AnalysisSessionService.get(db, match_id, user)
+def get_session(match_id: int, run_id: int | None = None, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+    try:
+        session = AnalysisSessionService.get(db, match_id, user, run_id)
+    except ValueError as error:
+        raise HTTPException(status_code=404, detail=str(error)) from error
     if session is None:
         raise HTTPException(status_code=404, detail="Analysis session not found")
     return session
 
 
 @router.put("/matches/{match_id}/analysis-session", response_model=AnalysisSession)
-def save_session(match_id: int, data: AnalysisSessionUpdate, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+def save_session(match_id: int, data: AnalysisSessionUpdate, run_id: int | None = None, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
     try:
-        return AnalysisSessionService.save(db, match_id, data, user)
+        return AnalysisSessionService.save(db, match_id, data, user, run_id)
+    except PermissionError as error:
+        raise HTTPException(status_code=403, detail=str(error)) from error
     except ValueError as error:
         raise HTTPException(status_code=422, detail=str(error)) from error

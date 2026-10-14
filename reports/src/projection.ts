@@ -79,6 +79,27 @@ function fields(value: Record<string, unknown>, allowedNames: string[], forbidde
 function requiredRecord(value: unknown) { if (!isRecord(value)) throw new Error('The public report has invalid data.'); return value }
 function requiredArray(value: unknown) { if (!Array.isArray(value)) throw new Error('The public report has invalid data.'); return value }
 
+function decodeEvidence(value: unknown, allowedNames: string[]) {
+  const item = requiredRecord(value)
+  fields(item, allowedNames, forbidden)
+  if (!isString(item.reference)) throw new Error('Evidence reference must be a string.')
+  if (item.period !== undefined && item.period !== null && typeof item.period !== 'number') throw new Error('Evidence period must be a number or null.')
+  if (item.regulation_seconds !== undefined && item.regulation_seconds !== null && typeof item.regulation_seconds !== 'number') throw new Error('Evidence regulation_seconds must be a number or null.')
+  if (item.clock_unverified !== undefined && typeof item.clock_unverified !== 'boolean') throw new Error('Evidence clock_unverified must be a boolean.')
+  if (item.observation !== undefined && item.observation !== null && !isString(item.observation)) throw new Error('Evidence observation must be a string or null.')
+  if (item.media_available !== undefined && typeof item.media_available !== 'boolean') throw new Error('Evidence media_available must be a boolean.')
+  if (item.media_url !== undefined && !isString(item.media_url)) throw new Error('Evidence media_url must be a string.')
+  return {
+    reference: item.reference,
+    period: item.period ?? null,
+    ...(allowedNames.includes('regulation_seconds') ? { regulation_seconds: item.regulation_seconds ?? null } : {}),
+    ...(allowedNames.includes('clock_unverified') ? { clock_unverified: item.clock_unverified ?? false } : {}),
+    ...(allowedNames.includes('observation') ? { observation: item.observation ?? null } : {}),
+    ...(allowedNames.includes('media_available') ? { media_available: item.media_available ?? false } : {}),
+    ...(item.media_url !== undefined ? { media_url: item.media_url } : {}),
+  }
+}
+
 export function decodePublicReport(value: unknown): PublicReport {
   if (!isRecord(value)) throw new Error('The public report is not a JSON object.')
   // Validate root allowlist
@@ -122,6 +143,7 @@ export function decodePublicReport(value: unknown): PublicReport {
       const validatedPlayers: PlayerPublic[] = []
       for (const item of playersInput) {
         if (!isRecord(item)) throw new Error('Each player entry must be a JSON object.')
+        fields(item, ['slug', 'name', 'jersey_number', 'team_side', 'role', 'metrics', 'evidence'], forbidden)
         // Validate player-level fields: slug, name, jersey_number, team_side, role, metrics, evidence
         const { slug, name, jersey_number, team_side, role, metrics: metricsRaw, evidence: evidenceRaw } = item
         if (!isSlug(slug)) throw new Error('Player slug must be a safe public slug (lowercase alphanumeric and hyphens).')
@@ -147,17 +169,7 @@ export function decodePublicReport(value: unknown): PublicReport {
         }
         // Validate evidence sub-entries
         const evidenceValidated = ((evidenceRaw || []) as Array<unknown>).map((ev: unknown) => {
-          if (!isRecord(ev)) throw new Error('Each evidence entry must be a JSON object.')
-          const e: Record<string, unknown> = ev as Record<string, unknown>
-          // Allowed evidence fields: reference, period, regulation_seconds, clock_unverified, observation, media_available, media_url
-          if ('reference' in e) e.reference = String(e.reference)
-          if ('period' in e) e.period = e.period !== undefined ? Number(e.period) : undefined
-          if ('regulation_seconds' in e) e.regulation_seconds = e.regulation_seconds !== undefined ? Number(e.regulation_seconds) : undefined
-          if ('clock_unverified' in e) e.clock_unverified = Boolean(e.clock_unverified)
-          if ('observation' in e) e.observation = String(e.observation)
-          if ('media_available' in e) e.media_available = Boolean(e.media_available)
-          if ('media_url' in e) e.media_url = String(e.media_url)
-          return e as PublicReport['evidence'][number]
+          return decodeEvidence(ev, ['reference', 'period']) as PlayerPublic['evidence'][number]
         })
         validatedPlayers.push({ slug, name, jersey_number: normalizedJersey, team_side, role, metrics: metricsValidated, evidence: evidenceValidated } as PlayerPublic)
       }
@@ -169,21 +181,18 @@ export function decodePublicReport(value: unknown): PublicReport {
   }
   // Evidence
   const evidence = requiredArray(value.evidence).map((item: unknown) => {
-    const e = requiredRecord(item) as Record<string, unknown>
-    // Allowed evidence fields: reference, period, regulation_seconds, clock_unverified, observation, media_available, media_url
-    if ('reference' in e) e.reference = String(e.reference)
-    if ('period' in e) e.period = e.period !== undefined ? Number(e.period) : undefined
-    if ('regulation_seconds' in e) e.regulation_seconds = e.regulation_seconds !== undefined ? Number(e.regulation_seconds) : undefined
-    if ('clock_unverified' in e) e.clock_unverified = Boolean(e.clock_unverified)
-    if ('observation' in e) e.observation = String(e.observation)
-    if ('media_available' in e) e.media_available = Boolean(e.media_available)
-    if ('media_url' in e) e.media_url = String(e.media_url)
-    return e as PublicReport['evidence'][number]
+    return decodeEvidence(item, ['reference', 'period', 'regulation_seconds', 'clock_unverified', 'observation', 'media_available', 'media_url']) as PublicReport['evidence'][number]
   })
   if (evidence.some((item) => item.media_url && !item.media_available)) throw new Error('The public report contains unavailable media.')
   // Reconciliation
-  const reconciliation = value.reconciliation.map((item: unknown) => requiredRecord(item) as {
-    side: string | null; official: string | number | null; analytical: string | number | null; discrepancy?: string | number | null
+  const reconciliation = value.reconciliation.map((item: unknown) => {
+    const entry = requiredRecord(item)
+    fields(entry, ['side', 'official', 'analytical', 'discrepancy'], forbidden)
+    for (const key of ['side', 'official', 'analytical', 'discrepancy']) {
+      const field = entry[key]
+      if (field !== undefined && field !== null && typeof field !== 'string' && typeof field !== 'number') throw new Error('The public report has invalid reconciliation data.')
+    }
+    return { side: entry.side ?? null, official: entry.official ?? null, analytical: entry.analytical ?? null, ...(entry.discrepancy !== undefined ? { discrepancy: entry.discrepancy as string | number | null } : {}) }
   })
   // Optional coverage
   let coverage: PublicReport['coverage'] = null
@@ -229,6 +238,8 @@ export function decodePublicReport(value: unknown): PublicReport {
   if ('incidents' in value && Array.isArray(value.incidents)) {
     incidents = value.incidents.map((item: unknown) => {
       const it = requiredRecord(item) as Record<string, unknown>
+      fields(it, ['reference', 'period', 'regulation_seconds', 'clock_unverified', 'clock_label', 'incident_type', 'outcome', 'team_side', 'player_name', 'player_slug', 'event_kind', 'video_seconds'], forbidden)
+      if (!isString(it.reference) || (it.period !== null && it.period !== undefined && typeof it.period !== 'number') || (it.regulation_seconds !== null && it.regulation_seconds !== undefined && typeof it.regulation_seconds !== 'number') || (it.clock_unverified !== undefined && typeof it.clock_unverified !== 'boolean') || (it.clock_label !== null && it.clock_label !== undefined && !isString(it.clock_label)) || (it.team_side !== undefined && it.team_side !== 'home' && it.team_side !== 'away' && it.team_side !== 'unknown') || (it.player_name !== null && it.player_name !== undefined && !isString(it.player_name)) || (it.player_slug !== null && it.player_slug !== undefined && !isSlug(it.player_slug)) || !isString(it.event_kind) || (it.video_seconds !== null && it.video_seconds !== undefined && typeof it.video_seconds !== 'number')) throw new Error('The public report has invalid incident data.')
       const incident_type_map: Record<string, string> = {
         'shot': 'Lanzamiento',
         'turnover': 'Pérdida',

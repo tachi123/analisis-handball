@@ -152,6 +152,21 @@ def test_pre_match_kickoff_command_keeps_video_evidence_and_establishes_possessi
     assert state.possession.start_basis == "kickoff:1"
 
 
+def test_live_kickoff_without_video_establishes_possession():
+    kickoff = CanonicalEventCommand(
+        kind="other", period=1, regulation_seconds=0, clock_unverified=False, team_id=1,
+        player_id=None, related_player_id=None, outcome="kickoff", fact_kind="observed",
+        evidence_state="confirmed", uncertainty=[], note=None,
+        evidence=[{"kind": "unavailable", "uncertainty": ["live_observation"]}],
+    )
+
+    validate_command(kickoff, actor_id=1, match_team_ids={1, 2}, roster_sources={})
+    state = apply_transition(CanonicalMatchState(), kickoff, 1)
+
+    assert state.possession is not None
+    assert state.possession.team_id == 1
+
+
 @pytest.mark.parametrize("values", [
     {"team_id": None},
     {"team_id": 3},

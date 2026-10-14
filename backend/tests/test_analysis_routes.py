@@ -1,14 +1,16 @@
+from datetime import date
+
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from app.database import Base, get_db
 from app.main import app
-from app.models import AnalysisCodebookEntry, Match, User
+from app.models import AnalysisCodebookEntry, Match, OfficialSnapshot, User
 from app.security import create_access_token
 
 
-def analysis_client(tmp_path):
+def analysis_client(tmp_path, confirmed_sheet=False, manual_match=False):
     engine = create_engine(
         f"sqlite:///{tmp_path / 'analysis-routes.db'}",
         connect_args={"check_same_thread": False},
@@ -16,11 +18,20 @@ def analysis_client(tmp_path):
     session_factory = sessionmaker(bind=engine)
     Base.metadata.create_all(engine)
     session = session_factory()
-    session.add_all([
+    records = [
         User(id=1, email="analyst@example.com", hashed_password="x", full_name="Analyst"),
-        Match(id=1),
+        User(id=2, email="other@example.com", hashed_password="x", full_name="Other analyst"),
+        Match(id=1, origin="manual" if manual_match else "legacy", created_by_user_id=1 if manual_match else None),
         AnalysisCodebookEntry(version="mvp-1", code="shot", category="attack"),
-    ])
+    ]
+    if confirmed_sheet:
+        records.append(OfficialSnapshot(
+            id="sheet-1", match_id=1, source_filename="sheet.pdf", source_content_type="application/pdf",
+            source_size_bytes=1, source_sha256="sha", source_page_count=1, source_path="/tmp/sheet.pdf",
+            confirmed_date=date(2026, 1, 1), home_team_name="Home", away_team_name="Away",
+            home_score=0, away_score=0, is_confirmed=True,
+        ))
+    session.add_all(records)
     session.commit()
     session.close()
 
@@ -56,6 +67,72 @@ def test_authenticated_source_session_is_saved_and_retrieved(tmp_path):
         assert recovered.json()["video_position_seconds"] == 94.5
         assert recovered.json()["profile"] == "goalkeepers"
         assert recovered.json()["clock_start_video_seconds"] == 12.5
+    finally:
+        app.dependency_overrides.clear()
+        engine.dispose()
+
+
+def test_confirmed_match_creates_a_draft_and_scopes_its_initial_session(tmp_path):
+    client, engine = analysis_client(tmp_path, confirmed_sheet=True)
+    headers = {"Authorization": f"Bearer {create_access_token({'sub': '1'})}"}
+
+    try:
+        created = client.post("/api/v1/matches/1/analysis-runs", json={"mode": "video"}, headers=headers)
+        run_id = created.json()["id"]
+        saved = client.put(
+            f"/api/v1/matches/1/analysis-session?run_id={run_id}",
+            json={"mode": "video", "source": None},
+            headers=headers,
+        )
+
+        assert created.status_code == 201
+        assert created.json()["status"] == "draft"
+        assert saved.status_code == 200
+        assert saved.json()["run_id"] == run_id
+    finally:
+        app.dependency_overrides.clear()
+        engine.dispose()
+
+
+def test_manual_match_draft_and_writes_are_limited_to_its_owner(tmp_path):
+    client, engine = analysis_client(tmp_path, confirmed_sheet=True, manual_match=True)
+    owner_headers = {"Authorization": f"Bearer {create_access_token({'sub': '1'})}"}
+    other_headers = {"Authorization": f"Bearer {create_access_token({'sub': '2'})}"}
+
+    try:
+        denied_creation = client.post("/api/v1/matches/1/analysis-runs", json={"mode": "video"}, headers=other_headers)
+        created = client.post("/api/v1/matches/1/analysis-runs", json={"mode": "video"}, headers=owner_headers)
+        denied_write = client.put(
+            f"/api/v1/matches/1/analysis-session?run_id={created.json()['id']}",
+            json={"mode": "video", "source": None},
+            headers=other_headers,
+        )
+
+        assert denied_creation.status_code == 403
+        assert created.status_code == 201
+        assert denied_write.status_code == 403
+        assert "run creator" in denied_write.json()["detail"]
+    finally:
+        app.dependency_overrides.clear()
+        engine.dispose()
+
+
+def test_unique_implicit_draft_session_write_is_limited_to_its_owner(tmp_path):
+    client, engine = analysis_client(tmp_path, confirmed_sheet=True)
+    owner_headers = {"Authorization": f"Bearer {create_access_token({'sub': '1'})}"}
+    other_headers = {"Authorization": f"Bearer {create_access_token({'sub': '2'})}"}
+
+    try:
+        created = client.post("/api/v1/matches/1/analysis-runs", json={"mode": "video"}, headers=owner_headers)
+        denied_write = client.put(
+            "/api/v1/matches/1/analysis-session",
+            json={"mode": "video", "source": None},
+            headers=other_headers,
+        )
+
+        assert created.status_code == 201
+        assert denied_write.status_code == 403
+        assert "run creator" in denied_write.json()["detail"]
     finally:
         app.dependency_overrides.clear()
         engine.dispose()
