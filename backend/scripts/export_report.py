@@ -360,6 +360,48 @@ def build_phase_analysis(events):
     timed = sorted(timed_candidates, key=lambda event: (
         event['payload']['period'], elapsed(event['payload']), event.get('sequence', 0)
     ))
+
+    def empty_possessions():
+        return {'closed': 0, 'durations': [], 'ended_in_shot': 0, 'ended_in_turnover': 0, 'excluded_timeout': 0}
+
+    possession_buckets = {(period, block): {'home': empty_possessions(), 'away': empty_possessions()} for period in (1, 2) for block in range(3)}
+    open_possession = None
+    for event in timed:
+        payload = event['payload']
+        kind, outcome, side, event_seconds = payload.get('kind'), payload.get('outcome'), public_side(payload), elapsed(payload)
+        if kind == 'other' and outcome == 'timeout':
+            if open_possession is not None:
+                open_possession['crossed_timeout'] = True
+            continue
+        if (kind == 'other' and outcome == 'kickoff') or kind == 'recovery':
+            if side == 'unknown':
+                continue
+            # A new observed start closes any unresolved possession without
+            # fabricating a duration or terminal result.
+            open_possession = {'side': side, 'period': payload['period'], 'start_seconds': event_seconds, 'crossed_timeout': False}
+            continue
+        if kind not in {'shot', 'turnover'} or open_possession is None or side != open_possession['side'] or payload['period'] != open_possession['period']:
+            continue
+        bucket_key = (payload['period'], min(2, event_seconds // 600))
+        summary = possession_buckets[bucket_key][side]
+        summary['closed'] += 1
+        if open_possession['crossed_timeout']:
+            summary['excluded_timeout'] += 1
+        else:
+            duration = event_seconds - open_possession['start_seconds']
+            if duration >= 0:
+                summary['durations'].append(duration)
+                if kind == 'shot':
+                    summary['ended_in_shot'] += 1
+                else:
+                    summary['ended_in_turnover'] += 1
+        open_possession = None
+
+    def public_possession_summary(summary):
+        durations = sorted(summary['durations'])
+        count = len(durations)
+        median = None if not count else durations[count // 2] if count % 2 else round((durations[count // 2 - 1] + durations[count // 2]) / 2)
+        return {'closed_possessions': summary['closed'], 'valid_possessions': count, 'average_seconds': None if not count else round(sum(durations) / count), 'median_seconds': median, 'ended_in_shot': summary['ended_in_shot'], 'ended_in_turnover': summary['ended_in_turnover'], 'excluded_timeout': summary['excluded_timeout']}
     blocks = []
     for period in (1, 2):
         for block_index in range(3):
@@ -370,7 +412,7 @@ def build_phase_analysis(events):
             away = team_stats([event for event in within if public_side(event['payload']) == 'away'])
             winner = 'draw' if home['goals'] == away['goals'] else ('home' if home['goals'] > away['goals'] else 'away')
             overrun = max((elapsed(event['payload']) for event in within), default=end_seconds) - end_seconds if block_index == 2 else 0
-            blocks.append({'period': period, 'start_seconds': start_seconds, 'end_seconds': end_seconds, 'clock_overrun_seconds': max(0, overrun), 'home': home, 'away': away, 'winner': winner})
+            blocks.append({'period': period, 'start_seconds': start_seconds, 'end_seconds': end_seconds, 'clock_overrun_seconds': max(0, overrun), 'home': home, 'away': away, 'winner': winner, 'possessions': {side: public_possession_summary(summary) for side, summary in possession_buckets[(period, block_index)].items()}})
 
     def scoring_run_entry(goals, side):
         return {'team_side': side, 'goals': len(goals), 'start': public_clock(goals[0]['payload']), 'end': public_clock(goals[-1]['payload'])}

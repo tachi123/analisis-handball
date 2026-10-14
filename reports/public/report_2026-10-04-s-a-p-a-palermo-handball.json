@@ -2135,7 +2135,27 @@
           "saves_against": 1,
           "outside_or_woodwork": 0
         },
-        "winner": "home"
+        "winner": "home",
+        "possessions": {
+          "home": {
+            "closed_possessions": 2,
+            "valid_possessions": 2,
+            "average_seconds": 28,
+            "median_seconds": 28,
+            "ended_in_shot": 1,
+            "ended_in_turnover": 1,
+            "excluded_timeout": 0
+          },
+          "away": {
+            "closed_possessions": 1,
+            "valid_possessions": 1,
+            "average_seconds": 61,
+            "median_seconds": 61,
+            "ended_in_shot": 1,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          }
+        }
       },
       {
         "period": 1,
@@ -2162,7 +2182,27 @@
           "saves_against": 4,
           "outside_or_woodwork": 2
         },
-        "winner": "draw"
+        "winner": "draw",
+        "possessions": {
+          "home": {
+            "closed_possessions": 1,
+            "valid_possessions": 1,
+            "average_seconds": 26,
+            "median_seconds": 26,
+            "ended_in_shot": 1,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          },
+          "away": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          }
+        }
       },
       {
         "period": 1,
@@ -2189,7 +2229,27 @@
           "saves_against": 2,
           "outside_or_woodwork": 2
         },
-        "winner": "away"
+        "winner": "away",
+        "possessions": {
+          "home": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          },
+          "away": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          }
+        }
       },
       {
         "period": 2,
@@ -2216,7 +2276,27 @@
           "saves_against": 6,
           "outside_or_woodwork": 1
         },
-        "winner": "home"
+        "winner": "home",
+        "possessions": {
+          "home": {
+            "closed_possessions": 3,
+            "valid_possessions": 3,
+            "average_seconds": 16,
+            "median_seconds": 6,
+            "ended_in_shot": 3,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          },
+          "away": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          }
+        }
       },
       {
         "period": 2,
@@ -2243,7 +2323,27 @@
           "saves_against": 3,
           "outside_or_woodwork": 0
         },
-        "winner": "home"
+        "winner": "home",
+        "possessions": {
+          "home": {
+            "closed_possessions": 4,
+            "valid_possessions": 4,
+            "average_seconds": 6,
+            "median_seconds": 6,
+            "ended_in_shot": 4,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          },
+          "away": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          }
+        }
       },
       {
         "period": 2,
@@ -2270,7 +2370,27 @@
           "saves_against": 4,
           "outside_or_woodwork": 2
         },
-        "winner": "home"
+        "winner": "home",
+        "possessions": {
+          "home": {
+            "closed_possessions": 3,
+            "valid_possessions": 3,
+            "average_seconds": 9,
+            "median_seconds": 11,
+            "ended_in_shot": 3,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          },
+          "away": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          }
+        }
       }
     ],
     "scoring_runs": [
