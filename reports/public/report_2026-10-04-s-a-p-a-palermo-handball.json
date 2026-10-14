@@ -2092,7 +2092,8 @@
       "sanctions": 4,
       "shots_on_target": 51,
       "saves_against": 21,
-      "outside_or_woodwork": 6
+      "outside_or_woodwork": 6,
+      "blocked": 1
     },
     "away": {
       "name": "Palermo Handball",
@@ -2104,7 +2105,8 @@
       "sanctions": 3,
       "shots_on_target": 47,
       "saves_against": 21,
-      "outside_or_woodwork": 9
+      "outside_or_woodwork": 9,
+      "blocked": 0
     }
   },
   "phase_analysis": {
@@ -2123,7 +2125,8 @@
           "sanctions": 1,
           "shots_on_target": 8,
           "saves_against": 3,
-          "outside_or_woodwork": 0
+          "outside_or_woodwork": 0,
+          "blocked": 0
         },
         "away": {
           "shots": 5,
@@ -2133,7 +2136,8 @@
           "sanctions": 0,
           "shots_on_target": 5,
           "saves_against": 1,
-          "outside_or_woodwork": 0
+          "outside_or_woodwork": 0,
+          "blocked": 0
         },
         "winner": "home",
         "possessions": {
@@ -2170,7 +2174,8 @@
           "sanctions": 0,
           "shots_on_target": 4,
           "saves_against": 2,
-          "outside_or_woodwork": 2
+          "outside_or_woodwork": 2,
+          "blocked": 0
         },
         "away": {
           "shots": 8,
@@ -2180,7 +2185,8 @@
           "sanctions": 0,
           "shots_on_target": 6,
           "saves_against": 4,
-          "outside_or_woodwork": 2
+          "outside_or_woodwork": 2,
+          "blocked": 0
         },
         "winner": "draw",
         "possessions": {
@@ -2217,7 +2223,8 @@
           "sanctions": 0,
           "shots_on_target": 5,
           "saves_against": 2,
-          "outside_or_woodwork": 1
+          "outside_or_woodwork": 1,
+          "blocked": 0
         },
         "away": {
           "shots": 8,
@@ -2227,7 +2234,8 @@
           "sanctions": 0,
           "shots_on_target": 6,
           "saves_against": 2,
-          "outside_or_woodwork": 2
+          "outside_or_woodwork": 2,
+          "blocked": 0
         },
         "winner": "away",
         "possessions": {
@@ -2264,7 +2272,8 @@
           "sanctions": 0,
           "shots_on_target": 9,
           "saves_against": 4,
-          "outside_or_woodwork": 0
+          "outside_or_woodwork": 0,
+          "blocked": 0
         },
         "away": {
           "shots": 9,
@@ -2274,7 +2283,8 @@
           "sanctions": 1,
           "shots_on_target": 8,
           "saves_against": 6,
-          "outside_or_woodwork": 1
+          "outside_or_woodwork": 1,
+          "blocked": 0
         },
         "winner": "home",
         "possessions": {
@@ -2311,7 +2321,8 @@
           "sanctions": 0,
           "shots_on_target": 10,
           "saves_against": 4,
-          "outside_or_woodwork": 1
+          "outside_or_woodwork": 1,
+          "blocked": 1
         },
         "away": {
           "shots": 8,
@@ -2321,7 +2332,8 @@
           "sanctions": 0,
           "shots_on_target": 8,
           "saves_against": 3,
-          "outside_or_woodwork": 0
+          "outside_or_woodwork": 0,
+          "blocked": 0
         },
         "winner": "home",
         "possessions": {
@@ -2358,7 +2370,8 @@
           "sanctions": 2,
           "shots_on_target": 10,
           "saves_against": 3,
-          "outside_or_woodwork": 1
+          "outside_or_woodwork": 1,
+          "blocked": 0
         },
         "away": {
           "shots": 12,
@@ -2368,7 +2381,8 @@
           "sanctions": 2,
           "shots_on_target": 10,
           "saves_against": 4,
-          "outside_or_woodwork": 2
+          "outside_or_woodwork": 2,
+          "blocked": 0
         },
         "winner": "home",
         "possessions": {

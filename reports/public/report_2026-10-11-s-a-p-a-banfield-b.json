@@ -1970,7 +1970,8 @@
       "sanctions": 1,
       "shots_on_target": 61,
       "saves_against": 30,
-      "outside_or_woodwork": 6
+      "outside_or_woodwork": 6,
+      "blocked": 1
     },
     "away": {
       "name": "Banfield B",
@@ -1982,7 +1983,8 @@
       "sanctions": 2,
       "shots_on_target": 46,
       "saves_against": 15,
-      "outside_or_woodwork": 6
+      "outside_or_woodwork": 6,
+      "blocked": 0
     }
   },
   "phase_analysis": {
@@ -2001,7 +2003,8 @@
           "sanctions": 0,
           "shots_on_target": 10,
           "saves_against": 4,
-          "outside_or_woodwork": 1
+          "outside_or_woodwork": 1,
+          "blocked": 0
         },
         "away": {
           "shots": 6,
@@ -2011,7 +2014,8 @@
           "sanctions": 1,
           "shots_on_target": 6,
           "saves_against": 0,
-          "outside_or_woodwork": 0
+          "outside_or_woodwork": 0,
+          "blocked": 0
         },
         "winner": "draw",
         "possessions": {
@@ -2048,7 +2052,8 @@
           "sanctions": 0,
           "shots_on_target": 5,
           "saves_against": 2,
-          "outside_or_woodwork": 0
+          "outside_or_woodwork": 0,
+          "blocked": 0
         },
         "away": {
           "shots": 6,
@@ -2058,7 +2063,8 @@
           "sanctions": 0,
           "shots_on_target": 5,
           "saves_against": 0,
-          "outside_or_woodwork": 1
+          "outside_or_woodwork": 1,
+          "blocked": 0
         },
         "winner": "away",
         "possessions": {
@@ -2095,7 +2101,8 @@
           "sanctions": 0,
           "shots_on_target": 12,
           "saves_against": 8,
-          "outside_or_woodwork": 2
+          "outside_or_woodwork": 2,
+          "blocked": 0
         },
         "away": {
           "shots": 12,
@@ -2105,7 +2112,8 @@
           "sanctions": 1,
           "shots_on_target": 10,
           "saves_against": 4,
-          "outside_or_woodwork": 2
+          "outside_or_woodwork": 2,
+          "blocked": 0
         },
         "winner": "away",
         "possessions": {
@@ -2142,7 +2150,8 @@
           "sanctions": 1,
           "shots_on_target": 10,
           "saves_against": 6,
-          "outside_or_woodwork": 2
+          "outside_or_woodwork": 2,
+          "blocked": 0
         },
         "away": {
           "shots": 10,
@@ -2152,7 +2161,8 @@
           "sanctions": 0,
           "shots_on_target": 8,
           "saves_against": 4,
-          "outside_or_woodwork": 2
+          "outside_or_woodwork": 2,
+          "blocked": 0
         },
         "winner": "draw",
         "possessions": {
@@ -2189,7 +2199,8 @@
           "sanctions": 0,
           "shots_on_target": 8,
           "saves_against": 3,
-          "outside_or_woodwork": 1
+          "outside_or_woodwork": 1,
+          "blocked": 0
         },
         "away": {
           "shots": 6,
@@ -2199,7 +2210,8 @@
           "sanctions": 0,
           "shots_on_target": 6,
           "saves_against": 3,
-          "outside_or_woodwork": 0
+          "outside_or_woodwork": 0,
+          "blocked": 0
         },
         "winner": "home",
         "possessions": {
@@ -2236,7 +2248,8 @@
           "sanctions": 0,
           "shots_on_target": 16,
           "saves_against": 7,
-          "outside_or_woodwork": 0
+          "outside_or_woodwork": 0,
+          "blocked": 1
         },
         "away": {
           "shots": 12,
@@ -2246,7 +2259,8 @@
           "sanctions": 0,
           "shots_on_target": 11,
           "saves_against": 4,
-          "outside_or_woodwork": 1
+          "outside_or_woodwork": 1,
+          "blocked": 0
         },
         "winner": "home",
         "possessions": {

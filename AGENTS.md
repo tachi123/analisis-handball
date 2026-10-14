@@ -52,6 +52,9 @@ For a complete match, periods 1 and 2 require both `kickoff` and `period_end`.
 The exporter derives all report analytics statically. The public UI never calls private APIs or needs an API token.
 
 ```powershell
+# Optional: approve only confirmed sheets that may be copied to the public catalog.
+docker exec "analisis-handball-backend-1" python /app/scripts/set_official_sheet_publication.py --publish 99 101
+
 # Export or refresh multiple active matches into one catalog directory.
 docker exec -e PUBLIC_REPORT_MATCH_IDS=99,101 -e PUBLIC_REPORT_OUTPUT=/tmp/report.json -e PUBLIC_REPORT_CATALOG_OUTPUT=/tmp/public-report "analisis-handball-backend-1" python /app/scripts/export_public_report_catalog.py
 docker cp "analisis-handball-backend-1:/tmp/public-report/." "reports/public"
@@ -60,14 +63,15 @@ npm --prefix reports test
 npm --prefix reports run build
 ```
 
-`reports/public/` must contain `report.json` (fallback), `reports.json` (catalog), and each `report_<public-key>.json`. Inspect all catalog entries and referenced reports before publication.
+`reports/public/` must contain `report.json` (fallback), `reports.json` (catalog), and each `report_<public-key>.json`. Approved, hash-verified sheets are copied as derived `planillas/planilla_<public-key>.pdf` files. Inspect all catalog entries, referenced reports, and referenced PDFs before publication.
 
 See [docs/operations/match-report-workflow.md](docs/operations/match-report-workflow.md).
 
 ## Public report analytics
 
 - Momentum uses chronological goal events; filters only affect markers, never the score curve.
-- Goalkeeper saves use assigned on-target shots: `saves / (saves + goals conceded)`.
+- Goalkeeper team totals use all observed on-target shots; player save rates use assigned shots. “Sin arquero asignado” is an explicit team remainder, not a named player performance or proof of an empty goal.
+- Defensive context separates the rival's total shots, goals, conversion, on-target shots, outside/woodwork, and blocked shots. These are team facts, not inferred goalkeeper influence.
 - Zones: `7` is seven metres; `8` is counterattack.
 - Phase 1 derives 10-minute mini-matches, runs, quick concessions, goalkeeper context, and guarded possession tempo during export.
 - Events beyond a half’s nominal clock stay in its final 20–30 block and are disclosed as clock overrun; never wrap them into 0–10.
@@ -102,4 +106,5 @@ docker exec "analisis-handball-backend-1" pytest -q tests/test_canonical_analysi
 | Momentum | `reports/src/Timeline.tsx`, `reports/src/timelineDerivation.ts` |
 | Public export | `backend/scripts/export_report.py` |
 | Multi-match catalog export | `backend/scripts/export_public_report_catalog.py` |
+| Public-sheet approval | `backend/scripts/set_official_sheet_publication.py` |
 | Pages workflow | `.github/workflows/deploy-frontend.yml` |

@@ -360,7 +360,7 @@ home_eligible = [e for e in eligible_events if e['payload'].get('team_id') == ma
 away_eligible = [e for e in eligible_events if e['payload'].get('team_id') == match.away_team_id]
 
 def team_stats(events):
-    shots = 0; goals = 0; turnovers = 0; recoveries = 0; sanctions = 0; shots_on_target = 0; saves_against = 0; outside_or_woodwork = 0
+    shots = 0; goals = 0; turnovers = 0; recoveries = 0; sanctions = 0; shots_on_target = 0; saves_against = 0; outside_or_woodwork = 0; blocked = 0
     for ev in events:
         payload = ev['payload']
         kind = payload.get('kind')
@@ -377,13 +377,15 @@ def team_stats(events):
                 saves_against += 1
             elif outcome in {'miss', 'woodwork'}:
                 outside_or_woodwork += 1
+            elif outcome == 'blocked':
+                blocked += 1
         elif kind == 'turnover':
             turnovers += 1
         elif kind == 'recovery':
             recoveries += 1
         elif kind == 'foul_sanction':
             sanctions += 1
-    return {'shots': shots, 'goals': goals, 'turnovers': turnovers, 'recoveries': recoveries, 'sanctions': sanctions, 'shots_on_target': shots_on_target, 'saves_against': saves_against, 'outside_or_woodwork': outside_or_woodwork}
+    return {'shots': shots, 'goals': goals, 'turnovers': turnovers, 'recoveries': recoveries, 'sanctions': sanctions, 'shots_on_target': shots_on_target, 'saves_against': saves_against, 'outside_or_woodwork': outside_or_woodwork, 'blocked': blocked}
 
 def public_side(payload):
     team_id = payload.get('team_id')

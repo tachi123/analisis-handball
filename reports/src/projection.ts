@@ -19,6 +19,7 @@ export type TeamSummary = {
   shots_on_target: number
   saves_against: number
   outside_or_woodwork: number
+  blocked: number
 }
 
 export type Incident = {
@@ -247,6 +248,7 @@ export function decodePublicReport(value: unknown): PublicReport {
           shots_on_target: typeof raw.shots_on_target === 'number' ? raw.shots_on_target : 0,
           saves_against: typeof raw.saves_against === 'number' ? raw.saves_against : 0,
           outside_or_woodwork: typeof raw.outside_or_woodwork === 'number' ? raw.outside_or_woodwork : 0,
+          blocked: typeof raw.blocked === 'number' ? raw.blocked : 0,
         }
       }
       const home = readSummary(ts.home, 'home')
@@ -316,9 +318,9 @@ export function decodePublicReport(value: unknown): PublicReport {
     if (raw.block_seconds !== 600 || !Array.isArray(raw.blocks) || !Array.isArray(raw.scoring_runs) || !Array.isArray(raw.quick_concessions) || !isRecord(raw.goalkeeper_context)) throw new Error('The public report has invalid phase analysis.')
     const stats = (item: unknown): PhaseStats => {
       const entry = requiredRecord(item)
-      fields(entry, ['shots', 'goals', 'turnovers', 'recoveries', 'sanctions', 'shots_on_target', 'saves_against', 'outside_or_woodwork'], forbidden)
+      fields(entry, ['shots', 'goals', 'turnovers', 'recoveries', 'sanctions', 'shots_on_target', 'saves_against', 'outside_or_woodwork', 'blocked'], forbidden)
       const result = {} as PhaseStats
-      for (const key of ['shots', 'goals', 'turnovers', 'recoveries', 'sanctions', 'shots_on_target', 'saves_against', 'outside_or_woodwork'] as const) {
+      for (const key of ['shots', 'goals', 'turnovers', 'recoveries', 'sanctions', 'shots_on_target', 'saves_against', 'outside_or_woodwork', 'blocked'] as const) {
         if (typeof entry[key] !== 'number') throw new Error('The public report has invalid phase metrics.')
         result[key] = entry[key] as never
       }

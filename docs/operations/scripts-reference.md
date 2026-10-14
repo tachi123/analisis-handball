@@ -8,6 +8,7 @@ Use scripts for repeatable imports and static report generation. Do not use a sc
 |---|---|---|
 | `export_report.py` | Export one active match into public-safe JSON and update a catalog directory | `PUBLIC_REPORT_MATCH_ID`, `PUBLIC_REPORT_OUTPUT`, `PUBLIC_REPORT_CATALOG_OUTPUT` |
 | `export_public_report_catalog.py` | Export one or more active matches into the same catalog directory | `PUBLIC_REPORT_MATCH_IDS` plus the output variables |
+| `set_official_sheet_publication.py` | Explicitly approve or revoke confirmed official-sheet PDFs for public export | `--publish` or `--unpublish`, followed by match IDs |
 
 ### One match
 
@@ -23,6 +24,16 @@ docker cp "analisis-handball-backend-1:/tmp/public-report/." "reports/public"
 ```
 
 The catalog directory contains the fallback `report.json`, public catalog `reports.json`, and one deterministic public-key report file per match. Copy the complete directory.
+
+### Official-sheet publication
+
+```powershell
+docker exec "analisis-handball-backend-1" python /app/scripts/set_official_sheet_publication.py --publish 99 101
+```
+
+Approval is per confirmed snapshot and defaults to private. The exporter verifies
+the stored source SHA-256 before copying an approved PDF to the derived public
+`planillas/` directory. Run the catalog export after publishing or revoking.
 
 ## Import and fixture scripts
 

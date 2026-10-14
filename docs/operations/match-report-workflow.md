@@ -6,9 +6,10 @@ Use this runbook to turn a reviewed match into a safe public static report.
 
 1. Finish both periods in private review.
 2. Confirm coverage and canonical events.
-3. Export the complete public report catalog.
-4. Run report tests and build.
-5. Review the static report locally before any push.
+3. Explicitly approve any official-sheet PDFs that may appear publicly.
+4. Export the complete public report catalog.
+5. Run report tests and build.
+6. Review the static report locally before any push.
 
 ## Complete-match checklist
 
@@ -18,7 +19,7 @@ Use this runbook to turn a reviewed match into a safe public static report.
 | Period 2 | `kickoff` and `period_end` exist |
 | Coverage | Public export has `analyzed_periods: [1, 2]` and `status: complete` |
 | Evidence | Incidents have video anchors when video review is expected |
-| Goalkeepers | Assigned on-target shots reconcile to saves plus goals conceded |
+| Goalkeepers | Team totals reconcile to player-attributed and explicitly unassigned on-target shots |
 
 Do not claim a match is complete merely because the final score is present.
 
@@ -42,6 +43,28 @@ docker cp "analisis-handball-backend-1:/tmp/public-report/." "reports/public"
 
 The container name can differ locally. Check `docker ps` if necessary.
 
+### Publish an official FEMEBAL sheet
+
+An imported/confirmed PDF stays private by default. Approve it explicitly before
+exporting; this is separate from confirming the imported data.
+
+```powershell
+# Approve only sheets that may be copied into the public static report.
+docker exec "analisis-handball-backend-1" python /app/scripts/set_official_sheet_publication.py --publish 99 101
+
+# Revoke a prior approval. Re-export the catalog afterwards to remove its public copy.
+docker exec "analisis-handball-backend-1" python /app/scripts/set_official_sheet_publication.py --unpublish 101
+```
+
+During export, the backend resolves the stored confirmed source, verifies its
+SHA-256, and copies it to `reports/public/planillas/planilla_<public-key>.pdf`.
+The report exposes only that derived relative link: never `resources/`,
+`data/pdfs`, snapshot IDs, source filenames, or operational paths.
+
+A confirmed sheet without observed report coverage does **not** create a public
+report or PDF link. Finish the canonical analysis first; this prevents an
+empty analysis from being presented as a 0–0 result.
+
 ## Validate before publishing
 
 ```powershell
@@ -62,7 +85,8 @@ docker exec "analisis-handball-backend-1" pytest -q tests/test_canonical_analysi
 | Area | Contract |
 |---|---|
 | Comparison | The pyramid compares both teams using totals from `team_summary`. |
-| Goalkeepers | Overall, seven-metre, and counterattack save rates use assigned shots on target. |
+| Defense | The compact context shows opponent total attempts, goals, conversion, on-target shots, outside/woodwork, and blocks for each defending team. It is not goalkeeper attribution. |
+| Goalkeepers | The compact table groups total/team/player rows. Player save rates use assigned on-target shots; the unassigned row is a team-level remainder and never a player performance. |
 | Phase 1 | Mini-matches, scoring runs, quick-concession alerts, goalkeeper context, and guarded possession tempo are derived during export. |
 | Momentum | The curve uses chronological goals; filters only hide/show markers, never alter the curve. |
 | Video | Incident actions seek the persistent player using `video_seconds`; direct YouTube links remain fallback. |

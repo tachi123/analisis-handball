@@ -178,12 +178,18 @@ describe('public report projection', () => {
   it('accepts public Phase 1 aggregates and rejects private nested fields', () => {
     const phase_analysis = {
       block_seconds: 600,
-      blocks: [{ period: 1, start_seconds: 0, end_seconds: 600, clock_overrun_seconds: 0, home: { shots: 8, goals: 4, turnovers: 2, recoveries: 1, sanctions: 0, shots_on_target: 6, saves_against: 2, outside_or_woodwork: 0 }, away: { shots: 7, goals: 3, turnovers: 1, recoveries: 2, sanctions: 0, shots_on_target: 5, saves_against: 2, outside_or_woodwork: 1 }, winner: 'home', possessions: { home: { closed_possessions: 3, valid_possessions: 2, average_seconds: 24, median_seconds: 24, ended_in_shot: 1, ended_in_turnover: 1, excluded_timeout: 1 }, away: { closed_possessions: 2, valid_possessions: 2, average_seconds: 30, median_seconds: 30, ended_in_shot: 2, ended_in_turnover: 0, excluded_timeout: 0 } } }],
+      blocks: [{ period: 1, start_seconds: 0, end_seconds: 600, clock_overrun_seconds: 0, home: { shots: 8, goals: 4, turnovers: 2, recoveries: 1, sanctions: 0, shots_on_target: 6, saves_against: 2, outside_or_woodwork: 0, blocked: 0 }, away: { shots: 7, goals: 3, turnovers: 1, recoveries: 2, sanctions: 0, shots_on_target: 5, saves_against: 2, outside_or_woodwork: 1, blocked: 0 }, winner: 'home', possessions: { home: { closed_possessions: 3, valid_possessions: 2, average_seconds: 24, median_seconds: 24, ended_in_shot: 1, ended_in_turnover: 1, excluded_timeout: 1 }, away: { closed_possessions: 2, valid_possessions: 2, average_seconds: 30, median_seconds: 30, ended_in_shot: 2, ended_in_turnover: 0, excluded_timeout: 0 } } }],
       scoring_runs: [{ team_side: 'home', goals: 2, start: { period: 1, seconds: 20 }, end: { period: 1, seconds: 40 } }],
       quick_concessions: [{ conceding_side: 'away', scoring_side: 'home', seconds_after_terminal: 8, terminal_kind: 'turnover', terminal_outcome: 'bad_pass', at: { period: 1, seconds: 80 } }],
       goalkeeper_context: { home: { total: { opponent_attempts: 7, opponent_on_target: 5, goals_conceded: 3, saves: 2, seven_meters: { attempts: 1, on_target: 1, goals: 1, saves: 0 } }, first_half: { opponent_attempts: 4, opponent_on_target: 3, goals_conceded: 2, saves: 1, seven_meters: { attempts: 0, on_target: 0, goals: 0, saves: 0 } }, second_half: { opponent_attempts: 3, opponent_on_target: 2, goals_conceded: 1, saves: 1, seven_meters: { attempts: 1, on_target: 1, goals: 1, saves: 0 } } }, away: { total: { opponent_attempts: 8, opponent_on_target: 6, goals_conceded: 4, saves: 2, seven_meters: { attempts: 0, on_target: 0, goals: 0, saves: 0 } }, first_half: { opponent_attempts: 4, opponent_on_target: 3, goals_conceded: 2, saves: 1, seven_meters: { attempts: 0, on_target: 0, goals: 0, saves: 0 } }, second_half: { opponent_attempts: 4, opponent_on_target: 3, goals_conceded: 2, saves: 1, seven_meters: { attempts: 0, on_target: 0, goals: 0, saves: 0 } } } },
     }
     expect(decodePublicReport({ ...publicReport, phase_analysis }).phase_analysis?.blocks[0].winner).toBe('home')
     expect(() => decodePublicReport({ ...publicReport, phase_analysis: { ...phase_analysis, blocks: [{ ...phase_analysis.blocks[0], raw_payload: { token: 'secret' } }] } })).toThrow('restricted field')
+  })
+  it('accepts separated team blocked-shot totals', () => {
+    const team = (name: string, side: 'home' | 'away', blocked: number) => ({ name, side, shots: 20, goals: 10, turnovers: 2, recoveries: 3, sanctions: 1, shots_on_target: 15, saves_against: 5, outside_or_woodwork: 3, blocked })
+    const result = decodePublicReport({ ...publicReport, team_summary: { home: team('S.A.P.A.', 'home', 2), away: team('Banfield B', 'away', 4) } })
+    expect(result.team_summary?.home?.blocked).toBe(2)
+    expect(result.team_summary?.away?.blocked).toBe(4)
   })
 })
