@@ -114,7 +114,9 @@
         "assists": 0,
         "turnovers": 1,
         "recoveries": 1,
-        "sanctions": 1
+        "sanctions": 1,
+        "shots_7m": 0,
+        "goals_7m": 0
       },
       "evidence": []
     },
@@ -134,7 +136,9 @@
         "assists": 0,
         "turnovers": 0,
         "recoveries": 0,
-        "sanctions": 0
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
       },
       "evidence": []
     },
@@ -154,7 +158,9 @@
         "assists": 0,
         "turnovers": 0,
         "recoveries": 1,
-        "sanctions": 0
+        "sanctions": 0,
+        "shots_7m": 1,
+        "goals_7m": 1
       },
       "evidence": []
     },
@@ -174,7 +180,9 @@
         "assists": 0,
         "turnovers": 4,
         "recoveries": 0,
-        "sanctions": 0
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
       },
       "evidence": []
     },
@@ -194,7 +202,9 @@
         "assists": 0,
         "turnovers": 0,
         "recoveries": 0,
-        "sanctions": 0
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
       },
       "evidence": []
     },
@@ -214,7 +224,9 @@
         "assists": 0,
         "turnovers": 0,
         "recoveries": 0,
-        "sanctions": 0
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
       },
       "evidence": []
     },
@@ -256,7 +268,9 @@
         "assists": 0,
         "turnovers": 2,
         "recoveries": 1,
-        "sanctions": 1
+        "sanctions": 1,
+        "shots_7m": 0,
+        "goals_7m": 0
       },
       "evidence": []
     },
@@ -276,7 +290,9 @@
         "assists": 0,
         "turnovers": 0,
         "recoveries": 1,
-        "sanctions": 0
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
       },
       "evidence": []
     },
@@ -296,7 +312,9 @@
         "assists": 0,
         "turnovers": 0,
         "recoveries": 5,
-        "sanctions": 0
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
       },
       "evidence": []
     },
@@ -316,7 +334,9 @@
         "assists": 0,
         "turnovers": 0,
         "recoveries": 2,
-        "sanctions": 1
+        "sanctions": 1,
+        "shots_7m": 0,
+        "goals_7m": 0
       },
       "evidence": []
     },
@@ -336,7 +356,9 @@
         "assists": 0,
         "turnovers": 10,
         "recoveries": 1,
-        "sanctions": 1
+        "sanctions": 1,
+        "shots_7m": 0,
+        "goals_7m": 0
       },
       "evidence": []
     },
@@ -356,7 +378,9 @@
         "assists": 0,
         "turnovers": 2,
         "recoveries": 0,
-        "sanctions": 0
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
       },
       "evidence": []
     },
@@ -376,7 +400,9 @@
         "assists": 0,
         "turnovers": 1,
         "recoveries": 0,
-        "sanctions": 3
+        "sanctions": 3,
+        "shots_7m": 1,
+        "goals_7m": 0
       },
       "evidence": []
     },
@@ -396,7 +422,9 @@
         "assists": 0,
         "turnovers": 1,
         "recoveries": 0,
-        "sanctions": 0
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
       },
       "evidence": []
     },
@@ -416,7 +444,9 @@
         "assists": 0,
         "turnovers": 1,
         "recoveries": 0,
-        "sanctions": 0
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
       },
       "evidence": []
     },
@@ -436,7 +466,9 @@
         "assists": 0,
         "turnovers": 0,
         "recoveries": 0,
-        "sanctions": 0
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
       },
       "evidence": []
     },
@@ -456,7 +488,9 @@
         "assists": 0,
         "turnovers": 0,
         "recoveries": 0,
-        "sanctions": 0
+        "sanctions": 0,
+        "shots_7m": 3,
+        "goals_7m": 3
       },
       "evidence": []
     },
@@ -476,7 +510,9 @@
         "assists": 0,
         "turnovers": 2,
         "recoveries": 0,
-        "sanctions": 0
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
       },
       "evidence": []
     },
@@ -496,7 +532,9 @@
         "assists": 0,
         "turnovers": 0,
         "recoveries": 0,
-        "sanctions": 0
+        "sanctions": 0,
+        "shots_7m": 2,
+        "goals_7m": 1
       },
       "evidence": []
     },
@@ -516,7 +554,9 @@
         "assists": 0,
         "turnovers": 2,
         "recoveries": 0,
-        "sanctions": 0
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
       },
       "evidence": []
     },
@@ -536,7 +576,9 @@
         "assists": 0,
         "turnovers": 1,
         "recoveries": 0,
-        "sanctions": 0
+        "sanctions": 0,
+        "shots_7m": 1,
+        "goals_7m": 0
       },
       "evidence": []
     },
@@ -556,7 +598,9 @@
         "assists": 0,
         "turnovers": 0,
         "recoveries": 0,
-        "sanctions": 0
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
       },
       "evidence": []
     },
@@ -576,7 +620,9 @@
         "assists": 0,
         "turnovers": 0,
         "recoveries": 0,
-        "sanctions": 0
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
       },
       "evidence": []
     },
@@ -596,7 +642,9 @@
         "assists": 0,
         "turnovers": 2,
         "recoveries": 0,
-        "sanctions": 0
+        "sanctions": 0,
+        "shots_7m": 1,
+        "goals_7m": 0
       },
       "evidence": []
     },
@@ -616,7 +664,9 @@
         "assists": 0,
         "turnovers": 0,
         "recoveries": 0,
-        "sanctions": 0
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
       },
       "evidence": []
     }
@@ -2064,6 +2114,7 @@
         "period": 1,
         "start_seconds": 0,
         "end_seconds": 600,
+        "clock_overrun_seconds": 0,
         "home": {
           "shots": 8,
           "goals": 5,
@@ -2090,6 +2141,7 @@
         "period": 1,
         "start_seconds": 600,
         "end_seconds": 1200,
+        "clock_overrun_seconds": 0,
         "home": {
           "shots": 6,
           "goals": 2,
@@ -2116,6 +2168,7 @@
         "period": 1,
         "start_seconds": 1200,
         "end_seconds": 1800,
+        "clock_overrun_seconds": 0,
         "home": {
           "shots": 6,
           "goals": 3,
@@ -2142,25 +2195,26 @@
         "period": 2,
         "start_seconds": 0,
         "end_seconds": 600,
+        "clock_overrun_seconds": 0,
         "home": {
-          "shots": 12,
-          "goals": 7,
-          "turnovers": 3,
-          "recoveries": 3,
-          "sanctions": 1,
-          "shots_on_target": 12,
-          "saves_against": 5,
+          "shots": 9,
+          "goals": 5,
+          "turnovers": 2,
+          "recoveries": 2,
+          "sanctions": 0,
+          "shots_on_target": 9,
+          "saves_against": 4,
           "outside_or_woodwork": 0
         },
         "away": {
-          "shots": 13,
-          "goals": 3,
-          "turnovers": 2,
+          "shots": 9,
+          "goals": 2,
+          "turnovers": 1,
           "recoveries": 0,
           "sanctions": 1,
-          "shots_on_target": 11,
-          "saves_against": 8,
-          "outside_or_woodwork": 2
+          "shots_on_target": 8,
+          "saves_against": 6,
+          "outside_or_woodwork": 1
         },
         "winner": "home"
       },
@@ -2168,6 +2222,7 @@
         "period": 2,
         "start_seconds": 600,
         "end_seconds": 1200,
+        "clock_overrun_seconds": 0,
         "home": {
           "shots": 12,
           "goals": 6,
@@ -2194,27 +2249,28 @@
         "period": 2,
         "start_seconds": 1200,
         "end_seconds": 1800,
+        "clock_overrun_seconds": 490,
         "home": {
-          "shots": 8,
-          "goals": 5,
-          "turnovers": 3,
-          "recoveries": 2,
-          "sanctions": 1,
-          "shots_on_target": 7,
-          "saves_against": 2,
+          "shots": 11,
+          "goals": 7,
+          "turnovers": 4,
+          "recoveries": 3,
+          "sanctions": 2,
+          "shots_on_target": 10,
+          "saves_against": 3,
           "outside_or_woodwork": 1
         },
         "away": {
-          "shots": 8,
-          "goals": 5,
-          "turnovers": 1,
+          "shots": 12,
+          "goals": 6,
+          "turnovers": 2,
           "recoveries": 0,
           "sanctions": 2,
-          "shots_on_target": 7,
-          "saves_against": 2,
-          "outside_or_woodwork": 1
+          "shots_on_target": 10,
+          "saves_against": 4,
+          "outside_or_woodwork": 2
         },
-        "winner": "draw"
+        "winner": "home"
       }
     ],
     "scoring_runs": [
@@ -2292,7 +2348,7 @@
       },
       {
         "team_side": "away",
-        "goals": 3,
+        "goals": 2,
         "start": {
           "period": 1,
           "seconds": 1729
@@ -2304,19 +2360,7 @@
       },
       {
         "team_side": "home",
-        "goals": 2,
-        "start": {
-          "period": 2,
-          "seconds": 119
-        },
-        "end": {
-          "period": 2,
-          "seconds": 136
-        }
-      },
-      {
-        "team_side": "home",
-        "goals": 6,
+        "goals": 5,
         "start": {
           "period": 2,
           "seconds": 224
@@ -2373,6 +2417,18 @@
           "period": 2,
           "seconds": 1566
         }
+      },
+      {
+        "team_side": "home",
+        "goals": 2,
+        "start": {
+          "period": 2,
+          "seconds": 1919
+        },
+        "end": {
+          "period": 2,
+          "seconds": 2090
+        }
       }
     ],
     "quick_concessions": [
@@ -2385,39 +2441,6 @@
         "at": {
           "period": 1,
           "seconds": 318
-        }
-      },
-      {
-        "conceding_side": "away",
-        "scoring_side": "home",
-        "seconds_after_terminal": 2,
-        "terminal_kind": "shot",
-        "terminal_outcome": "save",
-        "at": {
-          "period": 2,
-          "seconds": 119
-        }
-      },
-      {
-        "conceding_side": "away",
-        "scoring_side": "home",
-        "seconds_after_terminal": 4,
-        "terminal_kind": "shot",
-        "terminal_outcome": "save",
-        "at": {
-          "period": 2,
-          "seconds": 290
-        }
-      },
-      {
-        "conceding_side": "away",
-        "scoring_side": "home",
-        "seconds_after_terminal": 8,
-        "terminal_kind": "shot",
-        "terminal_outcome": "miss",
-        "at": {
-          "period": 2,
-          "seconds": 431
         }
       },
       {

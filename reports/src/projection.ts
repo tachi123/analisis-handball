@@ -41,7 +41,7 @@ export type PhaseClock = { period: number; seconds: number }
 export type GoalkeeperPhaseStats = { opponent_attempts: number; opponent_on_target: number; goals_conceded: number; saves: number; seven_meters: { attempts: number; on_target: number; goals: number; saves: number } }
 export type PhaseAnalysis = {
   block_seconds: number
-  blocks: Array<{ period: number; start_seconds: number; end_seconds: number; home: PhaseStats; away: PhaseStats; winner: 'home' | 'away' | 'draw' }>
+  blocks: Array<{ period: number; start_seconds: number; end_seconds: number; clock_overrun_seconds: number; home: PhaseStats; away: PhaseStats; winner: 'home' | 'away' | 'draw' }>
   scoring_runs: Array<{ team_side: 'home' | 'away'; goals: number; start: PhaseClock; end: PhaseClock }>
   quick_concessions: Array<{ conceding_side: 'home' | 'away'; scoring_side: 'home' | 'away'; seconds_after_terminal: number; terminal_kind: string; terminal_outcome: string; at: PhaseClock }>
   goalkeeper_context: { home: { total: GoalkeeperPhaseStats; first_half: GoalkeeperPhaseStats; second_half: GoalkeeperPhaseStats }; away: { total: GoalkeeperPhaseStats; first_half: GoalkeeperPhaseStats; second_half: GoalkeeperPhaseStats } }
@@ -315,9 +315,9 @@ export function decodePublicReport(value: unknown): PublicReport {
     }
     const blocks = raw.blocks.map((item) => {
       const entry = requiredRecord(item)
-      fields(entry, ['period', 'start_seconds', 'end_seconds', 'home', 'away', 'winner'], forbidden)
-      if (![1, 2].includes(entry.period as number) || typeof entry.start_seconds !== 'number' || typeof entry.end_seconds !== 'number' || !['home', 'away', 'draw'].includes(entry.winner as string)) throw new Error('The public report has invalid phase block.')
-      return { period: entry.period as number, start_seconds: entry.start_seconds as number, end_seconds: entry.end_seconds as number, home: stats(entry.home), away: stats(entry.away), winner: entry.winner as 'home' | 'away' | 'draw' }
+      fields(entry, ['period', 'start_seconds', 'end_seconds', 'clock_overrun_seconds', 'home', 'away', 'winner'], forbidden)
+      if (![1, 2].includes(entry.period as number) || typeof entry.start_seconds !== 'number' || typeof entry.end_seconds !== 'number' || typeof entry.clock_overrun_seconds !== 'number' || !['home', 'away', 'draw'].includes(entry.winner as string)) throw new Error('The public report has invalid phase block.')
+      return { period: entry.period as number, start_seconds: entry.start_seconds as number, end_seconds: entry.end_seconds as number, clock_overrun_seconds: entry.clock_overrun_seconds as number, home: stats(entry.home), away: stats(entry.away), winner: entry.winner as 'home' | 'away' | 'draw' }
     })
     const clock = (item: unknown): PhaseClock => {
       const entry = requiredRecord(item); fields(entry, ['period', 'seconds'], forbidden)

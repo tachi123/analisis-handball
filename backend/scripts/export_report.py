@@ -204,6 +204,8 @@ for s in squad:
         field_on_target = 0
         field_saves_against = 0
         field_outside_or_woodwork = 0
+        field_shots_7m = 0
+        field_goals_7m = 0
 
         for event in eligible_events:
             payload = event['payload']
@@ -214,9 +216,13 @@ for s in squad:
             if pid == player_id:
                 if kind == 'shot':
                     field_shots += 1
+                    if payload.get('shot_zone') == 7:
+                        field_shots_7m += 1
                     if outcome == 'goal':
                         field_goals += 1
                         field_on_target += 1
+                        if payload.get('shot_zone') == 7:
+                            field_goals_7m += 1
                     elif outcome == 'save':
                         field_on_target += 1
                         field_saves_against += 1
@@ -262,6 +268,8 @@ for s in squad:
                 'turnovers': field_turnovers,
                 'recoveries': field_recoveries,
                 'sanctions': field_sanctions,
+                'shots_7m': field_shots_7m,
+                'goals_7m': field_goals_7m,
             },
             'evidence': [],
         })
@@ -331,31 +339,38 @@ def verified_timed(event):
     payload = event['payload']
     return payload.get('period') in {1, 2} and isinstance(payload.get('regulation_seconds'), (int, float)) and not payload.get('clock_unverified')
 
-def period_elapsed_seconds(payload):
-    # Some sources store the second half on the continuous match clock; others
-    # restart it at zero. Modulo keeps both representations in their half.
-    return int(payload['regulation_seconds']) % 1800
-
 def event_reference(event):
     return 'Sequence ' + str(event.get('sequence', 1))
 
-def public_clock(payload):
-    return {'period': payload['period'], 'seconds': period_elapsed_seconds(payload)}
-
 def build_phase_analysis(events):
-    timed = sorted((event for event in events if verified_timed(event)), key=lambda event: (
-        event['payload']['period'], period_elapsed_seconds(event['payload']), event.get('sequence', 0)
+    timed_candidates = [event for event in events if verified_timed(event)]
+    baselines = {}
+    for period in (1, 2):
+        period_events = [event for event in timed_candidates if event['payload']['period'] == period]
+        kickoffs = [event for event in period_events if event['payload'].get('kind') == 'other' and event['payload'].get('outcome') == 'kickoff']
+        source = kickoffs or period_events
+        baselines[period] = min((event['payload']['regulation_seconds'] for event in source), default=0)
+
+    def elapsed(payload):
+        return max(0, int(payload['regulation_seconds'] - baselines[payload['period']]))
+
+    def public_clock(payload):
+        return {'period': payload['period'], 'seconds': elapsed(payload)}
+
+    timed = sorted(timed_candidates, key=lambda event: (
+        event['payload']['period'], elapsed(event['payload']), event.get('sequence', 0)
     ))
     blocks = []
     for period in (1, 2):
         for block_index in range(3):
             start_seconds = block_index * 600
             end_seconds = start_seconds + 600
-            within = [event for event in timed if event['payload']['period'] == period and start_seconds <= period_elapsed_seconds(event['payload']) < end_seconds]
+            within = [event for event in timed if event['payload']['period'] == period and start_seconds <= elapsed(event['payload']) and (block_index == 2 or elapsed(event['payload']) < end_seconds)]
             home = team_stats([event for event in within if public_side(event['payload']) == 'home'])
             away = team_stats([event for event in within if public_side(event['payload']) == 'away'])
             winner = 'draw' if home['goals'] == away['goals'] else ('home' if home['goals'] > away['goals'] else 'away')
-            blocks.append({'period': period, 'start_seconds': start_seconds, 'end_seconds': end_seconds, 'home': home, 'away': away, 'winner': winner})
+            overrun = max((elapsed(event['payload']) for event in within), default=end_seconds) - end_seconds if block_index == 2 else 0
+            blocks.append({'period': period, 'start_seconds': start_seconds, 'end_seconds': end_seconds, 'clock_overrun_seconds': max(0, overrun), 'home': home, 'away': away, 'winner': winner})
 
     def scoring_run_entry(goals, side):
         return {'team_side': side, 'goals': len(goals), 'start': public_clock(goals[0]['payload']), 'end': public_clock(goals[-1]['payload'])}
@@ -381,7 +396,7 @@ def build_phase_analysis(events):
     terminals = {'shot', 'turnover'}
     for previous, following in zip(timed, timed[1:]):
         before, after = previous['payload'], following['payload']
-        delta = period_elapsed_seconds(after) - period_elapsed_seconds(before)
+        delta = elapsed(after) - elapsed(before)
         if before['period'] != after['period'] or delta < 0 or delta > 10:
             continue
         if before.get('kind') not in terminals or after.get('kind') != 'shot' or after.get('outcome') != 'goal':

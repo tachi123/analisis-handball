@@ -75,7 +75,7 @@ function PhaseDashboard({ report, selectedBlock, onSelectBlock, playerSlug }: { 
       <div className="phase-flow" aria-label="Evolución por bloques de diez minutos">{blockRows.map(({ block, homeTotal, awayTotal }) => { const winner = block.winner === 'draw' ? 'draw' : block.winner; return <article className={`phase-flow-card ${winner}`} key={`flow-${blockKey(block.period, block.start_seconds)}`}><small>{blockLabel(block.period, block.start_seconds, block.end_seconds)}</small><strong>{block.home.goals}–{block.away.goals}</strong><span>{winner === 'draw' ? 'Empate' : `${winner === 'home' ? homeName : awayName} +${Math.abs(block.home.goals - block.away.goals)}`}</span><b>{homeTotal.goals}–{awayTotal.goals}</b></article> })}</div>
       <div className="table-wrap"><table className="player-table phase-table"><thead><tr><th>Tramo</th><th>Qué pasó en estos 10 minutos</th><th>Cómo quedó el partido</th></tr></thead><tbody>{blockRows.map(({ block, homeTotal, awayTotal }) => {
         const key = blockKey(block.period, block.start_seconds); const winner = block.winner === 'draw' ? 'Empate' : block.winner === 'home' ? homeName : awayName
-        return <tr key={key} className={selectedBlock === key ? 'selected' : ''} onClick={() => onSelectBlock(selectedBlock === key ? null : key)}><td><strong>{blockLabel(block.period, block.start_seconds, block.end_seconds)}</strong></td><td><strong>{winner === 'Empate' ? `Empate ${block.home.goals}–${block.away.goals}` : `${winner} ganó ${block.home.goals}–${block.away.goals}`}</strong><small>{homeName}: {block.home.shots} tiros · {pct(block.home.goals, block.home.shots)} · {block.home.turnovers} pérdidas</small><small>{awayName}: {block.away.shots} tiros · {pct(block.away.goals, block.away.shots)} · {block.away.turnovers} pérdidas</small></td><td><strong>{homeTotal.goals}–{awayTotal.goals}</strong><small>{homeName}: {homeTotal.shots} tiros · {pct(homeTotal.goals, homeTotal.shots)} · {homeTotal.turnovers} pérdidas</small><small>{awayName}: {awayTotal.shots} tiros · {pct(awayTotal.goals, awayTotal.shots)} · {awayTotal.turnovers} pérdidas</small></td></tr>
+        return <tr key={key} className={selectedBlock === key ? 'selected' : ''} onClick={() => onSelectBlock(selectedBlock === key ? null : key)}><td><strong>{blockLabel(block.period, block.start_seconds, block.end_seconds)}</strong>{block.clock_overrun_seconds > 0 && <small>Incluye +{Math.ceil(block.clock_overrun_seconds / 60)} min de reloj</small>}</td><td><strong>{winner === 'Empate' ? `Empate ${block.home.goals}–${block.away.goals}` : `${winner} ganó ${block.home.goals}–${block.away.goals}`}</strong><small>{homeName}: {block.home.shots} tiros · {pct(block.home.goals, block.home.shots)} · {block.home.turnovers} pérdidas</small><small>{awayName}: {block.away.shots} tiros · {pct(block.away.goals, block.away.shots)} · {block.away.turnovers} pérdidas</small></td><td><strong>{homeTotal.goals}–{awayTotal.goals}</strong><small>{homeName}: {homeTotal.shots} tiros · {pct(homeTotal.goals, homeTotal.shots)} · {homeTotal.turnovers} pérdidas</small><small>{awayName}: {awayTotal.shots} tiros · {pct(awayTotal.goals, awayTotal.shots)} · {awayTotal.turnovers} pérdidas</small></td></tr>
       })}</tbody></table></div>
       {selected && <div className="selected-panel"><strong>{blockLabel(selected.period, selected.start_seconds, selected.end_seconds)}</strong><span>{homeName}: {selected.home.recoveries} recuperaciones · {awayName}: {selected.away.recoveries} recuperaciones</span>{playerSlug !== 'all' && <span>Jugador seleccionado: {playerEvents.filter((event) => event.outcome === 'Gol').length} goles, {playerEvents.filter((event) => event.event_kind === 'shot').length} tiros y {playerEvents.filter((event) => event.event_kind === 'turnover').length} pérdidas en este tramo.</span>}</div>}
     </section>
@@ -314,6 +314,7 @@ const [selectedIncidentRef, setSelectedIncidentRef] = useState<{ reference: stri
             <th>Al arco</th>
             <th>Goles</th>
             <th>Efic.</th>
+            <th>7 m</th>
             <th>Atajadas rival</th>
             <th>Afuera / palo</th>
             <th>Pérdidas</th>
@@ -328,6 +329,7 @@ const [selectedIncidentRef, setSelectedIncidentRef] = useState<{ reference: stri
               <td>{n(player.metrics.shots_on_target)}</td>
               <td>{n(player.metrics.goals)}</td>
               <td>{pct(n(player.metrics.goals), n(player.metrics.shots))}</td>
+              <td>{n(player.metrics.shots_7m) ? `${n(player.metrics.goals_7m)}/${n(player.metrics.shots_7m)} · ${pct(n(player.metrics.goals_7m), n(player.metrics.shots_7m))}` : '—'}</td>
               <td>{n(player.metrics.saves_against)}</td>
               <td>{n(player.metrics.outside_or_woodwork)}</td>
               <td>{n(player.metrics.turnovers)}</td>
@@ -341,6 +343,7 @@ const [selectedIncidentRef, setSelectedIncidentRef] = useState<{ reference: stri
       <div className="selected-panel">
         <strong>{playerLabel(selected)}</strong>
         <span>{n(selected.metrics.goals)} goles / {n(selected.metrics.shots)} tiros · {pct(n(selected.metrics.goals), n(selected.metrics.shots))} eficacia</span>
+        {n(selected.metrics.shots_7m) > 0 && <span>7 metros: {n(selected.metrics.goals_7m)}/{n(selected.metrics.shots_7m)} · {pct(n(selected.metrics.goals_7m), n(selected.metrics.shots_7m))}</span>}
       </div>
     )}
     </section>
