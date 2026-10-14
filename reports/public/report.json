@@ -1941,6 +1941,389 @@
       "outside_or_woodwork": 6
     }
   },
+  "phase_analysis": {
+    "block_seconds": 600,
+    "blocks": [
+      {
+        "period": 1,
+        "start_seconds": 0,
+        "end_seconds": 600,
+        "home": {
+          "shots": 16,
+          "goals": 9,
+          "turnovers": 2,
+          "recoveries": 1,
+          "sanctions": 0,
+          "shots_on_target": 15,
+          "saves_against": 6,
+          "outside_or_woodwork": 1
+        },
+        "away": {
+          "shots": 11,
+          "goals": 9,
+          "turnovers": 5,
+          "recoveries": 0,
+          "sanctions": 2,
+          "shots_on_target": 10,
+          "saves_against": 1,
+          "outside_or_woodwork": 1
+        },
+        "winner": "draw"
+      },
+      {
+        "period": 1,
+        "start_seconds": 600,
+        "end_seconds": 1200,
+        "home": {
+          "shots": 5,
+          "goals": 3,
+          "turnovers": 4,
+          "recoveries": 0,
+          "sanctions": 0,
+          "shots_on_target": 5,
+          "saves_against": 2,
+          "outside_or_woodwork": 0
+        },
+        "away": {
+          "shots": 6,
+          "goals": 5,
+          "turnovers": 3,
+          "recoveries": 0,
+          "sanctions": 0,
+          "shots_on_target": 5,
+          "saves_against": 0,
+          "outside_or_woodwork": 1
+        },
+        "winner": "away"
+      },
+      {
+        "period": 1,
+        "start_seconds": 1200,
+        "end_seconds": 1800,
+        "home": {
+          "shots": 9,
+          "goals": 1,
+          "turnovers": 1,
+          "recoveries": 1,
+          "sanctions": 0,
+          "shots_on_target": 7,
+          "saves_against": 6,
+          "outside_or_woodwork": 2
+        },
+        "away": {
+          "shots": 7,
+          "goals": 3,
+          "turnovers": 3,
+          "recoveries": 0,
+          "sanctions": 0,
+          "shots_on_target": 6,
+          "saves_against": 3,
+          "outside_or_woodwork": 1
+        },
+        "winner": "away"
+      },
+      {
+        "period": 2,
+        "start_seconds": 0,
+        "end_seconds": 600,
+        "home": {
+          "shots": 17,
+          "goals": 8,
+          "turnovers": 2,
+          "recoveries": 2,
+          "sanctions": 1,
+          "shots_on_target": 15,
+          "saves_against": 7,
+          "outside_or_woodwork": 2
+        },
+        "away": {
+          "shots": 13,
+          "goals": 5,
+          "turnovers": 4,
+          "recoveries": 0,
+          "sanctions": 0,
+          "shots_on_target": 11,
+          "saves_against": 6,
+          "outside_or_woodwork": 2
+        },
+        "winner": "home"
+      },
+      {
+        "period": 2,
+        "start_seconds": 600,
+        "end_seconds": 1200,
+        "home": {
+          "shots": 9,
+          "goals": 5,
+          "turnovers": 2,
+          "recoveries": 1,
+          "sanctions": 0,
+          "shots_on_target": 8,
+          "saves_against": 3,
+          "outside_or_woodwork": 1
+        },
+        "away": {
+          "shots": 6,
+          "goals": 3,
+          "turnovers": 2,
+          "recoveries": 0,
+          "sanctions": 0,
+          "shots_on_target": 6,
+          "saves_against": 3,
+          "outside_or_woodwork": 0
+        },
+        "winner": "home"
+      },
+      {
+        "period": 2,
+        "start_seconds": 1200,
+        "end_seconds": 1800,
+        "home": {
+          "shots": 12,
+          "goals": 5,
+          "turnovers": 2,
+          "recoveries": 2,
+          "sanctions": 0,
+          "shots_on_target": 11,
+          "saves_against": 6,
+          "outside_or_woodwork": 0
+        },
+        "away": {
+          "shots": 9,
+          "goals": 6,
+          "turnovers": 2,
+          "recoveries": 0,
+          "sanctions": 0,
+          "shots_on_target": 8,
+          "saves_against": 2,
+          "outside_or_woodwork": 1
+        },
+        "winner": "away"
+      }
+    ],
+    "scoring_runs": [
+      {
+        "team_side": "home",
+        "goals": 2,
+        "start_reference": "Sequence 5",
+        "end_reference": "Sequence 73"
+      },
+      {
+        "team_side": "away",
+        "goals": 2,
+        "start_reference": "Sequence 6",
+        "end_reference": "Sequence 8"
+      },
+      {
+        "team_side": "away",
+        "goals": 2,
+        "start_reference": "Sequence 25",
+        "end_reference": "Sequence 27"
+      },
+      {
+        "team_side": "away",
+        "goals": 3,
+        "start_reference": "Sequence 29",
+        "end_reference": "Sequence 35"
+      },
+      {
+        "team_side": "away",
+        "goals": 2,
+        "start_reference": "Sequence 55",
+        "end_reference": "Sequence 67"
+      },
+      {
+        "team_side": "home",
+        "goals": 2,
+        "start_reference": "Sequence 162",
+        "end_reference": "Sequence 94"
+      },
+      {
+        "team_side": "away",
+        "goals": 2,
+        "start_reference": "Sequence 165",
+        "end_reference": "Sequence 97"
+      },
+      {
+        "team_side": "home",
+        "goals": 4,
+        "start_reference": "Sequence 98",
+        "end_reference": "Sequence 102"
+      },
+      {
+        "team_side": "home",
+        "goals": 3,
+        "start_reference": "Sequence 108",
+        "end_reference": "Sequence 115"
+      },
+      {
+        "team_side": "away",
+        "goals": 2,
+        "start_reference": "Sequence 116",
+        "end_reference": "Sequence 118"
+      },
+      {
+        "team_side": "home",
+        "goals": 2,
+        "start_reference": "Sequence 119",
+        "end_reference": "Sequence 125"
+      },
+      {
+        "team_side": "away",
+        "goals": 4,
+        "start_reference": "Sequence 133",
+        "end_reference": "Sequence 142"
+      },
+      {
+        "team_side": "home",
+        "goals": 2,
+        "start_reference": "Sequence 148",
+        "end_reference": "Sequence 150"
+      }
+    ],
+    "quick_concessions": [
+      {
+        "conceding_side": "home",
+        "scoring_side": "away",
+        "seconds_after_terminal": 9,
+        "terminal_kind": "shot",
+        "terminal_outcome": "goal",
+        "terminal_reference": "Sequence 68",
+        "goal_reference": "Sequence 69"
+      },
+      {
+        "conceding_side": "home",
+        "scoring_side": "away",
+        "seconds_after_terminal": 6,
+        "terminal_kind": "shot",
+        "terminal_outcome": "save",
+        "terminal_reference": "Sequence 7",
+        "goal_reference": "Sequence 8"
+      },
+      {
+        "conceding_side": "home",
+        "scoring_side": "away",
+        "seconds_after_terminal": 6,
+        "terminal_kind": "shot",
+        "terminal_outcome": "goal",
+        "terminal_reference": "Sequence 77",
+        "goal_reference": "Sequence 78"
+      },
+      {
+        "conceding_side": "home",
+        "scoring_side": "away",
+        "seconds_after_terminal": 6,
+        "terminal_kind": "turnover",
+        "terminal_outcome": "offensive_foul",
+        "terminal_reference": "Sequence 26",
+        "goal_reference": "Sequence 27"
+      },
+      {
+        "conceding_side": "home",
+        "scoring_side": "away",
+        "seconds_after_terminal": 10,
+        "terminal_kind": "turnover",
+        "terminal_outcome": "steal",
+        "terminal_reference": "Sequence 32",
+        "goal_reference": "Sequence 33"
+      },
+      {
+        "conceding_side": "home",
+        "scoring_side": "away",
+        "seconds_after_terminal": 5,
+        "terminal_kind": "turnover",
+        "terminal_outcome": "walking",
+        "terminal_reference": "Sequence 34",
+        "goal_reference": "Sequence 35"
+      },
+      {
+        "conceding_side": "away",
+        "scoring_side": "home",
+        "seconds_after_terminal": 6,
+        "terminal_kind": "shot",
+        "terminal_outcome": "save",
+        "terminal_reference": "Sequence 53",
+        "goal_reference": "Sequence 54"
+      },
+      {
+        "conceding_side": "home",
+        "scoring_side": "away",
+        "seconds_after_terminal": 6,
+        "terminal_kind": "shot",
+        "terminal_outcome": "save",
+        "terminal_reference": "Sequence 90",
+        "goal_reference": "Sequence 91"
+      },
+      {
+        "conceding_side": "away",
+        "scoring_side": "home",
+        "seconds_after_terminal": 1,
+        "terminal_kind": "shot",
+        "terminal_outcome": "goal",
+        "terminal_reference": "Sequence 91",
+        "goal_reference": "Sequence 162"
+      },
+      {
+        "conceding_side": "away",
+        "scoring_side": "home",
+        "seconds_after_terminal": 6,
+        "terminal_kind": "turnover",
+        "terminal_outcome": "bad_pass",
+        "terminal_reference": "Sequence 93",
+        "goal_reference": "Sequence 94"
+      },
+      {
+        "conceding_side": "away",
+        "scoring_side": "home",
+        "seconds_after_terminal": 10,
+        "terminal_kind": "shot",
+        "terminal_outcome": "miss",
+        "terminal_reference": "Sequence 99",
+        "goal_reference": "Sequence 100"
+      },
+      {
+        "conceding_side": "away",
+        "scoring_side": "home",
+        "seconds_after_terminal": 9,
+        "terminal_kind": "shot",
+        "terminal_outcome": "save",
+        "terminal_reference": "Sequence 167",
+        "goal_reference": "Sequence 168"
+      },
+      {
+        "conceding_side": "home",
+        "scoring_side": "away",
+        "seconds_after_terminal": 3,
+        "terminal_kind": "turnover",
+        "terminal_outcome": "bad_reception",
+        "terminal_reference": "Sequence 134",
+        "goal_reference": "Sequence 135"
+      },
+      {
+        "conceding_side": "away",
+        "scoring_side": "home",
+        "seconds_after_terminal": 6,
+        "terminal_kind": "turnover",
+        "terminal_outcome": "bad_pass",
+        "terminal_reference": "Sequence 147",
+        "goal_reference": "Sequence 148"
+      }
+    ],
+    "goalkeeper_context": {
+      "home": {
+        "opponent_attempts": 52,
+        "opponent_on_target": 46,
+        "goals_conceded": 31,
+        "saves": 15
+      },
+      "away": {
+        "opponent_attempts": 68,
+        "opponent_on_target": 61,
+        "goals_conceded": 31,
+        "saves": 30
+      }
+    }
+  },
   "incidents": [
     {
       "reference": "Sequence 1",

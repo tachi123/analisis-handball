@@ -45,6 +45,30 @@ function TeamDashboard({ report }: { report: PublicReport }) {
 </section>
 }
 
+const blockKey = (period: number, startSeconds: number) => `${period}-${startSeconds}`
+const blockLabel = (period: number, startSeconds: number, endSeconds: number) => `P${period} · ${Math.floor(startSeconds / 60)}–${Math.floor(endSeconds / 60)}’`
+
+function PhaseDashboard({ report, selectedBlock, onSelectBlock, playerSlug }: { report: PublicReport; selectedBlock: string | null; onSelectBlock: (key: string | null) => void; playerSlug: string }) {
+  const analysis = report.phase_analysis
+  if (!analysis) return null
+  const selected = analysis.blocks.find((block) => blockKey(block.period, block.start_seconds) === selectedBlock) ?? null
+  const playerEvents = selected && playerSlug !== 'all' ? report.incidents.filter((incident) => incident.player_slug === playerSlug && incident.period === selected.period && incident.regulation_seconds !== null && !incident.clock_unverified && (incident.regulation_seconds % 1800) >= selected.start_seconds && (incident.regulation_seconds % 1800) < selected.end_seconds) : []
+  const homeName = report.match.home_team ?? 'Local'
+  const awayName = report.match.away_team ?? 'Visitante'
+  return <>
+    <section className="dashboard-section" aria-labelledby="phase-analysis-title">
+      <div className="section-heading"><div><p className="eyebrow">Fase 1</p><h2 id="phase-analysis-title">Mini-partidos de 10 minutos</h2></div><small>Goles, eficacia y pérdidas por tramo verificado</small></div>
+      <div className="table-wrap"><table className="player-table phase-table"><thead><tr><th>Tramo</th><th>{homeName}</th><th>{awayName}</th><th>Ganó el tramo</th></tr></thead><tbody>{analysis.blocks.map((block) => {
+        const key = blockKey(block.period, block.start_seconds); const winner = block.winner === 'draw' ? 'Empate' : block.winner === 'home' ? homeName : awayName
+        return <tr key={key} className={selectedBlock === key ? 'selected' : ''} onClick={() => onSelectBlock(selectedBlock === key ? null : key)}><td><strong>{blockLabel(block.period, block.start_seconds, block.end_seconds)}</strong></td><td>{block.home.goals}–{block.home.shots} · {pct(block.home.goals, block.home.shots)}<small> {block.home.turnovers} pérdidas</small></td><td>{block.away.goals}–{block.away.shots} · {pct(block.away.goals, block.away.shots)}<small> {block.away.turnovers} pérdidas</small></td><td>{winner}</td></tr>
+      })}</tbody></table></div>
+      {selected && <div className="selected-panel"><strong>{blockLabel(selected.period, selected.start_seconds, selected.end_seconds)}</strong><span>{homeName}: {selected.home.recoveries} recuperaciones · {awayName}: {selected.away.recoveries} recuperaciones</span>{playerSlug !== 'all' && <span>Jugador seleccionado: {playerEvents.filter((event) => event.outcome === 'Gol').length} goles, {playerEvents.filter((event) => event.event_kind === 'shot').length} tiros y {playerEvents.filter((event) => event.event_kind === 'turnover').length} pérdidas en este tramo.</span>}</div>}
+    </section>
+    <section className="dashboard-section"><div className="section-heading"><div><p className="eyebrow">Arqueros</p><h2>Presión rival y respuesta</h2></div><small>Intentos rivales, tiros al arco y goles recibidos</small></div><div className="keeper-grid">{(['home', 'away'] as const).map((side) => { const context = analysis.goalkeeper_context[side]; const team = side === 'home' ? homeName : awayName; return <article className="keeper-card" key={side}><span>DEFENSA · {team}</span><strong>{context.saves} atajadas · {pct(context.saves, context.opponent_on_target)}</strong><p>{context.opponent_attempts} intentos rivales · {context.opponent_on_target} al arco · {context.goals_conceded} goles recibidos</p><small>Eficacia rival total: {pct(context.goals_conceded, context.opponent_attempts)} · sobre tiros al arco: {pct(context.goals_conceded, context.opponent_on_target)}</small></article>})}</div></section>
+    <section className="dashboard-section"><div className="section-heading"><div><p className="eyebrow">Momentos</p><h2>Rachas y concesiones rápidas</h2></div><small>Secuencias observadas, no causas tácticas inferidas</small></div><div className="phase-insights"><article><h3>Rachas de gol</h3>{analysis.scoring_runs.length ? <ul>{analysis.scoring_runs.map((run) => <li key={`${run.start_reference}-${run.end_reference}`}>{run.team_side === 'home' ? homeName : awayName}: {run.goals} goles seguidos · {run.start_reference} a {run.end_reference}</li>)}</ul> : <p>Sin rachas de dos o más goles.</p>}</article><article><h3>Gol rival dentro de 10 segundos</h3>{analysis.quick_concessions.length ? <ul>{analysis.quick_concessions.map((item) => <li key={`${item.terminal_reference}-${item.goal_reference}`}>{item.conceding_side === 'home' ? homeName : awayName} recibió gol {item.seconds_after_terminal}s después de {item.terminal_kind === 'turnover' ? 'una pérdida' : 'una finalización'}.</li>)}</ul> : <p>Sin secuencias inmediatas verificadas.</p>}<small>No equivale a “error de repliegue”; esa causa requiere observación explícita.</small></article></div></section>
+  </>
+}
+
 type IncidentCardProps = {
   incident: PublicReport['incidents'][number]
   videoSeconds: number | null
@@ -169,6 +193,7 @@ export default function App() {
   const [catalog, setCatalog] = useState<PublicReportCatalog | null>(null)
   const [catalogLoaded, setCatalogLoaded] = useState(false)
   const [selectedReportKey, setSelectedReportKey] = useState<string | null>(null)
+  const [selectedBlock, setSelectedBlock] = useState<string | null>(null)
   const [playerSlug, setPlayerSlug] = useState('all')
 const [kind, setKind] = useState('all')
 const [team, setTeam] = useState<'all' | 'home' | 'away'>('all')
@@ -216,6 +241,7 @@ const [selectedIncidentRef, setSelectedIncidentRef] = useState<{ reference: stri
       setTeam('all')
       setVideoSeconds(null)
       setSelectedIncidentRef(null)
+      setSelectedBlock(null)
     })
   }
 
@@ -250,6 +276,7 @@ const [selectedIncidentRef, setSelectedIncidentRef] = useState<{ reference: stri
   return <main className="report-shell" aria-labelledby="report-header">
     <header className="hero"><p className="eyebrow">Informe de partido</p><div className="match-line"><h1 id="report-header">{report.match.home_team} <span>vs</span> {report.match.away_team}</h1>{catalog && catalog.reports.length > 1 && <select aria-label="Seleccionar partido" value={selectedReportKey ?? ''} onChange={(event) => selectReport(event.target.value)}>{catalog.reports.map((entry) => <option key={entry.key} value={entry.key}>{reportLabel(entry)}</option>)}</select>}</div><p>{report.coverage?.label ?? 'Cobertura del análisis no especificada'}</p>{report.coverage?.status === 'partial' && <strong className="coverage-badge">Análisis parcial · sólo períodos cargados</strong>}{report.video && <a className="video-link" href={`https://www.youtube.com/watch?v=${report.video.video_id}`} target="_blank" rel="noreferrer">▶ Abrir video del partido</a>}</header>
     <TeamDashboard report={report} />
+    <PhaseDashboard report={report} selectedBlock={selectedBlock} onSelectBlock={setSelectedBlock} playerSlug={playerSlug} />
     <Timeline report={report} onSeek={handleMarkerClick} />
     <section className="dashboard-section">
       <div className="section-heading">

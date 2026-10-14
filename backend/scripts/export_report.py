@@ -323,6 +323,74 @@ def team_stats(events):
             sanctions += 1
     return {'shots': shots, 'goals': goals, 'turnovers': turnovers, 'recoveries': recoveries, 'sanctions': sanctions, 'shots_on_target': shots_on_target, 'saves_against': saves_against, 'outside_or_woodwork': outside_or_woodwork}
 
+def public_side(payload):
+    team_id = payload.get('team_id')
+    return 'home' if team_id == match.home_team_id else ('away' if team_id == match.away_team_id else 'unknown')
+
+def verified_timed(event):
+    payload = event['payload']
+    return payload.get('period') in {1, 2} and isinstance(payload.get('regulation_seconds'), (int, float)) and not payload.get('clock_unverified')
+
+def period_elapsed_seconds(payload):
+    # Some sources store the second half on the continuous match clock; others
+    # restart it at zero. Modulo keeps both representations in their half.
+    return int(payload['regulation_seconds']) % 1800
+
+def event_reference(event):
+    return 'Sequence ' + str(event.get('sequence', 1))
+
+def build_phase_analysis(events):
+    timed = sorted((event for event in events if verified_timed(event)), key=lambda event: (
+        event['payload']['period'], period_elapsed_seconds(event['payload']), event.get('sequence', 0)
+    ))
+    blocks = []
+    for period in (1, 2):
+        for block_index in range(3):
+            start_seconds = block_index * 600
+            end_seconds = start_seconds + 600
+            within = [event for event in timed if event['payload']['period'] == period and start_seconds <= period_elapsed_seconds(event['payload']) < end_seconds]
+            home = team_stats([event for event in within if public_side(event['payload']) == 'home'])
+            away = team_stats([event for event in within if public_side(event['payload']) == 'away'])
+            winner = 'draw' if home['goals'] == away['goals'] else ('home' if home['goals'] > away['goals'] else 'away')
+            blocks.append({'period': period, 'start_seconds': start_seconds, 'end_seconds': end_seconds, 'home': home, 'away': away, 'winner': winner})
+
+    scoring_runs = []
+    current_side = None
+    current_goals = []
+    for event in timed:
+        payload = event['payload']
+        if payload.get('kind') != 'shot' or payload.get('outcome') != 'goal' or public_side(payload) == 'unknown':
+            continue
+        side = public_side(payload)
+        if side != current_side:
+            if len(current_goals) >= 2:
+                scoring_runs.append({'team_side': current_side, 'goals': len(current_goals), 'start_reference': event_reference(current_goals[0]), 'end_reference': event_reference(current_goals[-1])})
+            current_side, current_goals = side, [event]
+        else:
+            current_goals.append(event)
+    if len(current_goals) >= 2:
+        scoring_runs.append({'team_side': current_side, 'goals': len(current_goals), 'start_reference': event_reference(current_goals[0]), 'end_reference': event_reference(current_goals[-1])})
+
+    quick_concessions = []
+    terminals = {'shot', 'turnover'}
+    for previous, following in zip(timed, timed[1:]):
+        before, after = previous['payload'], following['payload']
+        delta = period_elapsed_seconds(after) - period_elapsed_seconds(before)
+        if before['period'] != after['period'] or delta < 0 or delta > 10:
+            continue
+        if before.get('kind') not in terminals or after.get('kind') != 'shot' or after.get('outcome') != 'goal':
+            continue
+        from_side, scored_side = public_side(before), public_side(after)
+        if from_side == 'unknown' or scored_side == 'unknown' or from_side == scored_side:
+            continue
+        quick_concessions.append({'conceding_side': from_side, 'scoring_side': scored_side, 'seconds_after_terminal': delta, 'terminal_kind': before.get('kind'), 'terminal_outcome': before.get('outcome'), 'terminal_reference': event_reference(previous), 'goal_reference': event_reference(following)})
+
+    goalkeeper_context = {
+        'home': {'opponent_attempts': away_stats['shots'], 'opponent_on_target': away_stats['shots_on_target'], 'goals_conceded': away_stats['goals'], 'saves': away_stats['saves_against']},
+        'away': {'opponent_attempts': home_stats['shots'], 'opponent_on_target': home_stats['shots_on_target'], 'goals_conceded': home_stats['goals'], 'saves': home_stats['saves_against']},
+    }
+    return {'block_seconds': 600, 'blocks': blocks, 'scoring_runs': scoring_runs, 'quick_concessions': quick_concessions, 'goalkeeper_context': goalkeeper_context}
+
 home_stats = team_stats(home_eligible)
 away_stats = team_stats(away_eligible)
 
@@ -338,6 +406,8 @@ team_summary = {
         **away_stats,
     },
 }
+
+phase_analysis = build_phase_analysis(eligible_events)
 
 # ── Build incidents ──────────────────────────────────────────────────
 # Incidents are chronological, period-separated events with public-safe data
@@ -437,6 +507,7 @@ package_dict = {
     'evidence': evidence_rows,
     'players': players_data,
     'team_summary': team_summary,
+    'phase_analysis': phase_analysis,
     'incidents': incidents,
     'video': public_video,
 }
@@ -507,6 +578,7 @@ report = {
     'evidence': evidence_items,
     'coverage': coverage,
     'team_summary': team_summary,
+    'phase_analysis': phase_analysis,
     'incidents': incidents,
     'video': public_video,
 }

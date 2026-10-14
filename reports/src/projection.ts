@@ -36,6 +36,15 @@ export type Incident = {
   video_seconds: number | null
 }
 
+export type PhaseStats = Omit<TeamSummary, 'name' | 'side'>
+export type PhaseAnalysis = {
+  block_seconds: number
+  blocks: Array<{ period: number; start_seconds: number; end_seconds: number; home: PhaseStats; away: PhaseStats; winner: 'home' | 'away' | 'draw' }>
+  scoring_runs: Array<{ team_side: 'home' | 'away'; goals: number; start_reference: string; end_reference: string }>
+  quick_concessions: Array<{ conceding_side: 'home' | 'away'; scoring_side: 'home' | 'away'; seconds_after_terminal: number; terminal_kind: string; terminal_outcome: string; terminal_reference: string; goal_reference: string }>
+  goalkeeper_context: { home: { opponent_attempts: number; opponent_on_target: number; goals_conceded: number; saves: number }; away: { opponent_attempts: number; opponent_on_target: number; goals_conceded: number; saves: number } }
+}
+
 export type PublicReport = {
   schema_version: 'public-report-v1'
   report_version: number
@@ -51,6 +60,7 @@ export type PublicReport = {
   team_summary: { home: TeamSummary | null; away: TeamSummary | null } | null
   incidents: Array<Incident>
   video: { provider: 'youtube'; video_id: string; availability: string } | null
+  phase_analysis: PhaseAnalysis | null
 }
 
 const forbidden = /^(private_note|raw_events?|analysis_event_id|credentials?|api_?key|token|database|local_database|operational_api_url)$/i
@@ -103,7 +113,7 @@ function decodeEvidence(value: unknown, allowedNames: string[]) {
 export function decodePublicReport(value: unknown): PublicReport {
   if (!isRecord(value)) throw new Error('The public report is not a JSON object.')
   // Validate root allowlist
-  const rootAllowed = ['schema_version', 'report_version', 'match', 'source', 'coaching', 'metrics', 'players', 'reconciliation', 'uncertainty_disclosure', 'coverage', 'evidence', 'team_summary', 'incidents', 'video']
+  const rootAllowed = ['schema_version', 'report_version', 'match', 'source', 'coaching', 'metrics', 'players', 'reconciliation', 'uncertainty_disclosure', 'coverage', 'evidence', 'team_summary', 'incidents', 'video', 'phase_analysis']
   fields(value as Record<string, unknown>, rootAllowed, forbidden)
   if (value.schema_version !== 'public-report-v1' || typeof value.report_version !== 'number') throw new Error('Unsupported public report version.')
   const match = requiredRecord(value.match)
@@ -286,6 +296,44 @@ export function decodePublicReport(value: unknown): PublicReport {
       video = { provider: 'youtube', video_id: value.video.video_id, availability: value.video.availability }
     } else throw new Error('The public report has invalid video data.')
   }
+  let phase_analysis: PublicReport['phase_analysis'] = null
+  if (isRecord(value.phase_analysis)) {
+    const raw = value.phase_analysis
+    fields(raw, ['block_seconds', 'blocks', 'scoring_runs', 'quick_concessions', 'goalkeeper_context'], forbidden)
+    if (raw.block_seconds !== 600 || !Array.isArray(raw.blocks) || !Array.isArray(raw.scoring_runs) || !Array.isArray(raw.quick_concessions) || !isRecord(raw.goalkeeper_context)) throw new Error('The public report has invalid phase analysis.')
+    const stats = (item: unknown): PhaseStats => {
+      const entry = requiredRecord(item)
+      fields(entry, ['shots', 'goals', 'turnovers', 'recoveries', 'sanctions', 'shots_on_target', 'saves_against', 'outside_or_woodwork'], forbidden)
+      const result = {} as PhaseStats
+      for (const key of ['shots', 'goals', 'turnovers', 'recoveries', 'sanctions', 'shots_on_target', 'saves_against', 'outside_or_woodwork'] as const) {
+        if (typeof entry[key] !== 'number') throw new Error('The public report has invalid phase metrics.')
+        result[key] = entry[key] as never
+      }
+      return result
+    }
+    const blocks = raw.blocks.map((item) => {
+      const entry = requiredRecord(item)
+      fields(entry, ['period', 'start_seconds', 'end_seconds', 'home', 'away', 'winner'], forbidden)
+      if (![1, 2].includes(entry.period as number) || typeof entry.start_seconds !== 'number' || typeof entry.end_seconds !== 'number' || !['home', 'away', 'draw'].includes(entry.winner as string)) throw new Error('The public report has invalid phase block.')
+      return { period: entry.period as number, start_seconds: entry.start_seconds as number, end_seconds: entry.end_seconds as number, home: stats(entry.home), away: stats(entry.away), winner: entry.winner as 'home' | 'away' | 'draw' }
+    })
+    const scoring_runs = raw.scoring_runs.map((item) => {
+      const entry = requiredRecord(item); fields(entry, ['team_side', 'goals', 'start_reference', 'end_reference'], forbidden)
+      if (!['home', 'away'].includes(entry.team_side as string) || typeof entry.goals !== 'number' || !isString(entry.start_reference) || !isString(entry.end_reference)) throw new Error('The public report has invalid scoring run.')
+      return { team_side: entry.team_side as 'home' | 'away', goals: entry.goals as number, start_reference: entry.start_reference as string, end_reference: entry.end_reference as string }
+    })
+    const quick_concessions = raw.quick_concessions.map((item) => {
+      const entry = requiredRecord(item); fields(entry, ['conceding_side', 'scoring_side', 'seconds_after_terminal', 'terminal_kind', 'terminal_outcome', 'terminal_reference', 'goal_reference'], forbidden)
+      if (!['home', 'away'].includes(entry.conceding_side as string) || !['home', 'away'].includes(entry.scoring_side as string) || typeof entry.seconds_after_terminal !== 'number' || !isString(entry.terminal_kind) || !isString(entry.terminal_outcome) || !isString(entry.terminal_reference) || !isString(entry.goal_reference)) throw new Error('The public report has invalid quick concession.')
+      return { conceding_side: entry.conceding_side as 'home' | 'away', scoring_side: entry.scoring_side as 'home' | 'away', seconds_after_terminal: entry.seconds_after_terminal as number, terminal_kind: entry.terminal_kind as string, terminal_outcome: entry.terminal_outcome as string, terminal_reference: entry.terminal_reference as string, goal_reference: entry.goal_reference as string }
+    })
+    const keeperContext = (item: unknown) => {
+      const entry = requiredRecord(item); fields(entry, ['opponent_attempts', 'opponent_on_target', 'goals_conceded', 'saves'], forbidden)
+      for (const key of ['opponent_attempts', 'opponent_on_target', 'goals_conceded', 'saves']) if (typeof entry[key] !== 'number') throw new Error('The public report has invalid goalkeeper context.')
+      return { opponent_attempts: entry.opponent_attempts as number, opponent_on_target: entry.opponent_on_target as number, goals_conceded: entry.goals_conceded as number, saves: entry.saves as number }
+    }
+    phase_analysis = { block_seconds: 600, blocks, scoring_runs, quick_concessions, goalkeeper_context: { home: keeperContext(raw.goalkeeper_context.home), away: keeperContext(raw.goalkeeper_context.away) } }
+  }
   return {
     schema_version: value.schema_version,
     report_version: value.report_version,
@@ -315,5 +363,6 @@ metrics: normalizedMetrics,
     incidents,
     video,
     evidence,
+    phase_analysis,
   } as PublicReport
 }

@@ -175,4 +175,15 @@ describe('public report projection', () => {
     // Verify a field player is present without relying on squad ordering.
     expect(result.players!.find((player) => player.slug === 'ruano-matheo')?.name).toBe('Ruano, Matheo')
   })
+  it('accepts public Phase 1 aggregates and rejects private nested fields', () => {
+    const phase_analysis = {
+      block_seconds: 600,
+      blocks: [{ period: 1, start_seconds: 0, end_seconds: 600, home: { shots: 8, goals: 4, turnovers: 2, recoveries: 1, sanctions: 0, shots_on_target: 6, saves_against: 2, outside_or_woodwork: 0 }, away: { shots: 7, goals: 3, turnovers: 1, recoveries: 2, sanctions: 0, shots_on_target: 5, saves_against: 2, outside_or_woodwork: 1 }, winner: 'home' }],
+      scoring_runs: [{ team_side: 'home', goals: 2, start_reference: 'Sequence 1', end_reference: 'Sequence 2' }],
+      quick_concessions: [{ conceding_side: 'away', scoring_side: 'home', seconds_after_terminal: 8, terminal_kind: 'turnover', terminal_outcome: 'bad_pass', terminal_reference: 'Sequence 3', goal_reference: 'Sequence 4' }],
+      goalkeeper_context: { home: { opponent_attempts: 7, opponent_on_target: 5, goals_conceded: 3, saves: 2 }, away: { opponent_attempts: 8, opponent_on_target: 6, goals_conceded: 4, saves: 2 } },
+    }
+    expect(decodePublicReport({ ...publicReport, phase_analysis }).phase_analysis?.blocks[0].winner).toBe('home')
+    expect(() => decodePublicReport({ ...publicReport, phase_analysis: { ...phase_analysis, blocks: [{ ...phase_analysis.blocks[0], raw_payload: { token: 'secret' } }] } })).toThrow('restricted field')
+  })
 })
