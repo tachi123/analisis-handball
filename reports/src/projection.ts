@@ -37,12 +37,14 @@ export type Incident = {
 }
 
 export type PhaseStats = Omit<TeamSummary, 'name' | 'side'>
+export type PhaseClock = { period: number; seconds: number }
+export type GoalkeeperPhaseStats = { opponent_attempts: number; opponent_on_target: number; goals_conceded: number; saves: number; seven_meters: { attempts: number; on_target: number; goals: number; saves: number } }
 export type PhaseAnalysis = {
   block_seconds: number
   blocks: Array<{ period: number; start_seconds: number; end_seconds: number; home: PhaseStats; away: PhaseStats; winner: 'home' | 'away' | 'draw' }>
-  scoring_runs: Array<{ team_side: 'home' | 'away'; goals: number; start_reference: string; end_reference: string }>
-  quick_concessions: Array<{ conceding_side: 'home' | 'away'; scoring_side: 'home' | 'away'; seconds_after_terminal: number; terminal_kind: string; terminal_outcome: string; terminal_reference: string; goal_reference: string }>
-  goalkeeper_context: { home: { opponent_attempts: number; opponent_on_target: number; goals_conceded: number; saves: number }; away: { opponent_attempts: number; opponent_on_target: number; goals_conceded: number; saves: number } }
+  scoring_runs: Array<{ team_side: 'home' | 'away'; goals: number; start: PhaseClock; end: PhaseClock }>
+  quick_concessions: Array<{ conceding_side: 'home' | 'away'; scoring_side: 'home' | 'away'; seconds_after_terminal: number; terminal_kind: string; terminal_outcome: string; at: PhaseClock }>
+  goalkeeper_context: { home: { total: GoalkeeperPhaseStats; first_half: GoalkeeperPhaseStats; second_half: GoalkeeperPhaseStats }; away: { total: GoalkeeperPhaseStats; first_half: GoalkeeperPhaseStats; second_half: GoalkeeperPhaseStats } }
 }
 
 export type PublicReport = {
@@ -317,22 +319,30 @@ export function decodePublicReport(value: unknown): PublicReport {
       if (![1, 2].includes(entry.period as number) || typeof entry.start_seconds !== 'number' || typeof entry.end_seconds !== 'number' || !['home', 'away', 'draw'].includes(entry.winner as string)) throw new Error('The public report has invalid phase block.')
       return { period: entry.period as number, start_seconds: entry.start_seconds as number, end_seconds: entry.end_seconds as number, home: stats(entry.home), away: stats(entry.away), winner: entry.winner as 'home' | 'away' | 'draw' }
     })
+    const clock = (item: unknown): PhaseClock => {
+      const entry = requiredRecord(item); fields(entry, ['period', 'seconds'], forbidden)
+      if (![1, 2].includes(entry.period as number) || typeof entry.seconds !== 'number') throw new Error('The public report has invalid phase clock.')
+      return { period: entry.period as number, seconds: entry.seconds as number }
+    }
     const scoring_runs = raw.scoring_runs.map((item) => {
-      const entry = requiredRecord(item); fields(entry, ['team_side', 'goals', 'start_reference', 'end_reference'], forbidden)
-      if (!['home', 'away'].includes(entry.team_side as string) || typeof entry.goals !== 'number' || !isString(entry.start_reference) || !isString(entry.end_reference)) throw new Error('The public report has invalid scoring run.')
-      return { team_side: entry.team_side as 'home' | 'away', goals: entry.goals as number, start_reference: entry.start_reference as string, end_reference: entry.end_reference as string }
+      const entry = requiredRecord(item); fields(entry, ['team_side', 'goals', 'start', 'end'], forbidden)
+      if (!['home', 'away'].includes(entry.team_side as string) || typeof entry.goals !== 'number') throw new Error('The public report has invalid scoring run.')
+      return { team_side: entry.team_side as 'home' | 'away', goals: entry.goals as number, start: clock(entry.start), end: clock(entry.end) }
     })
     const quick_concessions = raw.quick_concessions.map((item) => {
-      const entry = requiredRecord(item); fields(entry, ['conceding_side', 'scoring_side', 'seconds_after_terminal', 'terminal_kind', 'terminal_outcome', 'terminal_reference', 'goal_reference'], forbidden)
-      if (!['home', 'away'].includes(entry.conceding_side as string) || !['home', 'away'].includes(entry.scoring_side as string) || typeof entry.seconds_after_terminal !== 'number' || !isString(entry.terminal_kind) || !isString(entry.terminal_outcome) || !isString(entry.terminal_reference) || !isString(entry.goal_reference)) throw new Error('The public report has invalid quick concession.')
-      return { conceding_side: entry.conceding_side as 'home' | 'away', scoring_side: entry.scoring_side as 'home' | 'away', seconds_after_terminal: entry.seconds_after_terminal as number, terminal_kind: entry.terminal_kind as string, terminal_outcome: entry.terminal_outcome as string, terminal_reference: entry.terminal_reference as string, goal_reference: entry.goal_reference as string }
+      const entry = requiredRecord(item); fields(entry, ['conceding_side', 'scoring_side', 'seconds_after_terminal', 'terminal_kind', 'terminal_outcome', 'at'], forbidden)
+      if (!['home', 'away'].includes(entry.conceding_side as string) || !['home', 'away'].includes(entry.scoring_side as string) || typeof entry.seconds_after_terminal !== 'number' || !isString(entry.terminal_kind) || !isString(entry.terminal_outcome)) throw new Error('The public report has invalid quick concession.')
+      return { conceding_side: entry.conceding_side as 'home' | 'away', scoring_side: entry.scoring_side as 'home' | 'away', seconds_after_terminal: entry.seconds_after_terminal as number, terminal_kind: entry.terminal_kind as string, terminal_outcome: entry.terminal_outcome as string, at: clock(entry.at) }
     })
-    const keeperContext = (item: unknown) => {
-      const entry = requiredRecord(item); fields(entry, ['opponent_attempts', 'opponent_on_target', 'goals_conceded', 'saves'], forbidden)
+    const keeperContext = (item: unknown): GoalkeeperPhaseStats => {
+      const entry = requiredRecord(item); fields(entry, ['opponent_attempts', 'opponent_on_target', 'goals_conceded', 'saves', 'seven_meters'], forbidden)
       for (const key of ['opponent_attempts', 'opponent_on_target', 'goals_conceded', 'saves']) if (typeof entry[key] !== 'number') throw new Error('The public report has invalid goalkeeper context.')
-      return { opponent_attempts: entry.opponent_attempts as number, opponent_on_target: entry.opponent_on_target as number, goals_conceded: entry.goals_conceded as number, saves: entry.saves as number }
+      const seven = requiredRecord(entry.seven_meters); fields(seven, ['attempts', 'on_target', 'goals', 'saves'], forbidden)
+      for (const key of ['attempts', 'on_target', 'goals', 'saves']) if (typeof seven[key] !== 'number') throw new Error('The public report has invalid seven-metre context.')
+      return { opponent_attempts: entry.opponent_attempts as number, opponent_on_target: entry.opponent_on_target as number, goals_conceded: entry.goals_conceded as number, saves: entry.saves as number, seven_meters: { attempts: seven.attempts as number, on_target: seven.on_target as number, goals: seven.goals as number, saves: seven.saves as number } }
     }
-    phase_analysis = { block_seconds: 600, blocks, scoring_runs, quick_concessions, goalkeeper_context: { home: keeperContext(raw.goalkeeper_context.home), away: keeperContext(raw.goalkeeper_context.away) } }
+    const teamKeeperContext = (item: unknown) => { const entry = requiredRecord(item); fields(entry, ['total', 'first_half', 'second_half'], forbidden); return { total: keeperContext(entry.total), first_half: keeperContext(entry.first_half), second_half: keeperContext(entry.second_half) } }
+    phase_analysis = { block_seconds: 600, blocks, scoring_runs, quick_concessions, goalkeeper_context: { home: teamKeeperContext(raw.goalkeeper_context.home), away: teamKeeperContext(raw.goalkeeper_context.away) } }
   }
   return {
     schema_version: value.schema_version,

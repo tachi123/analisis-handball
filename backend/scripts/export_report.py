@@ -339,6 +339,9 @@ def period_elapsed_seconds(payload):
 def event_reference(event):
     return 'Sequence ' + str(event.get('sequence', 1))
 
+def public_clock(payload):
+    return {'period': payload['period'], 'seconds': period_elapsed_seconds(payload)}
+
 def build_phase_analysis(events):
     timed = sorted((event for event in events if verified_timed(event)), key=lambda event: (
         event['payload']['period'], period_elapsed_seconds(event['payload']), event.get('sequence', 0)
@@ -354,6 +357,9 @@ def build_phase_analysis(events):
             winner = 'draw' if home['goals'] == away['goals'] else ('home' if home['goals'] > away['goals'] else 'away')
             blocks.append({'period': period, 'start_seconds': start_seconds, 'end_seconds': end_seconds, 'home': home, 'away': away, 'winner': winner})
 
+    def scoring_run_entry(goals, side):
+        return {'team_side': side, 'goals': len(goals), 'start': public_clock(goals[0]['payload']), 'end': public_clock(goals[-1]['payload'])}
+
     scoring_runs = []
     current_side = None
     current_goals = []
@@ -364,12 +370,12 @@ def build_phase_analysis(events):
         side = public_side(payload)
         if side != current_side:
             if len(current_goals) >= 2:
-                scoring_runs.append({'team_side': current_side, 'goals': len(current_goals), 'start_reference': event_reference(current_goals[0]), 'end_reference': event_reference(current_goals[-1])})
+                scoring_runs.append(scoring_run_entry(current_goals, current_side))
             current_side, current_goals = side, [event]
         else:
             current_goals.append(event)
     if len(current_goals) >= 2:
-        scoring_runs.append({'team_side': current_side, 'goals': len(current_goals), 'start_reference': event_reference(current_goals[0]), 'end_reference': event_reference(current_goals[-1])})
+        scoring_runs.append(scoring_run_entry(current_goals, current_side))
 
     quick_concessions = []
     terminals = {'shot', 'turnover'}
@@ -383,11 +389,19 @@ def build_phase_analysis(events):
         from_side, scored_side = public_side(before), public_side(after)
         if from_side == 'unknown' or scored_side == 'unknown' or from_side == scored_side:
             continue
-        quick_concessions.append({'conceding_side': from_side, 'scoring_side': scored_side, 'seconds_after_terminal': delta, 'terminal_kind': before.get('kind'), 'terminal_outcome': before.get('outcome'), 'terminal_reference': event_reference(previous), 'goal_reference': event_reference(following)})
+        quick_concessions.append({'conceding_side': from_side, 'scoring_side': scored_side, 'seconds_after_terminal': delta, 'terminal_kind': before.get('kind'), 'terminal_outcome': before.get('outcome'), 'at': public_clock(after)})
+
+    def goalkeeper_stats(opponent_events):
+        summary = team_stats(opponent_events)
+        seven_meters = team_stats([event for event in opponent_events if event['payload'].get('kind') == 'shot' and event['payload'].get('shot_zone') == 7])
+        return {
+            'opponent_attempts': summary['shots'], 'opponent_on_target': summary['shots_on_target'], 'goals_conceded': summary['goals'], 'saves': summary['saves_against'],
+            'seven_meters': {'attempts': seven_meters['shots'], 'on_target': seven_meters['shots_on_target'], 'goals': seven_meters['goals'], 'saves': seven_meters['saves_against']},
+        }
 
     goalkeeper_context = {
-        'home': {'opponent_attempts': away_stats['shots'], 'opponent_on_target': away_stats['shots_on_target'], 'goals_conceded': away_stats['goals'], 'saves': away_stats['saves_against']},
-        'away': {'opponent_attempts': home_stats['shots'], 'opponent_on_target': home_stats['shots_on_target'], 'goals_conceded': home_stats['goals'], 'saves': home_stats['saves_against']},
+        'home': {'total': goalkeeper_stats(away_eligible), 'first_half': goalkeeper_stats([event for event in away_eligible if event['payload'].get('period') == 1]), 'second_half': goalkeeper_stats([event for event in away_eligible if event['payload'].get('period') == 2])},
+        'away': {'total': goalkeeper_stats(home_eligible), 'first_half': goalkeeper_stats([event for event in home_eligible if event['payload'].get('period') == 1]), 'second_half': goalkeeper_stats([event for event in home_eligible if event['payload'].get('period') == 2])},
     }
     return {'block_seconds': 600, 'blocks': blocks, 'scoring_runs': scoring_runs, 'quick_concessions': quick_concessions, 'goalkeeper_context': goalkeeper_context}
 

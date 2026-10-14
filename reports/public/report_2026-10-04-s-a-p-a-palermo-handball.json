@@ -2221,80 +2221,158 @@
       {
         "team_side": "away",
         "goals": 2,
-        "start_reference": "Sequence 13",
-        "end_reference": "Sequence 15"
+        "start": {
+          "period": 1,
+          "seconds": 299
+        },
+        "end": {
+          "period": 1,
+          "seconds": 318
+        }
       },
       {
         "team_side": "home",
         "goals": 2,
-        "start_reference": "Sequence 20",
-        "end_reference": "Sequence 22"
+        "start": {
+          "period": 1,
+          "seconds": 427
+        },
+        "end": {
+          "period": 1,
+          "seconds": 480
+        }
       },
       {
         "team_side": "away",
         "goals": 2,
-        "start_reference": "Sequence 33",
-        "end_reference": "Sequence 43"
+        "start": {
+          "period": 1,
+          "seconds": 761
+        },
+        "end": {
+          "period": 1,
+          "seconds": 999
+        }
       },
       {
         "team_side": "home",
         "goals": 2,
-        "start_reference": "Sequence 46",
-        "end_reference": "Sequence 50"
+        "start": {
+          "period": 1,
+          "seconds": 1047
+        },
+        "end": {
+          "period": 1,
+          "seconds": 1178
+        }
       },
       {
         "team_side": "away",
         "goals": 3,
-        "start_reference": "Sequence 51",
-        "end_reference": "Sequence 56"
+        "start": {
+          "period": 1,
+          "seconds": 1219
+        },
+        "end": {
+          "period": 1,
+          "seconds": 1325
+        }
       },
       {
         "team_side": "home",
         "goals": 3,
-        "start_reference": "Sequence 57",
-        "end_reference": "Sequence 66"
+        "start": {
+          "period": 1,
+          "seconds": 1387
+        },
+        "end": {
+          "period": 1,
+          "seconds": 1664
+        }
       },
       {
         "team_side": "away",
         "goals": 3,
-        "start_reference": "Sequence 67",
-        "end_reference": "Sequence 87"
+        "start": {
+          "period": 1,
+          "seconds": 1729
+        },
+        "end": {
+          "period": 2,
+          "seconds": 68
+        }
       },
       {
         "team_side": "home",
         "goals": 2,
-        "start_reference": "Sequence 164",
-        "end_reference": "Sequence 92"
+        "start": {
+          "period": 2,
+          "seconds": 119
+        },
+        "end": {
+          "period": 2,
+          "seconds": 136
+        }
       },
       {
         "team_side": "home",
         "goals": 6,
-        "start_reference": "Sequence 94",
-        "end_reference": "Sequence 110"
+        "start": {
+          "period": 2,
+          "seconds": 224
+        },
+        "end": {
+          "period": 2,
+          "seconds": 638
+        }
       },
       {
         "team_side": "home",
         "goals": 3,
-        "start_reference": "Sequence 116",
-        "end_reference": "Sequence 121"
+        "start": {
+          "period": 2,
+          "seconds": 756
+        },
+        "end": {
+          "period": 2,
+          "seconds": 844
+        }
       },
       {
         "team_side": "away",
         "goals": 3,
-        "start_reference": "Sequence 122",
-        "end_reference": "Sequence 129"
+        "start": {
+          "period": 2,
+          "seconds": 853
+        },
+        "end": {
+          "period": 2,
+          "seconds": 1066
+        }
       },
       {
         "team_side": "away",
         "goals": 2,
-        "start_reference": "Sequence 140",
-        "end_reference": "Sequence 142"
+        "start": {
+          "period": 2,
+          "seconds": 1303
+        },
+        "end": {
+          "period": 2,
+          "seconds": 1359
+        }
       },
       {
         "team_side": "home",
         "goals": 2,
-        "start_reference": "Sequence 149",
-        "end_reference": "Sequence 151"
+        "start": {
+          "period": 2,
+          "seconds": 1542
+        },
+        "end": {
+          "period": 2,
+          "seconds": 1566
+        }
       }
     ],
     "quick_concessions": [
@@ -2304,8 +2382,10 @@
         "seconds_after_terminal": 6,
         "terminal_kind": "shot",
         "terminal_outcome": "save",
-        "terminal_reference": "Sequence 14",
-        "goal_reference": "Sequence 15"
+        "at": {
+          "period": 1,
+          "seconds": 318
+        }
       },
       {
         "conceding_side": "away",
@@ -2313,8 +2393,10 @@
         "seconds_after_terminal": 2,
         "terminal_kind": "shot",
         "terminal_outcome": "save",
-        "terminal_reference": "Sequence 91",
-        "goal_reference": "Sequence 164"
+        "at": {
+          "period": 2,
+          "seconds": 119
+        }
       },
       {
         "conceding_side": "away",
@@ -2322,8 +2404,10 @@
         "seconds_after_terminal": 4,
         "terminal_kind": "shot",
         "terminal_outcome": "save",
-        "terminal_reference": "Sequence 99",
-        "goal_reference": "Sequence 167"
+        "at": {
+          "period": 2,
+          "seconds": 290
+        }
       },
       {
         "conceding_side": "away",
@@ -2331,8 +2415,10 @@
         "seconds_after_terminal": 8,
         "terminal_kind": "shot",
         "terminal_outcome": "miss",
-        "terminal_reference": "Sequence 170",
-        "goal_reference": "Sequence 105"
+        "at": {
+          "period": 2,
+          "seconds": 431
+        }
       },
       {
         "conceding_side": "away",
@@ -2340,8 +2426,10 @@
         "seconds_after_terminal": 6,
         "terminal_kind": "turnover",
         "terminal_outcome": "passive",
-        "terminal_reference": "Sequence 106",
-        "goal_reference": "Sequence 107"
+        "at": {
+          "period": 2,
+          "seconds": 486
+        }
       },
       {
         "conceding_side": "home",
@@ -2349,8 +2437,10 @@
         "seconds_after_terminal": 9,
         "terminal_kind": "shot",
         "terminal_outcome": "goal",
-        "terminal_reference": "Sequence 121",
-        "goal_reference": "Sequence 122"
+        "at": {
+          "period": 2,
+          "seconds": 853
+        }
       },
       {
         "conceding_side": "home",
@@ -2358,8 +2448,10 @@
         "seconds_after_terminal": 6,
         "terminal_kind": "turnover",
         "terminal_outcome": "steal",
-        "terminal_reference": "Sequence 125",
-        "goal_reference": "Sequence 126"
+        "at": {
+          "period": 2,
+          "seconds": 931
+        }
       },
       {
         "conceding_side": "home",
@@ -2367,8 +2459,10 @@
         "seconds_after_terminal": 6,
         "terminal_kind": "turnover",
         "terminal_outcome": "bad_pass",
-        "terminal_reference": "Sequence 128",
-        "goal_reference": "Sequence 129"
+        "at": {
+          "period": 2,
+          "seconds": 1066
+        }
       },
       {
         "conceding_side": "home",
@@ -2376,8 +2470,10 @@
         "seconds_after_terminal": 10,
         "terminal_kind": "shot",
         "terminal_outcome": "goal",
-        "terminal_reference": "Sequence 132",
-        "goal_reference": "Sequence 133"
+        "at": {
+          "period": 2,
+          "seconds": 1115
+        }
       },
       {
         "conceding_side": "away",
@@ -2385,8 +2481,10 @@
         "seconds_after_terminal": 7,
         "terminal_kind": "turnover",
         "terminal_outcome": "bad_pass",
-        "terminal_reference": "Sequence 135",
-        "goal_reference": "Sequence 136"
+        "at": {
+          "period": 2,
+          "seconds": 1167
+        }
       },
       {
         "conceding_side": "away",
@@ -2394,8 +2492,10 @@
         "seconds_after_terminal": 10,
         "terminal_kind": "turnover",
         "terminal_outcome": "bad_pass",
-        "terminal_reference": "Sequence 154",
-        "goal_reference": "Sequence 155"
+        "at": {
+          "period": 2,
+          "seconds": 1665
+        }
       },
       {
         "conceding_side": "away",
@@ -2403,22 +2503,88 @@
         "seconds_after_terminal": 7,
         "terminal_kind": "shot",
         "terminal_outcome": "save",
-        "terminal_reference": "Sequence 158",
-        "goal_reference": "Sequence 159"
+        "at": {
+          "period": 2,
+          "seconds": 1723
+        }
       }
     ],
     "goalkeeper_context": {
       "home": {
-        "opponent_attempts": 56,
-        "opponent_on_target": 47,
-        "goals_conceded": 26,
-        "saves": 21
+        "total": {
+          "opponent_attempts": 56,
+          "opponent_on_target": 47,
+          "goals_conceded": 26,
+          "saves": 21,
+          "seven_meters": {
+            "attempts": 8,
+            "on_target": 6,
+            "goals": 4,
+            "saves": 2
+          }
+        },
+        "first_half": {
+          "opponent_attempts": 27,
+          "opponent_on_target": 21,
+          "goals_conceded": 13,
+          "saves": 8,
+          "seven_meters": {
+            "attempts": 5,
+            "on_target": 3,
+            "goals": 2,
+            "saves": 1
+          }
+        },
+        "second_half": {
+          "opponent_attempts": 29,
+          "opponent_on_target": 26,
+          "goals_conceded": 13,
+          "saves": 13,
+          "seven_meters": {
+            "attempts": 3,
+            "on_target": 3,
+            "goals": 2,
+            "saves": 1
+          }
+        }
       },
       "away": {
-        "opponent_attempts": 58,
-        "opponent_on_target": 51,
-        "goals_conceded": 30,
-        "saves": 21
+        "total": {
+          "opponent_attempts": 58,
+          "opponent_on_target": 51,
+          "goals_conceded": 30,
+          "saves": 21,
+          "seven_meters": {
+            "attempts": 1,
+            "on_target": 1,
+            "goals": 1,
+            "saves": 0
+          }
+        },
+        "first_half": {
+          "opponent_attempts": 26,
+          "opponent_on_target": 22,
+          "goals_conceded": 12,
+          "saves": 10,
+          "seven_meters": {
+            "attempts": 1,
+            "on_target": 1,
+            "goals": 1,
+            "saves": 0
+          }
+        },
+        "second_half": {
+          "opponent_attempts": 32,
+          "opponent_on_target": 29,
+          "goals_conceded": 18,
+          "saves": 11,
+          "seven_meters": {
+            "attempts": 0,
+            "on_target": 0,
+            "goals": 0,
+            "saves": 0
+          }
+        }
       }
     }
   },
