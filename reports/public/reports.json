@@ -5,13 +5,35 @@
       "key": "2026-10-11-s-a-p-a-banfield-b",
       "date": "2026-10-11",
       "home_team": "S.A.P.A.",
-      "away_team": "Banfield B"
+      "away_team": "Banfield B",
+      "summary": {
+        "home_goals": 31,
+        "away_goals": 31,
+        "home_shots": 68,
+        "away_shots": 52,
+        "home_turnovers": 13,
+        "away_turnovers": 19,
+        "coverage_status": "complete",
+        "video_available": true,
+        "official_sheet_confirmed": false
+      }
     },
     {
       "key": "2026-10-04-s-a-p-a-palermo-handball",
       "date": "2026-10-04",
       "home_team": "S.A.P.A.",
-      "away_team": "Palermo Handball"
+      "away_team": "Palermo Handball",
+      "summary": {
+        "home_goals": 30,
+        "away_goals": 26,
+        "home_shots": 58,
+        "away_shots": 56,
+        "home_turnovers": 18,
+        "away_turnovers": 13,
+        "coverage_status": "complete",
+        "video_available": true,
+        "official_sheet_confirmed": false
+      }
     }
   ]
 }

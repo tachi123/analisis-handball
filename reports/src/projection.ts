@@ -64,6 +64,7 @@ export type PublicReport = {
   incidents: Array<Incident>
   video: { provider: 'youtube'; video_id: string; availability: string } | null
   phase_analysis: PhaseAnalysis | null
+  official_sheet_confirmed: boolean
 }
 
 const forbidden = /^(private_note|raw_events?|analysis_event_id|credentials?|api_?key|token|database|local_database|operational_api_url)$/i
@@ -116,9 +117,10 @@ function decodeEvidence(value: unknown, allowedNames: string[]) {
 export function decodePublicReport(value: unknown): PublicReport {
   if (!isRecord(value)) throw new Error('The public report is not a JSON object.')
   // Validate root allowlist
-  const rootAllowed = ['schema_version', 'report_version', 'match', 'source', 'coaching', 'metrics', 'players', 'reconciliation', 'uncertainty_disclosure', 'coverage', 'evidence', 'team_summary', 'incidents', 'video', 'phase_analysis']
+  const rootAllowed = ['schema_version', 'report_version', 'match', 'source', 'coaching', 'metrics', 'players', 'reconciliation', 'uncertainty_disclosure', 'coverage', 'evidence', 'team_summary', 'incidents', 'video', 'phase_analysis', 'official_sheet_confirmed']
   fields(value as Record<string, unknown>, rootAllowed, forbidden)
   if (value.schema_version !== 'public-report-v1' || typeof value.report_version !== 'number') throw new Error('Unsupported public report version.')
+  if (value.official_sheet_confirmed !== undefined && typeof value.official_sheet_confirmed !== 'boolean') throw new Error('The public report has invalid official sheet data.')
   const match = requiredRecord(value.match)
   const source = requiredRecord(value.source)
   const coaching = requiredRecord(value.coaching)
@@ -382,5 +384,6 @@ metrics: normalizedMetrics,
     video,
     evidence,
     phase_analysis,
+    official_sheet_confirmed: value.official_sheet_confirmed === true,
   } as PublicReport
 }

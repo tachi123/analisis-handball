@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, useMemo, startTransition } from 'react'
-import { decodePublicReportCatalog, reportFileName, reportLabel, type PublicReportCatalog } from './catalog'
+import { decodePublicReportCatalog, reportFileName, reportLabel, type PublicReportCatalog, type PublicReportCatalogEntry } from './catalog'
 import { decodePublicReport, type PhaseStats, type PlayerPublic, type PossessionSummary, type PublicReport } from './projection'
 import { Timeline } from './Timeline'
 
@@ -17,6 +17,51 @@ const goalkeeperSplit = (player: PlayerPublic, suffix: '7m' | 'counterattack', l
 function Comparison({ label, home, away, suffix = '' }: { label: string; home: number; away: number; suffix?: string }) {
   const max = Math.max(home, away, 1)
   return <article className="pyramid-row"><strong className="pyramid-value home-value">{home}{suffix}</strong><i className="pyramid-bar home-bar" style={{ width: `${home / max * 100}%` }} /><span>{label}</span><i className="pyramid-bar away-bar" style={{ width: `${away / max * 100}%` }} /><strong className="pyramid-value away-value">{away}{suffix}</strong></article>
+}
+
+const normalizedTeam = (name: string) => name.normalize('NFD').replace(/[\u0300-\u036f.\s]/g, '').toLowerCase()
+const isSapa = (name: string) => normalizedTeam(name) === 'sapa'
+
+function sapaSide(entry: PublicReportCatalogEntry) {
+  return isSapa(entry.home_team) ? 'home' : isSapa(entry.away_team) ? 'away' : null
+}
+
+function SapaLanding({ catalog, onOpen }: { catalog: PublicReportCatalog; onOpen: (key: string) => void }) {
+  const sapaReports = catalog.reports.filter((entry) => sapaSide(entry))
+  const entries = sapaReports.length ? sapaReports : catalog.reports
+  const complete = entries.filter((entry) => entry.summary.coverage_status === 'complete')
+  const total = complete.reduce((acc, entry) => {
+    const side = sapaSide(entry) ?? 'home'
+    acc.goals += side === 'home' ? entry.summary.home_goals : entry.summary.away_goals
+    acc.conceded += side === 'home' ? entry.summary.away_goals : entry.summary.home_goals
+    acc.shots += side === 'home' ? entry.summary.home_shots : entry.summary.away_shots
+    acc.turnovers += side === 'home' ? entry.summary.home_turnovers : entry.summary.away_turnovers
+    return acc
+  }, { goals: 0, conceded: 0, shots: 0, turnovers: 0 })
+  const perMatch = (value: number) => complete.length ? (value / complete.length).toFixed(1).replace('.', ',') : '—'
+  const result = (entry: PublicReportCatalogEntry) => {
+    const side = sapaSide(entry) ?? 'home'
+    const ours = side === 'home' ? entry.summary.home_goals : entry.summary.away_goals
+    const theirs = side === 'home' ? entry.summary.away_goals : entry.summary.home_goals
+    return `${ours}–${theirs}`
+  }
+  const rival = (entry: PublicReportCatalogEntry) => sapaSide(entry) === 'home' ? entry.away_team : entry.home_team
+  return <main className="report-shell home-shell" aria-labelledby="sapa-home-title">
+    <header className="hero home-hero"><p className="eyebrow">SAPA · Centro de partidos</p><h1 id="sapa-home-title">Partidos <span>analizados</span></h1><p>Resultados y métricas derivados de análisis observados. No reemplazan la tabla oficial del torneo.</p></header>
+    <section className="home-summary" aria-label="Resumen de partidos completos analizados">
+      <article><strong>{complete.length}</strong><span>partidos completos</span></article>
+      <article><strong>{perMatch(total.goals)}</strong><span>goles SAPA por partido</span></article>
+      <article><strong>{perMatch(total.conceded)}</strong><span>goles recibidos por partido</span></article>
+      <article><strong>{complete.length && total.shots ? pct(total.goals, total.shots) : '—'}</strong><span>eficacia de tiro</span></article>
+      <article><strong>{perMatch(total.turnovers)}</strong><span>pérdidas por partido</span></article>
+    </section>
+    <section className="dashboard-section match-list-section"><div className="section-heading"><div><p className="eyebrow">Archivo de análisis</p><h2>Partidos de SAPA</h2></div><small>La disponibilidad indica evidencia publicada, no la clasificación oficial.</small></div>
+      <div className="match-list">{entries.map((entry) => <article className="match-card" key={entry.key}>
+        <div><p>{entry.date ?? 'Fecha sin confirmar'}</p><h3>SAPA <span>vs</span> {rival(entry)}</h3><strong className="match-score">{result(entry)}</strong><small>resultado analizado · {entry.summary.coverage_status === 'complete' ? 'partido completo' : 'cobertura parcial'}</small></div>
+        <div className="match-evidence"><span>{entry.summary.video_available ? 'Video disponible' : 'Sin video publicado'}</span>{entry.summary.official_sheet_confirmed && <span>Planilla FEMEBAL confirmada</span>}<button onClick={() => onOpen(entry.key)}>Ver análisis</button></div>
+      </article>)}</div>
+    </section>
+  </main>
 }
 
 function TeamDashboard({ report }: { report: PublicReport }) {
@@ -231,6 +276,7 @@ export default function App() {
   const [catalog, setCatalog] = useState<PublicReportCatalog | null>(null)
   const [catalogLoaded, setCatalogLoaded] = useState(false)
   const [selectedReportKey, setSelectedReportKey] = useState<string | null>(null)
+  const [view, setView] = useState<'home' | 'report'>('home')
   const [selectedBlock, setSelectedBlock] = useState<string | null>(null)
   const [playerSlug, setPlayerSlug] = useState('all')
 const [kind, setKind] = useState('all')
@@ -273,6 +319,7 @@ const [selectedIncidentRef, setSelectedIncidentRef] = useState<{ reference: stri
 
   function selectReport(key: string) {
     startTransition(() => {
+      setView('report')
       setSelectedReportKey(key)
       setPlayerSlug('all')
       setKind('all')
@@ -288,6 +335,7 @@ const [selectedIncidentRef, setSelectedIncidentRef] = useState<{ reference: stri
   const filteredIncidents = useMemo(() => reportIncidents.filter((incident) => (playerSlug === 'all' || incident.player_slug === playerSlug) && (kind === 'all' || incident.incident_type === kind)), [reportIncidents, playerSlug, kind])
   const defaultVideoSeconds = reportIncidents.find((incident) => incident.video_seconds !== null)?.video_seconds ?? 0
   if (!report) return <main className="report-status"><p role="status">{message}</p></main>
+  if (catalog && catalog.reports.length > 0 && view === 'home') return <SapaLanding catalog={catalog} onOpen={selectReport} />
 
   const players = report.players ?? []
   const keepers = players.filter((player) => player.role === 'goalkeeper')
@@ -312,7 +360,7 @@ const [selectedIncidentRef, setSelectedIncidentRef] = useState<{ reference: stri
   }
 
   return <main className="report-shell" aria-labelledby="report-header">
-    <header className="hero"><p className="eyebrow">Informe de partido</p><div className="match-line"><h1 id="report-header">{report.match.home_team} <span>vs</span> {report.match.away_team}</h1>{catalog && catalog.reports.length > 1 && <select aria-label="Seleccionar partido" value={selectedReportKey ?? ''} onChange={(event) => selectReport(event.target.value)}>{catalog.reports.map((entry) => <option key={entry.key} value={entry.key}>{reportLabel(entry)}</option>)}</select>}</div><p>{report.coverage?.label ?? 'Cobertura del análisis no especificada'}</p>{report.coverage?.status === 'partial' && <strong className="coverage-badge">Análisis parcial · sólo períodos cargados</strong>}{report.video && <a className="video-link" href={`https://www.youtube.com/watch?v=${report.video.video_id}`} target="_blank" rel="noreferrer">▶ Abrir video del partido</a>}</header>
+    <header className="hero"><p className="eyebrow">Informe de partido</p><div className="match-line"><h1 id="report-header">{report.match.home_team} <span>vs</span> {report.match.away_team}</h1>{catalog && catalog.reports.length > 1 && <select aria-label="Seleccionar partido" value={selectedReportKey ?? ''} onChange={(event) => selectReport(event.target.value)}>{catalog.reports.map((entry) => <option key={entry.key} value={entry.key}>{reportLabel(entry)}</option>)}</select>}</div><p>{report.coverage?.label ?? 'Cobertura del análisis no especificada'}</p>{report.coverage?.status === 'partial' && <strong className="coverage-badge">Análisis parcial · sólo períodos cargados</strong>}{report.official_sheet_confirmed && <p className="official-sheet-note">Planilla FEMEBAL confirmada. El enlace se publica sólo cuando exista una URL oficial pública aprobada.</p>}{report.video && <a className="video-link" href={`https://www.youtube.com/watch?v=${report.video.video_id}`} target="_blank" rel="noreferrer">▶ Abrir video del partido</a>}{catalog && <button className="home-link" onClick={() => setView('home')}>← Todos los partidos</button>}</header>
     <TeamDashboard report={report} />
     <PhaseDashboard report={report} selectedBlock={selectedBlock} onSelectBlock={setSelectedBlock} playerSlug={playerSlug} />
     <Timeline report={report} onSeek={handleMarkerClick} />

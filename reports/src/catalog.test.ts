@@ -3,7 +3,7 @@ import { decodePublicReportCatalog, reportFileName, reportLabel } from './catalo
 
 const catalog = {
   schema_version: 'public-report-catalog-v1',
-  reports: [{ key: '2026-10-11-sapa-banfield-b', date: '2026-10-11', home_team: 'S.A.P.A.', away_team: 'Banfield B' }],
+  reports: [{ key: '2026-10-11-sapa-banfield-b', date: '2026-10-11', home_team: 'S.A.P.A.', away_team: 'Banfield B', summary: { home_goals: 31, away_goals: 31, home_shots: 46, away_shots: 45, home_turnovers: 9, away_turnovers: 11, coverage_status: 'complete', video_available: true, official_sheet_confirmed: true } }],
 }
 
 describe('public report catalog', () => {

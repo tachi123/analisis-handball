@@ -36,7 +36,27 @@ def write_public_catalog(directory: Path) -> None:
             home_team, away_team = match.get('home_team'), match.get('away_team')
             if not isinstance(home_team, str) or not isinstance(away_team, str):
                 continue
-            entries.append({'key': key, 'date': match.get('date'), 'home_team': home_team, 'away_team': away_team})
+            summary = candidate.get('team_summary', {})
+            home_summary, away_summary = summary.get('home', {}), summary.get('away', {})
+            if not isinstance(home_summary, dict) or not isinstance(away_summary, dict):
+                continue
+            entries.append({
+                'key': key,
+                'date': match.get('date'),
+                'home_team': home_team,
+                'away_team': away_team,
+                'summary': {
+                    'home_goals': home_summary.get('goals', 0),
+                    'away_goals': away_summary.get('goals', 0),
+                    'home_shots': home_summary.get('shots', 0),
+                    'away_shots': away_summary.get('shots', 0),
+                    'home_turnovers': home_summary.get('turnovers', 0),
+                    'away_turnovers': away_summary.get('turnovers', 0),
+                    'coverage_status': (candidate.get('coverage') or {}).get('status'),
+                    'video_available': bool(candidate.get('video')),
+                    'official_sheet_confirmed': bool(candidate.get('official_sheet_confirmed')),
+                },
+            })
         except (OSError, ValueError, TypeError):
             continue
     entries.sort(key=lambda entry: (entry['date'] or '', entry['home_team'], entry['away_team'], entry['key']), reverse=True)
@@ -582,6 +602,9 @@ package_dict = {
     'phase_analysis': phase_analysis,
     'incidents': incidents,
     'video': public_video,
+    # This deliberately communicates confirmation only. The imported file and
+    # its storage path remain private until an approved public FEMEBAL URL exists.
+    'official_sheet_confirmed': bool(db.query(OfficialSnapshot).filter_by(match_id=match.id, is_confirmed=True).first()),
 }
 
 # Now run public_projection_from_package_type logic
