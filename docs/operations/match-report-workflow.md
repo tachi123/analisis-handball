@@ -31,10 +31,10 @@ Do not claim a match is complete merely because the final score is present.
 
 ## Export the public report
 
-The exporter reads canonical eligible events and writes a privacy-safe static projection, the fallback `report.json`, a deterministic per-match file, and `reports.json`. Copy all of those artifacts from one temporary directory.
+The exporter reads active canonical runs and writes privacy-safe static projections, the fallback `report.json`, deterministic per-match files, and `reports.json`. Copy all artifacts from one temporary directory.
 
 ```powershell
-docker exec -e PUBLIC_REPORT_OUTPUT=/tmp/report.json -e PUBLIC_REPORT_CATALOG_OUTPUT=/tmp/public-report "analisis-handball-backend-1" python /app/scripts/export_report.py
+docker exec -e PUBLIC_REPORT_MATCH_IDS=99,101 -e PUBLIC_REPORT_OUTPUT=/tmp/report.json -e PUBLIC_REPORT_CATALOG_OUTPUT=/tmp/public-report "analisis-handball-backend-1" python /app/scripts/export_public_report_catalog.py
 docker cp "analisis-handball-backend-1:/tmp/public-report/." "reports/public"
 ```
 
@@ -63,6 +63,7 @@ docker exec "analisis-handball-backend-1" pytest -q tests/test_canonical_analysi
 |---|---|
 | Comparison | The pyramid compares both teams using totals from `team_summary`. |
 | Goalkeepers | Overall, seven-metre, and counterattack save rates use assigned shots on target. |
+| Phase 1 | Mini-matches, scoring runs, quick-concession alerts, goalkeeper context, and guarded possession tempo are derived during export. |
 | Momentum | The curve uses chronological goals; filters only hide/show markers, never alter the curve. |
 | Video | Incident actions seek the persistent player using `video_seconds`; direct YouTube links remain fallback. |
 | Coverage | Video-time positions and partial coverage are explicitly disclosed. |

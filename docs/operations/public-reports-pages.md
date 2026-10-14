@@ -1,6 +1,6 @@
 # Public Reports on GitHub Pages
 
-This project serves the public sports report as a self-contained static artifact on GitHub Pages.
+This project serves public sports reports as self-contained static artifacts on GitHub Pages.
 The deployment does **not** depend on `frontend/`, a sibling `reports/` directory, a backend, Google Sheets,
 or an external JSON endpoint. Opening the project Pages URL loads the report directly from the built artifact.
 
@@ -19,7 +19,7 @@ The workflow runs on every push to `main` that changes files under `reports/` or
 
 | Step | What happens |
 |---|---|
-| `npm --prefix reports run build` | Vite + TypeScript build; `report.json` is copied from `reports/public/report.json` into `dist/` by Vite |
+| `npm --prefix reports run build` | Vite + TypeScript build; the complete `reports/public/` catalog is copied into `dist/` by Vite |
 | `actions/upload-pages-artifact` | Uploads `reports/dist` as the Pages site root |
 
 **Important:** Do **not** select `frontend/` or `reports/` as a branch folder in the Pages Settings UI.
@@ -33,33 +33,27 @@ Selecting a folder branch instead of Actions will use the old combined `site/` a
 npm --prefix reports install
 npm --prefix reports run dev
 
-# Build the report project (produces dist/ with index.html, assets, and report.json)
+# Build the report project (produces dist/ with index.html, assets, report.json, reports.json, and per-match JSON)
 npm --prefix reports run build
 ```
 
 The built `reports/dist/` contains:
 - `index.html` — the SPA entry point
 - `assets/` — bundled CSS and JS
-- `report.json` — the canonical public report JSON (embedded at build time from the tracked repository file)
+- `report.json` — fallback public report JSON
+- `reports.json` — public match catalog
+- `report_<public-key>.json` — one privacy-safe static artifact per catalog entry
 
-## Report default — no env var required
+## Report catalog — no env var required
 
-The report app defaults to a local `report.json` bundled at `dist/report.json`. No `VITE_PUBLIC_REPORT_URL`
-environment variable is required for the report to display. If a remote URL is needed, it can be set via
-`VITE_PUBLIC_REPORT_URL` as an optional override, but the local bundled JSON will be used by default.
-
-### Remote override (optional)
-
-Set `VITE_PUBLIC_REPORT_URL` in the repository secrets or workflow variables to point at an external
-HTTPS JSON endpoint. The app will fall back to the local `report.json` if the remote fetch fails.
-This is **not** required for basic deployment.
+The app loads local `reports.json` first and fetches the selected public-key report. If the catalog is unavailable,
+it falls back to local `report.json`. No backend or environment variable is required at runtime.
 
 ## Local JSON source
 
-The `report.json` embedded in `dist/` is a deterministic copy from `reports/public/report.json`,
-committed to the repository and copied by Vite at build time. No backend, Docker volume, or untracked
-local file is required. The JSON is the safe public projection sample validated by the projection
-tests and used at runtime as the static report artifact.
+The complete `reports/public/` directory is committed to the repository and copied by Vite at build time.
+No backend, Docker volume, or untracked local file is required at runtime. Each artifact is a safe public
+projection validated by the projection tests. See [the export workflow](match-report-workflow.md) for generation.
 
 ## Verification
 

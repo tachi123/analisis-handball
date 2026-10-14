@@ -6,9 +6,9 @@ This index is the current documentation source of truth. Code and tests remain t
 
 | Area | Delivered behavior |
 |---|---|
-| Match review | Authenticated `/match/:matchId/review` uses per-match canonical sessions and events, YouTube synchronization, anchors, evidence, and complete checkpoints. |
+| Match review | Authenticated `/match/:matchId/review?run=:runId` uses immutable analysis runs, canonical events, YouTube synchronization, anchors, evidence, and complete checkpoints. |
 | Private timeline | Authenticated `/match/:matchId/timeline` reads canonical API data. `/match/:matchId/reports` redirects there for compatibility. |
-| Public static report | `reports/` is a privacy-safe GitHub Pages projection backed by tracked `reports/public/report.json`; it includes comparison, players, goalkeeper splits, momentum, and video review. |
+| Public static report | `reports/` is a privacy-safe GitHub Pages projection backed by a catalog plus per-match JSON. It includes comparison, Phase 1 mini-matches, players, goalkeeper context, momentum, and video review. |
 | Goalkeeper analysis | The goalkeeper panel consumes `GET /matches/{id}/canonical-player-projection`; canonical shot `shot_zone` is optional and uses IHF zones 1-9. |
 | Statistics warnings | Statistics show official versus canonical player and match totals, linked evidence, and expandable details. Official timestamps and goalkeeper substitutions are `not_comparable` because official PDFs provide totals only. |
 | PDF | Statistics export a client-generated PDF, optionally including a goalkeeper projection. There is no backend PDF-export endpoint. |
@@ -31,9 +31,12 @@ The public Pages report is implemented and remains a separate static projection.
 | System boundaries | [architecture/system-overview.md](architecture/system-overview.md) |
 | API contracts | [architecture/api-spec.md](architecture/api-spec.md) |
 | Canonical data model | [architecture/data-model.md](architecture/data-model.md) |
+| Analysis run lifecycle | [architecture/analysis-run-lifecycle.md](architecture/analysis-run-lifecycle.md) |
 | Match review behavior | [architecture/match-review-spec.md](architecture/match-review-spec.md) |
 | Timeline and future public reports | [architecture/reports-frontend-timeline.md](architecture/reports-frontend-timeline.md) |
 | Match-to-report export and validation | [operations/match-report-workflow.md](operations/match-report-workflow.md) |
+| Scripts and repeatable commands | [operations/scripts-reference.md](operations/scripts-reference.md) |
+| Public Phase 1 analytics | [architecture/public-report-phase-1.md](architecture/public-report-phase-1.md) |
 | Remaining scope | [architecture/next-slices.md](architecture/next-slices.md) |
 | QA evidence | [testing/qa-report.md](testing/qa-report.md) |
 | Handball review | [testing/handball-expert-review.md](testing/handball-expert-review.md) |

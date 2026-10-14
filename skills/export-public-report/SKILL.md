@@ -1,6 +1,6 @@
 ---
 name: export-public-report
-description: "Trigger: export report, public report, publish match report, GitHub Pages report. Generate and validate the privacy-safe static report for a completed match."
+description: "Trigger: export report, public report, report catalog, publish match report. Generate and validate privacy-safe static reports for active matches."
 license: Apache-2.0
 metadata:
   author: gentleman-programming
@@ -28,15 +28,15 @@ Use this skill when exporting or preparing a completed match for the public stat
 
 ## Execution Steps
 
-1. Inspect canonical coverage, period markers, and the final score for the requested match.
-2. Export Match 99:
+1. Inspect canonical coverage, period markers, active run, and final score for every requested match.
+2. Export one or more active matches into one temporary catalog directory:
 
    ```powershell
-   docker exec -e PUBLIC_REPORT_OUTPUT=/tmp/report.json "analisis-handball-backend-1" python /app/scripts/export_report.py
-   docker cp "analisis-handball-backend-1:/tmp/report.json" "reports/public/report.json"
+   docker exec -e PUBLIC_REPORT_MATCH_IDS=99,101 -e PUBLIC_REPORT_OUTPUT=/tmp/report.json -e PUBLIC_REPORT_CATALOG_OUTPUT=/tmp/public-report "analisis-handball-backend-1" python /app/scripts/export_public_report_catalog.py
+   docker cp "analisis-handball-backend-1:/tmp/public-report/." "reports/public"
    ```
 
-3. Inspect the generated JSON for complete/partial coverage and public-safe fields only.
+3. Inspect `reports/public/reports.json`, the fallback `report.json`, and every referenced per-match JSON for complete/partial coverage and public-safe fields only.
 4. Run:
 
    ```powershell
@@ -44,7 +44,7 @@ Use this skill when exporting or preparing a completed match for the public stat
    npm --prefix reports run build
    ```
 
-5. Report coverage, score, incident count, validation results, and whether publication remains pending.
+5. Report catalog entries, coverage, score, incident count, validation results, and whether publication remains pending.
 
 ## Output Contract
 

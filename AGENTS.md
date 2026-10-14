@@ -2,85 +2,104 @@
 
 ## Start here
 
-This repository has two deliberately separate products:
+This repository contains two deliberately isolated products:
 
 | Product | Path | Audience | Source of truth |
 |---|---|---|---|
 | Private review application | `frontend/` + `backend/` | Authenticated analysts | Canonical events in the backend database |
-| Public static report | `reports/` | Anyone with the GitHub Pages URL | `reports/public/report.json` |
+| Public static reports | `reports/` | Anyone with the Pages URL | Privacy-safe JSON artifacts in `reports/public/` |
 
-Do not make the public report depend on the private frontend, backend runtime, Docker, private APIs, database IDs, credentials, or untracked files.
+The public report must never depend on the private frontend, backend runtime, private API, database IDs, credentials, raw events, notes, or untracked files.
 
 ## Non-negotiable rules
 
-1. Keep public and private data boundaries separate. Public JSON must not contain IDs, raw payloads, private notes, tokens, URLs, or operational details.
-2. Canonical events are append/revise data. Do not edit historical event payloads in place.
-3. Do not infer sports facts from incomplete evidence. Record `passive` only when it is observed in the video; it is a `turnover` outcome, not a count of passes.
-4. Preserve the public dashboard structure when changing `reports/`: comparison pyramid, field-player table, goalkeeper cards, momentum timeline, and video review are independent sections.
-5. The GitHub Pages workflow deploys only `reports/dist`. Do not deploy `frontend/` as Pages.
-6. Never commit, push, deploy, or alter GitHub Pages configuration unless explicitly requested.
+1. Canonical events are append/revise data. Never mutate historical payloads in place.
+2. Report only observed facts. `passive` is an observed turnover outcome, never an inferred pass count.
+3. Never infer tactical causes from chronology alone. “Quick concession” is an observed sequence; it is not automatically a retreat or concentration error.
+4. Public JSON must contain only the allowlisted projection. Do not expose IDs, raw payloads, notes, tokens, URLs, operational paths, or backend details.
+5. The Pages workflow deploys only `reports/dist`. Do not deploy `frontend/` as Pages.
+6. Never commit, push, deploy, or change Pages configuration unless explicitly requested.
+7. Uvicorn does not use `--reload`: restart `analisis-handball-backend-1` after backend Python changes.
 
-## Match-review workflow
+## Analysis-run lifecycle
 
-1. Open `/match/:matchId/review` in the private application.
-2. Choose the active period and calibrate its kickoff at video time `0:00`.
-3. Record observed canonical events with evidence. Close each period with `period_end`.
-4. For a complete match, require `kickoff` and `period_end` for periods 1 and 2 before exporting.
-5. If backend Python code changed locally, restart the backend container because the configured Uvicorn command does not use `--reload`.
+Each match can have independent immutable analysis runs:
 
-## Public-report workflow
+| Status | Meaning | Writes | Reads/exports |
+|---|---|---|---|
+| `draft` | Analyst work in progress | Creator or admin only | Review with `?run=<id>` |
+| `active` | Explicit canonical run | Read-only | Metrics, private timeline, public export |
+| `superseded` | Historical prior canonical run | Read-only | Historical only |
 
-1. Confirm canonical coverage is complete.
-2. Export Match 99 into one temporary artifact directory, then copy the complete directory:
+- Run mode is immutable: `video`, `manual`, or `live`.
+- Promote only the intended complete draft. Promotion preserves its events and session; it does not rewrite them.
+- `video` uses a YouTube source, `manual` records local-video time manually, and `live` uses observed live time with explicit unavailable-video evidence.
 
-   ```powershell
-   docker exec -e PUBLIC_REPORT_OUTPUT=/tmp/report.json -e PUBLIC_REPORT_CATALOG_OUTPUT=/tmp/public-report "analisis-handball-backend-1" python /app/scripts/export_report.py
-   docker cp "analisis-handball-backend-1:/tmp/public-report/." "reports/public"
-   ```
+See [docs/architecture/analysis-run-lifecycle.md](docs/architecture/analysis-run-lifecycle.md).
 
-   `PUBLIC_REPORT_OUTPUT` remains a compatible single fallback copy. `PUBLIC_REPORT_CATALOG_OUTPUT` contains the fallback `report.json`, the per-match `report_<public-key>.json` files, and `reports.json`; copy that directory, not only the fallback file.
+## Private review quick path
 
-3. Validate the static application:
+1. Import and confirm the official sheet.
+2. Create or resume the intended draft at `/matches/:matchId/prepare`.
+3. Review at `/match/:matchId/review?run=:runId`.
+4. Calibrate `kickoff` at observed `0:00`, capture only observed events with evidence, and close both periods with `period_end`.
+5. Promote the completed draft to `active` before exporting.
 
-   ```powershell
-   npm --prefix reports test
-   npm --prefix reports run build
-   ```
+For a complete match, periods 1 and 2 require both `kickoff` and `period_end`.
 
-4. Inspect `reports/public/reports.json` and every referenced report before publishing. Vite copies the complete directory to `reports/dist/`.
+## Public report quick path
 
-See `docs/operations/match-report-workflow.md` for details and recovery checks.
+The exporter derives all report analytics statically. The public UI never calls private APIs or needs an API token.
 
-## Public-report conventions
+```powershell
+# Export or refresh multiple active matches into one catalog directory.
+docker exec -e PUBLIC_REPORT_MATCH_IDS=99,101 -e PUBLIC_REPORT_OUTPUT=/tmp/report.json -e PUBLIC_REPORT_CATALOG_OUTPUT=/tmp/public-report "analisis-handball-backend-1" python /app/scripts/export_public_report_catalog.py
+docker cp "analisis-handball-backend-1:/tmp/public-report/." "reports/public"
 
-- Video review uses a persistent YouTube iframe. Seek it with the incident's `video_seconds`; do not remount the iframe for every incident.
-- The momentum chart derives the score only from chronological goal events. Its curve always keeps both teams; filters affect marker overlays only.
-- Unverified game clocks may use video time, but the UI must disclose that distinction.
-- Goalkeeper save rates use assigned on-target shots only: `saves / (saves + goals conceded)`.
-- Zones: `7` is seven metres; `8` is counterattack. Show split goalkeeper rates only when that goalkeeper has faced at least one assigned on-target shot in the zone.
+npm --prefix reports test
+npm --prefix reports run build
+```
 
-## Useful validation
+`reports/public/` must contain `report.json` (fallback), `reports.json` (catalog), and each `report_<public-key>.json`. Inspect all catalog entries and referenced reports before publication.
+
+See [docs/operations/match-report-workflow.md](docs/operations/match-report-workflow.md).
+
+## Public report analytics
+
+- Momentum uses chronological goal events; filters only affect markers, never the score curve.
+- Goalkeeper saves use assigned on-target shots: `saves / (saves + goals conceded)`.
+- Zones: `7` is seven metres; `8` is counterattack.
+- Phase 1 derives 10-minute mini-matches, runs, quick concessions, goalkeeper context, and guarded possession tempo during export.
+- Events beyond a half’s nominal clock stay in its final 20–30 block and are disclosed as clock overrun; never wrap them into 0–10.
+- Possession tempo is only coach-readable at sufficient observed coverage. Do not infer a tactical cause from a partial sample.
+
+See [docs/architecture/public-report-phase-1.md](docs/architecture/public-report-phase-1.md).
+
+## Validation
 
 ```powershell
 npm --prefix reports test
 npm --prefix reports run build
-docker exec "analisis-handball-backend-1" pytest -q tests/test_canonical_analysis_service.py tests/test_analysis_events.py
+docker exec "analisis-handball-backend-1" pytest -q tests/test_canonical_analysis_service.py tests/test_analysis_events.py tests/test_analysis_run_service.py tests/test_migrations.py
 ```
 
 ## Project skills
 
 | Skill | Use it when |
 |---|---|
-| `skills/export-public-report/SKILL.md` | Exporting, validating, or preparing a completed match for the public static report. |
+| `skills/export-public-report/SKILL.md` | Exporting, validating, or preparing static public report artifacts. |
+| `skills/handball-report-analytics/SKILL.md` | Changing Phase 1 metrics, goalkeeper/possession analysis, mini-match blocks, or moment interpretation. |
 
 ## Key files
 
 | Need | File |
 |---|---|
+| Private review | `frontend/src/pages/MatchReview.tsx` |
+| Prepare/promote analysis runs | `frontend/src/pages/ManualMatchPreparationPage.tsx`, `backend/app/services/analysis_run_service.py` |
+| Canonical validation/state | `backend/app/services/canonical_analysis_service.py` |
 | Public report UI | `reports/src/App.tsx` |
-| Momentum chart | `reports/src/Timeline.tsx`, `reports/src/timelineDerivation.ts` |
 | Public schema/privacy decoder | `reports/src/projection.ts` |
-| Static report exporter | `backend/scripts/export_report.py` |
-| Canonical outcome validation | `backend/app/services/canonical_analysis_service.py` |
-| Private event capture | `frontend/src/components/IncidentWizard.tsx` |
-| Pages deployment | `.github/workflows/deploy-frontend.yml` |
+| Momentum | `reports/src/Timeline.tsx`, `reports/src/timelineDerivation.ts` |
+| Public export | `backend/scripts/export_report.py` |
+| Multi-match catalog export | `backend/scripts/export_public_report_catalog.py` |
+| Pages workflow | `.github/workflows/deploy-frontend.yml` |
