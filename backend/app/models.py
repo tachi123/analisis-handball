@@ -119,6 +119,7 @@ class OfficialSnapshot(Base):
     away_score = Column(Integer, nullable=False)
     batch_run_id = Column(Integer, ForeignKey("official_batch_runs.id"), nullable=True, index=True)
     is_confirmed = Column(Boolean, nullable=False, default=True, index=True)
+    is_publicly_published = Column(Boolean, nullable=False, default=False, index=True)
     created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
 
     match = relationship("Match", back_populates="official_snapshots")

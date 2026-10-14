@@ -15,7 +15,7 @@
         "away_turnovers": 19,
         "coverage_status": "complete",
         "video_available": true,
-        "official_sheet_confirmed": false
+        "official_sheet_confirmed": true
       }
     },
     {
@@ -32,7 +32,7 @@
         "away_turnovers": 13,
         "coverage_status": "complete",
         "video_available": true,
-        "official_sheet_confirmed": false
+        "official_sheet_confirmed": true
       }
     }
   ]

@@ -1,2 +1,3 @@
 /* Legends are text keys, not colored blocks. Team dots remain readable without a background. */
 .home-key{background:transparent;color:#ff8c98}.away-key{background:transparent;color:#8fb4f3}.team-dot{display:inline;color:inherit;background:transparent}.team-dot::before{content:'●'}.team-dot.home{background:transparent;color:#ff8c98}.team-dot.away{background:transparent;color:#8fb4f3}.home-bar{background:#d52b42}.away-bar{background:#315b9b}
+.official-sheet-link{display:inline-block;margin:.8rem .6rem 0 0;padding:.55rem .8rem;border:1px solid #f0a2ac;border-radius:8px;color:#fff;background:#751724;font-weight:800;text-decoration:none}.official-sheet-link:hover{background:#a51e31}

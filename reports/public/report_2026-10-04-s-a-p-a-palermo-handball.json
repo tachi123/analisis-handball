@@ -5175,5 +5175,10 @@
     "provider": "youtube",
     "video_id": "GP4HwGTxVlo",
     "availability": "player_error"
+  },
+  "official_sheet_confirmed": true,
+  "official_sheet": {
+    "label": "Planilla oficial FEMEBAL",
+    "href": "planillas/planilla_2026-10-04-s-a-p-a-palermo-handball.pdf"
   }
 }

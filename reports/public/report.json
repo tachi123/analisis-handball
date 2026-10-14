@@ -5022,5 +5022,10 @@
     "provider": "youtube",
     "video_id": "iLF__rhC1sw",
     "availability": "player_error"
+  },
+  "official_sheet_confirmed": true,
+  "official_sheet": {
+    "label": "Planilla oficial FEMEBAL",
+    "href": "planillas/planilla_2026-10-11-s-a-p-a-banfield-b.pdf"
   }
 }

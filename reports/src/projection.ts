@@ -65,6 +65,7 @@ export type PublicReport = {
   video: { provider: 'youtube'; video_id: string; availability: string } | null
   phase_analysis: PhaseAnalysis | null
   official_sheet_confirmed: boolean
+  official_sheet: { label: string; href: string } | null
 }
 
 const forbidden = /^(private_note|raw_events?|analysis_event_id|credentials?|api_?key|token|database|local_database|operational_api_url)$/i
@@ -117,10 +118,17 @@ function decodeEvidence(value: unknown, allowedNames: string[]) {
 export function decodePublicReport(value: unknown): PublicReport {
   if (!isRecord(value)) throw new Error('The public report is not a JSON object.')
   // Validate root allowlist
-  const rootAllowed = ['schema_version', 'report_version', 'match', 'source', 'coaching', 'metrics', 'players', 'reconciliation', 'uncertainty_disclosure', 'coverage', 'evidence', 'team_summary', 'incidents', 'video', 'phase_analysis', 'official_sheet_confirmed']
+  const rootAllowed = ['schema_version', 'report_version', 'match', 'source', 'coaching', 'metrics', 'players', 'reconciliation', 'uncertainty_disclosure', 'coverage', 'evidence', 'team_summary', 'incidents', 'video', 'phase_analysis', 'official_sheet_confirmed', 'official_sheet']
   fields(value as Record<string, unknown>, rootAllowed, forbidden)
   if (value.schema_version !== 'public-report-v1' || typeof value.report_version !== 'number') throw new Error('Unsupported public report version.')
   if (value.official_sheet_confirmed !== undefined && typeof value.official_sheet_confirmed !== 'boolean') throw new Error('The public report has invalid official sheet data.')
+  let official_sheet: PublicReport['official_sheet'] = null
+  if (value.official_sheet !== null && value.official_sheet !== undefined) {
+    const sheet = requiredRecord(value.official_sheet)
+    fields(sheet, ['label', 'href'], forbidden)
+    if (sheet.label !== 'Planilla oficial FEMEBAL' || !isString(sheet.href) || !/^planillas\/planilla_[a-z0-9]+(?:-[a-z0-9]+)*\.pdf$/.test(sheet.href)) throw new Error('The public report has invalid official sheet data.')
+    official_sheet = { label: sheet.label, href: sheet.href }
+  }
   const match = requiredRecord(value.match)
   const source = requiredRecord(value.source)
   const coaching = requiredRecord(value.coaching)
@@ -385,5 +393,6 @@ metrics: normalizedMetrics,
     evidence,
     phase_analysis,
     official_sheet_confirmed: value.official_sheet_confirmed === true,
+    official_sheet,
   } as PublicReport
 }

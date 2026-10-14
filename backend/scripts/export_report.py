@@ -9,7 +9,10 @@ from app.services.report_service import ReportService, PUBLIC_METRIC_NAMES, is_p
 from unicodedata import normalize
 import json
 import re
+import hashlib
+import shutil
 from pathlib import Path
+from app.services.pdf_service import PDFService
 
 def slugify(name: str) -> str:
     nfkd = normalize('NFKD', name)
@@ -22,8 +25,25 @@ def public_report_key(report: dict) -> str:
     match = report['match']
     return '-'.join((match.get('date') or 'undated', slugify(match.get('home_team') or 'home'), slugify(match.get('away_team') or 'away')))
 
+def public_official_sheet(snapshot: OfficialSnapshot | None, directory: Path, key: str) -> dict | None:
+    """Copy only explicitly approved, hash-verified sheets into public output."""
+    if snapshot is None or not snapshot.is_publicly_published:
+        return None
+    source = PDFService.official_sheet_pdf_path(snapshot)
+    if source is None:
+        raise RuntimeError(f'Public official sheet source is unavailable for match {snapshot.match_id}')
+    digest = hashlib.sha256(source.read_bytes()).hexdigest()
+    if digest != snapshot.source_sha256:
+        raise RuntimeError(f'Public official sheet hash mismatch for match {snapshot.match_id}')
+    filename = f'planilla_{key}.pdf'
+    sheet_directory = directory / 'planillas'
+    sheet_directory.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(source, sheet_directory / filename)
+    return {'label': 'Planilla oficial FEMEBAL', 'href': f'planillas/{filename}'}
+
 def write_public_catalog(directory: Path) -> None:
     entries = []
+    referenced_sheets = set()
     for path in directory.glob('report_*.json'):
         try:
             candidate = json.loads(path.read_text(encoding='utf-8'))
@@ -32,6 +52,15 @@ def write_public_catalog(directory: Path) -> None:
             key = public_report_key(candidate)
             if path.name != f'report_{key}.json':
                 continue
+            coverage = candidate.get('coverage')
+            # An imported sheet alone is not an analysis. Do not expose a report
+            # with invented zero analytics before observed coverage exists.
+            if not isinstance(coverage, dict) or coverage.get('status') not in {'complete', 'partial'}:
+                path.unlink()
+                continue
+            official_sheet = candidate.get('official_sheet')
+            if isinstance(official_sheet, dict) and isinstance(official_sheet.get('href'), str):
+                referenced_sheets.add(official_sheet['href'].removeprefix('planillas/'))
             match = candidate.get('match', {})
             home_team, away_team = match.get('home_team'), match.get('away_team')
             if not isinstance(home_team, str) or not isinstance(away_team, str):
@@ -61,6 +90,11 @@ def write_public_catalog(directory: Path) -> None:
             continue
     entries.sort(key=lambda entry: (entry['date'] or '', entry['home_team'], entry['away_team'], entry['key']), reverse=True)
     (directory / 'reports.json').write_text(json.dumps({'schema_version': 'public-report-catalog-v1', 'reports': entries}, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    sheet_directory = directory / 'planillas'
+    if sheet_directory.exists():
+        for path in sheet_directory.glob('*.pdf'):
+            if path.name not in referenced_sheets:
+                path.unlink()
 
 def public_output_paths(output_path: Path, catalog_directory: Path | None = None) -> tuple[Path, Path]:
     """Return the fallback report path and the directory containing all catalog artifacts."""
@@ -697,6 +731,12 @@ output_path, output_directory = public_output_paths(
     Path(os.environ['PUBLIC_REPORT_CATALOG_OUTPUT']) if os.getenv('PUBLIC_REPORT_CATALOG_OUTPUT') else None,
 )
 output_directory.mkdir(parents=True, exist_ok=True)
+official_snapshot = db.query(OfficialSnapshot).filter(
+    OfficialSnapshot.match_id == match_id,
+    OfficialSnapshot.is_confirmed.is_(True),
+).order_by(OfficialSnapshot.created_at.desc(), OfficialSnapshot.id.desc()).first()
+report['official_sheet_confirmed'] = official_snapshot is not None
+report['official_sheet'] = public_official_sheet(official_snapshot, output_directory, public_report_key(report))
 serialized_report = json.dumps(report, ensure_ascii=False, indent=2)
 fallback_path = output_directory / 'report.json'
 fallback_path.write_text(serialized_report, encoding='utf-8')
@@ -726,7 +766,7 @@ summary = {
     'date': str(match.date) if match.date else None,
     'schema_version': report['schema_version'],
     'report_version': report['report_version'],
-    'coverage_status': report.get('coverage', {}).get('status', 'none'),
+    'coverage_status': (report.get('coverage') or {}).get('status', 'none'),
     'evidence_count': len(report.get('evidence', [])),
     'players_count': len(report.get('players', [])),
     'metrics_count': len(metrics),
