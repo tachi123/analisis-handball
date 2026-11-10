@@ -59,7 +59,6 @@ def test_curated_fixture_imports_source_facts_after_real_migration(fixture_datab
     finally:
         session.close()
 
-
 def test_corrected_schedule_reimport_preserves_imported_fixture_key(fixture_database):
     payload, raw_payload = load_fixture(str(FIXTURE_PATH))
     session = migrated_session(fixture_database)

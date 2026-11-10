@@ -1,8 +1,10 @@
 import hashlib
 import json
+from datetime import date
+from types import SimpleNamespace
 
 from app.models import OfficialBatchRun, OfficialSnapshot, ScheduledMatch
-from app.services.official_planilla_loader_service import load_approved_planillas, rollback_batch
+from app.services.official_planilla_loader_service import _completed_batch_covers_entries, _official_result_date, _teams_match, load_approved_planillas, rollback_batch
 from app.services.pdf_service import PDFService
 
 
@@ -84,3 +86,37 @@ def test_rejected_loader_has_no_batch_owned_snapshot_to_roll_back(session, tmp_p
 
     assert result.rejected
     assert session.query(OfficialSnapshot).count() == session.query(ScheduledMatch).count() == 0
+
+
+def _registration(club, variant, external_code):
+    return SimpleNamespace(competition_team=SimpleNamespace(
+        club=SimpleNamespace(name=club), variant=variant, external_code=external_code,
+    ))
+
+
+def test_exact_approved_alias_allows_formal_pdf_team_label_only_for_bound_registration():
+    fixture = SimpleNamespace(
+        home_registration=_registration("Argentinos Juniors", "D", "PER_2026_3M_Argentinos_Juniors_D"),
+        away_registration=_registration("S.A.P.A.", None, "PER_2026_3M_SAPA_MAIN"),
+    )
+    preview = {"home_team": {"name": "A.A. Argentinos Juniors D"}, "away_team": {"name": "S.A.P.A."}}
+    aliases = [{"source_label": "A.A. Argentinos Juniors D", "club": "Argentinos Juniors", "variant": "D",
+                "external_codes": {"permanencia-3m-2026": "PER_2026_3M_Argentinos_Juniors_D"}}]
+
+    assert _teams_match(fixture, preview, aliases)
+    fixture.home_registration.competition_team.external_code = "OTHER_TEAM"
+    assert not _teams_match(fixture, preview, aliases)
+
+
+def test_completed_batch_with_skips_is_not_treated_as_fully_loaded():
+    batch = SimpleNamespace(report={"linked": ["planilla:one"], "skipped": [{"fixture_key": "planilla:two"}]})
+    derived = {"fixtures": [{"rounds": [{"entries": [
+        {"kind": "match", "planilla": {"source_path": "one.pdf"}, "fixture_key": "planilla:one"},
+        {"kind": "match", "planilla": {"source_path": "two.pdf"}, "fixture_key": "planilla:two"},
+    ]}]}]}
+
+    assert not _completed_batch_covers_entries(batch, derived)
+
+
+def test_official_result_date_uses_the_planilla_close_date():
+    assert _official_result_date({"date": "2026-10-10"}) == date(2026, 10, 10)

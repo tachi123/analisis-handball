@@ -3,6 +3,7 @@ import { Trophy, Users, UserCircle, Calendar, BarChart2, LogOut } from 'lucide-r
 import { useAuth } from '../hooks/useAuth'
 
 const NAV = [
+  { to: '/permanencia', label: 'Permanencia', icon: Calendar },
   { to: '/matches', label: 'Partidos', icon: Calendar },
   { to: '/tournaments', label: 'Torneos', icon: Trophy },
   { to: '/teams', label: 'Equipos', icon: Users },

@@ -641,6 +641,7 @@ class FixtureStageRead(BaseModel):
 
 class ScheduledFixtureRead(BaseModel):
     fixture_key: str
+    round_number: int
     stage: FixtureStageRead
     home_registration: FixtureRegistrationRead
     away_registration: FixtureRegistrationRead
@@ -655,6 +656,9 @@ class ScheduledFixtureRead(BaseModel):
     official_snapshot_id: Optional[str] = None
     is_preloaded: bool = False
     youtube_link: str = ""
+    has_video: bool = False
+    analysis_run_count: int = 0
+    referees: Optional[str] = None
     roster_status: Literal["not_confirmed", "needs_identity_resolution", "ready"] = "not_confirmed"
     unresolved_roster_players: int = 0
 
@@ -1096,7 +1100,7 @@ class Round(RoundBase):
         from_attributes = True
 
 
-MatchStatus = Literal["scheduled", "played", "postponed", "cancelled"]
+MatchStatus = Literal["scheduled", "played", "postponed", "cancelled", "suspended"]
 FixtureResultStatus = Literal["unreported", "reported", "approved", "disputed", "confirmed"]
 
 

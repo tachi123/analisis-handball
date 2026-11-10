@@ -63,8 +63,8 @@ def load_approved_planillas(db: Session, derived_path: Path, approval_path: Path
     except (OSError, ValueError, json.JSONDecodeError) as error:
         return _reject(db, derived, derived_sha, str(error))
 
-    existing = db.query(OfficialBatchRun).filter_by(derived_sha256=derived_sha, status="completed").first()
-    if existing:
+    existing = db.query(OfficialBatchRun).filter_by(derived_sha256=derived_sha, status="completed").order_by(OfficialBatchRun.id.desc()).first()
+    if existing and _completed_batch_covers_entries(existing, derived):
         return LoadReport(existing.id, 0, len(existing.report.get("linked", [])), [], None)
     root = (source_root or derived_path.parent.parent).resolve()
     try:
@@ -80,7 +80,7 @@ def load_approved_planillas(db: Session, derived_path: Path, approval_path: Path
         created, reused, skipped, linked = 0, 0, [], []
         for fixture in derived["fixtures"]:
             for entry in _entries(fixture):
-                outcome = _link_entry(db, batch, entry, root)
+                outcome = _link_entry(db, batch, entry, root, bootstrap["aliases"])
                 if outcome == "created":
                     created += 1; linked.append(entry["fixture_key"])
                 elif outcome == "reused":
@@ -164,7 +164,17 @@ def _entries(fixture: dict[str, Any]):
                 yield entry
 
 
-def _link_entry(db: Session, batch: OfficialBatchRun, entry: dict[str, Any], root: Path) -> str:
+def _completed_batch_covers_entries(batch: OfficialBatchRun, derived: dict[str, Any]) -> bool:
+    """Return whether a completed batch actually linked every approved sheet."""
+    expected = {entry["fixture_key"] for fixture in derived["fixtures"] for entry in _entries(fixture)}
+    linked = set(batch.report.get("linked", [])) if isinstance(batch.report, dict) else set()
+    skipped = batch.report.get("skipped", []) if isinstance(batch.report, dict) else []
+    return not skipped and expected <= linked
+
+
+def _link_entry(db: Session, batch: OfficialBatchRun, entry: dict[str, Any], root: Path,
+                approved_aliases: list[dict[str, Any]], *, validate_reported_score: bool = True,
+                validate_teams: bool = True) -> str:
     fixture = db.query(ScheduledMatch).options(
         joinedload(ScheduledMatch.home_registration), joinedload(ScheduledMatch.away_registration),
         joinedload(ScheduledMatch.analysis_match),
@@ -183,16 +193,26 @@ def _link_entry(db: Session, batch: OfficialBatchRun, entry: dict[str, Any], roo
     expected = {"sha256": planilla.get("sha256"), "page_count": planilla.get("page_count"), "size_bytes": planilla.get("size")}
     if any(expected[key] is not None and provenance[key] != expected[key] for key in expected):
         return "source_provenance_mismatch"
-    if not _teams_match(fixture, preview) or not _scores_match(entry, preview):
+    if (validate_teams and not _teams_match(fixture, preview, approved_aliases)) or (validate_reported_score and not _scores_match(entry, preview)):
         return "sheet_fixture_mismatch"
     home, away = _legacy_teams(db, entry)
     info = preview["match_info"]
-    match = Match(date=fixture.scheduled_date or date.fromisoformat(info["date"]), home_team_id=home.id, away_team_id=away.id,
-                  home_score=info["home_score"], away_score=info["away_score"], scheduled_match_id=fixture.id,
-                  origin="fixture")
-    db.add(match); db.flush()
+    # The tracker date is the scheduled/reported fixture fact. Once a reviewed
+    # sheet is loaded, its close-of-match date is the official result date.
+    official_date = _official_result_date(info)
+    # A fixture may already carry a reported result without a planilla; upgrade
+    # that Match in place instead of creating a duplicate (scheduled_match_id is
+    # unique).
+    match = fixture.analysis_match
+    if match is None:
+        match = Match(scheduled_match_id=fixture.id, origin="fixture")
+        db.add(match)
+    match.date = official_date
+    match.home_team_id, match.away_team_id = home.id, away.id
+    match.home_score, match.away_score = info["home_score"], info["away_score"]
+    db.flush()
     snapshot = OfficialSnapshot(id=str(uuid4()), match_id=match.id, batch_run_id=batch.id, is_confirmed=True,
-        source_path=str(path), confirmed_date=match.date, home_team_name=preview["home_team"]["name"],
+        source_path=str(path), confirmed_date=official_date, home_team_name=preview["home_team"]["name"],
         away_team_name=preview["away_team"]["name"], home_score=info["home_score"], away_score=info["away_score"],
         **{f"source_{key}": value for key, value in provenance.items()})
     db.add(snapshot)
@@ -211,13 +231,38 @@ def _source_path(root: Path, source_path: str) -> Path:
     return path
 
 
-def _teams_match(fixture: ScheduledMatch, preview: dict[str, Any]) -> bool:
-    return all(PDFService._compatibility(getattr(fixture, f"{side}_registration"), preview[f"{side}_team"]["name"])["status"] == "compatible" for side in ("home", "away"))
+def _teams_match(fixture: ScheduledMatch, preview: dict[str, Any], approved_aliases: list[dict[str, Any]]) -> bool:
+    """Require a direct registration match or an exact alias bound by approval.
+
+    The PDF label is never normalized heuristically beyond the existing direct
+    compatibility check. A differing label can only pass when it is an exact
+    approved alias for the registration's immutable external code.
+    """
+    return all(_team_matches(getattr(fixture, f"{side}_registration"), preview[f"{side}_team"]["name"], approved_aliases)
+               for side in ("home", "away"))
+
+
+def _team_matches(registration: TeamRegistration, parsed_name: str, approved_aliases: list[dict[str, Any]]) -> bool:
+    if PDFService._compatibility(registration, parsed_name)["status"] == "compatible":
+        return True
+    competition_team = registration.competition_team
+    return any(
+        alias.get("source_label") == parsed_name
+        and alias.get("club") == competition_team.club.name
+        and alias.get("variant") == competition_team.variant
+        and competition_team.external_code in alias.get("external_codes", {}).values()
+        for alias in approved_aliases
+    )
 
 
 def _scores_match(entry: dict[str, Any], preview: dict[str, Any]) -> bool:
     result, info = entry.get("result", {}), preview["match_info"]
     return (result.get("home"), result.get("away")) == (info.get("home_score"), info.get("away_score"))
+
+
+def _official_result_date(match_info: dict[str, Any]) -> date:
+    """Return the reviewed sheet's close-of-match date for official records."""
+    return date.fromisoformat(match_info["date"])
 
 
 def _legacy_teams(db: Session, entry: dict[str, Any]) -> tuple[Team, Team]:

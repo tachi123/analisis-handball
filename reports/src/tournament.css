@@ -1,0 +1,77 @@
+/* Option A — clean, light tournament view with a SAPA (celeste/azul) accent. */
+.tournament-shell {
+  background: #f6f8fb;
+  color: #0f172a;
+  border-radius: 18px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+.tournament-shell .hero {
+  background: linear-gradient(120deg, #eef4ff, #fdf2f6);
+  border: 1px solid #e2e8f0;
+  color: #0f172a;
+}
+.tournament-shell .hero h1 { color: #0f172a; }
+.tournament-shell .hero h1 span { color: #2563eb; }
+.tournament-shell .hero p { color: #475569; }
+.tournament-shell .eyebrow { color: #2563eb; }
+.tournament-shell .dashboard-section,
+.tournament-shell .sapa-spotlight {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+.tournament-shell .section-heading h2 { color: #0f172a; }
+.tournament-shell .section-heading small { color: #64748b; }
+.tournament-shell .home-link { color: #2563eb; border-color: #c7d7fe; }
+
+.sapa-spotlight {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 1.25rem 0;
+  padding: 1.25rem;
+  background: linear-gradient(120deg, #eff6ff, #ffffff);
+}
+.sapa-spotlight-team h2 { font-size: 2rem; color: #0f172a; margin: 0.15rem 0; }
+.sapa-spotlight-pos {
+  display: inline-block;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.25rem 0.8rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.sapa-spotlight-stats {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.75rem;
+  flex: 1;
+  min-width: 260px;
+}
+.sapa-spotlight-stats article { display: grid; gap: 0.2rem; }
+.sapa-spotlight-stats strong { font-size: 1.5rem; color: #0f172a; }
+.sapa-spotlight-stats span { font-size: 0.78rem; color: #64748b; }
+
+.tournament-shell .table-wrap { border-radius: 12px; }
+.tournament-shell table.player-table th { color: #64748b; }
+.tournament-shell table.player-table td { color: #334155; border-color: #eef2f7; }
+.sapa-row td { background: #eff6ff; font-weight: 600; }
+.sapa-row td.standings-club strong { color: #2563eb; }
+.standings-pos, .standings-points { font-weight: 700; }
+.standings-points { color: #2563eb; }
+.diff-positive { color: #16a34a; }
+.diff-negative { color: #dc2626; }
+.scorers-goals { font-weight: 700; color: #0f172a; }
+
+.sapa-scorers { margin-top: 1rem; padding: 1rem; background: #eff6ff; border-radius: 12px; }
+.sapa-scorers ul { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.5rem; margin: 0.5rem 0 0; padding: 0; }
+.sapa-scorers li { display: flex; justify-content: space-between; gap: 0.5rem; background: #fff; border-radius: 8px; padding: 0.55rem 0.7rem; }
+.sapa-scorers li span { color: #64748b; }
+
+.tournament-footnote { color: #64748b; font-size: 0.85rem; margin-top: 1rem; }
+
+@media (max-width: 640px) {
+  .sapa-spotlight-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

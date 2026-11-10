@@ -1,3 +1,72 @@
+// ─── Standings types ──────────────────────────────────────────────────────────
+
+export interface StandingsTeam {
+  pos: number
+  team_id: number
+  name: string
+  pj: number    // games played
+  wins: number
+  draws: number
+  losses: number
+  cp: number    // penalized/suspended losses
+  gf: number    // goals for
+  ga: number    // goals against
+  gd: number    // goal difference
+  pts: number   // points
+  coverage: "confirmed" | "partial" | "none"
+}
+
+export interface StandingsResponse {
+  schema_version: string
+  stage_id: number
+  stage_name: string
+  teams: StandingsTeam[]
+  note: string
+}
+
+// ─── Player statistics ──────────────────────────────────────────────────────────
+
+export interface PlayerStatisticsRow {
+  name: string
+  club: string
+  appearances: number
+  goals: number
+  yellow: number
+  two_min: number
+  red: number
+  blue: number
+  goals_per_game: number
+}
+
+export interface PlayerStatisticsResponse {
+  schema_version: string
+  stage_id: number
+  stage_name: string
+  rows: PlayerStatisticsRow[]
+  note: string
+}
+
+// ─── Club statistics ────────────────────────────────────────────────────────────
+
+export interface ClubStatisticsRow {
+  club: string
+  appearances: number
+  goals: number
+  yellow: number
+  two_min: number
+  red: number
+  blue: number
+  distinct_players: number
+}
+
+export interface ClubStatisticsResponse {
+  schema_version: string
+  stage_id: number
+  stage_name: string
+  rows: ClubStatisticsRow[]
+  note: string
+}
+
 // ─── Auth types ───────────────────────────────────────────────────────────────
 
 export type UserRole = 'superadmin' | 'admin' | 'analyst'
@@ -520,6 +589,7 @@ export interface FixtureStage {
 
 export interface ScheduledFixture {
   fixture_key: string
+  round_number: number
   stage: FixtureStage
   home_registration: FixtureRegistration
   away_registration: FixtureRegistration
@@ -534,6 +604,9 @@ export interface ScheduledFixture {
   official_snapshot_id: string | null
   is_preloaded: boolean
   youtube_link: string
+  has_video: boolean
+  analysis_run_count: number
+  referees: string | null
   roster_status: 'not_confirmed' | 'needs_identity_resolution' | 'ready'
   unresolved_roster_players: number
 }

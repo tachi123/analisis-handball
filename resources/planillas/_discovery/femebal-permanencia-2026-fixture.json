@@ -1,0 +1,5289 @@
+{
+  "source": {
+    "label": "FEMEBAL TournamentTracker - Torneo Metropolitano Clausura Permanencia",
+    "captured_at": "2026-11-09",
+    "url": "https://www.femebal.com/tournament-tracker/RUdVX3Rkd1M=",
+    "tracker_tournament_id": "00001296",
+    "tracker_last_updated": "2026-11-06 21:50:43",
+    "collection_method": "user-supplied tracker evidence; normalized locally without automated import"
+  },
+  "stage": {
+    "season": 2026,
+    "name": "Torneo Permanencia 2026 3ªM",
+    "category": "Mayores",
+    "division": "3ª División",
+    "gender": "Masculino"
+  },
+  "rounds": [
+    {
+      "number": 1,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067180",
+          "fixture_key": "femebal:00067180",
+          "home": {
+            "club": "Ituzaingó",
+            "variant": null,
+            "external_code": "00000366"
+          },
+          "away": {
+            "club": "Palermo Handball",
+            "variant": null,
+            "external_code": "00000409"
+          },
+          "date": "2026-08-09",
+          "time": "19:45",
+          "venue": "C.A. Ituzaingó",
+          "court": null,
+          "result": {
+            "home": 21,
+            "away": 35,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067180",
+            "tracker_club_ids": {
+              "home": "00000366",
+              "away": "00000409"
+            },
+            "tracker_labels": {
+              "home": "C.A. Ituzaingó",
+              "away": "Palermo Handball"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/2/7/7/277644beeb561522.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Prat Moreno, Delfina / Manzanos, Adrian",
+            "venue_address": "Blas Parera 1251 Castelar Buenos Aires",
+            "venue_coordinates": "-34.6730645;-58.664252"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067181",
+          "fixture_key": "femebal:00067181",
+          "home": {
+            "club": "Club Deportivo Morón",
+            "variant": null,
+            "external_code": "00000384"
+          },
+          "away": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D",
+            "external_code": "00000415"
+          },
+          "date": "2026-08-09",
+          "time": "19:45",
+          "venue": "S.A.G. Polvorines Sede Principal",
+          "court": null,
+          "result": {
+            "home": 33,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067181",
+            "tracker_club_ids": {
+              "home": "00000384",
+              "away": "00000415"
+            },
+            "tracker_labels": {
+              "home": "Club Deportivo Morón",
+              "away": "S.A.G. Polvorines D"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/f/0/c/f0c3941767714bf6.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Cabrera, Jonathan / Saldaña, Juan",
+            "venue_address": "Manzanares 4000 Los Polvorines Buenos Aires",
+            "venue_coordinates": "-34.4905586;-58.6912997"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067182",
+          "fixture_key": "femebal:00067182",
+          "home": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null,
+            "external_code": "00000616"
+          },
+          "away": {
+            "club": "Muñiz Handball",
+            "variant": "B",
+            "external_code": "00000407"
+          },
+          "date": "2026-08-09",
+          "time": "18:00",
+          "venue": "CEDEM Nº1 Gimnasio 1",
+          "court": null,
+          "result": {
+            "home": 19,
+            "away": 23,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067182",
+            "tracker_club_ids": {
+              "home": "00000616",
+              "away": "00000407"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de San Martín (Ce.M.E.F)",
+              "away": "Muñiz Handball B"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/3/f/5/3f5eaaba59088ddd.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Sola, Lautaro / Pereyra, Natalia",
+            "venue_address": "Juan Bautista Alberdi 5524 Caseros Buenos Aires",
+            "venue_coordinates": "-34.6028644;-58.5765247"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067183",
+          "fixture_key": "femebal:00067183",
+          "home": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C",
+            "external_code": "00000337"
+          },
+          "away": {
+            "club": "Argentinos Juniors",
+            "variant": "D",
+            "external_code": "00000354"
+          },
+          "date": "2026-08-09",
+          "time": "19:45",
+          "venue": "Municipalidad de Vicente López. Gimnasio 1",
+          "court": null,
+          "result": {
+            "home": 28,
+            "away": 19,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067183",
+            "tracker_club_ids": {
+              "home": "00000337",
+              "away": "00000354"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de Vicente López C",
+              "away": "A.A. Argentinos Juniors D"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/1/6/d/16d6148cbc7781f1.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Lucero, Santiago / Crespillo, Josue",
+            "venue_address": "Bartolome Cruz 1105 Vicente Lopez Buenos Aires",
+            "venue_coordinates": "-34.5225139;-58.4716827"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067184",
+          "fixture_key": "femebal:00067184",
+          "home": {
+            "club": "S.A.P.A.",
+            "variant": null,
+            "external_code": "00000412"
+          },
+          "away": {
+            "club": "C.S. y D. Defensores de Banfield",
+            "variant": null,
+            "external_code": "00000379"
+          },
+          "date": "2026-08-09",
+          "time": "18:00",
+          "venue": "Estadio Municipal",
+          "court": null,
+          "result": {
+            "home": 27,
+            "away": 36,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067184",
+            "tracker_club_ids": {
+              "home": "00000412",
+              "away": "00000379"
+            },
+            "tracker_labels": {
+              "home": "S.A.P.A.",
+              "away": "C.S. y D. Defensores de Banfield"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/2/8/e/28eb0a019866deed.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Lopez Barrios, Tobias / Gregori, Lucas",
+            "venue_address": "Ricardo Gutierrez General Las Heras Buenos Aires",
+            "venue_coordinates": "-34.920919927172;-58.946999707678"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067185",
+          "fixture_key": "femebal:00067185",
+          "home": {
+            "club": "Banfield",
+            "variant": "B",
+            "external_code": "00000360"
+          },
+          "away": {
+            "club": "Lanús",
+            "variant": "C",
+            "external_code": "00000341"
+          },
+          "date": "2026-08-09",
+          "time": "19:45",
+          "venue": "CI.DE.CO Gimnasio 1",
+          "court": null,
+          "result": {
+            "home": 26,
+            "away": 28,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067185",
+            "tracker_club_ids": {
+              "home": "00000360",
+              "away": "00000341"
+            },
+            "tracker_labels": {
+              "home": "C.A. Banfield B",
+              "away": "C.A. Lanús C"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/d/8/e/d8ef269c971ea205.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Klein, Octavio / Strazzolini, Simon",
+            "venue_address": "Bueras 1171 Lanus Este Buenos Aires",
+            "venue_coordinates": "-34.6967867;-58.3755453"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067186",
+          "fixture_key": "femebal:00067186",
+          "home": {
+            "club": "Municipalidad de Pilar",
+            "variant": null,
+            "external_code": "00000405"
+          },
+          "away": {
+            "club": "Defensores de Moreno",
+            "variant": null,
+            "external_code": "00000381"
+          },
+          "date": "2026-08-09",
+          "time": "18:00",
+          "venue": "Microestadio Municipal de PIlar  'Ricardo Rusticucci'",
+          "court": null,
+          "result": {
+            "home": 31,
+            "away": 19,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067186",
+            "tracker_club_ids": {
+              "home": "00000405",
+              "away": "00000381"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de Pilar",
+              "away": "C.A. Defensores de Moreno"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/c/1/d/c1d2687ec375be3e.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Santillan, Maximiliano / Garcia, Lourdes",
+            "venue_address": "Nestor Kirchner 1400 Pilar Buenos Aires",
+            "venue_coordinates": "-34.4663154;-58.9153722"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067187",
+          "fixture_key": "femebal:00067187",
+          "home": {
+            "club": "U.N.La.M.",
+            "variant": null,
+            "external_code": "00000424"
+          },
+          "away": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B",
+            "external_code": "00000400"
+          },
+          "date": "2026-08-09",
+          "time": "19:45",
+          "venue": "Microestadio UN. La Matanza",
+          "court": null,
+          "result": {
+            "home": 23,
+            "away": 12,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067187",
+            "tracker_club_ids": {
+              "home": "00000424",
+              "away": "00000400"
+            },
+            "tracker_labels": {
+              "home": "U.N.La.M.",
+              "away": "Municipalidad de Tres de Febrero B"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/e/1/a/e1a2e2079f645b1d.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Santos, Jesica / Toledo, Yesica",
+            "venue_address": "Florencio Varela 1903 San Justo Buenos Aires",
+            "venue_coordinates": "-34.6702106;-58.5637476"
+          }
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067188",
+          "fixture_key": "femebal:00067188",
+          "home": {
+            "club": "Palermo Handball",
+            "variant": null,
+            "external_code": "00000409"
+          },
+          "away": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B",
+            "external_code": "00000400"
+          },
+          "date": "2026-08-16",
+          "time": "19:45",
+          "venue": "AAAJ Globo",
+          "court": null,
+          "result": {
+            "home": 28,
+            "away": 26,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067188",
+            "tracker_club_ids": {
+              "home": "00000409",
+              "away": "00000400"
+            },
+            "tracker_labels": {
+              "home": "Palermo Handball",
+              "away": "Municipalidad de Tres de Febrero B"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/9/e/b/9ebcc92895809e94.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Balsas, Matias / Montenegro Settimi, Sebastián",
+            "venue_address": "Punta Arenas 1271 CABA Buenos Aires",
+            "venue_coordinates": "-34.591934;-58.4698688"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067189",
+          "fixture_key": "femebal:00067189",
+          "home": {
+            "club": "Defensores de Moreno",
+            "variant": null,
+            "external_code": "00000381"
+          },
+          "away": {
+            "club": "U.N.La.M.",
+            "variant": null,
+            "external_code": "00000424"
+          },
+          "date": "2026-08-16",
+          "time": "18:00",
+          "venue": "Defensores de Moreno Victorica",
+          "court": null,
+          "result": {
+            "home": 21,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067189",
+            "tracker_club_ids": {
+              "home": "00000381",
+              "away": "00000424"
+            },
+            "tracker_labels": {
+              "home": "C.A. Defensores de Moreno",
+              "away": "U.N.La.M."
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/a/6/2/a6227725aac5bc59.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Pereira, Carla / Pereira, Camila",
+            "venue_address": "Avenida Victorica 350 Moreno Buenos Aires",
+            "venue_coordinates": "-34.6446326;-58.7958337"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067190",
+          "fixture_key": "femebal:00067190",
+          "home": {
+            "club": "Lanús",
+            "variant": "C",
+            "external_code": "00000341"
+          },
+          "away": {
+            "club": "Municipalidad de Pilar",
+            "variant": null,
+            "external_code": "00000405"
+          },
+          "date": "2026-08-16",
+          "time": "19:45",
+          "venue": "C.A. Lanús Gimnasio",
+          "court": null,
+          "result": {
+            "home": 31,
+            "away": 27,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067190",
+            "tracker_club_ids": {
+              "home": "00000341",
+              "away": "00000405"
+            },
+            "tracker_labels": {
+              "home": "C.A. Lanús C",
+              "away": "Municipalidad de Pilar"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/9/9/4/9948c687d1279129.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Burgos, Ruben / Borras Luque, Maria Jose",
+            "venue_address": "Ramon Cabrero y H. Guidi Lanus Buenos Aires",
+            "venue_coordinates": "-34.7163465;-58.384221"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067191",
+          "fixture_key": "femebal:00067191",
+          "home": {
+            "club": "C.S. y D. Defensores de Banfield",
+            "variant": null,
+            "external_code": "00000379"
+          },
+          "away": {
+            "club": "Banfield",
+            "variant": "B",
+            "external_code": "00000360"
+          },
+          "date": "2026-08-16",
+          "time": "18:00",
+          "venue": "Inst. Tec. San Bonifacio Gimnasio",
+          "court": null,
+          "result": {
+            "home": 27,
+            "away": 28,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067191",
+            "tracker_club_ids": {
+              "home": "00000379",
+              "away": "00000360"
+            },
+            "tracker_labels": {
+              "home": "C.S. y D. Defensores de Banfield",
+              "away": "C.A. Banfield B"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/b/a/4/ba47c22446ddfec7.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Policano, Mariela / Rabino, Florencia",
+            "venue_address": "Calle Sirito 700 Lomas de Zamora Buenos Aires",
+            "venue_coordinates": "-34.7725065;-58.4296355"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067192",
+          "fixture_key": "femebal:00067192",
+          "home": {
+            "club": "Argentinos Juniors",
+            "variant": "D",
+            "external_code": "00000354"
+          },
+          "away": {
+            "club": "S.A.P.A.",
+            "variant": null,
+            "external_code": "00000412"
+          },
+          "date": "2026-08-16",
+          "time": "18:00",
+          "venue": "AAAJ Globo",
+          "court": null,
+          "result": {
+            "home": 23,
+            "away": 29,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067192",
+            "tracker_club_ids": {
+              "home": "00000354",
+              "away": "00000412"
+            },
+            "tracker_labels": {
+              "home": "A.A. Argentinos Juniors D",
+              "away": "S.A.P.A."
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/7/a/5/7a5c70319fd0a5f7.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Sandoval, Noelia / Conberse, Agustin",
+            "venue_address": "Punta Arenas 1271 CABA Buenos Aires",
+            "venue_coordinates": "-34.591934;-58.4698688"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067193",
+          "fixture_key": "femebal:00067193",
+          "home": {
+            "club": "Muñiz Handball",
+            "variant": "B",
+            "external_code": "00000407"
+          },
+          "away": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C",
+            "external_code": "00000337"
+          },
+          "date": "2026-08-16",
+          "time": "18:30",
+          "venue": "Muñiz",
+          "court": null,
+          "result": {
+            "home": 28,
+            "away": 31,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067193",
+            "tracker_club_ids": {
+              "home": "00000407",
+              "away": "00000337"
+            },
+            "tracker_labels": {
+              "home": "Muñiz Handball B",
+              "away": "Municipalidad de Vicente López C"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/a/2/f/a2f0b8741a8fdc66.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Altamirano, Facundo / Sayago, Tomas",
+            "venue_address": "Sarmiento 1080 San Miguel Buenos Aires",
+            "venue_coordinates": "-34.5471077;-58.7067833"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067194",
+          "fixture_key": "femebal:00067194",
+          "home": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D",
+            "external_code": "00000415"
+          },
+          "away": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null,
+            "external_code": "00000616"
+          },
+          "date": "2026-08-16",
+          "time": "20:15",
+          "venue": "S.A.G. Polvorines Sede Principal",
+          "court": null,
+          "result": {
+            "home": 22,
+            "away": 16,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067194",
+            "tracker_club_ids": {
+              "home": "00000415",
+              "away": "00000616"
+            },
+            "tracker_labels": {
+              "home": "S.A.G. Polvorines D",
+              "away": "Municipalidad de San Martín (Ce.M.E.F)"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/c/6/6/c66bb34afbd5a079.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Altamirano, Facundo / Pucheta, Gonzalo",
+            "venue_address": "Manzanares 4000 Los Polvorines Buenos Aires",
+            "venue_coordinates": "-34.4905586;-58.6912997"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067195",
+          "fixture_key": "femebal:00067195",
+          "home": {
+            "club": "Ituzaingó",
+            "variant": null,
+            "external_code": "00000366"
+          },
+          "away": {
+            "club": "Club Deportivo Morón",
+            "variant": null,
+            "external_code": "00000384"
+          },
+          "date": "2026-08-16",
+          "time": "16:15",
+          "venue": "C.A. Ituzaingó",
+          "court": null,
+          "result": {
+            "home": 28,
+            "away": 29,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067195",
+            "tracker_club_ids": {
+              "home": "00000366",
+              "away": "00000384"
+            },
+            "tracker_labels": {
+              "home": "C.A. Ituzaingó",
+              "away": "Club Deportivo Morón"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/a/0/f/a0fc60ac53863c11.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Casella, Marcelo / Vazquez, Mariano Ariel",
+            "venue_address": "Blas Parera 1251 Castelar Buenos Aires",
+            "venue_coordinates": "-34.6730645;-58.664252"
+          }
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067196",
+          "fixture_key": "femebal:00067196",
+          "home": {
+            "club": "Club Deportivo Morón",
+            "variant": null,
+            "external_code": "00000384"
+          },
+          "away": {
+            "club": "Palermo Handball",
+            "variant": null,
+            "external_code": "00000409"
+          },
+          "date": "2026-08-23",
+          "time": "20:15",
+          "venue": "Club Deportivo Morón Rafael Grosso",
+          "court": null,
+          "result": {
+            "home": 39,
+            "away": 35,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067196",
+            "tracker_club_ids": {
+              "home": "00000384",
+              "away": "00000409"
+            },
+            "tracker_labels": {
+              "home": "Club Deportivo Morón",
+              "away": "Palermo Handball"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/7/c/6/7c6e5c2a41d052bd.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Nulchis, Adrian / Trombatore, Agustin",
+            "venue_address": "Avenida Hipólito Yrigoyen 1770 Morón Buenos Aires",
+            "venue_coordinates": "-34.6602553;-58.6319763"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067197",
+          "fixture_key": "femebal:00067197",
+          "home": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null,
+            "external_code": "00000616"
+          },
+          "away": {
+            "club": "Ituzaingó",
+            "variant": null,
+            "external_code": "00000366"
+          },
+          "date": "2026-08-23",
+          "time": "19:45",
+          "venue": "CEDEM Nº1 Gimnasio 1",
+          "court": null,
+          "result": {
+            "home": 2,
+            "away": 0,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067197",
+            "tracker_club_ids": {
+              "home": "00000616",
+              "away": "00000366"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de San Martín (Ce.M.E.F)",
+              "away": "C.A. Ituzaingó"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/d/f/d/dfd3f81e5eff4954.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Ghanem, Brian / Madero Mazzeo, Tiago",
+            "venue_address": "Juan Bautista Alberdi 5524 Caseros Buenos Aires",
+            "venue_coordinates": "-34.6028644;-58.5765247"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067198",
+          "fixture_key": "femebal:00067198",
+          "home": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C",
+            "external_code": "00000337"
+          },
+          "away": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D",
+            "external_code": "00000415"
+          },
+          "date": "2026-08-23",
+          "time": "18:00",
+          "venue": "Municipalidad de Vicente López. Gimnasio 1",
+          "court": null,
+          "result": {
+            "home": 29,
+            "away": 26,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067198",
+            "tracker_club_ids": {
+              "home": "00000337",
+              "away": "00000415"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de Vicente López C",
+              "away": "S.A.G. Polvorines D"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/3/2/6/32698c71c384949a.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Klein, Octavio / Strazzolini, Simon",
+            "venue_address": "Bartolome Cruz 1105 Vicente Lopez Buenos Aires",
+            "venue_coordinates": "-34.5225139;-58.4716827"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067199",
+          "fixture_key": "femebal:00067199",
+          "home": {
+            "club": "S.A.P.A.",
+            "variant": null,
+            "external_code": "00000412"
+          },
+          "away": {
+            "club": "Muñiz Handball",
+            "variant": "B",
+            "external_code": "00000407"
+          },
+          "date": "2026-08-23",
+          "time": "18:00",
+          "venue": "Estadio Municipal",
+          "court": null,
+          "result": {
+            "home": 22,
+            "away": 20,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067199",
+            "tracker_club_ids": {
+              "home": "00000412",
+              "away": "00000407"
+            },
+            "tracker_labels": {
+              "home": "S.A.P.A.",
+              "away": "Muñiz Handball B"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/5/4/9/5496c027c6078240.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Estrella, Pablo / Crespillo, Josue",
+            "venue_address": "Ricardo Gutierrez General Las Heras Buenos Aires",
+            "venue_coordinates": "-34.920919927172;-58.946999707678"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067200",
+          "fixture_key": "femebal:00067200",
+          "home": {
+            "club": "Banfield",
+            "variant": "B",
+            "external_code": "00000360"
+          },
+          "away": {
+            "club": "Argentinos Juniors",
+            "variant": "D",
+            "external_code": "00000354"
+          },
+          "date": "2026-08-23",
+          "time": "18:00",
+          "venue": "Banfield Sede Microestadio",
+          "court": null,
+          "result": {
+            "home": 41,
+            "away": 24,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067200",
+            "tracker_club_ids": {
+              "home": "00000360",
+              "away": "00000354"
+            },
+            "tracker_labels": {
+              "home": "C.A. Banfield B",
+              "away": "A.A. Argentinos Juniors D"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/b/d/a/bda2a671671299ab.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Taborda, Valentina / Cordoba, Candela",
+            "venue_address": "Valentín Vergara 1650 Banfield Buenos Aires",
+            "venue_coordinates": "-34.7413546;-58.3944402"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067201",
+          "fixture_key": "femebal:00067201",
+          "home": {
+            "club": "Municipalidad de Pilar",
+            "variant": null,
+            "external_code": "00000405"
+          },
+          "away": {
+            "club": "C.S. y D. Defensores de Banfield",
+            "variant": null,
+            "external_code": "00000379"
+          },
+          "date": "2026-08-23",
+          "time": "18:00",
+          "venue": "Club Municipal Tribarrial",
+          "court": null,
+          "result": {
+            "home": 25,
+            "away": 23,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067201",
+            "tracker_club_ids": {
+              "home": "00000405",
+              "away": "00000379"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de Pilar",
+              "away": "C.S. y D. Defensores de Banfield"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/7/6/9/769472d0e4b72468.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Moreno, Tomas / Axt, Dan",
+            "venue_address": "Doctor R. Naón, Martín Coronado Pilar Buenos Aires",
+            "venue_coordinates": "-34.4333645;-58.9129772"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067202",
+          "fixture_key": "femebal:00067202",
+          "home": {
+            "club": "U.N.La.M.",
+            "variant": null,
+            "external_code": "00000424"
+          },
+          "away": {
+            "club": "Lanús",
+            "variant": "C",
+            "external_code": "00000341"
+          },
+          "date": "2026-08-23",
+          "time": "19:45",
+          "venue": "Microestadio UN. La Matanza",
+          "court": null,
+          "result": {
+            "home": 18,
+            "away": 24,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067202",
+            "tracker_club_ids": {
+              "home": "00000424",
+              "away": "00000341"
+            },
+            "tracker_labels": {
+              "home": "U.N.La.M.",
+              "away": "C.A. Lanús C"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/0/6/2/062fd3f3ce3e2a7d.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Cabrera, Jonathan / Saldaña, Juan",
+            "venue_address": "Florencio Varela 1903 San Justo Buenos Aires",
+            "venue_coordinates": "-34.6702106;-58.5637476"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067203",
+          "fixture_key": "femebal:00067203",
+          "home": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B",
+            "external_code": "00000400"
+          },
+          "away": {
+            "club": "Defensores de Moreno",
+            "variant": null,
+            "external_code": "00000381"
+          },
+          "date": "2026-08-23",
+          "time": "18:00",
+          "venue": "CEDEM Nº1 Gimnasio 1",
+          "court": null,
+          "result": {
+            "home": 38,
+            "away": 26,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067203",
+            "tracker_club_ids": {
+              "home": "00000400",
+              "away": "00000381"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de Tres de Febrero B",
+              "away": "C.A. Defensores de Moreno"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/6/2/a/62a013053c381a16.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Ghanem, Brian / Madero Mazzeo, Tiago",
+            "venue_address": "Juan Bautista Alberdi 5524 Caseros Buenos Aires",
+            "venue_coordinates": "-34.6028644;-58.5765247"
+          }
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067204",
+          "fixture_key": "femebal:00067204",
+          "home": {
+            "club": "Palermo Handball",
+            "variant": null,
+            "external_code": "00000409"
+          },
+          "away": {
+            "club": "Defensores de Moreno",
+            "variant": null,
+            "external_code": "00000381"
+          },
+          "date": "2026-08-30",
+          "time": "19:45",
+          "venue": "AAAJ Globo",
+          "court": null,
+          "result": {
+            "home": 32,
+            "away": 16,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067204",
+            "tracker_club_ids": {
+              "home": "00000409",
+              "away": "00000381"
+            },
+            "tracker_labels": {
+              "home": "Palermo Handball",
+              "away": "C.A. Defensores de Moreno"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/2/d/9/2d9a473c26ec79b2.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Flores, Oscar / Martinez, Jonathan",
+            "venue_address": "Punta Arenas 1271 CABA Buenos Aires",
+            "venue_coordinates": "-34.591934;-58.4698688"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067205",
+          "fixture_key": "femebal:00067205",
+          "home": {
+            "club": "Lanús",
+            "variant": "C",
+            "external_code": "00000341"
+          },
+          "away": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B",
+            "external_code": "00000400"
+          },
+          "date": "2026-08-30",
+          "time": "18:30",
+          "venue": "C.A. Lanús Gimnasio",
+          "court": null,
+          "result": {
+            "home": 30,
+            "away": 26,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067205",
+            "tracker_club_ids": {
+              "home": "00000341",
+              "away": "00000400"
+            },
+            "tracker_labels": {
+              "home": "C.A. Lanús C",
+              "away": "Municipalidad de Tres de Febrero B"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/f/1/c/f1c42839b4187f76.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Rodriguez, Gustavo / Rodriguez, Luis Martin",
+            "venue_address": "Ramon Cabrero y H. Guidi Lanus Buenos Aires",
+            "venue_coordinates": "-34.7163465;-58.384221"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067206",
+          "fixture_key": "femebal:00067206",
+          "home": {
+            "club": "C.S. y D. Defensores de Banfield",
+            "variant": null,
+            "external_code": "00000379"
+          },
+          "away": {
+            "club": "U.N.La.M.",
+            "variant": null,
+            "external_code": "00000424"
+          },
+          "date": "2026-08-30",
+          "time": "18:00",
+          "venue": "Inst. Tec. San Bonifacio Gimnasio",
+          "court": null,
+          "result": {
+            "home": 29,
+            "away": 20,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067206",
+            "tracker_club_ids": {
+              "home": "00000379",
+              "away": "00000424"
+            },
+            "tracker_labels": {
+              "home": "C.S. y D. Defensores de Banfield",
+              "away": "U.N.La.M."
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/5/a/7/5a7838895df9cba1.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Salvay, Lionel / Barcena, Rodolfo",
+            "venue_address": "Calle Sirito 700 Lomas de Zamora Buenos Aires",
+            "venue_coordinates": "-34.7725065;-58.4296355"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067207",
+          "fixture_key": "femebal:00067207",
+          "home": {
+            "club": "Argentinos Juniors",
+            "variant": "D",
+            "external_code": "00000354"
+          },
+          "away": {
+            "club": "Municipalidad de Pilar",
+            "variant": null,
+            "external_code": "00000405"
+          },
+          "date": "2026-08-30",
+          "time": "18:00",
+          "venue": "AAAJ Globo",
+          "court": null,
+          "result": {
+            "home": 32,
+            "away": 29,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067207",
+            "tracker_club_ids": {
+              "home": "00000354",
+              "away": "00000405"
+            },
+            "tracker_labels": {
+              "home": "A.A. Argentinos Juniors D",
+              "away": "Municipalidad de Pilar"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/d/1/3/d13f3a6e0b0859e9.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Flores, Oscar / Martinez, Jonathan",
+            "venue_address": "Punta Arenas 1271 CABA Buenos Aires",
+            "venue_coordinates": "-34.591934;-58.4698688"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067208",
+          "fixture_key": "femebal:00067208",
+          "home": {
+            "club": "Muñiz Handball",
+            "variant": "B",
+            "external_code": "00000407"
+          },
+          "away": {
+            "club": "Banfield",
+            "variant": "B",
+            "external_code": "00000360"
+          },
+          "date": "2026-08-30",
+          "time": "18:30",
+          "venue": "Muñiz",
+          "court": null,
+          "result": {
+            "home": 21,
+            "away": 20,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067208",
+            "tracker_club_ids": {
+              "home": "00000407",
+              "away": "00000360"
+            },
+            "tracker_labels": {
+              "home": "Muñiz Handball B",
+              "away": "C.A. Banfield B"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/2/4/a/24ab52650ee1c4a0.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Rossi, Pablo / Sotelo, Francisco",
+            "venue_address": "Sarmiento 1080 San Miguel Buenos Aires",
+            "venue_coordinates": "-34.5471077;-58.7067833"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067209",
+          "fixture_key": "femebal:00067209",
+          "home": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D",
+            "external_code": "00000415"
+          },
+          "away": {
+            "club": "S.A.P.A.",
+            "variant": null,
+            "external_code": "00000412"
+          },
+          "date": "2026-08-30",
+          "time": "20:15",
+          "venue": "S.A.G. Polvorines Sede Principal",
+          "court": null,
+          "result": {
+            "home": 30,
+            "away": 25,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067209",
+            "tracker_club_ids": {
+              "home": "00000415",
+              "away": "00000412"
+            },
+            "tracker_labels": {
+              "home": "S.A.G. Polvorines D",
+              "away": "S.A.P.A."
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/6/2/0/620ac84c1a0ddb35.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Montenegro Settimi, Sebastián / Duarte, Ruben",
+            "venue_address": "Manzanares 4000 Los Polvorines Buenos Aires",
+            "venue_coordinates": "-34.4905586;-58.6912997"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067210",
+          "fixture_key": "femebal:00067210",
+          "home": {
+            "club": "Ituzaingó",
+            "variant": null,
+            "external_code": "00000366"
+          },
+          "away": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C",
+            "external_code": "00000337"
+          },
+          "date": "2026-08-30",
+          "time": "18:30",
+          "venue": "C.A. Ituzaingó",
+          "court": null,
+          "result": {
+            "home": 22,
+            "away": 27,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067210",
+            "tracker_club_ids": {
+              "home": "00000366",
+              "away": "00000337"
+            },
+            "tracker_labels": {
+              "home": "C.A. Ituzaingó",
+              "away": "Municipalidad de Vicente López C"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/3/8/d/38de36960b7cc8ed.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Gamarra, Andrés / Castro, Cristian",
+            "venue_address": "Blas Parera 1251 Castelar Buenos Aires",
+            "venue_coordinates": "-34.6730645;-58.664252"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067211",
+          "fixture_key": "femebal:00067211",
+          "home": {
+            "club": "Club Deportivo Morón",
+            "variant": null,
+            "external_code": "00000384"
+          },
+          "away": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null,
+            "external_code": "00000616"
+          },
+          "date": "2026-08-30",
+          "time": "19:45",
+          "venue": "Defensores de Moreno Victorica",
+          "court": null,
+          "result": {
+            "home": 21,
+            "away": 21,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067211",
+            "tracker_club_ids": {
+              "home": "00000384",
+              "away": "00000616"
+            },
+            "tracker_labels": {
+              "home": "Club Deportivo Morón",
+              "away": "Municipalidad de San Martín (Ce.M.E.F)"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/d/4/3/d435a5cc67409c5a.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Torres, Agustina / Wagner, Agustina",
+            "venue_address": "Avenida Victorica 350 Moreno Buenos Aires",
+            "venue_coordinates": "-34.6446326;-58.7958337"
+          }
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067212",
+          "fixture_key": "femebal:00067212",
+          "home": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null,
+            "external_code": "00000616"
+          },
+          "away": {
+            "club": "Palermo Handball",
+            "variant": null,
+            "external_code": "00000409"
+          },
+          "date": "2026-09-06",
+          "time": "19:45",
+          "venue": "CEDEM Nº1 Gimnasio 1",
+          "court": null,
+          "result": {
+            "home": 23,
+            "away": 25,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067212",
+            "tracker_club_ids": {
+              "home": "00000616",
+              "away": "00000409"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de San Martín (Ce.M.E.F)",
+              "away": "Palermo Handball"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/3/b/b/3bb0626cf81cf0be.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Flores, Oscar / Martinez, Jonathan",
+            "venue_address": "Juan Bautista Alberdi 5524 Caseros Buenos Aires",
+            "venue_coordinates": "-34.6028644;-58.5765247"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067213",
+          "fixture_key": "femebal:00067213",
+          "home": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C",
+            "external_code": "00000337"
+          },
+          "away": {
+            "club": "Club Deportivo Morón",
+            "variant": null,
+            "external_code": "00000384"
+          },
+          "date": "2026-09-06",
+          "time": "19:45",
+          "venue": "Municipalidad de Vicente López. Gimnasio 1",
+          "court": null,
+          "result": {
+            "home": 29,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067213",
+            "tracker_club_ids": {
+              "home": "00000337",
+              "away": "00000384"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de Vicente López C",
+              "away": "Club Deportivo Morón"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/9/c/3/9c3b2584e678ec22.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Duarte, Ruben / Montenegro Settimi, Sebastián",
+            "venue_address": "Bartolome Cruz 1105 Vicente Lopez Buenos Aires",
+            "venue_coordinates": "-34.5225139;-58.4716827"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067214",
+          "fixture_key": "femebal:00067214",
+          "home": {
+            "club": "S.A.P.A.",
+            "variant": null,
+            "external_code": "00000412"
+          },
+          "away": {
+            "club": "Ituzaingó",
+            "variant": null,
+            "external_code": "00000366"
+          },
+          "date": "2026-09-06",
+          "time": "18:00",
+          "venue": "Estadio Municipal",
+          "court": null,
+          "result": {
+            "home": 32,
+            "away": 23,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067214",
+            "tracker_club_ids": {
+              "home": "00000412",
+              "away": "00000366"
+            },
+            "tracker_labels": {
+              "home": "S.A.P.A.",
+              "away": "C.A. Ituzaingó"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/c/4/a/c4abf8ba1d1b5801.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Sotelo, Francisco / Rossi, Pablo",
+            "venue_address": "Ricardo Gutierrez General Las Heras Buenos Aires",
+            "venue_coordinates": "-34.920919927172;-58.946999707678"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067215",
+          "fixture_key": "femebal:00067215",
+          "home": {
+            "club": "Banfield",
+            "variant": "B",
+            "external_code": "00000360"
+          },
+          "away": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D",
+            "external_code": "00000415"
+          },
+          "date": "2026-09-06",
+          "time": "19:45",
+          "venue": "CI.DE.CO Gimnasio 2",
+          "court": null,
+          "result": {
+            "home": 29,
+            "away": 25,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067215",
+            "tracker_club_ids": {
+              "home": "00000360",
+              "away": "00000415"
+            },
+            "tracker_labels": {
+              "home": "C.A. Banfield B",
+              "away": "S.A.G. Polvorines D"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/0/f/c/0fc1b690ce4d0a8f.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Scalercio, Sofia / Toledo, Yesica",
+            "venue_address": "Bueras 1171 Lanus Este Buenos Aires",
+            "venue_coordinates": "-34.6967867;-58.3755453"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067216",
+          "fixture_key": "femebal:00067216",
+          "home": {
+            "club": "Municipalidad de Pilar",
+            "variant": null,
+            "external_code": "00000405"
+          },
+          "away": {
+            "club": "Muñiz Handball",
+            "variant": "B",
+            "external_code": "00000407"
+          },
+          "date": "2026-09-04",
+          "time": "21:00",
+          "venue": "Microestadio Municipal de PIlar  'Ricardo Rusticucci'",
+          "court": null,
+          "result": {
+            "home": 23,
+            "away": 21,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067216",
+            "tracker_club_ids": {
+              "home": "00000405",
+              "away": "00000407"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de Pilar",
+              "away": "Muñiz Handball B"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/3/a/2/3a28aaf6602e96d7.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Garcia, Lourdes / Santillan, Maximiliano",
+            "venue_address": "Nestor Kirchner 1400 Pilar Buenos Aires",
+            "venue_coordinates": "-34.4663154;-58.9153722"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067217",
+          "fixture_key": "femebal:00067217",
+          "home": {
+            "club": "U.N.La.M.",
+            "variant": null,
+            "external_code": "00000424"
+          },
+          "away": {
+            "club": "Argentinos Juniors",
+            "variant": "D",
+            "external_code": "00000354"
+          },
+          "date": "2026-09-06",
+          "time": "18:00",
+          "venue": "Microestadio UN. La Matanza",
+          "court": null,
+          "result": {
+            "home": 22,
+            "away": 23,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067217",
+            "tracker_club_ids": {
+              "home": "00000424",
+              "away": "00000354"
+            },
+            "tracker_labels": {
+              "home": "U.N.La.M.",
+              "away": "A.A. Argentinos Juniors D"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/3/3/e/33e7721439dbd560.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Pancaldi, Martin / Gregori, Ignacio",
+            "venue_address": "Florencio Varela 1903 San Justo Buenos Aires",
+            "venue_coordinates": "-34.6702106;-58.5637476"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067218",
+          "fixture_key": "femebal:00067218",
+          "home": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B",
+            "external_code": "00000400"
+          },
+          "away": {
+            "club": "C.S. y D. Defensores de Banfield",
+            "variant": null,
+            "external_code": "00000379"
+          },
+          "date": "2026-09-06",
+          "time": "18:00",
+          "venue": "CEDEM Nº1 Gimnasio 1",
+          "court": null,
+          "result": {
+            "home": 32,
+            "away": 23,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067218",
+            "tracker_club_ids": {
+              "home": "00000400",
+              "away": "00000379"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de Tres de Febrero B",
+              "away": "C.S. y D. Defensores de Banfield"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/f/a/e/faeacfcda9175426.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Flores, Oscar / Martinez, Jonathan",
+            "venue_address": "Juan Bautista Alberdi 5524 Caseros Buenos Aires",
+            "venue_coordinates": "-34.6028644;-58.5765247"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067219",
+          "fixture_key": "femebal:00067219",
+          "home": {
+            "club": "Defensores de Moreno",
+            "variant": null,
+            "external_code": "00000381"
+          },
+          "away": {
+            "club": "Lanús",
+            "variant": "C",
+            "external_code": "00000341"
+          },
+          "date": "2026-09-06",
+          "time": "18:00",
+          "venue": "Defensores de Moreno Victorica",
+          "court": null,
+          "result": {
+            "home": 23,
+            "away": 35,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067219",
+            "tracker_club_ids": {
+              "home": "00000381",
+              "away": "00000341"
+            },
+            "tracker_labels": {
+              "home": "C.A. Defensores de Moreno",
+              "away": "C.A. Lanús C"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/8/0/f/80f829c86c91e389.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Garcia, Lourdes / Santillan, Maximiliano",
+            "venue_address": "Avenida Victorica 350 Moreno Buenos Aires",
+            "venue_coordinates": "-34.6446326;-58.7958337"
+          }
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067220",
+          "fixture_key": "femebal:00067220",
+          "home": {
+            "club": "Palermo Handball",
+            "variant": null,
+            "external_code": "00000409"
+          },
+          "away": {
+            "club": "Lanús",
+            "variant": "C",
+            "external_code": "00000341"
+          },
+          "date": "2026-09-13",
+          "time": "19:45",
+          "venue": "AAAJ Globo",
+          "court": null,
+          "result": {
+            "home": 32,
+            "away": 19,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067220",
+            "tracker_club_ids": {
+              "home": "00000409",
+              "away": "00000341"
+            },
+            "tracker_labels": {
+              "home": "Palermo Handball",
+              "away": "C.A. Lanús C"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/4/a/9/4a96e47d0b5bbee1.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Rodriguez, Gustavo / Rodriguez, Luis Martin",
+            "venue_address": "Punta Arenas 1271 CABA Buenos Aires",
+            "venue_coordinates": "-34.591934;-58.4698688"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067221",
+          "fixture_key": "femebal:00067221",
+          "home": {
+            "club": "C.S. y D. Defensores de Banfield",
+            "variant": null,
+            "external_code": "00000379"
+          },
+          "away": {
+            "club": "Defensores de Moreno",
+            "variant": null,
+            "external_code": "00000381"
+          },
+          "date": "2026-09-13",
+          "time": "18:00",
+          "venue": "Inst. Tec. San Bonifacio Gimnasio",
+          "court": null,
+          "result": {
+            "home": 33,
+            "away": 16,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067221",
+            "tracker_club_ids": {
+              "home": "00000379",
+              "away": "00000381"
+            },
+            "tracker_labels": {
+              "home": "C.S. y D. Defensores de Banfield",
+              "away": "C.A. Defensores de Moreno"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/9/3/2/932006550192e5fc.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Vargas, Javier Alejandro / Suarez, Ariel",
+            "venue_address": "Calle Sirito 700 Lomas de Zamora Buenos Aires",
+            "venue_coordinates": "-34.7725065;-58.4296355"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067222",
+          "fixture_key": "femebal:00067222",
+          "home": {
+            "club": "Argentinos Juniors",
+            "variant": "D",
+            "external_code": "00000354"
+          },
+          "away": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B",
+            "external_code": "00000400"
+          },
+          "date": "2026-09-13",
+          "time": "18:00",
+          "venue": "AAAJ Globo",
+          "court": null,
+          "result": {
+            "home": 27,
+            "away": 24,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067222",
+            "tracker_club_ids": {
+              "home": "00000354",
+              "away": "00000400"
+            },
+            "tracker_labels": {
+              "home": "A.A. Argentinos Juniors D",
+              "away": "Municipalidad de Tres de Febrero B"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/0/3/d/03df9be6fa5d5e0a.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Rodriguez, Luis Martin / Rodriguez, Gustavo",
+            "venue_address": "Punta Arenas 1271 CABA Buenos Aires",
+            "venue_coordinates": "-34.591934;-58.4698688"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067223",
+          "fixture_key": "femebal:00067223",
+          "home": {
+            "club": "Muñiz Handball",
+            "variant": "B",
+            "external_code": "00000407"
+          },
+          "away": {
+            "club": "U.N.La.M.",
+            "variant": null,
+            "external_code": "00000424"
+          },
+          "date": "2026-09-13",
+          "time": "20:15",
+          "venue": "Muñiz",
+          "court": null,
+          "result": {
+            "home": 35,
+            "away": 16,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067223",
+            "tracker_club_ids": {
+              "home": "00000407",
+              "away": "00000424"
+            },
+            "tracker_labels": {
+              "home": "Muñiz Handball B",
+              "away": "U.N.La.M."
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/d/6/f/d6f62945776c3835.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Axt, Dan / Moreno, Tomas",
+            "venue_address": "Sarmiento 1080 San Miguel Buenos Aires",
+            "venue_coordinates": "-34.5471077;-58.7067833"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067224",
+          "fixture_key": "femebal:00067224",
+          "home": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D",
+            "external_code": "00000415"
+          },
+          "away": {
+            "club": "Municipalidad de Pilar",
+            "variant": null,
+            "external_code": "00000405"
+          },
+          "date": "2026-09-13",
+          "time": "18:00",
+          "venue": "S.A.G. Polvorines Sede Principal",
+          "court": null,
+          "result": {
+            "home": 26,
+            "away": 24,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067224",
+            "tracker_club_ids": {
+              "home": "00000415",
+              "away": "00000405"
+            },
+            "tracker_labels": {
+              "home": "S.A.G. Polvorines D",
+              "away": "Municipalidad de Pilar"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/5/9/5/595e3bc4e87dadad.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Gasparini, Germán / Moadeb, Matias",
+            "venue_address": "Manzanares 4000 Los Polvorines Buenos Aires",
+            "venue_coordinates": "-34.4905586;-58.6912997"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067225",
+          "fixture_key": "femebal:00067225",
+          "home": {
+            "club": "Ituzaingó",
+            "variant": null,
+            "external_code": "00000366"
+          },
+          "away": {
+            "club": "Banfield",
+            "variant": "B",
+            "external_code": "00000360"
+          },
+          "date": "2026-09-13",
+          "time": "19:45",
+          "venue": "C.A. Ituzaingó",
+          "court": null,
+          "result": {
+            "home": 21,
+            "away": 26,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067225",
+            "tracker_club_ids": {
+              "home": "00000366",
+              "away": "00000360"
+            },
+            "tracker_labels": {
+              "home": "C.A. Ituzaingó",
+              "away": "C.A. Banfield B"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/2/6/2/2622f05b2542c32c.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Pujol, Sergio Ezequiel / Stranges, Ivanna",
+            "venue_address": "Blas Parera 1251 Castelar Buenos Aires",
+            "venue_coordinates": "-34.6730645;-58.664252"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067226",
+          "fixture_key": "femebal:00067226",
+          "home": {
+            "club": "Club Deportivo Morón",
+            "variant": null,
+            "external_code": "00000384"
+          },
+          "away": {
+            "club": "S.A.P.A.",
+            "variant": null,
+            "external_code": "00000412"
+          },
+          "date": "2026-09-13",
+          "time": "20:15",
+          "venue": "Club Deportivo Morón Rafael Grosso",
+          "court": null,
+          "result": {
+            "home": 29,
+            "away": 32,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067226",
+            "tracker_club_ids": {
+              "home": "00000384",
+              "away": "00000412"
+            },
+            "tracker_labels": {
+              "home": "Club Deportivo Morón",
+              "away": "S.A.P.A."
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/d/a/b/dab60899c5c85cf8.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Stranges, Ivanna / Merlo, Victoria",
+            "venue_address": "Avenida Hipólito Yrigoyen 1770 Morón Buenos Aires",
+            "venue_coordinates": "-34.6602553;-58.6319763"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067227",
+          "fixture_key": "femebal:00067227",
+          "home": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null,
+            "external_code": "00000616"
+          },
+          "away": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C",
+            "external_code": "00000337"
+          },
+          "date": "2026-09-13",
+          "time": "18:00",
+          "venue": "CEDEM Nº1 Gimnasio 1",
+          "court": null,
+          "result": {
+            "home": 27,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067227",
+            "tracker_club_ids": {
+              "home": "00000616",
+              "away": "00000337"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de San Martín (Ce.M.E.F)",
+              "away": "Municipalidad de Vicente López C"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/9/6/7/96788ceba3019d34.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Salguero, Omar Enrique / Manzanos, Adrian",
+            "venue_address": "Juan Bautista Alberdi 5524 Caseros Buenos Aires",
+            "venue_coordinates": "-34.6028644;-58.5765247"
+          }
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067228",
+          "fixture_key": "femebal:00067228",
+          "home": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C",
+            "external_code": "00000337"
+          },
+          "away": {
+            "club": "Palermo Handball",
+            "variant": null,
+            "external_code": "00000409"
+          },
+          "date": "2026-09-20",
+          "time": "19:45",
+          "venue": "Municipalidad de Vicente López. Gimnasio 1",
+          "court": null,
+          "result": {
+            "home": 32,
+            "away": 26,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067228",
+            "tracker_club_ids": {
+              "home": "00000337",
+              "away": "00000409"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de Vicente López C",
+              "away": "Palermo Handball"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/7/c/a/7ca711a4436fb89b.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "La Delfa, Luka / Toledo, Yesica",
+            "venue_address": "Bartolome Cruz 1105 Vicente Lopez Buenos Aires",
+            "venue_coordinates": "-34.5225139;-58.4716827"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067229",
+          "fixture_key": "femebal:00067229",
+          "home": {
+            "club": "S.A.P.A.",
+            "variant": null,
+            "external_code": "00000412"
+          },
+          "away": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null,
+            "external_code": "00000616"
+          },
+          "date": "2026-09-20",
+          "time": "18:00",
+          "venue": "Universidad Nacional de Lujan",
+          "court": null,
+          "result": {
+            "home": 22,
+            "away": 17,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067229",
+            "tracker_club_ids": {
+              "home": "00000412",
+              "away": "00000616"
+            },
+            "tracker_labels": {
+              "home": "S.A.P.A.",
+              "away": "Municipalidad de San Martín (Ce.M.E.F)"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/3/7/4/37431d65bb2bf39f.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Casella, Marcelo / Vazquez, Mariano Ariel",
+            "venue_address": "Ruta 5 y, Av. Constitución Lujan Buenos Aires",
+            "venue_coordinates": "-34.578740405318;-59.086103439331"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067230",
+          "fixture_key": "femebal:00067230",
+          "home": {
+            "club": "Banfield",
+            "variant": "B",
+            "external_code": "00000360"
+          },
+          "away": {
+            "club": "Club Deportivo Morón",
+            "variant": null,
+            "external_code": "00000384"
+          },
+          "date": "2026-09-20",
+          "time": "19:45",
+          "venue": "Banfield Sede Microestadio",
+          "court": null,
+          "result": {
+            "home": 27,
+            "away": 18,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067230",
+            "tracker_club_ids": {
+              "home": "00000360",
+              "away": "00000384"
+            },
+            "tracker_labels": {
+              "home": "C.A. Banfield B",
+              "away": "Club Deportivo Morón"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/3/9/c/39c8a17d26d6f951.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Ahumada, Sebastián / Addamo, Lucas",
+            "venue_address": "Valentín Vergara 1650 Banfield Buenos Aires",
+            "venue_coordinates": "-34.7413546;-58.3944402"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067231",
+          "fixture_key": "femebal:00067231",
+          "home": {
+            "club": "Municipalidad de Pilar",
+            "variant": null,
+            "external_code": "00000405"
+          },
+          "away": {
+            "club": "Ituzaingó",
+            "variant": null,
+            "external_code": "00000366"
+          },
+          "date": "2026-09-20",
+          "time": "18:00",
+          "venue": "Club Municipal Tribarrial",
+          "court": null,
+          "result": {
+            "home": 30,
+            "away": 23,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067231",
+            "tracker_club_ids": {
+              "home": "00000405",
+              "away": "00000366"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de Pilar",
+              "away": "C.A. Ituzaingó"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/5/1/1/5114ff9f4d69a074.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Gamarra, Andrés / Primo, Lucas",
+            "venue_address": "Doctor R. Naón, Martín Coronado Pilar Buenos Aires",
+            "venue_coordinates": "-34.4333645;-58.9129772"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067232",
+          "fixture_key": "femebal:00067232",
+          "home": {
+            "club": "U.N.La.M.",
+            "variant": null,
+            "external_code": "00000424"
+          },
+          "away": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D",
+            "external_code": "00000415"
+          },
+          "date": "2026-10-08",
+          "time": "21:00",
+          "venue": "S.A.G. Polvorines Sede Principal",
+          "court": null,
+          "result": {
+            "home": 21,
+            "away": 29,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067232",
+            "tracker_club_ids": {
+              "home": "00000424",
+              "away": "00000415"
+            },
+            "tracker_labels": {
+              "home": "U.N.La.M.",
+              "away": "S.A.G. Polvorines D"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/b/3/9/b39b5716e76cf911.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Gasparini, Germán / Moadeb, Matias",
+            "venue_address": "Manzanares 4000 Los Polvorines Buenos Aires",
+            "venue_coordinates": "-34.4905586;-58.6912997"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067233",
+          "fixture_key": "femebal:00067233",
+          "home": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B",
+            "external_code": "00000400"
+          },
+          "away": {
+            "club": "Muñiz Handball",
+            "variant": "B",
+            "external_code": "00000407"
+          },
+          "date": "2026-09-20",
+          "time": "18:30",
+          "venue": "CEDEM Nº1 Gimnasio 1",
+          "court": null,
+          "result": {
+            "home": 20,
+            "away": 23,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067233",
+            "tracker_club_ids": {
+              "home": "00000400",
+              "away": "00000407"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de Tres de Febrero B",
+              "away": "Muñiz Handball B"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/5/6/7/56758f273bcdd155.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Carnaval, Hernan / Estrella, Pablo",
+            "venue_address": "Juan Bautista Alberdi 5524 Caseros Buenos Aires",
+            "venue_coordinates": "-34.6028644;-58.5765247"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067234",
+          "fixture_key": "femebal:00067234",
+          "home": {
+            "club": "Defensores de Moreno",
+            "variant": null,
+            "external_code": "00000381"
+          },
+          "away": {
+            "club": "Argentinos Juniors",
+            "variant": "D",
+            "external_code": "00000354"
+          },
+          "date": "2026-09-20",
+          "time": "18:00",
+          "venue": "Defensores de Moreno Victorica",
+          "court": null,
+          "result": {
+            "home": 22,
+            "away": 24,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067234",
+            "tracker_club_ids": {
+              "home": "00000381",
+              "away": "00000354"
+            },
+            "tracker_labels": {
+              "home": "C.A. Defensores de Moreno",
+              "away": "A.A. Argentinos Juniors D"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/0/9/9/099793bc1ce76285.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Pereira, Camila / Pereira, Carla",
+            "venue_address": "Avenida Victorica 350 Moreno Buenos Aires",
+            "venue_coordinates": "-34.6446326;-58.7958337"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067235",
+          "fixture_key": "femebal:00067235",
+          "home": {
+            "club": "Lanús",
+            "variant": "C",
+            "external_code": "00000341"
+          },
+          "away": {
+            "club": "C.S. y D. Defensores de Banfield",
+            "variant": null,
+            "external_code": "00000379"
+          },
+          "date": "2026-09-20",
+          "time": "19:45",
+          "venue": "CI.DE.CO Gimnasio 2",
+          "court": null,
+          "result": {
+            "home": 40,
+            "away": 28,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067235",
+            "tracker_club_ids": {
+              "home": "00000341",
+              "away": "00000379"
+            },
+            "tracker_labels": {
+              "home": "C.A. Lanús C",
+              "away": "C.S. y D. Defensores de Banfield"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/9/a/2/9a2ebc192f25b26c.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "García, Lourdes / Lopez Barrios, Tobias",
+            "venue_address": "Bueras 1171 Lanus Este Buenos Aires",
+            "venue_coordinates": "-34.6967867;-58.3755453"
+          }
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067236",
+          "fixture_key": "femebal:00067236",
+          "home": {
+            "club": "Palermo Handball",
+            "variant": null,
+            "external_code": "00000409"
+          },
+          "away": {
+            "club": "C.S. y D. Defensores de Banfield",
+            "variant": null,
+            "external_code": "00000379"
+          },
+          "date": "2026-09-27",
+          "time": "20:15",
+          "venue": "AAAJ Globo",
+          "court": null,
+          "result": {
+            "home": 34,
+            "away": 21,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067236",
+            "tracker_club_ids": {
+              "home": "00000409",
+              "away": "00000379"
+            },
+            "tracker_labels": {
+              "home": "Palermo Handball",
+              "away": "C.S. y D. Defensores de Banfield"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/3/3/5/3352e132e7b425b3.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Garat, María / Sosa, Mayra",
+            "venue_address": "Punta Arenas 1271 CABA Buenos Aires",
+            "venue_coordinates": "-34.591934;-58.4698688"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067237",
+          "fixture_key": "femebal:00067237",
+          "home": {
+            "club": "Argentinos Juniors",
+            "variant": "D",
+            "external_code": "00000354"
+          },
+          "away": {
+            "club": "Lanús",
+            "variant": "C",
+            "external_code": "00000341"
+          },
+          "date": "2026-09-27",
+          "time": "16:45",
+          "venue": "AAAJ Globo",
+          "court": null,
+          "result": {
+            "home": 22,
+            "away": 33,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067237",
+            "tracker_club_ids": {
+              "home": "00000354",
+              "away": "00000341"
+            },
+            "tracker_labels": {
+              "home": "A.A. Argentinos Juniors D",
+              "away": "C.A. Lanús C"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/4/b/1/4b130df6669da6e5.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Rodríguez  Saiach, Pablo Hernán / Salas, Lautaro",
+            "venue_address": "Punta Arenas 1271 CABA Buenos Aires",
+            "venue_coordinates": "-34.591934;-58.4698688"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067238",
+          "fixture_key": "femebal:00067238",
+          "home": {
+            "club": "Muñiz Handball",
+            "variant": "B",
+            "external_code": "00000407"
+          },
+          "away": {
+            "club": "Defensores de Moreno",
+            "variant": null,
+            "external_code": "00000381"
+          },
+          "date": "2026-09-27",
+          "time": "18:00",
+          "venue": "Muñiz",
+          "court": null,
+          "result": {
+            "home": 28,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067238",
+            "tracker_club_ids": {
+              "home": "00000407",
+              "away": "00000381"
+            },
+            "tracker_labels": {
+              "home": "Muñiz Handball B",
+              "away": "C.A. Defensores de Moreno"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/f/1/e/f1e7651257ffb636.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Rossi, Pablo / Sotelo, Francisco",
+            "venue_address": "Sarmiento 1080 San Miguel Buenos Aires",
+            "venue_coordinates": "-34.5471077;-58.7067833"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067239",
+          "fixture_key": "femebal:00067239",
+          "home": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D",
+            "external_code": "00000415"
+          },
+          "away": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B",
+            "external_code": "00000400"
+          },
+          "date": "2026-09-27",
+          "time": "20:15",
+          "venue": "S.A.G. Polvorines Sede Principal",
+          "court": null,
+          "result": {
+            "home": 29,
+            "away": 24,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067239",
+            "tracker_club_ids": {
+              "home": "00000415",
+              "away": "00000400"
+            },
+            "tracker_labels": {
+              "home": "S.A.G. Polvorines D",
+              "away": "Municipalidad de Tres de Febrero B"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/7/d/f/7df525542b65a0f1.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Borras Luque, Maria Jose / Pereyra, Florencia",
+            "venue_address": "Manzanares 4000 Los Polvorines Buenos Aires",
+            "venue_coordinates": "-34.4905586;-58.6912997"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067240",
+          "fixture_key": "femebal:00067240",
+          "home": {
+            "club": "Ituzaingó",
+            "variant": null,
+            "external_code": "00000366"
+          },
+          "away": {
+            "club": "U.N.La.M.",
+            "variant": null,
+            "external_code": "00000424"
+          },
+          "date": "2026-09-27",
+          "time": "16:15",
+          "venue": "C.A. Ituzaingó",
+          "court": null,
+          "result": {
+            "home": 27,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067240",
+            "tracker_club_ids": {
+              "home": "00000366",
+              "away": "00000424"
+            },
+            "tracker_labels": {
+              "home": "C.A. Ituzaingó",
+              "away": "U.N.La.M."
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/5/4/7/547ff38e255dd218.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Casella, Marcelo / Vazquez, Mariano Ariel",
+            "venue_address": "Blas Parera 1251 Castelar Buenos Aires",
+            "venue_coordinates": "-34.6730645;-58.664252"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067241",
+          "fixture_key": "femebal:00067241",
+          "home": {
+            "club": "Club Deportivo Morón",
+            "variant": null,
+            "external_code": "00000384"
+          },
+          "away": {
+            "club": "Municipalidad de Pilar",
+            "variant": null,
+            "external_code": "00000405"
+          },
+          "date": "2026-09-27",
+          "time": "20:15",
+          "venue": "AFALP Principal",
+          "court": null,
+          "result": {
+            "home": 25,
+            "away": 29,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067241",
+            "tracker_club_ids": {
+              "home": "00000384",
+              "away": "00000405"
+            },
+            "tracker_labels": {
+              "home": "Club Deportivo Morón",
+              "away": "Municipalidad de Pilar"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/7/6/3/763836506a542236.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Gregori, Lucas / Sola, Lautaro",
+            "venue_address": "Alas Argentinas 650 Ciudad Jardin Lomas de Palomar Buenos Aires",
+            "venue_coordinates": "-34.5986868;-58.5859998"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067242",
+          "fixture_key": "femebal:00067242",
+          "home": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null,
+            "external_code": "00000616"
+          },
+          "away": {
+            "club": "Banfield",
+            "variant": "B",
+            "external_code": "00000360"
+          },
+          "date": "2026-09-27",
+          "time": "18:00",
+          "venue": "CEDEM Nº1 Gimnasio 1",
+          "court": null,
+          "result": {
+            "home": 18,
+            "away": 23,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067242",
+            "tracker_club_ids": {
+              "home": "00000616",
+              "away": "00000360"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de San Martín (Ce.M.E.F)",
+              "away": "C.A. Banfield B"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/f/b/0/fb06659bd6c178ea.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Barcena, Rodolfo / Aquino, Federico",
+            "venue_address": "Juan Bautista Alberdi 5524 Caseros Buenos Aires",
+            "venue_coordinates": "-34.6028644;-58.5765247"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067243",
+          "fixture_key": "femebal:00067243",
+          "home": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C",
+            "external_code": "00000337"
+          },
+          "away": {
+            "club": "S.A.P.A.",
+            "variant": null,
+            "external_code": "00000412"
+          },
+          "date": "2026-09-27",
+          "time": "18:00",
+          "venue": "Municipalidad de Vicente López. Gimnasio 1",
+          "court": null,
+          "result": {
+            "home": 30,
+            "away": 25,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067243",
+            "tracker_club_ids": {
+              "home": "00000337",
+              "away": "00000412"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de Vicente López C",
+              "away": "S.A.P.A."
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/d/8/9/d89aff57d72d90bc.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Giampietro, Ailen / Fernandez, Barbara",
+            "venue_address": "Bartolome Cruz 1105 Vicente Lopez Buenos Aires",
+            "venue_coordinates": "-34.5225139;-58.4716827"
+          }
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067244",
+          "fixture_key": "femebal:00067244",
+          "home": {
+            "club": "S.A.P.A.",
+            "variant": null,
+            "external_code": "00000412"
+          },
+          "away": {
+            "club": "Palermo Handball",
+            "variant": null,
+            "external_code": "00000409"
+          },
+          "date": "2026-10-04",
+          "time": "18:00",
+          "venue": "Estadio Municipal",
+          "court": null,
+          "result": {
+            "home": 29,
+            "away": 26,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067244",
+            "tracker_club_ids": {
+              "home": "00000412",
+              "away": "00000409"
+            },
+            "tracker_labels": {
+              "home": "S.A.P.A.",
+              "away": "Palermo Handball"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/d/c/f/dcfa307efd9c26b9.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Ghanem, Brian / Madero Mazzeo, Tiago",
+            "venue_address": "Ricardo Gutierrez General Las Heras Buenos Aires",
+            "venue_coordinates": "-34.920919927172;-58.946999707678"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067245",
+          "fixture_key": "femebal:00067245",
+          "home": {
+            "club": "Banfield",
+            "variant": "B",
+            "external_code": "00000360"
+          },
+          "away": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C",
+            "external_code": "00000337"
+          },
+          "date": "2026-10-04",
+          "time": "18:00",
+          "venue": "Colegio Estrada",
+          "court": null,
+          "result": {
+            "home": 26,
+            "away": 29,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067245",
+            "tracker_club_ids": {
+              "home": "00000360",
+              "away": "00000337"
+            },
+            "tracker_labels": {
+              "home": "C.A. Banfield B",
+              "away": "Municipalidad de Vicente López C"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/1/f/7/1f74c331670f7648.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Burgos, Ruben / Gasparini, Germán",
+            "venue_address": "Juan Lavalle 1390 Rafael Calzada Buenos Aires",
+            "venue_coordinates": "-34.7888484;-58.3546974"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067246",
+          "fixture_key": "femebal:00067246",
+          "home": {
+            "club": "Municipalidad de Pilar",
+            "variant": null,
+            "external_code": "00000405"
+          },
+          "away": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null,
+            "external_code": "00000616"
+          },
+          "date": "2026-10-04",
+          "time": "16:15",
+          "venue": "Microestadio Municipal de PIlar  'Ricardo Rusticucci'",
+          "court": null,
+          "result": {
+            "home": 22,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067246",
+            "tracker_club_ids": {
+              "home": "00000405",
+              "away": "00000616"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de Pilar",
+              "away": "Municipalidad de San Martín (Ce.M.E.F)"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/c/f/3/cf37a240f5a2b3f3.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Carnaval, Hernan / Axt, Dan",
+            "venue_address": "Nestor Kirchner 1400 Pilar Buenos Aires",
+            "venue_coordinates": "-34.4663154;-58.9153722"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067247",
+          "fixture_key": "femebal:00067247",
+          "home": {
+            "club": "U.N.La.M.",
+            "variant": null,
+            "external_code": "00000424"
+          },
+          "away": {
+            "club": "Club Deportivo Morón",
+            "variant": null,
+            "external_code": "00000384"
+          },
+          "date": "2026-10-04",
+          "time": "18:00",
+          "venue": "Microestadio UN. La Matanza",
+          "court": null,
+          "result": {
+            "home": 18,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067247",
+            "tracker_club_ids": {
+              "home": "00000424",
+              "away": "00000384"
+            },
+            "tracker_labels": {
+              "home": "U.N.La.M.",
+              "away": "Club Deportivo Morón"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/a/2/5/a25211dc61bdfcdf.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Torres, Agustina / Wagner, Agustina",
+            "venue_address": "Florencio Varela 1903 San Justo Buenos Aires",
+            "venue_coordinates": "-34.6702106;-58.5637476"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067248",
+          "fixture_key": "femebal:00067248",
+          "home": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B",
+            "external_code": "00000400"
+          },
+          "away": {
+            "club": "Ituzaingó",
+            "variant": null,
+            "external_code": "00000366"
+          },
+          "date": "2026-10-04",
+          "time": "20:15",
+          "venue": "CEDEM Nº1 Gimnasio 1",
+          "court": null,
+          "result": {
+            "home": 38,
+            "away": 34,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067248",
+            "tracker_club_ids": {
+              "home": "00000400",
+              "away": "00000366"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de Tres de Febrero B",
+              "away": "C.A. Ituzaingó"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/e/8/1/e81a63e32fee8e8a.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Zamboni, Carolina / Barcena, Rodolfo",
+            "venue_address": "Juan Bautista Alberdi 5524 Caseros Buenos Aires",
+            "venue_coordinates": "-34.6028644;-58.5765247"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067249",
+          "fixture_key": "femebal:00067249",
+          "home": {
+            "club": "Defensores de Moreno",
+            "variant": null,
+            "external_code": "00000381"
+          },
+          "away": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D",
+            "external_code": "00000415"
+          },
+          "date": "2026-10-04",
+          "time": "18:00",
+          "venue": "Defensores de Moreno Victorica",
+          "court": null,
+          "result": {
+            "home": 31,
+            "away": 28,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067249",
+            "tracker_club_ids": {
+              "home": "00000381",
+              "away": "00000415"
+            },
+            "tracker_labels": {
+              "home": "C.A. Defensores de Moreno",
+              "away": "S.A.G. Polvorines D"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/e/4/f/e4fcf164da1e8d87.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Lopez Barrios, Tobias / Rossi, Pablo",
+            "venue_address": "Avenida Victorica 350 Moreno Buenos Aires",
+            "venue_coordinates": "-34.6446326;-58.7958337"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067250",
+          "fixture_key": "femebal:00067250",
+          "home": {
+            "club": "Lanús",
+            "variant": "C",
+            "external_code": "00000341"
+          },
+          "away": {
+            "club": "Muñiz Handball",
+            "variant": "B",
+            "external_code": "00000407"
+          },
+          "date": "2026-10-04",
+          "time": "16:15",
+          "venue": "C.A. Lanús Gimnasio",
+          "court": null,
+          "result": {
+            "home": 31,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067250",
+            "tracker_club_ids": {
+              "home": "00000341",
+              "away": "00000407"
+            },
+            "tracker_labels": {
+              "home": "C.A. Lanús C",
+              "away": "Muñiz Handball B"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/a/a/4/aa433c7b4192b7f1.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Garat, María / Sosa, Mayra",
+            "venue_address": "Ramon Cabrero y H. Guidi Lanus Buenos Aires",
+            "venue_coordinates": "-34.7163465;-58.384221"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067251",
+          "fixture_key": "femebal:00067251",
+          "home": {
+            "club": "C.S. y D. Defensores de Banfield",
+            "variant": null,
+            "external_code": "00000379"
+          },
+          "away": {
+            "club": "Argentinos Juniors",
+            "variant": "D",
+            "external_code": "00000354"
+          },
+          "date": "2026-10-04",
+          "time": "18:00",
+          "venue": "Inst. Tec. San Bonifacio Gimnasio",
+          "court": null,
+          "result": {
+            "home": 27,
+            "away": 25,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067251",
+            "tracker_club_ids": {
+              "home": "00000379",
+              "away": "00000354"
+            },
+            "tracker_labels": {
+              "home": "C.S. y D. Defensores de Banfield",
+              "away": "A.A. Argentinos Juniors D"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/0/0/7/0078c7ceaeb7260c.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Sanchez, Julian / Blaszkiewicz, Joaquin",
+            "venue_address": "Calle Sirito 700 Lomas de Zamora Buenos Aires",
+            "venue_coordinates": "-34.7725065;-58.4296355"
+          }
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067252",
+          "fixture_key": "femebal:00067252",
+          "home": {
+            "club": "Palermo Handball",
+            "variant": null,
+            "external_code": "00000409"
+          },
+          "away": {
+            "club": "Argentinos Juniors",
+            "variant": "D",
+            "external_code": "00000354"
+          },
+          "date": "2026-10-11",
+          "time": "19:45",
+          "venue": "AAAJ Globo",
+          "court": null,
+          "result": {
+            "home": 30,
+            "away": 21,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067252",
+            "tracker_club_ids": {
+              "home": "00000409",
+              "away": "00000354"
+            },
+            "tracker_labels": {
+              "home": "Palermo Handball",
+              "away": "A.A. Argentinos Juniors D"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/8/f/1/8f157d29b5b29b51.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Salvay, Lionel / Asselborn, Federico",
+            "venue_address": "Punta Arenas 1271 CABA Buenos Aires",
+            "venue_coordinates": "-34.591934;-58.4698688"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067253",
+          "fixture_key": "femebal:00067253",
+          "home": {
+            "club": "Muñiz Handball",
+            "variant": "B",
+            "external_code": "00000407"
+          },
+          "away": {
+            "club": "C.S. y D. Defensores de Banfield",
+            "variant": null,
+            "external_code": "00000379"
+          },
+          "date": "2026-10-11",
+          "time": "18:00",
+          "venue": "Muñiz",
+          "court": null,
+          "result": {
+            "home": 27,
+            "away": 23,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067253",
+            "tracker_club_ids": {
+              "home": "00000407",
+              "away": "00000379"
+            },
+            "tracker_labels": {
+              "home": "Muñiz Handball B",
+              "away": "C.S. y D. Defensores de Banfield"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/d/f/e/dfe223dc78b02851.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Santillan, Maximiliano / Garcia, Lourdes",
+            "venue_address": "Sarmiento 1080 San Miguel Buenos Aires",
+            "venue_coordinates": "-34.5471077;-58.7067833"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067254",
+          "fixture_key": "femebal:00067254",
+          "home": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D",
+            "external_code": "00000415"
+          },
+          "away": {
+            "club": "Lanús",
+            "variant": "C",
+            "external_code": "00000341"
+          },
+          "date": "2026-10-11",
+          "time": "19:45",
+          "venue": "S.A.G. Polvorines Sede Principal",
+          "court": null,
+          "result": {
+            "home": 30,
+            "away": 27,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067254",
+            "tracker_club_ids": {
+              "home": "00000415",
+              "away": "00000341"
+            },
+            "tracker_labels": {
+              "home": "S.A.G. Polvorines D",
+              "away": "C.A. Lanús C"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/0/0/9/009207f7233d65d4.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Duarte, Ruben / Montenegro Settimi, Sebastián",
+            "venue_address": "Manzanares 4000 Los Polvorines Buenos Aires",
+            "venue_coordinates": "-34.4905586;-58.6912997"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067255",
+          "fixture_key": "femebal:00067255",
+          "home": {
+            "club": "Ituzaingó",
+            "variant": null,
+            "external_code": "00000366"
+          },
+          "away": {
+            "club": "Defensores de Moreno",
+            "variant": null,
+            "external_code": "00000381"
+          },
+          "date": "2026-10-09",
+          "time": "20:00",
+          "venue": "La Casa del Handball",
+          "court": null,
+          "result": {
+            "home": 26,
+            "away": 27,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067255",
+            "tracker_club_ids": {
+              "home": "00000366",
+              "away": "00000381"
+            },
+            "tracker_labels": {
+              "home": "C.A. Ituzaingó",
+              "away": "C.A. Defensores de Moreno"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/8/b/3/8b363b01a347f1a6.pdf",
+                "transmission_url": "https://youtube.com/live/8jgoIfXVQkU?feature=share"
+              }
+            ],
+            "referees": "Rossi, Pablo / Sotelo, Francisco",
+            "venue_address": "Av. Coronel Roca 4170 CABA Ciudad Autónoma Buenos Aires",
+            "venue_coordinates": "-34.676170326561;-58.440345525742"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067256",
+          "fixture_key": "femebal:00067256",
+          "home": {
+            "club": "Club Deportivo Morón",
+            "variant": null,
+            "external_code": "00000384"
+          },
+          "away": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B",
+            "external_code": "00000400"
+          },
+          "date": "2026-10-09",
+          "time": "21:30",
+          "venue": "CEDEM Nº1 Gimnasio 1",
+          "court": null,
+          "result": {
+            "home": 26,
+            "away": 28,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067256",
+            "tracker_club_ids": {
+              "home": "00000384",
+              "away": "00000400"
+            },
+            "tracker_labels": {
+              "home": "Club Deportivo Morón",
+              "away": "Municipalidad de Tres de Febrero B"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/7/8/1/78102ad2c468a9a8.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Ghanem, Brian / Madero Mazzeo, Tiago",
+            "venue_address": "Juan Bautista Alberdi 5524 Caseros Buenos Aires",
+            "venue_coordinates": "-34.6028644;-58.5765247"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067257",
+          "fixture_key": "femebal:00067257",
+          "home": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null,
+            "external_code": "00000616"
+          },
+          "away": {
+            "club": "U.N.La.M.",
+            "variant": null,
+            "external_code": "00000424"
+          },
+          "date": "2026-10-11",
+          "time": "18:00",
+          "venue": "CEDEM Nº1 Gimnasio 1",
+          "court": null,
+          "result": {
+            "home": 24,
+            "away": 23,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067257",
+            "tracker_club_ids": {
+              "home": "00000616",
+              "away": "00000424"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de San Martín (Ce.M.E.F)",
+              "away": "U.N.La.M."
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/8/8/5/885bd7293cdf8768.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Pereira, Camila / Pereira, Carla",
+            "venue_address": "Juan Bautista Alberdi 5524 Caseros Buenos Aires",
+            "venue_coordinates": "-34.6028644;-58.5765247"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067258",
+          "fixture_key": "femebal:00067258",
+          "home": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C",
+            "external_code": "00000337"
+          },
+          "away": {
+            "club": "Municipalidad de Pilar",
+            "variant": null,
+            "external_code": "00000405"
+          },
+          "date": "2026-10-11",
+          "time": "18:00",
+          "venue": "Municipalidad de Vicente López. Gimnasio 1",
+          "court": null,
+          "result": {
+            "home": 27,
+            "away": 18,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067258",
+            "tracker_club_ids": {
+              "home": "00000337",
+              "away": "00000405"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de Vicente López C",
+              "away": "Municipalidad de Pilar"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/3/a/7/3a7d0cd347c117cd.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "La Delfa, Luka / Calvo, Nahuel",
+            "venue_address": "Bartolome Cruz 1105 Vicente Lopez Buenos Aires",
+            "venue_coordinates": "-34.5225139;-58.4716827"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067259",
+          "fixture_key": "femebal:00067259",
+          "home": {
+            "club": "S.A.P.A.",
+            "variant": null,
+            "external_code": "00000412"
+          },
+          "away": {
+            "club": "Banfield",
+            "variant": "B",
+            "external_code": "00000360"
+          },
+          "date": "2026-10-11",
+          "time": "18:00",
+          "venue": "Estadio Municipal",
+          "court": null,
+          "result": {
+            "home": 31,
+            "away": 31,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067259",
+            "tracker_club_ids": {
+              "home": "00000412",
+              "away": "00000360"
+            },
+            "tracker_labels": {
+              "home": "S.A.P.A.",
+              "away": "C.A. Banfield B"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/b/5/7/b579bebcd0ac888e.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Carnaval, Hernan / Estrella, Pablo",
+            "venue_address": "Ricardo Gutierrez General Las Heras Buenos Aires",
+            "venue_coordinates": "-34.920919927172;-58.946999707678"
+          }
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067260",
+          "fixture_key": "femebal:00067260",
+          "home": {
+            "club": "Banfield",
+            "variant": "B",
+            "external_code": "00000360"
+          },
+          "away": {
+            "club": "Palermo Handball",
+            "variant": null,
+            "external_code": "00000409"
+          },
+          "date": "2026-10-25",
+          "time": "19:45",
+          "venue": "S.A.G. A.B. Estadio",
+          "court": null,
+          "result": {
+            "home": 27,
+            "away": 29,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067260",
+            "tracker_club_ids": {
+              "home": "00000360",
+              "away": "00000409"
+            },
+            "tracker_labels": {
+              "home": "C.A. Banfield B",
+              "away": "Palermo Handball"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/2/2/f/22fe38d27f601723.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Santillan, Maximiliano / Perez, Ivan",
+            "venue_address": "L.M.Drago y Arenales Burzaco Buenos Aires",
+            "venue_coordinates": "-34.8310327;-58.4219814"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067261",
+          "fixture_key": "femebal:00067261",
+          "home": {
+            "club": "Municipalidad de Pilar",
+            "variant": null,
+            "external_code": "00000405"
+          },
+          "away": {
+            "club": "S.A.P.A.",
+            "variant": null,
+            "external_code": "00000412"
+          },
+          "date": "2026-10-25",
+          "time": "18:00",
+          "venue": "Microestadio Municipal de PIlar  'Ricardo Rusticucci'",
+          "court": null,
+          "result": {
+            "home": 24,
+            "away": 25,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067261",
+            "tracker_club_ids": {
+              "home": "00000405",
+              "away": "00000412"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de Pilar",
+              "away": "S.A.P.A."
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/2/f/e/2fe291a3ac6cd390.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Cáceres, Roberto / Flores, Roger German",
+            "venue_address": "Nestor Kirchner 1400 Pilar Buenos Aires",
+            "venue_coordinates": "-34.4663154;-58.9153722"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067262",
+          "fixture_key": "femebal:00067262",
+          "home": {
+            "club": "U.N.La.M.",
+            "variant": null,
+            "external_code": "00000424"
+          },
+          "away": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C",
+            "external_code": "00000337"
+          },
+          "date": "2026-10-25",
+          "time": "19:45",
+          "venue": "Microestadio UN. La Matanza",
+          "court": null,
+          "result": {
+            "home": 32,
+            "away": 31,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067262",
+            "tracker_club_ids": {
+              "home": "00000424",
+              "away": "00000337"
+            },
+            "tracker_labels": {
+              "home": "U.N.La.M.",
+              "away": "Municipalidad de Vicente López C"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/a/b/f/abf977d590d19f8b.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Castro, Cristian / Rodriguez, Matias",
+            "venue_address": "Florencio Varela 1903 San Justo Buenos Aires",
+            "venue_coordinates": "-34.6702106;-58.5637476"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067263",
+          "fixture_key": "femebal:00067263",
+          "home": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B",
+            "external_code": "00000400"
+          },
+          "away": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null,
+            "external_code": "00000616"
+          },
+          "date": "2026-10-25",
+          "time": "18:00",
+          "venue": "CEDEM Nº1 Gimnasio 1",
+          "court": null,
+          "result": {
+            "home": 24,
+            "away": 23,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067263",
+            "tracker_club_ids": {
+              "home": "00000400",
+              "away": "00000616"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de Tres de Febrero B",
+              "away": "Municipalidad de San Martín (Ce.M.E.F)"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/e/5/5/e55dc604ddbfa43d.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Santos, Eloy / Islemeciyan, Enrique Adrian",
+            "venue_address": "Juan Bautista Alberdi 5524 Caseros Buenos Aires",
+            "venue_coordinates": "-34.6028644;-58.5765247"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067264",
+          "fixture_key": "femebal:00067264",
+          "home": {
+            "club": "Defensores de Moreno",
+            "variant": null,
+            "external_code": "00000381"
+          },
+          "away": {
+            "club": "Club Deportivo Morón",
+            "variant": null,
+            "external_code": "00000384"
+          },
+          "date": "2026-10-25",
+          "time": "18:00",
+          "venue": "Defensores de Moreno Victorica",
+          "court": null,
+          "result": {
+            "home": 26,
+            "away": 32,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067264",
+            "tracker_club_ids": {
+              "home": "00000381",
+              "away": "00000384"
+            },
+            "tracker_labels": {
+              "home": "C.A. Defensores de Moreno",
+              "away": "Club Deportivo Morón"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/3/8/8/3886ed5054788bb9.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Gamarra, Andrés / Camusso, Franco",
+            "venue_address": "Avenida Victorica 350 Moreno Buenos Aires",
+            "venue_coordinates": "-34.6446326;-58.7958337"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067265",
+          "fixture_key": "femebal:00067265",
+          "home": {
+            "club": "Lanús",
+            "variant": "C",
+            "external_code": "00000341"
+          },
+          "away": {
+            "club": "Ituzaingó",
+            "variant": null,
+            "external_code": "00000366"
+          },
+          "date": "2026-10-22",
+          "time": "21:00",
+          "venue": "C.A. Ituzaingó",
+          "court": null,
+          "result": {
+            "home": 30,
+            "away": 30,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067265",
+            "tracker_club_ids": {
+              "home": "00000341",
+              "away": "00000366"
+            },
+            "tracker_labels": {
+              "home": "C.A. Lanús C",
+              "away": "C.A. Ituzaingó"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/9/a/8/9a80cbb389c73830.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Flores, Oscar / Carnaval, Hernan",
+            "venue_address": "Blas Parera 1251 Castelar Buenos Aires",
+            "venue_coordinates": "-34.6730645;-58.664252"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067266",
+          "fixture_key": "femebal:00067266",
+          "home": {
+            "club": "C.S. y D. Defensores de Banfield",
+            "variant": null,
+            "external_code": "00000379"
+          },
+          "away": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D",
+            "external_code": "00000415"
+          },
+          "date": "2026-10-25",
+          "time": "18:00",
+          "venue": "Inst. Tec. San Bonifacio Gimnasio",
+          "court": null,
+          "result": {
+            "home": 25,
+            "away": 26,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067266",
+            "tracker_club_ids": {
+              "home": "00000379",
+              "away": "00000415"
+            },
+            "tracker_labels": {
+              "home": "C.S. y D. Defensores de Banfield",
+              "away": "S.A.G. Polvorines D"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/9/6/9/969ae27ee224e268.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Testa, Lautaro / Balsas, Matias",
+            "venue_address": "Calle Sirito 700 Lomas de Zamora Buenos Aires",
+            "venue_coordinates": "-34.7725065;-58.4296355"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067267",
+          "fixture_key": "femebal:00067267",
+          "home": {
+            "club": "Argentinos Juniors",
+            "variant": "D",
+            "external_code": "00000354"
+          },
+          "away": {
+            "club": "Muñiz Handball",
+            "variant": "B",
+            "external_code": "00000407"
+          },
+          "date": "2026-10-25",
+          "time": "18:00",
+          "venue": "AAAJ Globo",
+          "court": null,
+          "result": {
+            "home": 23,
+            "away": 24,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067267",
+            "tracker_club_ids": {
+              "home": "00000354",
+              "away": "00000407"
+            },
+            "tracker_labels": {
+              "home": "A.A. Argentinos Juniors D",
+              "away": "Muñiz Handball B"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/d/2/7/d27eb866c0f3f60e.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Sola, Lautaro / Gregori, Lucas",
+            "venue_address": "Punta Arenas 1271 CABA Buenos Aires",
+            "venue_coordinates": "-34.591934;-58.4698688"
+          }
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067268",
+          "fixture_key": "femebal:00067268",
+          "home": {
+            "club": "Palermo Handball",
+            "variant": null,
+            "external_code": "00000409"
+          },
+          "away": {
+            "club": "Muñiz Handball",
+            "variant": "B",
+            "external_code": "00000407"
+          },
+          "date": "2026-11-01",
+          "time": "19:45",
+          "venue": "CEDEM Nº1 Gimnasio 1",
+          "court": null,
+          "result": {
+            "home": 24,
+            "away": 23,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067268",
+            "tracker_club_ids": {
+              "home": "00000409",
+              "away": "00000407"
+            },
+            "tracker_labels": {
+              "home": "Palermo Handball",
+              "away": "Muñiz Handball B"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/6/c/9/6c974c5125745c05.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Benitez, Lucia / Tryfon, Florencia Ailen",
+            "venue_address": "Juan Bautista Alberdi 5524 Caseros Buenos Aires",
+            "venue_coordinates": "-34.6028644;-58.5765247"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067269",
+          "fixture_key": "femebal:00067269",
+          "home": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D",
+            "external_code": "00000415"
+          },
+          "away": {
+            "club": "Argentinos Juniors",
+            "variant": "D",
+            "external_code": "00000354"
+          },
+          "date": "2026-11-01",
+          "time": "18:30",
+          "venue": "S.A.G. Polvorines Sede Principal",
+          "court": null,
+          "result": {
+            "home": 26,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067269",
+            "tracker_club_ids": {
+              "home": "00000415",
+              "away": "00000354"
+            },
+            "tracker_labels": {
+              "home": "S.A.G. Polvorines D",
+              "away": "A.A. Argentinos Juniors D"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/c/1/e/c1ee7b47b148063c.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Balsas, Matias / Testa, Lautaro",
+            "venue_address": "Manzanares 4000 Los Polvorines Buenos Aires",
+            "venue_coordinates": "-34.4905586;-58.6912997"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067270",
+          "fixture_key": "femebal:00067270",
+          "home": {
+            "club": "Ituzaingó",
+            "variant": null,
+            "external_code": "00000366"
+          },
+          "away": {
+            "club": "C.S. y D. Defensores de Banfield",
+            "variant": null,
+            "external_code": "00000379"
+          },
+          "date": "2026-11-01",
+          "time": "16:15",
+          "venue": "C.A. Ituzaingó",
+          "court": null,
+          "evidence": {
+            "tracker_match_id": "00067270",
+            "tracker_club_ids": {
+              "home": "00000366",
+              "away": "00000379"
+            },
+            "tracker_labels": {
+              "home": "C.A. Ituzaingó",
+              "away": "C.S. y D. Defensores de Banfield"
+            },
+            "tracker_state": "score_unconfirmed",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/0/a/d/0ad3a4226234ff62.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Axt, Dan / Moreno, Tomas",
+            "venue_address": "Blas Parera 1251 Castelar Buenos Aires",
+            "venue_coordinates": "-34.6730645;-58.664252"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067271",
+          "fixture_key": "femebal:00067271",
+          "home": {
+            "club": "Club Deportivo Morón",
+            "variant": null,
+            "external_code": "00000384"
+          },
+          "away": {
+            "club": "Lanús",
+            "variant": "C",
+            "external_code": "00000341"
+          },
+          "date": "2026-11-01",
+          "time": "19:45",
+          "venue": "AFALP Principal",
+          "court": null,
+          "result": {
+            "home": 28,
+            "away": 31,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067271",
+            "tracker_club_ids": {
+              "home": "00000384",
+              "away": "00000341"
+            },
+            "tracker_labels": {
+              "home": "Club Deportivo Morón",
+              "away": "C.A. Lanús C"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/1/4/9/149983c7138a50c1.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Conberse, Agustin / Galeano, Mauricio",
+            "venue_address": "Alas Argentinas 650 Ciudad Jardin Lomas de Palomar Buenos Aires",
+            "venue_coordinates": "-34.5986868;-58.5859998"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067272",
+          "fixture_key": "femebal:00067272",
+          "home": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null,
+            "external_code": "00000616"
+          },
+          "away": {
+            "club": "Defensores de Moreno",
+            "variant": null,
+            "external_code": "00000381"
+          },
+          "date": "2026-11-01",
+          "time": "18:00",
+          "venue": "CEDEM Nº1 Gimnasio 1",
+          "court": null,
+          "result": {
+            "home": 37,
+            "away": 24,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067272",
+            "tracker_club_ids": {
+              "home": "00000616",
+              "away": "00000381"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de San Martín (Ce.M.E.F)",
+              "away": "C.A. Defensores de Moreno"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/3/b/c/3bc82aa3f9becd95.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Tryfon, Florencia Ailen / Klein, Octavio",
+            "venue_address": "Juan Bautista Alberdi 5524 Caseros Buenos Aires",
+            "venue_coordinates": "-34.6028644;-58.5765247"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067273",
+          "fixture_key": "femebal:00067273",
+          "home": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C",
+            "external_code": "00000337"
+          },
+          "away": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B",
+            "external_code": "00000400"
+          },
+          "date": "2026-11-01",
+          "time": "19:45",
+          "venue": "Municipalidad de Vicente López. Gimnasio 1",
+          "court": null,
+          "result": {
+            "home": 29,
+            "away": 32,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067273",
+            "tracker_club_ids": {
+              "home": "00000337",
+              "away": "00000400"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de Vicente López C",
+              "away": "Municipalidad de Tres de Febrero B"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/0/a/3/0a336c71228b81e7.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Zamboni, Carolina / Baudino, Macarena",
+            "venue_address": "Bartolome Cruz 1105 Vicente Lopez Buenos Aires",
+            "venue_coordinates": "-34.5225139;-58.4716827"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067274",
+          "fixture_key": "femebal:00067274",
+          "home": {
+            "club": "S.A.P.A.",
+            "variant": null,
+            "external_code": "00000412"
+          },
+          "away": {
+            "club": "U.N.La.M.",
+            "variant": null,
+            "external_code": "00000424"
+          },
+          "date": "2026-11-01",
+          "time": "16:15",
+          "venue": "Estadio Municipal",
+          "court": null,
+          "result": {
+            "home": 28,
+            "away": 20,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067274",
+            "tracker_club_ids": {
+              "home": "00000412",
+              "away": "00000424"
+            },
+            "tracker_labels": {
+              "home": "S.A.P.A.",
+              "away": "U.N.La.M."
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/a/b/9/ab994a9a4c6aa7bd.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Baccaro, Cintia Rocío / Castro, Cristian",
+            "venue_address": "Ricardo Gutierrez General Las Heras Buenos Aires",
+            "venue_coordinates": "-34.920919927172;-58.946999707678"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067275",
+          "fixture_key": "femebal:00067275",
+          "home": {
+            "club": "Banfield",
+            "variant": "B",
+            "external_code": "00000360"
+          },
+          "away": {
+            "club": "Municipalidad de Pilar",
+            "variant": null,
+            "external_code": "00000405"
+          },
+          "date": "2026-11-01",
+          "time": "18:00",
+          "venue": "S.E.D.A.L.O.",
+          "court": null,
+          "result": {
+            "home": 23,
+            "away": 24,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067275",
+            "tracker_club_ids": {
+              "home": "00000360",
+              "away": "00000405"
+            },
+            "tracker_labels": {
+              "home": "C.A. Banfield B",
+              "away": "Municipalidad de Pilar"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/8/1/2/812da8edb1bdc834.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Pancaldi, Martin / Gregori, Ignacio",
+            "venue_address": "Gob. Oliden 2623 Lanus Buenos Aires",
+            "venue_coordinates": "-34.6901255;-58.4226701"
+          }
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067276",
+          "fixture_key": "femebal:00067276",
+          "home": {
+            "club": "Municipalidad de Pilar",
+            "variant": null,
+            "external_code": "00000405"
+          },
+          "away": {
+            "club": "Palermo Handball",
+            "variant": null,
+            "external_code": "00000409"
+          },
+          "date": "2026-11-08",
+          "time": "18:00",
+          "venue": "Microestadio Municipal de PIlar  'Ricardo Rusticucci'",
+          "court": null,
+          "evidence": {
+            "tracker_match_id": "00067276",
+            "tracker_club_ids": {
+              "home": "00000405",
+              "away": "00000409"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de Pilar",
+              "away": "Palermo Handball"
+            },
+            "tracker_state": "score_unconfirmed",
+            "planillas": [],
+            "referees": null,
+            "venue_address": "Nestor Kirchner 1400 Pilar Buenos Aires",
+            "venue_coordinates": "-34.4663154;-58.9153722"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067277",
+          "fixture_key": "femebal:00067277",
+          "home": {
+            "club": "U.N.La.M.",
+            "variant": null,
+            "external_code": "00000424"
+          },
+          "away": {
+            "club": "Banfield",
+            "variant": "B",
+            "external_code": "00000360"
+          },
+          "date": "2026-11-08",
+          "time": "19:45",
+          "venue": "Microestadio UN. La Matanza",
+          "court": null,
+          "result": {
+            "home": 19,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067277",
+            "tracker_club_ids": {
+              "home": "00000424",
+              "away": "00000360"
+            },
+            "tracker_labels": {
+              "home": "U.N.La.M.",
+              "away": "C.A. Banfield B"
+            },
+            "tracker_state": "played",
+            "planillas": [],
+            "referees": null,
+            "venue_address": "Florencio Varela 1903 San Justo Buenos Aires",
+            "venue_coordinates": "-34.6702106;-58.5637476"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067278",
+          "fixture_key": "femebal:00067278",
+          "home": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B",
+            "external_code": "00000400"
+          },
+          "away": {
+            "club": "S.A.P.A.",
+            "variant": null,
+            "external_code": "00000412"
+          },
+          "date": "2026-11-08",
+          "time": "20:15",
+          "venue": "CEDEM Nº1 Gimnasio 1",
+          "court": null,
+          "result": {
+            "home": 19,
+            "away": 20,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067278",
+            "tracker_club_ids": {
+              "home": "00000400",
+              "away": "00000412"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de Tres de Febrero B",
+              "away": "S.A.P.A."
+            },
+            "tracker_state": "played",
+            "planillas": [],
+            "referees": "Conberse, Agustin / Castro, Cristian",
+            "venue_address": "Juan Bautista Alberdi 5524 Caseros Buenos Aires",
+            "venue_coordinates": "-34.6028644;-58.5765247"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067279",
+          "fixture_key": "femebal:00067279",
+          "home": {
+            "club": "Defensores de Moreno",
+            "variant": null,
+            "external_code": "00000381"
+          },
+          "away": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C",
+            "external_code": "00000337"
+          },
+          "date": "2026-11-08",
+          "time": "18:00",
+          "venue": "Defensores de Moreno Victorica",
+          "court": null,
+          "result": {
+            "home": 26,
+            "away": 31,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067279",
+            "tracker_club_ids": {
+              "home": "00000381",
+              "away": "00000337"
+            },
+            "tracker_labels": {
+              "home": "C.A. Defensores de Moreno",
+              "away": "Municipalidad de Vicente López C"
+            },
+            "tracker_state": "played",
+            "planillas": [],
+            "referees": "Sotelo, Francisco / Rossi, Pablo",
+            "venue_address": "Avenida Victorica 350 Moreno Buenos Aires",
+            "venue_coordinates": "-34.6446326;-58.7958337"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067280",
+          "fixture_key": "femebal:00067280",
+          "home": {
+            "club": "Lanús",
+            "variant": "C",
+            "external_code": "00000341"
+          },
+          "away": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null,
+            "external_code": "00000616"
+          },
+          "date": "2026-11-08",
+          "time": "16:45",
+          "venue": "C.A. Lanús Gimnasio",
+          "court": null,
+          "result": {
+            "home": 35,
+            "away": 20,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067280",
+            "tracker_club_ids": {
+              "home": "00000341",
+              "away": "00000616"
+            },
+            "tracker_labels": {
+              "home": "C.A. Lanús C",
+              "away": "Municipalidad de San Martín (Ce.M.E.F)"
+            },
+            "tracker_state": "played",
+            "planillas": [],
+            "referees": "Peralta, Florencia / Gimenez, Ailen",
+            "venue_address": "Ramon Cabrero y H. Guidi Lanus Buenos Aires",
+            "venue_coordinates": "-34.7163465;-58.384221"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067281",
+          "fixture_key": "femebal:00067281",
+          "home": {
+            "club": "C.S. y D. Defensores de Banfield",
+            "variant": null,
+            "external_code": "00000379"
+          },
+          "away": {
+            "club": "Club Deportivo Morón",
+            "variant": null,
+            "external_code": "00000384"
+          },
+          "date": "2026-11-08",
+          "time": "18:00",
+          "venue": "Inst. Tec. San Bonifacio Gimnasio",
+          "court": null,
+          "result": {
+            "home": 32,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067281",
+            "tracker_club_ids": {
+              "home": "00000379",
+              "away": "00000384"
+            },
+            "tracker_labels": {
+              "home": "C.S. y D. Defensores de Banfield",
+              "away": "Club Deportivo Morón"
+            },
+            "tracker_state": "played",
+            "planillas": [],
+            "referees": "Ferretti, Micaela / Scalercio, Sofia",
+            "venue_address": "Calle Sirito 700 Lomas de Zamora Buenos Aires",
+            "venue_coordinates": "-34.7725065;-58.4296355"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067282",
+          "fixture_key": "femebal:00067282",
+          "home": {
+            "club": "Argentinos Juniors",
+            "variant": "D",
+            "external_code": "00000354"
+          },
+          "away": {
+            "club": "Ituzaingó",
+            "variant": null,
+            "external_code": "00000366"
+          },
+          "date": "2026-11-08",
+          "time": "18:00",
+          "venue": "AAAJ Globo",
+          "court": null,
+          "result": {
+            "home": 27,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067282",
+            "tracker_club_ids": {
+              "home": "00000354",
+              "away": "00000366"
+            },
+            "tracker_labels": {
+              "home": "A.A. Argentinos Juniors D",
+              "away": "C.A. Ituzaingó"
+            },
+            "tracker_state": "played",
+            "planillas": [],
+            "referees": "Camusso, Franco / Lopez Barrios, Tobias",
+            "venue_address": "Punta Arenas 1271 CABA Buenos Aires",
+            "venue_coordinates": "-34.591934;-58.4698688"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067283",
+          "fixture_key": "femebal:00067283",
+          "home": {
+            "club": "Muñiz Handball",
+            "variant": "B",
+            "external_code": "00000407"
+          },
+          "away": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D",
+            "external_code": "00000415"
+          },
+          "date": "2026-10-28",
+          "time": "21:00",
+          "venue": "Muñiz",
+          "court": null,
+          "result": {
+            "home": 25,
+            "away": 29,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_match_id": "00067283",
+            "tracker_club_ids": {
+              "home": "00000407",
+              "away": "00000415"
+            },
+            "tracker_labels": {
+              "home": "Muñiz Handball B",
+              "away": "S.A.G. Polvorines D"
+            },
+            "tracker_state": "played",
+            "planillas": [
+              {
+                "pdf_url": "https://djfhz848yeeat.cloudfront.net/pdf_planillas/2/f/2/2f2dd0e0579c556f.pdf",
+                "transmission_url": null
+              }
+            ],
+            "referees": "Gimenez, Ailen / Herrera, Rodrigo",
+            "venue_address": "Sarmiento 1080 San Miguel Buenos Aires",
+            "venue_coordinates": "-34.5471077;-58.7067833"
+          }
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067284",
+          "fixture_key": "femebal:00067284",
+          "home": {
+            "club": "Palermo Handball",
+            "variant": null,
+            "external_code": "00000409"
+          },
+          "away": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D",
+            "external_code": "00000415"
+          },
+          "date": "2026-11-15",
+          "time": "16:45",
+          "venue": "AAAJ Globo",
+          "court": null,
+          "evidence": {
+            "tracker_match_id": "00067284",
+            "tracker_club_ids": {
+              "home": "00000409",
+              "away": "00000415"
+            },
+            "tracker_labels": {
+              "home": "Palermo Handball",
+              "away": "S.A.G. Polvorines D"
+            },
+            "tracker_state": "scheduled",
+            "planillas": [],
+            "referees": null,
+            "venue_address": "Punta Arenas 1271 CABA Buenos Aires",
+            "venue_coordinates": "-34.591934;-58.4698688"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067285",
+          "fixture_key": "femebal:00067285",
+          "home": {
+            "club": "Ituzaingó",
+            "variant": null,
+            "external_code": "00000366"
+          },
+          "away": {
+            "club": "Muñiz Handball",
+            "variant": "B",
+            "external_code": "00000407"
+          },
+          "date": "2026-11-15",
+          "time": "18:00",
+          "venue": "C.A. Ituzaingó",
+          "court": null,
+          "evidence": {
+            "tracker_match_id": "00067285",
+            "tracker_club_ids": {
+              "home": "00000366",
+              "away": "00000407"
+            },
+            "tracker_labels": {
+              "home": "C.A. Ituzaingó",
+              "away": "Muñiz Handball B"
+            },
+            "tracker_state": "scheduled",
+            "planillas": [],
+            "referees": null,
+            "venue_address": "Blas Parera 1251 Castelar Buenos Aires",
+            "venue_coordinates": "-34.6730645;-58.664252"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067286",
+          "fixture_key": "femebal:00067286",
+          "home": {
+            "club": "Club Deportivo Morón",
+            "variant": null,
+            "external_code": "00000384"
+          },
+          "away": {
+            "club": "Argentinos Juniors",
+            "variant": "D",
+            "external_code": "00000354"
+          },
+          "date": "2026-11-15",
+          "time": "20:15",
+          "venue": "Club Deportivo Morón Rafael Grosso",
+          "court": null,
+          "evidence": {
+            "tracker_match_id": "00067286",
+            "tracker_club_ids": {
+              "home": "00000384",
+              "away": "00000354"
+            },
+            "tracker_labels": {
+              "home": "Club Deportivo Morón",
+              "away": "A.A. Argentinos Juniors D"
+            },
+            "tracker_state": "scheduled",
+            "planillas": [],
+            "referees": null,
+            "venue_address": "Avenida Hipólito Yrigoyen 1770 Morón Buenos Aires",
+            "venue_coordinates": "-34.6602553;-58.6319763"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067287",
+          "fixture_key": "femebal:00067287",
+          "home": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null,
+            "external_code": "00000616"
+          },
+          "away": {
+            "club": "C.S. y D. Defensores de Banfield",
+            "variant": null,
+            "external_code": "00000379"
+          },
+          "date": "2026-11-15",
+          "time": "18:00",
+          "venue": "CEDEM Nº1 Gimnasio 1",
+          "court": null,
+          "evidence": {
+            "tracker_match_id": "00067287",
+            "tracker_club_ids": {
+              "home": "00000616",
+              "away": "00000379"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de San Martín (Ce.M.E.F)",
+              "away": "C.S. y D. Defensores de Banfield"
+            },
+            "tracker_state": "scheduled",
+            "planillas": [],
+            "referees": null,
+            "venue_address": "Juan Bautista Alberdi 5524 Caseros Buenos Aires",
+            "venue_coordinates": "-34.6028644;-58.5765247"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067288",
+          "fixture_key": "femebal:00067288",
+          "home": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C",
+            "external_code": "00000337"
+          },
+          "away": {
+            "club": "Lanús",
+            "variant": "C",
+            "external_code": "00000341"
+          },
+          "date": "2026-11-15",
+          "time": "19:45",
+          "venue": "Municipalidad de Vicente López. Gimnasio 1",
+          "court": null,
+          "evidence": {
+            "tracker_match_id": "00067288",
+            "tracker_club_ids": {
+              "home": "00000337",
+              "away": "00000341"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de Vicente López C",
+              "away": "C.A. Lanús C"
+            },
+            "tracker_state": "scheduled",
+            "planillas": [],
+            "referees": null,
+            "venue_address": "Bartolome Cruz 1105 Vicente Lopez Buenos Aires",
+            "venue_coordinates": "-34.5225139;-58.4716827"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067289",
+          "fixture_key": "femebal:00067289",
+          "home": {
+            "club": "S.A.P.A.",
+            "variant": null,
+            "external_code": "00000412"
+          },
+          "away": {
+            "club": "Defensores de Moreno",
+            "variant": null,
+            "external_code": "00000381"
+          },
+          "date": "2026-11-15",
+          "time": "18:00",
+          "venue": "Estadio Municipal",
+          "court": null,
+          "evidence": {
+            "tracker_match_id": "00067289",
+            "tracker_club_ids": {
+              "home": "00000412",
+              "away": "00000381"
+            },
+            "tracker_labels": {
+              "home": "S.A.P.A.",
+              "away": "C.A. Defensores de Moreno"
+            },
+            "tracker_state": "scheduled",
+            "planillas": [],
+            "referees": null,
+            "venue_address": "Ricardo Gutierrez General Las Heras Buenos Aires",
+            "venue_coordinates": "-34.920919927172;-58.946999707678"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067290",
+          "fixture_key": "femebal:00067290",
+          "home": {
+            "club": "Banfield",
+            "variant": "B",
+            "external_code": "00000360"
+          },
+          "away": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B",
+            "external_code": "00000400"
+          },
+          "date": "2026-11-15",
+          "time": "19:45",
+          "venue": "Banfield Sede Microestadio",
+          "court": null,
+          "evidence": {
+            "tracker_match_id": "00067290",
+            "tracker_club_ids": {
+              "home": "00000360",
+              "away": "00000400"
+            },
+            "tracker_labels": {
+              "home": "C.A. Banfield B",
+              "away": "Municipalidad de Tres de Febrero B"
+            },
+            "tracker_state": "scheduled",
+            "planillas": [],
+            "referees": null,
+            "venue_address": "Valentín Vergara 1650 Banfield Buenos Aires",
+            "venue_coordinates": "-34.7413546;-58.3944402"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067291",
+          "fixture_key": "femebal:00067291",
+          "home": {
+            "club": "Municipalidad de Pilar",
+            "variant": null,
+            "external_code": "00000405"
+          },
+          "away": {
+            "club": "U.N.La.M.",
+            "variant": null,
+            "external_code": "00000424"
+          },
+          "date": "2026-11-15",
+          "time": "18:00",
+          "venue": "Microestadio Municipal de PIlar  'Ricardo Rusticucci'",
+          "court": null,
+          "evidence": {
+            "tracker_match_id": "00067291",
+            "tracker_club_ids": {
+              "home": "00000405",
+              "away": "00000424"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de Pilar",
+              "away": "U.N.La.M."
+            },
+            "tracker_state": "scheduled",
+            "planillas": [],
+            "referees": null,
+            "venue_address": "Nestor Kirchner 1400 Pilar Buenos Aires",
+            "venue_coordinates": "-34.4663154;-58.9153722"
+          }
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067292",
+          "fixture_key": "femebal:00067292",
+          "home": {
+            "club": "U.N.La.M.",
+            "variant": null,
+            "external_code": "00000424"
+          },
+          "away": {
+            "club": "Palermo Handball",
+            "variant": null,
+            "external_code": "00000409"
+          },
+          "date": "2026-11-22",
+          "time": "00:00",
+          "venue": "Microestadio UN. La Matanza",
+          "court": null,
+          "evidence": {
+            "tracker_match_id": "00067292",
+            "tracker_club_ids": {
+              "home": "00000424",
+              "away": "00000409"
+            },
+            "tracker_labels": {
+              "home": "U.N.La.M.",
+              "away": "Palermo Handball"
+            },
+            "tracker_state": "scheduled",
+            "planillas": [],
+            "referees": null,
+            "venue_address": "Florencio Varela 1903 San Justo Buenos Aires",
+            "venue_coordinates": "-34.6702106;-58.5637476"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067293",
+          "fixture_key": "femebal:00067293",
+          "home": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B",
+            "external_code": "00000400"
+          },
+          "away": {
+            "club": "Municipalidad de Pilar",
+            "variant": null,
+            "external_code": "00000405"
+          },
+          "date": "2026-11-22",
+          "time": "00:00",
+          "venue": "CEDEM Nº1 Gimnasio 1",
+          "court": null,
+          "evidence": {
+            "tracker_match_id": "00067293",
+            "tracker_club_ids": {
+              "home": "00000400",
+              "away": "00000405"
+            },
+            "tracker_labels": {
+              "home": "Municipalidad de Tres de Febrero B",
+              "away": "Municipalidad de Pilar"
+            },
+            "tracker_state": "scheduled",
+            "planillas": [],
+            "referees": null,
+            "venue_address": "Juan Bautista Alberdi 5524 Caseros Buenos Aires",
+            "venue_coordinates": "-34.6028644;-58.5765247"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067294",
+          "fixture_key": "femebal:00067294",
+          "home": {
+            "club": "Defensores de Moreno",
+            "variant": null,
+            "external_code": "00000381"
+          },
+          "away": {
+            "club": "Banfield",
+            "variant": "B",
+            "external_code": "00000360"
+          },
+          "date": "2026-11-22",
+          "time": "00:00",
+          "venue": "Defensores de Moreno Victorica",
+          "court": null,
+          "evidence": {
+            "tracker_match_id": "00067294",
+            "tracker_club_ids": {
+              "home": "00000381",
+              "away": "00000360"
+            },
+            "tracker_labels": {
+              "home": "C.A. Defensores de Moreno",
+              "away": "C.A. Banfield B"
+            },
+            "tracker_state": "scheduled",
+            "planillas": [],
+            "referees": null,
+            "venue_address": "Avenida Victorica 350 Moreno Buenos Aires",
+            "venue_coordinates": "-34.6446326;-58.7958337"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067295",
+          "fixture_key": "femebal:00067295",
+          "home": {
+            "club": "Lanús",
+            "variant": "C",
+            "external_code": "00000341"
+          },
+          "away": {
+            "club": "S.A.P.A.",
+            "variant": null,
+            "external_code": "00000412"
+          },
+          "date": "2026-11-22",
+          "time": "00:00",
+          "venue": "C.A. Lanús Gimnasio",
+          "court": null,
+          "evidence": {
+            "tracker_match_id": "00067295",
+            "tracker_club_ids": {
+              "home": "00000341",
+              "away": "00000412"
+            },
+            "tracker_labels": {
+              "home": "C.A. Lanús C",
+              "away": "S.A.P.A."
+            },
+            "tracker_state": "scheduled",
+            "planillas": [],
+            "referees": null,
+            "venue_address": "Ramon Cabrero y H. Guidi Lanus Buenos Aires",
+            "venue_coordinates": "-34.7163465;-58.384221"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067296",
+          "fixture_key": "femebal:00067296",
+          "home": {
+            "club": "C.S. y D. Defensores de Banfield",
+            "variant": null,
+            "external_code": "00000379"
+          },
+          "away": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C",
+            "external_code": "00000337"
+          },
+          "date": "2026-11-22",
+          "time": "00:00",
+          "venue": "Inst. Tec. San Bonifacio Gimnasio",
+          "court": null,
+          "evidence": {
+            "tracker_match_id": "00067296",
+            "tracker_club_ids": {
+              "home": "00000379",
+              "away": "00000337"
+            },
+            "tracker_labels": {
+              "home": "C.S. y D. Defensores de Banfield",
+              "away": "Municipalidad de Vicente López C"
+            },
+            "tracker_state": "scheduled",
+            "planillas": [],
+            "referees": null,
+            "venue_address": "Calle Sirito 700 Lomas de Zamora Buenos Aires",
+            "venue_coordinates": "-34.7725065;-58.4296355"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067297",
+          "fixture_key": "femebal:00067297",
+          "home": {
+            "club": "Argentinos Juniors",
+            "variant": "D",
+            "external_code": "00000354"
+          },
+          "away": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null,
+            "external_code": "00000616"
+          },
+          "date": "2026-11-22",
+          "time": "00:00",
+          "venue": "AAAJ Globo",
+          "court": null,
+          "evidence": {
+            "tracker_match_id": "00067297",
+            "tracker_club_ids": {
+              "home": "00000354",
+              "away": "00000616"
+            },
+            "tracker_labels": {
+              "home": "A.A. Argentinos Juniors D",
+              "away": "Municipalidad de San Martín (Ce.M.E.F)"
+            },
+            "tracker_state": "scheduled",
+            "planillas": [],
+            "referees": null,
+            "venue_address": "Punta Arenas 1271 CABA Buenos Aires",
+            "venue_coordinates": "-34.591934;-58.4698688"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067298",
+          "fixture_key": "femebal:00067298",
+          "home": {
+            "club": "Muñiz Handball",
+            "variant": "B",
+            "external_code": "00000407"
+          },
+          "away": {
+            "club": "Club Deportivo Morón",
+            "variant": null,
+            "external_code": "00000384"
+          },
+          "date": "2026-11-22",
+          "time": "00:00",
+          "venue": "Muñiz",
+          "court": null,
+          "evidence": {
+            "tracker_match_id": "00067298",
+            "tracker_club_ids": {
+              "home": "00000407",
+              "away": "00000384"
+            },
+            "tracker_labels": {
+              "home": "Muñiz Handball B",
+              "away": "Club Deportivo Morón"
+            },
+            "tracker_state": "scheduled",
+            "planillas": [],
+            "referees": null,
+            "venue_address": "Sarmiento 1080 San Miguel Buenos Aires",
+            "venue_coordinates": "-34.5471077;-58.7067833"
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:00067299",
+          "fixture_key": "femebal:00067299",
+          "home": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D",
+            "external_code": "00000415"
+          },
+          "away": {
+            "club": "Ituzaingó",
+            "variant": null,
+            "external_code": "00000366"
+          },
+          "date": "2026-11-22",
+          "time": "00:00",
+          "venue": "S.A.G. Polvorines Sede Principal",
+          "court": null,
+          "evidence": {
+            "tracker_match_id": "00067299",
+            "tracker_club_ids": {
+              "home": "00000415",
+              "away": "00000366"
+            },
+            "tracker_labels": {
+              "home": "S.A.G. Polvorines D",
+              "away": "C.A. Ituzaingó"
+            },
+            "tracker_state": "scheduled",
+            "planillas": [],
+            "referees": null,
+            "venue_address": "Manzanares 4000 Los Polvorines Buenos Aires",
+            "venue_coordinates": "-34.4905586;-58.6912997"
+          }
+        }
+      ]
+    }
+  ]
+}

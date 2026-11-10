@@ -18,6 +18,7 @@ import FixtureRosterPage from './pages/FixtureRosterPage'
 import FixtureReviewPage from './pages/FixtureReviewPage'
 import FixturePreparationPage from './pages/FixturePreparationPage'
 import ManualMatchPreparationPage from './pages/ManualMatchPreparationPage'
+import PermanenciaHubPage from './pages/PermanenciaHubPage'
 
 export default function App() {
   return (
@@ -38,6 +39,7 @@ export default function App() {
       {/* Main layout with bottom nav */}
       <Route element={<ProtectedRoute><Layout /></ProtectedRoute>}>
         <Route path="/matches" element={<MatchesPage />} />
+        <Route path="/permanencia" element={<PermanenciaHubPage />} />
         <Route path="/matches/:matchId/prepare" element={<ManualMatchPreparationPage />} />
          <Route path="/fixtures/:fixtureKey/review" element={<FixtureReviewPage />} />
          <Route path="/fixtures/:fixtureKey" element={<FixturePreparationPage />} />

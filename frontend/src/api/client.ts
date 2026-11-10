@@ -3,7 +3,8 @@ import type {
   Tournament, Team, Player, Match, MatchSquad, Event, Clip, PDFImportConfirmation, PDFImportResult, PDFPreview, MatchPDFConfirmation, MatchPDFConfirmResult, MatchPDFPreviewResult,
   TokenResponse, UserRead, AnalysisEvent, AnalysisEventInput, CanonicalEvent, CanonicalEventCommand, CanonicalEventRevisionInput, CanonicalMatchState, ReviewedMetrics, AnalysisSession, AnalysisSessionUpdate, AnalysisRun,
   ReportPackageInput, ReportPublicationStatus, ReviewedReportPackage,
-    GoalkeeperShot, GoalkeeperShotCreate, FixtureConfirmation, FixtureConfirmResult, FixturePreviewResult, FixtureRoster, FixtureRosterResolution, ScheduledFixture, CanonicalPlayerProjection, WarningsSummary, OfficialSheet,
+  GoalkeeperShot, GoalkeeperShotCreate, FixtureConfirmation, FixtureConfirmResult, FixturePreviewResult, FixtureRoster, FixtureRosterResolution, ScheduledFixture, CanonicalPlayerProjection, WarningsSummary, OfficialSheet,
+  StandingsResponse, PlayerStatisticsResponse, ClubStatisticsResponse,
 } from '../types'
 
 const http = axios.create({ baseURL: `${import.meta.env.VITE_API_URL ?? ''}/api/v1` })
@@ -31,14 +32,11 @@ http.interceptors.response.use(
 )
 
 // ─── Auth ─────────────────────────────────────────────────────────────────────
-export const login = (email: string, password: string) =>
-  http.post<TokenResponse>('/auth/login', { email, password }).then(r => r.data)
+export const login = (email: string, password: string) => http.post<TokenResponse>('/auth/login', { email, password }).then(r => r.data)
 export const getMe = () => http.get<UserRead>('/auth/me').then(r => r.data)
-export const changePassword = (current_password: string, new_password: string) =>
-  http.put<UserRead>('/auth/change-password', { current_password, new_password }).then(r => r.data)
+export const changePassword = (current_password: string, new_password: string) => http.put<UserRead>('/auth/change-password', { current_password, new_password }).then(r => r.data)
 export const listUsers = () => http.get<UserRead[]>('/auth/users').then(r => r.data)
-export const createUser = (d: { email: string; full_name: string; password: string; role: string }) =>
-  http.post<UserRead>('/auth/users', d).then(r => r.data)
+export const createUser = (d: { email: string; full_name: string; password: string; role: string }) => http.post<UserRead>('/auth/users', d).then(r => r.data)
 
 // ─── Tournaments ──────────────────────────────────────────────────────────────
 export const getTournaments = () => http.get<Tournament[]>('/tournaments/').then(r => r.data)
@@ -97,12 +95,9 @@ export const deleteLastEvent = (matchId: number) =>
   http.delete<Event>(`/matches/${matchId}/events/last`).then(r => r.data)
 
 // Analytical records are separate from legacy live events and official scores.
-export const getAnalysisEvents = (matchId: number) =>
-  http.get<AnalysisEvent[]>(`/matches/${matchId}/analysis-events`).then(r => r.data)
-export const getReviewedMetrics = (matchId: number) =>
-  http.get<ReviewedMetrics>(`/matches/${matchId}/reviewed-metrics`).then(r => r.data)
-export const createAnalysisEvent = (matchId: number, data: AnalysisEventInput) =>
-  http.post<AnalysisEvent>(`/matches/${matchId}/analysis-events`, data).then(r => r.data)
+export const getAnalysisEvents = (matchId: number) => http.get<AnalysisEvent[]>(`/matches/${matchId}/analysis-events`).then(r => r.data)
+export const getReviewedMetrics = (matchId: number) => http.get<ReviewedMetrics>(`/matches/${matchId}/reviewed-metrics`).then(r => r.data)
+export const createAnalysisEvent = (matchId: number, data: AnalysisEventInput) => http.post<AnalysisEvent>(`/matches/${matchId}/analysis-events`, data).then(r => r.data)
 export const deactivateAnalysisEvent = (eventId: number, reason: string) =>
   http.delete<AnalysisEvent>(`/analysis-events/${eventId}`, { params: { reason } }).then(r => r.data)
 export const restoreAnalysisEvent = (eventId: number, reason: string) =>
@@ -212,3 +207,14 @@ export const reviewFixturePDF = (fixtureKey: string) =>
 
 export const confirmFixtureReview = (fixtureKey: string, confirmation: FixtureConfirmation) =>
   http.post<FixtureConfirmResult>(`/pdf/fixtures/${fixtureKey}/review`, confirmation).then(r => r.data)
+
+// ─── Standings ────────────────────────────────────────────────────────────────
+export const getStandings = (stageId: number) =>
+  http.get<StandingsResponse>(`/standings?stage_id=${stageId}`).then(r => r.data)
+
+// ─── Player & club statistics ──────────────────────────────────────────────────
+export const getPlayerStatistics = (stageId: number) =>
+  http.get<PlayerStatisticsResponse>(`/statistics/players?stage_id=${stageId}`).then(r => r.data)
+
+export const getClubStatistics = (stageId: number) =>
+  http.get<ClubStatisticsResponse>(`/statistics/clubs?stage_id=${stageId}`).then(r => r.data)

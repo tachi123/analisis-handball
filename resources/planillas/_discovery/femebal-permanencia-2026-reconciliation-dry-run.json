@@ -1,0 +1,466 @@
+{
+  "schema_version": 1,
+  "fixture_sha256": "3dccd5955451328bbe9d0b2af70a967d13d026d3cfea42e02d91d9b0c17e44a4",
+  "stage": {
+    "id": 9,
+    "name": "Torneo Permanencia 2026 3ªM"
+  },
+  "summary": {
+    "tracker_matches": 120,
+    "existing_scheduled_matches": 22,
+    "identity_matches": 22,
+    "creates_after_identity_reconciliation": 98,
+    "unmatched_existing": 0
+  },
+  "existing_identity_matches": [
+    {
+      "tracker_entry_key": "femebal:00067180",
+      "tracker_match_id": "00067180",
+      "round": 1,
+      "date": "2026-08-09",
+      "home": {
+        "club": "Ituzaingó",
+        "variant": null,
+        "external_code": "00000366"
+      },
+      "away": {
+        "club": "Palermo Handball",
+        "variant": null,
+        "external_code": "00000409"
+      },
+      "existing_scheduled_match_id": 139,
+      "existing_fixture_key": "planilla:c5307793:1"
+    },
+    {
+      "tracker_entry_key": "femebal:00067181",
+      "tracker_match_id": "00067181",
+      "round": 1,
+      "date": "2026-08-09",
+      "home": {
+        "club": "Club Deportivo Morón",
+        "variant": null,
+        "external_code": "00000384"
+      },
+      "away": {
+        "club": "S.A.G. Polvorines",
+        "variant": "D",
+        "external_code": "00000415"
+      },
+      "existing_scheduled_match_id": 138,
+      "existing_fixture_key": "planilla:b671e5ea:1"
+    },
+    {
+      "tracker_entry_key": "femebal:00067182",
+      "tracker_match_id": "00067182",
+      "round": 1,
+      "date": "2026-08-09",
+      "home": {
+        "club": "Municipalidad de San Martín (Ce.M.E.F)",
+        "variant": null,
+        "external_code": "00000616"
+      },
+      "away": {
+        "club": "Muñiz Handball",
+        "variant": "B",
+        "external_code": "00000407"
+      },
+      "existing_scheduled_match_id": 137,
+      "existing_fixture_key": "planilla:7a49553e:1"
+    },
+    {
+      "tracker_entry_key": "femebal:00067183",
+      "tracker_match_id": "00067183",
+      "round": 1,
+      "date": "2026-08-09",
+      "home": {
+        "club": "Municipalidad de Vicente López",
+        "variant": "C",
+        "external_code": "00000337"
+      },
+      "away": {
+        "club": "Argentinos Juniors",
+        "variant": "D",
+        "external_code": "00000354"
+      },
+      "existing_scheduled_match_id": 134,
+      "existing_fixture_key": "planilla:2ce572e6:1"
+    },
+    {
+      "tracker_entry_key": "femebal:00067184",
+      "tracker_match_id": "00067184",
+      "round": 1,
+      "date": "2026-08-09",
+      "home": {
+        "club": "S.A.P.A.",
+        "variant": null,
+        "external_code": "00000412"
+      },
+      "away": {
+        "club": "C.S. y D. Defensores de Banfield",
+        "variant": null,
+        "external_code": "00000379"
+      },
+      "existing_scheduled_match_id": 136,
+      "existing_fixture_key": "planilla:6cbc0df9:1"
+    },
+    {
+      "tracker_entry_key": "femebal:00067185",
+      "tracker_match_id": "00067185",
+      "round": 1,
+      "date": "2026-08-09",
+      "home": {
+        "club": "Banfield",
+        "variant": "B",
+        "external_code": "00000360"
+      },
+      "away": {
+        "club": "Lanús",
+        "variant": "C",
+        "external_code": "00000341"
+      },
+      "existing_scheduled_match_id": 135,
+      "existing_fixture_key": "planilla:35b39177:1"
+    },
+    {
+      "tracker_entry_key": "femebal:00067186",
+      "tracker_match_id": "00067186",
+      "round": 1,
+      "date": "2026-08-09",
+      "home": {
+        "club": "Municipalidad de Pilar",
+        "variant": null,
+        "external_code": "00000405"
+      },
+      "away": {
+        "club": "Defensores de Moreno",
+        "variant": null,
+        "external_code": "00000381"
+      },
+      "existing_scheduled_match_id": 141,
+      "existing_fixture_key": "planilla:f803f086:1"
+    },
+    {
+      "tracker_entry_key": "femebal:00067187",
+      "tracker_match_id": "00067187",
+      "round": 1,
+      "date": "2026-08-09",
+      "home": {
+        "club": "U.N.La.M.",
+        "variant": null,
+        "external_code": "00000424"
+      },
+      "away": {
+        "club": "Municipalidad de Tres de Febrero",
+        "variant": "B",
+        "external_code": "00000400"
+      },
+      "existing_scheduled_match_id": 140,
+      "existing_fixture_key": "planilla:dab3bc3b:1"
+    },
+    {
+      "tracker_entry_key": "femebal:00067188",
+      "tracker_match_id": "00067188",
+      "round": 2,
+      "date": "2026-08-16",
+      "home": {
+        "club": "Palermo Handball",
+        "variant": null,
+        "external_code": "00000409"
+      },
+      "away": {
+        "club": "Municipalidad de Tres de Febrero",
+        "variant": "B",
+        "external_code": "00000400"
+      },
+      "existing_scheduled_match_id": 144,
+      "existing_fixture_key": "planilla:7149f4f5:1"
+    },
+    {
+      "tracker_entry_key": "femebal:00067189",
+      "tracker_match_id": "00067189",
+      "round": 2,
+      "date": "2026-08-16",
+      "home": {
+        "club": "Defensores de Moreno",
+        "variant": null,
+        "external_code": "00000381"
+      },
+      "away": {
+        "club": "U.N.La.M.",
+        "variant": null,
+        "external_code": "00000424"
+      },
+      "existing_scheduled_match_id": 142,
+      "existing_fixture_key": "planilla:629f2340:1"
+    },
+    {
+      "tracker_entry_key": "femebal:00067190",
+      "tracker_match_id": "00067190",
+      "round": 2,
+      "date": "2026-08-16",
+      "home": {
+        "club": "Lanús",
+        "variant": "C",
+        "external_code": "00000341"
+      },
+      "away": {
+        "club": "Municipalidad de Pilar",
+        "variant": null,
+        "external_code": "00000405"
+      },
+      "existing_scheduled_match_id": 146,
+      "existing_fixture_key": "planilla:ccebe436:1"
+    },
+    {
+      "tracker_entry_key": "femebal:00067191",
+      "tracker_match_id": "00067191",
+      "round": 2,
+      "date": "2026-08-16",
+      "home": {
+        "club": "C.S. y D. Defensores de Banfield",
+        "variant": null,
+        "external_code": "00000379"
+      },
+      "away": {
+        "club": "Banfield",
+        "variant": "B",
+        "external_code": "00000360"
+      },
+      "existing_scheduled_match_id": 143,
+      "existing_fixture_key": "planilla:68ff5491:1"
+    },
+    {
+      "tracker_entry_key": "femebal:00067192",
+      "tracker_match_id": "00067192",
+      "round": 2,
+      "date": "2026-08-16",
+      "home": {
+        "club": "Argentinos Juniors",
+        "variant": "D",
+        "external_code": "00000354"
+      },
+      "away": {
+        "club": "S.A.P.A.",
+        "variant": null,
+        "external_code": "00000412"
+      },
+      "existing_scheduled_match_id": 148,
+      "existing_fixture_key": "planilla:e65db31c:1"
+    },
+    {
+      "tracker_entry_key": "femebal:00067194",
+      "tracker_match_id": "00067194",
+      "round": 2,
+      "date": "2026-08-16",
+      "home": {
+        "club": "S.A.G. Polvorines",
+        "variant": "D",
+        "external_code": "00000415"
+      },
+      "away": {
+        "club": "Municipalidad de San Martín (Ce.M.E.F)",
+        "variant": null,
+        "external_code": "00000616"
+      },
+      "existing_scheduled_match_id": 147,
+      "existing_fixture_key": "planilla:d14d6166:1"
+    },
+    {
+      "tracker_entry_key": "femebal:00067195",
+      "tracker_match_id": "00067195",
+      "round": 2,
+      "date": "2026-08-16",
+      "home": {
+        "club": "Ituzaingó",
+        "variant": null,
+        "external_code": "00000366"
+      },
+      "away": {
+        "club": "Club Deportivo Morón",
+        "variant": null,
+        "external_code": "00000384"
+      },
+      "existing_scheduled_match_id": 145,
+      "existing_fixture_key": "planilla:c4dea1da:1"
+    },
+    {
+      "tracker_entry_key": "femebal:00067196",
+      "tracker_match_id": "00067196",
+      "round": 3,
+      "date": "2026-08-23",
+      "home": {
+        "club": "Club Deportivo Morón",
+        "variant": null,
+        "external_code": "00000384"
+      },
+      "away": {
+        "club": "Palermo Handball",
+        "variant": null,
+        "external_code": "00000409"
+      },
+      "existing_scheduled_match_id": 155,
+      "existing_fixture_key": "planilla:ffc6d3f7:1"
+    },
+    {
+      "tracker_entry_key": "femebal:00067198",
+      "tracker_match_id": "00067198",
+      "round": 3,
+      "date": "2026-08-23",
+      "home": {
+        "club": "Municipalidad de Vicente López",
+        "variant": "C",
+        "external_code": "00000337"
+      },
+      "away": {
+        "club": "S.A.G. Polvorines",
+        "variant": "D",
+        "external_code": "00000415"
+      },
+      "existing_scheduled_match_id": 153,
+      "existing_fixture_key": "planilla:c30c4379:1"
+    },
+    {
+      "tracker_entry_key": "femebal:00067199",
+      "tracker_match_id": "00067199",
+      "round": 3,
+      "date": "2026-08-23",
+      "home": {
+        "club": "S.A.P.A.",
+        "variant": null,
+        "external_code": "00000412"
+      },
+      "away": {
+        "club": "Muñiz Handball",
+        "variant": "B",
+        "external_code": "00000407"
+      },
+      "existing_scheduled_match_id": 151,
+      "existing_fixture_key": "planilla:59c228ac:1"
+    },
+    {
+      "tracker_entry_key": "femebal:00067200",
+      "tracker_match_id": "00067200",
+      "round": 3,
+      "date": "2026-08-23",
+      "home": {
+        "club": "Banfield",
+        "variant": "B",
+        "external_code": "00000360"
+      },
+      "away": {
+        "club": "Argentinos Juniors",
+        "variant": "D",
+        "external_code": "00000354"
+      },
+      "existing_scheduled_match_id": 150,
+      "existing_fixture_key": "planilla:5400cb62:1"
+    },
+    {
+      "tracker_entry_key": "femebal:00067201",
+      "tracker_match_id": "00067201",
+      "round": 3,
+      "date": "2026-08-23",
+      "home": {
+        "club": "Municipalidad de Pilar",
+        "variant": null,
+        "external_code": "00000405"
+      },
+      "away": {
+        "club": "C.S. y D. Defensores de Banfield",
+        "variant": null,
+        "external_code": "00000379"
+      },
+      "existing_scheduled_match_id": 152,
+      "existing_fixture_key": "planilla:7ab5b597:1"
+    },
+    {
+      "tracker_entry_key": "femebal:00067202",
+      "tracker_match_id": "00067202",
+      "round": 3,
+      "date": "2026-08-23",
+      "home": {
+        "club": "U.N.La.M.",
+        "variant": null,
+        "external_code": "00000424"
+      },
+      "away": {
+        "club": "Lanús",
+        "variant": "C",
+        "external_code": "00000341"
+      },
+      "existing_scheduled_match_id": 149,
+      "existing_fixture_key": "planilla:2fc5d985:1"
+    },
+    {
+      "tracker_entry_key": "femebal:00067203",
+      "tracker_match_id": "00067203",
+      "round": 3,
+      "date": "2026-08-23",
+      "home": {
+        "club": "Municipalidad de Tres de Febrero",
+        "variant": "B",
+        "external_code": "00000400"
+      },
+      "away": {
+        "club": "Defensores de Moreno",
+        "variant": null,
+        "external_code": "00000381"
+      },
+      "existing_scheduled_match_id": 154,
+      "existing_fixture_key": "planilla:cfa52ff0:1"
+    }
+  ],
+  "analysis_link_targets": [
+    {
+      "match_id": 100,
+      "tracker_match_id": "00067226",
+      "round": 6,
+      "date": "2026-09-13",
+      "home": {
+        "club": "Club Deportivo Morón",
+        "variant": null
+      },
+      "away": {
+        "club": "S.A.P.A.",
+        "variant": null
+      },
+      "action": "set Match.scheduled_match_id only; preserve analysis runs, video sources, and official snapshot"
+    },
+    {
+      "match_id": 99,
+      "tracker_match_id": "00067244",
+      "round": 9,
+      "date": "2026-10-04",
+      "home": {
+        "club": "S.A.P.A.",
+        "variant": null
+      },
+      "away": {
+        "club": "Palermo Handball",
+        "variant": null
+      },
+      "action": "set Match.scheduled_match_id only; preserve analysis runs, video sources, and official snapshot"
+    },
+    {
+      "match_id": 101,
+      "tracker_match_id": "00067259",
+      "round": 10,
+      "date": "2026-10-11",
+      "home": {
+        "club": "S.A.P.A.",
+        "variant": null
+      },
+      "away": {
+        "club": "Banfield",
+        "variant": "B"
+      },
+      "action": "set Match.scheduled_match_id only; preserve analysis runs, video sources, and official snapshot"
+    }
+  ],
+  "approval_required": [
+    "Reconcile by immutable FEMEBAL tracker match ID plus date and mapped home/away registrations before any database write.",
+    "Never replace the 22 existing ScheduledMatch rows or their planilla fixture keys.",
+    "Link existing analysis Match rows 99, 100, and 101 only after their target ScheduledMatch rows are identified.",
+    "Import tracker scores as reported only; promote to approved exclusively from reviewed official planillas."
+  ]
+}

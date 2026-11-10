@@ -7,7 +7,7 @@ import json
 from datetime import date
 from pathlib import Path, PureWindowsPath
 
-from sqlalchemy.orm import Session, joinedload, object_session
+from sqlalchemy.orm import Session, joinedload, object_session, selectinload
 from sqlalchemy.exc import IntegrityError
 
 from ..models import CompetitionTeam, FixtureImportEntry, Match, MatchSquad, OfficialSnapshot, OfficialSnapshotPlayer, Player, ScheduledMatch, StageRoster, Team, TeamRegistration, TournamentStage
@@ -106,10 +106,14 @@ class PDFService:
             FixtureImportEntry.kind == "match"
         ).options(
             joinedload(ScheduledMatch.stage).joinedload(TournamentStage.season),
+            joinedload(ScheduledMatch.round),
             joinedload(ScheduledMatch.home_registration).joinedload(TeamRegistration.competition_team).joinedload(CompetitionTeam.club),
             joinedload(ScheduledMatch.away_registration).joinedload(TeamRegistration.competition_team).joinedload(CompetitionTeam.club),
             joinedload(ScheduledMatch.analysis_match),
             joinedload(ScheduledMatch.analysis_match).joinedload(Match.official_snapshots),
+            joinedload(ScheduledMatch.analysis_match).joinedload(Match.analysis_runs),
+            joinedload(ScheduledMatch.analysis_match).joinedload(Match.video_sources),
+            selectinload(ScheduledMatch.fixture_import_entries),
         ).order_by(ScheduledMatch.scheduled_date, ScheduledMatch.id).all()
 
     @staticmethod
@@ -121,10 +125,20 @@ class PDFService:
             team = value.competition_team
             return {"id": value.id, "display_name": team.display_name, "variant": team.variant}
         snapshot = next((item for item in (fixture.analysis_match.official_snapshots if fixture.analysis_match else []) if item.is_confirmed), None)
+        evidence = next(
+            (
+                entry.raw_entry.get("evidence", {})
+                for entry in fixture.fixture_import_entries
+                if isinstance(entry.raw_entry, dict) and isinstance(entry.raw_entry.get("evidence"), dict)
+            ),
+            {},
+        )
+        analysis_match = fixture.analysis_match
         roster_ready = snapshot is not None and PDFService._roster_is_ready(db, fixture, snapshot)
         unresolved = [player for player in (snapshot.players if snapshot else []) if player.player_id is None]
         return {
             "fixture_key": fixture.fixture_key,
+            "round_number": fixture.round.round_number,
             "stage": {
                 "id": fixture.stage.id,
                 "season_year": fixture.stage.season.year,
@@ -140,10 +154,13 @@ class PDFService:
             "source_home_score": fixture.source_home_score,
             "source_away_score": fixture.source_away_score,
             "result_status": fixture.result_status,
-            "linked_match_id": fixture.analysis_match.id if fixture.analysis_match else None,
+            "linked_match_id": analysis_match.id if analysis_match else None,
             "official_snapshot_id": snapshot.id if snapshot else None,
             "is_preloaded": snapshot is not None,
-            "youtube_link": fixture.analysis_match.youtube_link or "" if fixture.analysis_match else "",
+            "youtube_link": analysis_match.youtube_link or "" if analysis_match else "",
+            "has_video": bool(analysis_match and (analysis_match.youtube_link or analysis_match.video_sources)),
+            "analysis_run_count": len(analysis_match.analysis_runs) if analysis_match else 0,
+            "referees": evidence.get("referees"),
             "roster_status": "not_confirmed" if snapshot is None else "ready" if roster_ready else "needs_identity_resolution",
             "unresolved_roster_players": len(unresolved),
         }

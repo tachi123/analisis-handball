@@ -2,6 +2,8 @@ import { Fragment, useEffect, useRef, useState, useMemo, startTransition } from 
 import { decodePublicReportCatalog, reportFileName, reportLabel, type PublicReportCatalog, type PublicReportCatalogEntry } from './catalog'
 import { decodePublicReport, type PhaseStats, type PlayerPublic, type PossessionSummary, type PublicReport } from './projection'
 import { Timeline } from './Timeline'
+import { Tournament } from './Tournament'
+import { decodePublicTournament, type PublicTournament } from './tournamentProjection'
 
 const n = (value: unknown) => typeof value === 'number' ? value : 0
 const pct = (numerator: number, denominator: number) => denominator ? `${Math.round((numerator / denominator) * 100)}%` : '—'
@@ -19,7 +21,7 @@ function sapaSide(entry: PublicReportCatalogEntry) {
   return isSapa(entry.home_team) ? 'home' : isSapa(entry.away_team) ? 'away' : null
 }
 
-function SapaLanding({ catalog, onOpen }: { catalog: PublicReportCatalog; onOpen: (key: string) => void }) {
+function SapaLanding({ catalog, onOpen, onTournament }: { catalog: PublicReportCatalog; onOpen: (key: string) => void; onTournament: () => void }) {
   const sapaReports = catalog.reports.filter((entry) => sapaSide(entry))
   const entries = sapaReports.length ? sapaReports : catalog.reports
   const complete = entries.filter((entry) => entry.summary.coverage_status === 'complete')
@@ -40,7 +42,7 @@ function SapaLanding({ catalog, onOpen }: { catalog: PublicReportCatalog; onOpen
   }
   const rival = (entry: PublicReportCatalogEntry) => sapaSide(entry) === 'home' ? entry.away_team : entry.home_team
   return <main className="report-shell home-shell" aria-labelledby="sapa-home-title">
-    <header className="hero home-hero"><p className="eyebrow">SAPA · Centro de partidos</p><h1 id="sapa-home-title">Partidos <span>analizados</span></h1><p>Resultados y métricas derivados de análisis observados. No reemplazan la tabla oficial del torneo.</p></header>
+    <header className="hero home-hero"><p className="eyebrow">SAPA · Centro de partidos</p><h1 id="sapa-home-title">Partidos <span>analizados</span></h1><p>Resultados y métricas derivados de análisis observados. No reemplazan la tabla oficial del torneo.</p><button className="home-link tournament-link" onClick={onTournament}>Ver torneo →</button></header>
     <section className="home-summary" aria-label="Resumen de partidos completos analizados">
       <article><strong>{complete.length}</strong><span>partidos completos</span></article>
       <article><strong>{perMatch(total.goals)}</strong><span>goles SAPA por partido</span></article>
@@ -269,7 +271,8 @@ export default function App() {
   const [catalog, setCatalog] = useState<PublicReportCatalog | null>(null)
   const [catalogLoaded, setCatalogLoaded] = useState(false)
   const [selectedReportKey, setSelectedReportKey] = useState<string | null>(null)
-  const [view, setView] = useState<'home' | 'report'>('home')
+  const [view, setView] = useState<'home' | 'report' | 'tournament'>('home')
+  const [tournament, setTournament] = useState<PublicTournament | null>(null)
   const [selectedBlock, setSelectedBlock] = useState<string | null>(null)
   const [playerSlug, setPlayerSlug] = useState('all')
 const [kind, setKind] = useState('all')
@@ -290,6 +293,15 @@ const [selectedIncidentRef, setSelectedIncidentRef] = useState<{ reference: stri
       })
       .catch(() => { if (active) setCatalog(null) })
       .finally(() => { if (active) setCatalogLoaded(true) })
+    return () => { active = false }
+  }, [])
+
+  useEffect(() => {
+    let active = true
+    fetch('tournament.json')
+      .then((response) => response.ok ? response.json() : Promise.reject())
+      .then((data) => { if (active) setTournament(decodePublicTournament(data)) })
+      .catch(() => { if (active) setTournament(null) })
     return () => { active = false }
   }, [])
 
@@ -327,8 +339,9 @@ const [selectedIncidentRef, setSelectedIncidentRef] = useState<{ reference: stri
   const types = useMemo(() => [...new Set(reportIncidents.map((incident) => incident.incident_type))], [reportIncidents])
   const filteredIncidents = useMemo(() => reportIncidents.filter((incident) => (playerSlug === 'all' || incident.player_slug === playerSlug) && (kind === 'all' || incident.incident_type === kind)), [reportIncidents, playerSlug, kind])
   const defaultVideoSeconds = reportIncidents.find((incident) => incident.video_seconds !== null)?.video_seconds ?? 0
+  if (view === 'tournament') return tournament ? <Tournament tournament={tournament} onBack={() => setView('home')} /> : <main className="report-status"><p role="status">Cargando torneo…</p></main>
   if (!report) return <main className="report-status"><p role="status">{message}</p></main>
-  if (catalog && catalog.reports.length > 0 && view === 'home') return <SapaLanding catalog={catalog} onOpen={selectReport} />
+  if (catalog && catalog.reports.length > 0 && view === 'home') return <SapaLanding catalog={catalog} onOpen={selectReport} onTournament={() => setView('tournament')} />
 
   const players = report.players ?? []
   const keepers = players.filter((player) => player.role === 'goalkeeper')

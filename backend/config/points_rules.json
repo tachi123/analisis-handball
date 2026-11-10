@@ -1,0 +1,10 @@
+{
+  "schema_version": "femebal-2026-permanencia-v1",
+  "win_points": 3,
+  "draw_points": 2,
+  "loss_points": 1,
+  "suspended": {
+    "winner_points": 3,
+    "loser_points": 0
+  }
+}

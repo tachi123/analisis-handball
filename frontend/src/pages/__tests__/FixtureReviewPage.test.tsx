@@ -34,6 +34,7 @@ const { navigate, useParams, confirmFixtureReview, reviewFixturePDF } = mocks
 const baseFixturePreview: FixturePreviewResult = {
   fixture: {
     fixture_key: 'fixture-1',
+    round_number: 1,
     stage: { id: 1, season_year: 2026, name: 'Apertura', category: 'Senior', division: 'A', gender: 'F' },
     home_registration: { id: 1, display_name: 'Ci.De.Co. B', variant: 'B' },
     away_registration: { id: 2, display_name: 'S.A.P.A.', variant: null },
@@ -48,6 +49,9 @@ const baseFixturePreview: FixturePreviewResult = {
     official_snapshot_id: 'snapshot',
     is_preloaded: true,
     youtube_link: '',
+    has_video: false,
+    analysis_run_count: 0,
+    referees: null,
     roster_status: 'needs_identity_resolution',
     unresolved_roster_players: 2,
   },

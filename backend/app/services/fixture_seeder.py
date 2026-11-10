@@ -134,6 +134,8 @@ def _apply_fixture(db: Session, fixture: dict[str, Any], source_hash: str) -> Im
             fixture_key = entry.get("fixture_key") or _fixture_key(stage.id, round_.id, home.id, away.id, entry["entry_key"])
             match = db.query(ScheduledMatch).filter_by(fixture_key=fixture_key).first()
             if not match:
+                match = _matching_scheduled_match(db, stage.id, round_.id, home.id, away.id)
+            if not match:
                 match = ScheduledMatch(stage_id=stage.id, round_id=round_.id, home_registration_id=home.id, away_registration_id=away.id, match_number_label=entry["entry_key"], fixture_key=fixture_key)
                 db.add(match)
                 created += 1
@@ -142,6 +144,31 @@ def _apply_fixture(db: Session, fixture: dict[str, Any], source_hash: str) -> Im
             _set_schedule(match, entry)
             db.add(FixtureImportEntry(fixture_import=audit, entry_key=entry["entry_key"], kind="match", raw_entry=entry, scheduled_match=match))
     return ImportSummary(created=created, updated=updated, byes=byes)
+
+
+def _matching_scheduled_match(
+    db: Session,
+    stage_id: int,
+    round_id: int,
+    home_registration_id: int,
+    away_registration_id: int,
+) -> ScheduledMatch | None:
+    """Find a prior import's immutable fixture without trusting a new source key.
+
+    A source-specific fixture key must never replace a planilla-backed key. The
+    directional registrations and round provide the stable identity for a
+    correction or a second audited source. More than one candidate is unsafe
+    and requires review instead of guessing.
+    """
+    matches = db.query(ScheduledMatch).filter_by(
+        stage_id=stage_id,
+        round_id=round_id,
+        home_registration_id=home_registration_id,
+        away_registration_id=away_registration_id,
+    ).all()
+    if len(matches) > 1:
+        raise FixtureValidationError("multiple scheduled matches share the same round and registrations")
+    return matches[0] if matches else None
 
 
 def _registration(db: Session, stage: TournamentStage, team: dict[str, Any]) -> TeamRegistration:

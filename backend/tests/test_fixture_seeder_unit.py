@@ -1,6 +1,6 @@
 import pytest
 
-from app.models import Club, FixtureImport, FixtureImportEntry, ScheduledMatch
+from app.models import Club, FixtureImport, FixtureImportEntry, Match, ScheduledMatch
 from app.services.fixture_seeder import FixtureValidationError, import_fixture, validate_fixture
 
 
@@ -51,3 +51,40 @@ def test_import_honors_explicit_deterministic_fixture_key(session):
     import_fixture(session, payload)
 
     assert session.query(ScheduledMatch).one().fixture_key == "planilla:deadbeef:1"
+
+
+def test_tracker_import_reuses_a_matching_existing_fixture_without_replacing_its_key(session):
+    existing = fixture()
+    existing["source"]["captured_at"] = "2026-08-24"
+    existing_entry = existing["rounds"][0]["entries"][0]
+    existing_entry.update({
+        "entry_key": "planilla:deadbeef:1",
+        "fixture_key": "planilla:deadbeef:1",
+        "venue": "Official sheet venue",
+    })
+    import_fixture(session, existing)
+    scheduled = session.query(ScheduledMatch).one()
+    analysis_match = Match(scheduled_match_id=scheduled.id, origin="fixture")
+    session.add(analysis_match)
+    session.flush()
+
+    tracker = fixture({"home": 28, "away": 24, "status": "reported"})
+    tracker["source"]["label"] = "FEMEBAL TournamentTracker"
+    tracker["source"]["captured_at"] = "2026-08-25"
+    tracker_entry = tracker["rounds"][0]["entries"][0]
+    tracker_entry.update({
+        "entry_key": "femebal:00067180",
+        "fixture_key": "femebal:00067180",
+        "venue": "Tracker venue",
+    })
+
+    summary = import_fixture(session, tracker)
+
+    assert summary.created == 0 and summary.updated == 1
+    assert session.query(ScheduledMatch).count() == 1
+    scheduled = session.query(ScheduledMatch).one()
+    assert scheduled.fixture_key == "planilla:deadbeef:1"
+    assert scheduled.match_number_label == "planilla:deadbeef:1"
+    assert (scheduled.venue, scheduled.source_home_score, scheduled.source_away_score) == ("Tracker venue", 28, 24)
+    assert session.query(FixtureImportEntry).filter_by(scheduled_match_id=scheduled.id).count() == 2
+    assert session.get(Match, analysis_match.id).scheduled_match_id == scheduled.id
