@@ -66,6 +66,7 @@
 .diff-positive { color: #16a34a; }
 .diff-negative { color: #dc2626; }
 .scorers-goals { font-weight: 700; color: #0f172a; }
+.scorer-club-filter { display: grid; gap: .25rem; color: #475569; font-size: .78rem; font-weight: 700; }.scorer-club-filter select { min-width: 190px; padding: .45rem .55rem; border: 1px solid #cbd5e1; border-radius: 8px; background: #fff; color: #0f172a; font: inherit; }.table-empty { margin: 1rem 0 0; color: #64748b; }
 
 .sapa-scorers { margin-top: 1rem; padding: 1rem; background: #eff6ff; border-radius: 12px; }
 .sapa-scorers ul { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.5rem; margin: 0.5rem 0 0; padding: 0; }

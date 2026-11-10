@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import type { PublicTournament } from './tournamentProjection'
 
 const normalize = (name: string) => name.normalize('NFD').replace(/[\u0300-\u036f.\s]/g, '').toLowerCase()
@@ -9,6 +10,9 @@ export function Tournament({ tournament, onBack }: { tournament: PublicTournamen
   const sapaClub = tournament.clubs.find((row) => isSapa(row.club))
   const topScorers = tournament.scorers.slice(0, 20)
   const sapaScorers = tournament.scorers.filter((row) => isSapa(row.club)).slice(0, 8)
+  const [scorerClub, setScorerClub] = useState('all')
+  const scorerClubs = [...new Set(tournament.scorers.map((row) => row.club))].sort((left, right) => left.localeCompare(right, 'es'))
+  const visibleScorers = scorerClub === 'all' ? topScorers : tournament.scorers.filter((row) => row.club === scorerClub)
   const forecast = tournament.forecast
   const contenders = forecast?.teams.filter((team) => team.champion_probability > 0) ?? []
   const forecastRounds = [...new Set(forecast?.fixtures.map((fixture) => fixture.round) ?? [])].sort((left, right) => left - right)
@@ -107,7 +111,7 @@ export function Tournament({ tournament, onBack }: { tournament: PublicTournamen
             <p className="eyebrow">Goleadores</p>
             <h2>Máximos artilleros</h2>
           </div>
-          <small>Top {topScorers.length} del torneo · goles por planilla oficial.</small>
+          <label className="scorer-club-filter">Club <select aria-label="Filtrar goleadores por club" value={scorerClub} onChange={(event) => setScorerClub(event.target.value)}><option value="all">Top del torneo</option>{scorerClubs.map((club) => <option key={club} value={club}>{club}</option>)}</select></label>
         </div>
         <div className="table-wrap">
           <table className="player-table scorers-table">
@@ -122,7 +126,7 @@ export function Tournament({ tournament, onBack }: { tournament: PublicTournamen
               </tr>
             </thead>
             <tbody>
-              {topScorers.map((row, index) => (
+              {visibleScorers.map((row, index) => (
                 <tr key={`${row.name}-${row.club}`} className={isSapa(row.club) ? 'sapa-row' : ''}>
                   <td>{index + 1}</td>
                   <td><strong>{row.name}</strong></td>
@@ -135,6 +139,7 @@ export function Tournament({ tournament, onBack }: { tournament: PublicTournamen
             </tbody>
           </table>
         </div>
+        {visibleScorers.length === 0 && <p className="table-empty">No hay goleadores registrados para este club.</p>}
         {sapaScorers.length > 0 && (
           <div className="sapa-scorers">
             <p className="eyebrow">Goleadores de SAPA</p>
