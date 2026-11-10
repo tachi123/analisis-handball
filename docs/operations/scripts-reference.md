@@ -9,6 +9,7 @@ Use scripts for repeatable imports and static report generation. Do not use a sc
 | `export_report.py` | Export one active match into public-safe JSON and update a catalog directory | `PUBLIC_REPORT_MATCH_ID`, `PUBLIC_REPORT_OUTPUT`, `PUBLIC_REPORT_CATALOG_OUTPUT` |
 | `export_public_report_catalog.py` | Export one or more active matches into the same catalog directory | `PUBLIC_REPORT_MATCH_IDS` plus the output variables |
 | `set_official_sheet_publication.py` | Explicitly approve or revoke confirmed official-sheet PDFs for public export | `--publish` or `--unpublish`, followed by match IDs |
+| `export_public_tournament.py` | Export standings, scorer/club aggregates, pending fixture probabilities, and championship estimates for the public tournament view | `PUBLIC_REPORT_OUTPUT` (optional) |
 
 ### One match
 
@@ -34,6 +35,23 @@ docker exec "analisis-handball-backend-1" python /app/scripts/set_official_sheet
 Approval is per confirmed snapshot and defaults to private. The exporter verifies
 the stored source SHA-256 before copying an approved PDF to the derived public
 `planillas/` directory. Run the catalog export after publishing or revoking.
+
+### Tournament report and forecast
+
+After loading or reconciling a tournament planilla, regenerate the static
+tournament artifact. This is a deliberate operational step; loading a planilla
+does not publish or deploy anything automatically.
+
+```powershell
+docker exec -e PUBLIC_REPORT_OUTPUT=/tmp/tournament.json "analisis-handball-backend-1" python /app/scripts/export_public_tournament.py
+docker cp "analisis-handball-backend-1:/tmp/tournament.json" "reports/public/tournament.json"
+```
+
+The export derives current standings and the forecast together. Review the
+coverage label and public-safe fields, then run the report validation commands
+before a requested commit, push, or deployment. See
+[`public-tournament-forecast.md`](../architecture/public-tournament-forecast.md)
+for methodology and uncertainty rules.
 
 ## Import and fixture scripts
 

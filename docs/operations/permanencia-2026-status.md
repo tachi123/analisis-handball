@@ -8,7 +8,7 @@
 Torneo FEMEBAL Permanencia 2026 (stage `9`) completo hasta la fecha 13: fixture,
 96 planillas oficiales, 334 jugadores reconciliados, tabla de posiciones con
 regla de puntos `3/2/1` (+ suspendido `3/0`), estadísticas por jugador/club, y
-reporte público del torneo centrado en SAPA.
+reporte público centrado en SAPA con proyección estadística del cierre.
 
 ## Hecho
 
@@ -21,7 +21,7 @@ reporte público del torneo centrado en SAPA.
 | Jugadores/clubes | 334 jugadores, 0 pendientes. Vincular por nombre normalizado + club; el dorsal puede variar. |
 | Posiciones | Derivadas on-the-fly, con columna CP. Regla en `backend/config/points_rules.json`. |
 | Estadísticas | Por jugador y por club, solo planillas `is_confirmed=True`. |
-| Reporte público | `reports/public/tournament.json` + vista `Torneo` (fondo claro, SAPA resaltado). |
+| Reporte público | `reports/public/tournament.json` (`tournament-v2`) + vista `Torneo`: SAPA, tabla, goleadores por club y proyección de partidos/campeonato. |
 
 ## Pendiente (corto)
 
@@ -29,7 +29,7 @@ reporte público del torneo centrado en SAPA.
    reemplaza el provisorio con `set_reported_results` → `load_femebal_reconciled_planillas`.
 2. **Fechas 14–15** cuando se jueguen: bajar PDF, `discover_planillas` →
    `load_femebal_reconciled_planillas` → `reconcile_official_planilla_players`.
-3. **Pulido visual del reporte público** (validar en navegador con `npm --prefix reports run dev`).
+3. **Reexportar torneo tras cada nueva planilla**: ejecutar `export_public_tournament.py`, copiar `tournament.json` y validar el build. Esto recalcula tabla y proyección; no ocurre automáticamente.
 4. **Commit/push** (lo hace el usuario; nada commiteado aún).
 
 ## Reglas duras (atajos)
@@ -63,6 +63,7 @@ reporte público del torneo centrado en SAPA.
 | Regenerar manifest de PDF | `backend/scripts/discover_planillas.py` (host) |
 | Posiciones (derivación) | `backend/app/services/standings_service.py` + `backend/config/points_rules.json` |
 | Estadísticas jugador/club | `backend/app/services/statistics_service.py` |
+| Modelo de probabilidades del torneo | `backend/app/services/tournament_forecast_service.py` |
 | Exportar reporte público del torneo | `backend/scripts/export_public_tournament.py` |
 
 ## Validación
@@ -85,5 +86,6 @@ resolución de path (preexistente, no es regresión).
 - Arquitectura general: `docs/architecture/system-overview.md`
 - Modelo de datos: `docs/architecture/data-model.md`
 - Reporte público (fase 1): `docs/architecture/public-report-phase-1.md`
+- Proyección pública de torneo: `docs/architecture/public-tournament-forecast.md`
 - Flujo de export: `docs/operations/match-report-workflow.md`
 - Referencia de scripts: `docs/operations/scripts-reference.md`
