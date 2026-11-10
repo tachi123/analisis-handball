@@ -79,6 +79,16 @@ See [docs/operations/match-report-workflow.md](docs/operations/match-report-work
 
 See [docs/architecture/public-report-phase-1.md](docs/architecture/public-report-phase-1.md).
 
+## Permanencia 2026 tournament
+
+A third product surface: the authenticated tournament hub plus a privacy-safe public tournament view, both derived from confirmed official planillas (not from video analysis).
+
+- Private hub: `/permanencia` shows fixture, results, standings (with CP column), and player/club statistics. Points rule is `3/2/1` and suspended `3/0`, configured in `backend/config/points_rules.json`.
+- Data pipeline (all idempotent, `--dry-run`/`--execute`): reconcile PDFs by tracker URL → `load_femebal_reconciled_planillas.py`; results without planilla → `load_reported_results.py` / `set_reported_results.py`; player linking → `reconcile_official_planilla_players.py`; suspended matches → `correct_suspended_matches.py`.
+- Public tournament view: `backend/scripts/export_public_tournament.py` writes `reports/public/tournament.json`; rendered by `reports/src/Tournament.tsx` (allowlist decoder `reports/src/tournamentProjection.ts`).
+
+For current state and next steps, read [docs/operations/permanencia-2026-status.md](docs/operations/permanencia-2026-status.md) first.
+
 ## Validation
 
 ```powershell
@@ -107,4 +117,9 @@ docker exec "analisis-handball-backend-1" pytest -q tests/test_canonical_analysi
 | Public export | `backend/scripts/export_report.py` |
 | Multi-match catalog export | `backend/scripts/export_public_report_catalog.py` |
 | Public-sheet approval | `backend/scripts/set_official_sheet_publication.py` |
+| Permanencia hub | `frontend/src/pages/PermanenciaHubPage.tsx` |
+| Standings / points rule | `backend/app/services/standings_service.py`, `backend/config/points_rules.json` |
+| Player/club statistics | `backend/app/services/statistics_service.py` |
+| Planilla reconciliation | `backend/app/services/femebal_planilla_reconciliation_service.py` |
+| Public tournament export/view | `backend/scripts/export_public_tournament.py`, `reports/src/Tournament.tsx` |
 | Pages workflow | `.github/workflows/deploy-frontend.yml` |
