@@ -57,8 +57,10 @@
 .tournament-shell .table-wrap { border-radius: 12px; }
 .tournament-shell table.player-table th { color: #64748b; }
 .tournament-shell table.player-table td { color: #334155; border-color: #eef2f7; }
-.sapa-row td { background: #eff6ff; font-weight: 600; }
-.sapa-row td.standings-club strong { color: #2563eb; }
+.tournament-shell table.player-table td strong,
+.tournament-shell table.player-table td b { color: #0f172a; }
+.tournament-shell .sapa-row td { background: #eff6ff; font-weight: 600; }
+.tournament-shell .sapa-row td.standings-club strong { color: #2563eb; }
 .standings-pos, .standings-points { font-weight: 700; }
 .standings-points { color: #2563eb; }
 .diff-positive { color: #16a34a; }
