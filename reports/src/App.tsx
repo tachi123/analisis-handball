@@ -21,7 +21,7 @@ function sapaSide(entry: PublicReportCatalogEntry) {
   return isSapa(entry.home_team) ? 'home' : isSapa(entry.away_team) ? 'away' : null
 }
 
-function SapaLanding({ catalog, onOpen, onTournament }: { catalog: PublicReportCatalog; onOpen: (key: string) => void; onTournament: () => void }) {
+function SapaLanding({ catalog, tournament, onOpen, onTournament }: { catalog: PublicReportCatalog; tournament: PublicTournament | null; onOpen: (key: string) => void; onTournament: () => void }) {
   const sapaReports = catalog.reports.filter((entry) => sapaSide(entry))
   const entries = sapaReports.length ? sapaReports : catalog.reports
   const complete = entries.filter((entry) => entry.summary.coverage_status === 'complete')
@@ -41,8 +41,11 @@ function SapaLanding({ catalog, onOpen, onTournament }: { catalog: PublicReportC
     return `${ours}–${theirs}`
   }
   const rival = (entry: PublicReportCatalogEntry) => sapaSide(entry) === 'home' ? entry.away_team : entry.home_team
+  const standing = tournament?.standings.find((row) => isSapa(row.club))
+  const titleChance = tournament?.forecast?.teams.find((row) => isSapa(row.club))?.champion_probability
   return <main className="report-shell home-shell" aria-labelledby="sapa-home-title">
     <header className="hero home-hero"><p className="eyebrow">SAPA · Centro de partidos</p><h1 id="sapa-home-title">Partidos <span>analizados</span></h1><p>Resultados y métricas derivados de análisis observados. No reemplazan la tabla oficial del torneo.</p><button className="home-link tournament-link" onClick={onTournament}>Ver torneo →</button></header>
+    {standing && <section className="sapa-tournament-bridge" aria-label="SAPA en el torneo"><div><p className="eyebrow">SAPA en el torneo</p><strong>#{standing.pos}</strong><span>posición actual · {standing.points} puntos</span></div><div><strong>{titleChance === undefined ? '—' : `${Math.round(titleChance * 100)}%`}</strong><span>probabilidad estimada de campeón</span></div><button onClick={onTournament}>Ver tabla, rivales y proyección →</button></section>}
     <section className="home-summary" aria-label="Resumen de partidos completos analizados">
       <article><strong>{complete.length}</strong><span>partidos completos</span></article>
       <article><strong>{perMatch(total.goals)}</strong><span>goles SAPA por partido</span></article>
@@ -341,7 +344,7 @@ const [selectedIncidentRef, setSelectedIncidentRef] = useState<{ reference: stri
   const defaultVideoSeconds = reportIncidents.find((incident) => incident.video_seconds !== null)?.video_seconds ?? 0
   if (view === 'tournament') return tournament ? <Tournament tournament={tournament} onBack={() => setView('home')} /> : <main className="report-status"><p role="status">Cargando torneo…</p></main>
   if (!report) return <main className="report-status"><p role="status">{message}</p></main>
-  if (catalog && catalog.reports.length > 0 && view === 'home') return <SapaLanding catalog={catalog} onOpen={selectReport} onTournament={() => setView('tournament')} />
+  if (catalog && catalog.reports.length > 0 && view === 'home') return <SapaLanding catalog={catalog} tournament={tournament} onOpen={selectReport} onTournament={() => setView('tournament')} />
 
   const players = report.players ?? []
   const keepers = players.filter((player) => player.role === 'goalkeeper')

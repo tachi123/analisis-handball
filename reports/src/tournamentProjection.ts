@@ -39,8 +39,15 @@ export type TournamentClub = {
   players: number
 }
 
+export type TournamentForecast = {
+  simulations: number
+  methodology: string
+  teams: Array<{ club: string; champion_probability: number }>
+  fixtures: Array<{ round: number; date: string | null; home: string; away: string; home_win_probability: number; draw_probability: number; away_win_probability: number }>
+}
+
 export type PublicTournament = {
-  schema_version: 'tournament-v1'
+  schema_version: 'tournament-v1' | 'tournament-v2'
   tournament: string
   season: number
   updated_at: string
@@ -53,6 +60,7 @@ export type PublicTournament = {
   standings: TournamentStanding[]
   scorers: TournamentScorer[]
   clubs: TournamentClub[]
+  forecast?: TournamentForecast
 }
 
 const forbidden = /^(?:private|raw|note|database|credential|api|token|url|id|event|analysis|operational)$/i
@@ -79,8 +87,9 @@ function assertFields(record: Record<string, unknown>, allowed: string[], label:
 
 export function decodePublicTournament(value: unknown): PublicTournament {
   if (!isRecord(value)) throw new Error('The public tournament is not a JSON object.')
-  assertFields(value, ['schema_version', 'tournament', 'season', 'updated_at', 'coverage', 'standings', 'scorers', 'clubs'], 'root')
-  if (value.schema_version !== 'tournament-v1') throw new Error('Unsupported public tournament version.')
+  assertFields(value, ['schema_version', 'tournament', 'season', 'updated_at', 'coverage', 'standings', 'scorers', 'clubs', 'forecast'], 'root')
+  if (value.schema_version !== 'tournament-v1' && value.schema_version !== 'tournament-v2') throw new Error('Unsupported public tournament version.')
+  const schemaVersion = value.schema_version
   const tournament = assertString(value.tournament, 'tournament name')
   const season = assertNumber(value.season, 'season')
   const updated_at = assertString(value.updated_at, 'updated_at')
@@ -146,5 +155,27 @@ export function decodePublicTournament(value: unknown): PublicTournament {
     }
   })
 
-  return { schema_version: 'tournament-v1', tournament, season, updated_at, coverage, standings, scorers, clubs }
+  let forecast: TournamentForecast | undefined
+  if (value.forecast !== undefined) {
+    if (!isRecord(value.forecast)) throw new Error('The public tournament has invalid forecast data.')
+    assertFields(value.forecast, ['simulations', 'methodology', 'teams', 'fixtures'], 'forecast')
+    if (!Array.isArray(value.forecast.teams) || !Array.isArray(value.forecast.fixtures)) throw new Error('The public tournament has invalid forecast lists.')
+    forecast = {
+      simulations: assertNumber(value.forecast.simulations, 'forecast simulations'),
+      methodology: assertString(value.forecast.methodology, 'forecast methodology'),
+      teams: value.forecast.teams.map((item) => {
+        if (!isRecord(item)) throw new Error('The public tournament has an invalid forecast team.')
+        assertFields(item, ['club', 'champion_probability'], 'forecast team')
+        return { club: assertString(item.club, 'forecast club'), champion_probability: assertNumber(item.champion_probability, 'champion probability') }
+      }),
+      fixtures: value.forecast.fixtures.map((item) => {
+        if (!isRecord(item)) throw new Error('The public tournament has an invalid forecast fixture.')
+        assertFields(item, ['round', 'date', 'home', 'away', 'home_win_probability', 'draw_probability', 'away_win_probability'], 'forecast fixture')
+        if (item.date !== null && typeof item.date !== 'string') throw new Error('The public tournament has an invalid forecast fixture date.')
+        return { round: assertNumber(item.round, 'forecast round'), date: item.date, home: assertString(item.home, 'forecast home'), away: assertString(item.away, 'forecast away'), home_win_probability: assertNumber(item.home_win_probability, 'forecast home probability'), draw_probability: assertNumber(item.draw_probability, 'forecast draw probability'), away_win_probability: assertNumber(item.away_win_probability, 'forecast away probability') }
+      }),
+    }
+  }
+
+  return { schema_version: schemaVersion, tournament, season, updated_at, coverage, standings, scorers, clubs, forecast }
 }

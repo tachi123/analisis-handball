@@ -1,5 +1,5 @@
 {
-  "schema_version": "tournament-v1",
+  "schema_version": "tournament-v2",
   "tournament": "Torneo Permanencia 2026 3ªM",
   "season": 2026,
   "updated_at": "2026-11-10",
@@ -4056,5 +4056,221 @@
       "blue": 0,
       "players": 16
     }
-  ]
+  ],
+  "forecast": {
+    "simulations": 20000,
+    "methodology": "Modelo Poisson regularizado de ataque/defensa, ponderado por recencia y localía, ajustado sobre resultados del torneo; simula marcadores, fixture y desempates reales. Es una estimación estadística, no una cuota ni una garantía.",
+    "teams": [
+      {
+        "club": "Lanús C",
+        "champion_probability": 0.4636
+      },
+      {
+        "club": "Palermo Handball",
+        "champion_probability": 0.4034
+      },
+      {
+        "club": "Municipalidad de Vicente López C",
+        "champion_probability": 0.1104
+      },
+      {
+        "club": "S.A.P.A.",
+        "champion_probability": 0.0226
+      },
+      {
+        "club": "Argentinos Juniors D",
+        "champion_probability": 0.0
+      },
+      {
+        "club": "Banfield B",
+        "champion_probability": 0.0
+      },
+      {
+        "club": "C.S. y D. Defensores de Banfield",
+        "champion_probability": 0.0
+      },
+      {
+        "club": "Club Deportivo Morón",
+        "champion_probability": 0.0
+      },
+      {
+        "club": "Defensores de Moreno",
+        "champion_probability": 0.0
+      },
+      {
+        "club": "Ituzaingó",
+        "champion_probability": 0.0
+      },
+      {
+        "club": "Municipalidad de Pilar",
+        "champion_probability": 0.0
+      },
+      {
+        "club": "Municipalidad de San Martín (Ce.M.E.F)",
+        "champion_probability": 0.0
+      },
+      {
+        "club": "Municipalidad de Tres de Febrero B",
+        "champion_probability": 0.0
+      },
+      {
+        "club": "Muñiz Handball B",
+        "champion_probability": 0.0
+      },
+      {
+        "club": "S.A.G. Polvorines D",
+        "champion_probability": 0.0
+      },
+      {
+        "club": "U.N.La.M.",
+        "champion_probability": 0.0
+      }
+    ],
+    "fixtures": [
+      {
+        "round": 14,
+        "date": "2026-11-15",
+        "home": "Palermo Handball",
+        "away": "S.A.G. Polvorines D",
+        "home_win_probability": 0.7405,
+        "draw_probability": 0.0445,
+        "away_win_probability": 0.215
+      },
+      {
+        "round": 14,
+        "date": "2026-11-15",
+        "home": "Ituzaingó",
+        "away": "Muñiz Handball B",
+        "home_win_probability": 0.3557,
+        "draw_probability": 0.0547,
+        "away_win_probability": 0.5896
+      },
+      {
+        "round": 14,
+        "date": "2026-11-15",
+        "home": "Club Deportivo Morón",
+        "away": "Argentinos Juniors D",
+        "home_win_probability": 0.6538,
+        "draw_probability": 0.0494,
+        "away_win_probability": 0.2968
+      },
+      {
+        "round": 14,
+        "date": "2026-11-15",
+        "home": "Municipalidad de San Martín (Ce.M.E.F)",
+        "away": "C.S. y D. Defensores de Banfield",
+        "home_win_probability": 0.5257,
+        "draw_probability": 0.0576,
+        "away_win_probability": 0.4167
+      },
+      {
+        "round": 14,
+        "date": "2026-11-15",
+        "home": "Municipalidad de Vicente López C",
+        "away": "Lanús C",
+        "home_win_probability": 0.5071,
+        "draw_probability": 0.0504,
+        "away_win_probability": 0.4425
+      },
+      {
+        "round": 14,
+        "date": "2026-11-15",
+        "home": "S.A.P.A.",
+        "away": "Defensores de Moreno",
+        "home_win_probability": 0.9305,
+        "draw_probability": 0.0163,
+        "away_win_probability": 0.0533
+      },
+      {
+        "round": 14,
+        "date": "2026-11-15",
+        "home": "Banfield B",
+        "away": "Municipalidad de Tres de Febrero B",
+        "home_win_probability": 0.703,
+        "draw_probability": 0.0461,
+        "away_win_probability": 0.2509
+      },
+      {
+        "round": 14,
+        "date": "2026-11-15",
+        "home": "Municipalidad de Pilar",
+        "away": "U.N.La.M.",
+        "home_win_probability": 0.805,
+        "draw_probability": 0.0411,
+        "away_win_probability": 0.1539
+      },
+      {
+        "round": 15,
+        "date": "2026-11-22",
+        "home": "U.N.La.M.",
+        "away": "Palermo Handball",
+        "home_win_probability": 0.1742,
+        "draw_probability": 0.0423,
+        "away_win_probability": 0.7835
+      },
+      {
+        "round": 15,
+        "date": "2026-11-22",
+        "home": "Municipalidad de Tres de Febrero B",
+        "away": "Municipalidad de Pilar",
+        "home_win_probability": 0.5786,
+        "draw_probability": 0.058,
+        "away_win_probability": 0.3634
+      },
+      {
+        "round": 15,
+        "date": "2026-11-22",
+        "home": "Defensores de Moreno",
+        "away": "Banfield B",
+        "home_win_probability": 0.1681,
+        "draw_probability": 0.0363,
+        "away_win_probability": 0.7956
+      },
+      {
+        "round": 15,
+        "date": "2026-11-22",
+        "home": "Lanús C",
+        "away": "S.A.P.A.",
+        "home_win_probability": 0.7302,
+        "draw_probability": 0.0416,
+        "away_win_probability": 0.2282
+      },
+      {
+        "round": 15,
+        "date": "2026-11-22",
+        "home": "C.S. y D. Defensores de Banfield",
+        "away": "Municipalidad de Vicente López C",
+        "home_win_probability": 0.4991,
+        "draw_probability": 0.0519,
+        "away_win_probability": 0.449
+      },
+      {
+        "round": 15,
+        "date": "2026-11-22",
+        "home": "Argentinos Juniors D",
+        "away": "Municipalidad de San Martín (Ce.M.E.F)",
+        "home_win_probability": 0.5445,
+        "draw_probability": 0.0591,
+        "away_win_probability": 0.3965
+      },
+      {
+        "round": 15,
+        "date": "2026-11-22",
+        "home": "Muñiz Handball B",
+        "away": "Club Deportivo Morón",
+        "home_win_probability": 0.7496,
+        "draw_probability": 0.0427,
+        "away_win_probability": 0.2077
+      },
+      {
+        "round": 15,
+        "date": "2026-11-22",
+        "home": "S.A.G. Polvorines D",
+        "away": "Ituzaingó",
+        "home_win_probability": 0.8361,
+        "draw_probability": 0.0318,
+        "away_win_probability": 0.1321
+      }
+    ]
+  }
 }

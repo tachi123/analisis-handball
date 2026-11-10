@@ -39,4 +39,18 @@ describe('decodePublicTournament', () => {
     const poisoned = { ...valid, database: 'postgres' }
     expect(() => decodePublicTournament(poisoned)).toThrow(/restricted field/)
   })
+
+  it('decodes the allowlisted forecast in tournament-v2', () => {
+    const projected = {
+      ...valid,
+      schema_version: 'tournament-v2',
+      forecast: {
+        simulations: 20000,
+        methodology: 'Estimate only.',
+        teams: [{ club: 'S.A.P.A.', champion_probability: 0.18 }],
+        fixtures: [{ round: 14, date: '2026-11-14', home: 'S.A.P.A.', away: 'Lanús C', home_win_probability: 0.4, draw_probability: 0.1, away_win_probability: 0.5 }],
+      },
+    }
+    expect(decodePublicTournament(projected).forecast?.fixtures[0].home).toBe('S.A.P.A.')
+  })
 })

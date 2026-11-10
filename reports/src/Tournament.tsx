@@ -2,12 +2,17 @@ import type { PublicTournament } from './tournamentProjection'
 
 const normalize = (name: string) => name.normalize('NFD').replace(/[\u0300-\u036f.\s]/g, '').toLowerCase()
 const isSapa = (name: string) => normalize(name) === 'sapa'
+const percent = (value: number) => value > 0 && value < 0.001 ? '<0,1%' : `${Math.round(value * 100)}%`
 
 export function Tournament({ tournament, onBack }: { tournament: PublicTournament; onBack: () => void }) {
   const sapa = tournament.standings.find((row) => isSapa(row.club))
   const sapaClub = tournament.clubs.find((row) => isSapa(row.club))
   const topScorers = tournament.scorers.slice(0, 20)
   const sapaScorers = tournament.scorers.filter((row) => isSapa(row.club)).slice(0, 8)
+  const forecast = tournament.forecast
+  const contenders = forecast?.teams.filter((team) => team.champion_probability > 0) ?? []
+  const forecastRounds = [...new Set(forecast?.fixtures.map((fixture) => fixture.round) ?? [])].sort((left, right) => left - right)
+  const upcomingSapa = forecast?.fixtures.filter((fixture) => isSapa(fixture.home) || isSapa(fixture.away)) ?? []
 
   return (
     <main className="report-shell tournament-shell" aria-labelledby="tournament-title">
@@ -34,6 +39,21 @@ export function Tournament({ tournament, onBack }: { tournament: PublicTournamen
           </div>
         </section>
       )}
+
+      {forecast && <section className="forecast-dashboard" aria-labelledby="forecast-title">
+        <div className="section-heading"><div><p className="eyebrow">Proyección estadística</p><h2 id="forecast-title">Camino al campeonato</h2></div><small>{forecast.simulations.toLocaleString('es-AR')} simulaciones del fixture pendiente.</small></div>
+        <div className="forecast-grid">
+          <article className="championship-card">
+            <p>Probabilidad de SAPA</p>
+            <strong>{percent(forecast.teams.find((team) => isSapa(team.club))?.champion_probability ?? 0)}</strong>
+            <span>de terminar campeón</span>
+          </article>
+          <article className="contenders-card"><p>Equipos con chances simuladas</p><strong>{contenders.length}</strong><span>aspirantes al campeonato</span></article>
+        </div>
+        <div className="forecast-table-wrap"><table className="forecast-table"><thead><tr><th>Equipo</th><th>Campeón</th>{forecastRounds.map((round) => <th key={round}>Fecha {round}</th>)}</tr></thead><tbody>{contenders.map((team) => <tr key={team.club} className={isSapa(team.club) ? 'sapa-forecast-row' : ''}><td><strong>{team.club}</strong></td><td className="forecast-champion"><strong>{percent(team.champion_probability)}</strong></td>{forecastRounds.map((round) => { const fixture = forecast.fixtures.find((item) => item.round === round && (item.home === team.club || item.away === team.club)); if (!fixture) return <td key={round}>—</td>; const home = fixture.home === team.club; const win = home ? fixture.home_win_probability : fixture.away_win_probability; const loss = home ? fixture.away_win_probability : fixture.home_win_probability; const rival = home ? fixture.away : fixture.home; return <td key={round} className="forecast-match"><strong>{home ? 'vs' : '@'} {rival}</strong><span><b>{percent(win)}</b> G · {percent(fixture.draw_probability)} E · {percent(loss)} P</span></td> })}</tr>)}</tbody></table></div>
+        {upcomingSapa.length > 0 && <div className="forecast-fixtures"><p className="eyebrow">Próximos partidos de SAPA</p>{upcomingSapa.map((fixture) => { const sapaHome = isSapa(fixture.home); const win = sapaHome ? fixture.home_win_probability : fixture.away_win_probability; const loss = sapaHome ? fixture.away_win_probability : fixture.home_win_probability; const rival = sapaHome ? fixture.away : fixture.home; return <article key={`${fixture.round}-${fixture.home}-${fixture.away}`}><div><strong>Fecha {fixture.round} · {sapaHome ? 'SAPA vs' : 'vs'} {rival}</strong><span>{fixture.date ?? 'Fecha a confirmar'}</span></div><div className="outcome-probabilities"><span><b>{percent(win)}</b> gana</span><span><b>{percent(fixture.draw_probability)}</b> empata</span><span><b>{percent(loss)}</b> pierde</span></div></article> })}</div>}
+        <details className="forecast-method"><summary>Cómo leer esta proyección</summary><p>{forecast.methodology} Usa la regla vigente de puntos y los desempates por diferencia de gol y goles a favor. Los resultados informados sin planilla pueden cambiar cuando se confirme la planilla oficial.</p></details>
+      </section>}
 
       <section className="dashboard-section">
         <div className="section-heading">

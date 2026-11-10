@@ -70,8 +70,29 @@
 .sapa-scorers li { display: flex; justify-content: space-between; gap: 0.5rem; background: #fff; border-radius: 8px; padding: 0.55rem 0.7rem; }
 .sapa-scorers li span { color: #64748b; }
 
+.forecast-dashboard { margin: 1.25rem 0; padding: 1.25rem; background: linear-gradient(135deg, #0f2b52, #1d4e89); border-radius: 14px; color: #f8fafc; }
+.forecast-dashboard .eyebrow, .forecast-dashboard .section-heading h2, .forecast-dashboard .section-heading small { color: inherit; }
+.forecast-dashboard .section-heading small { opacity: .76; }
+.forecast-grid { display: grid; grid-template-columns: minmax(190px, .8fr) minmax(240px, 1.4fr); gap: 1rem; margin-top: 1rem; }
+.championship-card, .contenders-card, .forecast-fixtures article { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); border-radius: 12px; }
+.championship-card { display: grid; align-content: center; gap: .25rem; padding: 1rem; }
+.championship-card p, .contenders-card p { margin: 0; font-size: .85rem; opacity: .82; }
+.championship-card strong { font-size: 3rem; line-height: 1; }
+.championship-card span { font-size: .85rem; opacity: .85; }
+.contenders-card { padding: 1rem; }.contenders-card ol { list-style: none; padding: 0; margin: .55rem 0 0; display: grid; gap: .35rem; }
+.contenders-card li { display: flex; justify-content: space-between; gap: .75rem; }.contenders-card .sapa-contender { color: #bfdbfe; }
+.contenders-card strong { display: block; margin-top: .3rem; font-size: 2rem; }.contenders-card span { font-size: .85rem; opacity: .85; }
+.forecast-table-wrap { overflow-x: auto; margin-top: 1rem; border: 1px solid rgba(255,255,255,.2); border-radius: 12px; }.forecast-table { width: 100%; min-width: 680px; border-collapse: collapse; font-size: .88rem; }.forecast-table th { padding: .65rem .8rem; text-align: left; color: #bfdbfe; font-size: .75rem; letter-spacing: .04em; text-transform: uppercase; }.forecast-table td { padding: .75rem .8rem; border-top: 1px solid rgba(255,255,255,.13); vertical-align: top; }.forecast-table .sapa-forecast-row { background: rgba(255,255,255,.12); }.forecast-champion { color: #fff; font-size: 1.1rem; white-space: nowrap; }.forecast-match { min-width: 190px; }.forecast-match strong,.forecast-match span { display: block; }.forecast-match span { margin-top: .22rem; font-size: .8rem; color: #dbeafe; }.forecast-match b { color: #fff; }
+.forecast-fixtures { margin-top: 1rem; display: grid; gap: .55rem; }.forecast-fixtures > p { margin: .5rem 0 0; }
+.forecast-fixtures article { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .85rem 1rem; }.forecast-fixtures article div:first-child { display: grid; gap: .2rem; }.forecast-fixtures article span { font-size: .82rem; opacity: .86; }
+.outcome-probabilities { display: flex; gap: .75rem; }.outcome-probabilities span { display: grid; text-align: center; }.outcome-probabilities b { font-size: 1.05rem; color: #fff; }
+.forecast-method { margin-top: .85rem; font-size: .84rem; color: #dbeafe; }.forecast-method summary { cursor: pointer; font-weight: 700; }.forecast-method p { margin-bottom: 0; line-height: 1.45; }
+
+.sapa-tournament-bridge { display: flex; align-items: center; gap: 1.25rem; margin: 1.25rem 0; padding: 1rem 1.2rem; border: 1px solid #3f5d8a; border-radius: 14px; background: linear-gradient(110deg, #172b4d, #1d3d6e); color: #f8fafc; }.sapa-tournament-bridge > div { display: grid; gap: .12rem; }.sapa-tournament-bridge p { margin: 0; color: #bfdbfe; }.sapa-tournament-bridge strong { font-size: 1.75rem; }.sapa-tournament-bridge span { color: #dbeafe; font-size: .82rem; }.sapa-tournament-bridge button { margin-left: auto; border: 1px solid #93c5fd; border-radius: 8px; background: transparent; color: #fff; padding: .55rem .75rem; cursor: pointer; }
+
 .tournament-footnote { color: #64748b; font-size: 0.85rem; margin-top: 1rem; }
 
 @media (max-width: 640px) {
   .sapa-spotlight-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .forecast-grid { grid-template-columns: 1fr; }.forecast-fixtures article, .sapa-tournament-bridge { align-items: flex-start; flex-direction: column; }.outcome-probabilities { width: 100%; justify-content: space-between; }.sapa-tournament-bridge button { margin-left: 0; }
 }
