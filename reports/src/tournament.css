@@ -24,6 +24,7 @@
 .tournament-shell .section-heading h2 { color: #0f172a; }
 .tournament-shell .section-heading small { color: #64748b; }
 .tournament-shell .home-link { color: #2563eb; border-color: #c7d7fe; }
+.tournament-nav { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: 1rem; }.tournament-nav a { border: 1px solid #bfdbfe; border-radius: 999px; padding: .35rem .65rem; color: #1d4ed8; background: rgba(255,255,255,.65); font-size: .8rem; font-weight: 700; text-decoration: none; }.tournament-nav a:hover { background: #dbeafe; }
 
 .sapa-spotlight {
   display: flex;
@@ -98,4 +99,5 @@
 @media (max-width: 640px) {
   .sapa-spotlight-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .forecast-grid { grid-template-columns: 1fr; }.forecast-fixtures article, .sapa-tournament-bridge { align-items: flex-start; flex-direction: column; }.outcome-probabilities { width: 100%; justify-content: space-between; }.sapa-tournament-bridge button { margin-left: 0; }
+  .tournament-nav { flex-wrap: nowrap; overflow-x: auto; padding-bottom: .25rem; }.tournament-nav a { white-space: nowrap; }
 }

@@ -4,6 +4,10 @@ import type { PublicTournament } from './tournamentProjection'
 const normalize = (name: string) => name.normalize('NFD').replace(/[\u0300-\u036f.\s]/g, '').toLowerCase()
 const isSapa = (name: string) => normalize(name) === 'sapa'
 const percent = (value: number) => value > 0 && value < 0.001 ? '<0,1%' : `${Math.round(value * 100)}%`
+const updatedLabel = (value: string) => {
+  const [year, month, day] = value.split('-')
+  return year && month && day ? `Actualizado el ${day}/${month}/${year}` : 'Actualización sin fecha'
+}
 
 export function Tournament({ tournament, onBack }: { tournament: PublicTournament; onBack: () => void }) {
   const sapa = tournament.standings.find((row) => isSapa(row.club))
@@ -22,9 +26,10 @@ export function Tournament({ tournament, onBack }: { tournament: PublicTournamen
     <main className="report-shell tournament-shell" aria-labelledby="tournament-title">
       <header className="hero">
         <p className="eyebrow">FEMEBAL · Permanencia 2026 · Mayores 3ª Masculino</p>
-        <h1 id="tournament-title">Torneo <span>en vivo</span></h1>
-        <p>{tournament.coverage.label}</p>
+        <h1 id="tournament-title">Torneo <span>2026</span></h1>
+        <p>{tournament.coverage.label} · {updatedLabel(tournament.updated_at)}.</p>
         <button className="home-link" onClick={onBack}>← Partidos analizados</button>
+        <nav className="tournament-nav" aria-label="Secciones del torneo"><a href="#forecast">Proyección</a><a href="#standings">Posiciones</a><a href="#scorers">Goleadores</a><a href="#discipline">Disciplina</a></nav>
       </header>
 
       {sapa && (
@@ -44,7 +49,7 @@ export function Tournament({ tournament, onBack }: { tournament: PublicTournamen
         </section>
       )}
 
-      {forecast && <section className="forecast-dashboard" aria-labelledby="forecast-title">
+      {forecast && <section id="forecast" className="forecast-dashboard" aria-labelledby="forecast-title">
         <div className="section-heading"><div><p className="eyebrow">Proyección estadística</p><h2 id="forecast-title">Camino al campeonato</h2></div><small>{forecast.simulations.toLocaleString('es-AR')} simulaciones del fixture pendiente.</small></div>
         <div className="forecast-grid">
           <article className="championship-card">
@@ -59,7 +64,7 @@ export function Tournament({ tournament, onBack }: { tournament: PublicTournamen
         <details className="forecast-method"><summary>Cómo leer esta proyección</summary><p>{forecast.methodology} Usa la regla vigente de puntos y los desempates por diferencia de gol y goles a favor. Los resultados informados sin planilla pueden cambiar cuando se confirme la planilla oficial.</p></details>
       </section>}
 
-      <section className="dashboard-section">
+      <section id="standings" className="dashboard-section">
         <div className="section-heading">
           <div>
             <p className="eyebrow">Clasificación</p>
@@ -105,7 +110,7 @@ export function Tournament({ tournament, onBack }: { tournament: PublicTournamen
         </div>
       </section>
 
-      <section className="dashboard-section">
+      <section id="scorers" className="dashboard-section">
         <div className="section-heading">
           <div>
             <p className="eyebrow">Goleadores</p>
@@ -153,7 +158,7 @@ export function Tournament({ tournament, onBack }: { tournament: PublicTournamen
       </section>
 
       {sapaClub && (
-        <section className="dashboard-section">
+        <section id="discipline" className="dashboard-section">
           <div className="section-heading">
             <div>
               <p className="eyebrow">Disciplina</p>
