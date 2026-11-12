@@ -8233,6 +8233,480 @@
     },
     {
       "schema_version": 1,
+      "sha256": "18ef31aaabcdee1fb725850d36661523b67738400f3dd104da37fd4342afc45c",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/b21562a6eb5097c9.pdf",
+      "duplicate_aliases": [],
+      "page_count": 1,
+      "fields": {
+        "venue": {
+          "value": "Pilar",
+          "raw": "Jugado en:\nPilar",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Jugado en:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "court": {
+          "value": null,
+          "raw": null,
+          "source": null,
+          "confidence": "unresolved",
+          "warnings": [
+            "court is missing in labelled source blocks"
+          ]
+        },
+        "date": {
+          "value": "2026-11-08",
+          "raw": "Fecha:\n2026-11-08",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Fecha:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "time": {
+          "value": "18:00",
+          "raw": "Hora:\n18:00:00",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Hora:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "category": {
+          "value": "Mayores - 3º División",
+          "raw": "Categoria - Division:\nMayores - 3º División",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Categoria - Division:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "match_number": {
+          "value": "13",
+          "raw": "Partido:\n13",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Partido:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "tournament": {
+          "value": "Metropolitano Clausura",
+          "raw": "Torneo Metropolitano Clausura",
+          "source": {
+            "page": 1,
+            "table": null,
+            "label": "Torneo"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "home_name": {
+          "value": "Municipalidad de Pilar",
+          "raw": "Equip o local\n22\nMunicipalidad de Pilar",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equip o local"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "away_name": {
+          "value": "Palermo Handball",
+          "raw": "Equipo visitante\n34\nPalermo Handball",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equipo visitante"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "home_score": {
+          "value": 22,
+          "raw": "Equip o local\n22\nMunicipalidad de Pilar",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equip o local"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "away_score": {
+          "value": 34,
+          "raw": "Equipo visitante\n34\nPalermo Handball",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equipo visitante"
+          },
+          "confidence": "high",
+          "warnings": []
+        }
+      },
+      "rosters": {
+        "local": [
+          {
+            "number": 1,
+            "name": "Fernandez, Eduardo Ismael",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 6,
+            "name": "Inofre, Facundo Joel",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 7,
+            "name": "Roldan, Facundo Carlos",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 9,
+            "name": "Vergara, Braian Ezequiel",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 1,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 12,
+            "name": "Martinez, Victor Emmanuel",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 14,
+            "name": "Gimenez Correa, Juan Cruz",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 2,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 21,
+            "name": "Rogers Ford, Joaquin Alejandr...",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 23,
+            "name": "Mastinu, Martin Nicolas",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 24,
+            "name": "Gimenez Correa, Joaquin Gabri...",
+            "goals": 3,
+            "yellow": 1,
+            "two_min": 1,
+            "red": 1,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 33,
+            "name": "Roldan, Diego Tomas",
+            "goals": 9,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 37,
+            "name": "Ramos, Lautaro Manuel",
+            "goals": 6,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 64,
+            "name": "Morello, Santiago",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          }
+        ],
+        "visitante": [
+          {
+            "number": 2,
+            "name": "Otegui, Juan",
+            "goals": 2,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 3,
+            "name": "Viggiano, Valentin Nicolas",
+            "goals": 8,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 4,
+            "name": "Alonso, Julian",
+            "goals": 7,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 5,
+            "name": "Gimenez Asciutto, Mateo",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 7,
+            "name": "Innella, Gaston",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 8,
+            "name": "Chang, Javier",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 9,
+            "name": "Canderan Bartolotta, Matias Jo...",
+            "goals": 2,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 11,
+            "name": "Gigante, Roberto Juan",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 1,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 13,
+            "name": "Romero, Elias Josue",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 14,
+            "name": "Iglesias, Genaro",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 15,
+            "name": "Borrelli, Matias Exequiel Tomas",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 16,
+            "name": "Blason, Ezequiel",
+            "goals": 2,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 17,
+            "name": "Lovera, Alan Jorge Leonel",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 18,
+            "name": "Perez, Gaston",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 53,
+            "name": "Ibarra, Steven Yoel",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 71,
+            "name": "Reverter, Felipe",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          }
+        ]
+      },
+      "parse_error": null,
+      "quality_flags": [
+        "missing-court"
+      ]
+    },
+    {
+      "schema_version": 1,
       "sha256": "1bf41516f6be75a9d72ac0eede645437033a6015acf91a0a67a64b300ff1385b",
       "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/df5dca93a384e19f.pdf",
       "duplicate_aliases": [],
@@ -15631,6 +16105,432 @@
     },
     {
       "schema_version": 1,
+      "sha256": "293159d68a46a63ef276b458527d35094fb6768f52512f355525060a2bf73e8d",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/5764306c290bb757.pdf",
+      "duplicate_aliases": [],
+      "page_count": 1,
+      "fields": {
+        "venue": {
+          "value": "Caseros",
+          "raw": "Jugado en:\nCaseros",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Jugado en:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "court": {
+          "value": "CEDEM Nº1 Gimnasio 1",
+          "raw": "Cancha:\nCEDEM Nº1 Gimnasio 1",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Cancha:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "date": {
+          "value": "2026-11-08",
+          "raw": "Fecha:\n2026-11-08",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Fecha:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "time": {
+          "value": "20:15",
+          "raw": "Hora:\n20:15:00",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Hora:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "category": {
+          "value": "Mayores - 3º División",
+          "raw": "Categoria - Division:\nMayores - 3º División",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Categoria - Division:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "match_number": {
+          "value": "13",
+          "raw": "Partido:\n13",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Partido:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "tournament": {
+          "value": "Metropolitano Clausura",
+          "raw": "Torneo Metropolitano Clausura",
+          "source": {
+            "page": 1,
+            "table": null,
+            "label": "Torneo"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "home_name": {
+          "value": "Municipalidad de Tres de Febrero B",
+          "raw": "19 20\nMunicipalidad de Tres S.A.P.A.\nde Febrero B",
+          "source": {
+            "page": 1,
+            "table": null,
+            "label": "Equip o local / Equipo visitante"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "away_name": {
+          "value": "S.A.P.A.",
+          "raw": "Equipo visitante\n20\nS.A.P.A.",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equipo visitante"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "home_score": {
+          "value": 19,
+          "raw": "Equip o local\n19\nMunicipalidad de Tres\nde Febrero B",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equip o local"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "away_score": {
+          "value": 20,
+          "raw": "Equipo visitante\n20\nS.A.P.A.",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equipo visitante"
+          },
+          "confidence": "high",
+          "warnings": []
+        }
+      },
+      "rosters": {
+        "local": [
+          {
+            "number": 1,
+            "name": "Vazquez, Luciano Nahuel",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 4,
+            "name": "Garcia, Thiago Gabriel Anibal",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 6,
+            "name": "Ayabarrena, Fernando Daniel",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 8,
+            "name": "Roa, Matias Ivan",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 15,
+            "name": "Fusto, Agustin Ezequiel",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 1,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 16,
+            "name": "Caminos, Emiliano Gabriel",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 19,
+            "name": "Galliani, Ivan Nicolas",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 33,
+            "name": "Testa, Jonatan Ezequiel",
+            "goals": 4,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 42,
+            "name": "Ramos, Matias",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 43,
+            "name": "Portillo, Facundo Matias",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 47,
+            "name": "Gonzalez, Isaias Ariel",
+            "goals": 2,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 49,
+            "name": "Loiacono, Ignacio Nicolas",
+            "goals": 4,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 69,
+            "name": "Fernandez, Luciano",
+            "goals": 2,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          }
+        ],
+        "visitante": [
+          {
+            "number": 1,
+            "name": "Ramirez Lorca, Jaime Nahuel",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 7,
+            "name": "Mollo Skripnik Strelecki, Juan Ig...",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 10,
+            "name": "Gonzalez, Ezequiel Matias",
+            "goals": 2,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 11,
+            "name": "Romanello, Martin Esteban",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 13,
+            "name": "Ramirez, Nicolas",
+            "goals": 4,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 17,
+            "name": "Martinez, Milo Ulises",
+            "goals": 5,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 23,
+            "name": "Ruano, Matheo",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 33,
+            "name": "Correa, Marcos Isauro",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 38,
+            "name": "Delpieri, Mateo",
+            "goals": 5,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 80,
+            "name": "Ramirez, Gaston",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 97,
+            "name": "Ferrari, Jonas Horacio",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 2,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          }
+        ]
+      },
+      "parse_error": null,
+      "quality_flags": []
+    },
+    {
+      "schema_version": 1,
       "sha256": "2aa09ffb311c4cd03a56785b376cadf05372a69bddb318bf52fe3157f1f34580",
       "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/5a7838895df9cba1.pdf",
       "duplicate_aliases": [],
@@ -16612,6 +17512,468 @@
             "number": 71,
             "name": "Carrizo, Walter Daniel",
             "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          }
+        ]
+      },
+      "parse_error": null,
+      "quality_flags": []
+    },
+    {
+      "schema_version": 1,
+      "sha256": "2b88669db0956c25295d19618a1b36b2d97a5725399bc53e032e71bc03845a79",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/859afd3d62df3fe9.pdf",
+      "duplicate_aliases": [],
+      "page_count": 1,
+      "fields": {
+        "venue": {
+          "value": "San Justo",
+          "raw": "Jugado en:\nSan Justo",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Jugado en:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "court": {
+          "value": "Microestadio UN. La Matanza",
+          "raw": "Cancha:\nMicroestadio UN. La Matanza",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Cancha:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "date": {
+          "value": "2026-11-08",
+          "raw": "Fecha:\n2026-11-08",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Fecha:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "time": {
+          "value": "19:45",
+          "raw": "Hora:\n19:45:00",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Hora:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "category": {
+          "value": "Mayores - 3º División",
+          "raw": "Categoria - Division:\nMayores - 3º División",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Categoria - Division:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "match_number": {
+          "value": "13",
+          "raw": "Partido:\n13",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Partido:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "tournament": {
+          "value": "Metropolitano Clausura",
+          "raw": "Torneo Metropolitano Clausura",
+          "source": {
+            "page": 1,
+            "table": null,
+            "label": "Torneo"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "home_name": {
+          "value": "U.N.La.M.",
+          "raw": "Equip o local\n19\nU.N.La.M.",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equip o local"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "away_name": {
+          "value": "C.A. Banfield B",
+          "raw": "Equipo visitante\n22\nC.A. Banfield B",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equipo visitante"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "home_score": {
+          "value": 19,
+          "raw": "Equip o local\n19\nU.N.La.M.",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equip o local"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "away_score": {
+          "value": 22,
+          "raw": "Equipo visitante\n22\nC.A. Banfield B",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equipo visitante"
+          },
+          "confidence": "high",
+          "warnings": []
+        }
+      },
+      "rosters": {
+        "local": [
+          {
+            "number": 2,
+            "name": "Torrico Camacho, Kevin Alan",
+            "goals": 5,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 5,
+            "name": "Almiron, Facundo Sebastian",
+            "goals": 1,
+            "yellow": 1,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 6,
+            "name": "Pineiro, Dante",
+            "goals": 5,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 7,
+            "name": "Romanello, Matias Ezequiel",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 8,
+            "name": "Gomez, Leandro Luis Nicolas",
+            "goals": 2,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 9,
+            "name": "Pereyra Galetti, Fernando Emm...",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 12,
+            "name": "Fretes, Lorenzo Raul",
+            "goals": 0,
+            "yellow": 1,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 16,
+            "name": "Santillan, Juan Roman",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 1,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 19,
+            "name": "Martinez, Joaquin Ariel",
+            "goals": 2,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 22,
+            "name": "Salgado, Mariano Agustin",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 23,
+            "name": "Lopardo, Brian Ezequiel",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          }
+        ],
+        "visitante": [
+          {
+            "number": 2,
+            "name": "Montellanos Lopez, Joaquin",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 3,
+            "name": "Badaracco Carola, Fabio Nahu...",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 4,
+            "name": "De Lorenzo, Matias Nicolas",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 5,
+            "name": "Rodriguez, Lautaro Tomas",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 7,
+            "name": "Sommer, Martin",
+            "goals": 7,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 8,
+            "name": "Cafferata, Santiago Damian",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 9,
+            "name": "Nunez, Rodrigo",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 10,
+            "name": "Ruiz Diaz, Santiago",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 13,
+            "name": "Brizuela, Lucio Nicolas",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 15,
+            "name": "Ledesma Flores, Patricio Silvan...",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 17,
+            "name": "Gonzalez, Julian Gabriel",
+            "goals": 2,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 18,
+            "name": "Senaris, Tomas",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 20,
+            "name": "Rodriguez, Tomas Emanuel",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 30,
+            "name": "Galarza, Franco Agustin",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 60,
+            "name": "Aguirre, Walter Joel",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 70,
+            "name": "Petrovic, Joaquin Elias",
+            "goals": 0,
             "yellow": 0,
             "two_min": 0,
             "red": 0,
@@ -32976,6 +34338,456 @@
     },
     {
       "schema_version": 1,
+      "sha256": "56080ebc7cb68cc10f01d1923b17b5b71f2db636d666cd09312a398e10af5b8b",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/884407a60538130b.pdf",
+      "duplicate_aliases": [],
+      "page_count": 1,
+      "fields": {
+        "venue": {
+          "value": "Lomas de Zamora",
+          "raw": "Jugado en:\nLomas de Zamora",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Jugado en:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "court": {
+          "value": null,
+          "raw": null,
+          "source": null,
+          "confidence": "unresolved",
+          "warnings": [
+            "court is missing in labelled source blocks"
+          ]
+        },
+        "date": {
+          "value": "2026-11-08",
+          "raw": "Fecha:\n2026-11-08",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Fecha:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "time": {
+          "value": "18:00",
+          "raw": "Hora:\n18:00:00",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Hora:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "category": {
+          "value": "Mayores - 3º División",
+          "raw": "Categoria - Division:\nMayores - 3º División",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Categoria - Division:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "match_number": {
+          "value": "13",
+          "raw": "Partido:\n13",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Partido:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "tournament": {
+          "value": "Metropolitano Clausura",
+          "raw": "Torneo Metropolitano Clausura",
+          "source": {
+            "page": 1,
+            "table": null,
+            "label": "Torneo"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "home_name": {
+          "value": "C.S. y D. Defensores de Banfield",
+          "raw": "32 22\nC.S. y D. Defensores de Club Deportivo Morón\nBanfield",
+          "source": {
+            "page": 1,
+            "table": null,
+            "label": "Equip o local / Equipo visitante"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "away_name": {
+          "value": "Club Deportivo Morón",
+          "raw": "Equipo visitante\n22\nClub Deportivo Morón",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equipo visitante"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "home_score": {
+          "value": 32,
+          "raw": "Equip o local\n32\nC.S. y D. Defensores de\nBanfield",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equip o local"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "away_score": {
+          "value": 22,
+          "raw": "Equipo visitante\n22\nClub Deportivo Morón",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equipo visitante"
+          },
+          "confidence": "high",
+          "warnings": []
+        }
+      },
+      "rosters": {
+        "local": [
+          {
+            "number": 1,
+            "name": "Gallardo, Javier Rodrigo",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 5,
+            "name": "Lares, Joaquin Nahuel",
+            "goals": 4,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 6,
+            "name": "Romero Canete, Alcides Antoni...",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 10,
+            "name": "Rizza, Valentin",
+            "goals": 7,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 11,
+            "name": "Toniutti, Santiago Ariel",
+            "goals": 2,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 12,
+            "name": "Arevalo, Matias",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 13,
+            "name": "Esposto, Facundo Nazaren",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 15,
+            "name": "Losso, Emiliano",
+            "goals": 12,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 16,
+            "name": "Fernandez, Javier Oscar",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 18,
+            "name": "Aguirre, Esteban Maximiliano",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 19,
+            "name": "Mariscal, Benjamin Thiago",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 21,
+            "name": "Macagni Legallais, Tomas",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 22,
+            "name": "Caceres, Nestor Matias",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          }
+        ],
+        "visitante": [
+          {
+            "number": 1,
+            "name": "Casanova, Jorge Hernan",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 2,
+            "name": "Fagioli, Federico Enzo",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 3,
+            "name": "Rial, Tomas Valentin",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 4,
+            "name": "Ferrante, Rodrigo",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 10,
+            "name": "Laurenzano Castiglione, Renzo...",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 3,
+            "red": 1,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 11,
+            "name": "Mazzola, Fausto",
+            "goals": 2,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 1,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 12,
+            "name": "Bravo, Federico Marcos",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 20,
+            "name": "Rial, Agustin Nicolas",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 21,
+            "name": "Ojea, Nazareno",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 24,
+            "name": "Galvan, Juan Pablo",
+            "goals": 4,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 31,
+            "name": "Abi Zaid, Lucas Alejo",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 32,
+            "name": "Vazquez, Joaquin Tomas",
+            "goals": 2,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 83,
+            "name": "Juarez, German",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          }
+        ]
+      },
+      "parse_error": null,
+      "quality_flags": [
+        "missing-court"
+      ]
+    },
+    {
+      "schema_version": 1,
       "sha256": "573c78c394d710be6107b20ea2fbfb60afee8d25824d9bd580037bfb537272b3",
       "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/4a07ff340fa7fe4b.pdf",
       "duplicate_aliases": [],
@@ -41100,6 +42912,504 @@
     },
     {
       "schema_version": 1,
+      "sha256": "65a403df901d067d22e8b8413e51bbdcf481038cb8725ff69478fefe9a526643",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/4c2ac3f46f8d6f77.pdf",
+      "duplicate_aliases": [],
+      "page_count": 1,
+      "fields": {
+        "venue": {
+          "value": "Lanus",
+          "raw": "Jugado en:\nLanus",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Jugado en:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "court": {
+          "value": "C.A. Lanús Gimnasio",
+          "raw": "Cancha:\nC.A. Lanús Gimnasio",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Cancha:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "date": {
+          "value": "2026-11-08",
+          "raw": "Fecha:\n2026-11-08",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Fecha:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "time": {
+          "value": "16:45",
+          "raw": "Hora:\n16:45:00",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Hora:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "category": {
+          "value": "Mayores - 3º División",
+          "raw": "Categoria - Division:\nMayores - 3º División",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Categoria - Division:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "match_number": {
+          "value": "13",
+          "raw": "Partido:\n13",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Partido:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "tournament": {
+          "value": "Metropolitano Clausura",
+          "raw": "Torneo Metropolitano Clausura",
+          "source": {
+            "page": 1,
+            "table": null,
+            "label": "Torneo"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "home_name": {
+          "value": "C.A. Lanús C",
+          "raw": "Equip o local\n35\nC.A. Lanús C",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equip o local"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "away_name": {
+          "value": "Municipalidad de San Martín (Ce.M.E.F)",
+          "raw": "35 20\nC.A. Lanús C Municipalidad de San\nMartín (Ce.M.E.F)",
+          "source": {
+            "page": 1,
+            "table": null,
+            "label": "Equip o local / Equipo visitante"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "home_score": {
+          "value": 35,
+          "raw": "Equip o local\n35\nC.A. Lanús C",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equip o local"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "away_score": {
+          "value": 20,
+          "raw": "Equipo visitante\n20\nMunicipalidad de San\nMartín (Ce.M.E.F)",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equipo visitante"
+          },
+          "confidence": "high",
+          "warnings": []
+        }
+      },
+      "rosters": {
+        "local": [
+          {
+            "number": 2,
+            "name": "Guccione, Nicolas",
+            "goals": 5,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 4,
+            "name": "Ayala, Axel Tomas Gabr",
+            "goals": 4,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 5,
+            "name": "Vazquez, Leonardo Ariel",
+            "goals": 6,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 7,
+            "name": "Gagliardi, Juan Franco",
+            "goals": 4,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 8,
+            "name": "Vedia, Tomas",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 10,
+            "name": "Szymborski, Ignacio",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 14,
+            "name": "Szymborski, Lautaro",
+            "goals": 2,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 16,
+            "name": "Barreto, Mariano Nicolas",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 18,
+            "name": "Moreira, Adrian",
+            "goals": 4,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 20,
+            "name": "Siesicki, Ivan Ariel",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 22,
+            "name": "Cabelli, Lautaro Agustin",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 30,
+            "name": "Elorga Studer, Julian Alexis",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 33,
+            "name": "Rosemburg, Gabriel Jesus",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 44,
+            "name": "Damonte, Esteban Leonel",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 66,
+            "name": "Siesicki, David Emmanuel",
+            "goals": 0,
+            "yellow": 1,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 95,
+            "name": "Diaz, Enrique Adrian",
+            "goals": 4,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          }
+        ],
+        "visitante": [
+          {
+            "number": 1,
+            "name": "Doormann, Sergio Fabian",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 2,
+            "name": "Encina, Dante Daniel",
+            "goals": 6,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 14,
+            "name": "Sapea, Mariano Julian",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 16,
+            "name": "Burgos, Facundo Gabriel",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 17,
+            "name": "Zabala, Gianfranco Luciano",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 18,
+            "name": "Gonzalez, Nahuel Ariel",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 19,
+            "name": "Graf, Mariano Nahuel",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 20,
+            "name": "Suarez, Rodrigo Martin",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 22,
+            "name": "Valenzuela, Franco Leonel",
+            "goals": 5,
+            "yellow": 0,
+            "two_min": 2,
+            "red": 1,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 27,
+            "name": "Toto, Miguel Ignacio",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 28,
+            "name": "Suarez, Facundo Nicolas",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 42,
+            "name": "Gomez, Luciano Agustin",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 74,
+            "name": "Ayala, Matias Nicolas",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 92,
+            "name": "Pallarini, Lautaro Adrian",
+            "goals": 2,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          }
+        ]
+      },
+      "parse_error": null,
+      "quality_flags": []
+    },
+    {
+      "schema_version": 1,
       "sha256": "66dda0793c607e759009f7dd4e94c5325257c2fc5567c5a1db035cea12d8b8d6",
       "source_path": "2026_Apertura_Zona_A _Mayores_3º_División_Masculino/9533753659dd2ba3.pdf",
       "duplicate_aliases": [],
@@ -44941,6 +47251,446 @@
     },
     {
       "schema_version": 1,
+      "sha256": "6fd5ae2081df5054e086517e1e73e3bb26151062d0bf82d15d7d9454de3a3dfa",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/8223925021be786b.pdf",
+      "duplicate_aliases": [],
+      "page_count": 2,
+      "fields": {
+        "venue": {
+          "value": "CABA",
+          "raw": "Jugado en:\nCABA",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Jugado en:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "court": {
+          "value": "AAAJ Globo",
+          "raw": "Cancha:\nAAAJ Globo",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Cancha:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "date": {
+          "value": "2026-11-08",
+          "raw": "Fecha:\n2026-11-08",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Fecha:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "time": {
+          "value": "18:00",
+          "raw": "Hora:\n18:00:00",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Hora:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "category": {
+          "value": "Mayores - 3º División",
+          "raw": "Categoria - Division:\nMayores - 3º División",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Categoria - Division:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "match_number": {
+          "value": "13",
+          "raw": "Partido:\n13",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Partido:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "tournament": {
+          "value": "Metropolitano Clausura",
+          "raw": "Torneo Metropolitano Clausura",
+          "source": {
+            "page": 1,
+            "table": null,
+            "label": "Torneo"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "home_name": {
+          "value": "A.A. Argentinos Juniors D",
+          "raw": "27 22\nA.A. Argentinos Juniors C.A. Ituzaingó\nD",
+          "source": {
+            "page": 1,
+            "table": null,
+            "label": "Equip o local / Equipo visitante"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "away_name": {
+          "value": "C.A. Ituzaingó",
+          "raw": "Equipo visitante\n22\nC.A. Ituzaingó",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equipo visitante"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "home_score": {
+          "value": 27,
+          "raw": "Equip o local\n27\nA.A. Argentinos Juniors\nD",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equip o local"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "away_score": {
+          "value": 22,
+          "raw": "Equipo visitante\n22\nC.A. Ituzaingó",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equipo visitante"
+          },
+          "confidence": "high",
+          "warnings": []
+        }
+      },
+      "rosters": {
+        "local": [
+          {
+            "number": 1,
+            "name": "Canovas De La Vega, Daniel Al...",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 4,
+            "name": "Pedernera, Gonzalo",
+            "goals": 7,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 5,
+            "name": "Maestripieri, Siro Lautaro",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 2,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 6,
+            "name": "Costa, Miqueas Nahuel",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 14,
+            "name": "Levy, Leonardo G.",
+            "goals": 5,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 19,
+            "name": "Perez, Pablo Santiago",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 24,
+            "name": "Perez, Pedro Gabriel",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 26,
+            "name": "Flores, Victor Mariano",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 28,
+            "name": "Ajalla, Ivan Maximiliano",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 40,
+            "name": "Gomez, Francisco Jose Ezequi...",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 44,
+            "name": "Brokoff, Mariano Alejandro",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 55,
+            "name": "Rayan, Tomas Uriel",
+            "goals": 2,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 73,
+            "name": "Martin, Adrian Norberto",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 74,
+            "name": "Obendorfer, Ricardo Alfredo",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 86,
+            "name": "Mastrazzi Vukotich, Tadeo Agu...",
+            "goals": 2,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 96,
+            "name": "Dyfort, Demian Christian",
+            "goals": 8,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          }
+        ],
+        "visitante": [
+          {
+            "number": 2,
+            "name": "Benvenuto, Pablo Ezequiel",
+            "goals": 4,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 1,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 6,
+            "name": "Garcia, Emiliano Angel",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 7,
+            "name": "Gonzalez, Jonatan David",
+            "goals": 1,
+            "yellow": 1,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 9,
+            "name": "Gonzalez, Santiago",
+            "goals": 5,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 15,
+            "name": "Aguero, Mariano Lucas",
+            "goals": 10,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 25,
+            "name": "Rios, Guillermo Adrian",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 26,
+            "name": "Monrrg, Gustavo Hernan",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 52,
+            "name": "Linares, Lautaro Ezequiel",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 87,
+            "name": "Zapata, Matias Sebastian",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          }
+        ]
+      },
+      "parse_error": null,
+      "quality_flags": [
+        "multi-page"
+      ]
+    },
+    {
+      "schema_version": 1,
       "sha256": "7149f4f5b8b4c7d8e7bfa79bece9dfa97d6ebd610cf10947f1dae3cdd96e9b71",
       "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/9ebcc92895809e94.pdf",
       "duplicate_aliases": [],
@@ -48342,6 +51092,516 @@
             "goals": 0,
             "yellow": 0,
             "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          }
+        ]
+      },
+      "parse_error": null,
+      "quality_flags": []
+    },
+    {
+      "schema_version": 1,
+      "sha256": "78c5adcbc1a2930d837485c9fe67b6d9c60df6a5b5240f96ce84ec0575122c3e",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/744ac1615d02903c.pdf",
+      "duplicate_aliases": [],
+      "page_count": 1,
+      "fields": {
+        "venue": {
+          "value": "Moreno",
+          "raw": "Jugado en:\nMoreno",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Jugado en:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "court": {
+          "value": "Defensores de Moreno Victorica",
+          "raw": "Cancha:\nDefensores de Moreno Victorica",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Cancha:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "date": {
+          "value": "2026-11-08",
+          "raw": "Fecha:\n2026-11-08",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Fecha:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "time": {
+          "value": "18:00",
+          "raw": "Hora:\n18:00:00",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Hora:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "category": {
+          "value": "Mayores - 3º División",
+          "raw": "Categoria - Division:\nMayores - 3º División",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Categoria - Division:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "match_number": {
+          "value": "13",
+          "raw": "Partido:\n13",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Partido:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "tournament": {
+          "value": "Metropolitano Clausura",
+          "raw": "Torneo Metropolitano Clausura",
+          "source": {
+            "page": 1,
+            "table": null,
+            "label": "Torneo"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "home_name": {
+          "value": "C.A. Defensores de Moreno",
+          "raw": "26 31\nC.A. Defensores de Municipalidad de\nMoreno Vicente López C",
+          "source": {
+            "page": 1,
+            "table": null,
+            "label": "Equip o local / Equipo visitante"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "away_name": {
+          "value": "Municipalidad de Vicente López C",
+          "raw": "26 31\nC.A. Defensores de Municipalidad de\nMoreno Vicente López C",
+          "source": {
+            "page": 1,
+            "table": null,
+            "label": "Equip o local / Equipo visitante"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "home_score": {
+          "value": 26,
+          "raw": "Equip o local\n26\nC.A. Defensores de\nMoreno",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equip o local"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "away_score": {
+          "value": 31,
+          "raw": "Equipo visitante\n31\nMunicipalidad de\nVicente López C",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equipo visitante"
+          },
+          "confidence": "high",
+          "warnings": []
+        }
+      },
+      "rosters": {
+        "local": [
+          {
+            "number": 1,
+            "name": "Delaloye, Bautista Ariel",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 6,
+            "name": "Pavia, Bautista",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 7,
+            "name": "Carruthers, Benjamin",
+            "goals": 6,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 8,
+            "name": "Lacuadra, Valentin Leonel",
+            "goals": 2,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 11,
+            "name": "Delaloye, Mateo Valentin",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 12,
+            "name": "Ercoli, Gonzalo Hernan",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 14,
+            "name": "Lucero, Mateo Gabriel",
+            "goals": 4,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 17,
+            "name": "Altieri, Tiziano Misael",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 19,
+            "name": "Gerez Valenzuela, Gabriel Mirk...",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 24,
+            "name": "Madera Aragon, Matias Nicolas",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 26,
+            "name": "Flores, Gonzalo Nahuel",
+            "goals": 6,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 27,
+            "name": "Nicholson Victorel, Joaquin",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 29,
+            "name": "Ercoli, Santiago Ariel",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 2,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 45,
+            "name": "Sosa Baez Gonzalez, Lautaro",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 90,
+            "name": "Bunjahed, Nicolas Ezequie",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          }
+        ],
+        "visitante": [
+          {
+            "number": 5,
+            "name": "Hurwitz, Agustin",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 11,
+            "name": "Vieyra, Gonzalo Ezequiel",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 12,
+            "name": "Bouhes, Lionel Eduardo",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 13,
+            "name": "D'Angelo, Martin Alejandro",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 18,
+            "name": "Gobbi, Ignacio",
+            "goals": 7,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 20,
+            "name": "Naser, Adrian Aalejandro",
+            "goals": 8,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 23,
+            "name": "Vieyra, Marcelo A.",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 27,
+            "name": "Montes, Ezequiel Martin",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 32,
+            "name": "Loscri, Sebastian D.",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 1,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 37,
+            "name": "Hails, Martin",
+            "goals": 2,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 64,
+            "name": "Della Giustina, Nicolas Gaston",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 78,
+            "name": "Carrascosa, Joaquin",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 83,
+            "name": "Saccomanno, Fernando Nicola...",
+            "goals": 2,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 89,
+            "name": "Fernandez, Luciano",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 96,
+            "name": "Irigoy, Juan Martin",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 97,
+            "name": "Cappelletti, Leonardo Hector",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 1,
             "red": 0,
             "blue": 0,
             "source": {
@@ -80132,6 +83392,516 @@
           {
             "number": 84,
             "name": "Reverter, Felipe",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          }
+        ]
+      },
+      "parse_error": null,
+      "quality_flags": []
+    },
+    {
+      "schema_version": 1,
+      "sha256": "c67aa2fd7da32d8c4344e45ccbec056c1684db721b8c572bd3c73a0e5cdef9dd",
+      "source_path": "2026_Torneo_Permanencia_Mayores_3º_División_Masculino/2f2dd0e0579c556f.pdf",
+      "duplicate_aliases": [],
+      "page_count": 1,
+      "fields": {
+        "venue": {
+          "value": "San Miguel",
+          "raw": "Jugado en:\nSan Miguel",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Jugado en:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "court": {
+          "value": "Muñiz",
+          "raw": "Cancha:\nMuñiz",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Cancha:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "date": {
+          "value": "2026-10-29",
+          "raw": "Fecha:\n2026-10-29",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Fecha:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "time": {
+          "value": "21:00",
+          "raw": "Hora:\n21:00:00",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Hora:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "category": {
+          "value": "Mayores - 3º División",
+          "raw": "Categoria - Division:\nMayores - 3º División",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Categoria - Division:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "match_number": {
+          "value": "13",
+          "raw": "Partido:\n13",
+          "source": {
+            "page": 1,
+            "table": 0,
+            "label": "Partido:"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "tournament": {
+          "value": "Metropolitano Clausura",
+          "raw": "Torneo Metropolitano Clausura",
+          "source": {
+            "page": 1,
+            "table": null,
+            "label": "Torneo"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "home_name": {
+          "value": "Muñiz Handball B",
+          "raw": "Equip o local\n25\nMuñiz Handball B",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equip o local"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "away_name": {
+          "value": "S.A.G. Polvorines D",
+          "raw": "Equipo visitante\n29\nS.A.G. Polvorines D",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equipo visitante"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "home_score": {
+          "value": 25,
+          "raw": "Equip o local\n25\nMuñiz Handball B",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equip o local"
+          },
+          "confidence": "high",
+          "warnings": []
+        },
+        "away_score": {
+          "value": 29,
+          "raw": "Equipo visitante\n29\nS.A.G. Polvorines D",
+          "source": {
+            "page": 1,
+            "table": 1,
+            "label": "Equipo visitante"
+          },
+          "confidence": "high",
+          "warnings": []
+        }
+      },
+      "rosters": {
+        "local": [
+          {
+            "number": 5,
+            "name": "Ormar, Alejo Rafael",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 7,
+            "name": "Dembinski, Santino Hernan",
+            "goals": 4,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 8,
+            "name": "Gomez, Enzo Ivan",
+            "goals": 2,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 9,
+            "name": "Acevedo, Ruben Oscar",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 10,
+            "name": "Catini, Bautista",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 13,
+            "name": "Ferrari, Felipe",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 14,
+            "name": "Goncalves, Ivan Nicolas",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 17,
+            "name": "Tobares, Lisandro Joaquin",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 22,
+            "name": "Brizuela, Lucas Federico",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 24,
+            "name": "Mendoza, Alexis Agustin",
+            "goals": 2,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 25,
+            "name": "Magallan, Gonzalo Hernan",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 44,
+            "name": "Rafael, Manuel Jose",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 75,
+            "name": "Gaud, Lautaro Nahuel",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 77,
+            "name": "Gomes Persello, Marcos Ezequ...",
+            "goals": 5,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 80,
+            "name": "Benitez, Francisco Ezequiel",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 90,
+            "name": "Herrera Quintiero, Lucas Agusti...",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          }
+        ],
+        "visitante": [
+          {
+            "number": 1,
+            "name": "Paredes Alvarez, Claudio Mauri...",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 4,
+            "name": "Aveiro Ortega, Gustavo Daniel",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 7,
+            "name": "Navarro, Jonatan Gonzalo",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 8,
+            "name": "Ruiz, Juan Agustin",
+            "goals": 4,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 11,
+            "name": "Echeverria, Juan Pablo",
+            "goals": 7,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 13,
+            "name": "Mangini, Nicolas Ezequie",
+            "goals": 3,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 15,
+            "name": "Ruzzante, Ivan Andres",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 3,
+            "red": 1,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 16,
+            "name": "De Sousa Goncalves, Fernand...",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 20,
+            "name": "Rodriguez, Pablo Ignacio",
+            "goals": 9,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 21,
+            "name": "Saettone, Luciano Gabriel",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 46,
+            "name": "Meyer, Federico",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 3,
+            "red": 1,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 56,
+            "name": "Bertuleit, Tomas",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 1,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 57,
+            "name": "Durruty, Julio Martin",
+            "goals": 1,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 1,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 79,
+            "name": "Perello, Diego Martin",
+            "goals": 0,
+            "yellow": 0,
+            "two_min": 0,
+            "red": 0,
+            "blue": 0,
+            "source": {
+              "page": 1
+            }
+          },
+          {
+            "number": 91,
+            "name": "Garcia Cupido, Sebastian",
             "goals": 0,
             "yellow": 0,
             "two_min": 0,

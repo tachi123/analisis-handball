@@ -2,12 +2,12 @@
   "schema_version": "tournament-v2",
   "tournament": "Torneo Permanencia 2026 3ªM",
   "season": 2026,
-  "updated_at": "2026-11-10",
+  "updated_at": "2026-11-12",
   "coverage": {
     "rounds_played": 13,
     "rounds_total": 15,
     "status": "partial",
-    "label": "Cubre las fechas jugadas; la fecha 13 se refleja como resultado informado."
+    "label": "Cubre las 13 fechas con resultados cargados; no reemplaza la tabla oficial de FEMEBAL."
   },
   "standings": [
     {
@@ -31,9 +31,9 @@
       "drawn": 0,
       "lost": 3,
       "penalized": 0,
-      "goals_for": 357,
-      "goals_against": 297,
-      "goal_difference": 60,
+      "goals_for": 390,
+      "goals_against": 319,
+      "goal_difference": 71,
       "points": 33
     },
     {
@@ -109,9 +109,9 @@
       "drawn": 1,
       "lost": 6,
       "penalized": 0,
-      "goals_for": 306,
-      "goals_against": 298,
-      "goal_difference": 8,
+      "goals_for": 328,
+      "goals_against": 331,
+      "goal_difference": -3,
       "points": 26
     },
     {
@@ -223,24 +223,35 @@
     {
       "name": "Losso, Emiliano",
       "club": "C.S. y D. Defensores de Banfield",
-      "appearances": 11,
-      "goals": 105,
+      "appearances": 12,
+      "goals": 117,
       "yellow": 2,
       "two_min": 3,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 9.55
+      "goals_per_game": 9.75
     },
     {
       "name": "Laurenzano Castiglione, Renzo...",
       "club": "Club Deportivo Morón",
-      "appearances": 12,
-      "goals": 96,
+      "appearances": 13,
+      "goals": 99,
       "yellow": 3,
+      "two_min": 8,
+      "red": 2,
+      "blue": 0,
+      "goals_per_game": 7.62
+    },
+    {
+      "name": "Rodriguez, Pablo Ignacio",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 12,
+      "goals": 84,
+      "yellow": 0,
       "two_min": 5,
       "red": 1,
       "blue": 0,
-      "goals_per_game": 8.0
+      "goals_per_game": 7.0
     },
     {
       "name": "Vieyra, Federico Matias",
@@ -254,246 +265,268 @@
       "goals_per_game": 7.36
     },
     {
-      "name": "Vergara, Braian Ezequiel",
-      "club": "Municipalidad de Pilar",
-      "appearances": 12,
-      "goals": 75,
-      "yellow": 0,
-      "two_min": 5,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 6.25
-    },
-    {
-      "name": "Rodriguez, Pablo Ignacio",
-      "club": "S.A.G. Polvorines D",
-      "appearances": 11,
-      "goals": 75,
-      "yellow": 0,
-      "two_min": 5,
-      "red": 1,
-      "blue": 0,
-      "goals_per_game": 6.82
-    },
-    {
-      "name": "Innella, Gaston",
-      "club": "Palermo Handball",
-      "appearances": 12,
-      "goals": 72,
-      "yellow": 0,
-      "two_min": 2,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 6.0
-    },
-    {
       "name": "Dyfort, Demian Christian",
       "club": "Argentinos Juniors D",
-      "appearances": 9,
-      "goals": 70,
+      "appearances": 10,
+      "goals": 78,
       "yellow": 1,
       "two_min": 1,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 7.78
+      "goals_per_game": 7.8
     },
     {
-      "name": "Ferrari, Felipe",
-      "club": "Muñiz Handball B",
-      "appearances": 11,
-      "goals": 64,
+      "name": "Vergara, Braian Ezequiel",
+      "club": "Municipalidad de Pilar",
+      "appearances": 13,
+      "goals": 76,
       "yellow": 0,
-      "two_min": 1,
+      "two_min": 5,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 5.85
+    },
+    {
+      "name": "Innella, Gaston",
+      "club": "Palermo Handball",
+      "appearances": 13,
+      "goals": 75,
+      "yellow": 0,
+      "two_min": 2,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 5.82
+      "goals_per_game": 5.77
     },
     {
       "name": "Viggiano, Valentin Nicolas",
       "club": "Palermo Handball",
-      "appearances": 12,
-      "goals": 61,
+      "appearances": 13,
+      "goals": 69,
       "yellow": 2,
       "two_min": 4,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 5.08
+      "goals_per_game": 5.31
+    },
+    {
+      "name": "Ferrari, Felipe",
+      "club": "Muñiz Handball B",
+      "appearances": 12,
+      "goals": 67,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 5.58
     },
     {
       "name": "Gomez, Leandro Luis Nicolas",
       "club": "U.N.La.M.",
-      "appearances": 11,
-      "goals": 61,
+      "appearances": 12,
+      "goals": 63,
       "yellow": 0,
-      "two_min": 4,
+      "two_min": 5,
       "red": 1,
       "blue": 0,
-      "goals_per_game": 5.55
+      "goals_per_game": 5.25
     },
     {
-      "name": "Ferrante, Rodrigo",
-      "club": "Club Deportivo Morón",
+      "name": "Aguero, Mariano Lucas",
+      "club": "Ituzaingó",
       "appearances": 12,
-      "goals": 59,
+      "goals": 63,
       "yellow": 0,
-      "two_min": 8,
-      "red": 1,
+      "two_min": 1,
+      "red": 0,
       "blue": 0,
-      "goals_per_game": 4.92
+      "goals_per_game": 5.25
     },
     {
       "name": "Delpieri, Mateo",
       "club": "S.A.P.A.",
-      "appearances": 12,
-      "goals": 57,
+      "appearances": 13,
+      "goals": 62,
       "yellow": 2,
       "two_min": 7,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 4.75
+      "goals_per_game": 4.77
+    },
+    {
+      "name": "Ferrante, Rodrigo",
+      "club": "Club Deportivo Morón",
+      "appearances": 13,
+      "goals": 62,
+      "yellow": 0,
+      "two_min": 9,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 4.77
     },
     {
       "name": "Ayala, Axel Tomas Gabr",
       "club": "Lanús C",
+      "appearances": 13,
+      "goals": 58,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.46
+    },
+    {
+      "name": "Lucero, Mateo Gabriel",
+      "club": "Defensores de Moreno",
+      "appearances": 13,
+      "goals": 57,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.38
+    },
+    {
+      "name": "Barreto, Mariano Nicolas",
+      "club": "Lanús C",
+      "appearances": 13,
+      "goals": 56,
+      "yellow": 1,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 4.31
+    },
+    {
+      "name": "Roldan, Diego Tomas",
+      "club": "Municipalidad de Pilar",
+      "appearances": 13,
+      "goals": 56,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.31
+    },
+    {
+      "name": "Gonzalez, Santiago",
+      "club": "Ituzaingó",
+      "appearances": 12,
+      "goals": 56,
+      "yellow": 4,
+      "two_min": 8,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.67
+    },
+    {
+      "name": "Ruiz Diaz, Santiago",
+      "club": "Banfield B",
+      "appearances": 13,
+      "goals": 55,
+      "yellow": 0,
+      "two_min": 5,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 4.23
+    },
+    {
+      "name": "Ramos, Lautaro Manuel",
+      "club": "Municipalidad de Pilar",
+      "appearances": 13,
+      "goals": 55,
+      "yellow": 0,
+      "two_min": 5,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 4.23
+    },
+    {
+      "name": "Ruiz, Juan Agustin",
+      "club": "S.A.G. Polvorines D",
       "appearances": 12,
       "goals": 54,
       "yellow": 0,
-      "two_min": 0,
+      "two_min": 2,
       "red": 0,
       "blue": 0,
       "goals_per_game": 4.5
     },
     {
-      "name": "Lucero, Mateo Gabriel",
-      "club": "Defensores de Moreno",
-      "appearances": 12,
-      "goals": 53,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 4.42
-    },
-    {
-      "name": "Barreto, Mariano Nicolas",
-      "club": "Lanús C",
-      "appearances": 12,
-      "goals": 53,
-      "yellow": 1,
-      "two_min": 3,
-      "red": 1,
-      "blue": 0,
-      "goals_per_game": 4.42
-    },
-    {
-      "name": "Aguero, Mariano Lucas",
-      "club": "Ituzaingó",
-      "appearances": 11,
-      "goals": 53,
-      "yellow": 0,
-      "two_min": 1,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 4.82
-    },
-    {
-      "name": "Ruiz Diaz, Santiago",
-      "club": "Banfield B",
-      "appearances": 12,
-      "goals": 52,
-      "yellow": 0,
-      "two_min": 5,
-      "red": 1,
-      "blue": 0,
-      "goals_per_game": 4.33
-    },
-    {
-      "name": "Gonzalez, Santiago",
-      "club": "Ituzaingó",
-      "appearances": 11,
-      "goals": 51,
-      "yellow": 4,
-      "two_min": 7,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 4.64
-    },
-    {
       "name": "Magallan, Gonzalo Hernan",
       "club": "Muñiz Handball B",
-      "appearances": 11,
-      "goals": 51,
+      "appearances": 12,
+      "goals": 54,
       "yellow": 0,
       "two_min": 1,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 4.64
+      "goals_per_game": 4.5
     },
     {
-      "name": "Ruiz, Juan Agustin",
-      "club": "S.A.G. Polvorines D",
-      "appearances": 11,
-      "goals": 50,
+      "name": "Gobbi, Ignacio",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 9,
+      "goals": 52,
       "yellow": 0,
-      "two_min": 2,
+      "two_min": 1,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 4.55
+      "goals_per_game": 5.78
     },
     {
       "name": "Fusto, Agustin Ezequiel",
       "club": "Municipalidad de Tres de Febrero B",
-      "appearances": 11,
-      "goals": 50,
+      "appearances": 12,
+      "goals": 51,
       "yellow": 0,
       "two_min": 6,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 4.55
-    },
-    {
-      "name": "Ramos, Lautaro Manuel",
-      "club": "Municipalidad de Pilar",
-      "appearances": 12,
-      "goals": 49,
-      "yellow": 0,
-      "two_min": 5,
       "red": 1,
       "blue": 0,
-      "goals_per_game": 4.08
-    },
-    {
-      "name": "Roldan, Diego Tomas",
-      "club": "Municipalidad de Pilar",
-      "appearances": 12,
-      "goals": 47,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 3.92
+      "goals_per_game": 4.25
     },
     {
       "name": "Navarro, Jonatan Gonzalo",
       "club": "S.A.G. Polvorines D",
-      "appearances": 9,
-      "goals": 47,
+      "appearances": 10,
+      "goals": 50,
       "yellow": 0,
       "two_min": 2,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 5.22
+      "goals_per_game": 5.0
     },
     {
       "name": "Rial, Agustin Nicolas",
       "club": "Club Deportivo Morón",
-      "appearances": 12,
-      "goals": 46,
+      "appearances": 13,
+      "goals": 49,
       "yellow": 0,
       "two_min": 3,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 3.83
+      "goals_per_game": 3.77
+    },
+    {
+      "name": "Encina, Dante Daniel",
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
+      "appearances": 11,
+      "goals": 48,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.36
+    },
+    {
+      "name": "Martinez, Milo Ulises",
+      "club": "S.A.P.A.",
+      "appearances": 10,
+      "goals": 46,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 4.6
     },
     {
       "name": "Fernandez, Agustin Gabriel",
@@ -507,37 +540,59 @@
       "goals_per_game": 6.57
     },
     {
-      "name": "Gobbi, Ignacio",
-      "club": "Municipalidad de Vicente López C",
-      "appearances": 8,
-      "goals": 45,
+      "name": "Guccione, Nicolas",
+      "club": "Lanús C",
+      "appearances": 13,
+      "goals": 44,
       "yellow": 0,
-      "two_min": 1,
+      "two_min": 4,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 5.62
+      "goals_per_game": 3.38
     },
     {
-      "name": "Encina, Dante Daniel",
-      "club": "Municipalidad de San Martín (Ce.M.E.F)",
-      "appearances": 10,
-      "goals": 42,
-      "yellow": 0,
-      "two_min": 3,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 4.2
-    },
-    {
-      "name": "Martinez, Milo Ulises",
-      "club": "S.A.P.A.",
+      "name": "Echeverria, Juan Pablo",
+      "club": "S.A.G. Polvorines D",
       "appearances": 9,
+      "goals": 43,
+      "yellow": 0,
+      "two_min": 6,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.78
+    },
+    {
+      "name": "Valenzuela, Franco Leonel",
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
+      "appearances": 11,
+      "goals": 42,
+      "yellow": 1,
+      "two_min": 9,
+      "red": 4,
+      "blue": 0,
+      "goals_per_game": 3.82
+    },
+    {
+      "name": "Otegui, Juan",
+      "club": "Palermo Handball",
+      "appearances": 13,
+      "goals": 41,
+      "yellow": 1,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.15
+    },
+    {
+      "name": "Pallarini, Lautaro Adrian",
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
+      "appearances": 12,
       "goals": 41,
       "yellow": 0,
       "two_min": 1,
-      "red": 1,
+      "red": 0,
       "blue": 0,
-      "goals_per_game": 4.56
+      "goals_per_game": 3.42
     },
     {
       "name": "Gimenez, Lucas Nicolas",
@@ -562,6 +617,17 @@
       "goals_per_game": 5.86
     },
     {
+      "name": "Naser, Adrian Aalejandro",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 12,
+      "goals": 40,
+      "yellow": 0,
+      "two_min": 6,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.33
+    },
+    {
       "name": "Romero Boeris, Sebastian",
       "club": "S.A.P.A.",
       "appearances": 7,
@@ -573,37 +639,70 @@
       "goals_per_game": 5.71
     },
     {
-      "name": "Otegui, Juan",
-      "club": "Palermo Handball",
+      "name": "Delaloye, Mateo Valentin",
+      "club": "Defensores de Moreno",
+      "appearances": 13,
+      "goals": 39,
+      "yellow": 2,
+      "two_min": 7,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 3.0
+    },
+    {
+      "name": "Burgos, Facundo Gabriel",
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
       "appearances": 12,
       "goals": 39,
-      "yellow": 1,
-      "two_min": 1,
+      "yellow": 0,
+      "two_min": 0,
       "red": 0,
       "blue": 0,
       "goals_per_game": 3.25
     },
     {
-      "name": "Guccione, Nicolas",
+      "name": "Szymborski, Lautaro",
       "club": "Lanús C",
       "appearances": 12,
       "goals": 39,
       "yellow": 0,
-      "two_min": 4,
+      "two_min": 2,
       "red": 0,
       "blue": 0,
       "goals_per_game": 3.25
     },
     {
-      "name": "Pallarini, Lautaro Adrian",
-      "club": "Municipalidad de San Martín (Ce.M.E.F)",
-      "appearances": 11,
+      "name": "Flores, Gonzalo Nahuel",
+      "club": "Defensores de Moreno",
+      "appearances": 10,
       "goals": 39,
+      "yellow": 1,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.9
+    },
+    {
+      "name": "Lares, Joaquin Nahuel",
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 12,
+      "goals": 38,
+      "yellow": 2,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 3.17
+    },
+    {
+      "name": "Rizza, Valentin",
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 12,
+      "goals": 37,
       "yellow": 0,
       "two_min": 1,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 3.55
+      "goals_per_game": 3.08
     },
     {
       "name": "Cabred, Lucas Fabrizio",
@@ -617,48 +716,15 @@
       "goals_per_game": 3.08
     },
     {
-      "name": "Szymborski, Lautaro",
-      "club": "Lanús C",
+      "name": "Testa, Jonatan Ezequiel",
+      "club": "Municipalidad de Tres de Febrero B",
       "appearances": 11,
       "goals": 37,
       "yellow": 0,
-      "two_min": 2,
+      "two_min": 1,
       "red": 0,
       "blue": 0,
       "goals_per_game": 3.36
-    },
-    {
-      "name": "Valenzuela, Franco Leonel",
-      "club": "Municipalidad de San Martín (Ce.M.E.F)",
-      "appearances": 10,
-      "goals": 37,
-      "yellow": 1,
-      "two_min": 7,
-      "red": 3,
-      "blue": 0,
-      "goals_per_game": 3.7
-    },
-    {
-      "name": "Delaloye, Mateo Valentin",
-      "club": "Defensores de Moreno",
-      "appearances": 12,
-      "goals": 36,
-      "yellow": 2,
-      "two_min": 7,
-      "red": 1,
-      "blue": 0,
-      "goals_per_game": 3.0
-    },
-    {
-      "name": "Burgos, Facundo Gabriel",
-      "club": "Municipalidad de San Martín (Ce.M.E.F)",
-      "appearances": 11,
-      "goals": 36,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 3.27
     },
     {
       "name": "Scofano, Gian Luca",
@@ -683,92 +749,103 @@
       "goals_per_game": 4.0
     },
     {
-      "name": "Echeverria, Juan Pablo",
-      "club": "S.A.G. Polvorines D",
-      "appearances": 8,
-      "goals": 36,
+      "name": "Iglesias, Genaro",
+      "club": "Palermo Handball",
+      "appearances": 12,
+      "goals": 35,
       "yellow": 0,
       "two_min": 5,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 4.5
+      "goals_per_game": 2.92
     },
     {
-      "name": "Lares, Joaquin Nahuel",
-      "club": "C.S. y D. Defensores de Banfield",
+      "name": "Vazquez, Leonardo Ariel",
+      "club": "Lanús C",
       "appearances": 11,
-      "goals": 34,
-      "yellow": 2,
-      "two_min": 3,
-      "red": 1,
-      "blue": 0,
-      "goals_per_game": 3.09
-    },
-    {
-      "name": "Iglesias, Genaro",
-      "club": "Palermo Handball",
-      "appearances": 11,
-      "goals": 34,
+      "goals": 35,
       "yellow": 0,
       "two_min": 4,
-      "red": 0,
+      "red": 1,
       "blue": 0,
-      "goals_per_game": 3.09
+      "goals_per_game": 3.18
     },
     {
-      "name": "Testa, Jonatan Ezequiel",
-      "club": "Municipalidad de Tres de Febrero B",
-      "appearances": 10,
-      "goals": 33,
+      "name": "Carruthers, Benjamin",
+      "club": "Defensores de Moreno",
+      "appearances": 13,
+      "goals": 34,
       "yellow": 0,
       "two_min": 1,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 3.3
+      "goals_per_game": 2.62
     },
     {
-      "name": "Flores, Gonzalo Nahuel",
-      "club": "Defensores de Moreno",
-      "appearances": 9,
-      "goals": 33,
-      "yellow": 1,
-      "two_min": 0,
+      "name": "Fernandez, Luciano",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 10,
+      "goals": 34,
+      "yellow": 0,
+      "two_min": 3,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 3.67
+      "goals_per_game": 3.4
+    },
+    {
+      "name": "Levy, Leonardo G.",
+      "club": "Argentinos Juniors D",
+      "appearances": 10,
+      "goals": 33,
+      "yellow": 0,
+      "two_min": 6,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 3.3
     },
     {
       "name": "Vieyra, Marcelo A.",
       "club": "Municipalidad de Vicente López C",
-      "appearances": 7,
+      "appearances": 8,
       "goals": 33,
       "yellow": 0,
       "two_min": 7,
       "red": 1,
       "blue": 0,
-      "goals_per_game": 4.71
+      "goals_per_game": 4.12
     },
     {
-      "name": "Naser, Adrian Aalejandro",
-      "club": "Municipalidad de Vicente López C",
-      "appearances": 11,
-      "goals": 32,
-      "yellow": 0,
-      "two_min": 5,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 2.91
-    },
-    {
-      "name": "Fernandez, Luciano",
+      "name": "Ayabarrena, Fernando Daniel",
       "club": "Municipalidad de Tres de Febrero B",
-      "appearances": 9,
+      "appearances": 13,
       "goals": 32,
       "yellow": 0,
-      "two_min": 3,
+      "two_min": 2,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 3.56
+      "goals_per_game": 2.46
+    },
+    {
+      "name": "Macagni Legallais, Tomas",
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 13,
+      "goals": 31,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.38
+    },
+    {
+      "name": "Dembinski, Santino Hernan",
+      "club": "Muñiz Handball B",
+      "appearances": 10,
+      "goals": 31,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.1
     },
     {
       "name": "Ramos, Lucas",
@@ -782,6 +859,17 @@
       "goals_per_game": 3.44
     },
     {
+      "name": "Borrelli, Matias Exequiel Tomas",
+      "club": "Palermo Handball",
+      "appearances": 13,
+      "goals": 30,
+      "yellow": 0,
+      "two_min": 6,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.31
+    },
+    {
       "name": "Torres, Maximiliano Gaston",
       "club": "C.S. y D. Defensores de Banfield",
       "appearances": 11,
@@ -793,59 +881,59 @@
       "goals_per_game": 2.73
     },
     {
-      "name": "Rizza, Valentin",
-      "club": "C.S. y D. Defensores de Banfield",
-      "appearances": 11,
+      "name": "Pineiro, Dante",
+      "club": "U.N.La.M.",
+      "appearances": 9,
       "goals": 30,
       "yellow": 0,
-      "two_min": 1,
+      "two_min": 3,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 2.73
+      "goals_per_game": 3.33
     },
     {
-      "name": "Borrelli, Matias Exequiel Tomas",
-      "club": "Palermo Handball",
-      "appearances": 12,
-      "goals": 29,
+      "name": "Benvenuto, Pablo Ezequiel",
+      "club": "Ituzaingó",
+      "appearances": 8,
+      "goals": 30,
       "yellow": 0,
       "two_min": 5,
-      "red": 0,
+      "red": 1,
       "blue": 0,
-      "goals_per_game": 2.42
+      "goals_per_game": 3.75
     },
     {
       "name": "Vedia, Tomas",
       "club": "Lanús C",
-      "appearances": 12,
+      "appearances": 13,
       "goals": 29,
       "yellow": 0,
       "two_min": 4,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 2.42
+      "goals_per_game": 2.23
     },
     {
-      "name": "Ayabarrena, Fernando Daniel",
-      "club": "Municipalidad de Tres de Febrero B",
-      "appearances": 12,
-      "goals": 29,
-      "yellow": 0,
-      "two_min": 2,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 2.42
-    },
-    {
-      "name": "Vazquez, Leonardo Ariel",
+      "name": "Siesicki, Ivan Ariel",
       "club": "Lanús C",
-      "appearances": 10,
+      "appearances": 13,
       "goals": 29,
       "yellow": 0,
-      "two_min": 4,
-      "red": 1,
+      "two_min": 0,
+      "red": 0,
       "blue": 0,
-      "goals_per_game": 2.9
+      "goals_per_game": 2.23
+    },
+    {
+      "name": "Garcia, Emiliano Angel",
+      "club": "Ituzaingó",
+      "appearances": 11,
+      "goals": 29,
+      "yellow": 1,
+      "two_min": 5,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.64
     },
     {
       "name": "Hoyos, Alan Nahuel",
@@ -859,68 +947,46 @@
       "goals_per_game": 3.62
     },
     {
-      "name": "Macagni Legallais, Tomas",
-      "club": "C.S. y D. Defensores de Banfield",
+      "name": "Galvan, Juan Pablo",
+      "club": "Club Deportivo Morón",
       "appearances": 12,
       "goals": 28,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 2.33
-    },
-    {
-      "name": "Carruthers, Benjamin",
-      "club": "Defensores de Moreno",
-      "appearances": 12,
-      "goals": 28,
-      "yellow": 0,
-      "two_min": 1,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 2.33
-    },
-    {
-      "name": "Siesicki, Ivan Ariel",
-      "club": "Lanús C",
-      "appearances": 12,
-      "goals": 28,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 2.33
-    },
-    {
-      "name": "Garcia, Emiliano Angel",
-      "club": "Ituzaingó",
-      "appearances": 10,
-      "goals": 28,
-      "yellow": 1,
-      "two_min": 5,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 2.8
-    },
-    {
-      "name": "Levy, Leonardo G.",
-      "club": "Argentinos Juniors D",
-      "appearances": 9,
-      "goals": 28,
-      "yellow": 0,
-      "two_min": 5,
-      "red": 1,
-      "blue": 0,
-      "goals_per_game": 3.11
-    },
-    {
-      "name": "Dembinski, Santino Hernan",
-      "club": "Muñiz Handball B",
-      "appearances": 9,
-      "goals": 27,
       "yellow": 0,
       "two_min": 2,
       "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.33
+    },
+    {
+      "name": "Gomes Persello, Marcos Ezequ...",
+      "club": "Muñiz Handball B",
+      "appearances": 8,
+      "goals": 28,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.5
+    },
+    {
+      "name": "Gimenez Correa, Joaquin Gabri...",
+      "club": "Municipalidad de Pilar",
+      "appearances": 12,
+      "goals": 27,
+      "yellow": 1,
+      "two_min": 7,
+      "red": 2,
+      "blue": 0,
+      "goals_per_game": 2.25
+    },
+    {
+      "name": "Sapea, Mariano Julian",
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
+      "appearances": 9,
+      "goals": 27,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 1,
       "blue": 0,
       "goals_per_game": 3.0
     },
@@ -936,15 +1002,37 @@
       "goals_per_game": 3.38
     },
     {
-      "name": "Sapea, Mariano Julian",
-      "club": "Municipalidad de San Martín (Ce.M.E.F)",
-      "appearances": 8,
-      "goals": 27,
+      "name": "Brokoff, Mariano Alejandro",
+      "club": "Argentinos Juniors D",
+      "appearances": 13,
+      "goals": 26,
       "yellow": 0,
-      "two_min": 3,
-      "red": 1,
+      "two_min": 4,
+      "red": 0,
       "blue": 0,
-      "goals_per_game": 3.38
+      "goals_per_game": 2.0
+    },
+    {
+      "name": "Almiron, Facundo Sebastian",
+      "club": "U.N.La.M.",
+      "appearances": 13,
+      "goals": 26,
+      "yellow": 1,
+      "two_min": 5,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
+      "name": "Ramirez, Nicolas",
+      "club": "S.A.P.A.",
+      "appearances": 10,
+      "goals": 26,
+      "yellow": 2,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.6
     },
     {
       "name": "Videla, Lucas Andres",
@@ -958,17 +1046,6 @@
       "goals_per_game": 2.6
     },
     {
-      "name": "Benvenuto, Pablo Ezequiel",
-      "club": "Ituzaingó",
-      "appearances": 7,
-      "goals": 26,
-      "yellow": 0,
-      "two_min": 4,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 3.71
-    },
-    {
       "name": "Magallanes, Matias Andres",
       "club": "Municipalidad de Tres de Febrero B",
       "appearances": 6,
@@ -980,37 +1057,37 @@
       "goals_per_game": 4.33
     },
     {
-      "name": "Brokoff, Mariano Alejandro",
-      "club": "Argentinos Juniors D",
-      "appearances": 12,
+      "name": "Cafferata, Santiago Damian",
+      "club": "Banfield B",
+      "appearances": 13,
       "goals": 25,
-      "yellow": 0,
+      "yellow": 1,
       "two_min": 4,
-      "red": 0,
+      "red": 1,
       "blue": 0,
-      "goals_per_game": 2.08
+      "goals_per_game": 1.92
     },
     {
-      "name": "Almiron, Facundo Sebastian",
-      "club": "U.N.La.M.",
-      "appearances": 12,
+      "name": "Badaracco Carola, Fabio Nahu...",
+      "club": "Banfield B",
+      "appearances": 11,
       "goals": 25,
       "yellow": 0,
-      "two_min": 4,
+      "two_min": 1,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 2.08
+      "goals_per_game": 2.27
     },
     {
-      "name": "Pineiro, Dante",
-      "club": "U.N.La.M.",
-      "appearances": 8,
+      "name": "Ramirez, Gaston",
+      "club": "S.A.P.A.",
+      "appearances": 10,
       "goals": 25,
       "yellow": 0,
-      "two_min": 3,
+      "two_min": 0,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 3.12
+      "goals_per_game": 2.5
     },
     {
       "name": "Bianco, Agustin Javier",
@@ -1024,52 +1101,30 @@
       "goals_per_game": 5.0
     },
     {
-      "name": "Cafferata, Santiago Damian",
-      "club": "Banfield B",
-      "appearances": 12,
-      "goals": 24,
-      "yellow": 1,
-      "two_min": 4,
-      "red": 1,
-      "blue": 0,
-      "goals_per_game": 2.0
-    },
-    {
-      "name": "Galvan, Juan Pablo",
-      "club": "Club Deportivo Morón",
-      "appearances": 11,
+      "name": "Mendoza, Alexis Agustin",
+      "club": "Muñiz Handball B",
+      "appearances": 13,
       "goals": 24,
       "yellow": 0,
       "two_min": 2,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 2.18
+      "goals_per_game": 1.85
     },
     {
-      "name": "Gimenez Correa, Joaquin Gabri...",
-      "club": "Municipalidad de Pilar",
-      "appearances": 11,
-      "goals": 24,
-      "yellow": 0,
-      "two_min": 6,
-      "red": 1,
-      "blue": 0,
-      "goals_per_game": 2.18
-    },
-    {
-      "name": "Ramirez, Gaston",
+      "name": "Chavez, Alexis Ezequiel",
       "club": "S.A.P.A.",
-      "appearances": 9,
+      "appearances": 7,
       "goals": 24,
       "yellow": 0,
       "two_min": 0,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 2.67
+      "goals_per_game": 3.43
     },
     {
-      "name": "Chavez, Alexis Ezequiel",
-      "club": "S.A.P.A.",
+      "name": "Sommer, Martin",
+      "club": "Banfield B",
       "appearances": 7,
       "goals": 24,
       "yellow": 0,
@@ -1101,6 +1156,28 @@
       "goals_per_game": 4.8
     },
     {
+      "name": "Moreira, Adrian",
+      "club": "Lanús C",
+      "appearances": 4,
+      "goals": 24,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 6.0
+    },
+    {
+      "name": "Gonzalez, Julian Gabriel",
+      "club": "Banfield B",
+      "appearances": 13,
+      "goals": 23,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.77
+    },
+    {
       "name": "Mollo Skripnik Strelecki, Lucian...",
       "club": "S.A.P.A.",
       "appearances": 11,
@@ -1123,48 +1200,26 @@
       "goals_per_game": 2.3
     },
     {
-      "name": "Gomes Persello, Marcos Ezequ...",
-      "club": "Muñiz Handball B",
-      "appearances": 7,
-      "goals": 23,
-      "yellow": 0,
-      "two_min": 2,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 3.29
-    },
-    {
-      "name": "Mendoza, Alexis Agustin",
-      "club": "Muñiz Handball B",
-      "appearances": 12,
+      "name": "Romero Canete, Alcides Antoni...",
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 11,
       "goals": 22,
-      "yellow": 0,
+      "yellow": 1,
       "two_min": 2,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 1.83
+      "goals_per_game": 2.0
     },
     {
-      "name": "Badaracco Carola, Fabio Nahu...",
-      "club": "Banfield B",
+      "name": "Garcia, Thiago Gabriel Anibal",
+      "club": "Municipalidad de Tres de Febrero B",
       "appearances": 10,
       "goals": 22,
       "yellow": 0,
-      "two_min": 1,
+      "two_min": 8,
       "red": 0,
       "blue": 0,
       "goals_per_game": 2.2
-    },
-    {
-      "name": "Ramirez, Nicolas",
-      "club": "S.A.P.A.",
-      "appearances": 9,
-      "goals": 22,
-      "yellow": 2,
-      "two_min": 2,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 2.44
     },
     {
       "name": "Mougel, Alejo Valentin",
@@ -1178,70 +1233,92 @@
       "goals_per_game": 3.14
     },
     {
-      "name": "De Lorenzo, Matias Nicolas",
-      "club": "Banfield B",
-      "appearances": 12,
-      "goals": 21,
-      "yellow": 2,
-      "two_min": 7,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 1.75
-    },
-    {
-      "name": "Gonzalez, Julian Gabriel",
-      "club": "Banfield B",
-      "appearances": 12,
-      "goals": 21,
-      "yellow": 0,
-      "two_min": 4,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 1.75
-    },
-    {
-      "name": "Romero Canete, Alcides Antoni...",
-      "club": "C.S. y D. Defensores de Banfield",
-      "appearances": 10,
-      "goals": 21,
-      "yellow": 1,
-      "two_min": 1,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 2.1
-    },
-    {
-      "name": "Garcia, Thiago Gabriel Anibal",
-      "club": "Municipalidad de Tres de Febrero B",
-      "appearances": 9,
-      "goals": 21,
-      "yellow": 0,
-      "two_min": 7,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 2.33
-    },
-    {
-      "name": "Romero, Elias Josue",
-      "club": "Palermo Handball",
-      "appearances": 12,
-      "goals": 20,
+      "name": "Pedernera, Gonzalo",
+      "club": "Argentinos Juniors D",
+      "appearances": 5,
+      "goals": 22,
       "yellow": 0,
       "two_min": 2,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 1.67
+      "goals_per_game": 4.4
+    },
+    {
+      "name": "Romero, Elias Josue",
+      "club": "Palermo Handball",
+      "appearances": 13,
+      "goals": 21,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.62
+    },
+    {
+      "name": "De Lorenzo, Matias Nicolas",
+      "club": "Banfield B",
+      "appearances": 13,
+      "goals": 21,
+      "yellow": 2,
+      "two_min": 8,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.62
+    },
+    {
+      "name": "Gimenez Asciutto, Mateo",
+      "club": "Palermo Handball",
+      "appearances": 13,
+      "goals": 20,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.54
+    },
+    {
+      "name": "Diaz, Enrique Adrian",
+      "club": "Lanús C",
+      "appearances": 13,
+      "goals": 20,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.54
+    },
+    {
+      "name": "Ojea, Nazareno",
+      "club": "Club Deportivo Morón",
+      "appearances": 13,
+      "goals": 20,
+      "yellow": 1,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.54
+    },
+    {
+      "name": "Roldan, Facundo Carlos",
+      "club": "Municipalidad de Pilar",
+      "appearances": 13,
+      "goals": 20,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.54
     },
     {
       "name": "Garcia Cupido, Sebastian",
       "club": "S.A.G. Polvorines D",
-      "appearances": 11,
+      "appearances": 12,
       "goals": 20,
       "yellow": 0,
       "two_min": 0,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 1.82
+      "goals_per_game": 1.67
     },
     {
       "name": "Curutchet, Gaston Horacio",
@@ -1255,8 +1332,30 @@
       "goals_per_game": 1.82
     },
     {
+      "name": "D'Angelo, Martin Alejandro",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 11,
+      "goals": 20,
+      "yellow": 1,
+      "two_min": 3,
+      "red": 2,
+      "blue": 0,
+      "goals_per_game": 1.82
+    },
+    {
       "name": "Grisolia, Geronimo Gabriel",
       "club": "S.A.P.A.",
+      "appearances": 9,
+      "goals": 20,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.22
+    },
+    {
+      "name": "Brizuela, Lucio Nicolas",
+      "club": "Banfield B",
       "appearances": 9,
       "goals": 20,
       "yellow": 0,
@@ -1277,23 +1376,23 @@
       "goals_per_game": 2.5
     },
     {
-      "name": "Moreira, Adrian",
-      "club": "Lanús C",
-      "appearances": 3,
+      "name": "Cappelletti, Leonardo Hector",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 8,
       "goals": 20,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 6.67
-    },
-    {
-      "name": "Ojea, Nazareno",
-      "club": "Club Deportivo Morón",
-      "appearances": 12,
-      "goals": 19,
       "yellow": 1,
       "two_min": 1,
+      "red": 1,
+      "blue": 1,
+      "goals_per_game": 2.5
+    },
+    {
+      "name": "Toniutti, Santiago Ariel",
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 12,
+      "goals": 19,
+      "yellow": 0,
+      "two_min": 2,
       "red": 0,
       "blue": 0,
       "goals_per_game": 1.58
@@ -1301,13 +1400,13 @@
     {
       "name": "Aveiro Ortega, Gustavo Daniel",
       "club": "S.A.G. Polvorines D",
-      "appearances": 11,
+      "appearances": 12,
       "goals": 19,
       "yellow": 0,
       "two_min": 5,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 1.73
+      "goals_per_game": 1.58
     },
     {
       "name": "Martinez, Francisco Tomas",
@@ -1321,70 +1420,59 @@
       "goals_per_game": 1.73
     },
     {
-      "name": "D'Angelo, Martin Alejandro",
-      "club": "Municipalidad de Vicente López C",
+      "name": "Alonso, Julian",
+      "club": "Palermo Handball",
+      "appearances": 11,
+      "goals": 19,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.73
+    },
+    {
+      "name": "Ferrari, Jonas Horacio",
+      "club": "S.A.P.A.",
       "appearances": 10,
       "goals": 19,
-      "yellow": 1,
-      "two_min": 3,
+      "yellow": 0,
+      "two_min": 5,
       "red": 2,
       "blue": 0,
       "goals_per_game": 1.9
     },
     {
-      "name": "Ferrari, Jonas Horacio",
-      "club": "S.A.P.A.",
-      "appearances": 9,
-      "goals": 18,
-      "yellow": 0,
-      "two_min": 3,
-      "red": 2,
-      "blue": 0,
-      "goals_per_game": 2.0
-    },
-    {
       "name": "Rodriguez, Tomas Emanuel",
       "club": "Banfield B",
-      "appearances": 9,
+      "appearances": 10,
       "goals": 18,
       "yellow": 0,
       "two_min": 4,
       "red": 1,
       "blue": 0,
-      "goals_per_game": 2.0
+      "goals_per_game": 1.8
     },
     {
-      "name": "Gimenez Asciutto, Mateo",
-      "club": "Palermo Handball",
-      "appearances": 12,
-      "goals": 17,
+      "name": "Loiacono, Ignacio Nicolas",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 6,
+      "goals": 18,
       "yellow": 0,
-      "two_min": 1,
+      "two_min": 0,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 1.42
+      "goals_per_game": 3.0
     },
     {
-      "name": "Roldan, Facundo Carlos",
-      "club": "Municipalidad de Pilar",
+      "name": "Toto, Miguel Ignacio",
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
       "appearances": 12,
       "goals": 17,
       "yellow": 0,
-      "two_min": 2,
+      "two_min": 7,
       "red": 1,
       "blue": 0,
       "goals_per_game": 1.42
-    },
-    {
-      "name": "Toniutti, Santiago Ariel",
-      "club": "C.S. y D. Defensores de Banfield",
-      "appearances": 11,
-      "goals": 17,
-      "yellow": 0,
-      "two_min": 2,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 1.55
     },
     {
       "name": "Verrina Balda, Faustino",
@@ -1400,35 +1488,35 @@
     {
       "name": "Nunez, Rodrigo",
       "club": "Banfield B",
-      "appearances": 10,
+      "appearances": 11,
       "goals": 17,
       "yellow": 1,
       "two_min": 4,
       "red": 0,
       "blue": 0,
+      "goals_per_game": 1.55
+    },
+    {
+      "name": "Perez, Pablo Santiago",
+      "club": "Argentinos Juniors D",
+      "appearances": 10,
+      "goals": 17,
+      "yellow": 0,
+      "two_min": 8,
+      "red": 2,
+      "blue": 0,
       "goals_per_game": 1.7
     },
     {
-      "name": "Brizuela, Lucio Nicolas",
-      "club": "Banfield B",
-      "appearances": 8,
+      "name": "Rayan, Tomas Uriel",
+      "club": "Argentinos Juniors D",
+      "appearances": 9,
       "goals": 17,
       "yellow": 0,
-      "two_min": 0,
+      "two_min": 2,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 2.12
-    },
-    {
-      "name": "Cappelletti, Leonardo Hector",
-      "club": "Municipalidad de Vicente López C",
-      "appearances": 7,
-      "goals": 17,
-      "yellow": 1,
-      "two_min": 0,
-      "red": 1,
-      "blue": 1,
-      "goals_per_game": 2.43
+      "goals_per_game": 1.89
     },
     {
       "name": "Maldonado, Joel Agustin",
@@ -1442,63 +1530,41 @@
       "goals_per_game": 2.43
     },
     {
-      "name": "Sommer, Martin",
-      "club": "Banfield B",
-      "appearances": 6,
-      "goals": 17,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 2.83
-    },
-    {
-      "name": "Diaz, Enrique Adrian",
-      "club": "Lanús C",
-      "appearances": 12,
-      "goals": 16,
-      "yellow": 0,
-      "two_min": 4,
-      "red": 1,
-      "blue": 0,
-      "goals_per_game": 1.33
-    },
-    {
       "name": "Perez, Pedro Gabriel",
       "club": "Argentinos Juniors D",
-      "appearances": 11,
+      "appearances": 12,
       "goals": 16,
       "yellow": 0,
       "two_min": 10,
       "red": 1,
       "blue": 0,
-      "goals_per_game": 1.45
-    },
-    {
-      "name": "Toto, Miguel Ignacio",
-      "club": "Municipalidad de San Martín (Ce.M.E.F)",
-      "appearances": 11,
-      "goals": 16,
-      "yellow": 0,
-      "two_min": 6,
-      "red": 1,
-      "blue": 0,
-      "goals_per_game": 1.45
-    },
-    {
-      "name": "Perez, Pablo Santiago",
-      "club": "Argentinos Juniors D",
-      "appearances": 9,
-      "goals": 16,
-      "yellow": 0,
-      "two_min": 8,
-      "red": 2,
-      "blue": 0,
-      "goals_per_game": 1.78
+      "goals_per_game": 1.33
     },
     {
       "name": "Nicholson Victorel, Joaquin",
       "club": "Defensores de Moreno",
+      "appearances": 9,
+      "goals": 16,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.78
+    },
+    {
+      "name": "Vieyra, Gonzalo Ezequiel",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 8,
+      "goals": 16,
+      "yellow": 1,
+      "two_min": 0,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
+      "name": "Roa, Matias Ivan",
+      "club": "Municipalidad de Tres de Febrero B",
       "appearances": 8,
       "goals": 16,
       "yellow": 0,
@@ -1508,15 +1574,26 @@
       "goals_per_game": 2.0
     },
     {
-      "name": "Vieyra, Gonzalo Ezequiel",
-      "club": "Municipalidad de Vicente López C",
+      "name": "Gomez, Luciano Agustin",
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
       "appearances": 7,
       "goals": 16,
       "yellow": 1,
       "two_min": 0,
-      "red": 1,
+      "red": 0,
       "blue": 0,
       "goals_per_game": 2.29
+    },
+    {
+      "name": "Szymborski, Ignacio",
+      "club": "Lanús C",
+      "appearances": 12,
+      "goals": 15,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.25
     },
     {
       "name": "Arevalo, Bautista Damian",
@@ -1528,6 +1605,28 @@
       "red": 0,
       "blue": 0,
       "goals_per_game": 1.25
+    },
+    {
+      "name": "Mariscal, Benjamin Thiago",
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 11,
+      "goals": 15,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.36
+    },
+    {
+      "name": "Montes, Ezequiel Martin",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 11,
+      "goals": 15,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.36
     },
     {
       "name": "Murino, Lautaro Ezequiel",
@@ -1552,15 +1651,15 @@
       "goals_per_game": 1.67
     },
     {
-      "name": "Rayan, Tomas Uriel",
-      "club": "Argentinos Juniors D",
-      "appearances": 8,
+      "name": "Saccomanno, Fernando Nicola...",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 9,
       "goals": 15,
       "yellow": 0,
-      "two_min": 2,
+      "two_min": 1,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 1.88
+      "goals_per_game": 1.67
     },
     {
       "name": "Luna, Leandro Nahuel",
@@ -1574,28 +1673,6 @@
       "goals_per_game": 2.14
     },
     {
-      "name": "Roa, Matias Ivan",
-      "club": "Municipalidad de Tres de Febrero B",
-      "appearances": 7,
-      "goals": 15,
-      "yellow": 0,
-      "two_min": 1,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 2.14
-    },
-    {
-      "name": "Gomez, Luciano Agustin",
-      "club": "Municipalidad de San Martín (Ce.M.E.F)",
-      "appearances": 6,
-      "goals": 15,
-      "yellow": 1,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 2.5
-    },
-    {
       "name": "Hafford Diciano, Ignacio Eduard...",
       "club": "Municipalidad de Vicente López C",
       "appearances": 4,
@@ -1607,54 +1684,32 @@
       "goals_per_game": 3.75
     },
     {
-      "name": "Pedernera, Gonzalo",
-      "club": "Argentinos Juniors D",
-      "appearances": 4,
+      "name": "Torrico Camacho, Kevin Alan",
+      "club": "U.N.La.M.",
+      "appearances": 3,
       "goals": 15,
       "yellow": 0,
       "two_min": 1,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 3.75
+      "goals_per_game": 5.0
     },
     {
       "name": "Caceres, Nestor Matias",
       "club": "C.S. y D. Defensores de Banfield",
-      "appearances": 12,
+      "appearances": 13,
       "goals": 14,
       "yellow": 0,
       "two_min": 4,
       "red": 1,
       "blue": 0,
-      "goals_per_game": 1.17
+      "goals_per_game": 1.08
     },
     {
-      "name": "Szymborski, Ignacio",
-      "club": "Lanús C",
-      "appearances": 11,
+      "name": "Gonzalez, Ezequiel Matias",
+      "club": "S.A.P.A.",
+      "appearances": 13,
       "goals": 14,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 1.27
-    },
-    {
-      "name": "Loiacono, Ignacio Nicolas",
-      "club": "Municipalidad de Tres de Febrero B",
-      "appearances": 5,
-      "goals": 14,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 2.8
-    },
-    {
-      "name": "Elorga Studer, Julian Alexis",
-      "club": "Lanús C",
-      "appearances": 12,
-      "goals": 13,
       "yellow": 0,
       "two_min": 0,
       "red": 0,
@@ -1664,13 +1719,57 @@
     {
       "name": "Graf, Mariano Nahuel",
       "club": "Municipalidad de San Martín (Ce.M.E.F)",
-      "appearances": 10,
-      "goals": 13,
+      "appearances": 11,
+      "goals": 14,
       "yellow": 1,
       "two_min": 4,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 1.3
+      "goals_per_game": 1.27
+    },
+    {
+      "name": "Gonzalez, Isaias Ariel",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 11,
+      "goals": 14,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.27
+    },
+    {
+      "name": "Catini, Bautista",
+      "club": "Muñiz Handball B",
+      "appearances": 7,
+      "goals": 14,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
+      "name": "Elorga Studer, Julian Alexis",
+      "club": "Lanús C",
+      "appearances": 13,
+      "goals": 13,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Romanello, Matias Ezequiel",
+      "club": "U.N.La.M.",
+      "appearances": 11,
+      "goals": 13,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.18
     },
     {
       "name": "Pesce, Pablo",
@@ -1695,12 +1794,23 @@
       "goals_per_game": 1.3
     },
     {
-      "name": "Saccomanno, Fernando Nicola...",
-      "club": "Municipalidad de Vicente López C",
+      "name": "Montellanos Lopez, Joaquin",
+      "club": "Banfield B",
+      "appearances": 10,
+      "goals": 13,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.3
+    },
+    {
+      "name": "Lovera, Alan Jorge Leonel",
+      "club": "Palermo Handball",
       "appearances": 8,
       "goals": 13,
       "yellow": 0,
-      "two_min": 1,
+      "two_min": 2,
       "red": 0,
       "blue": 0,
       "goals_per_game": 1.62
@@ -1708,90 +1818,57 @@
     {
       "name": "Gerez Valenzuela, Gabriel Mirk...",
       "club": "Defensores de Moreno",
-      "appearances": 7,
+      "appearances": 8,
       "goals": 13,
       "yellow": 0,
       "two_min": 0,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 1.86
+      "goals_per_game": 1.62
     },
     {
-      "name": "Gonzalez, Ezequiel Matias",
-      "club": "S.A.P.A.",
+      "name": "Ercoli, Santiago Ariel",
+      "club": "Defensores de Moreno",
       "appearances": 12,
       "goals": 12,
       "yellow": 0,
-      "two_min": 0,
+      "two_min": 3,
       "red": 0,
       "blue": 0,
       "goals_per_game": 1.0
     },
     {
-      "name": "Ercoli, Santiago Ariel",
-      "club": "Defensores de Moreno",
+      "name": "Gonzalez, Jonatan David",
+      "club": "Ituzaingó",
       "appearances": 11,
       "goals": 12,
-      "yellow": 0,
-      "two_min": 1,
+      "yellow": 1,
+      "two_min": 2,
       "red": 0,
       "blue": 0,
       "goals_per_game": 1.09
     },
     {
-      "name": "Romanello, Matias Ezequiel",
-      "club": "U.N.La.M.",
+      "name": "Maestripieri, Siro Lautaro",
+      "club": "Argentinos Juniors D",
       "appearances": 10,
       "goals": 12,
       "yellow": 0,
-      "two_min": 1,
+      "two_min": 7,
       "red": 0,
       "blue": 0,
       "goals_per_game": 1.2
     },
     {
-      "name": "Mariscal, Benjamin Thiago",
-      "club": "C.S. y D. Defensores de Banfield",
-      "appearances": 10,
+      "name": "Costa, Miqueas Nahuel",
+      "club": "Argentinos Juniors D",
+      "appearances": 9,
       "goals": 12,
       "yellow": 0,
-      "two_min": 1,
+      "two_min": 6,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 1.2
-    },
-    {
-      "name": "Alonso, Julian",
-      "club": "Palermo Handball",
-      "appearances": 10,
-      "goals": 12,
-      "yellow": 0,
-      "two_min": 1,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 1.2
-    },
-    {
-      "name": "Montes, Ezequiel Martin",
-      "club": "Municipalidad de Vicente López C",
-      "appearances": 10,
-      "goals": 12,
-      "yellow": 0,
-      "two_min": 1,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 1.2
-    },
-    {
-      "name": "Gonzalez, Isaias Ariel",
-      "club": "Municipalidad de Tres de Febrero B",
-      "appearances": 10,
-      "goals": 12,
-      "yellow": 0,
-      "two_min": 1,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 1.2
+      "goals_per_game": 1.33
     },
     {
       "name": "Loscri, Matias Roberto",
@@ -1805,114 +1882,103 @@
       "goals_per_game": 1.33
     },
     {
-      "name": "Montellanos Lopez, Joaquin",
+      "name": "Senaris, Tomas",
       "club": "Banfield B",
-      "appearances": 9,
+      "appearances": 7,
       "goals": 12,
       "yellow": 0,
-      "two_min": 0,
+      "two_min": 1,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 1.33
+      "goals_per_game": 1.71
     },
     {
-      "name": "Costa, Miqueas Nahuel",
-      "club": "Argentinos Juniors D",
-      "appearances": 8,
+      "name": "Fernandez, Luciano",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 6,
       "goals": 12,
       "yellow": 0,
-      "two_min": 5,
+      "two_min": 3,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 1.5
+      "goals_per_game": 2.0
     },
     {
       "name": "Aguirre, Esteban Maximiliano",
       "club": "C.S. y D. Defensores de Banfield",
-      "appearances": 12,
+      "appearances": 13,
       "goals": 11,
       "yellow": 0,
       "two_min": 1,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 0.92
+      "goals_per_game": 0.85
     },
     {
       "name": "Gigante, Roberto Juan",
       "club": "Palermo Handball",
-      "appearances": 12,
+      "appearances": 13,
       "goals": 11,
       "yellow": 1,
       "two_min": 12,
-      "red": 0,
+      "red": 1,
       "blue": 0,
-      "goals_per_game": 0.92
+      "goals_per_game": 0.85
     },
     {
       "name": "Goncalves, Ivan Nicolas",
       "club": "Muñiz Handball B",
-      "appearances": 11,
+      "appearances": 12,
       "goals": 11,
       "yellow": 0,
       "two_min": 6,
       "red": 1,
       "blue": 0,
-      "goals_per_game": 1.0
+      "goals_per_game": 0.92
     },
     {
       "name": "Ayala, Matias Nicolas",
       "club": "Municipalidad de San Martín (Ce.M.E.F)",
-      "appearances": 10,
+      "appearances": 11,
       "goals": 11,
       "yellow": 2,
       "two_min": 4,
       "red": 2,
       "blue": 0,
-      "goals_per_game": 1.1
+      "goals_per_game": 1.0
     },
     {
-      "name": "Gonzalez, Jonatan David",
-      "club": "Ituzaingó",
-      "appearances": 10,
-      "goals": 11,
-      "yellow": 0,
-      "two_min": 2,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 1.1
-    },
-    {
-      "name": "Maestripieri, Siro Lautaro",
-      "club": "Argentinos Juniors D",
+      "name": "Lacuadra, Valentin Leonel",
+      "club": "Defensores de Moreno",
       "appearances": 9,
       "goals": 11,
       "yellow": 0,
-      "two_min": 5,
+      "two_min": 0,
       "red": 0,
       "blue": 0,
       "goals_per_game": 1.22
     },
     {
-      "name": "Catini, Bautista",
-      "club": "Muñiz Handball B",
-      "appearances": 6,
-      "goals": 11,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 1,
-      "blue": 0,
-      "goals_per_game": 1.83
-    },
-    {
-      "name": "Senaris, Tomas",
-      "club": "Banfield B",
-      "appearances": 6,
+      "name": "Santillan, Juan Roman",
+      "club": "U.N.La.M.",
+      "appearances": 7,
       "goals": 11,
       "yellow": 0,
       "two_min": 1,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.57
+    },
+    {
+      "name": "Rial, Tomas Valentin",
+      "club": "Club Deportivo Morón",
+      "appearances": 7,
+      "goals": 11,
+      "yellow": 0,
+      "two_min": 0,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 1.83
+      "goals_per_game": 1.57
     },
     {
       "name": "Romero Larrue, Mateo",
@@ -1926,26 +1992,48 @@
       "goals_per_game": 1.83
     },
     {
-      "name": "Fernandez, Luciano",
-      "club": "Municipalidad de Vicente López C",
-      "appearances": 5,
-      "goals": 11,
+      "name": "Martinez, Joaquin Ariel",
+      "club": "U.N.La.M.",
+      "appearances": 13,
+      "goals": 10,
       "yellow": 0,
-      "two_min": 2,
+      "two_min": 1,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 2.2
+      "goals_per_game": 0.77
+    },
+    {
+      "name": "Abi Zaid, Lucas Alejo",
+      "club": "Club Deportivo Morón",
+      "appearances": 11,
+      "goals": 10,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.91
     },
     {
       "name": "Gimenez Correa, Juan Cruz",
       "club": "Municipalidad de Pilar",
-      "appearances": 10,
+      "appearances": 11,
       "goals": 10,
       "yellow": 0,
-      "two_min": 4,
+      "two_min": 6,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 1.0
+      "goals_per_game": 0.91
+    },
+    {
+      "name": "Mangini, Nicolas Ezequie",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 9,
+      "goals": 10,
+      "yellow": 1,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.11
     },
     {
       "name": "Pardo, Juan Martin",
@@ -1959,26 +2047,26 @@
       "goals_per_game": 1.11
     },
     {
-      "name": "Lovera, Alan Jorge Leonel",
-      "club": "Palermo Handball",
-      "appearances": 7,
+      "name": "Gagliardi, Juan Franco",
+      "club": "Lanús C",
+      "appearances": 4,
       "goals": 10,
       "yellow": 0,
-      "two_min": 2,
+      "two_min": 0,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 1.43
+      "goals_per_game": 2.5
     },
     {
-      "name": "Torrico Camacho, Kevin Alan",
-      "club": "U.N.La.M.",
-      "appearances": 2,
-      "goals": 10,
+      "name": "Madera Aragon, Matias Nicolas",
+      "club": "Defensores de Moreno",
+      "appearances": 12,
+      "goals": 9,
       "yellow": 0,
       "two_min": 1,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 5.0
+      "goals_per_game": 0.75
     },
     {
       "name": "Schletter, Matias",
@@ -1992,81 +2080,70 @@
       "goals_per_game": 0.82
     },
     {
-      "name": "Abi Zaid, Lucas Alejo",
-      "club": "Club Deportivo Morón",
-      "appearances": 10,
-      "goals": 9,
-      "yellow": 0,
-      "two_min": 1,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.9
-    },
-    {
-      "name": "Lacuadra, Valentin Leonel",
-      "club": "Defensores de Moreno",
-      "appearances": 8,
-      "goals": 9,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 1.12
-    },
-    {
-      "name": "Martinez, Joaquin Ariel",
-      "club": "U.N.La.M.",
-      "appearances": 12,
-      "goals": 8,
-      "yellow": 0,
-      "two_min": 1,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.67
-    },
-    {
       "name": "Tobares, Lisandro Joaquin",
       "club": "Muñiz Handball B",
-      "appearances": 12,
+      "appearances": 13,
       "goals": 8,
       "yellow": 0,
       "two_min": 0,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 0.67
+      "goals_per_game": 0.62
     },
     {
       "name": "Ruano, Matheo",
       "club": "S.A.P.A.",
-      "appearances": 12,
+      "appearances": 13,
       "goals": 8,
       "yellow": 0,
       "two_min": 0,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 0.67
+      "goals_per_game": 0.62
+    },
+    {
+      "name": "Mazzola, Fausto",
+      "club": "Club Deportivo Morón",
+      "appearances": 13,
+      "goals": 8,
+      "yellow": 0,
+      "two_min": 5,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.62
     },
     {
       "name": "Linares, Lautaro Ezequiel",
       "club": "Ituzaingó",
-      "appearances": 11,
+      "appearances": 12,
       "goals": 8,
       "yellow": 0,
       "two_min": 3,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 0.73
+      "goals_per_game": 0.67
+    },
+    {
+      "name": "Irigoy, Juan Martin",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 12,
+      "goals": 8,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.67
     },
     {
       "name": "Gaud, Lautaro Nahuel",
       "club": "Muñiz Handball B",
-      "appearances": 10,
+      "appearances": 11,
       "goals": 8,
       "yellow": 0,
       "two_min": 6,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 0.8
+      "goals_per_game": 0.73
     },
     {
       "name": "Pascual, Angel Julian",
@@ -2080,26 +2157,15 @@
       "goals_per_game": 0.8
     },
     {
-      "name": "Santillan, Juan Roman",
-      "club": "U.N.La.M.",
-      "appearances": 6,
+      "name": "Benitez, Francisco Ezequiel",
+      "club": "Muñiz Handball B",
+      "appearances": 9,
       "goals": 8,
       "yellow": 0,
-      "two_min": 0,
-      "red": 0,
+      "two_min": 1,
+      "red": 1,
       "blue": 0,
-      "goals_per_game": 1.33
-    },
-    {
-      "name": "Rial, Tomas Valentin",
-      "club": "Club Deportivo Morón",
-      "appearances": 6,
-      "goals": 8,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 1.33
+      "goals_per_game": 0.89
     },
     {
       "name": "Ezcurra, Santiago Martin",
@@ -2113,15 +2179,48 @@
       "goals_per_game": 1.6
     },
     {
+      "name": "Mastrazzi Vukotich, Tadeo Agu...",
+      "club": "Argentinos Juniors D",
+      "appearances": 4,
+      "goals": 8,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
       "name": "Hurwitz, Agustin",
       "club": "Municipalidad de Vicente López C",
-      "appearances": 12,
+      "appearances": 13,
       "goals": 7,
       "yellow": 0,
       "two_min": 1,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 0.58
+      "goals_per_game": 0.54
+    },
+    {
+      "name": "Gomez, Enzo Ivan",
+      "club": "Muñiz Handball B",
+      "appearances": 9,
+      "goals": 7,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.78
+    },
+    {
+      "name": "Altieri, Tiziano Misael",
+      "club": "Defensores de Moreno",
+      "appearances": 9,
+      "goals": 7,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.78
     },
     {
       "name": "Aguirre, Fernando Gabriel",
@@ -2130,28 +2229,6 @@
       "goals": 7,
       "yellow": 1,
       "two_min": 1,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.88
-    },
-    {
-      "name": "Benitez, Francisco Ezequiel",
-      "club": "Muñiz Handball B",
-      "appearances": 8,
-      "goals": 7,
-      "yellow": 0,
-      "two_min": 1,
-      "red": 1,
-      "blue": 0,
-      "goals_per_game": 0.88
-    },
-    {
-      "name": "Mangini, Nicolas Ezequie",
-      "club": "S.A.G. Polvorines D",
-      "appearances": 8,
-      "goals": 7,
-      "yellow": 1,
-      "two_min": 2,
       "red": 0,
       "blue": 0,
       "goals_per_game": 0.88
@@ -2168,6 +2245,17 @@
       "goals_per_game": 0.88
     },
     {
+      "name": "Caminos, Emiliano Gabriel",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 8,
+      "goals": 7,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.88
+    },
+    {
       "name": "Otero, Santiago",
       "club": "U.N.La.M.",
       "appearances": 6,
@@ -2177,6 +2265,28 @@
       "red": 0,
       "blue": 0,
       "goals_per_game": 1.17
+    },
+    {
+      "name": "Ruzzante, Ivan Andres",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 6,
+      "goals": 7,
+      "yellow": 0,
+      "two_min": 7,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.17
+    },
+    {
+      "name": "Meyer, Federico",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 5,
+      "goals": 7,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.4
     },
     {
       "name": "Dos Santos, Sebastian Nicolas",
@@ -2190,19 +2300,19 @@
       "goals_per_game": 1.4
     },
     {
-      "name": "Mazzola, Fausto",
+      "name": "Fagioli, Federico Enzo",
       "club": "Club Deportivo Morón",
       "appearances": 12,
       "goals": 6,
       "yellow": 0,
-      "two_min": 4,
+      "two_min": 0,
       "red": 0,
       "blue": 0,
       "goals_per_game": 0.5
     },
     {
-      "name": "Madera Aragon, Matias Nicolas",
-      "club": "Defensores de Moreno",
+      "name": "Inofre, Facundo Joel",
+      "club": "Municipalidad de Pilar",
       "appearances": 11,
       "goals": 6,
       "yellow": 0,
@@ -2210,39 +2320,6 @@
       "red": 0,
       "blue": 0,
       "goals_per_game": 0.55
-    },
-    {
-      "name": "Fagioli, Federico Enzo",
-      "club": "Club Deportivo Morón",
-      "appearances": 11,
-      "goals": 6,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.55
-    },
-    {
-      "name": "Inofre, Facundo Joel",
-      "club": "Municipalidad de Pilar",
-      "appearances": 10,
-      "goals": 6,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.6
-    },
-    {
-      "name": "Altieri, Tiziano Misael",
-      "club": "Defensores de Moreno",
-      "appearances": 8,
-      "goals": 6,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.75
     },
     {
       "name": "Choque, Leandro Ezequie",
@@ -2256,63 +2333,30 @@
       "goals_per_game": 0.86
     },
     {
-      "name": "Caminos, Emiliano Gabriel",
-      "club": "Municipalidad de Tres de Febrero B",
-      "appearances": 7,
-      "goals": 6,
-      "yellow": 0,
-      "two_min": 1,
-      "red": 1,
-      "blue": 0,
-      "goals_per_game": 0.86
-    },
-    {
-      "name": "Ruzzante, Ivan Andres",
-      "club": "S.A.G. Polvorines D",
-      "appearances": 5,
-      "goals": 6,
-      "yellow": 0,
-      "two_min": 4,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 1.2
-    },
-    {
-      "name": "Meyer, Federico",
-      "club": "S.A.G. Polvorines D",
-      "appearances": 4,
-      "goals": 6,
-      "yellow": 0,
-      "two_min": 1,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 1.5
-    },
-    {
-      "name": "Gagliardi, Juan Franco",
-      "club": "Lanús C",
-      "appearances": 3,
+      "name": "Vazquez, Joaquin Tomas",
+      "club": "Club Deportivo Morón",
+      "appearances": 6,
       "goals": 6,
       "yellow": 0,
       "two_min": 0,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 2.0
-    },
-    {
-      "name": "Mastrazzi Vukotich, Tadeo Agu...",
-      "club": "Argentinos Juniors D",
-      "appearances": 3,
-      "goals": 6,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 2.0
+      "goals_per_game": 1.0
     },
     {
       "name": "Pereyra Galetti, Fernando Emm...",
       "club": "U.N.La.M.",
+      "appearances": 13,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.38
+    },
+    {
+      "name": "Vazquez, Luciano Nahuel",
+      "club": "Municipalidad de Tres de Febrero B",
       "appearances": 12,
       "goals": 5,
       "yellow": 0,
@@ -2322,26 +2366,15 @@
       "goals_per_game": 0.42
     },
     {
-      "name": "Irigoy, Juan Martin",
-      "club": "Municipalidad de Vicente López C",
-      "appearances": 11,
+      "name": "Mollo Skripnik Strelecki, Juan Ig...",
+      "club": "S.A.P.A.",
+      "appearances": 10,
       "goals": 5,
-      "yellow": 0,
-      "two_min": 0,
+      "yellow": 1,
+      "two_min": 4,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 0.45
-    },
-    {
-      "name": "Vazquez, Luciano Nahuel",
-      "club": "Municipalidad de Tres de Febrero B",
-      "appearances": 11,
-      "goals": 5,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.45
+      "goals_per_game": 0.5
     },
     {
       "name": "Paturlanne, Mateo Santino",
@@ -2366,37 +2399,37 @@
       "goals_per_game": 0.56
     },
     {
-      "name": "Gomez, Enzo Ivan",
-      "club": "Muñiz Handball B",
-      "appearances": 8,
-      "goals": 5,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 1,
-      "blue": 0,
-      "goals_per_game": 0.62
-    },
-    {
       "name": "Zabala, Gianfranco Luciano",
       "club": "Municipalidad de San Martín (Ce.M.E.F)",
-      "appearances": 8,
+      "appearances": 9,
       "goals": 5,
       "yellow": 0,
       "two_min": 2,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 0.62
+      "goals_per_game": 0.56
     },
     {
       "name": "Della Giustina, Nicolas Gaston",
       "club": "Municipalidad de Vicente López C",
-      "appearances": 8,
+      "appearances": 9,
       "goals": 5,
       "yellow": 0,
       "two_min": 0,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 0.62
+      "goals_per_game": 0.56
+    },
+    {
+      "name": "Sosa Baez Gonzalez, Lautaro",
+      "club": "Defensores de Moreno",
+      "appearances": 6,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.83
     },
     {
       "name": "Fernandez, Santiago Bautista",
@@ -2410,23 +2443,34 @@
       "goals_per_game": 0.83
     },
     {
-      "name": "Sosa Baez Gonzalez, Lautaro",
-      "club": "Defensores de Moreno",
-      "appearances": 5,
-      "goals": 5,
-      "yellow": 0,
-      "two_min": 2,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 1.0
-    },
-    {
       "name": "Marchesin, Damian Oscar",
       "club": "Palermo Handball",
       "appearances": 4,
       "goals": 5,
       "yellow": 0,
       "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.25
+    },
+    {
+      "name": "Canderan Bartolotta, Matias Jo...",
+      "club": "Palermo Handball",
+      "appearances": 4,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.25
+    },
+    {
+      "name": "Hails, Martin",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 4,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 1,
       "red": 0,
       "blue": 0,
       "goals_per_game": 1.25
@@ -2445,13 +2489,13 @@
     {
       "name": "Salgado, Mariano Agustin",
       "club": "U.N.La.M.",
-      "appearances": 12,
+      "appearances": 13,
       "goals": 4,
       "yellow": 0,
       "two_min": 3,
       "red": 1,
       "blue": 0,
-      "goals_per_game": 0.33
+      "goals_per_game": 0.31
     },
     {
       "name": "Postel, Matias Simon",
@@ -2465,15 +2509,26 @@
       "goals_per_game": 0.33
     },
     {
-      "name": "Mollo Skripnik Strelecki, Juan Ig...",
-      "club": "S.A.P.A.",
-      "appearances": 9,
+      "name": "Loscri, Sebastian D.",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 10,
       "goals": 4,
-      "yellow": 1,
-      "two_min": 4,
-      "red": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 1,
       "blue": 0,
-      "goals_per_game": 0.44
+      "goals_per_game": 0.4
+    },
+    {
+      "name": "Rodriguez, Lautaro Tomas",
+      "club": "Banfield B",
+      "appearances": 8,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.5
     },
     {
       "name": "Gayoso Silva, Michel Javier",
@@ -2496,17 +2551,6 @@
       "red": 0,
       "blue": 0,
       "goals_per_game": 0.67
-    },
-    {
-      "name": "Vazquez, Joaquin Tomas",
-      "club": "Club Deportivo Morón",
-      "appearances": 5,
-      "goals": 4,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.8
     },
     {
       "name": "Olivera, Lucas Enrique",
@@ -2575,6 +2619,17 @@
       "goals_per_game": 4.0
     },
     {
+      "name": "Lopardo, Brian Ezequiel",
+      "club": "U.N.La.M.",
+      "appearances": 12,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.25
+    },
+    {
       "name": "Delmoro, Lucas",
       "club": "Palermo Handball",
       "appearances": 12,
@@ -2586,15 +2641,26 @@
       "goals_per_game": 0.25
     },
     {
-      "name": "Lopardo, Brian Ezequiel",
-      "club": "U.N.La.M.",
-      "appearances": 11,
+      "name": "Cabelli, Lautaro Agustin",
+      "club": "Lanús C",
+      "appearances": 12,
       "goals": 3,
       "yellow": 0,
-      "two_min": 2,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.25
+    },
+    {
+      "name": "Durruty, Julio Martin",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 12,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 0,
       "red": 1,
       "blue": 0,
-      "goals_per_game": 0.27
+      "goals_per_game": 0.25
     },
     {
       "name": "Farina, Martin Ezequiel",
@@ -2603,6 +2669,17 @@
       "goals": 3,
       "yellow": 0,
       "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.3
+    },
+    {
+      "name": "Bertuleit, Tomas",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 10,
+      "goals": 3,
+      "yellow": 1,
+      "two_min": 1,
       "red": 0,
       "blue": 0,
       "goals_per_game": 0.3
@@ -2619,48 +2696,26 @@
       "goals_per_game": 0.3
     },
     {
-      "name": "Bertuleit, Tomas",
-      "club": "S.A.G. Polvorines D",
-      "appearances": 9,
-      "goals": 3,
-      "yellow": 1,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.33
-    },
-    {
-      "name": "Loscri, Sebastian D.",
-      "club": "Municipalidad de Vicente López C",
-      "appearances": 9,
-      "goals": 3,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.33
-    },
-    {
       "name": "Brizuela, Lucas Federico",
       "club": "Muñiz Handball B",
-      "appearances": 8,
+      "appearances": 9,
       "goals": 3,
       "yellow": 1,
       "two_min": 1,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 0.38
+      "goals_per_game": 0.33
     },
     {
-      "name": "Rodriguez, Lautaro Tomas",
-      "club": "Banfield B",
-      "appearances": 7,
+      "name": "Suarez, Facundo Nicolas",
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
+      "appearances": 9,
       "goals": 3,
       "yellow": 0,
       "two_min": 0,
-      "red": 1,
+      "red": 0,
       "blue": 0,
-      "goals_per_game": 0.43
+      "goals_per_game": 0.33
     },
     {
       "name": "Quintela, Agustin Martin",
@@ -2707,19 +2762,8 @@
       "goals_per_game": 0.75
     },
     {
-      "name": "Canderan Bartolotta, Matias Jo...",
-      "club": "Palermo Handball",
-      "appearances": 3,
-      "goals": 3,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 1.0
-    },
-    {
-      "name": "Hails, Martin",
-      "club": "Municipalidad de Vicente López C",
+      "name": "Herrera Quintiero, Lucas Agusti...",
+      "club": "Muñiz Handball B",
       "appearances": 3,
       "goals": 3,
       "yellow": 0,
@@ -2742,39 +2786,39 @@
     {
       "name": "Paredes Alvarez, Claudio Mauri...",
       "club": "S.A.G. Polvorines D",
-      "appearances": 12,
+      "appearances": 13,
       "goals": 2,
       "yellow": 2,
       "two_min": 0,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 0.17
+      "goals_per_game": 0.15
     },
     {
       "name": "Juarez, German",
       "club": "Club Deportivo Morón",
-      "appearances": 12,
+      "appearances": 13,
       "goals": 2,
       "yellow": 0,
-      "two_min": 2,
+      "two_min": 3,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 0.17
+      "goals_per_game": 0.15
     },
     {
       "name": "Galarza, Franco Agustin",
       "club": "Banfield B",
-      "appearances": 12,
+      "appearances": 13,
       "goals": 2,
       "yellow": 0,
       "two_min": 0,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 0.17
+      "goals_per_game": 0.15
     },
     {
-      "name": "Cabelli, Lautaro Agustin",
-      "club": "Lanús C",
+      "name": "Suarez, Rodrigo Martin",
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
       "appearances": 11,
       "goals": 2,
       "yellow": 0,
@@ -2784,19 +2828,8 @@
       "goals_per_game": 0.18
     },
     {
-      "name": "Durruty, Julio Martin",
-      "club": "S.A.G. Polvorines D",
-      "appearances": 11,
-      "goals": 2,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.18
-    },
-    {
-      "name": "Suarez, Rodrigo Martin",
-      "club": "Municipalidad de San Martín (Ce.M.E.F)",
+      "name": "Obendorfer, Ricardo Alfredo",
+      "club": "Argentinos Juniors D",
       "appearances": 10,
       "goals": 2,
       "yellow": 0,
@@ -2806,8 +2839,8 @@
       "goals_per_game": 0.2
     },
     {
-      "name": "Obendorfer, Ricardo Alfredo",
-      "club": "Argentinos Juniors D",
+      "name": "Mastinu, Martin Nicolas",
+      "club": "Municipalidad de Pilar",
       "appearances": 9,
       "goals": 2,
       "yellow": 0,
@@ -2817,41 +2850,19 @@
       "goals_per_game": 0.22
     },
     {
-      "name": "Suarez, Facundo Nicolas",
-      "club": "Municipalidad de San Martín (Ce.M.E.F)",
-      "appearances": 8,
+      "name": "Ramos, Matias",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 9,
       "goals": 2,
       "yellow": 0,
       "two_min": 0,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 0.25
+      "goals_per_game": 0.22
     },
     {
       "name": "Gazco, Julian",
       "club": "Lanús C",
-      "appearances": 8,
-      "goals": 2,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.25
-    },
-    {
-      "name": "Mastinu, Martin Nicolas",
-      "club": "Municipalidad de Pilar",
-      "appearances": 8,
-      "goals": 2,
-      "yellow": 0,
-      "two_min": 1,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.25
-    },
-    {
-      "name": "Ramos, Matias",
-      "club": "Municipalidad de Tres de Febrero B",
       "appearances": 8,
       "goals": 2,
       "yellow": 0,
@@ -2889,6 +2900,17 @@
       "goals": 2,
       "yellow": 0,
       "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.4
+    },
+    {
+      "name": "Rafael, Manuel Jose",
+      "club": "Muñiz Handball B",
+      "appearances": 5,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
       "red": 0,
       "blue": 0,
       "goals_per_game": 0.4
@@ -2949,20 +2971,20 @@
       "goals_per_game": 1.0
     },
     {
-      "name": "Herrera Quintiero, Lucas Agusti...",
-      "club": "Muñiz Handball B",
-      "appearances": 2,
+      "name": "Blason, Ezequiel",
+      "club": "Palermo Handball",
+      "appearances": 1,
       "goals": 2,
       "yellow": 0,
       "two_min": 0,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 1.0
+      "goals_per_game": 2.0
     },
     {
       "name": "Esposto, Facundo Nazaren",
       "club": "C.S. y D. Defensores de Banfield",
-      "appearances": 12,
+      "appearances": 13,
       "goals": 1,
       "yellow": 0,
       "two_min": 0,
@@ -2973,7 +2995,7 @@
     {
       "name": "Fernandez, Javier Oscar",
       "club": "C.S. y D. Defensores de Banfield",
-      "appearances": 12,
+      "appearances": 13,
       "goals": 1,
       "yellow": 0,
       "two_min": 1,
@@ -2984,7 +3006,7 @@
     {
       "name": "Ibarra, Steven Yoel",
       "club": "Palermo Handball",
-      "appearances": 12,
+      "appearances": 13,
       "goals": 1,
       "yellow": 0,
       "two_min": 0,
@@ -2995,10 +3017,10 @@
     {
       "name": "Ercoli, Gonzalo Hernan",
       "club": "Defensores de Moreno",
-      "appearances": 12,
+      "appearances": 13,
       "goals": 1,
       "yellow": 0,
-      "two_min": 1,
+      "two_min": 2,
       "red": 0,
       "blue": 0,
       "goals_per_game": 0.08
@@ -3006,7 +3028,7 @@
     {
       "name": "Bravo, Federico Marcos",
       "club": "Club Deportivo Morón",
-      "appearances": 12,
+      "appearances": 13,
       "goals": 1,
       "yellow": 0,
       "two_min": 0,
@@ -3017,13 +3039,35 @@
     {
       "name": "Casanova, Jorge Hernan",
       "club": "Club Deportivo Morón",
-      "appearances": 12,
+      "appearances": 13,
       "goals": 1,
       "yellow": 0,
       "two_min": 1,
       "red": 0,
       "blue": 0,
       "goals_per_game": 0.08
+    },
+    {
+      "name": "Martinez, Victor Emmanuel",
+      "club": "Municipalidad de Pilar",
+      "appearances": 12,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.08
+    },
+    {
+      "name": "Ajalla, Ivan Maximiliano",
+      "club": "Argentinos Juniors D",
+      "appearances": 11,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.09
     },
     {
       "name": "Cordoba, Maximiliano Fabian",
@@ -3037,37 +3081,37 @@
       "goals_per_game": 0.09
     },
     {
-      "name": "Martinez, Victor Emmanuel",
-      "club": "Municipalidad de Pilar",
-      "appearances": 11,
-      "goals": 1,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.09
-    },
-    {
-      "name": "Ajalla, Ivan Maximiliano",
-      "club": "Argentinos Juniors D",
+      "name": "Siesicki, David Emmanuel",
+      "club": "Lanús C",
       "appearances": 10,
       "goals": 1,
-      "yellow": 0,
-      "two_min": 2,
+      "yellow": 2,
+      "two_min": 5,
       "red": 0,
       "blue": 0,
       "goals_per_game": 0.1
     },
     {
-      "name": "Siesicki, David Emmanuel",
-      "club": "Lanús C",
-      "appearances": 9,
+      "name": "Rios, Guillermo Adrian",
+      "club": "Ituzaingó",
+      "appearances": 8,
       "goals": 1,
-      "yellow": 1,
-      "two_min": 5,
+      "yellow": 0,
+      "two_min": 1,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 0.11
+      "goals_per_game": 0.12
+    },
+    {
+      "name": "Bouhes, Lionel Eduardo",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 6,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.17
     },
     {
       "name": "Ponce, Gonzalo Martin",
@@ -3081,8 +3125,19 @@
       "goals_per_game": 0.2
     },
     {
-      "name": "Bouhes, Lionel Eduardo",
-      "club": "Municipalidad de Vicente López C",
+      "name": "Portillo, Facundo Matias",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 5,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.2
+    },
+    {
+      "name": "Zapata, Matias Sebastian",
+      "club": "Ituzaingó",
       "appearances": 5,
       "goals": 1,
       "yellow": 0,
@@ -3103,37 +3158,15 @@
       "goals_per_game": 0.25
     },
     {
-      "name": "Portillo, Facundo Matias",
-      "club": "Municipalidad de Tres de Febrero B",
-      "appearances": 4,
+      "name": "Arevalo, Matias",
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 3,
       "goals": 1,
       "yellow": 0,
-      "two_min": 0,
+      "two_min": 2,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 0.25
-    },
-    {
-      "name": "Zapata, Matias Sebastian",
-      "club": "Ituzaingó",
-      "appearances": 4,
-      "goals": 1,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.25
-    },
-    {
-      "name": "Rafael, Manuel Jose",
-      "club": "Muñiz Handball B",
-      "appearances": 4,
-      "goals": 1,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.25
+      "goals_per_game": 0.33
     },
     {
       "name": "Tomassoni, Ignacio Leonel",
@@ -3169,8 +3202,8 @@
       "goals_per_game": 0.5
     },
     {
-      "name": "Alborino, Federico Ezequiel",
-      "club": "Lanús C",
+      "name": "Romanello, Martin Esteban",
+      "club": "S.A.P.A.",
       "appearances": 2,
       "goals": 1,
       "yellow": 0,
@@ -3180,12 +3213,34 @@
       "goals_per_game": 0.5
     },
     {
-      "name": "Arevalo, Matias",
-      "club": "C.S. y D. Defensores de Banfield",
+      "name": "Pavia, Bautista",
+      "club": "Defensores de Moreno",
       "appearances": 2,
       "goals": 1,
       "yellow": 0,
-      "two_min": 1,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.5
+    },
+    {
+      "name": "Bunjahed, Nicolas Ezequie",
+      "club": "Defensores de Moreno",
+      "appearances": 2,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.5
+    },
+    {
+      "name": "Alborino, Federico Ezequiel",
+      "club": "Lanús C",
+      "appearances": 2,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
       "red": 0,
       "blue": 0,
       "goals_per_game": 0.5
@@ -3202,8 +3257,8 @@
       "goals_per_game": 1.0
     },
     {
-      "name": "Gomez Martino, Mateo Maximili...",
-      "club": "Muñiz Handball B",
+      "name": "Perez, Gaston",
+      "club": "Palermo Handball",
       "appearances": 1,
       "goals": 1,
       "yellow": 0,
@@ -3213,8 +3268,8 @@
       "goals_per_game": 1.0
     },
     {
-      "name": "Bunjahed, Nicolas Ezequie",
-      "club": "Defensores de Moreno",
+      "name": "Gomez Martino, Mateo Maximili...",
+      "club": "Muñiz Handball B",
       "appearances": 1,
       "goals": 1,
       "yellow": 0,
@@ -3248,7 +3303,7 @@
     {
       "name": "Canovas De La Vega, Daniel Al...",
       "club": "Argentinos Juniors D",
-      "appearances": 12,
+      "appearances": 13,
       "goals": 0,
       "yellow": 0,
       "two_min": 0,
@@ -3259,7 +3314,7 @@
     {
       "name": "Acevedo, Ruben Oscar",
       "club": "Muñiz Handball B",
-      "appearances": 12,
+      "appearances": 13,
       "goals": 0,
       "yellow": 0,
       "two_min": 0,
@@ -3270,7 +3325,7 @@
     {
       "name": "Ramirez Lorca, Jaime Nahuel",
       "club": "S.A.P.A.",
-      "appearances": 12,
+      "appearances": 13,
       "goals": 0,
       "yellow": 0,
       "two_min": 0,
@@ -3281,7 +3336,7 @@
     {
       "name": "Correa, Marcos Isauro",
       "club": "S.A.P.A.",
-      "appearances": 12,
+      "appearances": 13,
       "goals": 0,
       "yellow": 0,
       "two_min": 0,
@@ -3292,7 +3347,7 @@
     {
       "name": "Carrascosa, Joaquin",
       "club": "Municipalidad de Vicente López C",
-      "appearances": 12,
+      "appearances": 13,
       "goals": 0,
       "yellow": 0,
       "two_min": 0,
@@ -3303,7 +3358,7 @@
     {
       "name": "Fernandez, Eduardo Ismael",
       "club": "Municipalidad de Pilar",
-      "appearances": 12,
+      "appearances": 13,
       "goals": 0,
       "yellow": 0,
       "two_min": 1,
@@ -3314,7 +3369,7 @@
     {
       "name": "Doormann, Sergio Fabian",
       "club": "Municipalidad de San Martín (Ce.M.E.F)",
-      "appearances": 11,
+      "appearances": 12,
       "goals": 0,
       "yellow": 0,
       "two_min": 0,
@@ -3325,7 +3380,7 @@
     {
       "name": "Gonzalez, Nahuel Ariel",
       "club": "Municipalidad de San Martín (Ce.M.E.F)",
-      "appearances": 11,
+      "appearances": 12,
       "goals": 0,
       "yellow": 0,
       "two_min": 0,
@@ -3336,7 +3391,7 @@
     {
       "name": "Monrrg, Gustavo Hernan",
       "club": "Ituzaingó",
-      "appearances": 11,
+      "appearances": 12,
       "goals": 0,
       "yellow": 0,
       "two_min": 0,
@@ -3347,7 +3402,7 @@
     {
       "name": "Aguirre, Walter Joel",
       "club": "Banfield B",
-      "appearances": 11,
+      "appearances": 12,
       "goals": 0,
       "yellow": 0,
       "two_min": 0,
@@ -3358,7 +3413,7 @@
     {
       "name": "Galliani, Ivan Nicolas",
       "club": "Municipalidad de Tres de Febrero B",
-      "appearances": 11,
+      "appearances": 12,
       "goals": 0,
       "yellow": 0,
       "two_min": 0,
@@ -3369,9 +3424,9 @@
     {
       "name": "Fretes, Lorenzo Raul",
       "club": "U.N.La.M.",
-      "appearances": 10,
+      "appearances": 11,
       "goals": 0,
-      "yellow": 0,
+      "yellow": 1,
       "two_min": 0,
       "red": 0,
       "blue": 0,
@@ -3380,7 +3435,7 @@
     {
       "name": "De Sousa Goncalves, Fernand...",
       "club": "S.A.G. Polvorines D",
-      "appearances": 10,
+      "appearances": 11,
       "goals": 0,
       "yellow": 0,
       "two_min": 0,
@@ -3391,6 +3446,28 @@
     {
       "name": "Reverter, Felipe",
       "club": "Palermo Handball",
+      "appearances": 11,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Martin, Adrian Norberto",
+      "club": "Argentinos Juniors D",
+      "appearances": 10,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Gallardo, Javier Rodrigo",
+      "club": "C.S. y D. Defensores de Banfield",
       "appearances": 10,
       "goals": 0,
       "yellow": 0,
@@ -3411,19 +3488,19 @@
       "goals_per_game": 0.0
     },
     {
-      "name": "Martin, Adrian Norberto",
-      "club": "Argentinos Juniors D",
+      "name": "Petrovic, Joaquin Elias",
+      "club": "Banfield B",
       "appearances": 9,
       "goals": 0,
       "yellow": 0,
-      "two_min": 1,
+      "two_min": 0,
       "red": 0,
       "blue": 0,
       "goals_per_game": 0.0
     },
     {
-      "name": "Gallardo, Javier Rodrigo",
-      "club": "C.S. y D. Defensores de Banfield",
+      "name": "Gomez, Francisco Jose Ezequi...",
+      "club": "Argentinos Juniors D",
       "appearances": 9,
       "goals": 0,
       "yellow": 0,
@@ -3455,34 +3532,23 @@
       "goals_per_game": 0.0
     },
     {
-      "name": "Petrovic, Joaquin Elias",
-      "club": "Banfield B",
-      "appearances": 8,
-      "goals": 0,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.0
-    },
-    {
-      "name": "Gomez, Francisco Jose Ezequi...",
-      "club": "Argentinos Juniors D",
-      "appearances": 8,
-      "goals": 0,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.0
-    },
-    {
       "name": "Ferreyra De La Cruz, Gonzalo",
       "club": "Municipalidad de Pilar",
       "appearances": 8,
       "goals": 0,
       "yellow": 0,
       "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Rosemburg, Gabriel Jesus",
+      "club": "Lanús C",
+      "appearances": 8,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 1,
       "red": 0,
       "blue": 0,
       "goals_per_game": 0.0
@@ -3499,24 +3565,13 @@
       "goals_per_game": 0.0
     },
     {
-      "name": "Rios, Guillermo Adrian",
-      "club": "Ituzaingó",
+      "name": "Perello, Diego Martin",
+      "club": "S.A.G. Polvorines D",
       "appearances": 7,
       "goals": 0,
       "yellow": 0,
-      "two_min": 1,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.0
-    },
-    {
-      "name": "Rosemburg, Gabriel Jesus",
-      "club": "Lanús C",
-      "appearances": 7,
-      "goals": 0,
-      "yellow": 0,
-      "two_min": 1,
-      "red": 0,
+      "two_min": 2,
+      "red": 2,
       "blue": 0,
       "goals_per_game": 0.0
     },
@@ -3532,13 +3587,13 @@
       "goals_per_game": 0.0
     },
     {
-      "name": "Perello, Diego Martin",
-      "club": "S.A.G. Polvorines D",
+      "name": "Ormar, Alejo Rafael",
+      "club": "Muñiz Handball B",
       "appearances": 6,
       "goals": 0,
       "yellow": 0,
-      "two_min": 2,
-      "red": 2,
+      "two_min": 0,
+      "red": 0,
       "blue": 0,
       "goals_per_game": 0.0
     },
@@ -3565,8 +3620,8 @@
       "goals_per_game": 0.0
     },
     {
-      "name": "Ormar, Alejo Rafael",
-      "club": "Muñiz Handball B",
+      "name": "Damonte, Esteban Leonel",
+      "club": "Lanús C",
       "appearances": 5,
       "goals": 0,
       "yellow": 0,
@@ -3620,13 +3675,24 @@
       "goals_per_game": 0.0
     },
     {
-      "name": "Damonte, Esteban Leonel",
-      "club": "Lanús C",
+      "name": "Flores, Victor Mariano",
+      "club": "Argentinos Juniors D",
+      "appearances": 4,
+      "goals": 0,
+      "yellow": 1,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Morello, Santiago",
+      "club": "Municipalidad de Pilar",
       "appearances": 4,
       "goals": 0,
       "yellow": 0,
       "two_min": 0,
-      "red": 0,
+      "red": 1,
       "blue": 0,
       "goals_per_game": 0.0
     },
@@ -3653,17 +3719,6 @@
       "goals_per_game": 0.0
     },
     {
-      "name": "Flores, Victor Mariano",
-      "club": "Argentinos Juniors D",
-      "appearances": 3,
-      "goals": 0,
-      "yellow": 1,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.0
-    },
-    {
       "name": "Fuster, Ian Nicolas",
       "club": "Municipalidad de Vicente López C",
       "appearances": 3,
@@ -3675,13 +3730,13 @@
       "goals_per_game": 0.0
     },
     {
-      "name": "Morello, Santiago",
-      "club": "Municipalidad de Pilar",
+      "name": "Delaloye, Bautista Ariel",
+      "club": "Defensores de Moreno",
       "appearances": 3,
       "goals": 0,
       "yellow": 0,
       "two_min": 0,
-      "red": 1,
+      "red": 0,
       "blue": 0,
       "goals_per_game": 0.0
     },
@@ -3708,6 +3763,17 @@
       "goals_per_game": 0.0
     },
     {
+      "name": "Rogers Ford, Joaquin Alejandr...",
+      "club": "Municipalidad de Pilar",
+      "appearances": 2,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
       "name": "Bronstein, Leandro Ariel",
       "club": "Argentinos Juniors D",
       "appearances": 2,
@@ -3721,17 +3787,6 @@
     {
       "name": "Herrera, Tobias Santiago",
       "club": "C.S. y D. Defensores de Banfield",
-      "appearances": 2,
-      "goals": 0,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.0
-    },
-    {
-      "name": "Delaloye, Bautista Ariel",
-      "club": "Defensores de Moreno",
       "appearances": 2,
       "goals": 0,
       "yellow": 0,
@@ -3807,12 +3862,34 @@
       "goals_per_game": 0.0
     },
     {
-      "name": "Rogers Ford, Joaquin Alejandr...",
-      "club": "Municipalidad de Pilar",
+      "name": "Chang, Javier",
+      "club": "Palermo Handball",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Ledesma Flores, Patricio Silvan...",
+      "club": "Banfield B",
       "appearances": 1,
       "goals": 0,
       "yellow": 0,
       "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Saettone, Luciano Gabriel",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
       "red": 0,
       "blue": 0,
       "goals_per_game": 0.0
@@ -3851,28 +3928,6 @@
       "goals_per_game": 0.0
     },
     {
-      "name": "Romanello, Martin Esteban",
-      "club": "S.A.P.A.",
-      "appearances": 1,
-      "goals": 0,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.0
-    },
-    {
-      "name": "Pavia, Bautista",
-      "club": "Defensores de Moreno",
-      "appearances": 1,
-      "goals": 0,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.0
-    },
-    {
       "name": "Brizuela, Ariel Sabas",
       "club": "Municipalidad de Pilar",
       "appearances": 1,
@@ -3898,9 +3953,9 @@
   "clubs": [
     {
       "club": "Lanús C",
-      "appearances": 187,
-      "goals": 359,
-      "yellow": 2,
+      "appearances": 203,
+      "goals": 394,
+      "yellow": 3,
       "two_min": 33,
       "red": 4,
       "blue": 0,
@@ -3908,151 +3963,151 @@
     },
     {
       "club": "Palermo Handball",
-      "appearances": 172,
-      "goals": 356,
+      "appearances": 188,
+      "goals": 390,
       "yellow": 4,
-      "two_min": 43,
-      "red": 4,
+      "two_min": 46,
+      "red": 5,
       "blue": 0,
-      "players": 18
+      "players": 21
     },
     {
       "club": "Municipalidad de Vicente López C",
-      "appearances": 180,
-      "goals": 344,
+      "appearances": 196,
+      "goals": 375,
       "yellow": 3,
-      "two_min": 25,
-      "red": 6,
+      "two_min": 29,
+      "red": 7,
       "blue": 1,
       "players": 27
     },
     {
-      "club": "S.A.P.A.",
-      "appearances": 167,
-      "goals": 327,
-      "yellow": 6,
-      "two_min": 30,
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 188,
+      "goals": 355,
+      "yellow": 5,
+      "two_min": 23,
       "red": 4,
       "blue": 0,
-      "players": 22
+      "players": 21
     },
     {
       "club": "Banfield B",
-      "appearances": 188,
-      "goals": 327,
+      "appearances": 204,
+      "goals": 349,
       "yellow": 4,
-      "two_min": 38,
+      "two_min": 40,
+      "red": 4,
+      "blue": 0,
+      "players": 23
+    },
+    {
+      "club": "S.A.G. Polvorines D",
+      "appearances": 181,
+      "goals": 348,
+      "yellow": 5,
+      "two_min": 43,
+      "red": 7,
+      "blue": 0,
+      "players": 21
+    },
+    {
+      "club": "S.A.P.A.",
+      "appearances": 178,
+      "goals": 347,
+      "yellow": 6,
+      "two_min": 32,
       "red": 4,
       "blue": 0,
       "players": 22
     },
     {
       "club": "Club Deportivo Morón",
-      "appearances": 176,
-      "goals": 324,
+      "appearances": 189,
+      "goals": 346,
       "yellow": 4,
-      "two_min": 36,
-      "red": 3,
+      "two_min": 43,
+      "red": 5,
       "blue": 0,
       "players": 19
     },
     {
       "club": "Municipalidad de Tres de Febrero B",
-      "appearances": 155,
-      "goals": 324,
+      "appearances": 168,
+      "goals": 343,
       "yellow": 0,
-      "two_min": 30,
-      "red": 2,
+      "two_min": 32,
+      "red": 3,
       "blue": 0,
       "players": 21
-    },
-    {
-      "club": "C.S. y D. Defensores de Banfield",
-      "appearances": 175,
-      "goals": 323,
-      "yellow": 5,
-      "two_min": 21,
-      "red": 4,
-      "blue": 0,
-      "players": 21
-    },
-    {
-      "club": "S.A.G. Polvorines D",
-      "appearances": 166,
-      "goals": 319,
-      "yellow": 5,
-      "two_min": 35,
-      "red": 4,
-      "blue": 0,
-      "players": 20
     },
     {
       "club": "Municipalidad de Pilar",
-      "appearances": 167,
-      "goals": 306,
-      "yellow": 0,
-      "two_min": 30,
-      "red": 7,
+      "appearances": 179,
+      "goals": 328,
+      "yellow": 1,
+      "two_min": 34,
+      "red": 9,
       "blue": 2,
       "players": 21
     },
     {
       "club": "Muñiz Handball B",
-      "appearances": 169,
-      "goals": 295,
+      "appearances": 185,
+      "goals": 320,
       "yellow": 1,
-      "two_min": 28,
+      "two_min": 29,
       "red": 4,
       "blue": 0,
       "players": 22
     },
     {
       "club": "Argentinos Juniors D",
-      "appearances": 178,
-      "goals": 285,
+      "appearances": 194,
+      "goals": 312,
       "yellow": 3,
-      "two_min": 53,
+      "two_min": 58,
       "red": 4,
       "blue": 0,
       "players": 23
     },
     {
       "club": "Ituzaingó",
-      "appearances": 147,
-      "goals": 284,
-      "yellow": 7,
-      "two_min": 37,
-      "red": 4,
+      "appearances": 156,
+      "goals": 306,
+      "yellow": 8,
+      "two_min": 39,
+      "red": 5,
       "blue": 0,
       "players": 19
     },
     {
       "club": "Defensores de Moreno",
-      "appearances": 160,
-      "goals": 273,
+      "appearances": 175,
+      "goals": 299,
       "yellow": 5,
-      "two_min": 16,
+      "two_min": 19,
       "red": 1,
       "blue": 0,
       "players": 23
     },
     {
       "club": "U.N.La.M.",
-      "appearances": 151,
-      "goals": 257,
-      "yellow": 1,
-      "two_min": 23,
-      "red": 3,
+      "appearances": 162,
+      "goals": 276,
+      "yellow": 3,
+      "two_min": 26,
+      "red": 4,
       "blue": 0,
       "players": 18
     },
     {
       "club": "Municipalidad de San Martín (Ce.M.E.F)",
-      "appearances": 145,
-      "goals": 247,
+      "appearances": 159,
+      "goals": 267,
       "yellow": 5,
-      "two_min": 33,
-      "red": 7,
+      "two_min": 37,
+      "red": 8,
       "blue": 0,
       "players": 16
     }
@@ -4062,20 +4117,20 @@
     "methodology": "Modelo Poisson regularizado de ataque/defensa, ponderado por recencia y localía, ajustado sobre resultados del torneo; simula marcadores, fixture y desempates reales. Es una estimación estadística, no una cuota ni una garantía.",
     "teams": [
       {
-        "club": "Lanús C",
-        "champion_probability": 0.4636
+        "club": "Palermo Handball",
+        "champion_probability": 0.458
       },
       {
-        "club": "Palermo Handball",
-        "champion_probability": 0.4034
+        "club": "Lanús C",
+        "champion_probability": 0.4375
       },
       {
         "club": "Municipalidad de Vicente López C",
-        "champion_probability": 0.1104
+        "champion_probability": 0.0862
       },
       {
         "club": "S.A.P.A.",
-        "champion_probability": 0.0226
+        "champion_probability": 0.0183
       },
       {
         "club": "Argentinos Juniors D",
@@ -4132,98 +4187,98 @@
         "date": "2026-11-15",
         "home": "Palermo Handball",
         "away": "S.A.G. Polvorines D",
-        "home_win_probability": 0.7405,
-        "draw_probability": 0.0445,
-        "away_win_probability": 0.215
+        "home_win_probability": 0.7804,
+        "draw_probability": 0.0379,
+        "away_win_probability": 0.1817
       },
       {
         "round": 14,
         "date": "2026-11-15",
         "home": "Ituzaingó",
         "away": "Muñiz Handball B",
-        "home_win_probability": 0.3557,
+        "home_win_probability": 0.3418,
         "draw_probability": 0.0547,
-        "away_win_probability": 0.5896
+        "away_win_probability": 0.6035
       },
       {
         "round": 14,
         "date": "2026-11-15",
         "home": "Club Deportivo Morón",
         "away": "Argentinos Juniors D",
-        "home_win_probability": 0.6538,
-        "draw_probability": 0.0494,
-        "away_win_probability": 0.2968
+        "home_win_probability": 0.6353,
+        "draw_probability": 0.051,
+        "away_win_probability": 0.3137
       },
       {
         "round": 14,
         "date": "2026-11-15",
         "home": "Municipalidad de San Martín (Ce.M.E.F)",
         "away": "C.S. y D. Defensores de Banfield",
-        "home_win_probability": 0.5257,
-        "draw_probability": 0.0576,
-        "away_win_probability": 0.4167
+        "home_win_probability": 0.5096,
+        "draw_probability": 0.0585,
+        "away_win_probability": 0.4319
       },
       {
         "round": 14,
         "date": "2026-11-15",
         "home": "Municipalidad de Vicente López C",
         "away": "Lanús C",
-        "home_win_probability": 0.5071,
-        "draw_probability": 0.0504,
-        "away_win_probability": 0.4425
+        "home_win_probability": 0.4894,
+        "draw_probability": 0.0511,
+        "away_win_probability": 0.4595
       },
       {
         "round": 14,
         "date": "2026-11-15",
         "home": "S.A.P.A.",
         "away": "Defensores de Moreno",
-        "home_win_probability": 0.9305,
-        "draw_probability": 0.0163,
-        "away_win_probability": 0.0533
+        "home_win_probability": 0.9228,
+        "draw_probability": 0.0179,
+        "away_win_probability": 0.0594
       },
       {
         "round": 14,
         "date": "2026-11-15",
         "home": "Banfield B",
         "away": "Municipalidad de Tres de Febrero B",
-        "home_win_probability": 0.703,
-        "draw_probability": 0.0461,
-        "away_win_probability": 0.2509
+        "home_win_probability": 0.6855,
+        "draw_probability": 0.0478,
+        "away_win_probability": 0.2667
       },
       {
         "round": 14,
         "date": "2026-11-15",
         "home": "Municipalidad de Pilar",
         "away": "U.N.La.M.",
-        "home_win_probability": 0.805,
-        "draw_probability": 0.0411,
-        "away_win_probability": 0.1539
+        "home_win_probability": 0.7717,
+        "draw_probability": 0.0424,
+        "away_win_probability": 0.1858
       },
       {
         "round": 15,
         "date": "2026-11-22",
         "home": "U.N.La.M.",
         "away": "Palermo Handball",
-        "home_win_probability": 0.1742,
-        "draw_probability": 0.0423,
-        "away_win_probability": 0.7835
+        "home_win_probability": 0.1342,
+        "draw_probability": 0.0335,
+        "away_win_probability": 0.8323
       },
       {
         "round": 15,
         "date": "2026-11-22",
         "home": "Municipalidad de Tres de Febrero B",
         "away": "Municipalidad de Pilar",
-        "home_win_probability": 0.5786,
-        "draw_probability": 0.058,
-        "away_win_probability": 0.3634
+        "home_win_probability": 0.648,
+        "draw_probability": 0.0507,
+        "away_win_probability": 0.3012
       },
       {
         "round": 15,
         "date": "2026-11-22",
         "home": "Defensores de Moreno",
         "away": "Banfield B",
-        "home_win_probability": 0.1681,
-        "draw_probability": 0.0363,
+        "home_win_probability": 0.1676,
+        "draw_probability": 0.0367,
         "away_win_probability": 0.7956
       },
       {
@@ -4231,45 +4286,45 @@
         "date": "2026-11-22",
         "home": "Lanús C",
         "away": "S.A.P.A.",
-        "home_win_probability": 0.7302,
-        "draw_probability": 0.0416,
-        "away_win_probability": 0.2282
+        "home_win_probability": 0.7198,
+        "draw_probability": 0.0429,
+        "away_win_probability": 0.2372
       },
       {
         "round": 15,
         "date": "2026-11-22",
         "home": "C.S. y D. Defensores de Banfield",
         "away": "Municipalidad de Vicente López C",
-        "home_win_probability": 0.4991,
-        "draw_probability": 0.0519,
-        "away_win_probability": 0.449
+        "home_win_probability": 0.4939,
+        "draw_probability": 0.0526,
+        "away_win_probability": 0.4535
       },
       {
         "round": 15,
         "date": "2026-11-22",
         "home": "Argentinos Juniors D",
         "away": "Municipalidad de San Martín (Ce.M.E.F)",
-        "home_win_probability": 0.5445,
-        "draw_probability": 0.0591,
-        "away_win_probability": 0.3965
+        "home_win_probability": 0.5369,
+        "draw_probability": 0.06,
+        "away_win_probability": 0.4032
       },
       {
         "round": 15,
         "date": "2026-11-22",
         "home": "Muñiz Handball B",
         "away": "Club Deportivo Morón",
-        "home_win_probability": 0.7496,
-        "draw_probability": 0.0427,
-        "away_win_probability": 0.2077
+        "home_win_probability": 0.7448,
+        "draw_probability": 0.0436,
+        "away_win_probability": 0.2115
       },
       {
         "round": 15,
         "date": "2026-11-22",
         "home": "S.A.G. Polvorines D",
         "away": "Ituzaingó",
-        "home_win_probability": 0.8361,
-        "draw_probability": 0.0318,
-        "away_win_probability": 0.1321
+        "home_win_probability": 0.8249,
+        "draw_probability": 0.0334,
+        "away_win_probability": 0.1418
       }
     ]
   }

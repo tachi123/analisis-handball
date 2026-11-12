@@ -35,6 +35,10 @@ def build_femebal_planilla_reconciliation(manifest: dict[str, Any], fixture: dic
     for record in sorted(records, key=lambda item: str(item.get("source_path", ""))):
         filename = PurePosixPath(str(record.get("source_path", ""))).name
         entry = by_pdf.get(filename)
+        match_method = "explicit_tracker_pdf_url_filename"
+        if entry is None:
+            entry = _match_by_date_teams(record, tracker)
+            match_method = "date_and_team_labels"
         if entry is None:
             unmatched.append({"source_path": record.get("source_path"), "reason": "tracker_pdf_not_found"})
             continue
@@ -49,7 +53,8 @@ def build_femebal_planilla_reconciliation(manifest: dict[str, Any], fixture: dic
             "size": record.get("size"), "fixture_key": entry["fixture_key"],
             "tracker_match_id": entry.get("evidence", {}).get("tracker_match_id"),
             "tracker_scheduled_date": entry.get("date"), "official_planilla_date": _field(record, "date"),
-            "pdf_url": _tracker_pdf_url(entry, filename),
+            "pdf_url": _tracker_pdf_url(entry, filename) if match_method == "explicit_tracker_pdf_url_filename" else None,
+            "match_method": match_method,
             "tracker_score_disagrees": tracker_disagrees,
         })
     fixture_keys = [link["fixture_key"] for link in links]
@@ -83,6 +88,28 @@ def _index_tracker_pdf(entries: list[dict[str, Any]]) -> dict[str, dict[str, Any
                 raise ReconciliationError(f"tracker PDF is linked to multiple fixtures: {filename}")
             indexed[filename] = entry
     return indexed
+
+
+def _match_by_date_teams(record: dict[str, Any], tracker: list[dict[str, Any]]) -> dict[str, Any] | None:
+    """Fallback: match a sheet to a fixture by exact date and tracker team labels.
+
+    Used when the tracker captured scores but not the planilla URL (the sheet was
+    published later). Returns the entry only when exactly one candidate matches,
+    so ambiguity is never resolved by guessing.
+    """
+    match_date = _field(record, "date")
+    home = _field(record, "home_name")
+    away = _field(record, "away_name")
+    if not match_date or not home or not away:
+        return None
+    candidates = []
+    for entry in tracker:
+        if entry.get("date") != match_date:
+            continue
+        labels = entry.get("evidence", {}).get("tracker_labels", {})
+        if labels.get("home") == home and labels.get("away") == away:
+            candidates.append(entry)
+    return candidates[0] if len(candidates) == 1 else None
 
 
 def _tracker_pdf_url(entry: dict[str, Any], filename: str) -> str:

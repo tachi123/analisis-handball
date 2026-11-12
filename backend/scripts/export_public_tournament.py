@@ -117,7 +117,7 @@ def build_public_tournament() -> dict[str, Any]:
             "rounds_played": rounds_played,
             "rounds_total": 15,
             "status": "partial",
-            "label": "Cubre las fechas jugadas; la fecha 13 se refleja como resultado informado.",
+            "label": f"Cubre las {rounds_played} fechas con resultados cargados; no reemplaza la tabla oficial de FEMEBAL.",
         },
         "standings": _standings_rows(standings),
         "scorers": _scorer_rows(players),

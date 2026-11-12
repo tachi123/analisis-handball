@@ -36,3 +36,21 @@ def test_planilla_score_overrides_a_stale_reported_tracker_score():
 
     assert result["counts"]["linked"] == 1
     assert result["links"][0]["tracker_score_disagrees"] is True
+
+
+def test_reconciles_by_date_and_team_labels_when_tracker_url_is_missing():
+    manifest = {"records": [{"source_path": "permanencia/late.pdf", "sha256": "abc",
+        "fields": {"date": {"value": "2026-11-08"}, "home_name": {"value": "C.A. Lanús C"},
+                   "away_name": {"value": "Municipalidad de San Martín (Ce.M.E.F)"},
+                   "home_score": {"value": 35}, "away_score": {"value": 20}}}]}
+    fixture = {"rounds": [{"entries": [{"kind": "match", "fixture_key": "femebal:1", "date": "2026-11-08",
+        "result": {"home": 35, "away": 20}, "evidence": {"tracker_match_id": "1",
+        "tracker_labels": {"home": "C.A. Lanús C", "away": "Municipalidad de San Martín (Ce.M.E.F)"},
+        "planillas": []}}]}]}
+
+    result = build_femebal_planilla_reconciliation(manifest, fixture, source_stage="permanencia")
+
+    assert result["counts"] == {"local_records": 1, "linked": 1, "unmatched": 0}
+    assert result["links"][0]["fixture_key"] == "femebal:1"
+    assert result["links"][0]["match_method"] == "date_and_team_labels"
+    assert result["links"][0]["pdf_url"] is None
