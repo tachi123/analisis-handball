@@ -14,7 +14,7 @@ export function Tournament({ tournament, onBack }: { tournament: PublicTournamen
   const sapaClub = tournament.clubs.find((row) => isSapa(row.club))
   const topScorers = tournament.scorers.slice(0, 20)
   const sapaScorers = tournament.scorers.filter((row) => isSapa(row.club)).slice(0, 8)
-  const [scorerClub, setScorerClub] = useState('all')
+  const [scorerClub, setScorerClub] = useState(() => tournament.scorers.find((row) => isSapa(row.club))?.club ?? 'all')
   const scorerClubs = [...new Set(tournament.scorers.map((row) => row.club))].sort((left, right) => left.localeCompare(right, 'es'))
   const visibleScorers = scorerClub === 'all' ? topScorers : tournament.scorers.filter((row) => row.club === scorerClub)
   const forecast = tournament.forecast
