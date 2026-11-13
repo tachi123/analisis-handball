@@ -52,5 +52,1027 @@
         "official_sheet_confirmed": true
       }
     }
+  ],
+  "player_summary": [
+    {
+      "team": "Banfield B",
+      "slug": "arevalo-bautista-damian",
+      "name": "Arevalo, Bautista Damian",
+      "jersey_number": 38,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 0,
+      "shots": 0,
+      "goals": 0,
+      "turnovers": 0,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "Banfield B",
+      "slug": "badaracco-carola-fabio-nahu",
+      "name": "Badaracco Carola, Fabio Nahu...",
+      "jersey_number": 32,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 7,
+      "goals": 5,
+      "turnovers": 2,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "Banfield B",
+      "slug": "brizuela-lucio-nicolas",
+      "name": "Brizuela, Lucio Nicolas",
+      "jersey_number": 27,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 10,
+      "goals": 6,
+      "turnovers": 3,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "Banfield B",
+      "slug": "cafferata-santiago-damian",
+      "name": "Cafferata, Santiago Damian",
+      "jersey_number": 61,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 1,
+      "goals": 0,
+      "turnovers": 2,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "Banfield B",
+      "slug": "de-lorenzo-matias-nicolas",
+      "name": "De Lorenzo, Matias Nicolas",
+      "jersey_number": 8,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 1,
+      "goals": 1,
+      "turnovers": 0,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "Banfield B",
+      "slug": "galarza-franco-agustin",
+      "name": "Galarza, Franco Agustin",
+      "jersey_number": 26,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 0,
+      "shots": 0,
+      "goals": 0,
+      "turnovers": 0,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "Banfield B",
+      "slug": "gonzalez-julian-gabriel",
+      "name": "Gonzalez, Julian Gabriel",
+      "jersey_number": 30,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 6,
+      "goals": 4,
+      "turnovers": 4,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        2,
+        0,
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "team": "Banfield B",
+      "slug": "montellanos-lopez-joaquin",
+      "name": "Montellanos Lopez, Joaquin",
+      "jersey_number": 60,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 2,
+      "goals": 1,
+      "turnovers": 0,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "Banfield B",
+      "slug": "petrovic-joaquin-elias",
+      "name": "Petrovic, Joaquin Elias",
+      "jersey_number": 64,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 0,
+      "goals": 0,
+      "turnovers": 1,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "team": "Banfield B",
+      "slug": "rapisarda-ignacio-alejandro",
+      "name": "Rapisarda, Ignacio Alejandro",
+      "jersey_number": 68,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 0,
+      "shots": 0,
+      "goals": 0,
+      "turnovers": 0,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "Banfield B",
+      "slug": "rodriguez-lautaro-tomas",
+      "name": "Rodriguez, Lautaro Tomas",
+      "jersey_number": 48,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 0,
+      "goals": 0,
+      "turnovers": 2,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "Banfield B",
+      "slug": "ruiz-diaz-santiago",
+      "name": "Ruiz Diaz, Santiago",
+      "jersey_number": 21,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 20,
+      "goals": 10,
+      "turnovers": 4,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "team": "Banfield B",
+      "slug": "senaris-tomas",
+      "name": "Senaris, Tomas",
+      "jersey_number": 33,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 4,
+      "goals": 4,
+      "turnovers": 0,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "Palermo Handball",
+      "slug": "allerborn-joaquin",
+      "name": "Allerborn, Joaquin",
+      "jersey_number": 13,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 4,
+      "goals": 2,
+      "turnovers": 2,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "team": "Palermo Handball",
+      "slug": "alonso-julian",
+      "name": "Alonso, Julian",
+      "jersey_number": 4,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 2,
+      "goals": 0,
+      "turnovers": 1,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "Palermo Handball",
+      "slug": "borrelli-matias-exequiel-tomas",
+      "name": "Borrelli, Matias Exequiel Tomas",
+      "jersey_number": 15,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 5,
+      "goals": 3,
+      "turnovers": 0,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "Palermo Handball",
+      "slug": "delmoro-lucas",
+      "name": "Delmoro, Lucas",
+      "jersey_number": 6,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 1,
+      "goals": 1,
+      "turnovers": 0,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "Palermo Handball",
+      "slug": "gigante-roberto-juan",
+      "name": "Gigante, Roberto Juan",
+      "jersey_number": 11,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 3,
+      "goals": 2,
+      "turnovers": 0,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "Palermo Handball",
+      "slug": "gimenez-asciutto-mateo",
+      "name": "Gimenez Asciutto, Mateo",
+      "jersey_number": 5,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 6,
+      "goals": 1,
+      "turnovers": 1,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "Palermo Handball",
+      "slug": "ibarra-steven-yoel",
+      "name": "Ibarra, Steven Yoel",
+      "jersey_number": 53,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 0,
+      "shots": 0,
+      "goals": 0,
+      "turnovers": 0,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "Palermo Handball",
+      "slug": "iglesias-genaro",
+      "name": "Iglesias, Genaro",
+      "jersey_number": 14,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 3,
+      "goals": 1,
+      "turnovers": 1,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "Palermo Handball",
+      "slug": "innella-gaston",
+      "name": "Innella, Gaston",
+      "jersey_number": 7,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 15,
+      "goals": 9,
+      "turnovers": 0,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "Palermo Handball",
+      "slug": "lovera-alan-jorge-leonel",
+      "name": "Lovera, Alan Jorge Leonel",
+      "jersey_number": 16,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 0,
+      "shots": 0,
+      "goals": 0,
+      "turnovers": 0,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "Palermo Handball",
+      "slug": "murino-lautaro-ezequiel",
+      "name": "Murino, Lautaro Ezequiel",
+      "jersey_number": 17,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 5,
+      "goals": 2,
+      "turnovers": 2,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "Palermo Handball",
+      "slug": "otegui-juan",
+      "name": "Otegui, Juan",
+      "jersey_number": 2,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 4,
+      "goals": 2,
+      "turnovers": 2,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "team": "Palermo Handball",
+      "slug": "romero-elias-josue",
+      "name": "Romero, Elias Josue",
+      "jersey_number": 9,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 2,
+      "goals": 2,
+      "turnovers": 2,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "Palermo Handball",
+      "slug": "viggiano-valentin-nicolas",
+      "name": "Viggiano, Valentin Nicolas",
+      "jersey_number": 3,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 6,
+      "goals": 1,
+      "turnovers": 1,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "S.A.P.A.",
+      "slug": "chavez-alexis-ezequiel",
+      "name": "Chavez, Alexis Ezequiel",
+      "jersey_number": 66,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 6,
+      "goals": 3,
+      "turnovers": 0,
+      "recoveries": 1,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "S.A.P.A.",
+      "slug": "delpieri-mateo",
+      "name": "Delpieri, Mateo",
+      "jersey_number": 38,
+      "reports_in_squad": 3,
+      "reports_with_observed_actions": 3,
+      "shots": 28,
+      "goals": 14,
+      "turnovers": 4,
+      "recoveries": 2,
+      "turnovers_by_block": [
+        0,
+        3,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "S.A.P.A.",
+      "slug": "ferrari-jonas-horacio",
+      "name": "Ferrari, Jonas Horacio",
+      "jersey_number": 97,
+      "reports_in_squad": 3,
+      "reports_with_observed_actions": 3,
+      "shots": 14,
+      "goals": 7,
+      "turnovers": 16,
+      "recoveries": 1,
+      "turnovers_by_block": [
+        3,
+        2,
+        0,
+        5,
+        3,
+        3
+      ]
+    },
+    {
+      "team": "S.A.P.A.",
+      "slug": "gonzalez-ezequiel-matias",
+      "name": "Gonzalez, Ezequiel Matias",
+      "jersey_number": 10,
+      "reports_in_squad": 3,
+      "reports_with_observed_actions": 3,
+      "shots": 7,
+      "goals": 4,
+      "turnovers": 0,
+      "recoveries": 4,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "S.A.P.A.",
+      "slug": "grisolia-geronimo-gabriel",
+      "name": "Grisolia, Geronimo Gabriel",
+      "jersey_number": 27,
+      "reports_in_squad": 3,
+      "reports_with_observed_actions": 1,
+      "shots": 11,
+      "goals": 4,
+      "turnovers": 3,
+      "recoveries": 2,
+      "turnovers_by_block": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "team": "S.A.P.A.",
+      "slug": "martinez-milo-ulises",
+      "name": "Martinez, Milo Ulises",
+      "jersey_number": 17,
+      "reports_in_squad": 3,
+      "reports_with_observed_actions": 3,
+      "shots": 39,
+      "goals": 21,
+      "turnovers": 14,
+      "recoveries": 1,
+      "turnovers_by_block": [
+        2,
+        5,
+        2,
+        1,
+        3,
+        1
+      ]
+    },
+    {
+      "team": "S.A.P.A.",
+      "slug": "mollo-skripnik-strelecki-juan-ig",
+      "name": "Mollo Skripnik Strelecki, Juan Ig...",
+      "jersey_number": 7,
+      "reports_in_squad": 3,
+      "reports_with_observed_actions": 3,
+      "shots": 5,
+      "goals": 2,
+      "turnovers": 4,
+      "recoveries": 1,
+      "turnovers_by_block": [
+        0,
+        0,
+        1,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "team": "S.A.P.A.",
+      "slug": "mollo-skripnik-strelecki-lucian",
+      "name": "Mollo Skripnik Strelecki, Lucian...",
+      "jersey_number": 87,
+      "reports_in_squad": 3,
+      "reports_with_observed_actions": 3,
+      "shots": 12,
+      "goals": 7,
+      "turnovers": 3,
+      "recoveries": 3,
+      "turnovers_by_block": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "S.A.P.A.",
+      "slug": "ramirez-gaston",
+      "name": "Ramirez, Gaston",
+      "jersey_number": 80,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 9,
+      "goals": 6,
+      "turnovers": 0,
+      "recoveries": 5,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "S.A.P.A.",
+      "slug": "ramirez-nicolas",
+      "name": "Ramirez, Nicolas",
+      "jersey_number": 13,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 5,
+      "goals": 3,
+      "turnovers": 0,
+      "recoveries": 2,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "S.A.P.A.",
+      "slug": "romanello-martin-esteban",
+      "name": "Romanello, Martin Esteban",
+      "jersey_number": 24,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 0,
+      "shots": 0,
+      "goals": 0,
+      "turnovers": 0,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "S.A.P.A.",
+      "slug": "romero-boeris-sebastian",
+      "name": "Romero Boeris, Sebastian",
+      "jersey_number": 98,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 15,
+      "goals": 8,
+      "turnovers": 2,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "team": "S.A.P.A.",
+      "slug": "ruano-matheo",
+      "name": "Ruano, Matheo",
+      "jersey_number": 2,
+      "reports_in_squad": 3,
+      "reports_with_observed_actions": 2,
+      "shots": 3,
+      "goals": 2,
+      "turnovers": 1,
+      "recoveries": 1,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "team": "S.A.P.A.",
+      "slug": "sarrailh-pablo-eduardo",
+      "name": "Sarrailh, Pablo Eduardo",
+      "jersey_number": 11,
+      "reports_in_squad": 3,
+      "reports_with_observed_actions": 3,
+      "shots": 21,
+      "goals": 8,
+      "turnovers": 2,
+      "recoveries": 1,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "team": "U.N.La.M.",
+      "slug": "almiron-facundo-sebastian",
+      "name": "Almiron, Facundo Sebastian",
+      "jersey_number": 17,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 2,
+      "goals": 1,
+      "turnovers": 1,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "U.N.La.M.",
+      "slug": "gomez-leandro-luis-nicolas",
+      "name": "Gomez, Leandro Luis Nicolas",
+      "jersey_number": 14,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 17,
+      "goals": 7,
+      "turnovers": 0,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "U.N.La.M.",
+      "slug": "lopardo-brian-ezequiel",
+      "name": "Lopardo, Brian Ezequiel",
+      "jersey_number": 23,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 1,
+      "goals": 0,
+      "turnovers": 5,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        4,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "U.N.La.M.",
+      "slug": "martinez-joaquin-ariel",
+      "name": "Martinez, Joaquin Ariel",
+      "jersey_number": 5,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 3,
+      "goals": 0,
+      "turnovers": 0,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "U.N.La.M.",
+      "slug": "pereyra-galetti-fernando-emm",
+      "name": "Pereyra Galetti, Fernando Emm...",
+      "jersey_number": 4,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 0,
+      "shots": 0,
+      "goals": 0,
+      "turnovers": 0,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "U.N.La.M.",
+      "slug": "pineiro-dante",
+      "name": "Pineiro, Dante",
+      "jersey_number": 6,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 9,
+      "goals": 1,
+      "turnovers": 3,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "team": "U.N.La.M.",
+      "slug": "romanello-matias-ezequiel",
+      "name": "Romanello, Matias Ezequiel",
+      "jersey_number": 7,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 1,
+      "goals": 1,
+      "turnovers": 0,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "U.N.La.M.",
+      "slug": "salgado-mariano-agustin",
+      "name": "Salgado, Mariano Agustin",
+      "jersey_number": 16,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 2,
+      "goals": 1,
+      "turnovers": 1,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "U.N.La.M.",
+      "slug": "santillan-juan-roman",
+      "name": "Santillan, Juan Roman",
+      "jersey_number": 4,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 8,
+      "goals": 3,
+      "turnovers": 3,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "team": "U.N.La.M.",
+      "slug": "torrico-camacho-kevin-alan",
+      "name": "Torrico Camacho, Kevin Alan",
+      "jersey_number": 2,
+      "reports_in_squad": 1,
+      "reports_with_observed_actions": 1,
+      "shots": 9,
+      "goals": 6,
+      "turnovers": 0,
+      "recoveries": 0,
+      "turnovers_by_block": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
   ]
 }

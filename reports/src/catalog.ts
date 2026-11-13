@@ -24,6 +24,19 @@ export type PublicReportCatalogEntry = {
 export type PublicReportCatalog = {
   schema_version: 'public-report-catalog-v1'
   reports: PublicReportCatalogEntry[]
+  player_summary: Array<{
+    team: string
+    slug: string
+    name: string
+    jersey_number: string | number | null
+    reports_in_squad: number
+    reports_with_observed_actions: number
+    shots: number
+    goals: number
+    turnovers: number
+    recoveries: number
+    turnovers_by_block: number[]
+  }>
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -43,6 +56,15 @@ export function decodePublicReportCatalog(value: unknown): PublicReportCatalog {
     throw new Error('The public report catalog has invalid data.')
   }
 
+  const playerSummaryRaw = value.player_summary === undefined ? [] : value.player_summary
+  if (!Array.isArray(playerSummaryRaw)) throw new Error('The public report catalog has invalid player data.')
+  const player_summary = playerSummaryRaw.map((item) => {
+    if (!isRecord(item) || Object.keys(item).some((field) => !['team', 'slug', 'name', 'jersey_number', 'reports_in_squad', 'reports_with_observed_actions', 'shots', 'goals', 'turnovers', 'recoveries', 'turnovers_by_block'].includes(field) || forbidden.test(field))) throw new Error('The public report catalog has invalid player data.')
+    if (typeof item.team !== 'string' || typeof item.slug !== 'string' || !keyPattern.test(item.slug) || typeof item.name !== 'string' || (item.jersey_number !== null && typeof item.jersey_number !== 'string' && typeof item.jersey_number !== 'number')) throw new Error('The public report catalog has invalid player data.')
+    for (const field of ['reports_in_squad', 'reports_with_observed_actions', 'shots', 'goals', 'turnovers', 'recoveries']) if (typeof item[field] !== 'number' || item[field] < 0) throw new Error('The public report catalog has invalid player data.')
+    if (!Array.isArray(item.turnovers_by_block) || item.turnovers_by_block.length !== 6 || item.turnovers_by_block.some((count) => typeof count !== 'number' || count < 0)) throw new Error('The public report catalog has invalid player data.')
+    return item as PublicReportCatalog['player_summary'][number]
+  })
   return {
     schema_version: 'public-report-catalog-v1',
     reports: value.reports.map((item) => {
@@ -59,5 +81,6 @@ export function decodePublicReportCatalog(value: unknown): PublicReportCatalog {
       if (typeof summary.video_available !== 'boolean' || typeof summary.official_sheet_confirmed !== 'boolean') throw new Error('The public report catalog has an invalid summary.')
       return { key: item.key, date: item.date, home_team: item.home_team, away_team: item.away_team, summary: summary as PublicReportCatalogEntry['summary'] }
     }),
+    player_summary,
   }
 }

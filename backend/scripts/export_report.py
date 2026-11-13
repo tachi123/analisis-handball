@@ -44,6 +44,7 @@ def public_official_sheet(snapshot: OfficialSnapshot | None, directory: Path, ke
 def write_public_catalog(directory: Path) -> None:
     entries = []
     referenced_sheets = set()
+    player_summaries = {}
     for path in directory.glob('report_*.json'):
         try:
             candidate = json.loads(path.read_text(encoding='utf-8'))
@@ -86,10 +87,61 @@ def write_public_catalog(directory: Path) -> None:
                     'official_sheet_confirmed': bool(candidate.get('official_sheet_confirmed')),
                 },
             })
+            # The catalog is a derived, public-safe projection. Aggregate only
+            # complete reports and only field-player statistics already exposed
+            # by each report; never copy event IDs or raw payloads.
+            if coverage.get('status') != 'complete':
+                continue
+            for player in candidate.get('players') or []:
+                if not isinstance(player, dict) or player.get('role') != 'field_player':
+                    continue
+                metrics = player.get('metrics')
+                if not isinstance(metrics, dict):
+                    continue
+                side = player.get('team_side')
+                team_name = home_team if side == 'home' else away_team if side == 'away' else None
+                slug = player.get('slug')
+                name = player.get('name')
+                if not isinstance(team_name, str) or not isinstance(slug, str) or not isinstance(name, str):
+                    continue
+                key = (team_name, slug)
+                summary = player_summaries.setdefault(key, {
+                    'team': team_name,
+                    'slug': slug,
+                    'name': name,
+                    'jersey_number': player.get('jersey_number'),
+                    'reports_in_squad': 0,
+                    'reports_with_observed_actions': 0,
+                    'shots': 0,
+                    'goals': 0,
+                    'turnovers': 0,
+                    'recoveries': 0,
+                    'turnovers_by_block': [0, 0, 0, 0, 0, 0],
+                })
+                summary['reports_in_squad'] += 1
+                observed_actions = 0
+                for metric in ('shots', 'goals', 'turnovers', 'recoveries'):
+                    value = metrics.get(metric, 0)
+                    if isinstance(value, (int, float)) and not isinstance(value, bool):
+                        summary[metric] += value
+                        observed_actions += value
+                if observed_actions:
+                    summary['reports_with_observed_actions'] += 1
+                for incident in candidate.get('incidents') or []:
+                    if not isinstance(incident, dict) or incident.get('event_kind') != 'turnover' or incident.get('player_slug') != slug:
+                        continue
+                    if incident.get('clock_unverified') or incident.get('period') not in {1, 2}:
+                        continue
+                    seconds = incident.get('regulation_seconds')
+                    if not isinstance(seconds, (int, float)) or isinstance(seconds, bool):
+                        continue
+                    block = min(2, max(0, int(seconds % 1800) // 600))
+                    summary['turnovers_by_block'][(int(incident['period']) - 1) * 3 + block] += 1
         except (OSError, ValueError, TypeError):
             continue
     entries.sort(key=lambda entry: (entry['date'] or '', entry['home_team'], entry['away_team'], entry['key']), reverse=True)
-    (directory / 'reports.json').write_text(json.dumps({'schema_version': 'public-report-catalog-v1', 'reports': entries}, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    player_summary = sorted(player_summaries.values(), key=lambda player: (player['team'], player['name'], player['slug']))
+    (directory / 'reports.json').write_text(json.dumps({'schema_version': 'public-report-catalog-v1', 'reports': entries, 'player_summary': player_summary}, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     sheet_directory = directory / 'planillas'
     if sheet_directory.exists():
         for path in sheet_directory.glob('*.pdf'):

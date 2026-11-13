@@ -13,6 +13,12 @@ describe('public report catalog', () => {
     expect(reportLabel(entry)).toBe('2026-10-11 · S.A.P.A. vs Banfield B')
   })
 
+  it('accepts privacy-safe player aggregates with their report coverage', () => {
+    const decoded = decodePublicReportCatalog({ ...catalog, player_summary: [{ team: 'S.A.P.A.', slug: 'ana-perez', name: 'Ana Pérez', jersey_number: 7, reports_in_squad: 1, reports_with_observed_actions: 1, shots: 4, goals: 2, turnovers: 1, recoveries: 3, turnovers_by_block: [0, 1, 0, 0, 0, 0] }] })
+    expect(decoded.player_summary[0].reports_in_squad).toBe(1)
+    expect(decoded.player_summary[0].turnovers_by_block).toEqual([0, 1, 0, 0, 0, 0])
+  })
+
   it('rejects internal fields and unsafe report keys', () => {
     expect(() => decodePublicReportCatalog({ ...catalog, reports: [{ ...catalog.reports[0], match_id: 101 }] })).toThrow('restricted field')
     expect(() => decodePublicReportCatalog({ ...catalog, reports: [{ ...catalog.reports[0], key: '../report' }] })).toThrow('invalid key')
