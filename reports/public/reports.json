@@ -2,6 +2,23 @@
   "schema_version": "public-report-catalog-v1",
   "reports": [
     {
+      "key": "2026-11-01-s-a-p-a-u-n-la-m",
+      "date": "2026-11-01",
+      "home_team": "S.A.P.A.",
+      "away_team": "U.N.La.M.",
+      "summary": {
+        "home_goals": 28,
+        "away_goals": 20,
+        "home_shots": 49,
+        "away_shots": 52,
+        "home_turnovers": 20,
+        "away_turnovers": 13,
+        "coverage_status": "complete",
+        "video_available": true,
+        "official_sheet_confirmed": true
+      }
+    },
+    {
       "key": "2026-10-11-s-a-p-a-banfield-b",
       "date": "2026-10-11",
       "home_team": "S.A.P.A.",
