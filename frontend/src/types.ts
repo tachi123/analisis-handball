@@ -361,6 +361,8 @@ export interface VideoSource {
   availability_state: VideoAvailabilityState
 }
 
+export interface LocalVideoPlayback { url: string }
+
 export interface TimeAnchor {
   id: number
   period: number

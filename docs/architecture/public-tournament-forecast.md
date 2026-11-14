@@ -46,6 +46,9 @@ The tournament dashboard shows:
 - SAPA's current table position and championship estimate first.
 - A comparison matrix for clubs with a simulated championship chance: champion
   chance, then one win/draw/loss cell per remaining round.
+- A final, horizontally scrollable `Camino jugado` column: each completed round
+  shows home/away, opponent, final score, and win/draw/loss. It is actual
+  result history, not a model prediction.
 - SAPA's next matches separately for quick reading.
 - A club filter for top scorers.
 
@@ -74,6 +77,8 @@ allowlisted by `reports/src/tournamentProjection.ts` and contains only:
 - simulation count and plain-language methodology;
 - club name plus championship probability;
 - pending round/date, public team names, and win/draw/loss probabilities.
+- each club's completed public campaign: round/date, opponent, home/away,
+  score, and result.
 
 ## Implementation map
 

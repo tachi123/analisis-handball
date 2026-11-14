@@ -72,6 +72,37 @@ def test_authenticated_source_session_is_saved_and_retrieved(tmp_path):
         engine.dispose()
 
 
+def test_local_video_source_is_private_and_range_streamed(tmp_path, monkeypatch):
+    video_root = tmp_path / "videos"
+    video_root.mkdir()
+    content = b"private-local-video-content"
+    (video_root / "match.mp4").write_bytes(content)
+    monkeypatch.setenv("LOCAL_VIDEO_ROOT", str(video_root))
+    client, engine = analysis_client(tmp_path)
+    headers = {"Authorization": f"Bearer {create_access_token({'sub': '1'})}"}
+    payload = {"mode": "video", "source": {"url": "local://match.mp4", "availability_state": "unknown"}}
+
+    try:
+        saved = client.put("/api/v1/matches/1/analysis-session", json=payload, headers=headers)
+        assert saved.status_code == 200
+        source = saved.json()["source"]
+        assert source["provider"] == "local_private"
+        assert source["original_url"] != "local://match.mp4"
+
+        playback = client.get(f"/api/v1/video-sources/{source['id']}/playback", headers=headers)
+        assert playback.status_code == 200
+        streamed = client.get(playback.json()["url"], headers={"Range": "bytes=8-12"})
+        assert streamed.status_code == 206
+        assert streamed.content == content[8:13]
+        assert streamed.headers["content-range"] == f"bytes 8-12/{len(content)}"
+
+        traversal = client.put("/api/v1/matches/1/analysis-session", json={**payload, "source": {"url": "local://../secret.mp4", "availability_state": "unknown"}}, headers=headers)
+        assert traversal.status_code == 422
+    finally:
+        app.dependency_overrides.clear()
+        engine.dispose()
+
+
 def test_confirmed_match_creates_a_draft_and_scopes_its_initial_session(tmp_path):
     client, engine = analysis_client(tmp_path, confirmed_sheet=True)
     headers = {"Authorization": f"Bearer {create_access_token({'sub': '1'})}"}

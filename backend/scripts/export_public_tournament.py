@@ -87,6 +87,7 @@ def _forecast_rows(db: Any, stage_id: int, standings: dict[str, Any]) -> dict[st
     )
     history: list[HistoricalResult] = []
     fixtures: list[RemainingFixture] = []
+    campaign: dict[str, list[dict[str, Any]]] = {row["name"]: [] for row in standings["teams"]}
     for item in scheduled:
         match = db.query(Match).filter(Match.scheduled_match_id == item.id).first()
         snapshot = next((row for row in (match.official_snapshots if match else []) if row.is_confirmed), None)
@@ -95,9 +96,27 @@ def _forecast_rows(db: Any, stage_id: int, standings: dict[str, Any]) -> dict[st
         home, away = _club_name(item.home_registration), _club_name(item.away_registration)
         if home_score is not None and away_score is not None:
             history.append(HistoricalResult(home, away, home_score, away_score, item.round.round_number))
+            for club, opponent, location, goals_for, goals_against in (
+                (home, away, "home", home_score, away_score),
+                (away, home, "away", away_score, home_score),
+            ):
+                campaign[club].append(
+                    {
+                        "round": item.round.round_number,
+                        "date": item.scheduled_date.isoformat() if item.scheduled_date else None,
+                        "opponent": opponent,
+                        "location": location,
+                        "goals_for": goals_for,
+                        "goals_against": goals_against,
+                        "result": "win" if goals_for > goals_against else "draw" if goals_for == goals_against else "loss",
+                    }
+                )
         else:
             fixtures.append(RemainingFixture(item.round.round_number, item.scheduled_date.isoformat() if item.scheduled_date else None, home, away))
-    return build_forecast(standings["teams"], history, fixtures)
+    forecast = build_forecast(standings["teams"], history, fixtures)
+    for team in forecast["teams"]:
+        team["campaign"] = sorted(campaign[team["club"]], key=lambda match: match["round"])
+    return forecast
 
 
 def build_public_tournament() -> dict[str, Any]:

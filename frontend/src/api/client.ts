@@ -4,7 +4,7 @@ import type {
   TokenResponse, UserRead, AnalysisEvent, AnalysisEventInput, CanonicalEvent, CanonicalEventCommand, CanonicalEventRevisionInput, CanonicalMatchState, ReviewedMetrics, AnalysisSession, AnalysisSessionUpdate, AnalysisRun,
   ReportPackageInput, ReportPublicationStatus, ReviewedReportPackage,
   GoalkeeperShot, GoalkeeperShotCreate, FixtureConfirmation, FixtureConfirmResult, FixturePreviewResult, FixtureRoster, FixtureRosterResolution, ScheduledFixture, CanonicalPlayerProjection, WarningsSummary, OfficialSheet,
-  StandingsResponse, PlayerStatisticsResponse, ClubStatisticsResponse,
+  StandingsResponse, PlayerStatisticsResponse, ClubStatisticsResponse, LocalVideoPlayback,
 } from '../types'
 
 const http = axios.create({ baseURL: `${import.meta.env.VITE_API_URL ?? ''}/api/v1` })
@@ -130,6 +130,8 @@ export const getAnalysisSession = (matchId: number, runId?: number) =>
   http.get<AnalysisSession>(`/matches/${matchId}/analysis-session`, { params: runId ? { run_id: runId } : {} }).then(r => r.data)
 export const saveAnalysisSession = (matchId: number, data: AnalysisSessionUpdate, runId?: number) =>
   http.put<AnalysisSession>(`/matches/${matchId}/analysis-session`, data, { params: runId ? { run_id: runId } : {} }).then(r => r.data)
+export const getLocalVideoPlayback = (sourceId: number) =>
+  http.get<LocalVideoPlayback>(`/video-sources/${sourceId}/playback`).then(r => r.data)
 export const getAnalysisRuns = (matchId: number) => http.get<AnalysisRun[]>(`/matches/${matchId}/analysis-runs`).then(r => r.data)
 export const createAnalysisRun = (matchId: number, mode: 'video' | 'manual' | 'live') => http.post<AnalysisRun>(`/matches/${matchId}/analysis-runs`, { mode }).then(r => r.data)
 export const promoteAnalysisRun = (matchId: number, runId: number) => http.post<AnalysisRun>(`/matches/${matchId}/analysis-runs/${runId}/promote`).then(r => r.data)

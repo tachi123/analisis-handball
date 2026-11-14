@@ -25,7 +25,7 @@ const CUED = 5
 const PAUSE_TIMEOUT_MS = 2000
 const RECENT_TIMESTAMP_MS = 5000
 
-export function useYouTubeSync(source: VideoSource | null, initialTime = 0): SyncState {
+export function useYouTubeSync(source: VideoSource | null, initialTime = 0, localPlaybackUrl?: string): SyncState {
   const sourceIdentity = source ? `${source.id}:${source.provider}:${source.provider_video_id}` : null
   const sourceSnapshot = useRef(source)
   const initialTimeSnapshot = useRef(initialTime)
@@ -97,6 +97,37 @@ export function useYouTubeSync(source: VideoSource | null, initialTime = 0): Syn
     setCurrentTime(sourceInitialTime)
     setAvailability(activeSource?.availability_state ?? 'unavailable')
     if (!activeSource || !playerRef.current) return
+    if (activeSource.provider === 'local_private') {
+      const video = playerRef.current as unknown as HTMLVideoElement
+      if (!localPlaybackUrl || video.tagName !== 'VIDEO') {
+        setAvailability('loading')
+        return
+      }
+      const syncTime = () => {
+        const time = video.currentTime
+        if (Number.isFinite(time)) {
+          setCurrentTime(time)
+          timestamp.current = { sourceId: activeSource.id, time, observedAt: Date.now() }
+        }
+      }
+      const ready = () => { setAvailability('ready'); if (sourceInitialTime > 0) video.currentTime = sourceInitialTime; syncTime() }
+      const failed = () => setAvailability('player_error')
+      const playingHandler = () => { playing.current = true; setIsPlaying(true); syncTime() }
+      const pausedHandler = () => { playing.current = false; setIsPlaying(false); syncTime() }
+      video.addEventListener('loadedmetadata', ready)
+      video.addEventListener('timeupdate', syncTime)
+      video.addEventListener('play', playingHandler)
+      video.addEventListener('pause', pausedHandler)
+      video.addEventListener('error', failed)
+      if (video.readyState >= 1) ready()
+      return () => {
+        video.removeEventListener('loadedmetadata', ready)
+        video.removeEventListener('timeupdate', syncTime)
+        video.removeEventListener('play', playingHandler)
+        video.removeEventListener('pause', pausedHandler)
+        video.removeEventListener('error', failed)
+      }
+    }
 
     let disposed = false
     const startPolling = () => {
@@ -152,13 +183,21 @@ export function useYouTubeSync(source: VideoSource | null, initialTime = 0): Syn
       disposed = true
       destroyPlayer('El reproductor de YouTube fue reemplazado antes de terminar la lectura.')
     }
-  }, [destroyPlayer, observeTime, retryGeneration, settleWithCurrentTime, sourceIdentity, stopPolling])
+  }, [destroyPlayer, localPlaybackUrl, observeTime, retryGeneration, settleWithCurrentTime, sourceIdentity, stopPolling])
 
-  const seekTo = useCallback((seconds: number) => player.current?.seekTo(Math.max(0, seconds), true), [])
-  const play = useCallback(() => player.current?.playVideo(), [])
-  const pause = useCallback(() => player.current?.pauseVideo(), [])
+  const localVideo = () => (playerRef.current as unknown) instanceof HTMLVideoElement ? playerRef.current as unknown as HTMLVideoElement : null
+  const seekTo = useCallback((seconds: number) => { const video = localVideo(); if (video) video.currentTime = Math.max(0, seconds); else player.current?.seekTo(Math.max(0, seconds), true) }, [])
+  const play = useCallback(() => { const video = localVideo(); if (video) void video.play(); else player.current?.playVideo() }, [])
+  const pause = useCallback(() => { const video = localVideo(); if (video) video.pause(); else player.current?.pauseVideo() }, [])
   const retry = useCallback(() => setRetryGeneration(generation => generation + 1), [])
   const pauseAndReadCurrentTime = useCallback(() => new Promise<number>((resolve, reject) => {
+    const video = localVideo()
+    if (video) {
+      video.pause()
+      const time = video.currentTime
+      if (Number.isFinite(time)) { setCurrentTime(time); resolve(time) } else reject(new Error('No se pudo leer la posición del video local.'))
+      return
+    }
     if (!player.current) {
       settleWithCurrentTime(resolve, reject)
       return

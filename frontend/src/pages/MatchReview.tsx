@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
-import { createCanonicalEvent, deactivateCanonicalEvent, deactivateLastCanonicalEvent, enableCanonicalAnalysis, getAnalysisSession, getCanonicalEvents, getMatch, getOfficialSheet, resetCanonicalAnalysis, reviseCanonicalEvent, saveAnalysisSession } from '../api/client'
+import { createCanonicalEvent, deactivateCanonicalEvent, deactivateLastCanonicalEvent, enableCanonicalAnalysis, getAnalysisSession, getCanonicalEvents, getLocalVideoPlayback, getMatch, getOfficialSheet, resetCanonicalAnalysis, reviseCanonicalEvent, saveAnalysisSession } from '../api/client'
 import EventTimeline from '../components/EventTimeline'
 import EvidenceModal from '../components/EvidenceModal'
 import IncidentWizard from '../components/IncidentWizard'
@@ -71,8 +71,9 @@ export default function MatchReview() {
   const eventsQuery = useQuery({ queryKey: ['canonical-events', id, runIdValid], queryFn: () => runIdValid ? getCanonicalEvents(id, runIdValid) : getCanonicalEvents(id), enabled: Number.isFinite(id) && (Boolean(runIdValid) || matchQuery.data?.canonical_analysis_enabled === true), retry: false })
   const officialQuery = useQuery({ queryKey: ['official-sheet', id], queryFn: () => getOfficialSheet(id), enabled: Number.isFinite(id), retry: false })
   const session = sessionQuery.data
+  const localPlaybackQuery = useQuery({ queryKey: ['local-video-playback', session?.source?.id], queryFn: () => getLocalVideoPlayback(session!.source!.id), enabled: session?.source?.provider === 'local_private', staleTime: 20 * 60 * 1000 })
   useEffect(() => { if (session?.source) setSourceUrl(session.source.original_url) }, [session?.source])
-  const player = useYouTubeSync(session?.source ?? null, session?.video_position_seconds ?? 0)
+  const player = useYouTubeSync(session?.source ?? null, session?.video_position_seconds ?? 0, localPlaybackQuery.data?.url)
   const saveSession = useMutation({ mutationFn: (data: ReturnType<typeof checkpoint>) => runIdValid ? saveAnalysisSession(id, data, runIdValid) : saveAnalysisSession(id, data), onSuccess: saved => { client.setQueryData(['analysis-session', id, runIdValid], saved); setNotice('Sesión guardada.') } })
   const isLive = session?.mode === 'live'
   const isManual = session?.mode === 'manual'
@@ -292,13 +293,13 @@ const enable = useMutation({
          <h1 className="flex-1 text-lg font-semibold">Revisión: {matchQuery.data?.home_team?.name ?? 'Local'} vs {matchQuery.data?.away_team?.name ?? 'Visitante'}</h1>
           <span className="rounded bg-indigo-100 px-2 py-1 text-sm text-indigo-950">Perfil: {profileLabel}</span>
           {runId && <span className="rounded bg-amber-100 px-2 py-1 text-sm text-amber-950">Borrador #{runId}</span>}
-         {session && <label>Modo <select value={session.mode} onChange={event => saveSession.mutate(checkpoint(session, { mode: event.target.value as AnalysisSessionUpdate['mode'] }))}><option value="video">Video YouTube</option><option value="manual">Video local manual</option><option value="live">En vivo</option></select></label>}
+          {session && <label>Modo <select value={session.mode} onChange={event => saveSession.mutate(checkpoint(session, { mode: event.target.value as AnalysisSessionUpdate['mode'] }))}><option value="video">Video</option><option value="manual">Video local manual</option><option value="live">En vivo</option></select></label>}
          <label>Período <select className="review-target" value={period} onChange={e => { const next = Number(e.target.value); if (isLive && liveClock.running) liveClock.pause(); setPeriod(next); const anchor = session?.anchors?.find((item: any) => item.period === next); if (!isLive && anchor) player.seekTo(anchor.video_seconds) }}><option value={1}>1</option><option value={2}>2</option><option value={3}>Prórroga 1</option><option value={4}>Prórroga 2</option></select></label>
       </header>
       <p className="mx-auto mt-2 max-w-7xl text-sm" aria-live="polite">{notice}</p>
       {helpOpen && <div className="fixed inset-0 z-30 grid place-items-center bg-black/40 p-4" role="dialog" aria-modal="true" aria-label="Ayuda de atajos"><section className="w-full max-w-md space-y-3 rounded bg-white p-4 shadow-xl"><div className="flex items-center justify-between"><h2 className="font-semibold">Atajos de revisión</h2><button className="review-target" onClick={() => setHelpOpen(false)} aria-label="Cerrar ayuda">×</button></div><p className="text-sm">Espacio: reproducir; ,/. y j/l/[ ]: buscar; n/p: eventos; a: calibración; t: revisar; Shift+n: motivo; s: guardar.</p></section></div>}
       {(sessionQuery.isError && !needsSetup) && <section role="alert" className="card mx-auto mt-3 max-w-7xl text-red-700"><h2 className="font-semibold">No se pudo cargar la sesión de revisión</h2><p className="mt-1 text-sm">{message(sessionQuery.error)}</p><button className="btn mt-3" onClick={() => sessionQuery.refetch()}>Reintentar cargar sesión</button></section>}
-       {needsSetup && <section className="card mx-auto mt-3 max-w-7xl"><h2 className="font-semibold">Preparar revisión</h2><p className="text-sm">Elegí análisis En vivo, Video YouTube o Video local manual.</p><label className="mt-2 block text-sm">URL de YouTube<input className="review-target mt-1 w-full rounded border p-2" value={sourceUrl} onChange={event => { setSourceUrl(event.target.value); setSourceError('') }} placeholder="https://youtu.be/..." /></label>{sourceError && <p role="alert" className="mt-2 text-sm text-red-700">{sourceError}</p>}<div className="mt-2 flex flex-wrap gap-2"><button className="btn btn-primary" disabled={saveSession.isPending} onClick={() => saveSession.mutate(checkpoint(undefined, { mode: 'live', source: null }))}>En vivo</button><button className="btn" disabled={saveSession.isPending} onClick={() => saveSession.mutate(checkpoint(undefined, { mode: 'manual', source: null }))}>Video local manual</button><button className="btn" disabled={saveSession.isPending} onClick={() => { const url = sourceUrl.trim(); if (!supportedYouTubeUrl(url)) { setSourceError('Usá una URL válida de YouTube.'); return } saveSession.mutate(checkpoint(undefined, { mode: 'video', source: { url, availability_state: 'unknown' } })) }}>Video YouTube</button></div></section>}
+       {needsSetup && <section className="card mx-auto mt-3 max-w-7xl"><h2 className="font-semibold">Preparar revisión</h2><p className="text-sm">Elegí análisis En vivo, Video YouTube o un archivo local privado en <code>resources/videos</code>.</p><label className="mt-2 block text-sm">URL de YouTube o nombre del archivo local<input className="review-target mt-1 w-full rounded border p-2" value={sourceUrl} onChange={event => { setSourceUrl(event.target.value); setSourceError('') }} placeholder="https://youtu.be/... o partido.mp4" /></label>{sourceError && <p role="alert" className="mt-2 text-sm text-red-700">{sourceError}</p>}<div className="mt-2 flex flex-wrap gap-2"><button className="btn btn-primary" disabled={saveSession.isPending} onClick={() => saveSession.mutate(checkpoint(undefined, { mode: 'live', source: null }))}>En vivo</button><button className="btn" disabled={saveSession.isPending} onClick={() => saveSession.mutate(checkpoint(undefined, { mode: 'manual', source: null }))}>Video local manual</button><button className="btn" disabled={saveSession.isPending} onClick={() => { const filename = sourceUrl.trim(); if (!filename || filename.includes('/') || filename.includes('\\')) { setSourceError('Ingresá sólo el nombre de un video dentro de resources/videos.'); return } saveSession.mutate(checkpoint(undefined, { mode: 'video', source: { url: `local://${filename}`, availability_state: 'unknown' } })) }}>Vincular video local</button><button className="btn" disabled={saveSession.isPending} onClick={() => { const url = sourceUrl.trim(); if (!supportedYouTubeUrl(url)) { setSourceError('Usá una URL válida de YouTube.'); return } saveSession.mutate(checkpoint(undefined, { mode: 'video', source: { url, availability_state: 'unknown' } })) }}>Video YouTube</button></div></section>}
       {session && (
         <div className="mx-auto mt-3 grid max-w-7xl gap-3 lg:grid-cols-[minmax(0,1fr)_380px]">
           <div className="space-y-3">
@@ -314,7 +315,8 @@ const enable = useMutation({
                 setSourceUrl={setSourceUrl} 
                 setSourceError={setSourceError} 
                 sourceError={sourceError} 
-                supportedYouTubeUrl={supportedYouTubeUrl} 
+                 supportedYouTubeUrl={supportedYouTubeUrl}
+                 localPlaybackUrl={localPlaybackQuery.data?.url}
                 saveSessionPending={saveSession.isPending} 
                 setNotice={setNotice} 
                />}

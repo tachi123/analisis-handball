@@ -35,3 +35,6 @@ frontend/android/build/
 
 # Local agent registry
 .atl/
+
+# Private match footage lives on the analyst's machine, never in Git.
+resources/videos/

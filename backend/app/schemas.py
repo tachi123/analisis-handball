@@ -438,6 +438,10 @@ class VideoSource(BaseModel):
         from_attributes = True
 
 
+class LocalVideoPlayback(BaseModel):
+    url: str
+
+
 class TimeAnchorInput(BaseModel):
     period: int = Field(ge=1)
     video_seconds: float = Field(ge=0)

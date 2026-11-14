@@ -9,7 +9,7 @@ from fastapi.responses import JSONResponse
 load_dotenv()
 
 from .database import SessionLocal
-from .api.routes import analysis, analysis_events, analysis_runs, canonical_analysis, tournaments, teams, players, matches, events, clips, pdf, auth, reports, goalkeeper_shots, stage_performance, standings, statistics
+from .api.routes import analysis, analysis_events, analysis_runs, canonical_analysis, tournaments, teams, players, matches, events, clips, pdf, auth, reports, goalkeeper_shots, stage_performance, standings, statistics, local_video
 from .services.canonical_analysis_service import LegacyWriteBlockedError
 from .services.sheets_service import validate_report_publisher_configuration
 
@@ -77,6 +77,7 @@ app.include_router(canonical_analysis.router, prefix="/api/v1")
 app.include_router(stage_performance.router, prefix="/api/v1")
 app.include_router(standings.router, prefix="/api/v1")
 app.include_router(statistics.router, prefix="/api/v1")
+app.include_router(local_video.router, prefix="/api/v1")
 
 
 @app.exception_handler(LegacyWriteBlockedError)

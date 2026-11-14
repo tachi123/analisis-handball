@@ -31,3 +31,11 @@ def decode_access_token(token: str) -> dict | None:
         return jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
     except JWTError:
         return None
+
+
+def create_local_video_token(user_id: int, source_id: int) -> str:
+    """Create a short-lived, source-scoped capability for the HTML video tag."""
+    return create_access_token(
+        {"sub": str(user_id), "scope": "local_video", "video_source_id": source_id},
+        expires_delta=timedelta(minutes=30),
+    )

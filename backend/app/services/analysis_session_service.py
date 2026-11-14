@@ -4,18 +4,22 @@ from urllib.parse import parse_qs, urlparse
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session, joinedload
 
-from ..models import AnalysisSession, Match, TimeAnchor, TimeSegment, User, VideoSource
+from ..models import AnalysisSession, LocalVideoAsset, Match, TimeAnchor, TimeSegment, User, VideoSource
 from ..schemas import AnalysisSessionUpdate
 from .analysis_run_service import require_writable_run, resolve_run
+from .local_video_service import LocalVideoService
 
 
 class AnalysisSessionService:
     @staticmethod
     def _source_identity(url):
+        if url.startswith("local://"):
+            storage_name = url.removeprefix("local://")
+            return "local_private", storage_name
         parsed = urlparse(url)
         host = parsed.netloc.lower().removeprefix("www.")
         if parsed.scheme not in {"http", "https"} or host not in {"youtube.com", "youtu.be", "youtube-nocookie.com"}:
-            raise ValueError("A supported YouTube URL is required")
+            raise ValueError("A supported YouTube URL or a registered local video is required")
         video_id = parse_qs(parsed.query).get("v", [None])[0] if host == "youtube.com" else None
         if host == "youtu.be":
             video_id = parsed.path.strip("/").split("/")[0]
@@ -62,11 +66,11 @@ class AnalysisSessionService:
 
     @classmethod
     def save(cls, db: Session, match_id: int, data: AnalysisSessionUpdate, analyst: User, run_id: int | None = None):
-        source_identity = cls._source_identity(data.source.url) if data.source else None
         match = db.get(Match, match_id)
         if match is None:
             raise ValueError("match not found")
         run = require_writable_run(db, match, run_id, analyst)
+        source_identity = cls._source_identity(data.source.url) if data.source else None
         session = cls._get(db, match_id, analyst.id, run.id)
         if session is None:
             session = AnalysisSession(match_id=match_id, run_id=run.id, analyst_id=analyst.id)
@@ -77,12 +81,21 @@ class AnalysisSessionService:
         source_changed = False
         if data.source:
             provider, video_id = source_identity
+            if provider == "local_private":
+                asset = db.get(LocalVideoAsset, video_id)
+                if asset is None or asset.match_id != match_id:
+                    asset = LocalVideoService.register(db, match_id, video_id)
+                video_id = asset.id
+                # Never persist or expose the server filename as the source URL.
+                source_url = f"local://{asset.id}"
+            else:
+                source_url = data.source.url
             previous_source = session.video_source
             source_changed = previous_source is not None and (
                 previous_source.provider, previous_source.provider_video_id
             ) != (provider, video_id)
             session.video_source = cls._find_or_create_source(
-                db, match_id, provider, video_id, data.source.url, data.source.availability_state,
+                db, match_id, provider, video_id, source_url, data.source.availability_state,
             )
         if source_changed:
             # A timestamp or clock mapping has no meaning across different videos.

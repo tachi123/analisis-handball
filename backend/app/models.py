@@ -344,6 +344,28 @@ class VideoSource(Base):
     match = relationship("Match", back_populates="video_sources")
 
 
+class LocalVideoAsset(Base):
+    """Private footage registered from the server-local video root.
+
+    ``storage_name`` is deliberately never returned by the public API: it is a
+    filename relative to LOCAL_VIDEO_ROOT, not a client-controlled filesystem
+    path.
+    """
+    __tablename__ = "local_video_assets"
+    __table_args__ = (UniqueConstraint("match_id", "sha256", name="uq_local_video_asset_match_sha"),)
+
+    id = Column(String, primary_key=True, default=lambda: str(uuid4()))
+    match_id = Column(Integer, ForeignKey("matches.id"), nullable=False, index=True)
+    storage_name = Column(String, nullable=False)
+    display_name = Column(String, nullable=False)
+    content_type = Column(String, nullable=False)
+    size_bytes = Column(Integer, nullable=False)
+    sha256 = Column(String, nullable=False)
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
+
+    match = relationship("Match")
+
+
 class AnalysisSession(Base):
     __tablename__ = "analysis_sessions"
 

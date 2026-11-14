@@ -42,7 +42,11 @@ export type TournamentClub = {
 export type TournamentForecast = {
   simulations: number
   methodology: string
-  teams: Array<{ club: string; champion_probability: number }>
+  teams: Array<{
+    club: string
+    champion_probability: number
+    campaign: Array<{ round: number; date: string | null; opponent: string; location: 'home' | 'away'; goals_for: number; goals_against: number; result: 'win' | 'draw' | 'loss' }>
+  }>
   fixtures: Array<{ round: number; date: string | null; home: string; away: string; home_win_probability: number; draw_probability: number; away_win_probability: number }>
 }
 
@@ -165,8 +169,20 @@ export function decodePublicTournament(value: unknown): PublicTournament {
       methodology: assertString(value.forecast.methodology, 'forecast methodology'),
       teams: value.forecast.teams.map((item) => {
         if (!isRecord(item)) throw new Error('The public tournament has an invalid forecast team.')
-        assertFields(item, ['club', 'champion_probability'], 'forecast team')
-        return { club: assertString(item.club, 'forecast club'), champion_probability: assertNumber(item.champion_probability, 'champion probability') }
+        assertFields(item, ['club', 'champion_probability', 'campaign'], 'forecast team')
+        if (!Array.isArray(item.campaign)) throw new Error('The public tournament has an invalid team campaign.')
+        return {
+          club: assertString(item.club, 'forecast club'),
+          champion_probability: assertNumber(item.champion_probability, 'champion probability'),
+          campaign: item.campaign.map((match) => {
+            if (!isRecord(match)) throw new Error('The public tournament has an invalid campaign match.')
+            assertFields(match, ['round', 'date', 'opponent', 'location', 'goals_for', 'goals_against', 'result'], 'campaign match')
+            if (match.date !== null && typeof match.date !== 'string') throw new Error('The public tournament has an invalid campaign match date.')
+            if (match.location !== 'home' && match.location !== 'away') throw new Error('The public tournament has an invalid campaign location.')
+            if (match.result !== 'win' && match.result !== 'draw' && match.result !== 'loss') throw new Error('The public tournament has an invalid campaign result.')
+            return { round: assertNumber(match.round, 'campaign round'), date: match.date, opponent: assertString(match.opponent, 'campaign opponent'), location: match.location, goals_for: assertNumber(match.goals_for, 'campaign goals for'), goals_against: assertNumber(match.goals_against, 'campaign goals against'), result: match.result }
+          }),
+        }
       }),
       fixtures: value.forecast.fixtures.map((item) => {
         if (!isRecord(item)) throw new Error('The public tournament has an invalid forecast fixture.')
