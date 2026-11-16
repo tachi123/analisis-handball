@@ -2,21 +2,22 @@
 
 ## Summary
 
-- Sources: 138
-- Canonical records: 136
-- Duplicate aliases: 2
-- Pages: 144
-- Unresolved fields: 16
+- Sources: 228
+- Canonical records: 225
+- Duplicate aliases: 3
+- Pages: 239
+- Unresolved fields: 33
 - Degraded records: 0
 - Parse errors: 0
 
 ## Quality flags
 
-### duplicate (2)
+### duplicate (3)
+- 2026_Apertura_Zona_A _Mayores_3º_División_Masculino/600386bb48697fb3.pdf
 - 2026_Apertura_Zona_A _Mayores_3º_División_Masculino/6d7ccc8fe30831cf (1).pdf
 - 2026_Apertura_Zona_A _Mayores_3º_División_Masculino/760f1559d6a28dd0.pdf
 
-### missing-court (16)
+### missing-court (33)
 - 2026_Apertura_Zona_A _Mayores_3º_División_Masculino/07a6f30eb09c43e6.pdf
 - 2026_Apertura_Zona_A _Mayores_3º_División_Masculino/22cc05f8cf53e235.pdf
 - 2026_Apertura_Zona_A _Mayores_3º_División_Masculino/38e94855d6d7db44.pdf
@@ -28,13 +29,30 @@
 - 2026_Apertura_Zona_A _Mayores_3º_División_Masculino/b864a52aab3bfaba.pdf
 - 2026_Apertura_Zona_A _Mayores_3º_División_Masculino/df5dca93a384e19f.pdf
 - 2026_Apertura_Zona_A _Mayores_3º_División_Masculino/feb5147ee3367f25.pdf
+- 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/0078c7ceaeb7260c.pdf
+- 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/0a336c71228b81e7.pdf
 - 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/16d6148cbc7781f1.pdf
+- 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/2fe291a3ac6cd390.pdf
 - 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/32698c71c384949a.pdf
+- 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/3a28aaf6602e96d7.pdf
+- 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/3a7d0cd347c117cd.pdf
+- 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/5a7838895df9cba1.pdf
+- 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/6e4a447480425a16.pdf
 - 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/7c6e5c2a41d052bd.pdf
+- 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/7ca711a4436fb89b.pdf
+- 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/884407a60538130b.pdf
+- 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/932006550192e5fc.pdf
+- 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/969ae27ee224e268.pdf
+- 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/9c3b2584e678ec22.pdf
+- 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/a2f249e523b3f7af.pdf
+- 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/b21562a6eb5097c9.pdf
 - 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/ba47c22446ddfec7.pdf
 - 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/c1d2687ec375be3e.pdf
+- 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/cf37a240f5a2b3f3.pdf
+- 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/d89aff57d72d90bc.pdf
+- 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/dab60899c5c85cf8.pdf
 
-### multi-page (8)
+### multi-page (14)
 - 2026_Apertura_Zona_A _Mayores_3º_División_Masculino/020924c1e932fdb0.pdf
 - 2026_Apertura_Zona_A _Mayores_3º_División_Masculino/27652047cf48aab4.pdf
 - 2026_Apertura_Zona_A _Mayores_3º_División_Masculino/2f9955aed9c3138a.pdf
@@ -42,4 +60,10 @@
 - 2026_Apertura_Zona_A _Mayores_3º_División_Masculino/a1f001feaf543c73.pdf
 - 2026_Apertura_Zona_A _Mayores_3º_División_Masculino/a646d2dc7b0e0ee9.pdf
 - 2026_Apertura_Zona_A _Mayores_3º_División_Masculino/a6f34e0c4a7d950a.pdf
+- 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/2fe291a3ac6cd390.pdf
+- 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/8223925021be786b.pdf
 - 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/ba47c22446ddfec7.pdf
+- 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/cf37a240f5a2b3f3.pdf
+- 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/d89aff57d72d90bc.pdf
+- 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/dfd3f81e5eff4954.pdf
+- 2026_Torneo_Permanencia_Mayores_3º_División_Masculino/f1c42839b4187f76.pdf
