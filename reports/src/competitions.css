@@ -1,0 +1,202 @@
+/* Public 2026 competition hub: catalog, tournament detail, podium and season. */
+
+.hero-actions { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .85rem; }
+
+/* Catalog */
+.competition-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin: 1.25rem 0; }
+.competition-card { display: flex; flex-direction: column; gap: .7rem; padding: 1.1rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; box-shadow: 0 6px 18px rgba(15, 23, 42, .05); }
+.competition-card-head { display: grid; gap: .2rem; }
+.competition-card-head h2 { margin: 0; font-size: 1.25rem; color: #0f172a; }
+.status-pill { justify-self: start; display: inline-block; margin-top: .25rem; padding: .18rem .55rem; border-radius: 999px; font-size: .7rem; font-weight: 800; letter-spacing: .03em; text-transform: uppercase; }
+.status-pill.in_progress { background: #dbeafe; color: #1d4ed8; }
+.status-pill.finished { background: #dcfce7; color: #166534; }
+.position-pill { justify-self: start; display: inline-block; margin-top: .1rem; padding: .18rem .55rem; border-radius: 999px; background: #dbeafe; color: #1d4ed8; font-size: .72rem; font-weight: 800; }
+.competition-card-sapa { display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; padding: .7rem; background: #eff6ff; border-radius: 10px; }
+.competition-card-sapa div { display: grid; gap: .1rem; }
+.competition-card-sapa strong { font-size: 1.35rem; color: #0f172a; }
+.competition-card-sapa span { font-size: .72rem; color: #475569; }
+.competition-card-next { display: grid; gap: .15rem; margin: 0; color: #334155; font-size: .88rem; }
+.competition-card-next span { color: #64748b; font-size: .76rem; }
+.competition-card-next.muted { color: #64748b; }
+.competition-card-coverage { margin: 0; color: #64748b; font-size: .75rem; line-height: 1.4; }
+.competition-card-actions { display: flex; gap: .5rem; margin-top: auto; }
+.competition-card-actions button { border: 0; border-radius: 8px; background: #2563eb; color: #fff; padding: .55rem .8rem; font: inherit; font-weight: 700; cursor: pointer; }
+.competition-card-actions button.secondary { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
+.catalog-note { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; padding: 1rem 1.1rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; }
+.catalog-note h3 { margin: .15rem 0 .35rem; font-size: 1rem; color: #0f172a; }
+.catalog-note p { margin: 0; color: #475569; font-size: .84rem; line-height: 1.5; }
+
+/* Shared small notes */
+.rule-note { margin: 1rem 0; padding: .8rem 1rem; background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 8px; color: #1e3a5f; font-size: .83rem; line-height: 1.5; }
+.result-legend-note { margin: .6rem 0 0; color: #64748b; font-size: .78rem; }
+
+/* Result pills: color is reinforcement, the letter is always visible. */
+.result-strip { display: flex; gap: .28rem; overflow-x: auto; padding-bottom: .2rem; scrollbar-width: thin; }
+.result-strip.compact { gap: .2rem; }
+.result-pill { display: inline-flex; align-items: baseline; gap: .28rem; flex: 0 0 auto; padding: .26rem .42rem; border-radius: 7px; border: 1px solid transparent; font-size: .72rem; line-height: 1.1; white-space: nowrap; }
+.result-pill b { font-size: .72rem; }
+.result-pill em { font-style: normal; font-size: .68rem; opacity: .92; }
+.result-pill.win { background: #dcfce7; border-color: #86efac; color: #166534; }
+.result-pill.draw { background: #fef3c7; border-color: #fcd34d; color: #92400e; }
+.result-pill.loss { background: #fee2e2; border-color: #fca5a5; color: #991b1b; }
+.result-pill.pending { background: #f1f5f9; border-color: #cbd5e1; color: #475569; }
+.result-pill.inline { align-self: center; }
+.result-legend { display: flex; flex-wrap: wrap; gap: .4rem; margin: .7rem 0 0; }
+.result-legend .result-pill em { font-size: .7rem; }
+
+/* SAPA spotlight extras */
+.sapa-spotlight-extra { flex-basis: 100%; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .6rem; padding-top: .75rem; border-top: 1px solid #dbeafe; }
+.sapa-spotlight-extra > div { display: grid; gap: .1rem; }
+.sapa-spotlight-extra strong { font-size: 1.2rem; color: #0f172a; }
+.sapa-spotlight-extra span { font-size: .72rem; color: #64748b; }
+.sapa-spotlight-form { grid-column: span 1; }
+.sapa-spotlight-form .result-strip { margin-top: .25rem; }
+
+/* Rounds */
+.round-picker { display: flex; gap: .3rem; overflow-x: auto; padding-bottom: .35rem; }
+.round-picker button { flex: 0 0 auto; border: 1px solid #cbd5e1; border-radius: 999px; background: #fff; color: #334155; padding: .3rem .6rem; font: inherit; font-size: .78rem; font-weight: 700; cursor: pointer; }
+.round-picker button.active { background: #2563eb; border-color: #2563eb; color: #fff; }
+.round-panel { margin-top: .8rem; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; }
+.round-panel-head { display: flex; justify-content: space-between; gap: 1rem; padding: .65rem .8rem; background: #f8fafc; color: #334155; font-size: .83rem; }
+.round-matches { display: grid; }
+.round-match { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .65rem .8rem; border-top: 1px solid #eef2f7; }
+.round-match:first-child { border-top: 0; }
+.round-match.sapa-match { background: #eff6ff; }
+.round-match-teams { display: flex; align-items: center; gap: .65rem; min-width: 0; }
+.round-match-teams strong { color: #0f172a; font-size: .86rem; }
+.round-match-teams span { flex: 0 0 auto; padding: .12rem .4rem; border-radius: 6px; background: #0f172a; color: #fff; font-size: .78rem; font-weight: 700; }
+.round-match-meta { display: flex; align-items: center; gap: .5rem; }
+.round-match-meta small { color: #64748b; font-size: .7rem; }
+.match-coverage { padding: .15rem .4rem; border-radius: 999px; font-size: .66rem; font-weight: 700; white-space: nowrap; }
+.match-coverage.planilla { background: #dcfce7; color: #166534; }
+.match-coverage.reported { background: #fef3c7; color: #92400e; }
+.match-coverage.suspended { background: #ede9fe; color: #5b21b6; }
+.match-coverage.pending { background: #f1f5f9; color: #475569; }
+.match-coverage.cancelled { background: #e2e8f0; color: #475569; }
+
+/* Marks */
+.record-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: .7rem; }
+.record-card { display: grid; gap: .18rem; padding: .8rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; }
+.record-card p { margin: 0; color: #64748b; font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; }
+.record-card strong { color: #0f172a; font-size: 1.05rem; line-height: 1.2; }
+.record-card span { color: #334155; font-size: .8rem; }
+.record-card small { color: #64748b; font-size: .74rem; }
+
+/* Forecast page */
+.forecast-shell .hero { background: linear-gradient(120deg, #eef4ff, #f0fdf4); }
+.sapa-forecast-panel { display: grid; grid-template-columns: minmax(220px, .9fr) auto; gap: 1rem; margin: 1.25rem 0; padding: 1.1rem; background: linear-gradient(120deg, #eff6ff, #fff); border: 1px solid #dbeafe; border-radius: 14px; }
+.sapa-forecast-title h2 { margin: .15rem 0; font-size: 2rem; color: #0f172a; }
+.sapa-forecast-title p { margin: 0; color: #64748b; font-size: .8rem; }
+.finish-cards { display: grid; grid-template-columns: repeat(5, minmax(72px, 1fr)); gap: .5rem; align-self: center; }
+.finish-cards article { display: grid; gap: .1rem; padding: .65rem .5rem; text-align: center; background: #fff; border: 1px solid #dbeafe; border-radius: 10px; }
+.finish-cards article.podium { background: #2563eb; border-color: #2563eb; color: #fff; }
+.finish-cards strong { font-size: 1.35rem; line-height: 1; }
+.finish-cards span { font-size: .68rem; color: #64748b; }
+.finish-cards article.podium span { color: #dbeafe; }
+.sapa-next-fixture { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .8rem 1rem; background: #fff; border: 1px solid #dbeafe; border-radius: 12px; }
+.sapa-next-fixture > div:first-child { display: grid; gap: .2rem; }
+.sapa-next-fixture strong { color: #0f172a; }
+.sapa-next-fixture span { color: #64748b; font-size: .8rem; }
+.outcome-probabilities { display: flex; gap: .75rem; }
+.outcome-probabilities span { display: grid; text-align: center; color: #64748b; font-size: .72rem; }
+.outcome-probabilities b { color: #0f172a; font-size: 1.05rem; }
+
+.podium-wrap { border: 1px solid #e2e8f0; border-radius: 12px; }
+.podium-table td { vertical-align: middle; }
+.podium-table .podium-value { color: #1d4ed8; font-weight: 800; }
+.podium-table td .result-strip { min-width: 360px; }
+.show-all { margin-top: .7rem; border: 1px solid #bfdbfe; border-radius: 8px; background: #eff6ff; color: #1d4ed8; padding: .5rem .7rem; font: inherit; font-weight: 700; cursor: pointer; }
+
+.campaign-details { display: grid; gap: .6rem; }
+.campaign-details details { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; }
+.campaign-details summary { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .75rem .85rem; cursor: pointer; list-style: none; }
+.campaign-details summary::-webkit-details-marker { display: none; }
+.campaign-details summary > span:first-child { display: grid; gap: .15rem; }
+.campaign-details summary small { color: #64748b; font-size: .74rem; }
+.summary-strip { min-width: 0; overflow-x: auto; }
+.campaign-list { padding: 0 .85rem .85rem; border-top: 1px solid #eef2f7; }
+.campaign-list > .result-strip { margin: .7rem 0; }
+.campaign-table-wrap { overflow-x: auto; }
+.campaign-table { min-width: 560px; }
+
+.fixture-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; margin-top: .8rem; }
+.fixture-grid article { display: flex; justify-content: space-between; align-items: center; gap: .75rem; padding: .75rem .85rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; }
+.fixture-grid article.sapa-fixture { border-color: #93c5fd; background: #eff6ff; }
+.fixture-grid article > div:first-child { display: grid; gap: .15rem; }
+.fixture-grid article strong { color: #0f172a; font-size: .84rem; }
+.fixture-grid article span { color: #64748b; font-size: .74rem; }
+.fixture-grid .outcome-probabilities b { color: #0f172a; }
+.forecast-method { margin-top: 1rem; padding: .9rem 1rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; color: #334155; font-size: .84rem; }
+.forecast-method summary { cursor: pointer; font-weight: 700; color: #0f172a; }
+.forecast-method p { margin: .5rem 0 0; line-height: 1.5; }
+
+/* Season profile */
+.season-shell .hero { background: linear-gradient(120deg, #eff6ff, #fff7ed); }
+.annual-summary { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: .6rem; margin: 1.25rem 0; padding: 1rem; background: #0f2b52; border-radius: 14px; color: #f8fafc; }
+.annual-summary article { display: grid; gap: .15rem; }
+.annual-summary strong { font-size: 1.5rem; line-height: 1.1; }
+.annual-summary span { color: #bfdbfe; font-size: .72rem; }
+.season-blocks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.season-block { display: grid; gap: .7rem; padding: 1rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; }
+.season-block-head { display: grid; gap: .15rem; }
+.season-block-head h2 { margin: 0; font-size: 1.15rem; color: #0f172a; }
+.season-block-head .status-pill { margin-top: .1rem; }
+.season-block-stats { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .4rem; }
+.season-block-stats div { display: grid; gap: .1rem; }
+.season-block-stats strong { color: #0f172a; font-size: 1rem; }
+.season-block-stats span { color: #64748b; font-size: .68rem; }
+.season-match-block { margin-top: 1rem; padding: .9rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 14px; }
+.season-match-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: .5rem; }
+.season-match-head h3 { margin: 0; color: #0f172a; font-size: 1rem; }
+.season-match-head span { color: #64748b; font-size: .76rem; }
+.season-match-list { display: grid; margin-top: .6rem; }
+.season-match-row { display: grid; grid-template-columns: 3.2rem 3.4rem 4.6rem minmax(8rem, 1fr) 4rem auto minmax(8rem, auto); align-items: center; gap: .5rem; padding: .5rem .2rem; border-top: 1px solid #eef2f7; font-size: .82rem; }
+.season-match-row:first-child { border-top: 0; }
+.season-match-round { color: #2563eb; font-weight: 800; }
+.season-match-date, .season-match-venue { color: #64748b; font-size: .76rem; }
+.season-match-opponent { color: #0f172a; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.season-match-score { font-weight: 700; color: #0f172a; text-align: right; }
+.season-match-probabilities { color: #64748b; font-size: .72rem; }
+.continuity-card { display: grid; gap: .2rem; padding: 1rem; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px; }
+.continuity-card strong { font-size: 1.8rem; color: #1d4ed8; }
+.continuity-card span { color: #1e3a5f; }
+.continuity-card b { font-size: 1.2rem; color: #0f172a; }
+.continuity-card small { color: #475569; font-size: .76rem; }
+.season-more-scorers { margin-top: .7rem; }
+.season-more-scorers summary { cursor: pointer; color: #1d4ed8; font-weight: 700; font-size: .84rem; }
+.pending-card { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; padding: .9rem 1rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; }
+.pending-card > span { color: #64748b; font-size: .8rem; }
+
+/* Home compact tournament row */
+.home-competitions { margin: 1.25rem 0; }
+.home-competitions .section-heading { align-items: center; }
+.home-competition-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .7rem; }
+.home-competition-card { display: grid; gap: .35rem; padding: .8rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; }
+.home-competition-card strong { color: #0f172a; }
+.home-competition-card span { color: #64748b; font-size: .78rem; }
+.home-competition-card button { justify-self: start; padding: 0; border: 0; background: transparent; color: #1d4ed8; font: inherit; font-weight: 700; cursor: pointer; }
+
+@media (max-width: 900px) {
+  .home-competition-row { grid-template-columns: 1fr; }
+  .competition-cards { grid-template-columns: 1fr; }
+  .catalog-note, .season-blocks { grid-template-columns: 1fr; }
+  .sapa-forecast-panel { grid-template-columns: 1fr; }
+  .finish-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .annual-summary { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .fixture-grid { grid-template-columns: 1fr; }
+  .sapa-spotlight-extra { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .season-block-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 640px) {
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+  .round-match { align-items: flex-start; flex-direction: column; gap: .35rem; }
+  .round-match-teams { flex-wrap: wrap; }
+  .season-match-row { grid-template-columns: 3rem 3.2rem 4.2rem minmax(6rem, 1fr); row-gap: .3rem; }
+  .season-match-score { text-align: left; }
+  .season-match-probabilities { grid-column: 1 / -1; }
+  .podium-table td .result-strip { min-width: 260px; }
+  .sapa-next-fixture, .pending-card { align-items: flex-start; flex-direction: column; }
+  .outcome-probabilities { width: 100%; justify-content: space-between; }
+  .competition-card-actions { flex-wrap: wrap; }
+}

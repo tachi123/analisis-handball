@@ -1,4 +1,12 @@
-from app.services.tournament_forecast_service import HistoricalResult, RemainingFixture, _expected_goals, _fit_goal_model, build_forecast
+from app.services.competition_ranking import RankedResult, TeamRecord, apply_result
+from app.services.standings_service import load_point_rules
+from app.services.tournament_forecast_service import (
+    HistoricalResult,
+    RemainingFixture,
+    _expected_goals,
+    _fit_goal_model,
+    build_forecast,
+)
 
 
 def test_forecast_is_deterministic_and_respects_probability_bounds():
@@ -35,3 +43,83 @@ def test_regularized_goal_model_separates_attack_and_defense_without_extreme_mea
     assert attack_goals > defense_goals
     assert 10 < attack_goals < 50
     assert 10 < defense_goals < 50
+
+
+def test_forecast_ranks_the_full_table_and_counts_every_position():
+    standings = [
+        {"name": "Alpha", "pts": 10, "gd": 0, "gf": 100},
+        {"name": "Beta", "pts": 10, "gd": 0, "gf": 100},
+        {"name": "Gamma", "pts": 1, "gd": -10, "gf": 90},
+        {"name": "Delta", "pts": 0, "gd": -20, "gf": 80},
+    ]
+    fixtures = [RemainingFixture(2, None, "Gamma", "Delta")]
+
+    result = build_forecast(standings, [], fixtures, simulations=400, seed=3)
+
+    assert result["points_rule"] == {"win": 3, "draw": 2, "loss": 1, "suspended_win": 3, "suspended_loss": 0}
+    assert abs(sum(row["champion_probability"] for row in result["teams"]) - 1.0) <= 0.0002
+    for row in result["teams"]:
+        finish = row["finish_probabilities"]
+        assert row["podium_probability"] == round(finish["first"] + finish["second"] + finish["third"], 4)
+        assert 1 <= row["expected_position"] <= len(standings)
+        assert 0 <= finish["first"] <= 1 and 0 <= finish["second"] <= 1 and 0 <= finish["third"] <= 1
+
+
+def test_residual_exact_ties_share_positions():
+    standings = [
+        {"name": "Alpha", "pts": 10, "gd": 0, "gf": 100},
+        {"name": "Beta", "pts": 10, "gd": 0, "gf": 100},
+        {"name": "Gamma", "pts": 1, "gd": -10, "gf": 90},
+        {"name": "Delta", "pts": 0, "gd": -20, "gf": 80},
+    ]
+    result = build_forecast(standings, [], [RemainingFixture(2, None, "Gamma", "Delta")], simulations=200, seed=5)
+    alpha = next(row for row in result["teams"] if row["club"] == "Alpha")
+
+    assert alpha["finish_probabilities"]["first"] == 0.5
+    assert alpha["finish_probabilities"]["second"] == 0.5
+    assert alpha["podium_probability"] == 1.0
+    assert alpha["expected_position"] == 1.5
+
+
+def test_forecast_applies_the_olympic_tiebreak():
+    standings = [
+        {"name": "Alpha", "pts": 10, "gd": 10, "gf": 100},
+        {"name": "Beta", "pts": 10, "gd": 10, "gf": 100},
+        {"name": "Gamma", "pts": 1, "gd": -10, "gf": 90},
+        {"name": "Delta", "pts": 0, "gd": -20, "gf": 80},
+    ]
+    history = [HistoricalResult("Alpha", "Beta", 30, 20, 1)]
+    fixtures = [RemainingFixture(2, None, "Gamma", "Delta")]
+
+    result = build_forecast(standings, history, fixtures, simulations=100, seed=1)
+    alpha = next(row for row in result["teams"] if row["club"] == "Alpha")
+    beta = next(row for row in result["teams"] if row["club"] == "Beta")
+
+    assert alpha["champion_probability"] == 1.0
+    assert beta["champion_probability"] == 0.0
+    assert alpha["expected_position"] == 1.0
+
+
+def test_suspended_pending_fixture_is_not_projected():
+    standings = [
+        {"name": "Alpha", "pts": 10, "gd": 0, "gf": 100},
+        {"name": "Beta", "pts": 8, "gd": -4, "gf": 95},
+    ]
+    result = build_forecast(standings, [], [RemainingFixture(2, None, "Alpha", "Beta", status="suspended")], simulations=50)
+
+    assert result["teams"] == []
+    assert result["fixtures"] == []
+
+
+def test_apply_result_uses_the_versioned_points_rule():
+    records = {
+        "Alpha": TeamRecord(team="Alpha", points=10),
+        "Beta": TeamRecord(team="Beta", points=10),
+    }
+
+    apply_result(records, RankedResult("Alpha", "Beta", 30, 26), load_point_rules())
+
+    assert records["Alpha"].points == 13
+    assert records["Beta"].points == 11
+    assert records["Alpha"].goal_difference == 4
+    assert records["Beta"].goals_for == 26

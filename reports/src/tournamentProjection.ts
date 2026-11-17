@@ -39,12 +39,30 @@ export type TournamentClub = {
   players: number
 }
 
+export type TournamentFinishProbabilities = {
+  first: number
+  second: number
+  third: number
+}
+
+export type TournamentPointsRule = {
+  win: number
+  draw: number
+  loss: number
+  suspended_win: number
+  suspended_loss: number
+}
+
 export type TournamentForecast = {
   simulations: number
   methodology: string
+  points_rule?: TournamentPointsRule
   teams: Array<{
     club: string
     champion_probability: number
+    finish_probabilities?: TournamentFinishProbabilities
+    podium_probability?: number
+    expected_position?: number
     campaign: Array<{ round: number; date: string | null; opponent: string; location: 'home' | 'away'; goals_for: number; goals_against: number; result: 'win' | 'draw' | 'loss' }>
   }>
   fixtures: Array<{ round: number; date: string | null; home: string; away: string; home_win_probability: number; draw_probability: number; away_win_probability: number }>
@@ -162,18 +180,46 @@ export function decodePublicTournament(value: unknown): PublicTournament {
   let forecast: TournamentForecast | undefined
   if (value.forecast !== undefined) {
     if (!isRecord(value.forecast)) throw new Error('The public tournament has invalid forecast data.')
-    assertFields(value.forecast, ['simulations', 'methodology', 'teams', 'fixtures'], 'forecast')
+    assertFields(value.forecast, ['simulations', 'methodology', 'points_rule', 'teams', 'fixtures'], 'forecast')
     if (!Array.isArray(value.forecast.teams) || !Array.isArray(value.forecast.fixtures)) throw new Error('The public tournament has invalid forecast lists.')
+    let pointsRule: TournamentPointsRule | undefined
+    if (value.forecast.points_rule !== undefined) {
+      const rule = value.forecast.points_rule
+      if (!isRecord(rule)) throw new Error('The public tournament has an invalid points rule.')
+      assertFields(rule, ['win', 'draw', 'loss', 'suspended_win', 'suspended_loss'], 'points rule')
+      pointsRule = {
+        win: assertNumber(rule.win, 'win points'),
+        draw: assertNumber(rule.draw, 'draw points'),
+        loss: assertNumber(rule.loss, 'loss points'),
+        suspended_win: assertNumber(rule.suspended_win, 'suspended win points'),
+        suspended_loss: assertNumber(rule.suspended_loss, 'suspended loss points'),
+      }
+    }
     forecast = {
       simulations: assertNumber(value.forecast.simulations, 'forecast simulations'),
       methodology: assertString(value.forecast.methodology, 'forecast methodology'),
+      ...(pointsRule ? { points_rule: pointsRule } : {}),
       teams: value.forecast.teams.map((item) => {
         if (!isRecord(item)) throw new Error('The public tournament has an invalid forecast team.')
-        assertFields(item, ['club', 'champion_probability', 'campaign'], 'forecast team')
+        assertFields(item, ['club', 'champion_probability', 'finish_probabilities', 'podium_probability', 'expected_position', 'campaign'], 'forecast team')
         if (!Array.isArray(item.campaign)) throw new Error('The public tournament has an invalid team campaign.')
+        let finish: TournamentFinishProbabilities | undefined
+        if (item.finish_probabilities !== undefined) {
+          const finishValue = item.finish_probabilities
+          if (!isRecord(finishValue)) throw new Error('The public tournament has invalid finish probabilities.')
+          assertFields(finishValue, ['first', 'second', 'third'], 'finish probabilities')
+          finish = {
+            first: assertNumber(finishValue.first, 'first-place probability'),
+            second: assertNumber(finishValue.second, 'second-place probability'),
+            third: assertNumber(finishValue.third, 'third-place probability'),
+          }
+        }
         return {
           club: assertString(item.club, 'forecast club'),
           champion_probability: assertNumber(item.champion_probability, 'champion probability'),
+          ...(finish ? { finish_probabilities: finish } : {}),
+          ...(item.podium_probability !== undefined ? { podium_probability: assertNumber(item.podium_probability, 'podium probability') } : {}),
+          ...(item.expected_position !== undefined ? { expected_position: assertNumber(item.expected_position, 'expected position') } : {}),
           campaign: item.campaign.map((match) => {
             if (!isRecord(match)) throw new Error('The public tournament has an invalid campaign match.')
             assertFields(match, ['round', 'date', 'opponent', 'location', 'goals_for', 'goals_against', 'result'], 'campaign match')

@@ -1,0 +1,6889 @@
+{
+  "schema_version": "tournament-v3",
+  "public_key": "apertura-zona-b-2026",
+  "tournament": "Apertura Zona B 2026 3ªM",
+  "competition": "Apertura 2026",
+  "zone": "B",
+  "season": 2026,
+  "updated_at": "2026-11-17",
+  "coverage": {
+    "matches_total": 120,
+    "matches_counted": 120,
+    "planillas_confirmed": 119,
+    "reported_only": 0,
+    "suspended": 1,
+    "pending": 0,
+    "rounds_played": 15,
+    "rounds_total": 15,
+    "status": "complete",
+    "label": "120 de 120 partidos con resultado · 119 planillas confirmadas · 1 suspendido · no reemplaza la tabla oficial de FEMEBAL."
+  },
+  "points_rule": {
+    "win": 3,
+    "draw": 2,
+    "loss": 1,
+    "suspended_win": 3,
+    "suspended_loss": 0
+  },
+  "standings": [
+    {
+      "pos": 1,
+      "club": "A.E. Goethe B",
+      "played": 15,
+      "won": 14,
+      "drawn": 1,
+      "lost": 0,
+      "penalized": 0,
+      "goals_for": 431,
+      "goals_against": 308,
+      "goal_difference": 123,
+      "points": 44
+    },
+    {
+      "pos": 2,
+      "club": "S.A.G. Villa Ballester D",
+      "played": 15,
+      "won": 13,
+      "drawn": 1,
+      "lost": 1,
+      "penalized": 0,
+      "goals_for": 412,
+      "goals_against": 292,
+      "goal_difference": 120,
+      "points": 42
+    },
+    {
+      "pos": 3,
+      "club": "Municipalidad de Escobar",
+      "played": 15,
+      "won": 13,
+      "drawn": 0,
+      "lost": 1,
+      "penalized": 1,
+      "goals_for": 465,
+      "goals_against": 362,
+      "goal_difference": 103,
+      "points": 40
+    },
+    {
+      "pos": 4,
+      "club": "Juana Manso",
+      "played": 15,
+      "won": 10,
+      "drawn": 0,
+      "lost": 5,
+      "penalized": 0,
+      "goals_for": 475,
+      "goals_against": 392,
+      "goal_difference": 83,
+      "points": 35
+    },
+    {
+      "pos": 5,
+      "club": "Chacarita Juniors",
+      "played": 15,
+      "won": 7,
+      "drawn": 3,
+      "lost": 5,
+      "penalized": 0,
+      "goals_for": 412,
+      "goals_against": 387,
+      "goal_difference": 25,
+      "points": 32
+    },
+    {
+      "pos": 6,
+      "club": "Racing Club B",
+      "played": 15,
+      "won": 8,
+      "drawn": 1,
+      "lost": 6,
+      "penalized": 0,
+      "goals_for": 397,
+      "goals_against": 370,
+      "goal_difference": 27,
+      "points": 32
+    },
+    {
+      "pos": 7,
+      "club": "Atlanta",
+      "played": 15,
+      "won": 7,
+      "drawn": 1,
+      "lost": 7,
+      "penalized": 0,
+      "goals_for": 339,
+      "goals_against": 357,
+      "goal_difference": -18,
+      "points": 30
+    },
+    {
+      "pos": 8,
+      "club": "G.E.I. B",
+      "played": 15,
+      "won": 7,
+      "drawn": 0,
+      "lost": 8,
+      "penalized": 0,
+      "goals_for": 375,
+      "goals_against": 415,
+      "goal_difference": -40,
+      "points": 29
+    },
+    {
+      "pos": 9,
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
+      "played": 15,
+      "won": 6,
+      "drawn": 1,
+      "lost": 8,
+      "penalized": 0,
+      "goals_for": 339,
+      "goals_against": 382,
+      "goal_difference": -43,
+      "points": 28
+    },
+    {
+      "pos": 10,
+      "club": "S.A.G. Polvorines D",
+      "played": 15,
+      "won": 5,
+      "drawn": 2,
+      "lost": 8,
+      "penalized": 0,
+      "goals_for": 357,
+      "goals_against": 394,
+      "goal_difference": -37,
+      "points": 27
+    },
+    {
+      "pos": 11,
+      "club": "Municipalidad de Vicente López C",
+      "played": 15,
+      "won": 5,
+      "drawn": 1,
+      "lost": 9,
+      "penalized": 0,
+      "goals_for": 369,
+      "goals_against": 393,
+      "goal_difference": -24,
+      "points": 26
+    },
+    {
+      "pos": 12,
+      "club": "Palermo Handball",
+      "played": 15,
+      "won": 5,
+      "drawn": 0,
+      "lost": 10,
+      "penalized": 0,
+      "goals_for": 372,
+      "goals_against": 401,
+      "goal_difference": -29,
+      "points": 25
+    },
+    {
+      "pos": 13,
+      "club": "Lanús C",
+      "played": 15,
+      "won": 4,
+      "drawn": 0,
+      "lost": 11,
+      "penalized": 0,
+      "goals_for": 380,
+      "goals_against": 410,
+      "goal_difference": -30,
+      "points": 23
+    },
+    {
+      "pos": 14,
+      "club": "Ituzaingó",
+      "played": 15,
+      "won": 3,
+      "drawn": 2,
+      "lost": 10,
+      "penalized": 0,
+      "goals_for": 365,
+      "goals_against": 432,
+      "goal_difference": -67,
+      "points": 23
+    },
+    {
+      "pos": 15,
+      "club": "Municipalidad de Pilar",
+      "played": 15,
+      "won": 3,
+      "drawn": 1,
+      "lost": 11,
+      "penalized": 0,
+      "goals_for": 321,
+      "goals_against": 411,
+      "goal_difference": -90,
+      "points": 22
+    },
+    {
+      "pos": 16,
+      "club": "Municipalidad de Tres de Febrero B",
+      "played": 15,
+      "won": 3,
+      "drawn": 0,
+      "lost": 12,
+      "penalized": 0,
+      "goals_for": 319,
+      "goals_against": 422,
+      "goal_difference": -103,
+      "points": 21
+    }
+  ],
+  "scorers": [
+    {
+      "name": "Benitez, Cristian",
+      "club": "Juana Manso",
+      "appearances": 15,
+      "goals": 110,
+      "yellow": 1,
+      "two_min": 12,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 7.33
+    },
+    {
+      "name": "Roldan, Alan Josue",
+      "club": "Municipalidad de Escobar",
+      "appearances": 14,
+      "goals": 106,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 7.57
+    },
+    {
+      "name": "Diaz, Rodrigo Nicolas",
+      "club": "Racing Club B",
+      "appearances": 14,
+      "goals": 103,
+      "yellow": 0,
+      "two_min": 8,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 7.36
+    },
+    {
+      "name": "Bianco, Maura Julian",
+      "club": "Chacarita Juniors",
+      "appearances": 13,
+      "goals": 102,
+      "yellow": 3,
+      "two_min": 8,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 7.85
+    },
+    {
+      "name": "Vieyra, Federico Matias",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 14,
+      "goals": 94,
+      "yellow": 0,
+      "two_min": 11,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 6.71
+    },
+    {
+      "name": "Innella, Gaston",
+      "club": "Palermo Handball",
+      "appearances": 15,
+      "goals": 82,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 5.47
+    },
+    {
+      "name": "Luna Baez, Lautaro Ariel",
+      "club": "Juana Manso",
+      "appearances": 14,
+      "goals": 82,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 5.86
+    },
+    {
+      "name": "Fernandez, Agustin Gabriel",
+      "club": "Ituzaingó",
+      "appearances": 13,
+      "goals": 79,
+      "yellow": 3,
+      "two_min": 8,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 6.08
+    },
+    {
+      "name": "Viggiano, Valentin Nicolas",
+      "club": "Palermo Handball",
+      "appearances": 14,
+      "goals": 76,
+      "yellow": 1,
+      "two_min": 7,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 5.43
+    },
+    {
+      "name": "Bartoli, Sebastian Gabriel",
+      "club": "Chacarita Juniors",
+      "appearances": 15,
+      "goals": 75,
+      "yellow": 1,
+      "two_min": 8,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 5.0
+    },
+    {
+      "name": "Szymborski, Lautaro",
+      "club": "Lanús C",
+      "appearances": 14,
+      "goals": 74,
+      "yellow": 0,
+      "two_min": 5,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 5.29
+    },
+    {
+      "name": "Sanchez, Rodrigo Emir",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 15,
+      "goals": 72,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 4.8
+    },
+    {
+      "name": "Albano, Rodrigo Emanuel",
+      "club": "G.E.I. B",
+      "appearances": 15,
+      "goals": 72,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.8
+    },
+    {
+      "name": "Alvarez, Patricio Gaston",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 14,
+      "goals": 65,
+      "yellow": 1,
+      "two_min": 5,
+      "red": 2,
+      "blue": 0,
+      "goals_per_game": 4.64
+    },
+    {
+      "name": "Sosa, Enzo Elias",
+      "club": "Racing Club B",
+      "appearances": 15,
+      "goals": 64,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 4.27
+    },
+    {
+      "name": "Marichalar, Fernando Damian",
+      "club": "Juana Manso",
+      "appearances": 15,
+      "goals": 62,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.13
+    },
+    {
+      "name": "Encina, Dante Daniel",
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
+      "appearances": 15,
+      "goals": 61,
+      "yellow": 0,
+      "two_min": 9,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 4.07
+    },
+    {
+      "name": "Fledler, Jan",
+      "club": "A.E. Goethe B",
+      "appearances": 14,
+      "goals": 61,
+      "yellow": 2,
+      "two_min": 11,
+      "red": 2,
+      "blue": 0,
+      "goals_per_game": 4.36
+    },
+    {
+      "name": "Valenzuela, Franco Leonel",
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
+      "appearances": 15,
+      "goals": 58,
+      "yellow": 0,
+      "two_min": 6,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 3.87
+    },
+    {
+      "name": "Novo Antonucci, Nicolas",
+      "club": "G.E.I. B",
+      "appearances": 13,
+      "goals": 58,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.46
+    },
+    {
+      "name": "Cordero Florentin, Axel Gabriel",
+      "club": "Atlanta",
+      "appearances": 11,
+      "goals": 58,
+      "yellow": 1,
+      "two_min": 5,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 5.27
+    },
+    {
+      "name": "Vergara, Braian Ezequiel",
+      "club": "Municipalidad de Pilar",
+      "appearances": 15,
+      "goals": 57,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.8
+    },
+    {
+      "name": "Rodriguez, Pablo Ignacio",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 10,
+      "goals": 56,
+      "yellow": 3,
+      "two_min": 7,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 5.6
+    },
+    {
+      "name": "Heinze, Tiago",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 14,
+      "goals": 55,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.93
+    },
+    {
+      "name": "Nunez, Axel Nahuel",
+      "club": "Racing Club B",
+      "appearances": 15,
+      "goals": 54,
+      "yellow": 1,
+      "two_min": 5,
+      "red": 3,
+      "blue": 0,
+      "goals_per_game": 3.6
+    },
+    {
+      "name": "Luis, Sebastian",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 14,
+      "goals": 54,
+      "yellow": 1,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.86
+    },
+    {
+      "name": "Pignolo, Bruno Martin",
+      "club": "Racing Club B",
+      "appearances": 15,
+      "goals": 52,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.47
+    },
+    {
+      "name": "Ramos, Lautaro Manuel",
+      "club": "Municipalidad de Pilar",
+      "appearances": 14,
+      "goals": 52,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.71
+    },
+    {
+      "name": "Lanziano Greco, Roberto",
+      "club": "A.E. Goethe B",
+      "appearances": 14,
+      "goals": 52,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.71
+    },
+    {
+      "name": "Ramirez, Sergio Fabian",
+      "club": "Ituzaingó",
+      "appearances": 12,
+      "goals": 52,
+      "yellow": 0,
+      "two_min": 5,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.33
+    },
+    {
+      "name": "Barboza, Franco Javier",
+      "club": "Juana Manso",
+      "appearances": 12,
+      "goals": 51,
+      "yellow": 0,
+      "two_min": 8,
+      "red": 3,
+      "blue": 0,
+      "goals_per_game": 4.25
+    },
+    {
+      "name": "Scroseria, Theo Federico",
+      "club": "A.E. Goethe B",
+      "appearances": 9,
+      "goals": 51,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 5.67
+    },
+    {
+      "name": "Elbert, Tobias",
+      "club": "A.E. Goethe B",
+      "appearances": 14,
+      "goals": 50,
+      "yellow": 0,
+      "two_min": 5,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.57
+    },
+    {
+      "name": "Sandobal, Julian",
+      "club": "Municipalidad de Escobar",
+      "appearances": 14,
+      "goals": 49,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.5
+    },
+    {
+      "name": "Aguero, Mariano Lucas",
+      "club": "Ituzaingó",
+      "appearances": 15,
+      "goals": 48,
+      "yellow": 0,
+      "two_min": 5,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.2
+    },
+    {
+      "name": "Roldan, Facundo Carlos",
+      "club": "Municipalidad de Pilar",
+      "appearances": 13,
+      "goals": 48,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.69
+    },
+    {
+      "name": "Miguez, Matias Roman",
+      "club": "G.E.I. B",
+      "appearances": 12,
+      "goals": 47,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.92
+    },
+    {
+      "name": "Gimenez Correa, Joaquin Gabri...",
+      "club": "Municipalidad de Pilar",
+      "appearances": 15,
+      "goals": 46,
+      "yellow": 0,
+      "two_min": 10,
+      "red": 2,
+      "blue": 0,
+      "goals_per_game": 3.07
+    },
+    {
+      "name": "Gobbi, Ignacio",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 13,
+      "goals": 46,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.54
+    },
+    {
+      "name": "Burgos, Facundo Gabriel",
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
+      "appearances": 15,
+      "goals": 45,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 3.0
+    },
+    {
+      "name": "Delgado Avila, Juan Agustin",
+      "club": "Ituzaingó",
+      "appearances": 15,
+      "goals": 45,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.0
+    },
+    {
+      "name": "Ortiz, Enzo Benjamin",
+      "club": "Municipalidad de Escobar",
+      "appearances": 14,
+      "goals": 45,
+      "yellow": 0,
+      "two_min": 5,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.21
+    },
+    {
+      "name": "Bugueno, Lucas Nahuel",
+      "club": "Municipalidad de Escobar",
+      "appearances": 12,
+      "goals": 45,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 3.75
+    },
+    {
+      "name": "Drault, Francisco Miguel",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 14,
+      "goals": 43,
+      "yellow": 1,
+      "two_min": 5,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.07
+    },
+    {
+      "name": "Fusto, Agustin Ezequiel",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 10,
+      "goals": 43,
+      "yellow": 1,
+      "two_min": 9,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.3
+    },
+    {
+      "name": "Vazquez, Leonardo Ariel",
+      "club": "Lanús C",
+      "appearances": 15,
+      "goals": 41,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.73
+    },
+    {
+      "name": "Sapea, Mariano Julian",
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
+      "appearances": 14,
+      "goals": 41,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.93
+    },
+    {
+      "name": "Roldan, Diego Tomas",
+      "club": "Municipalidad de Pilar",
+      "appearances": 14,
+      "goals": 41,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.93
+    },
+    {
+      "name": "Martone, Nicolas Antonio",
+      "club": "A.E. Goethe B",
+      "appearances": 14,
+      "goals": 41,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.93
+    },
+    {
+      "name": "Guccione, Nicolas",
+      "club": "Lanús C",
+      "appearances": 15,
+      "goals": 39,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 2,
+      "blue": 1,
+      "goals_per_game": 2.6
+    },
+    {
+      "name": "Jensen Soldati, Lautaro",
+      "club": "Atlanta",
+      "appearances": 11,
+      "goals": 39,
+      "yellow": 0,
+      "two_min": 8,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.55
+    },
+    {
+      "name": "Martone, Gonzalo Alfredo",
+      "club": "A.E. Goethe B",
+      "appearances": 14,
+      "goals": 38,
+      "yellow": 3,
+      "two_min": 12,
+      "red": 2,
+      "blue": 0,
+      "goals_per_game": 2.71
+    },
+    {
+      "name": "Wapnarsky, Federico Martin",
+      "club": "Atlanta",
+      "appearances": 13,
+      "goals": 38,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.92
+    },
+    {
+      "name": "Vedia, Tomas",
+      "club": "Lanús C",
+      "appearances": 12,
+      "goals": 38,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.17
+    },
+    {
+      "name": "Harriague, Jonathan Ezequi",
+      "club": "Chacarita Juniors",
+      "appearances": 10,
+      "goals": 38,
+      "yellow": 4,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.8
+    },
+    {
+      "name": "Diaz, Lautaro Alejo",
+      "club": "G.E.I. B",
+      "appearances": 15,
+      "goals": 37,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.47
+    },
+    {
+      "name": "Tomassoni, Ignacio Leonel",
+      "club": "Ituzaingó",
+      "appearances": 13,
+      "goals": 37,
+      "yellow": 0,
+      "two_min": 9,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 2.85
+    },
+    {
+      "name": "Jamardo Maidana, Lorenzo",
+      "club": "Atlanta",
+      "appearances": 12,
+      "goals": 37,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 3.08
+    },
+    {
+      "name": "Ruiz, Juan Agustin",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 10,
+      "goals": 37,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.7
+    },
+    {
+      "name": "Garcia, Emiliano Angel",
+      "club": "Ituzaingó",
+      "appearances": 15,
+      "goals": 36,
+      "yellow": 1,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.4
+    },
+    {
+      "name": "Iglesias, Genaro",
+      "club": "Palermo Handball",
+      "appearances": 14,
+      "goals": 36,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.57
+    },
+    {
+      "name": "Sommer, Federico Nicolas",
+      "club": "Juana Manso",
+      "appearances": 14,
+      "goals": 36,
+      "yellow": 0,
+      "two_min": 10,
+      "red": 2,
+      "blue": 0,
+      "goals_per_game": 2.57
+    },
+    {
+      "name": "Chavez, Lautaro Manuel",
+      "club": "Municipalidad de Escobar",
+      "appearances": 12,
+      "goals": 36,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.0
+    },
+    {
+      "name": "Castillo, Lucas Alejo",
+      "club": "Juana Manso",
+      "appearances": 10,
+      "goals": 36,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.6
+    },
+    {
+      "name": "Vieyra, Marcelo A.",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 9,
+      "goals": 35,
+      "yellow": 1,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.89
+    },
+    {
+      "name": "Linares, Nahuel",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 9,
+      "goals": 35,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 2,
+      "blue": 0,
+      "goals_per_game": 3.89
+    },
+    {
+      "name": "Ladron De Guevara, Federico",
+      "club": "A.E. Goethe B",
+      "appearances": 14,
+      "goals": 33,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.36
+    },
+    {
+      "name": "Werner, Federico Ignaci",
+      "club": "A.E. Goethe B",
+      "appearances": 14,
+      "goals": 33,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.36
+    },
+    {
+      "name": "Silva, Facundo Ezequiel",
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
+      "appearances": 12,
+      "goals": 33,
+      "yellow": 2,
+      "two_min": 2,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 2.75
+    },
+    {
+      "name": "Saettone, Luciano Gabriel",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 9,
+      "goals": 33,
+      "yellow": 1,
+      "two_min": 5,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.67
+    },
+    {
+      "name": "Cappelletti, Leonardo Hector",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 15,
+      "goals": 32,
+      "yellow": 1,
+      "two_min": 5,
+      "red": 2,
+      "blue": 0,
+      "goals_per_game": 2.13
+    },
+    {
+      "name": "Loiacono, Ignacio Nicolas",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 14,
+      "goals": 32,
+      "yellow": 0,
+      "two_min": 7,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.29
+    },
+    {
+      "name": "Perez Palacios, Matias Nicolas",
+      "club": "G.E.I. B",
+      "appearances": 10,
+      "goals": 31,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.1
+    },
+    {
+      "name": "Aveiro Ortega, Gustavo Daniel",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 15,
+      "goals": 29,
+      "yellow": 1,
+      "two_min": 6,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.93
+    },
+    {
+      "name": "Pacheco, Gerardo Damian",
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
+      "appearances": 14,
+      "goals": 29,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.07
+    },
+    {
+      "name": "Brizzola, Rocco",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 13,
+      "goals": 29,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.23
+    },
+    {
+      "name": "Quiroga, Brandon Ivan",
+      "club": "Juana Manso",
+      "appearances": 8,
+      "goals": 29,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 3.62
+    },
+    {
+      "name": "Soto, Juan Manuel",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 12,
+      "goals": 28,
+      "yellow": 1,
+      "two_min": 4,
+      "red": 2,
+      "blue": 0,
+      "goals_per_game": 2.33
+    },
+    {
+      "name": "Chena Ponce, Manuel Alberto",
+      "club": "Lanús C",
+      "appearances": 8,
+      "goals": 28,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 3.5
+    },
+    {
+      "name": "Margani, Salvador",
+      "club": "G.E.I. B",
+      "appearances": 12,
+      "goals": 27,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 2.25
+    },
+    {
+      "name": "Palacios, Jorge Eloy",
+      "club": "Municipalidad de Escobar",
+      "appearances": 7,
+      "goals": 27,
+      "yellow": 1,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.86
+    },
+    {
+      "name": "Murino, Lautaro Ezequiel",
+      "club": "Palermo Handball",
+      "appearances": 15,
+      "goals": 26,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.73
+    },
+    {
+      "name": "Pallarini, Lautaro Adrian",
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
+      "appearances": 15,
+      "goals": 26,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.73
+    },
+    {
+      "name": "Henriquez Terussi, Leandro Ja...",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 8,
+      "goals": 26,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.25
+    },
+    {
+      "name": "Cremona, Mauro David",
+      "club": "Chacarita Juniors",
+      "appearances": 15,
+      "goals": 24,
+      "yellow": 0,
+      "two_min": 5,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.6
+    },
+    {
+      "name": "Martinez, Francisco Tomas",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 13,
+      "goals": 24,
+      "yellow": 1,
+      "two_min": 1,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.85
+    },
+    {
+      "name": "Hrycanink, Nicolas Agustin",
+      "club": "Municipalidad de Escobar",
+      "appearances": 11,
+      "goals": 24,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 2.18
+    },
+    {
+      "name": "Migueles, Damian Emmanuel",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 8,
+      "goals": 24,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.0
+    },
+    {
+      "name": "Pires, Leonardo Walter",
+      "club": "Lanús C",
+      "appearances": 5,
+      "goals": 24,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 4.8
+    },
+    {
+      "name": "Gigante, Roberto Juan",
+      "club": "Palermo Handball",
+      "appearances": 15,
+      "goals": 23,
+      "yellow": 2,
+      "two_min": 6,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.53
+    },
+    {
+      "name": "Siesicki, Ivan Ariel",
+      "club": "Lanús C",
+      "appearances": 15,
+      "goals": 23,
+      "yellow": 1,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.53
+    },
+    {
+      "name": "Ricard King, Santiago",
+      "club": "Atlanta",
+      "appearances": 14,
+      "goals": 23,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.64
+    },
+    {
+      "name": "Gil Barbara, Diego",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 12,
+      "goals": 23,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.92
+    },
+    {
+      "name": "Medina, Felipe",
+      "club": "G.E.I. B",
+      "appearances": 7,
+      "goals": 23,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.29
+    },
+    {
+      "name": "Gonzalez, Lorenzo Elias",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 14,
+      "goals": 22,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.57
+    },
+    {
+      "name": "Kastner, Alejandro",
+      "club": "Chacarita Juniors",
+      "appearances": 13,
+      "goals": 22,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.69
+    },
+    {
+      "name": "El Fasah, Jorge",
+      "club": "Racing Club B",
+      "appearances": 11,
+      "goals": 22,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
+      "name": "Visconti Rubinich, Agustin Santi...",
+      "club": "G.E.I. B",
+      "appearances": 5,
+      "goals": 22,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.4
+    },
+    {
+      "name": "Alonso, Julian",
+      "club": "Palermo Handball",
+      "appearances": 13,
+      "goals": 21,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.62
+    },
+    {
+      "name": "Curutchet, Gaston Horacio",
+      "club": "Ituzaingó",
+      "appearances": 13,
+      "goals": 21,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.62
+    },
+    {
+      "name": "Caminos, Emiliano Gabriel",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 10,
+      "goals": 21,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 2.1
+    },
+    {
+      "name": "Loscri, Matias Roberto",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 6,
+      "goals": 21,
+      "yellow": 1,
+      "two_min": 5,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.5
+    },
+    {
+      "name": "Lovera, Alan Jorge Leonel",
+      "club": "Palermo Handball",
+      "appearances": 14,
+      "goals": 20,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.43
+    },
+    {
+      "name": "Ciocca, Joaquin Ezequiel",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 13,
+      "goals": 20,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.54
+    },
+    {
+      "name": "Gonzalez, Santiago",
+      "club": "Ituzaingó",
+      "appearances": 10,
+      "goals": 20,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
+      "name": "Bianco, Renzo",
+      "club": "Chacarita Juniors",
+      "appearances": 3,
+      "goals": 20,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 6.67
+    },
+    {
+      "name": "Mendez, Federico",
+      "club": "Racing Club B",
+      "appearances": 15,
+      "goals": 19,
+      "yellow": 2,
+      "two_min": 11,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.27
+    },
+    {
+      "name": "Bartolotti, Pablo Francisco",
+      "club": "Racing Club B",
+      "appearances": 14,
+      "goals": 19,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.36
+    },
+    {
+      "name": "Villalba, Lautaro",
+      "club": "Atlanta",
+      "appearances": 13,
+      "goals": 19,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.46
+    },
+    {
+      "name": "Morvillo, Simon Angel",
+      "club": "Racing Club B",
+      "appearances": 13,
+      "goals": 19,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.46
+    },
+    {
+      "name": "Vitale Ivaldi, Federico",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 9,
+      "goals": 19,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.11
+    },
+    {
+      "name": "Batica, Alejo Luis",
+      "club": "Municipalidad de Escobar",
+      "appearances": 6,
+      "goals": 19,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.17
+    },
+    {
+      "name": "Solodovnik, Marcelo",
+      "club": "Chacarita Juniors",
+      "appearances": 6,
+      "goals": 19,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.17
+    },
+    {
+      "name": "Gimenez Asciutto, Mateo",
+      "club": "Palermo Handball",
+      "appearances": 13,
+      "goals": 18,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.38
+    },
+    {
+      "name": "Adorno, Tomas Benjamin",
+      "club": "G.E.I. B",
+      "appearances": 9,
+      "goals": 18,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
+      "name": "Ayala, Axel Tomas Gabr",
+      "club": "Lanús C",
+      "appearances": 6,
+      "goals": 18,
+      "yellow": 1,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.0
+    },
+    {
+      "name": "Bazan, Brian Alexis",
+      "club": "Chacarita Juniors",
+      "appearances": 6,
+      "goals": 18,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 3.0
+    },
+    {
+      "name": "Szymborski, Ignacio",
+      "club": "Lanús C",
+      "appearances": 15,
+      "goals": 17,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.13
+    },
+    {
+      "name": "Garcia Cupido, Sebastian",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 14,
+      "goals": 17,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.21
+    },
+    {
+      "name": "D'Angelo, Martin Alejandro",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 12,
+      "goals": 17,
+      "yellow": 1,
+      "two_min": 9,
+      "red": 3,
+      "blue": 0,
+      "goals_per_game": 1.42
+    },
+    {
+      "name": "Marchesin, Damian Oscar",
+      "club": "Palermo Handball",
+      "appearances": 11,
+      "goals": 17,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.55
+    },
+    {
+      "name": "Jeshen, German",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 11,
+      "goals": 17,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.55
+    },
+    {
+      "name": "Lorenzo, Cristian Ariel",
+      "club": "Juana Manso",
+      "appearances": 9,
+      "goals": 17,
+      "yellow": 1,
+      "two_min": 8,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.89
+    },
+    {
+      "name": "Toto, Miguel Ignacio",
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
+      "appearances": 15,
+      "goals": 16,
+      "yellow": 0,
+      "two_min": 5,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.07
+    },
+    {
+      "name": "Carbone, Jose Luis",
+      "club": "Atlanta",
+      "appearances": 12,
+      "goals": 16,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.33
+    },
+    {
+      "name": "Montes, Ezequiel Martin",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 12,
+      "goals": 16,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.33
+    },
+    {
+      "name": "Lado, Juan Ignacio",
+      "club": "Chacarita Juniors",
+      "appearances": 9,
+      "goals": 16,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.78
+    },
+    {
+      "name": "Rojas, Marcos Emiliano",
+      "club": "Racing Club B",
+      "appearances": 15,
+      "goals": 15,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Allende, Joaquin",
+      "club": "Juana Manso",
+      "appearances": 14,
+      "goals": 15,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.07
+    },
+    {
+      "name": "Aupperle, Alejandro",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 13,
+      "goals": 15,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.15
+    },
+    {
+      "name": "Brienza, Nicolas Alejandro",
+      "club": "Chacarita Juniors",
+      "appearances": 11,
+      "goals": 15,
+      "yellow": 0,
+      "two_min": 6,
+      "red": 2,
+      "blue": 0,
+      "goals_per_game": 1.36
+    },
+    {
+      "name": "Colonna, Giuliano Andre",
+      "club": "Municipalidad de Escobar",
+      "appearances": 10,
+      "goals": 15,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.5
+    },
+    {
+      "name": "Lombardi, Dante",
+      "club": "Atlanta",
+      "appearances": 10,
+      "goals": 15,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.5
+    },
+    {
+      "name": "Ruzzante, Ivan Andres",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 9,
+      "goals": 15,
+      "yellow": 1,
+      "two_min": 5,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.67
+    },
+    {
+      "name": "Iriarte, Pablo Ezequiel",
+      "club": "Lanús C",
+      "appearances": 8,
+      "goals": 15,
+      "yellow": 0,
+      "two_min": 6,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.88
+    },
+    {
+      "name": "Posado, Pablo Alejandro",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 8,
+      "goals": 15,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.88
+    },
+    {
+      "name": "Echeverria, Juan Pablo",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 7,
+      "goals": 15,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 2.14
+    },
+    {
+      "name": "Inofre, Facundo Joel",
+      "club": "Municipalidad de Pilar",
+      "appearances": 14,
+      "goals": 14,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Ramos, Matias",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 13,
+      "goals": 14,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.08
+    },
+    {
+      "name": "Allerborn, Joaquin",
+      "club": "Palermo Handball",
+      "appearances": 10,
+      "goals": 14,
+      "yellow": 1,
+      "two_min": 2,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.4
+    },
+    {
+      "name": "Alfano, Renzo",
+      "club": "Atlanta",
+      "appearances": 10,
+      "goals": 14,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.4
+    },
+    {
+      "name": "Rougier, Francisco",
+      "club": "Municipalidad de Escobar",
+      "appearances": 10,
+      "goals": 14,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.4
+    },
+    {
+      "name": "Pesce, Pablo",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 10,
+      "goals": 14,
+      "yellow": 1,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.4
+    },
+    {
+      "name": "Adamow, Marcos",
+      "club": "Chacarita Juniors",
+      "appearances": 9,
+      "goals": 14,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.56
+    },
+    {
+      "name": "Gimenez Correa, Juan Cruz",
+      "club": "Municipalidad de Pilar",
+      "appearances": 6,
+      "goals": 14,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 2.33
+    },
+    {
+      "name": "Loscri, Tomas",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 6,
+      "goals": 14,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.33
+    },
+    {
+      "name": "Colazo, Facundo",
+      "club": "Municipalidad de Escobar",
+      "appearances": 6,
+      "goals": 14,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.33
+    },
+    {
+      "name": "Aupperle, Matias",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 14,
+      "goals": 13,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 3,
+      "blue": 0,
+      "goals_per_game": 0.93
+    },
+    {
+      "name": "Montenegro, Ignacio",
+      "club": "Chacarita Juniors",
+      "appearances": 14,
+      "goals": 13,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.93
+    },
+    {
+      "name": "Santucci, Fabrizio Leonel",
+      "club": "Atlanta",
+      "appearances": 12,
+      "goals": 13,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.08
+    },
+    {
+      "name": "Mougel, Alejo Valentin",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 8,
+      "goals": 13,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.62
+    },
+    {
+      "name": "Jaworsky, Maximiliano",
+      "club": "Juana Manso",
+      "appearances": 6,
+      "goals": 13,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 2.17
+    },
+    {
+      "name": "Romero Melli, Pablo Sebastian",
+      "club": "A.E. Goethe B",
+      "appearances": 6,
+      "goals": 13,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.17
+    },
+    {
+      "name": "Di Salvo, Lorenzo",
+      "club": "Palermo Handball",
+      "appearances": 4,
+      "goals": 13,
+      "yellow": 2,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.25
+    },
+    {
+      "name": "Loscri, Javier",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 4,
+      "goals": 13,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 3.25
+    },
+    {
+      "name": "Pires, Leandro Walter",
+      "club": "Lanús C",
+      "appearances": 3,
+      "goals": 13,
+      "yellow": 1,
+      "two_min": 0,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 4.33
+    },
+    {
+      "name": "Borrelli, Matias Exequiel Tomas",
+      "club": "Palermo Handball",
+      "appearances": 15,
+      "goals": 12,
+      "yellow": 0,
+      "two_min": 8,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.8
+    },
+    {
+      "name": "Ayala, Matias Nicolas",
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
+      "appearances": 15,
+      "goals": 12,
+      "yellow": 0,
+      "two_min": 14,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.8
+    },
+    {
+      "name": "Hurwitz, Agustin",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 15,
+      "goals": 12,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.8
+    },
+    {
+      "name": "Paturlanne, Mateo Santino",
+      "club": "Municipalidad de Pilar",
+      "appearances": 13,
+      "goals": 12,
+      "yellow": 0,
+      "two_min": 7,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.92
+    },
+    {
+      "name": "Montes, Sergio Gabriel",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 12,
+      "goals": 12,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Gagliardi, Juan Franco",
+      "club": "Lanús C",
+      "appearances": 8,
+      "goals": 12,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.5
+    },
+    {
+      "name": "Testa, Matias Nicolas",
+      "club": "Lanús C",
+      "appearances": 6,
+      "goals": 12,
+      "yellow": 1,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
+      "name": "Benedetti, Matias Jorge",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 5,
+      "goals": 12,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 2.4
+    },
+    {
+      "name": "Cruz, Lucas Daniel",
+      "club": "Ituzaingó",
+      "appearances": 15,
+      "goals": 11,
+      "yellow": 1,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.73
+    },
+    {
+      "name": "Huber Barreiro, Matthias Franci...",
+      "club": "Atlanta",
+      "appearances": 14,
+      "goals": 11,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.79
+    },
+    {
+      "name": "Castineira Cardenas, Gabriel",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 13,
+      "goals": 11,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 3,
+      "blue": 0,
+      "goals_per_game": 0.85
+    },
+    {
+      "name": "Perello, Diego Martin",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 12,
+      "goals": 11,
+      "yellow": 1,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.92
+    },
+    {
+      "name": "Benaglio, Mateo",
+      "club": "G.E.I. B",
+      "appearances": 10,
+      "goals": 11,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.1
+    },
+    {
+      "name": "Naddeo, Andres",
+      "club": "A.E. Goethe B",
+      "appearances": 10,
+      "goals": 11,
+      "yellow": 1,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.1
+    },
+    {
+      "name": "Villalba, Thiago Uriel",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 6,
+      "goals": 11,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.83
+    },
+    {
+      "name": "Graf, Mariano Nahuel",
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
+      "appearances": 6,
+      "goals": 11,
+      "yellow": 1,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.83
+    },
+    {
+      "name": "Otegui, Juan",
+      "club": "Palermo Handball",
+      "appearances": 5,
+      "goals": 11,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.2
+    },
+    {
+      "name": "Labra, Juan Ignacio",
+      "club": "Municipalidad de Escobar",
+      "appearances": 5,
+      "goals": 11,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.2
+    },
+    {
+      "name": "Hails, Martin",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 5,
+      "goals": 11,
+      "yellow": 0,
+      "two_min": 6,
+      "red": 2,
+      "blue": 0,
+      "goals_per_game": 2.2
+    },
+    {
+      "name": "Zalazar, Esteban Samuel",
+      "club": "Municipalidad de Pilar",
+      "appearances": 4,
+      "goals": 11,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.75
+    },
+    {
+      "name": "Alvarez Giner, Andres Nicolas",
+      "club": "Chacarita Juniors",
+      "appearances": 15,
+      "goals": 10,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.67
+    },
+    {
+      "name": "Crespo, Eliseo",
+      "club": "A.E. Goethe B",
+      "appearances": 13,
+      "goals": 10,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.77
+    },
+    {
+      "name": "Sanchez, Jonatan Eduardo",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 10,
+      "goals": 10,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Gomez, Nicolas Andres",
+      "club": "Atlanta",
+      "appearances": 7,
+      "goals": 10,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.43
+    },
+    {
+      "name": "Naser, Adrian Aalejandro",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 7,
+      "goals": 10,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.43
+    },
+    {
+      "name": "Llanos, Hernan",
+      "club": "Municipalidad de Escobar",
+      "appearances": 6,
+      "goals": 10,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.67
+    },
+    {
+      "name": "Carrizo, Walter Daniel",
+      "club": "Municipalidad de Pilar",
+      "appearances": 6,
+      "goals": 10,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.67
+    },
+    {
+      "name": "Figueroa, Andres",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 5,
+      "goals": 10,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
+      "name": "Barthe, Hernan Miguel",
+      "club": "Municipalidad de Escobar",
+      "appearances": 5,
+      "goals": 10,
+      "yellow": 1,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
+      "name": "Hernandez, Tomas Martin",
+      "club": "Atlanta",
+      "appearances": 5,
+      "goals": 10,
+      "yellow": 1,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
+      "name": "Carlacchiani, Maximo",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 5,
+      "goals": 10,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
+      "name": "Arce, Matias Nestor",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 11,
+      "goals": 9,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.82
+    },
+    {
+      "name": "Borello, Santiago Agusti",
+      "club": "A.E. Goethe B",
+      "appearances": 11,
+      "goals": 9,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.82
+    },
+    {
+      "name": "Mangini, Nicolas Ezequie",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 10,
+      "goals": 9,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.9
+    },
+    {
+      "name": "Pinazo, Juan Mateo",
+      "club": "Municipalidad de Escobar",
+      "appearances": 13,
+      "goals": 8,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.62
+    },
+    {
+      "name": "Gonzalez, Jonatan David",
+      "club": "Ituzaingó",
+      "appearances": 12,
+      "goals": 8,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.67
+    },
+    {
+      "name": "Mikalef Hernandez, Carlos Joa...",
+      "club": "Chacarita Juniors",
+      "appearances": 12,
+      "goals": 8,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.67
+    },
+    {
+      "name": "Lago Achigar, Ezequiel Federi",
+      "club": "Lanús C",
+      "appearances": 11,
+      "goals": 8,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.73
+    },
+    {
+      "name": "Pereyra, Elias Sebastian",
+      "club": "Juana Manso",
+      "appearances": 8,
+      "goals": 8,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Diaz, Diego Juan Cruz",
+      "club": "Racing Club B",
+      "appearances": 15,
+      "goals": 7,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.47
+    },
+    {
+      "name": "Portillo, Facundo Matias",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 14,
+      "goals": 7,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.5
+    },
+    {
+      "name": "Laxi, Gonzalo Luis",
+      "club": "Atlanta",
+      "appearances": 14,
+      "goals": 7,
+      "yellow": 1,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.5
+    },
+    {
+      "name": "Lomazzo, Juan Cruz",
+      "club": "Municipalidad de Pilar",
+      "appearances": 11,
+      "goals": 7,
+      "yellow": 1,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.64
+    },
+    {
+      "name": "Vieyra, Gonzalo Ezequiel",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 10,
+      "goals": 7,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.7
+    },
+    {
+      "name": "Ranitzsch, Maximiliano Pab",
+      "club": "A.E. Goethe B",
+      "appearances": 6,
+      "goals": 7,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.17
+    },
+    {
+      "name": "Chavez, Lucio Nahuel",
+      "club": "G.E.I. B",
+      "appearances": 5,
+      "goals": 7,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.4
+    },
+    {
+      "name": "Arriondo, Arian Agustin",
+      "club": "Municipalidad de Escobar",
+      "appearances": 4,
+      "goals": 7,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.75
+    },
+    {
+      "name": "Loscri, Sebastian D.",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 13,
+      "goals": 6,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.46
+    },
+    {
+      "name": "Rojas, Elias Ezequiel",
+      "club": "Municipalidad de Escobar",
+      "appearances": 11,
+      "goals": 6,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.55
+    },
+    {
+      "name": "Parga Leiva, Alejo Nicolas",
+      "club": "Racing Club B",
+      "appearances": 9,
+      "goals": 6,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.67
+    },
+    {
+      "name": "Di Stefano, Santino Francesco",
+      "club": "Municipalidad de Escobar",
+      "appearances": 9,
+      "goals": 6,
+      "yellow": 0,
+      "two_min": 5,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.67
+    },
+    {
+      "name": "Durruty, Julio Martin",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 9,
+      "goals": 6,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.67
+    },
+    {
+      "name": "Lopez Calabrese, Luca",
+      "club": "Municipalidad de Escobar",
+      "appearances": 8,
+      "goals": 6,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.75
+    },
+    {
+      "name": "Largo, Valentin Omar",
+      "club": "G.E.I. B",
+      "appearances": 7,
+      "goals": 6,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.86
+    },
+    {
+      "name": "Bonnin, Matias",
+      "club": "Atlanta",
+      "appearances": 5,
+      "goals": 6,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.2
+    },
+    {
+      "name": "Gazco, Julian",
+      "club": "Lanús C",
+      "appearances": 15,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.33
+    },
+    {
+      "name": "Aycatuiro, Andres Adrian",
+      "club": "Racing Club B",
+      "appearances": 14,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.36
+    },
+    {
+      "name": "Halpern, Manuel",
+      "club": "Chacarita Juniors",
+      "appearances": 14,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.36
+    },
+    {
+      "name": "Rodriguez Vielma, Federico Ez...",
+      "club": "Chacarita Juniors",
+      "appearances": 12,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.42
+    },
+    {
+      "name": "Elorga Studer, Julian Alexis",
+      "club": "Lanús C",
+      "appearances": 11,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.45
+    },
+    {
+      "name": "Irigoy, Juan Martin",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 10,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 4,
+      "blue": 1,
+      "goals_per_game": 0.5
+    },
+    {
+      "name": "Caia, Ignacio Anibal",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 9,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.56
+    },
+    {
+      "name": "Meyer, Federico",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 9,
+      "goals": 5,
+      "yellow": 1,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.56
+    },
+    {
+      "name": "Nunez, Leonel Geremias",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 7,
+      "goals": 5,
+      "yellow": 1,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.71
+    },
+    {
+      "name": "Rodas, Dylan Ezequiel",
+      "club": "Racing Club B",
+      "appearances": 6,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.83
+    },
+    {
+      "name": "Gomez, Dario Maximiliano",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 5,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Popow, Sasha Nicolas",
+      "club": "Municipalidad de Pilar",
+      "appearances": 5,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Avalos Opderbeck, Elian Nahue...",
+      "club": "G.E.I. B",
+      "appearances": 5,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Gallo, Elian",
+      "club": "G.E.I. B",
+      "appearances": 1,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 5.0
+    },
+    {
+      "name": "Garcia, Thiago Gabriel Anibal",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 1,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 5.0
+    },
+    {
+      "name": "Pinedo Garcia, Juan Bautista",
+      "club": "Atlanta",
+      "appearances": 14,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.29
+    },
+    {
+      "name": "Poghettini, Federico",
+      "club": "A.E. Goethe B",
+      "appearances": 13,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.31
+    },
+    {
+      "name": "De Santis, Mauro Ezequiel",
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
+      "appearances": 12,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.33
+    },
+    {
+      "name": "Moran, Maximiliano Emanuel",
+      "club": "Juana Manso",
+      "appearances": 11,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.36
+    },
+    {
+      "name": "Bertuleit, Tomas",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 11,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.36
+    },
+    {
+      "name": "Damonte, Esteban Leonel",
+      "club": "Lanús C",
+      "appearances": 10,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.4
+    },
+    {
+      "name": "Bonino Palmieri, Bruno Fabrizio",
+      "club": "Racing Club B",
+      "appearances": 9,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.44
+    },
+    {
+      "name": "Garcia Bruna, Santiago Martin",
+      "club": "Atlanta",
+      "appearances": 7,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.57
+    },
+    {
+      "name": "Rios, Guillermo Adrian",
+      "club": "Ituzaingó",
+      "appearances": 7,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.57
+    },
+    {
+      "name": "Casetta, Lautaro Tomas",
+      "club": "Atlanta",
+      "appearances": 4,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Melussi, Ignacio Nicolas",
+      "club": "Chacarita Juniors",
+      "appearances": 4,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Uriol Demarchi, Geronimo",
+      "club": "A.E. Goethe B",
+      "appearances": 2,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
+      "name": "Medinilla, Matias Nahuel",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 14,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.21
+    },
+    {
+      "name": "Simon, Maximiliano Alejandro",
+      "club": "G.E.I. B",
+      "appearances": 13,
+      "goals": 3,
+      "yellow": 1,
+      "two_min": 7,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.23
+    },
+    {
+      "name": "Brizuela, Ariel Sabas",
+      "club": "Municipalidad de Pilar",
+      "appearances": 13,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.23
+    },
+    {
+      "name": "Ocampo, Ignacio",
+      "club": "A.E. Goethe B",
+      "appearances": 10,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.3
+    },
+    {
+      "name": "Caruso, Fabrizio",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 8,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.38
+    },
+    {
+      "name": "German, Franco",
+      "club": "Municipalidad de Escobar",
+      "appearances": 7,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.43
+    },
+    {
+      "name": "Steppacher, Ramiro Jose",
+      "club": "A.E. Goethe B",
+      "appearances": 7,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.43
+    },
+    {
+      "name": "Gagliardi, Tomas Ignacio",
+      "club": "Chacarita Juniors",
+      "appearances": 5,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.6
+    },
+    {
+      "name": "Diaz, Lucas Matias",
+      "club": "Juana Manso",
+      "appearances": 4,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.75
+    },
+    {
+      "name": "Ayabarrena, Fernando Daniel",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 3,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Brizuela, Cristian Axel Gabriel",
+      "club": "Juana Manso",
+      "appearances": 1,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.0
+    },
+    {
+      "name": "Verdi, Ezequiel",
+      "club": "Juana Manso",
+      "appearances": 1,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.0
+    },
+    {
+      "name": "Delmoro, Lucas",
+      "club": "Palermo Handball",
+      "appearances": 15,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.13
+    },
+    {
+      "name": "Postel, Matias Simon",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 14,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.14
+    },
+    {
+      "name": "Losada, Mariano Nicolas",
+      "club": "G.E.I. B",
+      "appearances": 13,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.15
+    },
+    {
+      "name": "Sebastia, Juan Ignacio",
+      "club": "Ituzaingó",
+      "appearances": 11,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.18
+    },
+    {
+      "name": "Gimenez, Agustin Luis",
+      "club": "Atlanta",
+      "appearances": 9,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.22
+    },
+    {
+      "name": "Alonso, Gabriel Omar",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 8,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.25
+    },
+    {
+      "name": "Siesicki, David Emmanuel",
+      "club": "Lanús C",
+      "appearances": 6,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.33
+    },
+    {
+      "name": "Santaliestra, Gustavo Bautista",
+      "club": "Lanús C",
+      "appearances": 4,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.5
+    },
+    {
+      "name": "Della Giustina, Nicolas Gaston",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 4,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.5
+    },
+    {
+      "name": "Romero, Rodrigo Lucas",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 4,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.5
+    },
+    {
+      "name": "De Santi Martorelli, Gian Franc...",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 4,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.5
+    },
+    {
+      "name": "Navarro, Jonatan Gonzalo",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 1,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
+      "name": "Cubilla, Cristian Gabriel",
+      "club": "Juana Manso",
+      "appearances": 1,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
+      "name": "Santucho, Federico",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 1,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
+      "name": "Galante Moreno, Rodrigo Andre",
+      "club": "Atlanta",
+      "appearances": 1,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
+      "name": "Gaitan, Luciano Nicolas",
+      "club": "Atlanta",
+      "appearances": 1,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
+      "name": "Doormann, Sergio Fabian",
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
+      "appearances": 15,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.07
+    },
+    {
+      "name": "Creusser, Agustin",
+      "club": "Atlanta",
+      "appearances": 15,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.07
+    },
+    {
+      "name": "Diaz, Juan Cruz",
+      "club": "Racing Club B",
+      "appearances": 15,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.07
+    },
+    {
+      "name": "Carrascosa, Joaquin",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 15,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.07
+    },
+    {
+      "name": "Ibarra, Steven Yoel",
+      "club": "Palermo Handball",
+      "appearances": 14,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.07
+    },
+    {
+      "name": "Bouhes, Lionel Eduardo",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 14,
+      "goals": 1,
+      "yellow": 1,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.07
+    },
+    {
+      "name": "Romero, Rafael Alberto",
+      "club": "Chacarita Juniors",
+      "appearances": 14,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.07
+    },
+    {
+      "name": "Zapata, Matias Sebastian",
+      "club": "Ituzaingó",
+      "appearances": 11,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.09
+    },
+    {
+      "name": "Correa, Alan Enrique",
+      "club": "Juana Manso",
+      "appearances": 11,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.09
+    },
+    {
+      "name": "Heimbach, Matias Enrique",
+      "club": "A.E. Goethe B",
+      "appearances": 10,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.1
+    },
+    {
+      "name": "Gomez, Jorge Nicolas",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 9,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.11
+    },
+    {
+      "name": "Martinez, Hernan Jose",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 8,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.12
+    },
+    {
+      "name": "Diaz, Sergio Alejandro",
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
+      "appearances": 8,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.12
+    },
+    {
+      "name": "Sajaroff, Nicolas",
+      "club": "A.E. Goethe B",
+      "appearances": 8,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.12
+    },
+    {
+      "name": "Paredes Alvarez, Claudio Mauri...",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 8,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.12
+    },
+    {
+      "name": "Gahan, Matias Alejandro",
+      "club": "Ituzaingó",
+      "appearances": 7,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.14
+    },
+    {
+      "name": "Maestripieri, Siro Lautaro",
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
+      "appearances": 7,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.14
+    },
+    {
+      "name": "Tebele, Elian Matias",
+      "club": "Atlanta",
+      "appearances": 6,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.17
+    },
+    {
+      "name": "Figueroa, Franco Daniel",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 6,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.17
+    },
+    {
+      "name": "Ifran Zacarias, Pablo Gaston",
+      "club": "Atlanta",
+      "appearances": 5,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.2
+    },
+    {
+      "name": "Gomez Maldonado, Facundo",
+      "club": "G.E.I. B",
+      "appearances": 5,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.2
+    },
+    {
+      "name": "Fernandez, Luis Andres",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 5,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.2
+    },
+    {
+      "name": "Moreno Bauer, German",
+      "club": "Atlanta",
+      "appearances": 4,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.25
+    },
+    {
+      "name": "La, Rizza Franco",
+      "club": "Municipalidad de Pilar",
+      "appearances": 4,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.25
+    },
+    {
+      "name": "Martinez, Nehemias Natanael",
+      "club": "Racing Club B",
+      "appearances": 3,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.33
+    },
+    {
+      "name": "Homeyer, Tomas",
+      "club": "A.E. Goethe B",
+      "appearances": 2,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.5
+    },
+    {
+      "name": "Bibel, Valentino",
+      "club": "Racing Club B",
+      "appearances": 2,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.5
+    },
+    {
+      "name": "Cabantous Soler, Lucas",
+      "club": "A.E. Goethe B",
+      "appearances": 2,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.5
+    },
+    {
+      "name": "D'Angelo, Santino Nicola",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 2,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.5
+    },
+    {
+      "name": "Cortes Biagi, Valentin Franco",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 2,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.5
+    },
+    {
+      "name": "Sajaroff, Manuel",
+      "club": "A.E. Goethe B",
+      "appearances": 1,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Rahn, Martin",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 1,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Curcio Michaux, Santiago Salva...",
+      "club": "Atlanta",
+      "appearances": 1,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Reverter, Felipe",
+      "club": "Palermo Handball",
+      "appearances": 15,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Gonzalez, Nahuel Ariel",
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
+      "appearances": 15,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Taddei, Dante Adrian",
+      "club": "Juana Manso",
+      "appearances": 15,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Castillo, Javier Alejandro",
+      "club": "Ituzaingó",
+      "appearances": 15,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Ferreira, Gaston",
+      "club": "Racing Club B",
+      "appearances": 15,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Medrano Parisi, Ezequiel",
+      "club": "G.E.I. B",
+      "appearances": 15,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Martinez, Victor Emmanuel",
+      "club": "Municipalidad de Pilar",
+      "appearances": 15,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Monrrg, Gustavo Hernan",
+      "club": "Ituzaingó",
+      "appearances": 14,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Ferreyra De La Cruz, Gonzalo",
+      "club": "Municipalidad de Pilar",
+      "appearances": 14,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Senger, German",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 14,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Aguilar, Gabriel",
+      "club": "Municipalidad de Escobar",
+      "appearances": 14,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Cabelli, Lautaro Agustin",
+      "club": "Lanús C",
+      "appearances": 14,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Sorribas, Gaston Sebastian",
+      "club": "Juana Manso",
+      "appearances": 13,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Vazquez, Luciano Nahuel",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 13,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Garcia Suarez, Joaquin",
+      "club": "Racing Club B",
+      "appearances": 13,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "De Sousa Goncalves, Fernand...",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 13,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Alvarez, Ignacio",
+      "club": "A.E. Goethe B",
+      "appearances": 13,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Marella, Maximo Lautaro",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 12,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Barrientos Gonzalez, Thiago Ez...",
+      "club": "G.E.I. B",
+      "appearances": 11,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Arroyo, Josue",
+      "club": "Chacarita Juniors",
+      "appearances": 11,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Grandi, Juan Cruz",
+      "club": "Municipalidad de Escobar",
+      "appearances": 10,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Rosemburg, Gabriel Jesus",
+      "club": "Lanús C",
+      "appearances": 10,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Quiroga, Ivan Agustin",
+      "club": "Municipalidad de Escobar",
+      "appearances": 9,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Aguilar, Tomas Agustin",
+      "club": "Lanús C",
+      "appearances": 9,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Galliani, Ivan Nicolas",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 9,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Carol Augier, Ignacio Nicolas",
+      "club": "Atlanta",
+      "appearances": 5,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Gonzalez, David Ezequiel",
+      "club": "G.E.I. B",
+      "appearances": 4,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Benavidez, Joel",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 4,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Taboada Moreira, Ian Carlo",
+      "club": "Lanús C",
+      "appearances": 4,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Villalobos Gonzalez, Ian Agusti...",
+      "club": "Racing Club B",
+      "appearances": 3,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Sanchez, Javier Raul",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 3,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Ramirez, Luis Antonio Nicolas",
+      "club": "Palermo Handball",
+      "appearances": 3,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Fernandez, Eduardo Ismael",
+      "club": "Municipalidad de Pilar",
+      "appearances": 3,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Diaz, Enrique Adrian",
+      "club": "Lanús C",
+      "appearances": 3,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Perrotta, Matias Adrian",
+      "club": "Lanús C",
+      "appearances": 3,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Seltzer, Daniel",
+      "club": "Atlanta",
+      "appearances": 3,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Rogers Ford, Joaquin Alejandr...",
+      "club": "Municipalidad de Pilar",
+      "appearances": 2,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Camargo, Luca Sebastian",
+      "club": "G.E.I. B",
+      "appearances": 2,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Kunis Tizzi, Felipe",
+      "club": "G.E.I. B",
+      "appearances": 2,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Colombo, Marcelo",
+      "club": "Lanús C",
+      "appearances": 2,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Mastroiani, Anibal Gustavo",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 2,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "De Bernardi, Tomas",
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Pascual, Angel Julian",
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Ortiz, Joaquin Federico",
+      "club": "Municipalidad de Pilar",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Jung, Martin",
+      "club": "A.E. Goethe B",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Pramparo, Alejo",
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Delacroix, Matias",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "De Suosa Goncalvez, Fernand...",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "De Sousa Goncalvez, Fernand...",
+      "club": "S.A.G. Polvorines D",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Cazenave, Axel Gaston",
+      "club": "Municipalidad de Escobar",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Bloise, Federico",
+      "club": "Lanús C",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Benitez, Tomas Nahuel",
+      "club": "Atlanta",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    }
+  ],
+  "clubs": [
+    {
+      "club": "Juana Manso",
+      "appearances": 182,
+      "goals": 475,
+      "yellow": 2,
+      "two_min": 59,
+      "red": 9,
+      "blue": 0,
+      "players": 19
+    },
+    {
+      "club": "Municipalidad de Escobar",
+      "appearances": 218,
+      "goals": 461,
+      "yellow": 2,
+      "two_min": 30,
+      "red": 2,
+      "blue": 0,
+      "players": 24
+    },
+    {
+      "club": "A.E. Goethe B",
+      "appearances": 222,
+      "goals": 428,
+      "yellow": 6,
+      "two_min": 59,
+      "red": 5,
+      "blue": 0,
+      "players": 24
+    },
+    {
+      "club": "S.A.G. Villa Ballester D",
+      "appearances": 237,
+      "goals": 412,
+      "yellow": 4,
+      "two_min": 42,
+      "red": 8,
+      "blue": 0,
+      "players": 25
+    },
+    {
+      "club": "Chacarita Juniors",
+      "appearances": 211,
+      "goals": 412,
+      "yellow": 8,
+      "two_min": 50,
+      "red": 8,
+      "blue": 0,
+      "players": 20
+    },
+    {
+      "club": "Racing Club B",
+      "appearances": 231,
+      "goals": 397,
+      "yellow": 3,
+      "two_min": 41,
+      "red": 7,
+      "blue": 0,
+      "players": 20
+    },
+    {
+      "club": "Lanús C",
+      "appearances": 233,
+      "goals": 380,
+      "yellow": 4,
+      "two_min": 37,
+      "red": 7,
+      "blue": 1,
+      "players": 27
+    },
+    {
+      "club": "G.E.I. B",
+      "appearances": 191,
+      "goals": 375,
+      "yellow": 1,
+      "two_min": 27,
+      "red": 2,
+      "blue": 0,
+      "players": 22
+    },
+    {
+      "club": "Palermo Handball",
+      "appearances": 205,
+      "goals": 372,
+      "yellow": 6,
+      "two_min": 44,
+      "red": 5,
+      "blue": 0,
+      "players": 17
+    },
+    {
+      "club": "Municipalidad de Vicente López C",
+      "appearances": 218,
+      "goals": 369,
+      "yellow": 5,
+      "two_min": 58,
+      "red": 16,
+      "blue": 1,
+      "players": 25
+    },
+    {
+      "club": "Ituzaingó",
+      "appearances": 198,
+      "goals": 365,
+      "yellow": 5,
+      "two_min": 51,
+      "red": 2,
+      "blue": 0,
+      "players": 16
+    },
+    {
+      "club": "S.A.G. Polvorines D",
+      "appearances": 217,
+      "goals": 357,
+      "yellow": 10,
+      "two_min": 53,
+      "red": 6,
+      "blue": 0,
+      "players": 27
+    },
+    {
+      "club": "Municipalidad de San Martín (Ce.M.E.F)",
+      "appearances": 193,
+      "goals": 339,
+      "yellow": 3,
+      "two_min": 55,
+      "red": 7,
+      "blue": 0,
+      "players": 15
+    },
+    {
+      "club": "Atlanta",
+      "appearances": 239,
+      "goals": 339,
+      "yellow": 3,
+      "two_min": 35,
+      "red": 4,
+      "blue": 0,
+      "players": 29
+    },
+    {
+      "club": "Municipalidad de Pilar",
+      "appearances": 182,
+      "goals": 321,
+      "yellow": 1,
+      "two_min": 41,
+      "red": 3,
+      "blue": 0,
+      "players": 19
+    },
+    {
+      "club": "Municipalidad de Tres de Febrero B",
+      "appearances": 207,
+      "goals": 319,
+      "yellow": 2,
+      "two_min": 32,
+      "red": 6,
+      "blue": 0,
+      "players": 22
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "date": "2026-03-22",
+      "matches": [
+        {
+          "home": "Atlanta",
+          "away": "Ituzaingó",
+          "home_goals": 30,
+          "away_goals": 21,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Tres de Febrero B",
+          "away": "Juana Manso",
+          "home_goals": 27,
+          "away_goals": 39,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Lanús C",
+          "away": "Municipalidad de Pilar",
+          "home_goals": 21,
+          "away_goals": 26,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Palermo Handball",
+          "away": "Municipalidad de Vicente López C",
+          "home_goals": 27,
+          "away_goals": 31,
+          "coverage": "planilla"
+        },
+        {
+          "home": "S.A.G. Polvorines D",
+          "away": "Chacarita Juniors",
+          "home_goals": 18,
+          "away_goals": 28,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Racing Club B",
+          "away": "Municipalidad de San Martín (Ce.M.E.F)",
+          "home_goals": 22,
+          "away_goals": 15,
+          "coverage": "planilla"
+        },
+        {
+          "home": "G.E.I. B",
+          "away": "Municipalidad de Escobar",
+          "home_goals": 24,
+          "away_goals": 32,
+          "coverage": "planilla"
+        },
+        {
+          "home": "A.E. Goethe B",
+          "away": "S.A.G. Villa Ballester D",
+          "home_goals": 26,
+          "away_goals": 25,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "date": "2026-03-29",
+      "matches": [
+        {
+          "home": "Ituzaingó",
+          "away": "S.A.G. Villa Ballester D",
+          "home_goals": 24,
+          "away_goals": 26,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Escobar",
+          "away": "A.E. Goethe B",
+          "home_goals": 0,
+          "away_goals": 3,
+          "coverage": "suspended"
+        },
+        {
+          "home": "Municipalidad de San Martín (Ce.M.E.F)",
+          "away": "G.E.I. B",
+          "home_goals": 21,
+          "away_goals": 24,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Chacarita Juniors",
+          "away": "Racing Club B",
+          "home_goals": 29,
+          "away_goals": 24,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Vicente López C",
+          "away": "S.A.G. Polvorines D",
+          "home_goals": 22,
+          "away_goals": 23,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Pilar",
+          "away": "Palermo Handball",
+          "home_goals": 13,
+          "away_goals": 22,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Juana Manso",
+          "away": "Lanús C",
+          "home_goals": 34,
+          "away_goals": 22,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Atlanta",
+          "away": "Municipalidad de Tres de Febrero B",
+          "home_goals": 22,
+          "away_goals": 16,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "date": "2026-04-12",
+      "matches": [
+        {
+          "home": "Municipalidad de Tres de Febrero B",
+          "away": "Ituzaingó",
+          "home_goals": 30,
+          "away_goals": 24,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Lanús C",
+          "away": "Atlanta",
+          "home_goals": 23,
+          "away_goals": 28,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Palermo Handball",
+          "away": "Juana Manso",
+          "home_goals": 28,
+          "away_goals": 31,
+          "coverage": "planilla"
+        },
+        {
+          "home": "S.A.G. Polvorines D",
+          "away": "Municipalidad de Pilar",
+          "home_goals": 26,
+          "away_goals": 20,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Racing Club B",
+          "away": "Municipalidad de Vicente López C",
+          "home_goals": 31,
+          "away_goals": 26,
+          "coverage": "planilla"
+        },
+        {
+          "home": "G.E.I. B",
+          "away": "Chacarita Juniors",
+          "home_goals": 25,
+          "away_goals": 24,
+          "coverage": "planilla"
+        },
+        {
+          "home": "A.E. Goethe B",
+          "away": "Municipalidad de San Martín (Ce.M.E.F)",
+          "home_goals": 27,
+          "away_goals": 15,
+          "coverage": "planilla"
+        },
+        {
+          "home": "S.A.G. Villa Ballester D",
+          "away": "Municipalidad de Escobar",
+          "home_goals": 27,
+          "away_goals": 26,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "date": "2026-04-15",
+      "matches": [
+        {
+          "home": "Ituzaingó",
+          "away": "Municipalidad de Escobar",
+          "home_goals": 28,
+          "away_goals": 38,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de San Martín (Ce.M.E.F)",
+          "away": "S.A.G. Villa Ballester D",
+          "home_goals": 18,
+          "away_goals": 18,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Chacarita Juniors",
+          "away": "A.E. Goethe B",
+          "home_goals": 34,
+          "away_goals": 34,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Vicente López C",
+          "away": "G.E.I. B",
+          "home_goals": 20,
+          "away_goals": 21,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Pilar",
+          "away": "Racing Club B",
+          "home_goals": 23,
+          "away_goals": 26,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Juana Manso",
+          "away": "S.A.G. Polvorines D",
+          "home_goals": 22,
+          "away_goals": 23,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Atlanta",
+          "away": "Palermo Handball",
+          "home_goals": 22,
+          "away_goals": 17,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Tres de Febrero B",
+          "away": "Lanús C",
+          "home_goals": 32,
+          "away_goals": 24,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "date": "2026-04-26",
+      "matches": [
+        {
+          "home": "Lanús C",
+          "away": "Ituzaingó",
+          "home_goals": 30,
+          "away_goals": 19,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Palermo Handball",
+          "away": "Municipalidad de Tres de Febrero B",
+          "home_goals": 27,
+          "away_goals": 26,
+          "coverage": "planilla"
+        },
+        {
+          "home": "S.A.G. Polvorines D",
+          "away": "Atlanta",
+          "home_goals": 21,
+          "away_goals": 22,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Racing Club B",
+          "away": "Juana Manso",
+          "home_goals": 37,
+          "away_goals": 32,
+          "coverage": "planilla"
+        },
+        {
+          "home": "G.E.I. B",
+          "away": "Municipalidad de Pilar",
+          "home_goals": 30,
+          "away_goals": 15,
+          "coverage": "planilla"
+        },
+        {
+          "home": "A.E. Goethe B",
+          "away": "Municipalidad de Vicente López C",
+          "home_goals": 31,
+          "away_goals": 24,
+          "coverage": "planilla"
+        },
+        {
+          "home": "S.A.G. Villa Ballester D",
+          "away": "Chacarita Juniors",
+          "home_goals": 22,
+          "away_goals": 21,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Escobar",
+          "away": "Municipalidad de San Martín (Ce.M.E.F)",
+          "home_goals": 38,
+          "away_goals": 21,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "date": "2026-04-22",
+      "matches": [
+        {
+          "home": "Ituzaingó",
+          "away": "Municipalidad de San Martín (Ce.M.E.F)",
+          "home_goals": 27,
+          "away_goals": 25,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Chacarita Juniors",
+          "away": "Municipalidad de Escobar",
+          "home_goals": 28,
+          "away_goals": 34,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Vicente López C",
+          "away": "S.A.G. Villa Ballester D",
+          "home_goals": 16,
+          "away_goals": 30,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Pilar",
+          "away": "A.E. Goethe B",
+          "home_goals": 17,
+          "away_goals": 34,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Juana Manso",
+          "away": "G.E.I. B",
+          "home_goals": 35,
+          "away_goals": 25,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Atlanta",
+          "away": "Racing Club B",
+          "home_goals": 22,
+          "away_goals": 21,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Tres de Febrero B",
+          "away": "S.A.G. Polvorines D",
+          "home_goals": 21,
+          "away_goals": 26,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Lanús C",
+          "away": "Palermo Handball",
+          "home_goals": 30,
+          "away_goals": 31,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "date": "2026-05-10",
+      "matches": [
+        {
+          "home": "Palermo Handball",
+          "away": "Ituzaingó",
+          "home_goals": 24,
+          "away_goals": 25,
+          "coverage": "planilla"
+        },
+        {
+          "home": "S.A.G. Polvorines D",
+          "away": "Lanús C",
+          "home_goals": 30,
+          "away_goals": 29,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Racing Club B",
+          "away": "Municipalidad de Tres de Febrero B",
+          "home_goals": 31,
+          "away_goals": 17,
+          "coverage": "planilla"
+        },
+        {
+          "home": "G.E.I. B",
+          "away": "Atlanta",
+          "home_goals": 27,
+          "away_goals": 29,
+          "coverage": "planilla"
+        },
+        {
+          "home": "A.E. Goethe B",
+          "away": "Juana Manso",
+          "home_goals": 32,
+          "away_goals": 26,
+          "coverage": "planilla"
+        },
+        {
+          "home": "S.A.G. Villa Ballester D",
+          "away": "Municipalidad de Pilar",
+          "home_goals": 32,
+          "away_goals": 15,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Escobar",
+          "away": "Municipalidad de Vicente López C",
+          "home_goals": 29,
+          "away_goals": 25,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de San Martín (Ce.M.E.F)",
+          "away": "Chacarita Juniors",
+          "home_goals": 24,
+          "away_goals": 31,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "date": "2026-05-17",
+      "matches": [
+        {
+          "home": "Ituzaingó",
+          "away": "Chacarita Juniors",
+          "home_goals": 23,
+          "away_goals": 29,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Vicente López C",
+          "away": "Municipalidad de San Martín (Ce.M.E.F)",
+          "home_goals": 18,
+          "away_goals": 32,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Pilar",
+          "away": "Municipalidad de Escobar",
+          "home_goals": 28,
+          "away_goals": 37,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Juana Manso",
+          "away": "S.A.G. Villa Ballester D",
+          "home_goals": 22,
+          "away_goals": 25,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Atlanta",
+          "away": "A.E. Goethe B",
+          "home_goals": 17,
+          "away_goals": 35,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Tres de Febrero B",
+          "away": "G.E.I. B",
+          "home_goals": 17,
+          "away_goals": 22,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Lanús C",
+          "away": "Racing Club B",
+          "home_goals": 21,
+          "away_goals": 20,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Palermo Handball",
+          "away": "S.A.G. Polvorines D",
+          "home_goals": 29,
+          "away_goals": 24,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 9,
+      "date": "2026-05-24",
+      "matches": [
+        {
+          "home": "S.A.G. Polvorines D",
+          "away": "Ituzaingó",
+          "home_goals": 27,
+          "away_goals": 27,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Racing Club B",
+          "away": "Palermo Handball",
+          "home_goals": 38,
+          "away_goals": 22,
+          "coverage": "planilla"
+        },
+        {
+          "home": "G.E.I. B",
+          "away": "Lanús C",
+          "home_goals": 24,
+          "away_goals": 31,
+          "coverage": "planilla"
+        },
+        {
+          "home": "A.E. Goethe B",
+          "away": "Municipalidad de Tres de Febrero B",
+          "home_goals": 34,
+          "away_goals": 18,
+          "coverage": "planilla"
+        },
+        {
+          "home": "S.A.G. Villa Ballester D",
+          "away": "Atlanta",
+          "home_goals": 28,
+          "away_goals": 19,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Escobar",
+          "away": "Juana Manso",
+          "home_goals": 33,
+          "away_goals": 32,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de San Martín (Ce.M.E.F)",
+          "away": "Municipalidad de Pilar",
+          "home_goals": 28,
+          "away_goals": 25,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Chacarita Juniors",
+          "away": "Municipalidad de Vicente López C",
+          "home_goals": 30,
+          "away_goals": 30,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 10,
+      "date": "2026-05-31",
+      "matches": [
+        {
+          "home": "Ituzaingó",
+          "away": "Municipalidad de Vicente López C",
+          "home_goals": 27,
+          "away_goals": 25,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Pilar",
+          "away": "Chacarita Juniors",
+          "home_goals": 29,
+          "away_goals": 21,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Juana Manso",
+          "away": "Municipalidad de San Martín (Ce.M.E.F)",
+          "home_goals": 42,
+          "away_goals": 22,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Atlanta",
+          "away": "Municipalidad de Escobar",
+          "home_goals": 25,
+          "away_goals": 31,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Tres de Febrero B",
+          "away": "S.A.G. Villa Ballester D",
+          "home_goals": 16,
+          "away_goals": 28,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Lanús C",
+          "away": "A.E. Goethe B",
+          "home_goals": 23,
+          "away_goals": 25,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Palermo Handball",
+          "away": "G.E.I. B",
+          "home_goals": 37,
+          "away_goals": 23,
+          "coverage": "planilla"
+        },
+        {
+          "home": "S.A.G. Polvorines D",
+          "away": "Racing Club B",
+          "home_goals": 22,
+          "away_goals": 22,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 11,
+      "date": "2026-06-04",
+      "matches": [
+        {
+          "home": "Racing Club B",
+          "away": "Ituzaingó",
+          "home_goals": 26,
+          "away_goals": 23,
+          "coverage": "planilla"
+        },
+        {
+          "home": "G.E.I. B",
+          "away": "S.A.G. Polvorines D",
+          "home_goals": 30,
+          "away_goals": 28,
+          "coverage": "planilla"
+        },
+        {
+          "home": "A.E. Goethe B",
+          "away": "Palermo Handball",
+          "home_goals": 29,
+          "away_goals": 19,
+          "coverage": "planilla"
+        },
+        {
+          "home": "S.A.G. Villa Ballester D",
+          "away": "Lanús C",
+          "home_goals": 27,
+          "away_goals": 22,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Escobar",
+          "away": "Municipalidad de Tres de Febrero B",
+          "home_goals": 38,
+          "away_goals": 23,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de San Martín (Ce.M.E.F)",
+          "away": "Atlanta",
+          "home_goals": 21,
+          "away_goals": 20,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Chacarita Juniors",
+          "away": "Juana Manso",
+          "home_goals": 26,
+          "away_goals": 35,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Vicente López C",
+          "away": "Municipalidad de Pilar",
+          "home_goals": 36,
+          "away_goals": 19,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 12,
+      "date": "2026-06-11",
+      "matches": [
+        {
+          "home": "Ituzaingó",
+          "away": "Municipalidad de Pilar",
+          "home_goals": 28,
+          "away_goals": 28,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Juana Manso",
+          "away": "Municipalidad de Vicente López C",
+          "home_goals": 32,
+          "away_goals": 18,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Atlanta",
+          "away": "Chacarita Juniors",
+          "home_goals": 17,
+          "away_goals": 17,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Tres de Febrero B",
+          "away": "Municipalidad de San Martín (Ce.M.E.F)",
+          "home_goals": 14,
+          "away_goals": 19,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Lanús C",
+          "away": "Municipalidad de Escobar",
+          "home_goals": 29,
+          "away_goals": 39,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Palermo Handball",
+          "away": "S.A.G. Villa Ballester D",
+          "home_goals": 20,
+          "away_goals": 30,
+          "coverage": "planilla"
+        },
+        {
+          "home": "S.A.G. Polvorines D",
+          "away": "A.E. Goethe B",
+          "home_goals": 20,
+          "away_goals": 28,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Racing Club B",
+          "away": "G.E.I. B",
+          "home_goals": 36,
+          "away_goals": 30,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 13,
+      "date": "2026-06-28",
+      "matches": [
+        {
+          "home": "G.E.I. B",
+          "away": "Ituzaingó",
+          "home_goals": 34,
+          "away_goals": 24,
+          "coverage": "planilla"
+        },
+        {
+          "home": "A.E. Goethe B",
+          "away": "Racing Club B",
+          "home_goals": 27,
+          "away_goals": 24,
+          "coverage": "planilla"
+        },
+        {
+          "home": "S.A.G. Villa Ballester D",
+          "away": "S.A.G. Polvorines D",
+          "home_goals": 30,
+          "away_goals": 20,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Escobar",
+          "away": "Palermo Handball",
+          "home_goals": 24,
+          "away_goals": 22,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de San Martín (Ce.M.E.F)",
+          "away": "Lanús C",
+          "home_goals": 25,
+          "away_goals": 28,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Chacarita Juniors",
+          "away": "Municipalidad de Tres de Febrero B",
+          "home_goals": 35,
+          "away_goals": 22,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Vicente López C",
+          "away": "Atlanta",
+          "home_goals": 26,
+          "away_goals": 25,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Pilar",
+          "away": "Juana Manso",
+          "home_goals": 24,
+          "away_goals": 30,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 14,
+      "date": "2026-07-05",
+      "matches": [
+        {
+          "home": "Ituzaingó",
+          "away": "Juana Manso",
+          "home_goals": 25,
+          "away_goals": 27,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Atlanta",
+          "away": "Municipalidad de Pilar",
+          "home_goals": 16,
+          "away_goals": 17,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Tres de Febrero B",
+          "away": "Municipalidad de Vicente López C",
+          "home_goals": 16,
+          "away_goals": 31,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Lanús C",
+          "away": "Chacarita Juniors",
+          "home_goals": 27,
+          "away_goals": 29,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Palermo Handball",
+          "away": "Municipalidad de San Martín (Ce.M.E.F)",
+          "home_goals": 24,
+          "away_goals": 25,
+          "coverage": "planilla"
+        },
+        {
+          "home": "S.A.G. Polvorines D",
+          "away": "Municipalidad de Escobar",
+          "home_goals": 25,
+          "away_goals": 36,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Racing Club B",
+          "away": "S.A.G. Villa Ballester D",
+          "home_goals": 17,
+          "away_goals": 31,
+          "coverage": "planilla"
+        },
+        {
+          "home": "G.E.I. B",
+          "away": "A.E. Goethe B",
+          "home_goals": 26,
+          "away_goals": 33,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 15,
+      "date": "2026-07-12",
+      "matches": [
+        {
+          "home": "A.E. Goethe B",
+          "away": "Ituzaingó",
+          "home_goals": 33,
+          "away_goals": 20,
+          "coverage": "planilla"
+        },
+        {
+          "home": "S.A.G. Villa Ballester D",
+          "away": "G.E.I. B",
+          "home_goals": 33,
+          "away_goals": 10,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Escobar",
+          "away": "Racing Club B",
+          "home_goals": 30,
+          "away_goals": 22,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de San Martín (Ce.M.E.F)",
+          "away": "S.A.G. Polvorines D",
+          "home_goals": 28,
+          "away_goals": 24,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Chacarita Juniors",
+          "away": "Palermo Handball",
+          "home_goals": 30,
+          "away_goals": 23,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Vicente López C",
+          "away": "Lanús C",
+          "home_goals": 21,
+          "away_goals": 20,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Pilar",
+          "away": "Municipalidad de Tres de Febrero B",
+          "home_goals": 22,
+          "away_goals": 24,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Juana Manso",
+          "away": "Atlanta",
+          "home_goals": 36,
+          "away_goals": 25,
+          "coverage": "planilla"
+        }
+      ]
+    }
+  ],
+  "insights": {
+    "matches_counted": 120,
+    "suspended_matches": 1,
+    "clubs": [
+      {
+        "club": "A.E. Goethe B",
+        "played": 15,
+        "won": 14,
+        "drawn": 1,
+        "lost": 0,
+        "points": 44,
+        "max_points": 45,
+        "points_effectiveness": 0.978,
+        "win_rate": 0.933,
+        "goals_for": 431,
+        "goals_against": 308,
+        "goal_difference": 123,
+        "goals_for_per_game": 28.73,
+        "goals_against_per_game": 20.53,
+        "home": {
+          "played": 8,
+          "points": 24,
+          "max_points": 24,
+          "points_effectiveness": 1.0,
+          "goals_for_per_game": 29.88,
+          "goals_against_per_game": 21.38
+        },
+        "away": {
+          "played": 7,
+          "points": 20,
+          "max_points": 21,
+          "points_effectiveness": 0.952,
+          "goals_for_per_game": 27.43,
+          "goals_against_per_game": 19.57
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 11,
+            "from_round": 5,
+            "to_round": 15
+          },
+          "longest_unbeaten": {
+            "length": 15,
+            "from_round": 1,
+            "to_round": 15
+          },
+          "longest_loss": {
+            "length": 0,
+            "from_round": null,
+            "to_round": null
+          },
+          "current_unbeaten": {
+            "length": 15,
+            "from_round": 1,
+            "to_round": 15
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "G",
+            "G",
+            "G",
+            "G",
+            "G"
+          ],
+          "points": 15,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 4,
+            "points": 11,
+            "max_points": 12,
+            "points_effectiveness": 0.917
+          },
+          "middle": {
+            "played": 6,
+            "points": 18,
+            "max_points": 18,
+            "points_effectiveness": 1.0
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 15,
+            "max_points": 15,
+            "points_effectiveness": 1.0
+          }
+        },
+        "biggest_win": {
+          "round": 8,
+          "opponent": "Atlanta",
+          "location": "away",
+          "goals_for": 35,
+          "goals_against": 17,
+          "margin": 18
+        },
+        "biggest_loss": null
+      },
+      {
+        "club": "S.A.G. Villa Ballester D",
+        "played": 15,
+        "won": 13,
+        "drawn": 1,
+        "lost": 1,
+        "points": 42,
+        "max_points": 45,
+        "points_effectiveness": 0.933,
+        "win_rate": 0.867,
+        "goals_for": 412,
+        "goals_against": 292,
+        "goal_difference": 120,
+        "goals_for_per_game": 27.47,
+        "goals_against_per_game": 19.47,
+        "home": {
+          "played": 7,
+          "points": 21,
+          "max_points": 21,
+          "points_effectiveness": 1.0,
+          "goals_for_per_game": 28.43,
+          "goals_against_per_game": 19.0
+        },
+        "away": {
+          "played": 8,
+          "points": 21,
+          "max_points": 24,
+          "points_effectiveness": 0.875,
+          "goals_for_per_game": 26.62,
+          "goals_against_per_game": 19.88
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 11,
+            "from_round": 5,
+            "to_round": 15
+          },
+          "longest_unbeaten": {
+            "length": 14,
+            "from_round": 2,
+            "to_round": 15
+          },
+          "longest_loss": {
+            "length": 1,
+            "from_round": 1,
+            "to_round": 1
+          },
+          "current_unbeaten": {
+            "length": 14,
+            "from_round": 2,
+            "to_round": 15
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "G",
+            "G",
+            "G",
+            "G",
+            "G"
+          ],
+          "points": 15,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 4,
+            "points": 10,
+            "max_points": 12,
+            "points_effectiveness": 0.833
+          },
+          "middle": {
+            "played": 6,
+            "points": 17,
+            "max_points": 18,
+            "points_effectiveness": 0.944
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 15,
+            "max_points": 15,
+            "points_effectiveness": 1.0
+          }
+        },
+        "biggest_win": {
+          "round": 15,
+          "opponent": "G.E.I. B",
+          "location": "home",
+          "goals_for": 33,
+          "goals_against": 10,
+          "margin": 23
+        },
+        "biggest_loss": {
+          "round": 1,
+          "opponent": "A.E. Goethe B",
+          "location": "away",
+          "goals_for": 25,
+          "goals_against": 26,
+          "margin": -1
+        }
+      },
+      {
+        "club": "Municipalidad de Escobar",
+        "played": 15,
+        "won": 13,
+        "drawn": 0,
+        "lost": 2,
+        "points": 40,
+        "max_points": 45,
+        "points_effectiveness": 0.889,
+        "win_rate": 0.867,
+        "goals_for": 465,
+        "goals_against": 362,
+        "goal_difference": 103,
+        "goals_for_per_game": 31.0,
+        "goals_against_per_game": 24.13,
+        "home": {
+          "played": 7,
+          "points": 18,
+          "max_points": 21,
+          "points_effectiveness": 0.857,
+          "goals_for_per_game": 27.43,
+          "goals_against_per_game": 21.14
+        },
+        "away": {
+          "played": 8,
+          "points": 22,
+          "max_points": 24,
+          "points_effectiveness": 0.917,
+          "goals_for_per_game": 34.12,
+          "goals_against_per_game": 26.75
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 12,
+            "from_round": 4,
+            "to_round": 15
+          },
+          "longest_unbeaten": {
+            "length": 12,
+            "from_round": 4,
+            "to_round": 15
+          },
+          "longest_loss": {
+            "length": 2,
+            "from_round": 2,
+            "to_round": 3
+          },
+          "current_unbeaten": {
+            "length": 12,
+            "from_round": 4,
+            "to_round": 15
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "G",
+            "G",
+            "G",
+            "G",
+            "G"
+          ],
+          "points": 15,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 4,
+            "points": 7,
+            "max_points": 12,
+            "points_effectiveness": 0.583
+          },
+          "middle": {
+            "played": 6,
+            "points": 18,
+            "max_points": 18,
+            "points_effectiveness": 1.0
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 15,
+            "max_points": 15,
+            "points_effectiveness": 1.0
+          }
+        },
+        "biggest_win": {
+          "round": 5,
+          "opponent": "Municipalidad de San Martín (Ce.M.E.F)",
+          "location": "home",
+          "goals_for": 38,
+          "goals_against": 21,
+          "margin": 17
+        },
+        "biggest_loss": {
+          "round": 3,
+          "opponent": "S.A.G. Villa Ballester D",
+          "location": "away",
+          "goals_for": 26,
+          "goals_against": 27,
+          "margin": -1
+        }
+      },
+      {
+        "club": "Juana Manso",
+        "played": 15,
+        "won": 10,
+        "drawn": 0,
+        "lost": 5,
+        "points": 35,
+        "max_points": 45,
+        "points_effectiveness": 0.778,
+        "win_rate": 0.667,
+        "goals_for": 475,
+        "goals_against": 392,
+        "goal_difference": 83,
+        "goals_for_per_game": 31.67,
+        "goals_against_per_game": 26.13,
+        "home": {
+          "played": 7,
+          "points": 17,
+          "max_points": 21,
+          "points_effectiveness": 0.81,
+          "goals_for_per_game": 31.86,
+          "goals_against_per_game": 22.86
+        },
+        "away": {
+          "played": 8,
+          "points": 18,
+          "max_points": 24,
+          "points_effectiveness": 0.75,
+          "goals_for_per_game": 31.5,
+          "goals_against_per_game": 29.0
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 6,
+            "from_round": 10,
+            "to_round": 15
+          },
+          "longest_unbeaten": {
+            "length": 6,
+            "from_round": 10,
+            "to_round": 15
+          },
+          "longest_loss": {
+            "length": 3,
+            "from_round": 7,
+            "to_round": 9
+          },
+          "current_unbeaten": {
+            "length": 6,
+            "from_round": 10,
+            "to_round": 15
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "G",
+            "G",
+            "G",
+            "G",
+            "G"
+          ],
+          "points": 15,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 4,
+            "points": 6,
+            "max_points": 12,
+            "points_effectiveness": 0.5
+          },
+          "middle": {
+            "played": 6,
+            "points": 14,
+            "max_points": 18,
+            "points_effectiveness": 0.778
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 15,
+            "max_points": 15,
+            "points_effectiveness": 1.0
+          }
+        },
+        "biggest_win": {
+          "round": 10,
+          "opponent": "Municipalidad de San Martín (Ce.M.E.F)",
+          "location": "home",
+          "goals_for": 42,
+          "goals_against": 22,
+          "margin": 20
+        },
+        "biggest_loss": {
+          "round": 7,
+          "opponent": "A.E. Goethe B",
+          "location": "away",
+          "goals_for": 26,
+          "goals_against": 32,
+          "margin": -6
+        }
+      },
+      {
+        "club": "Chacarita Juniors",
+        "played": 15,
+        "won": 7,
+        "drawn": 3,
+        "lost": 5,
+        "points": 32,
+        "max_points": 45,
+        "points_effectiveness": 0.711,
+        "win_rate": 0.467,
+        "goals_for": 412,
+        "goals_against": 387,
+        "goal_difference": 25,
+        "goals_for_per_game": 27.47,
+        "goals_against_per_game": 25.8,
+        "home": {
+          "played": 7,
+          "points": 15,
+          "max_points": 21,
+          "points_effectiveness": 0.714,
+          "goals_for_per_game": 30.29,
+          "goals_against_per_game": 28.86
+        },
+        "away": {
+          "played": 8,
+          "points": 17,
+          "max_points": 24,
+          "points_effectiveness": 0.708,
+          "goals_for_per_game": 25.0,
+          "goals_against_per_game": 23.12
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 3,
+            "from_round": 13,
+            "to_round": 15
+          },
+          "longest_unbeaten": {
+            "length": 4,
+            "from_round": 12,
+            "to_round": 15
+          },
+          "longest_loss": {
+            "length": 2,
+            "from_round": 5,
+            "to_round": 6
+          },
+          "current_unbeaten": {
+            "length": 4,
+            "from_round": 12,
+            "to_round": 15
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "P",
+            "E",
+            "G",
+            "G",
+            "G"
+          ],
+          "points": 12,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 4,
+            "points": 5,
+            "max_points": 12,
+            "points_effectiveness": 0.417
+          },
+          "middle": {
+            "played": 6,
+            "points": 14,
+            "max_points": 18,
+            "points_effectiveness": 0.778
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 13,
+            "max_points": 15,
+            "points_effectiveness": 0.867
+          }
+        },
+        "biggest_win": {
+          "round": 13,
+          "opponent": "Municipalidad de Tres de Febrero B",
+          "location": "home",
+          "goals_for": 35,
+          "goals_against": 22,
+          "margin": 13
+        },
+        "biggest_loss": {
+          "round": 11,
+          "opponent": "Juana Manso",
+          "location": "home",
+          "goals_for": 26,
+          "goals_against": 35,
+          "margin": -9
+        }
+      },
+      {
+        "club": "Racing Club B",
+        "played": 15,
+        "won": 8,
+        "drawn": 1,
+        "lost": 6,
+        "points": 32,
+        "max_points": 45,
+        "points_effectiveness": 0.711,
+        "win_rate": 0.533,
+        "goals_for": 397,
+        "goals_against": 370,
+        "goal_difference": 27,
+        "goals_for_per_game": 26.47,
+        "goals_against_per_game": 24.67,
+        "home": {
+          "played": 8,
+          "points": 22,
+          "max_points": 24,
+          "points_effectiveness": 0.917,
+          "goals_for_per_game": 29.75,
+          "goals_against_per_game": 24.5
+        },
+        "away": {
+          "played": 7,
+          "points": 10,
+          "max_points": 21,
+          "points_effectiveness": 0.476,
+          "goals_for_per_game": 22.71,
+          "goals_against_per_game": 24.86
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 3,
+            "from_round": 3,
+            "to_round": 5
+          },
+          "longest_unbeaten": {
+            "length": 4,
+            "from_round": 9,
+            "to_round": 12
+          },
+          "longest_loss": {
+            "length": 3,
+            "from_round": 13,
+            "to_round": 15
+          },
+          "current_unbeaten": {
+            "length": 0,
+            "from_round": null,
+            "to_round": null
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "G",
+            "G",
+            "P",
+            "P",
+            "P"
+          ],
+          "points": 9,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 5,
+            "points": 7,
+            "max_points": 15,
+            "points_effectiveness": 0.467
+          },
+          "middle": {
+            "played": 5,
+            "points": 12,
+            "max_points": 15,
+            "points_effectiveness": 0.8
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 13,
+            "max_points": 15,
+            "points_effectiveness": 0.867
+          }
+        },
+        "biggest_win": {
+          "round": 9,
+          "opponent": "Palermo Handball",
+          "location": "home",
+          "goals_for": 38,
+          "goals_against": 22,
+          "margin": 16
+        },
+        "biggest_loss": {
+          "round": 14,
+          "opponent": "S.A.G. Villa Ballester D",
+          "location": "home",
+          "goals_for": 17,
+          "goals_against": 31,
+          "margin": -14
+        }
+      },
+      {
+        "club": "Atlanta",
+        "played": 15,
+        "won": 7,
+        "drawn": 1,
+        "lost": 7,
+        "points": 30,
+        "max_points": 45,
+        "points_effectiveness": 0.667,
+        "win_rate": 0.467,
+        "goals_for": 339,
+        "goals_against": 357,
+        "goal_difference": -18,
+        "goals_for_per_game": 22.6,
+        "goals_against_per_game": 23.8,
+        "home": {
+          "played": 8,
+          "points": 17,
+          "max_points": 24,
+          "points_effectiveness": 0.708,
+          "goals_for_per_game": 21.38,
+          "goals_against_per_game": 21.88
+        },
+        "away": {
+          "played": 7,
+          "points": 13,
+          "max_points": 21,
+          "points_effectiveness": 0.619,
+          "goals_for_per_game": 24.0,
+          "goals_against_per_game": 26.0
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 7,
+            "from_round": 1,
+            "to_round": 7
+          },
+          "longest_unbeaten": {
+            "length": 7,
+            "from_round": 1,
+            "to_round": 7
+          },
+          "longest_loss": {
+            "length": 4,
+            "from_round": 8,
+            "to_round": 11
+          },
+          "current_unbeaten": {
+            "length": 0,
+            "from_round": null,
+            "to_round": null
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "P",
+            "E",
+            "P",
+            "P",
+            "P"
+          ],
+          "points": 6,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 5,
+            "points": 6,
+            "max_points": 15,
+            "points_effectiveness": 0.4
+          },
+          "middle": {
+            "played": 5,
+            "points": 11,
+            "max_points": 15,
+            "points_effectiveness": 0.733
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 13,
+            "max_points": 15,
+            "points_effectiveness": 0.867
+          }
+        },
+        "biggest_win": {
+          "round": 1,
+          "opponent": "Ituzaingó",
+          "location": "home",
+          "goals_for": 30,
+          "goals_against": 21,
+          "margin": 9
+        },
+        "biggest_loss": {
+          "round": 8,
+          "opponent": "A.E. Goethe B",
+          "location": "home",
+          "goals_for": 17,
+          "goals_against": 35,
+          "margin": -18
+        }
+      },
+      {
+        "club": "G.E.I. B",
+        "played": 15,
+        "won": 7,
+        "drawn": 0,
+        "lost": 8,
+        "points": 29,
+        "max_points": 45,
+        "points_effectiveness": 0.644,
+        "win_rate": 0.467,
+        "goals_for": 375,
+        "goals_against": 415,
+        "goal_difference": -40,
+        "goals_for_per_game": 25.0,
+        "goals_against_per_game": 27.67,
+        "home": {
+          "played": 8,
+          "points": 16,
+          "max_points": 24,
+          "points_effectiveness": 0.667,
+          "goals_for_per_game": 27.5,
+          "goals_against_per_game": 27.0
+        },
+        "away": {
+          "played": 7,
+          "points": 13,
+          "max_points": 21,
+          "points_effectiveness": 0.619,
+          "goals_for_per_game": 22.14,
+          "goals_against_per_game": 28.43
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 4,
+            "from_round": 2,
+            "to_round": 5
+          },
+          "longest_unbeaten": {
+            "length": 4,
+            "from_round": 2,
+            "to_round": 5
+          },
+          "longest_loss": {
+            "length": 2,
+            "from_round": 6,
+            "to_round": 7
+          },
+          "current_unbeaten": {
+            "length": 0,
+            "from_round": null,
+            "to_round": null
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "G",
+            "P",
+            "G",
+            "P",
+            "P"
+          ],
+          "points": 9,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 5,
+            "points": 7,
+            "max_points": 15,
+            "points_effectiveness": 0.467
+          },
+          "middle": {
+            "played": 5,
+            "points": 11,
+            "max_points": 15,
+            "points_effectiveness": 0.733
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 11,
+            "max_points": 15,
+            "points_effectiveness": 0.733
+          }
+        },
+        "biggest_win": {
+          "round": 5,
+          "opponent": "Municipalidad de Pilar",
+          "location": "home",
+          "goals_for": 30,
+          "goals_against": 15,
+          "margin": 15
+        },
+        "biggest_loss": {
+          "round": 15,
+          "opponent": "S.A.G. Villa Ballester D",
+          "location": "away",
+          "goals_for": 10,
+          "goals_against": 33,
+          "margin": -23
+        }
+      },
+      {
+        "club": "Municipalidad de San Martín (Ce.M.E.F)",
+        "played": 15,
+        "won": 6,
+        "drawn": 1,
+        "lost": 8,
+        "points": 28,
+        "max_points": 45,
+        "points_effectiveness": 0.622,
+        "win_rate": 0.4,
+        "goals_for": 339,
+        "goals_against": 382,
+        "goal_difference": -43,
+        "goals_for_per_game": 22.6,
+        "goals_against_per_game": 25.47,
+        "home": {
+          "played": 7,
+          "points": 14,
+          "max_points": 21,
+          "points_effectiveness": 0.667,
+          "goals_for_per_game": 23.57,
+          "goals_against_per_game": 24.29
+        },
+        "away": {
+          "played": 8,
+          "points": 14,
+          "max_points": 24,
+          "points_effectiveness": 0.583,
+          "goals_for_per_game": 21.75,
+          "goals_against_per_game": 26.5
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 2,
+            "from_round": 8,
+            "to_round": 9
+          },
+          "longest_unbeaten": {
+            "length": 2,
+            "from_round": 8,
+            "to_round": 9
+          },
+          "longest_loss": {
+            "length": 3,
+            "from_round": 1,
+            "to_round": 3
+          },
+          "current_unbeaten": {
+            "length": 2,
+            "from_round": 14,
+            "to_round": 15
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "G",
+            "G",
+            "P",
+            "G",
+            "G"
+          ],
+          "points": 13,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 5,
+            "points": 6,
+            "max_points": 15,
+            "points_effectiveness": 0.4
+          },
+          "middle": {
+            "played": 5,
+            "points": 11,
+            "max_points": 15,
+            "points_effectiveness": 0.733
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 11,
+            "max_points": 15,
+            "points_effectiveness": 0.733
+          }
+        },
+        "biggest_win": {
+          "round": 8,
+          "opponent": "Municipalidad de Vicente López C",
+          "location": "away",
+          "goals_for": 32,
+          "goals_against": 18,
+          "margin": 14
+        },
+        "biggest_loss": {
+          "round": 10,
+          "opponent": "Juana Manso",
+          "location": "away",
+          "goals_for": 22,
+          "goals_against": 42,
+          "margin": -20
+        }
+      },
+      {
+        "club": "S.A.G. Polvorines D",
+        "played": 15,
+        "won": 5,
+        "drawn": 2,
+        "lost": 8,
+        "points": 27,
+        "max_points": 45,
+        "points_effectiveness": 0.6,
+        "win_rate": 0.333,
+        "goals_for": 357,
+        "goals_against": 394,
+        "goal_difference": -37,
+        "goals_for_per_game": 23.8,
+        "goals_against_per_game": 26.27,
+        "home": {
+          "played": 8,
+          "points": 14,
+          "max_points": 24,
+          "points_effectiveness": 0.583,
+          "goals_for_per_game": 23.62,
+          "goals_against_per_game": 26.5
+        },
+        "away": {
+          "played": 7,
+          "points": 13,
+          "max_points": 21,
+          "points_effectiveness": 0.619,
+          "goals_for_per_game": 24.0,
+          "goals_against_per_game": 26.0
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 3,
+            "from_round": 2,
+            "to_round": 4
+          },
+          "longest_unbeaten": {
+            "length": 3,
+            "from_round": 2,
+            "to_round": 4
+          },
+          "longest_loss": {
+            "length": 5,
+            "from_round": 11,
+            "to_round": 15
+          },
+          "current_unbeaten": {
+            "length": 0,
+            "from_round": null,
+            "to_round": null
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ],
+          "points": 5,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 5,
+            "points": 7,
+            "max_points": 15,
+            "points_effectiveness": 0.467
+          },
+          "middle": {
+            "played": 5,
+            "points": 8,
+            "max_points": 15,
+            "points_effectiveness": 0.533
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 12,
+            "max_points": 15,
+            "points_effectiveness": 0.8
+          }
+        },
+        "biggest_win": {
+          "round": 3,
+          "opponent": "Municipalidad de Pilar",
+          "location": "home",
+          "goals_for": 26,
+          "goals_against": 20,
+          "margin": 6
+        },
+        "biggest_loss": {
+          "round": 14,
+          "opponent": "Municipalidad de Escobar",
+          "location": "home",
+          "goals_for": 25,
+          "goals_against": 36,
+          "margin": -11
+        }
+      },
+      {
+        "club": "Municipalidad de Vicente López C",
+        "played": 15,
+        "won": 5,
+        "drawn": 1,
+        "lost": 9,
+        "points": 26,
+        "max_points": 45,
+        "points_effectiveness": 0.578,
+        "win_rate": 0.333,
+        "goals_for": 369,
+        "goals_against": 393,
+        "goal_difference": -24,
+        "goals_for_per_game": 24.6,
+        "goals_against_per_game": 26.2,
+        "home": {
+          "played": 7,
+          "points": 13,
+          "max_points": 21,
+          "points_effectiveness": 0.619,
+          "goals_for_per_game": 22.71,
+          "goals_against_per_game": 24.29
+        },
+        "away": {
+          "played": 8,
+          "points": 13,
+          "max_points": 24,
+          "points_effectiveness": 0.542,
+          "goals_for_per_game": 26.25,
+          "goals_against_per_game": 27.88
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 3,
+            "from_round": 13,
+            "to_round": 15
+          },
+          "longest_unbeaten": {
+            "length": 3,
+            "from_round": 13,
+            "to_round": 15
+          },
+          "longest_loss": {
+            "length": 7,
+            "from_round": 2,
+            "to_round": 8
+          },
+          "current_unbeaten": {
+            "length": 3,
+            "from_round": 13,
+            "to_round": 15
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "G",
+            "P",
+            "G",
+            "G",
+            "G"
+          ],
+          "points": 13,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 5,
+            "points": 6,
+            "max_points": 15,
+            "points_effectiveness": 0.4
+          },
+          "middle": {
+            "played": 5,
+            "points": 7,
+            "max_points": 15,
+            "points_effectiveness": 0.467
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 13,
+            "max_points": 15,
+            "points_effectiveness": 0.867
+          }
+        },
+        "biggest_win": {
+          "round": 11,
+          "opponent": "Municipalidad de Pilar",
+          "location": "home",
+          "goals_for": 36,
+          "goals_against": 19,
+          "margin": 17
+        },
+        "biggest_loss": {
+          "round": 8,
+          "opponent": "Municipalidad de San Martín (Ce.M.E.F)",
+          "location": "home",
+          "goals_for": 18,
+          "goals_against": 32,
+          "margin": -14
+        }
+      },
+      {
+        "club": "Palermo Handball",
+        "played": 15,
+        "won": 5,
+        "drawn": 0,
+        "lost": 10,
+        "points": 25,
+        "max_points": 45,
+        "points_effectiveness": 0.556,
+        "win_rate": 0.333,
+        "goals_for": 372,
+        "goals_against": 401,
+        "goal_difference": -29,
+        "goals_for_per_game": 24.8,
+        "goals_against_per_game": 26.73,
+        "home": {
+          "played": 8,
+          "points": 14,
+          "max_points": 24,
+          "points_effectiveness": 0.583,
+          "goals_for_per_game": 27.0,
+          "goals_against_per_game": 26.88
+        },
+        "away": {
+          "played": 7,
+          "points": 11,
+          "max_points": 21,
+          "points_effectiveness": 0.524,
+          "goals_for_per_game": 22.29,
+          "goals_against_per_game": 26.57
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 2,
+            "from_round": 5,
+            "to_round": 6
+          },
+          "longest_unbeaten": {
+            "length": 2,
+            "from_round": 5,
+            "to_round": 6
+          },
+          "longest_loss": {
+            "length": 5,
+            "from_round": 11,
+            "to_round": 15
+          },
+          "current_unbeaten": {
+            "length": 0,
+            "from_round": null,
+            "to_round": null
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ],
+          "points": 5,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 5,
+            "points": 5,
+            "max_points": 15,
+            "points_effectiveness": 0.333
+          },
+          "middle": {
+            "played": 6,
+            "points": 10,
+            "max_points": 18,
+            "points_effectiveness": 0.556
+          },
+          "bottom_five": {
+            "played": 4,
+            "points": 10,
+            "max_points": 12,
+            "points_effectiveness": 0.833
+          }
+        },
+        "biggest_win": {
+          "round": 10,
+          "opponent": "G.E.I. B",
+          "location": "home",
+          "goals_for": 37,
+          "goals_against": 23,
+          "margin": 14
+        },
+        "biggest_loss": {
+          "round": 9,
+          "opponent": "Racing Club B",
+          "location": "away",
+          "goals_for": 22,
+          "goals_against": 38,
+          "margin": -16
+        }
+      },
+      {
+        "club": "Lanús C",
+        "played": 15,
+        "won": 4,
+        "drawn": 0,
+        "lost": 11,
+        "points": 23,
+        "max_points": 45,
+        "points_effectiveness": 0.511,
+        "win_rate": 0.267,
+        "goals_for": 380,
+        "goals_against": 410,
+        "goal_difference": -30,
+        "goals_for_per_game": 25.33,
+        "goals_against_per_game": 27.33,
+        "home": {
+          "played": 8,
+          "points": 12,
+          "max_points": 24,
+          "points_effectiveness": 0.5,
+          "goals_for_per_game": 25.5,
+          "goals_against_per_game": 27.12
+        },
+        "away": {
+          "played": 7,
+          "points": 11,
+          "max_points": 21,
+          "points_effectiveness": 0.524,
+          "goals_for_per_game": 25.14,
+          "goals_against_per_game": 27.57
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 2,
+            "from_round": 8,
+            "to_round": 9
+          },
+          "longest_unbeaten": {
+            "length": 2,
+            "from_round": 8,
+            "to_round": 9
+          },
+          "longest_loss": {
+            "length": 4,
+            "from_round": 1,
+            "to_round": 4
+          },
+          "current_unbeaten": {
+            "length": 0,
+            "from_round": null,
+            "to_round": null
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "P",
+            "P",
+            "G",
+            "P",
+            "P"
+          ],
+          "points": 7,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 5,
+            "points": 5,
+            "max_points": 15,
+            "points_effectiveness": 0.333
+          },
+          "middle": {
+            "played": 6,
+            "points": 12,
+            "max_points": 18,
+            "points_effectiveness": 0.667
+          },
+          "bottom_five": {
+            "played": 4,
+            "points": 6,
+            "max_points": 12,
+            "points_effectiveness": 0.5
+          }
+        },
+        "biggest_win": {
+          "round": 5,
+          "opponent": "Ituzaingó",
+          "location": "home",
+          "goals_for": 30,
+          "goals_against": 19,
+          "margin": 11
+        },
+        "biggest_loss": {
+          "round": 2,
+          "opponent": "Juana Manso",
+          "location": "away",
+          "goals_for": 22,
+          "goals_against": 34,
+          "margin": -12
+        }
+      },
+      {
+        "club": "Ituzaingó",
+        "played": 15,
+        "won": 3,
+        "drawn": 2,
+        "lost": 10,
+        "points": 23,
+        "max_points": 45,
+        "points_effectiveness": 0.511,
+        "win_rate": 0.2,
+        "goals_for": 365,
+        "goals_against": 432,
+        "goal_difference": -67,
+        "goals_for_per_game": 24.33,
+        "goals_against_per_game": 28.8,
+        "home": {
+          "played": 7,
+          "points": 12,
+          "max_points": 21,
+          "points_effectiveness": 0.571,
+          "goals_for_per_game": 26.0,
+          "goals_against_per_game": 28.29
+        },
+        "away": {
+          "played": 8,
+          "points": 11,
+          "max_points": 24,
+          "points_effectiveness": 0.458,
+          "goals_for_per_game": 22.88,
+          "goals_against_per_game": 29.25
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 2,
+            "from_round": 6,
+            "to_round": 7
+          },
+          "longest_unbeaten": {
+            "length": 2,
+            "from_round": 6,
+            "to_round": 7
+          },
+          "longest_loss": {
+            "length": 5,
+            "from_round": 1,
+            "to_round": 5
+          },
+          "current_unbeaten": {
+            "length": 0,
+            "from_round": null,
+            "to_round": null
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "P",
+            "E",
+            "P",
+            "P",
+            "P"
+          ],
+          "points": 6,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 5,
+            "points": 5,
+            "max_points": 15,
+            "points_effectiveness": 0.333
+          },
+          "middle": {
+            "played": 6,
+            "points": 11,
+            "max_points": 18,
+            "points_effectiveness": 0.611
+          },
+          "bottom_five": {
+            "played": 4,
+            "points": 7,
+            "max_points": 12,
+            "points_effectiveness": 0.583
+          }
+        },
+        "biggest_win": {
+          "round": 6,
+          "opponent": "Municipalidad de San Martín (Ce.M.E.F)",
+          "location": "home",
+          "goals_for": 27,
+          "goals_against": 25,
+          "margin": 2
+        },
+        "biggest_loss": {
+          "round": 15,
+          "opponent": "A.E. Goethe B",
+          "location": "away",
+          "goals_for": 20,
+          "goals_against": 33,
+          "margin": -13
+        }
+      },
+      {
+        "club": "Municipalidad de Pilar",
+        "played": 15,
+        "won": 3,
+        "drawn": 1,
+        "lost": 11,
+        "points": 22,
+        "max_points": 45,
+        "points_effectiveness": 0.489,
+        "win_rate": 0.2,
+        "goals_for": 321,
+        "goals_against": 411,
+        "goal_difference": -90,
+        "goals_for_per_game": 21.4,
+        "goals_against_per_game": 27.4,
+        "home": {
+          "played": 7,
+          "points": 9,
+          "max_points": 21,
+          "points_effectiveness": 0.429,
+          "goals_for_per_game": 22.29,
+          "goals_against_per_game": 27.71
+        },
+        "away": {
+          "played": 8,
+          "points": 13,
+          "max_points": 24,
+          "points_effectiveness": 0.542,
+          "goals_for_per_game": 20.62,
+          "goals_against_per_game": 27.12
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 1,
+            "from_round": 1,
+            "to_round": 1
+          },
+          "longest_unbeaten": {
+            "length": 1,
+            "from_round": 1,
+            "to_round": 1
+          },
+          "longest_loss": {
+            "length": 8,
+            "from_round": 2,
+            "to_round": 9
+          },
+          "current_unbeaten": {
+            "length": 0,
+            "from_round": null,
+            "to_round": null
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "P",
+            "E",
+            "P",
+            "G",
+            "P"
+          ],
+          "points": 8,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 5,
+            "points": 7,
+            "max_points": 15,
+            "points_effectiveness": 0.467
+          },
+          "middle": {
+            "played": 6,
+            "points": 8,
+            "max_points": 18,
+            "points_effectiveness": 0.444
+          },
+          "bottom_five": {
+            "played": 4,
+            "points": 7,
+            "max_points": 12,
+            "points_effectiveness": 0.583
+          }
+        },
+        "biggest_win": {
+          "round": 10,
+          "opponent": "Chacarita Juniors",
+          "location": "home",
+          "goals_for": 29,
+          "goals_against": 21,
+          "margin": 8
+        },
+        "biggest_loss": {
+          "round": 11,
+          "opponent": "Municipalidad de Vicente López C",
+          "location": "away",
+          "goals_for": 19,
+          "goals_against": 36,
+          "margin": -17
+        }
+      },
+      {
+        "club": "Municipalidad de Tres de Febrero B",
+        "played": 15,
+        "won": 3,
+        "drawn": 0,
+        "lost": 12,
+        "points": 21,
+        "max_points": 45,
+        "points_effectiveness": 0.467,
+        "win_rate": 0.2,
+        "goals_for": 319,
+        "goals_against": 422,
+        "goal_difference": -103,
+        "goals_for_per_game": 21.27,
+        "goals_against_per_game": 28.13,
+        "home": {
+          "played": 8,
+          "points": 12,
+          "max_points": 24,
+          "points_effectiveness": 0.5,
+          "goals_for_per_game": 21.62,
+          "goals_against_per_game": 26.62
+        },
+        "away": {
+          "played": 7,
+          "points": 9,
+          "max_points": 21,
+          "points_effectiveness": 0.429,
+          "goals_for_per_game": 20.86,
+          "goals_against_per_game": 29.86
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 2,
+            "from_round": 3,
+            "to_round": 4
+          },
+          "longest_unbeaten": {
+            "length": 2,
+            "from_round": 3,
+            "to_round": 4
+          },
+          "longest_loss": {
+            "length": 10,
+            "from_round": 5,
+            "to_round": 14
+          },
+          "current_unbeaten": {
+            "length": 1,
+            "from_round": 15,
+            "to_round": 15
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "G"
+          ],
+          "points": 7,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 5,
+            "points": 5,
+            "max_points": 15,
+            "points_effectiveness": 0.333
+          },
+          "middle": {
+            "played": 6,
+            "points": 6,
+            "max_points": 18,
+            "points_effectiveness": 0.333
+          },
+          "bottom_five": {
+            "played": 4,
+            "points": 10,
+            "max_points": 12,
+            "points_effectiveness": 0.833
+          }
+        },
+        "biggest_win": {
+          "round": 4,
+          "opponent": "Lanús C",
+          "location": "home",
+          "goals_for": 32,
+          "goals_against": 24,
+          "margin": 8
+        },
+        "biggest_loss": {
+          "round": 9,
+          "opponent": "A.E. Goethe B",
+          "location": "away",
+          "goals_for": 18,
+          "goals_against": 34,
+          "margin": -16
+        }
+      }
+    ],
+    "records": [
+      {
+        "key": "longest_unbeaten",
+        "label": "Mayor racha sin perder",
+        "club": "A.E. Goethe B",
+        "value": 15,
+        "unit": "partidos",
+        "detail": "Fechas 1 a 15"
+      },
+      {
+        "key": "longest_win",
+        "label": "Mayor racha de victorias",
+        "club": "Municipalidad de Escobar",
+        "value": 12,
+        "unit": "partidos",
+        "detail": "Fechas 4 a 15"
+      },
+      {
+        "key": "longest_loss",
+        "label": "Mayor racha de derrotas",
+        "club": "Municipalidad de Tres de Febrero B",
+        "value": 10,
+        "unit": "partidos",
+        "detail": "Fechas 5 a 14"
+      },
+      {
+        "key": "best_attack",
+        "label": "Mayor promedio de goles a favor",
+        "club": "Juana Manso",
+        "value": 31.67,
+        "unit": "goles por partido",
+        "detail": "475 goles en 15 partidos"
+      },
+      {
+        "key": "best_defense",
+        "label": "Menor promedio de goles en contra",
+        "club": "S.A.G. Villa Ballester D",
+        "value": 19.47,
+        "unit": "goles por partido",
+        "detail": "292 goles en contra en 15 partidos"
+      },
+      {
+        "key": "best_home",
+        "label": "Mejor efectividad como local",
+        "club": "A.E. Goethe B",
+        "value": 1.0,
+        "unit": "de los puntos",
+        "detail": "24 de 24 puntos como local"
+      },
+      {
+        "key": "best_away",
+        "label": "Mejor efectividad como visitante",
+        "club": "A.E. Goethe B",
+        "value": 0.952,
+        "unit": "de los puntos",
+        "detail": "20 de 21 puntos como visitante"
+      },
+      {
+        "key": "best_form",
+        "label": "Mejor presente en los últimos 5",
+        "club": "S.A.G. Villa Ballester D",
+        "value": 15,
+        "unit": "puntos",
+        "detail": "GGGGG"
+      },
+      {
+        "key": "perfect_vs_bottom_five",
+        "label": "Sin ceder puntos con los cinco últimos",
+        "clubs": [
+          "A.E. Goethe B",
+          "S.A.G. Villa Ballester D",
+          "Municipalidad de Escobar",
+          "Juana Manso"
+        ],
+        "value": 4,
+        "unit": "equipos",
+        "detail": "Puntaje ideal contra el grupo inferior de la tabla"
+      }
+    ]
+  }
+}

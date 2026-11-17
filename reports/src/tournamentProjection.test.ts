@@ -54,4 +54,50 @@ describe('decodePublicTournament', () => {
     expect(decodePublicTournament(projected).forecast?.fixtures[0].home).toBe('S.A.P.A.')
     expect(decodePublicTournament(projected).forecast?.teams[0].campaign[0].result).toBe('win')
   })
+
+  it('decodes podium probabilities and the points rule when present', () => {
+    const projected = {
+      ...valid,
+      schema_version: 'tournament-v2',
+      forecast: {
+        simulations: 20000,
+        methodology: 'Estimate only.',
+        points_rule: { win: 3, draw: 2, loss: 1, suspended_win: 3, suspended_loss: 0 },
+        teams: [{
+          club: 'S.A.P.A.',
+          champion_probability: 0.04,
+          finish_probabilities: { first: 0.04, second: 0.2, third: 0.4 },
+          podium_probability: 0.64,
+          expected_position: 3.08,
+          campaign: [],
+        }],
+        fixtures: [],
+      },
+    }
+
+    const decoded = decodePublicTournament(projected)
+    expect(decoded.forecast?.points_rule?.win).toBe(3)
+    expect(decoded.forecast?.teams[0].finish_probabilities?.third).toBe(0.4)
+    expect(decoded.forecast?.teams[0].podium_probability).toBe(0.64)
+    expect(decoded.forecast?.teams[0].expected_position).toBe(3.08)
+  })
+
+  it('rejects a restricted field inside the podium block', () => {
+    const poisoned = {
+      ...valid,
+      schema_version: 'tournament-v2',
+      forecast: {
+        simulations: 20000,
+        methodology: 'Estimate only.',
+        teams: [{
+          club: 'S.A.P.A.',
+          champion_probability: 0.04,
+          finish_probabilities: { first: 0.04, second: 0.2, third: 0.4, raw_payload: 'x' },
+          campaign: [],
+        }],
+        fixtures: [],
+      },
+    }
+    expect(() => decodePublicTournament(poisoned)).toThrow(/restricted field/)
+  })
 })

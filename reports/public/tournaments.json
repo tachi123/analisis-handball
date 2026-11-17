@@ -1,0 +1,100 @@
+{
+  "schema_version": "tournaments-v1",
+  "generated_at": "2026-11-17",
+  "tournaments": [
+    {
+      "key": "permanencia-2026",
+      "label": "Permanencia 2026",
+      "competition": "Permanencia 2026",
+      "zone": null,
+      "season": 2026,
+      "status": "in_progress",
+      "coverage": {
+        "matches_total": 120,
+        "matches_counted": 111,
+        "planillas_confirmed": 110,
+        "reported_only": 0,
+        "suspended": 1,
+        "pending": 9,
+        "rounds_played": 14,
+        "rounds_total": 15,
+        "status": "partial",
+        "label": "111 de 120 partidos con resultado · 110 planillas confirmadas · 1 suspendido · no reemplaza la tabla oficial de FEMEBAL."
+      },
+      "updated_at": "2026-11-17",
+      "file": "tournament_permanencia-2026.json",
+      "forecast_file": "forecast_permanencia-2026.json",
+      "summary": {
+        "sapa": {
+          "position": 3,
+          "points": 35,
+          "played": 14
+        }
+      },
+      "next_match": {
+        "round": 15,
+        "date": "2026-11-22",
+        "opponent": "Lanús C",
+        "location": "away"
+      }
+    },
+    {
+      "key": "apertura-zona-a-2026",
+      "label": "Apertura 2026 · Zona A",
+      "competition": "Apertura 2026",
+      "zone": "A",
+      "season": 2026,
+      "status": "finished",
+      "coverage": {
+        "matches_total": 120,
+        "matches_counted": 120,
+        "planillas_confirmed": 116,
+        "reported_only": 4,
+        "suspended": 0,
+        "pending": 0,
+        "rounds_played": 15,
+        "rounds_total": 15,
+        "status": "complete",
+        "label": "120 de 120 partidos con resultado · 116 planillas confirmadas · no reemplaza la tabla oficial de FEMEBAL."
+      },
+      "updated_at": "2026-11-17",
+      "file": "tournament_apertura-zona-a-2026.json",
+      "forecast_file": null,
+      "summary": {
+        "sapa": {
+          "position": 16,
+          "points": 18,
+          "played": 15
+        }
+      },
+      "next_match": null
+    },
+    {
+      "key": "apertura-zona-b-2026",
+      "label": "Apertura 2026 · Zona B",
+      "competition": "Apertura 2026",
+      "zone": "B",
+      "season": 2026,
+      "status": "finished",
+      "coverage": {
+        "matches_total": 120,
+        "matches_counted": 120,
+        "planillas_confirmed": 119,
+        "reported_only": 0,
+        "suspended": 1,
+        "pending": 0,
+        "rounds_played": 15,
+        "rounds_total": 15,
+        "status": "complete",
+        "label": "120 de 120 partidos con resultado · 119 planillas confirmadas · 1 suspendido · no reemplaza la tabla oficial de FEMEBAL."
+      },
+      "updated_at": "2026-11-17",
+      "file": "tournament_apertura-zona-b-2026.json",
+      "forecast_file": null,
+      "summary": {
+        "sapa": null
+      },
+      "next_match": null
+    }
+  ]
+}

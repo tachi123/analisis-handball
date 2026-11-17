@@ -1,0 +1,6880 @@
+{
+  "schema_version": "tournament-v3",
+  "public_key": "apertura-zona-a-2026",
+  "tournament": "Apertura Zona A 2026 3ªM",
+  "competition": "Apertura 2026",
+  "zone": "A",
+  "season": 2026,
+  "updated_at": "2026-11-17",
+  "coverage": {
+    "matches_total": 120,
+    "matches_counted": 120,
+    "planillas_confirmed": 116,
+    "reported_only": 4,
+    "suspended": 0,
+    "pending": 0,
+    "rounds_played": 15,
+    "rounds_total": 15,
+    "status": "complete",
+    "label": "120 de 120 partidos con resultado · 116 planillas confirmadas · no reemplaza la tabla oficial de FEMEBAL."
+  },
+  "points_rule": {
+    "win": 3,
+    "draw": 2,
+    "loss": 1,
+    "suspended_win": 3,
+    "suspended_loss": 0
+  },
+  "standings": [
+    {
+      "pos": 1,
+      "club": "San Telmo B",
+      "played": 15,
+      "won": 13,
+      "drawn": 1,
+      "lost": 1,
+      "penalized": 0,
+      "goals_for": 440,
+      "goals_against": 334,
+      "goal_difference": 106,
+      "points": 42
+    },
+    {
+      "pos": 2,
+      "club": "Villa Calzada",
+      "played": 15,
+      "won": 11,
+      "drawn": 3,
+      "lost": 1,
+      "penalized": 0,
+      "goals_for": 430,
+      "goals_against": 372,
+      "goal_difference": 58,
+      "points": 40
+    },
+    {
+      "pos": 3,
+      "club": "Municipalidad de Avellaneda",
+      "played": 15,
+      "won": 11,
+      "drawn": 1,
+      "lost": 3,
+      "penalized": 0,
+      "goals_for": 399,
+      "goals_against": 330,
+      "goal_difference": 69,
+      "points": 38
+    },
+    {
+      "pos": 4,
+      "club": "Deportivo Laferrere",
+      "played": 15,
+      "won": 11,
+      "drawn": 1,
+      "lost": 3,
+      "penalized": 0,
+      "goals_for": 522,
+      "goals_against": 447,
+      "goal_difference": 75,
+      "points": 38
+    },
+    {
+      "pos": 5,
+      "club": "Ci.De.Co. B",
+      "played": 15,
+      "won": 9,
+      "drawn": 2,
+      "lost": 4,
+      "penalized": 0,
+      "goals_for": 439,
+      "goals_against": 363,
+      "goal_difference": 76,
+      "points": 35
+    },
+    {
+      "pos": 6,
+      "club": "Temperley",
+      "played": 15,
+      "won": 8,
+      "drawn": 2,
+      "lost": 5,
+      "penalized": 0,
+      "goals_for": 438,
+      "goals_against": 416,
+      "goal_difference": 22,
+      "points": 33
+    },
+    {
+      "pos": 7,
+      "club": "Club Comunicaciones C",
+      "played": 15,
+      "won": 8,
+      "drawn": 2,
+      "lost": 5,
+      "penalized": 0,
+      "goals_for": 379,
+      "goals_against": 356,
+      "goal_difference": 23,
+      "points": 33
+    },
+    {
+      "pos": 8,
+      "club": "A.A.C.F. Quilmes C",
+      "played": 15,
+      "won": 7,
+      "drawn": 2,
+      "lost": 6,
+      "penalized": 0,
+      "goals_for": 462,
+      "goals_against": 428,
+      "goal_difference": 34,
+      "points": 31
+    },
+    {
+      "pos": 9,
+      "club": "Argentinos Juniors D",
+      "played": 15,
+      "won": 6,
+      "drawn": 1,
+      "lost": 8,
+      "penalized": 0,
+      "goals_for": 403,
+      "goals_against": 429,
+      "goal_difference": -26,
+      "points": 28
+    },
+    {
+      "pos": 10,
+      "club": "Banfield B",
+      "played": 15,
+      "won": 6,
+      "drawn": 1,
+      "lost": 8,
+      "penalized": 0,
+      "goals_for": 408,
+      "goals_against": 399,
+      "goal_difference": 9,
+      "points": 28
+    },
+    {
+      "pos": 11,
+      "club": "Club Deportivo Morón",
+      "played": 15,
+      "won": 6,
+      "drawn": 1,
+      "lost": 8,
+      "penalized": 0,
+      "goals_for": 383,
+      "goals_against": 409,
+      "goal_difference": -26,
+      "points": 28
+    },
+    {
+      "pos": 12,
+      "club": "Muñiz Handball B",
+      "played": 15,
+      "won": 5,
+      "drawn": 1,
+      "lost": 9,
+      "penalized": 0,
+      "goals_for": 333,
+      "goals_against": 393,
+      "goal_difference": -60,
+      "points": 26
+    },
+    {
+      "pos": 13,
+      "club": "C.S. y D. Defensores de Banfield",
+      "played": 15,
+      "won": 3,
+      "drawn": 3,
+      "lost": 9,
+      "penalized": 0,
+      "goals_for": 390,
+      "goals_against": 452,
+      "goal_difference": -62,
+      "points": 24
+    },
+    {
+      "pos": 14,
+      "club": "Defensores de Moreno",
+      "played": 15,
+      "won": 2,
+      "drawn": 0,
+      "lost": 13,
+      "penalized": 0,
+      "goals_for": 338,
+      "goals_against": 443,
+      "goal_difference": -105,
+      "points": 19
+    },
+    {
+      "pos": 15,
+      "club": "U.N.La.M.",
+      "played": 15,
+      "won": 1,
+      "drawn": 2,
+      "lost": 12,
+      "penalized": 0,
+      "goals_for": 348,
+      "goals_against": 451,
+      "goal_difference": -103,
+      "points": 19
+    },
+    {
+      "pos": 16,
+      "club": "S.A.P.A.",
+      "played": 15,
+      "won": 0,
+      "drawn": 3,
+      "lost": 12,
+      "penalized": 0,
+      "goals_for": 401,
+      "goals_against": 491,
+      "goal_difference": -90,
+      "points": 18
+    }
+  ],
+  "scorers": [
+    {
+      "name": "Dyfort, Demian Christian",
+      "club": "Argentinos Juniors D",
+      "appearances": 15,
+      "goals": 146,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 1,
+      "blue": 1,
+      "goals_per_game": 9.73
+    },
+    {
+      "name": "Sosa, Erardo Ezequiel",
+      "club": "Deportivo Laferrere",
+      "appearances": 15,
+      "goals": 122,
+      "yellow": 1,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 8.13
+    },
+    {
+      "name": "Lares, Joaquin Nahuel",
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 15,
+      "goals": 102,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 6.8
+    },
+    {
+      "name": "Losso, Emiliano",
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 13,
+      "goals": 90,
+      "yellow": 1,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 6.92
+    },
+    {
+      "name": "Ferreyra, Rodrigo Leon",
+      "club": "Deportivo Laferrere",
+      "appearances": 15,
+      "goals": 89,
+      "yellow": 1,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 5.93
+    },
+    {
+      "name": "Saenz, Santiago Mario",
+      "club": "Temperley",
+      "appearances": 14,
+      "goals": 86,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 6.14
+    },
+    {
+      "name": "Romero Boeris, Sebastian",
+      "club": "S.A.P.A.",
+      "appearances": 12,
+      "goals": 86,
+      "yellow": 0,
+      "two_min": 11,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 7.17
+    },
+    {
+      "name": "De Rose, Santiago Hernan",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 14,
+      "goals": 84,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 6.0
+    },
+    {
+      "name": "Robledo, Franco Daniel",
+      "club": "Villa Calzada",
+      "appearances": 14,
+      "goals": 78,
+      "yellow": 0,
+      "two_min": 7,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 5.57
+    },
+    {
+      "name": "Sanchez, Marcos Agustin",
+      "club": "Ci.De.Co. B",
+      "appearances": 10,
+      "goals": 78,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 7.8
+    },
+    {
+      "name": "Laurenzano Castiglione, Renzo...",
+      "club": "Club Deportivo Morón",
+      "appearances": 14,
+      "goals": 75,
+      "yellow": 3,
+      "two_min": 20,
+      "red": 4,
+      "blue": 0,
+      "goals_per_game": 5.36
+    },
+    {
+      "name": "Flores, Gonzalo Nahuel",
+      "club": "Defensores de Moreno",
+      "appearances": 11,
+      "goals": 71,
+      "yellow": 2,
+      "two_min": 2,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 6.45
+    },
+    {
+      "name": "Palavecino, Luis Agustin",
+      "club": "Muñiz Handball B",
+      "appearances": 15,
+      "goals": 70,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.67
+    },
+    {
+      "name": "Fernandez, Camilo Uriel",
+      "club": "Ci.De.Co. B",
+      "appearances": 15,
+      "goals": 69,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.6
+    },
+    {
+      "name": "Gonzalez Macchia, Guillermo",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 15,
+      "goals": 69,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.6
+    },
+    {
+      "name": "Diaz Munoz, Lucas Manuel",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 14,
+      "goals": 69,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.93
+    },
+    {
+      "name": "Pernice, Mateo",
+      "club": "Banfield B",
+      "appearances": 14,
+      "goals": 68,
+      "yellow": 1,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.86
+    },
+    {
+      "name": "Duprat, Tobias Valentin",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 12,
+      "goals": 68,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 5.67
+    },
+    {
+      "name": "Zarate, Pablo Agustin",
+      "club": "Deportivo Laferrere",
+      "appearances": 15,
+      "goals": 63,
+      "yellow": 0,
+      "two_min": 6,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.2
+    },
+    {
+      "name": "Rial, Agustin Nicolas",
+      "club": "Club Deportivo Morón",
+      "appearances": 15,
+      "goals": 62,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.13
+    },
+    {
+      "name": "Delpieri, Mateo",
+      "club": "S.A.P.A.",
+      "appearances": 15,
+      "goals": 61,
+      "yellow": 1,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.07
+    },
+    {
+      "name": "Lopez Munell, Ignacio",
+      "club": "San Telmo B",
+      "appearances": 14,
+      "goals": 60,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.29
+    },
+    {
+      "name": "Troisi, Bruno",
+      "club": "Ci.De.Co. B",
+      "appearances": 15,
+      "goals": 58,
+      "yellow": 0,
+      "two_min": 6,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.87
+    },
+    {
+      "name": "Ceballos, Emilio",
+      "club": "Temperley",
+      "appearances": 15,
+      "goals": 54,
+      "yellow": 0,
+      "two_min": 5,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.6
+    },
+    {
+      "name": "Maquieira, Patricio",
+      "club": "San Telmo B",
+      "appearances": 13,
+      "goals": 54,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.15
+    },
+    {
+      "name": "Barreto, Ramiro Nazareno Aleja...",
+      "club": "Deportivo Laferrere",
+      "appearances": 15,
+      "goals": 53,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.53
+    },
+    {
+      "name": "Torres, Maximiliano Gaston",
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 15,
+      "goals": 53,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.53
+    },
+    {
+      "name": "Bardelli, Fabrizio",
+      "club": "Club Comunicaciones C",
+      "appearances": 14,
+      "goals": 52,
+      "yellow": 1,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.71
+    },
+    {
+      "name": "Ruiz Diaz, Santiago",
+      "club": "Banfield B",
+      "appearances": 13,
+      "goals": 52,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 4.0
+    },
+    {
+      "name": "Rubiera, Felipe",
+      "club": "San Telmo B",
+      "appearances": 14,
+      "goals": 51,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.64
+    },
+    {
+      "name": "Magarinos, Alan",
+      "club": "Temperley",
+      "appearances": 14,
+      "goals": 50,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.57
+    },
+    {
+      "name": "Gallici, Gustavo Dario",
+      "club": "Club Comunicaciones C",
+      "appearances": 14,
+      "goals": 50,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.57
+    },
+    {
+      "name": "Rancez, Lautaro Matias",
+      "club": "Ci.De.Co. B",
+      "appearances": 13,
+      "goals": 50,
+      "yellow": 0,
+      "two_min": 10,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 3.85
+    },
+    {
+      "name": "Scott, Anibal Francisco",
+      "club": "Ci.De.Co. B",
+      "appearances": 10,
+      "goals": 50,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 2,
+      "blue": 0,
+      "goals_per_game": 5.0
+    },
+    {
+      "name": "Paez Martinez, Leandro Marcel...",
+      "club": "Villa Calzada",
+      "appearances": 14,
+      "goals": 49,
+      "yellow": 1,
+      "two_min": 8,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.5
+    },
+    {
+      "name": "Trigo, Agustin",
+      "club": "Temperley",
+      "appearances": 11,
+      "goals": 49,
+      "yellow": 1,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.45
+    },
+    {
+      "name": "Salvatierra, Cesar Ezequiel",
+      "club": "S.A.P.A.",
+      "appearances": 7,
+      "goals": 48,
+      "yellow": 1,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 6.86
+    },
+    {
+      "name": "Arguello, Fernando Ramon",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 13,
+      "goals": 47,
+      "yellow": 1,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.62
+    },
+    {
+      "name": "Sarrailh, Pablo Eduardo",
+      "club": "S.A.P.A.",
+      "appearances": 14,
+      "goals": 46,
+      "yellow": 0,
+      "two_min": 8,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.29
+    },
+    {
+      "name": "Gamboa, Demian Elien",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 13,
+      "goals": 46,
+      "yellow": 0,
+      "two_min": 5,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.54
+    },
+    {
+      "name": "Escobar, Federico",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 15,
+      "goals": 45,
+      "yellow": 2,
+      "two_min": 3,
+      "red": 2,
+      "blue": 0,
+      "goals_per_game": 3.0
+    },
+    {
+      "name": "Torrico Camacho, Kevin Alan",
+      "club": "U.N.La.M.",
+      "appearances": 14,
+      "goals": 43,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.07
+    },
+    {
+      "name": "Saux Maggi, Franco",
+      "club": "San Telmo B",
+      "appearances": 14,
+      "goals": 43,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.07
+    },
+    {
+      "name": "Mierez, Axel Leonardo",
+      "club": "Villa Calzada",
+      "appearances": 11,
+      "goals": 43,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 3.91
+    },
+    {
+      "name": "Chavez, Alexis Ezequiel",
+      "club": "S.A.P.A.",
+      "appearances": 12,
+      "goals": 42,
+      "yellow": 1,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.5
+    },
+    {
+      "name": "Pineiro, Dante",
+      "club": "U.N.La.M.",
+      "appearances": 12,
+      "goals": 41,
+      "yellow": 1,
+      "two_min": 2,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 3.42
+    },
+    {
+      "name": "Conde, Juan Manuel",
+      "club": "U.N.La.M.",
+      "appearances": 10,
+      "goals": 41,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.1
+    },
+    {
+      "name": "Ojea, Nazareno",
+      "club": "Club Deportivo Morón",
+      "appearances": 15,
+      "goals": 40,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 2.67
+    },
+    {
+      "name": "Rodriguez, Manuel",
+      "club": "Club Comunicaciones C",
+      "appearances": 13,
+      "goals": 40,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.08
+    },
+    {
+      "name": "Velazquez Belisario, Nicolas",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 13,
+      "goals": 40,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.08
+    },
+    {
+      "name": "Fernandez, Ariel Nicolas",
+      "club": "Deportivo Laferrere",
+      "appearances": 11,
+      "goals": 40,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.64
+    },
+    {
+      "name": "Velasquez, Matias Nicolas",
+      "club": "Argentinos Juniors D",
+      "appearances": 8,
+      "goals": 40,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 5.0
+    },
+    {
+      "name": "Bandeo, Alexis Agustin",
+      "club": "Villa Calzada",
+      "appearances": 14,
+      "goals": 39,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.79
+    },
+    {
+      "name": "Pereyra Cruz, Brian Nicolas",
+      "club": "San Telmo B",
+      "appearances": 13,
+      "goals": 39,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.0
+    },
+    {
+      "name": "Lombardo, Christopher Carlos",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 11,
+      "goals": 39,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.55
+    },
+    {
+      "name": "Gimenez, Lucas Nicolas",
+      "club": "Muñiz Handball B",
+      "appearances": 9,
+      "goals": 39,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 2,
+      "blue": 0,
+      "goals_per_game": 4.33
+    },
+    {
+      "name": "Zulli Bujia, Gabriel Alberto",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 14,
+      "goals": 38,
+      "yellow": 2,
+      "two_min": 5,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.71
+    },
+    {
+      "name": "Galvan, Juan Pablo",
+      "club": "Club Deportivo Morón",
+      "appearances": 11,
+      "goals": 38,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 1,
+      "blue": 1,
+      "goals_per_game": 3.45
+    },
+    {
+      "name": "Ferrari, Jonas Horacio",
+      "club": "S.A.P.A.",
+      "appearances": 15,
+      "goals": 37,
+      "yellow": 2,
+      "two_min": 8,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.47
+    },
+    {
+      "name": "Conopoima Perez, Danny Jose",
+      "club": "Argentinos Juniors D",
+      "appearances": 15,
+      "goals": 37,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.47
+    },
+    {
+      "name": "Ledesma, Pedro Alejandro",
+      "club": "Club Comunicaciones C",
+      "appearances": 13,
+      "goals": 37,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.85
+    },
+    {
+      "name": "Gomez, Leandro Luis Nicolas",
+      "club": "U.N.La.M.",
+      "appearances": 12,
+      "goals": 37,
+      "yellow": 0,
+      "two_min": 9,
+      "red": 2,
+      "blue": 0,
+      "goals_per_game": 3.08
+    },
+    {
+      "name": "Mendez, Emanuel Ventura",
+      "club": "Deportivo Laferrere",
+      "appearances": 15,
+      "goals": 36,
+      "yellow": 0,
+      "two_min": 7,
+      "red": 1,
+      "blue": 1,
+      "goals_per_game": 2.4
+    },
+    {
+      "name": "Chuffardi, Lucas Dario",
+      "club": "Club Comunicaciones C",
+      "appearances": 13,
+      "goals": 36,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.77
+    },
+    {
+      "name": "Ferrante, Rodrigo",
+      "club": "Club Deportivo Morón",
+      "appearances": 8,
+      "goals": 36,
+      "yellow": 2,
+      "two_min": 2,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 4.5
+    },
+    {
+      "name": "Alvarez, Thiago Daniel",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 13,
+      "goals": 35,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.69
+    },
+    {
+      "name": "Moreno, Facundo Tobias",
+      "club": "Temperley",
+      "appearances": 12,
+      "goals": 35,
+      "yellow": 0,
+      "two_min": 7,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.92
+    },
+    {
+      "name": "Martino, Yamil Thomas",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 15,
+      "goals": 34,
+      "yellow": 2,
+      "two_min": 14,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.27
+    },
+    {
+      "name": "Coronel Besada, Ciro",
+      "club": "Villa Calzada",
+      "appearances": 14,
+      "goals": 34,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.43
+    },
+    {
+      "name": "Rizza, Valentin",
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 14,
+      "goals": 34,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.43
+    },
+    {
+      "name": "Badajoz, Santiago",
+      "club": "Club Comunicaciones C",
+      "appearances": 13,
+      "goals": 34,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.62
+    },
+    {
+      "name": "Gonzalez, Julian Gabriel",
+      "club": "Banfield B",
+      "appearances": 13,
+      "goals": 33,
+      "yellow": 1,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.54
+    },
+    {
+      "name": "Bianco, Agustin Javier",
+      "club": "U.N.La.M.",
+      "appearances": 13,
+      "goals": 33,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.54
+    },
+    {
+      "name": "Altamirano, Fernando",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 7,
+      "goals": 33,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.71
+    },
+    {
+      "name": "Diaz Nieto, Pablo Leonel",
+      "club": "Deportivo Laferrere",
+      "appearances": 14,
+      "goals": 32,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.29
+    },
+    {
+      "name": "Cafferata, Santiago Damian",
+      "club": "Banfield B",
+      "appearances": 14,
+      "goals": 31,
+      "yellow": 1,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.21
+    },
+    {
+      "name": "Sommer, Martin",
+      "club": "Banfield B",
+      "appearances": 14,
+      "goals": 31,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.21
+    },
+    {
+      "name": "Jalil, Camilo Ernesto",
+      "club": "Club Deportivo Morón",
+      "appearances": 13,
+      "goals": 31,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 2.38
+    },
+    {
+      "name": "Sandoval, Gonzalo Matias",
+      "club": "Villa Calzada",
+      "appearances": 11,
+      "goals": 30,
+      "yellow": 2,
+      "two_min": 7,
+      "red": 2,
+      "blue": 0,
+      "goals_per_game": 2.73
+    },
+    {
+      "name": "Cabred, Lucas Fabrizio",
+      "club": "Defensores de Moreno",
+      "appearances": 9,
+      "goals": 30,
+      "yellow": 1,
+      "two_min": 5,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.33
+    },
+    {
+      "name": "Arias, Santiago Ricard",
+      "club": "San Telmo B",
+      "appearances": 14,
+      "goals": 29,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.07
+    },
+    {
+      "name": "Kinder, Gonzalo Sebastian",
+      "club": "Muñiz Handball B",
+      "appearances": 12,
+      "goals": 29,
+      "yellow": 0,
+      "two_min": 7,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.42
+    },
+    {
+      "name": "Ramos, Lucas",
+      "club": "Argentinos Juniors D",
+      "appearances": 15,
+      "goals": 28,
+      "yellow": 0,
+      "two_min": 12,
+      "red": 3,
+      "blue": 0,
+      "goals_per_game": 1.87
+    },
+    {
+      "name": "Frutos, Lucas Esteban",
+      "club": "Temperley",
+      "appearances": 13,
+      "goals": 28,
+      "yellow": 1,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.15
+    },
+    {
+      "name": "Delaloye, Mateo Valentin",
+      "club": "Defensores de Moreno",
+      "appearances": 11,
+      "goals": 28,
+      "yellow": 0,
+      "two_min": 8,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.55
+    },
+    {
+      "name": "Verrina Balda, Faustino",
+      "club": "Banfield B",
+      "appearances": 14,
+      "goals": 27,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.93
+    },
+    {
+      "name": "Mendoza, Alexis Agustin",
+      "club": "Muñiz Handball B",
+      "appearances": 14,
+      "goals": 27,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.93
+    },
+    {
+      "name": "Perez, Pablo Santiago",
+      "club": "Argentinos Juniors D",
+      "appearances": 14,
+      "goals": 27,
+      "yellow": 0,
+      "two_min": 12,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.93
+    },
+    {
+      "name": "Caceres, Pedro Emmanuel",
+      "club": "Temperley",
+      "appearances": 13,
+      "goals": 27,
+      "yellow": 1,
+      "two_min": 1,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 2.08
+    },
+    {
+      "name": "Steven, Federico Julian",
+      "club": "Temperley",
+      "appearances": 12,
+      "goals": 27,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.25
+    },
+    {
+      "name": "Tombesi, Jose Miguel",
+      "club": "Villa Calzada",
+      "appearances": 7,
+      "goals": 27,
+      "yellow": 1,
+      "two_min": 0,
+      "red": 1,
+      "blue": 1,
+      "goals_per_game": 3.86
+    },
+    {
+      "name": "Nunez, Rodrigo",
+      "club": "Banfield B",
+      "appearances": 15,
+      "goals": 26,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 3,
+      "blue": 0,
+      "goals_per_game": 1.73
+    },
+    {
+      "name": "Navarro Alvarez, Lautaro Uriel",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 15,
+      "goals": 26,
+      "yellow": 0,
+      "two_min": 7,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.73
+    },
+    {
+      "name": "Vallejos, Rodrigo Gabriel",
+      "club": "Deportivo Laferrere",
+      "appearances": 14,
+      "goals": 26,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.86
+    },
+    {
+      "name": "Casagrande, Ezequiel",
+      "club": "Argentinos Juniors D",
+      "appearances": 14,
+      "goals": 26,
+      "yellow": 1,
+      "two_min": 4,
+      "red": 2,
+      "blue": 0,
+      "goals_per_game": 1.86
+    },
+    {
+      "name": "Ramirez, Nicolas",
+      "club": "S.A.P.A.",
+      "appearances": 12,
+      "goals": 26,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.17
+    },
+    {
+      "name": "Rial, Tomas Valentin",
+      "club": "Club Deportivo Morón",
+      "appearances": 15,
+      "goals": 25,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.67
+    },
+    {
+      "name": "Sangroni, Lucio Ramiro",
+      "club": "Banfield B",
+      "appearances": 14,
+      "goals": 25,
+      "yellow": 1,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.79
+    },
+    {
+      "name": "Garreton, Mirko Joaquin",
+      "club": "Club Comunicaciones C",
+      "appearances": 13,
+      "goals": 25,
+      "yellow": 1,
+      "two_min": 6,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.92
+    },
+    {
+      "name": "Montellanos Lopez, Joaquin",
+      "club": "Banfield B",
+      "appearances": 15,
+      "goals": 24,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.6
+    },
+    {
+      "name": "Badaracco Carola, Fabio Nahu...",
+      "club": "Banfield B",
+      "appearances": 14,
+      "goals": 24,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.71
+    },
+    {
+      "name": "Marchioni, Nicolas",
+      "club": "Club Comunicaciones C",
+      "appearances": 14,
+      "goals": 24,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.71
+    },
+    {
+      "name": "Toniutti, Santiago Ariel",
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 13,
+      "goals": 24,
+      "yellow": 1,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.85
+    },
+    {
+      "name": "Castro, Pedro Manuel",
+      "club": "Temperley",
+      "appearances": 13,
+      "goals": 24,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.85
+    },
+    {
+      "name": "Martinez Gonzalez, Jonathan N...",
+      "club": "U.N.La.M.",
+      "appearances": 12,
+      "goals": 24,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
+      "name": "Chazarreta, Sebastian Agustin",
+      "club": "Deportivo Laferrere",
+      "appearances": 14,
+      "goals": 23,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.64
+    },
+    {
+      "name": "Varela Perez, Lucas",
+      "club": "San Telmo B",
+      "appearances": 13,
+      "goals": 23,
+      "yellow": 2,
+      "two_min": 8,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.77
+    },
+    {
+      "name": "Lucero, Mateo Gabriel",
+      "club": "Defensores de Moreno",
+      "appearances": 6,
+      "goals": 23,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.83
+    },
+    {
+      "name": "Marasca, Marcelo",
+      "club": "Muñiz Handball B",
+      "appearances": 4,
+      "goals": 23,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 5.75
+    },
+    {
+      "name": "Solis, Demian Nicolas",
+      "club": "Villa Calzada",
+      "appearances": 11,
+      "goals": 22,
+      "yellow": 1,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
+      "name": "Piombo, Francisco Eduardo",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 14,
+      "goals": 21,
+      "yellow": 1,
+      "two_min": 7,
+      "red": 3,
+      "blue": 0,
+      "goals_per_game": 1.5
+    },
+    {
+      "name": "Vazquez, Joaquin Tomas",
+      "club": "Club Deportivo Morón",
+      "appearances": 14,
+      "goals": 21,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.5
+    },
+    {
+      "name": "Palacios Vera, Marcos Alfonso",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 12,
+      "goals": 21,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.75
+    },
+    {
+      "name": "Becerra, Tomas Agustin",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 12,
+      "goals": 21,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.75
+    },
+    {
+      "name": "Levy, Leonardo G.",
+      "club": "Argentinos Juniors D",
+      "appearances": 10,
+      "goals": 21,
+      "yellow": 2,
+      "two_min": 6,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 2.1
+    },
+    {
+      "name": "Santillan, Juan Roman",
+      "club": "U.N.La.M.",
+      "appearances": 8,
+      "goals": 21,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.62
+    },
+    {
+      "name": "Fernandez, Lucas",
+      "club": "Muñiz Handball B",
+      "appearances": 14,
+      "goals": 20,
+      "yellow": 0,
+      "two_min": 5,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.43
+    },
+    {
+      "name": "Coria Gabrielli, Gabriel Alejandr...",
+      "club": "San Telmo B",
+      "appearances": 14,
+      "goals": 20,
+      "yellow": 1,
+      "two_min": 6,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.43
+    },
+    {
+      "name": "Llamazares, Manuel",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 10,
+      "goals": 20,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
+      "name": "Pedernera, Gonzalo",
+      "club": "Argentinos Juniors D",
+      "appearances": 6,
+      "goals": 20,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.33
+    },
+    {
+      "name": "Aguirre, Esteban Maximiliano",
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 15,
+      "goals": 19,
+      "yellow": 0,
+      "two_min": 5,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.27
+    },
+    {
+      "name": "Lucena, Nicolas Agustin",
+      "club": "San Telmo B",
+      "appearances": 13,
+      "goals": 19,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.46
+    },
+    {
+      "name": "Cruz, Luciano Hernan",
+      "club": "Ci.De.Co. B",
+      "appearances": 9,
+      "goals": 19,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.11
+    },
+    {
+      "name": "Quintela, Agustin Martin",
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 15,
+      "goals": 18,
+      "yellow": 0,
+      "two_min": 5,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.2
+    },
+    {
+      "name": "Astorga, Mauricio Adrian",
+      "club": "Villa Calzada",
+      "appearances": 14,
+      "goals": 18,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.29
+    },
+    {
+      "name": "Farina, Fabricio Nicolas",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 13,
+      "goals": 18,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.38
+    },
+    {
+      "name": "Demarco, Thiago Ezequiel",
+      "club": "Ci.De.Co. B",
+      "appearances": 13,
+      "goals": 18,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.38
+    },
+    {
+      "name": "Rios, Santiago Julian",
+      "club": "Ci.De.Co. B",
+      "appearances": 8,
+      "goals": 18,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.25
+    },
+    {
+      "name": "Ayala, Emmanuel Matias",
+      "club": "Ci.De.Co. B",
+      "appearances": 14,
+      "goals": 17,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.21
+    },
+    {
+      "name": "Rueda, Matias",
+      "club": "San Telmo B",
+      "appearances": 14,
+      "goals": 17,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.21
+    },
+    {
+      "name": "Zonca Rimondetti, Mateo",
+      "club": "San Telmo B",
+      "appearances": 11,
+      "goals": 17,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.55
+    },
+    {
+      "name": "Silva Valenzuela, Dante Xoel",
+      "club": "Ci.De.Co. B",
+      "appearances": 9,
+      "goals": 17,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.89
+    },
+    {
+      "name": "Gomez, Francisco Ezequ",
+      "club": "Muñiz Handball B",
+      "appearances": 7,
+      "goals": 17,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.43
+    },
+    {
+      "name": "Rodriguez, Tomas Emanuel",
+      "club": "Banfield B",
+      "appearances": 15,
+      "goals": 16,
+      "yellow": 0,
+      "two_min": 7,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.07
+    },
+    {
+      "name": "Romanello, Matias Ezequiel",
+      "club": "U.N.La.M.",
+      "appearances": 13,
+      "goals": 16,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.23
+    },
+    {
+      "name": "Gaud, Lautaro Nahuel",
+      "club": "Muñiz Handball B",
+      "appearances": 12,
+      "goals": 16,
+      "yellow": 1,
+      "two_min": 6,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.33
+    },
+    {
+      "name": "Killian, Ignacio",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 7,
+      "goals": 16,
+      "yellow": 1,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 2.29
+    },
+    {
+      "name": "Parodi, Ignacio",
+      "club": "U.N.La.M.",
+      "appearances": 6,
+      "goals": 16,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 2.67
+    },
+    {
+      "name": "Testa, Francisco Javier",
+      "club": "Banfield B",
+      "appearances": 15,
+      "goals": 15,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Pardo, Juan Martin",
+      "club": "Club Deportivo Morón",
+      "appearances": 15,
+      "goals": 15,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Rafael, Manuel Jose",
+      "club": "Muñiz Handball B",
+      "appearances": 14,
+      "goals": 15,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.07
+    },
+    {
+      "name": "Altieri, Tiziano Misael",
+      "club": "Defensores de Moreno",
+      "appearances": 9,
+      "goals": 15,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.67
+    },
+    {
+      "name": "Romero Canete, Alcides Antoni...",
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 13,
+      "goals": 14,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.08
+    },
+    {
+      "name": "Carassai, Marcos",
+      "club": "San Telmo B",
+      "appearances": 13,
+      "goals": 14,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.08
+    },
+    {
+      "name": "Herrera, Albano Rodrigo",
+      "club": "Deportivo Laferrere",
+      "appearances": 11,
+      "goals": 14,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.27
+    },
+    {
+      "name": "Perez, Pedro Gabriel",
+      "club": "Argentinos Juniors D",
+      "appearances": 11,
+      "goals": 14,
+      "yellow": 1,
+      "two_min": 5,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.27
+    },
+    {
+      "name": "Choque, Leandro Ezequie",
+      "club": "Defensores de Moreno",
+      "appearances": 10,
+      "goals": 14,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.4
+    },
+    {
+      "name": "Tobares, Lisandro Joaquin",
+      "club": "Muñiz Handball B",
+      "appearances": 13,
+      "goals": 13,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Sosa, Juan Ignacio",
+      "club": "Villa Calzada",
+      "appearances": 11,
+      "goals": 13,
+      "yellow": 0,
+      "two_min": 7,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.18
+    },
+    {
+      "name": "Madera Aragon, Matias Nicolas",
+      "club": "Defensores de Moreno",
+      "appearances": 10,
+      "goals": 13,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.3
+    },
+    {
+      "name": "Mariscal, Benjamin Thiago",
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 7,
+      "goals": 13,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.86
+    },
+    {
+      "name": "Vildosola, Nazareno",
+      "club": "Club Comunicaciones C",
+      "appearances": 5,
+      "goals": 13,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.6
+    },
+    {
+      "name": "Ingaramo, Joaquin",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 15,
+      "goals": 12,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.8
+    },
+    {
+      "name": "Abi Zaid, Lucas Alejo",
+      "club": "Club Deportivo Morón",
+      "appearances": 15,
+      "goals": 12,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.8
+    },
+    {
+      "name": "Goncalves, Ivan Nicolas",
+      "club": "Muñiz Handball B",
+      "appearances": 12,
+      "goals": 12,
+      "yellow": 1,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Lacuadra, Valentin Leonel",
+      "club": "Defensores de Moreno",
+      "appearances": 9,
+      "goals": 12,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.33
+    },
+    {
+      "name": "Boccardo, Bautista",
+      "club": "Muñiz Handball B",
+      "appearances": 7,
+      "goals": 12,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.71
+    },
+    {
+      "name": "Mazzola, Fausto",
+      "club": "Club Deportivo Morón",
+      "appearances": 12,
+      "goals": 11,
+      "yellow": 3,
+      "two_min": 11,
+      "red": 2,
+      "blue": 0,
+      "goals_per_game": 0.92
+    },
+    {
+      "name": "Gayoso Silva, Michel Javier",
+      "club": "S.A.P.A.",
+      "appearances": 11,
+      "goals": 11,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Masnatta, Bruno Duilio",
+      "club": "Club Comunicaciones C",
+      "appearances": 10,
+      "goals": 11,
+      "yellow": 0,
+      "two_min": 5,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.1
+    },
+    {
+      "name": "Tolentino Viza, Fernando David",
+      "club": "Ci.De.Co. B",
+      "appearances": 8,
+      "goals": 11,
+      "yellow": 1,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.38
+    },
+    {
+      "name": "Riquelme, Facundo",
+      "club": "Ci.De.Co. B",
+      "appearances": 7,
+      "goals": 11,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.57
+    },
+    {
+      "name": "Hoyos, Alan Nahuel",
+      "club": "U.N.La.M.",
+      "appearances": 5,
+      "goals": 11,
+      "yellow": 1,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.2
+    },
+    {
+      "name": "Rey, Luciano Damian",
+      "club": "Club Comunicaciones C",
+      "appearances": 14,
+      "goals": 10,
+      "yellow": 1,
+      "two_min": 8,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.71
+    },
+    {
+      "name": "Hernandez, Nahuel Agustin",
+      "club": "Temperley",
+      "appearances": 11,
+      "goals": 10,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.91
+    },
+    {
+      "name": "Bezerra, Mariano Nehuen",
+      "club": "Villa Calzada",
+      "appearances": 11,
+      "goals": 10,
+      "yellow": 0,
+      "two_min": 5,
+      "red": 2,
+      "blue": 0,
+      "goals_per_game": 0.91
+    },
+    {
+      "name": "Almazan, Nicolas Gabriel",
+      "club": "Temperley",
+      "appearances": 9,
+      "goals": 10,
+      "yellow": 1,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.11
+    },
+    {
+      "name": "Carletti, Roman Abel",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 8,
+      "goals": 10,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.25
+    },
+    {
+      "name": "Martinez, Benicio",
+      "club": "San Telmo B",
+      "appearances": 8,
+      "goals": 10,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.25
+    },
+    {
+      "name": "Murias Aguiar, Fernando",
+      "club": "Deportivo Laferrere",
+      "appearances": 7,
+      "goals": 10,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.43
+    },
+    {
+      "name": "Nicholson Victorel, Joaquin",
+      "club": "Defensores de Moreno",
+      "appearances": 6,
+      "goals": 10,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.67
+    },
+    {
+      "name": "Carruthers, Benjamin",
+      "club": "Defensores de Moreno",
+      "appearances": 11,
+      "goals": 9,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.82
+    },
+    {
+      "name": "Ercoli, Santiago Ariel",
+      "club": "Defensores de Moreno",
+      "appearances": 11,
+      "goals": 9,
+      "yellow": 0,
+      "two_min": 5,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.82
+    },
+    {
+      "name": "Ferrari, Felipe",
+      "club": "Muñiz Handball B",
+      "appearances": 6,
+      "goals": 9,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.5
+    },
+    {
+      "name": "Flores, Victor Mariano",
+      "club": "Argentinos Juniors D",
+      "appearances": 6,
+      "goals": 9,
+      "yellow": 1,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.5
+    },
+    {
+      "name": "Sosa Araoz, Thiago Nicolas",
+      "club": "San Telmo B",
+      "appearances": 4,
+      "goals": 9,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.25
+    },
+    {
+      "name": "Ezcurra, Santiago Martin",
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 15,
+      "goals": 8,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.53
+    },
+    {
+      "name": "Castagnino Mariani, Inaki Andr...",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 14,
+      "goals": 8,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.57
+    },
+    {
+      "name": "Benitez, Francisco Ezequiel",
+      "club": "Muñiz Handball B",
+      "appearances": 13,
+      "goals": 8,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.62
+    },
+    {
+      "name": "Portillo, Nicolas Agustin",
+      "club": "Temperley",
+      "appearances": 10,
+      "goals": 8,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.8
+    },
+    {
+      "name": "Robledo, Felipe Tadeo Nicolas",
+      "club": "Ci.De.Co. B",
+      "appearances": 9,
+      "goals": 8,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.89
+    },
+    {
+      "name": "Mollo Skripnik Strelecki, Lucian...",
+      "club": "S.A.P.A.",
+      "appearances": 8,
+      "goals": 8,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Mendez, Santiago",
+      "club": "Muñiz Handball B",
+      "appearances": 6,
+      "goals": 8,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.33
+    },
+    {
+      "name": "Martinez, Milo Ulises",
+      "club": "S.A.P.A.",
+      "appearances": 6,
+      "goals": 8,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.33
+    },
+    {
+      "name": "Fagioli, Federico Enzo",
+      "club": "Club Deportivo Morón",
+      "appearances": 15,
+      "goals": 7,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.47
+    },
+    {
+      "name": "Gonzalez, Ezequiel Matias",
+      "club": "S.A.P.A.",
+      "appearances": 14,
+      "goals": 7,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.5
+    },
+    {
+      "name": "Lopardo, Brian Ezequiel",
+      "club": "U.N.La.M.",
+      "appearances": 13,
+      "goals": 7,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.54
+    },
+    {
+      "name": "Cusumano, Renzo Norberto",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 13,
+      "goals": 7,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.54
+    },
+    {
+      "name": "Salgado, Mariano Agustin",
+      "club": "U.N.La.M.",
+      "appearances": 12,
+      "goals": 7,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.58
+    },
+    {
+      "name": "Martinese, Tadeo Ricardo",
+      "club": "Villa Calzada",
+      "appearances": 11,
+      "goals": 7,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.64
+    },
+    {
+      "name": "Medina, Rodrigo Amin",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 11,
+      "goals": 7,
+      "yellow": 1,
+      "two_min": 6,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.64
+    },
+    {
+      "name": "Videla, Lucas Andres",
+      "club": "Club Deportivo Morón",
+      "appearances": 9,
+      "goals": 7,
+      "yellow": 1,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.78
+    },
+    {
+      "name": "Dos Santos, Sebastian Nicolas",
+      "club": "Defensores de Moreno",
+      "appearances": 9,
+      "goals": 7,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.78
+    },
+    {
+      "name": "Ramirez, Alexis Nicolas",
+      "club": "Ci.De.Co. B",
+      "appearances": 3,
+      "goals": 7,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.33
+    },
+    {
+      "name": "Mastrazzi Vukotich, Tadeo Agu...",
+      "club": "Argentinos Juniors D",
+      "appearances": 3,
+      "goals": 7,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.33
+    },
+    {
+      "name": "Barreto Cisnero, Juan Francisc...",
+      "club": "Deportivo Laferrere",
+      "appearances": 15,
+      "goals": 6,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.4
+    },
+    {
+      "name": "Pereyra Galetti, Fernando Emm...",
+      "club": "U.N.La.M.",
+      "appearances": 13,
+      "goals": 6,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.46
+    },
+    {
+      "name": "Martinez, Joaquin Ariel",
+      "club": "U.N.La.M.",
+      "appearances": 13,
+      "goals": 6,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.46
+    },
+    {
+      "name": "Rodriguez, Lautaro Tomas",
+      "club": "Banfield B",
+      "appearances": 12,
+      "goals": 6,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.5
+    },
+    {
+      "name": "Iturriaga, Lucas",
+      "club": "Temperley",
+      "appearances": 12,
+      "goals": 6,
+      "yellow": 2,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.5
+    },
+    {
+      "name": "Rayan, Tomas Uriel",
+      "club": "Argentinos Juniors D",
+      "appearances": 11,
+      "goals": 6,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 1,
+      "blue": 1,
+      "goals_per_game": 0.55
+    },
+    {
+      "name": "Dobler, Cristian Gabriel",
+      "club": "Argentinos Juniors D",
+      "appearances": 10,
+      "goals": 6,
+      "yellow": 1,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.6
+    },
+    {
+      "name": "Gonzalez, Ruiz Nicolas Manuel",
+      "club": "Club Comunicaciones C",
+      "appearances": 9,
+      "goals": 6,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.67
+    },
+    {
+      "name": "Amorossi, Gabriel Ignacio Seba...",
+      "club": "Temperley",
+      "appearances": 7,
+      "goals": 6,
+      "yellow": 2,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.86
+    },
+    {
+      "name": "Pucheta, Luca",
+      "club": "Temperley",
+      "appearances": 7,
+      "goals": 6,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.86
+    },
+    {
+      "name": "Senaris, Tomas",
+      "club": "Banfield B",
+      "appearances": 6,
+      "goals": 6,
+      "yellow": 1,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Guaman, Alan Nicolas Ezequiel",
+      "club": "U.N.La.M.",
+      "appearances": 5,
+      "goals": 6,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.2
+    },
+    {
+      "name": "Maldonado, Joel Agustin",
+      "club": "Banfield B",
+      "appearances": 3,
+      "goals": 6,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
+      "name": "Arevalo, Bautista Damian",
+      "club": "Banfield B",
+      "appearances": 2,
+      "goals": 6,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.0
+    },
+    {
+      "name": "Ramirez, Lautaro Hugo",
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 8,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.62
+    },
+    {
+      "name": "Ruiz, Joaquin Uriel",
+      "club": "Club Comunicaciones C",
+      "appearances": 7,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.71
+    },
+    {
+      "name": "Viglietti, Gonzalo Ezequiel",
+      "club": "Banfield B",
+      "appearances": 5,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Ramirez, Gaston",
+      "club": "S.A.P.A.",
+      "appearances": 4,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.25
+    },
+    {
+      "name": "Grisolia, Geronimo Gabriel",
+      "club": "S.A.P.A.",
+      "appearances": 4,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.25
+    },
+    {
+      "name": "Davalos Lima, Alex Serafin",
+      "club": "Villa Calzada",
+      "appearances": 4,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.25
+    },
+    {
+      "name": "Capuccio, Santino Alejandro",
+      "club": "Ci.De.Co. B",
+      "appearances": 4,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.25
+    },
+    {
+      "name": "Gonzalez Caraballo, Amuyen F...",
+      "club": "Defensores de Moreno",
+      "appearances": 4,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.25
+    },
+    {
+      "name": "Sanchez, Agustin Matias Nicola...",
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 2,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.5
+    },
+    {
+      "name": "Gomez, Enzo Ivan",
+      "club": "Muñiz Handball B",
+      "appearances": 1,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 5.0
+    },
+    {
+      "name": "Ruano, Matheo",
+      "club": "S.A.P.A.",
+      "appearances": 15,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.27
+    },
+    {
+      "name": "Verde, Facundo",
+      "club": "Argentinos Juniors D",
+      "appearances": 13,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.31
+    },
+    {
+      "name": "Avalos Conde, Lisandro",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 12,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.33
+    },
+    {
+      "name": "Wilberger Castelli, Matias Aleja...",
+      "club": "Argentinos Juniors D",
+      "appearances": 12,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.33
+    },
+    {
+      "name": "Belizan Quiroga, Matias Agusti...",
+      "club": "Villa Calzada",
+      "appearances": 10,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.4
+    },
+    {
+      "name": "Ajalla, Ivan Maximiliano",
+      "club": "Argentinos Juniors D",
+      "appearances": 10,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.4
+    },
+    {
+      "name": "Gerez Valenzuela, Gabriel Mirk...",
+      "club": "Defensores de Moreno",
+      "appearances": 8,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.5
+    },
+    {
+      "name": "Seip, Benegas Gustavo Gabriel",
+      "club": "Villa Calzada",
+      "appearances": 7,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.57
+    },
+    {
+      "name": "Galvan, Lautaro Andres",
+      "club": "Villa Calzada",
+      "appearances": 7,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.57
+    },
+    {
+      "name": "Faro, Alan Alexis",
+      "club": "Deportivo Laferrere",
+      "appearances": 6,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.67
+    },
+    {
+      "name": "Padin Tonieto, Ulises Nahuel",
+      "club": "San Telmo B",
+      "appearances": 3,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.33
+    },
+    {
+      "name": "Romanello, Martin Esteban",
+      "club": "S.A.P.A.",
+      "appearances": 3,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.33
+    },
+    {
+      "name": "Pronsato Cervera, Gabriel Aleja...",
+      "club": "San Telmo B",
+      "appearances": 3,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.33
+    },
+    {
+      "name": "Hernandez Lopez, Tobias",
+      "club": "Club Comunicaciones C",
+      "appearances": 2,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
+      "name": "Brandariz, Guido",
+      "club": "Temperley",
+      "appearances": 15,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.2
+    },
+    {
+      "name": "Alvarez Rivadeneira, Jorge Nah...",
+      "club": "San Telmo B",
+      "appearances": 11,
+      "goals": 3,
+      "yellow": 1,
+      "two_min": 6,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.27
+    },
+    {
+      "name": "De Paoli, Nahuel Fernando",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 11,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.27
+    },
+    {
+      "name": "Sarroca, Santiago",
+      "club": "Temperley",
+      "appearances": 9,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.33
+    },
+    {
+      "name": "Navarro, Maximiliano Agustin",
+      "club": "Villa Calzada",
+      "appearances": 9,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.33
+    },
+    {
+      "name": "Almiron, Facundo Sebastian",
+      "club": "U.N.La.M.",
+      "appearances": 5,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.6
+    },
+    {
+      "name": "Jimenez, Lucas Hernan",
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 4,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.75
+    },
+    {
+      "name": "Marasca, Juan Pablo",
+      "club": "Muñiz Handball B",
+      "appearances": 3,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 2,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Laurino, Santiago",
+      "club": "Muñiz Handball B",
+      "appearances": 3,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Marangoni, Juan Andres",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 2,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.5
+    },
+    {
+      "name": "Di Palma, Federico",
+      "club": "Club Comunicaciones C",
+      "appearances": 1,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.0
+    },
+    {
+      "name": "Ducrot, Eugenio",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 1,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.0
+    },
+    {
+      "name": "Godoy, Gonzalo Nahuel",
+      "club": "Temperley",
+      "appearances": 15,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.13
+    },
+    {
+      "name": "Scolari, Franco Alejandro",
+      "club": "Deportivo Laferrere",
+      "appearances": 14,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.14
+    },
+    {
+      "name": "Ayala, Luis Alberto",
+      "club": "Temperley",
+      "appearances": 14,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.14
+    },
+    {
+      "name": "Martinez, Jonathan Joel",
+      "club": "Deportivo Laferrere",
+      "appearances": 13,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.15
+    },
+    {
+      "name": "Milan, Maximiliano Adrian",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 13,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.15
+    },
+    {
+      "name": "Brizuela, Lucas Federico",
+      "club": "Muñiz Handball B",
+      "appearances": 12,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 12,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.17
+    },
+    {
+      "name": "Aguirre, Walter Joel",
+      "club": "Banfield B",
+      "appearances": 12,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.17
+    },
+    {
+      "name": "Suarez Llacay, Roman",
+      "club": "Ci.De.Co. B",
+      "appearances": 11,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 5,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.18
+    },
+    {
+      "name": "Romano, Renato",
+      "club": "Defensores de Moreno",
+      "appearances": 11,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.18
+    },
+    {
+      "name": "Arreyes, Ignacio Agustin",
+      "club": "Club Comunicaciones C",
+      "appearances": 9,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.22
+    },
+    {
+      "name": "Pons Yaque, Nahuel Santiago ...",
+      "club": "Club Deportivo Morón",
+      "appearances": 9,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.22
+    },
+    {
+      "name": "Farina, Martin Ezequiel",
+      "club": "Argentinos Juniors D",
+      "appearances": 9,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.22
+    },
+    {
+      "name": "Gerez, Nicolas Ezequiel",
+      "club": "Villa Calzada",
+      "appearances": 8,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.25
+    },
+    {
+      "name": "Gomez, Alejandro Ezequiel",
+      "club": "Villa Calzada",
+      "appearances": 7,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.29
+    },
+    {
+      "name": "Acevedo, Lautaro Ismael",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 6,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.33
+    },
+    {
+      "name": "Marchetti, Franco",
+      "club": "Club Comunicaciones C",
+      "appearances": 5,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.4
+    },
+    {
+      "name": "Tumulty, Ramiro Nicolas",
+      "club": "Club Comunicaciones C",
+      "appearances": 5,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.4
+    },
+    {
+      "name": "Simionato, Octavio",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 5,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.4
+    },
+    {
+      "name": "Mollo Skripnik Strelecki, Juan Ig...",
+      "club": "S.A.P.A.",
+      "appearances": 5,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.4
+    },
+    {
+      "name": "Martinez, Federico Agustin",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 5,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.4
+    },
+    {
+      "name": "Robledo, Valentin",
+      "club": "Temperley",
+      "appearances": 4,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.5
+    },
+    {
+      "name": "Brizuela, Lucio Nicolas",
+      "club": "Banfield B",
+      "appearances": 3,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.67
+    },
+    {
+      "name": "Aguirre, Fernando Gabriel",
+      "club": "U.N.La.M.",
+      "appearances": 3,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.67
+    },
+    {
+      "name": "Colman, Federico Ezequiel",
+      "club": "Banfield B",
+      "appearances": 2,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Barrientos, Alan Santiago",
+      "club": "Villa Calzada",
+      "appearances": 2,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Rumohr, Joaquin Gabriel",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 1,
+      "goals": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
+      "name": "Esposto, Facundo Nazaren",
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 15,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.07
+    },
+    {
+      "name": "Bravo, Federico Marcos",
+      "club": "Club Deportivo Morón",
+      "appearances": 15,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.07
+    },
+    {
+      "name": "Arreigada, Francisco Valen",
+      "club": "Muñiz Handball B",
+      "appearances": 14,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.07
+    },
+    {
+      "name": "Fretes, Lorenzo Raul",
+      "club": "U.N.La.M.",
+      "appearances": 14,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.07
+    },
+    {
+      "name": "Veiga Lucien, Juan Manuel",
+      "club": "San Telmo B",
+      "appearances": 14,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.07
+    },
+    {
+      "name": "Duarte, Aaron Ezequiel",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 13,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.08
+    },
+    {
+      "name": "Martin, Adrian Norberto",
+      "club": "Argentinos Juniors D",
+      "appearances": 13,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.08
+    },
+    {
+      "name": "Galarza, Franco Agustin",
+      "club": "Banfield B",
+      "appearances": 12,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.08
+    },
+    {
+      "name": "Cardoso, Mateo Ivan",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 8,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.12
+    },
+    {
+      "name": "Pruzzo, Facundo",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 7,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.14
+    },
+    {
+      "name": "Gallardo, Javier Rodrigo",
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 6,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.17
+    },
+    {
+      "name": "Peralta, Juan Ignacio",
+      "club": "S.A.P.A.",
+      "appearances": 5,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.2
+    },
+    {
+      "name": "Luna, Gonzalo Martin",
+      "club": "Ci.De.Co. B",
+      "appearances": 4,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.25
+    },
+    {
+      "name": "Sinchicay, Jonathan Alexis",
+      "club": "U.N.La.M.",
+      "appearances": 4,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.25
+    },
+    {
+      "name": "Bernhard, Federico Tomas",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 3,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.33
+    },
+    {
+      "name": "Florez, Thiago Emiliano",
+      "club": "Defensores de Moreno",
+      "appearances": 3,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.33
+    },
+    {
+      "name": "Taboada, Juan Manuel",
+      "club": "Club Comunicaciones C",
+      "appearances": 2,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.5
+    },
+    {
+      "name": "Obendorfer, Ricardo Alfredo",
+      "club": "Argentinos Juniors D",
+      "appearances": 2,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.5
+    },
+    {
+      "name": "Recalde, Adrian Nicolas",
+      "club": "Defensores de Moreno",
+      "appearances": 2,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.5
+    },
+    {
+      "name": "Irigoyen, Francisco",
+      "club": "San Telmo B",
+      "appearances": 2,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.5
+    },
+    {
+      "name": "Fanti, Alejandro",
+      "club": "Muñiz Handball B",
+      "appearances": 1,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
+      "name": "Farias, Hector Tomas",
+      "club": "Deportivo Laferrere",
+      "appearances": 15,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Bareiro, Lanfranco",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 15,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Cepeda, Diego Oscar",
+      "club": "Ci.De.Co. B",
+      "appearances": 15,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Casanova, Jorge Hernan",
+      "club": "Club Deportivo Morón",
+      "appearances": 15,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Canovas De La Vega, Daniel Al...",
+      "club": "Argentinos Juniors D",
+      "appearances": 15,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Alvarez, Rodrigo Emanuel",
+      "club": "Club Comunicaciones C",
+      "appearances": 14,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Laino, Juan Manuel",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 14,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Parra Sampayo, Alejo Lionel",
+      "club": "S.A.P.A.",
+      "appearances": 14,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Gomez, Francisco Jose Ezequi...",
+      "club": "Argentinos Juniors D",
+      "appearances": 14,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Peralta, Leonardo Miguel",
+      "club": "Deportivo Laferrere",
+      "appearances": 13,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Ramirez Lorca, Jaime Nahuel",
+      "club": "S.A.P.A.",
+      "appearances": 13,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Correa, Marcos Isauro",
+      "club": "S.A.P.A.",
+      "appearances": 13,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Leguizamon, Santiago Matias",
+      "club": "Club Deportivo Morón",
+      "appearances": 13,
+      "goals": 0,
+      "yellow": 1,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Diaz, Dylan Moises",
+      "club": "Villa Calzada",
+      "appearances": 13,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Deppeler, Simon",
+      "club": "San Telmo B",
+      "appearances": 12,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Malgor, Martin Ezequiel",
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 12,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Palmas Cardozo, Ezequiel Davi...",
+      "club": "Club Comunicaciones C",
+      "appearances": 11,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Toloza, Ivan Federico",
+      "club": "Ci.De.Co. B",
+      "appearances": 10,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Petrovic, Joaquin Elias",
+      "club": "Banfield B",
+      "appearances": 9,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Portas, Thomas Nicolas",
+      "club": "Club Comunicaciones C",
+      "appearances": 7,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Rosadilla Ibarra, Bruno Alberto",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 6,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Ormar, Alejo Rafael",
+      "club": "Muñiz Handball B",
+      "appearances": 6,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Alvarez, Rodrigo Yamil",
+      "club": "Villa Calzada",
+      "appearances": 6,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Duperre, Santiago Uriel",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 6,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Garcia Herrera, Emiliano Jose",
+      "club": "Club Comunicaciones C",
+      "appearances": 6,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Faifman, Mathias Ignacio",
+      "club": "Club Comunicaciones C",
+      "appearances": 5,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Joaquin, Lucas Damian",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 5,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Di Pilato, Lucas Gabriel",
+      "club": "Villa Calzada",
+      "appearances": 4,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Scalerandi, Aldo Victor",
+      "club": "Ci.De.Co. B",
+      "appearances": 4,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Brokoff, Mariano Alejandro",
+      "club": "Argentinos Juniors D",
+      "appearances": 4,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Juarez, German",
+      "club": "Club Deportivo Morón",
+      "appearances": 4,
+      "goals": 0,
+      "yellow": 1,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Birylo, Joaquin",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 4,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Schletter, Matias",
+      "club": "Muñiz Handball B",
+      "appearances": 3,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Gomez Martino, Mateo Maximili...",
+      "club": "Muñiz Handball B",
+      "appearances": 3,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Guerra, Matias Luciano",
+      "club": "Ci.De.Co. B",
+      "appearances": 3,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Cepeda Fuentes, Ignacio Thom...",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 3,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Caceres, Nestor Matias",
+      "club": "Villa Calzada",
+      "appearances": 3,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Sosa Baez Gonzalez, Lautaro",
+      "club": "Defensores de Moreno",
+      "appearances": 3,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Stengel, Matias Gabriel",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 2,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Simionato, Maximo",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 2,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Lujan Barreda, Manuel Francisc...",
+      "club": "Club Comunicaciones C",
+      "appearances": 2,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Gallardo, Thiago Nicolas",
+      "club": "Temperley",
+      "appearances": 2,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Ponce, Gonzalo Martin",
+      "club": "Muñiz Handball B",
+      "appearances": 2,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Faba, Martin",
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 2,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Guarco, Santiago",
+      "club": "Defensores de Moreno",
+      "appearances": 2,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Villagra, Joaquin",
+      "club": "San Telmo B",
+      "appearances": 2,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Roldan, Valentino Quimey",
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Ovando Parodi, Nicolas",
+      "club": "San Telmo B",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Fasanella Catharino, Nicolas",
+      "club": "Club Comunicaciones C",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Perez Recalde, Manuel",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Di Donato, Lisandro",
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Alvarez, Mariano Joaquin",
+      "club": "S.A.P.A.",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Bronstein, Leandro Ariel",
+      "club": "Argentinos Juniors D",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Torres Figueroa, Cristian Omar",
+      "club": "Defensores de Moreno",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Fornes, Geronimo Martin",
+      "club": "Club Deportivo Morón",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Moran, Elian Ignacio",
+      "club": "Defensores de Moreno",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Portillo, Lautaro Ezequie",
+      "club": "Villa Calzada",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Contrera, Martin Emir",
+      "club": "Ci.De.Co. B",
+      "appearances": 1,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    }
+  ],
+  "clubs": [
+    {
+      "club": "Deportivo Laferrere",
+      "appearances": 222,
+      "goals": 522,
+      "yellow": 2,
+      "two_min": 40,
+      "red": 2,
+      "blue": 1,
+      "players": 17
+    },
+    {
+      "club": "A.A.C.F. Quilmes C",
+      "appearances": 228,
+      "goals": 462,
+      "yellow": 2,
+      "two_min": 33,
+      "red": 3,
+      "blue": 0,
+      "players": 25
+    },
+    {
+      "club": "Ci.De.Co. B",
+      "appearances": 195,
+      "goals": 439,
+      "yellow": 1,
+      "two_min": 42,
+      "red": 5,
+      "blue": 0,
+      "players": 22
+    },
+    {
+      "club": "Temperley",
+      "appearances": 232,
+      "goals": 438,
+      "yellow": 8,
+      "two_min": 36,
+      "red": 2,
+      "blue": 0,
+      "players": 21
+    },
+    {
+      "club": "San Telmo B",
+      "appearances": 220,
+      "goals": 418,
+      "yellow": 4,
+      "two_min": 38,
+      "red": 1,
+      "blue": 0,
+      "players": 22
+    },
+    {
+      "club": "Banfield B",
+      "appearances": 236,
+      "goals": 408,
+      "yellow": 5,
+      "two_min": 37,
+      "red": 8,
+      "blue": 0,
+      "players": 22
+    },
+    {
+      "club": "Argentinos Juniors D",
+      "appearances": 231,
+      "goals": 403,
+      "yellow": 6,
+      "two_min": 58,
+      "red": 12,
+      "blue": 2,
+      "players": 23
+    },
+    {
+      "club": "S.A.P.A.",
+      "appearances": 203,
+      "goals": 401,
+      "yellow": 5,
+      "two_min": 50,
+      "red": 1,
+      "blue": 0,
+      "players": 21
+    },
+    {
+      "club": "Municipalidad de Avellaneda",
+      "appearances": 232,
+      "goals": 399,
+      "yellow": 8,
+      "two_min": 50,
+      "red": 4,
+      "blue": 0,
+      "players": 25
+    },
+    {
+      "club": "Villa Calzada",
+      "appearances": 224,
+      "goals": 396,
+      "yellow": 5,
+      "two_min": 52,
+      "red": 8,
+      "blue": 1,
+      "players": 25
+    },
+    {
+      "club": "C.S. y D. Defensores de Banfield",
+      "appearances": 184,
+      "goals": 390,
+      "yellow": 2,
+      "two_min": 34,
+      "red": 0,
+      "blue": 0,
+      "players": 17
+    },
+    {
+      "club": "Club Deportivo Morón",
+      "appearances": 228,
+      "goals": 383,
+      "yellow": 11,
+      "two_min": 48,
+      "red": 11,
+      "blue": 1,
+      "players": 19
+    },
+    {
+      "club": "Club Comunicaciones C",
+      "appearances": 222,
+      "goals": 357,
+      "yellow": 3,
+      "two_min": 37,
+      "red": 0,
+      "blue": 0,
+      "players": 26
+    },
+    {
+      "club": "Muñiz Handball B",
+      "appearances": 206,
+      "goals": 333,
+      "yellow": 2,
+      "two_min": 50,
+      "red": 7,
+      "blue": 0,
+      "players": 25
+    },
+    {
+      "club": "U.N.La.M.",
+      "appearances": 187,
+      "goals": 322,
+      "yellow": 2,
+      "two_min": 35,
+      "red": 5,
+      "blue": 0,
+      "players": 19
+    },
+    {
+      "club": "Defensores de Moreno",
+      "appearances": 147,
+      "goals": 254,
+      "yellow": 3,
+      "two_min": 28,
+      "red": 2,
+      "blue": 0,
+      "players": 21
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "date": "2026-03-22",
+      "matches": [
+        {
+          "home": "Defensores de Moreno",
+          "away": "Villa Calzada",
+          "home_goals": 20,
+          "away_goals": 30,
+          "coverage": "reported"
+        },
+        {
+          "home": "Club Comunicaciones C",
+          "away": "U.N.La.M.",
+          "home_goals": 23,
+          "away_goals": 17,
+          "coverage": "planilla"
+        },
+        {
+          "home": "A.A.C.F. Quilmes C",
+          "away": "Temperley",
+          "home_goals": 31,
+          "away_goals": 29,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Muñiz Handball B",
+          "away": "S.A.P.A.",
+          "home_goals": 29,
+          "away_goals": 26,
+          "coverage": "planilla"
+        },
+        {
+          "home": "C.S. y D. Defensores de Banfield",
+          "away": "Argentinos Juniors D",
+          "home_goals": 28,
+          "away_goals": 25,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Avellaneda",
+          "away": "Deportivo Laferrere",
+          "home_goals": 29,
+          "away_goals": 26,
+          "coverage": "planilla"
+        },
+        {
+          "home": "San Telmo B",
+          "away": "Banfield B",
+          "home_goals": 28,
+          "away_goals": 22,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Ci.De.Co. B",
+          "away": "Club Deportivo Morón",
+          "home_goals": 25,
+          "away_goals": 23,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "date": "2026-03-29",
+      "matches": [
+        {
+          "home": "Club Comunicaciones C",
+          "away": "Defensores de Moreno",
+          "home_goals": 22,
+          "away_goals": 18,
+          "coverage": "reported"
+        },
+        {
+          "home": "Banfield B",
+          "away": "C.S. y D. Defensores de Banfield",
+          "home_goals": 30,
+          "away_goals": 20,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Deportivo Laferrere",
+          "away": "Ci.De.Co. B",
+          "home_goals": 38,
+          "away_goals": 33,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Argentinos Juniors D",
+          "away": "Muñiz Handball B",
+          "home_goals": 29,
+          "away_goals": 34,
+          "coverage": "planilla"
+        },
+        {
+          "home": "U.N.La.M.",
+          "away": "Temperley",
+          "home_goals": 24,
+          "away_goals": 31,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Villa Calzada",
+          "away": "San Telmo B",
+          "home_goals": 37,
+          "away_goals": 24,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Club Deportivo Morón",
+          "away": "A.A.C.F. Quilmes C",
+          "home_goals": 29,
+          "away_goals": 25,
+          "coverage": "planilla"
+        },
+        {
+          "home": "S.A.P.A.",
+          "away": "Municipalidad de Avellaneda",
+          "home_goals": 27,
+          "away_goals": 34,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "date": "2026-04-12",
+      "matches": [
+        {
+          "home": "Defensores de Moreno",
+          "away": "U.N.La.M.",
+          "home_goals": 28,
+          "away_goals": 26,
+          "coverage": "reported"
+        },
+        {
+          "home": "Muñiz Handball B",
+          "away": "Banfield B",
+          "home_goals": 23,
+          "away_goals": 22,
+          "coverage": "planilla"
+        },
+        {
+          "home": "A.A.C.F. Quilmes C",
+          "away": "Deportivo Laferrere",
+          "home_goals": 39,
+          "away_goals": 44,
+          "coverage": "planilla"
+        },
+        {
+          "home": "C.S. y D. Defensores de Banfield",
+          "away": "Villa Calzada",
+          "home_goals": 20,
+          "away_goals": 30,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Avellaneda",
+          "away": "Argentinos Juniors D",
+          "home_goals": 30,
+          "away_goals": 27,
+          "coverage": "planilla"
+        },
+        {
+          "home": "San Telmo B",
+          "away": "Club Comunicaciones C",
+          "home_goals": 23,
+          "away_goals": 21,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Ci.De.Co. B",
+          "away": "S.A.P.A.",
+          "home_goals": 41,
+          "away_goals": 22,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Temperley",
+          "away": "Club Deportivo Morón",
+          "home_goals": 33,
+          "away_goals": 26,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "date": "2026-04-19",
+      "matches": [
+        {
+          "home": "Defensores de Moreno",
+          "away": "San Telmo B",
+          "home_goals": 18,
+          "away_goals": 22,
+          "coverage": "reported"
+        },
+        {
+          "home": "Argentinos Juniors D",
+          "away": "Ci.De.Co. B",
+          "home_goals": 19,
+          "away_goals": 29,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Banfield B",
+          "away": "Municipalidad de Avellaneda",
+          "home_goals": 20,
+          "away_goals": 18,
+          "coverage": "planilla"
+        },
+        {
+          "home": "U.N.La.M.",
+          "away": "Club Deportivo Morón",
+          "home_goals": 18,
+          "away_goals": 29,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Villa Calzada",
+          "away": "Muñiz Handball B",
+          "home_goals": 22,
+          "away_goals": 25,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Deportivo Laferrere",
+          "away": "Temperley",
+          "home_goals": 40,
+          "away_goals": 28,
+          "coverage": "planilla"
+        },
+        {
+          "home": "S.A.P.A.",
+          "away": "A.A.C.F. Quilmes C",
+          "home_goals": 25,
+          "away_goals": 35,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Club Comunicaciones C",
+          "away": "C.S. y D. Defensores de Banfield",
+          "home_goals": 33,
+          "away_goals": 22,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "date": "2026-04-26",
+      "matches": [
+        {
+          "home": "C.S. y D. Defensores de Banfield",
+          "away": "Defensores de Moreno",
+          "home_goals": 27,
+          "away_goals": 22,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Temperley",
+          "away": "S.A.P.A.",
+          "home_goals": 33,
+          "away_goals": 28,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Muñiz Handball B",
+          "away": "Club Comunicaciones C",
+          "home_goals": 24,
+          "away_goals": 30,
+          "coverage": "planilla"
+        },
+        {
+          "home": "San Telmo B",
+          "away": "U.N.La.M.",
+          "home_goals": 36,
+          "away_goals": 15,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Avellaneda",
+          "away": "Villa Calzada",
+          "home_goals": 18,
+          "away_goals": 18,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Club Deportivo Morón",
+          "away": "Deportivo Laferrere",
+          "home_goals": 28,
+          "away_goals": 38,
+          "coverage": "planilla"
+        },
+        {
+          "home": "A.A.C.F. Quilmes C",
+          "away": "Argentinos Juniors D",
+          "home_goals": 24,
+          "away_goals": 27,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Ci.De.Co. B",
+          "away": "Banfield B",
+          "home_goals": 30,
+          "away_goals": 26,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "date": "2026-05-03",
+      "matches": [
+        {
+          "home": "Villa Calzada",
+          "away": "Ci.De.Co. B",
+          "home_goals": 28,
+          "away_goals": 27,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Argentinos Juniors D",
+          "away": "Temperley",
+          "home_goals": 34,
+          "away_goals": 28,
+          "coverage": "planilla"
+        },
+        {
+          "home": "U.N.La.M.",
+          "away": "Deportivo Laferrere",
+          "home_goals": 27,
+          "away_goals": 31,
+          "coverage": "planilla"
+        },
+        {
+          "home": "San Telmo B",
+          "away": "C.S. y D. Defensores de Banfield",
+          "home_goals": 28,
+          "away_goals": 22,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Club Comunicaciones C",
+          "away": "Municipalidad de Avellaneda",
+          "home_goals": 24,
+          "away_goals": 25,
+          "coverage": "planilla"
+        },
+        {
+          "home": "S.A.P.A.",
+          "away": "Club Deportivo Morón",
+          "home_goals": 26,
+          "away_goals": 30,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Banfield B",
+          "away": "A.A.C.F. Quilmes C",
+          "home_goals": 27,
+          "away_goals": 28,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Defensores de Moreno",
+          "away": "Muñiz Handball B",
+          "home_goals": 11,
+          "away_goals": 22,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "date": "2026-05-10",
+      "matches": [
+        {
+          "home": "Ci.De.Co. B",
+          "away": "Club Comunicaciones C",
+          "home_goals": 28,
+          "away_goals": 18,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Deportivo Laferrere",
+          "away": "S.A.P.A.",
+          "home_goals": 44,
+          "away_goals": 28,
+          "coverage": "planilla"
+        },
+        {
+          "home": "A.A.C.F. Quilmes C",
+          "away": "Villa Calzada",
+          "home_goals": 30,
+          "away_goals": 31,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Temperley",
+          "away": "Banfield B",
+          "home_goals": 33,
+          "away_goals": 23,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Avellaneda",
+          "away": "Defensores de Moreno",
+          "home_goals": 35,
+          "away_goals": 15,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Club Deportivo Morón",
+          "away": "Argentinos Juniors D",
+          "home_goals": 27,
+          "away_goals": 27,
+          "coverage": "planilla"
+        },
+        {
+          "home": "C.S. y D. Defensores de Banfield",
+          "away": "U.N.La.M.",
+          "home_goals": 29,
+          "away_goals": 31,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Muñiz Handball B",
+          "away": "San Telmo B",
+          "home_goals": 19,
+          "away_goals": 35,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "date": "2026-05-17",
+      "matches": [
+        {
+          "home": "Villa Calzada",
+          "away": "Temperley",
+          "home_goals": 33,
+          "away_goals": 31,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Banfield B",
+          "away": "Club Deportivo Morón",
+          "home_goals": 37,
+          "away_goals": 25,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Club Comunicaciones C",
+          "away": "A.A.C.F. Quilmes C",
+          "home_goals": 30,
+          "away_goals": 30,
+          "coverage": "planilla"
+        },
+        {
+          "home": "San Telmo B",
+          "away": "Municipalidad de Avellaneda",
+          "home_goals": 25,
+          "away_goals": 18,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Defensores de Moreno",
+          "away": "Ci.De.Co. B",
+          "home_goals": 20,
+          "away_goals": 33,
+          "coverage": "planilla"
+        },
+        {
+          "home": "U.N.La.M.",
+          "away": "S.A.P.A.",
+          "home_goals": 29,
+          "away_goals": 29,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Argentinos Juniors D",
+          "away": "Deportivo Laferrere",
+          "home_goals": 31,
+          "away_goals": 43,
+          "coverage": "planilla"
+        },
+        {
+          "home": "C.S. y D. Defensores de Banfield",
+          "away": "Muñiz Handball B",
+          "home_goals": 26,
+          "away_goals": 23,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 9,
+      "date": "2026-05-24",
+      "matches": [
+        {
+          "home": "Deportivo Laferrere",
+          "away": "Banfield B",
+          "home_goals": 34,
+          "away_goals": 33,
+          "coverage": "planilla"
+        },
+        {
+          "home": "S.A.P.A.",
+          "away": "Argentinos Juniors D",
+          "home_goals": 29,
+          "away_goals": 34,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Temperley",
+          "away": "Club Comunicaciones C",
+          "home_goals": 25,
+          "away_goals": 20,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Club Deportivo Morón",
+          "away": "Villa Calzada",
+          "home_goals": 21,
+          "away_goals": 35,
+          "coverage": "planilla"
+        },
+        {
+          "home": "A.A.C.F. Quilmes C",
+          "away": "Defensores de Moreno",
+          "home_goals": 31,
+          "away_goals": 24,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Muñiz Handball B",
+          "away": "U.N.La.M.",
+          "home_goals": 18,
+          "away_goals": 18,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Ci.De.Co. B",
+          "away": "San Telmo B",
+          "home_goals": 20,
+          "away_goals": 32,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Avellaneda",
+          "away": "C.S. y D. Defensores de Banfield",
+          "home_goals": 34,
+          "away_goals": 22,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 10,
+      "date": "2026-05-31",
+      "matches": [
+        {
+          "home": "San Telmo B",
+          "away": "A.A.C.F. Quilmes C",
+          "home_goals": 32,
+          "away_goals": 30,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Club Comunicaciones C",
+          "away": "Club Deportivo Morón",
+          "home_goals": 22,
+          "away_goals": 19,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Muñiz Handball B",
+          "away": "Municipalidad de Avellaneda",
+          "home_goals": 19,
+          "away_goals": 27,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Banfield B",
+          "away": "S.A.P.A.",
+          "home_goals": 31,
+          "away_goals": 31,
+          "coverage": "planilla"
+        },
+        {
+          "home": "U.N.La.M.",
+          "away": "Argentinos Juniors D",
+          "home_goals": 24,
+          "away_goals": 29,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Villa Calzada",
+          "away": "Deportivo Laferrere",
+          "home_goals": 30,
+          "away_goals": 30,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Defensores de Moreno",
+          "away": "Temperley",
+          "home_goals": 22,
+          "away_goals": 30,
+          "coverage": "planilla"
+        },
+        {
+          "home": "C.S. y D. Defensores de Banfield",
+          "away": "Ci.De.Co. B",
+          "home_goals": 28,
+          "away_goals": 28,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 11,
+      "date": "2026-06-07",
+      "matches": [
+        {
+          "home": "S.A.P.A.",
+          "away": "Villa Calzada",
+          "home_goals": 24,
+          "away_goals": 25,
+          "coverage": "planilla"
+        },
+        {
+          "home": "A.A.C.F. Quilmes C",
+          "away": "C.S. y D. Defensores de Banfield",
+          "home_goals": 26,
+          "away_goals": 26,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Ci.De.Co. B",
+          "away": "Muñiz Handball B",
+          "home_goals": 40,
+          "away_goals": 17,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Temperley",
+          "away": "San Telmo B",
+          "home_goals": 30,
+          "away_goals": 30,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Argentinos Juniors D",
+          "away": "Banfield B",
+          "home_goals": 28,
+          "away_goals": 27,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Deportivo Laferrere",
+          "away": "Club Comunicaciones C",
+          "home_goals": 27,
+          "away_goals": 32,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Avellaneda",
+          "away": "U.N.La.M.",
+          "home_goals": 30,
+          "away_goals": 19,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Club Deportivo Morón",
+          "away": "Defensores de Moreno",
+          "home_goals": 29,
+          "away_goals": 23,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 12,
+      "date": "2026-06-14",
+      "matches": [
+        {
+          "home": "Villa Calzada",
+          "away": "Argentinos Juniors D",
+          "home_goals": 26,
+          "away_goals": 23,
+          "coverage": "planilla"
+        },
+        {
+          "home": "U.N.La.M.",
+          "away": "Banfield B",
+          "home_goals": 24,
+          "away_goals": 25,
+          "coverage": "planilla"
+        },
+        {
+          "home": "San Telmo B",
+          "away": "Club Deportivo Morón",
+          "home_goals": 29,
+          "away_goals": 21,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Club Comunicaciones C",
+          "away": "S.A.P.A.",
+          "home_goals": 29,
+          "away_goals": 26,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Defensores de Moreno",
+          "away": "Deportivo Laferrere",
+          "home_goals": 29,
+          "away_goals": 34,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Muñiz Handball B",
+          "away": "A.A.C.F. Quilmes C",
+          "home_goals": 22,
+          "away_goals": 31,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Municipalidad de Avellaneda",
+          "away": "Ci.De.Co. B",
+          "home_goals": 18,
+          "away_goals": 23,
+          "coverage": "planilla"
+        },
+        {
+          "home": "C.S. y D. Defensores de Banfield",
+          "away": "Temperley",
+          "home_goals": 31,
+          "away_goals": 38,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 13,
+      "date": "2026-06-28",
+      "matches": [
+        {
+          "home": "S.A.P.A.",
+          "away": "Defensores de Moreno",
+          "home_goals": 32,
+          "away_goals": 34,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Temperley",
+          "away": "Muñiz Handball B",
+          "home_goals": 24,
+          "away_goals": 22,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Ci.De.Co. B",
+          "away": "U.N.La.M.",
+          "home_goals": 33,
+          "away_goals": 23,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Club Deportivo Morón",
+          "away": "C.S. y D. Defensores de Banfield",
+          "home_goals": 37,
+          "away_goals": 29,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Argentinos Juniors D",
+          "away": "Club Comunicaciones C",
+          "home_goals": 22,
+          "away_goals": 27,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Banfield B",
+          "away": "Villa Calzada",
+          "home_goals": 23,
+          "away_goals": 26,
+          "coverage": "planilla"
+        },
+        {
+          "home": "A.A.C.F. Quilmes C",
+          "away": "Municipalidad de Avellaneda",
+          "home_goals": 25,
+          "away_goals": 31,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Deportivo Laferrere",
+          "away": "San Telmo B",
+          "home_goals": 26,
+          "away_goals": 34,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 14,
+      "date": "2026-07-05",
+      "matches": [
+        {
+          "home": "Municipalidad de Avellaneda",
+          "away": "Temperley",
+          "home_goals": 28,
+          "away_goals": 21,
+          "coverage": "planilla"
+        },
+        {
+          "home": "San Telmo B",
+          "away": "S.A.P.A.",
+          "home_goals": 31,
+          "away_goals": 16,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Muñiz Handball B",
+          "away": "Club Deportivo Morón",
+          "home_goals": 18,
+          "away_goals": 20,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Club Comunicaciones C",
+          "away": "Banfield B",
+          "home_goals": 19,
+          "away_goals": 21,
+          "coverage": "planilla"
+        },
+        {
+          "home": "C.S. y D. Defensores de Banfield",
+          "away": "Deportivo Laferrere",
+          "home_goals": 28,
+          "away_goals": 35,
+          "coverage": "planilla"
+        },
+        {
+          "home": "U.N.La.M.",
+          "away": "Villa Calzada",
+          "home_goals": 27,
+          "away_goals": 30,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Defensores de Moreno",
+          "away": "Argentinos Juniors D",
+          "home_goals": 22,
+          "away_goals": 29,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Ci.De.Co. B",
+          "away": "A.A.C.F. Quilmes C",
+          "home_goals": 25,
+          "away_goals": 27,
+          "coverage": "planilla"
+        }
+      ]
+    },
+    {
+      "round": 15,
+      "date": "2026-07-12",
+      "matches": [
+        {
+          "home": "Banfield B",
+          "away": "Defensores de Moreno",
+          "home_goals": 41,
+          "away_goals": 32,
+          "coverage": "planilla"
+        },
+        {
+          "home": "A.A.C.F. Quilmes C",
+          "away": "U.N.La.M.",
+          "home_goals": 50,
+          "away_goals": 26,
+          "coverage": "planilla"
+        },
+        {
+          "home": "S.A.P.A.",
+          "away": "C.S. y D. Defensores de Banfield",
+          "home_goals": 32,
+          "away_goals": 32,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Temperley",
+          "away": "Ci.De.Co. B",
+          "home_goals": 24,
+          "away_goals": 24,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Deportivo Laferrere",
+          "away": "Muñiz Handball B",
+          "home_goals": 32,
+          "away_goals": 18,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Villa Calzada",
+          "away": "Club Comunicaciones C",
+          "home_goals": 29,
+          "away_goals": 29,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Argentinos Juniors D",
+          "away": "San Telmo B",
+          "home_goals": 19,
+          "away_goals": 31,
+          "coverage": "planilla"
+        },
+        {
+          "home": "Club Deportivo Morón",
+          "away": "Municipalidad de Avellaneda",
+          "home_goals": 19,
+          "away_goals": 24,
+          "coverage": "planilla"
+        }
+      ]
+    }
+  ],
+  "insights": {
+    "matches_counted": 120,
+    "suspended_matches": 0,
+    "clubs": [
+      {
+        "club": "San Telmo B",
+        "played": 15,
+        "won": 13,
+        "drawn": 1,
+        "lost": 1,
+        "points": 42,
+        "max_points": 45,
+        "points_effectiveness": 0.933,
+        "win_rate": 0.867,
+        "goals_for": 440,
+        "goals_against": 334,
+        "goal_difference": 106,
+        "goals_for_per_game": 29.33,
+        "goals_against_per_game": 22.27,
+        "home": {
+          "played": 8,
+          "points": 24,
+          "max_points": 24,
+          "points_effectiveness": 1.0,
+          "goals_for_per_game": 29.0,
+          "goals_against_per_game": 20.62
+        },
+        "away": {
+          "played": 7,
+          "points": 18,
+          "max_points": 21,
+          "points_effectiveness": 0.857,
+          "goals_for_per_game": 29.71,
+          "goals_against_per_game": 24.14
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 8,
+            "from_round": 3,
+            "to_round": 10
+          },
+          "longest_unbeaten": {
+            "length": 13,
+            "from_round": 3,
+            "to_round": 15
+          },
+          "longest_loss": {
+            "length": 1,
+            "from_round": 2,
+            "to_round": 2
+          },
+          "current_unbeaten": {
+            "length": 13,
+            "from_round": 3,
+            "to_round": 15
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "E",
+            "G",
+            "G",
+            "G",
+            "G"
+          ],
+          "points": 14,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 4,
+            "points": 10,
+            "max_points": 12,
+            "points_effectiveness": 0.833
+          },
+          "middle": {
+            "played": 6,
+            "points": 17,
+            "max_points": 18,
+            "points_effectiveness": 0.944
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 15,
+            "max_points": 15,
+            "points_effectiveness": 1.0
+          }
+        },
+        "biggest_win": {
+          "round": 5,
+          "opponent": "U.N.La.M.",
+          "location": "home",
+          "goals_for": 36,
+          "goals_against": 15,
+          "margin": 21
+        },
+        "biggest_loss": {
+          "round": 2,
+          "opponent": "Villa Calzada",
+          "location": "away",
+          "goals_for": 24,
+          "goals_against": 37,
+          "margin": -13
+        }
+      },
+      {
+        "club": "Villa Calzada",
+        "played": 15,
+        "won": 11,
+        "drawn": 3,
+        "lost": 1,
+        "points": 40,
+        "max_points": 45,
+        "points_effectiveness": 0.889,
+        "win_rate": 0.733,
+        "goals_for": 430,
+        "goals_against": 372,
+        "goal_difference": 58,
+        "goals_for_per_game": 28.67,
+        "goals_against_per_game": 24.8,
+        "home": {
+          "played": 7,
+          "points": 17,
+          "max_points": 21,
+          "points_effectiveness": 0.81,
+          "goals_for_per_game": 29.29,
+          "goals_against_per_game": 27.0
+        },
+        "away": {
+          "played": 8,
+          "points": 23,
+          "max_points": 24,
+          "points_effectiveness": 0.958,
+          "goals_for_per_game": 28.12,
+          "goals_against_per_game": 22.88
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 4,
+            "from_round": 6,
+            "to_round": 9
+          },
+          "longest_unbeaten": {
+            "length": 11,
+            "from_round": 5,
+            "to_round": 15
+          },
+          "longest_loss": {
+            "length": 1,
+            "from_round": 4,
+            "to_round": 4
+          },
+          "current_unbeaten": {
+            "length": 11,
+            "from_round": 5,
+            "to_round": 15
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "G",
+            "G",
+            "G",
+            "G",
+            "E"
+          ],
+          "points": 14,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 4,
+            "points": 10,
+            "max_points": 12,
+            "points_effectiveness": 0.833
+          },
+          "middle": {
+            "played": 6,
+            "points": 17,
+            "max_points": 18,
+            "points_effectiveness": 0.944
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 13,
+            "max_points": 15,
+            "points_effectiveness": 0.867
+          }
+        },
+        "biggest_win": {
+          "round": 9,
+          "opponent": "Club Deportivo Morón",
+          "location": "away",
+          "goals_for": 35,
+          "goals_against": 21,
+          "margin": 14
+        },
+        "biggest_loss": {
+          "round": 4,
+          "opponent": "Muñiz Handball B",
+          "location": "home",
+          "goals_for": 22,
+          "goals_against": 25,
+          "margin": -3
+        }
+      },
+      {
+        "club": "Municipalidad de Avellaneda",
+        "played": 15,
+        "won": 11,
+        "drawn": 1,
+        "lost": 3,
+        "points": 38,
+        "max_points": 45,
+        "points_effectiveness": 0.844,
+        "win_rate": 0.733,
+        "goals_for": 399,
+        "goals_against": 330,
+        "goal_difference": 69,
+        "goals_for_per_game": 26.6,
+        "goals_against_per_game": 22.0,
+        "home": {
+          "played": 8,
+          "points": 21,
+          "max_points": 24,
+          "points_effectiveness": 0.875,
+          "goals_for_per_game": 27.75,
+          "goals_against_per_game": 21.38
+        },
+        "away": {
+          "played": 7,
+          "points": 17,
+          "max_points": 21,
+          "points_effectiveness": 0.81,
+          "goals_for_per_game": 25.29,
+          "goals_against_per_game": 22.71
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 3,
+            "from_round": 1,
+            "to_round": 3
+          },
+          "longest_unbeaten": {
+            "length": 3,
+            "from_round": 1,
+            "to_round": 3
+          },
+          "longest_loss": {
+            "length": 1,
+            "from_round": 4,
+            "to_round": 4
+          },
+          "current_unbeaten": {
+            "length": 3,
+            "from_round": 13,
+            "to_round": 15
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "G",
+            "P",
+            "G",
+            "G",
+            "G"
+          ],
+          "points": 13,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 4,
+            "points": 7,
+            "max_points": 12,
+            "points_effectiveness": 0.583
+          },
+          "middle": {
+            "played": 6,
+            "points": 16,
+            "max_points": 18,
+            "points_effectiveness": 0.889
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 15,
+            "max_points": 15,
+            "points_effectiveness": 1.0
+          }
+        },
+        "biggest_win": {
+          "round": 7,
+          "opponent": "Defensores de Moreno",
+          "location": "home",
+          "goals_for": 35,
+          "goals_against": 15,
+          "margin": 20
+        },
+        "biggest_loss": {
+          "round": 8,
+          "opponent": "San Telmo B",
+          "location": "away",
+          "goals_for": 18,
+          "goals_against": 25,
+          "margin": -7
+        }
+      },
+      {
+        "club": "Deportivo Laferrere",
+        "played": 15,
+        "won": 11,
+        "drawn": 1,
+        "lost": 3,
+        "points": 38,
+        "max_points": 45,
+        "points_effectiveness": 0.844,
+        "win_rate": 0.733,
+        "goals_for": 522,
+        "goals_against": 447,
+        "goal_difference": 75,
+        "goals_for_per_game": 34.8,
+        "goals_against_per_game": 29.8,
+        "home": {
+          "played": 7,
+          "points": 17,
+          "max_points": 21,
+          "points_effectiveness": 0.81,
+          "goals_for_per_game": 34.43,
+          "goals_against_per_game": 29.43
+        },
+        "away": {
+          "played": 8,
+          "points": 21,
+          "max_points": 24,
+          "points_effectiveness": 0.875,
+          "goals_for_per_game": 35.12,
+          "goals_against_per_game": 30.12
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 8,
+            "from_round": 2,
+            "to_round": 9
+          },
+          "longest_unbeaten": {
+            "length": 9,
+            "from_round": 2,
+            "to_round": 10
+          },
+          "longest_loss": {
+            "length": 1,
+            "from_round": 1,
+            "to_round": 1
+          },
+          "current_unbeaten": {
+            "length": 2,
+            "from_round": 14,
+            "to_round": 15
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "P",
+            "G",
+            "P",
+            "G",
+            "G"
+          ],
+          "points": 11,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 4,
+            "points": 7,
+            "max_points": 12,
+            "points_effectiveness": 0.583
+          },
+          "middle": {
+            "played": 6,
+            "points": 16,
+            "max_points": 18,
+            "points_effectiveness": 0.889
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 15,
+            "max_points": 15,
+            "points_effectiveness": 1.0
+          }
+        },
+        "biggest_win": {
+          "round": 7,
+          "opponent": "S.A.P.A.",
+          "location": "home",
+          "goals_for": 44,
+          "goals_against": 28,
+          "margin": 16
+        },
+        "biggest_loss": {
+          "round": 13,
+          "opponent": "San Telmo B",
+          "location": "home",
+          "goals_for": 26,
+          "goals_against": 34,
+          "margin": -8
+        }
+      },
+      {
+        "club": "Ci.De.Co. B",
+        "played": 15,
+        "won": 9,
+        "drawn": 2,
+        "lost": 4,
+        "points": 35,
+        "max_points": 45,
+        "points_effectiveness": 0.778,
+        "win_rate": 0.6,
+        "goals_for": 439,
+        "goals_against": 363,
+        "goal_difference": 76,
+        "goals_for_per_game": 29.27,
+        "goals_against_per_game": 24.2,
+        "home": {
+          "played": 8,
+          "points": 20,
+          "max_points": 24,
+          "points_effectiveness": 0.833,
+          "goals_for_per_game": 30.25,
+          "goals_against_per_game": 23.5
+        },
+        "away": {
+          "played": 7,
+          "points": 15,
+          "max_points": 21,
+          "points_effectiveness": 0.714,
+          "goals_for_per_game": 28.14,
+          "goals_against_per_game": 25.0
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 3,
+            "from_round": 3,
+            "to_round": 5
+          },
+          "longest_unbeaten": {
+            "length": 4,
+            "from_round": 10,
+            "to_round": 13
+          },
+          "longest_loss": {
+            "length": 1,
+            "from_round": 2,
+            "to_round": 2
+          },
+          "current_unbeaten": {
+            "length": 1,
+            "from_round": 15,
+            "to_round": 15
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "G",
+            "G",
+            "G",
+            "P",
+            "E"
+          ],
+          "points": 12,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 4,
+            "points": 6,
+            "max_points": 12,
+            "points_effectiveness": 0.5
+          },
+          "middle": {
+            "played": 6,
+            "points": 15,
+            "max_points": 18,
+            "points_effectiveness": 0.833
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 14,
+            "max_points": 15,
+            "points_effectiveness": 0.933
+          }
+        },
+        "biggest_win": {
+          "round": 11,
+          "opponent": "Muñiz Handball B",
+          "location": "home",
+          "goals_for": 40,
+          "goals_against": 17,
+          "margin": 23
+        },
+        "biggest_loss": {
+          "round": 9,
+          "opponent": "San Telmo B",
+          "location": "home",
+          "goals_for": 20,
+          "goals_against": 32,
+          "margin": -12
+        }
+      },
+      {
+        "club": "Temperley",
+        "played": 15,
+        "won": 8,
+        "drawn": 2,
+        "lost": 5,
+        "points": 33,
+        "max_points": 45,
+        "points_effectiveness": 0.733,
+        "win_rate": 0.533,
+        "goals_for": 438,
+        "goals_against": 416,
+        "goal_difference": 22,
+        "goals_for_per_game": 29.2,
+        "goals_against_per_game": 27.73,
+        "home": {
+          "played": 7,
+          "points": 19,
+          "max_points": 21,
+          "points_effectiveness": 0.905,
+          "goals_for_per_game": 28.86,
+          "goals_against_per_game": 24.71
+        },
+        "away": {
+          "played": 8,
+          "points": 14,
+          "max_points": 24,
+          "points_effectiveness": 0.583,
+          "goals_for_per_game": 29.5,
+          "goals_against_per_game": 30.38
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 2,
+            "from_round": 2,
+            "to_round": 3
+          },
+          "longest_unbeaten": {
+            "length": 5,
+            "from_round": 9,
+            "to_round": 13
+          },
+          "longest_loss": {
+            "length": 1,
+            "from_round": 1,
+            "to_round": 1
+          },
+          "current_unbeaten": {
+            "length": 1,
+            "from_round": 15,
+            "to_round": 15
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "E",
+            "G",
+            "G",
+            "P",
+            "E"
+          ],
+          "points": 11,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 5,
+            "points": 7,
+            "max_points": 15,
+            "points_effectiveness": 0.467
+          },
+          "middle": {
+            "played": 5,
+            "points": 11,
+            "max_points": 15,
+            "points_effectiveness": 0.733
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 15,
+            "max_points": 15,
+            "points_effectiveness": 1.0
+          }
+        },
+        "biggest_win": {
+          "round": 7,
+          "opponent": "Banfield B",
+          "location": "home",
+          "goals_for": 33,
+          "goals_against": 23,
+          "margin": 10
+        },
+        "biggest_loss": {
+          "round": 4,
+          "opponent": "Deportivo Laferrere",
+          "location": "away",
+          "goals_for": 28,
+          "goals_against": 40,
+          "margin": -12
+        }
+      },
+      {
+        "club": "Club Comunicaciones C",
+        "played": 15,
+        "won": 8,
+        "drawn": 2,
+        "lost": 5,
+        "points": 33,
+        "max_points": 45,
+        "points_effectiveness": 0.733,
+        "win_rate": 0.533,
+        "goals_for": 379,
+        "goals_against": 356,
+        "goal_difference": 23,
+        "goals_for_per_game": 25.27,
+        "goals_against_per_game": 23.73,
+        "home": {
+          "played": 8,
+          "points": 19,
+          "max_points": 24,
+          "points_effectiveness": 0.792,
+          "goals_for_per_game": 25.25,
+          "goals_against_per_game": 22.25
+        },
+        "away": {
+          "played": 7,
+          "points": 14,
+          "max_points": 21,
+          "points_effectiveness": 0.667,
+          "goals_for_per_game": 25.29,
+          "goals_against_per_game": 25.43
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 4,
+            "from_round": 10,
+            "to_round": 13
+          },
+          "longest_unbeaten": {
+            "length": 4,
+            "from_round": 10,
+            "to_round": 13
+          },
+          "longest_loss": {
+            "length": 2,
+            "from_round": 6,
+            "to_round": 7
+          },
+          "current_unbeaten": {
+            "length": 1,
+            "from_round": 15,
+            "to_round": 15
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "G",
+            "G",
+            "G",
+            "P",
+            "E"
+          ],
+          "points": 12,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 5,
+            "points": 8,
+            "max_points": 15,
+            "points_effectiveness": 0.533
+          },
+          "middle": {
+            "played": 5,
+            "points": 10,
+            "max_points": 15,
+            "points_effectiveness": 0.667
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 15,
+            "max_points": 15,
+            "points_effectiveness": 1.0
+          }
+        },
+        "biggest_win": {
+          "round": 4,
+          "opponent": "C.S. y D. Defensores de Banfield",
+          "location": "home",
+          "goals_for": 33,
+          "goals_against": 22,
+          "margin": 11
+        },
+        "biggest_loss": {
+          "round": 7,
+          "opponent": "Ci.De.Co. B",
+          "location": "away",
+          "goals_for": 18,
+          "goals_against": 28,
+          "margin": -10
+        }
+      },
+      {
+        "club": "A.A.C.F. Quilmes C",
+        "played": 15,
+        "won": 7,
+        "drawn": 2,
+        "lost": 6,
+        "points": 31,
+        "max_points": 45,
+        "points_effectiveness": 0.689,
+        "win_rate": 0.467,
+        "goals_for": 462,
+        "goals_against": 428,
+        "goal_difference": 34,
+        "goals_for_per_game": 30.8,
+        "goals_against_per_game": 28.53,
+        "home": {
+          "played": 8,
+          "points": 15,
+          "max_points": 24,
+          "points_effectiveness": 0.625,
+          "goals_for_per_game": 32.0,
+          "goals_against_per_game": 29.75
+        },
+        "away": {
+          "played": 7,
+          "points": 16,
+          "max_points": 21,
+          "points_effectiveness": 0.762,
+          "goals_for_per_game": 29.43,
+          "goals_against_per_game": 27.14
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 2,
+            "from_round": 14,
+            "to_round": 15
+          },
+          "longest_unbeaten": {
+            "length": 2,
+            "from_round": 8,
+            "to_round": 9
+          },
+          "longest_loss": {
+            "length": 2,
+            "from_round": 2,
+            "to_round": 3
+          },
+          "current_unbeaten": {
+            "length": 2,
+            "from_round": 14,
+            "to_round": 15
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "E",
+            "G",
+            "P",
+            "G",
+            "G"
+          ],
+          "points": 12,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 5,
+            "points": 7,
+            "max_points": 15,
+            "points_effectiveness": 0.467
+          },
+          "middle": {
+            "played": 5,
+            "points": 10,
+            "max_points": 15,
+            "points_effectiveness": 0.667
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 14,
+            "max_points": 15,
+            "points_effectiveness": 0.933
+          }
+        },
+        "biggest_win": {
+          "round": 15,
+          "opponent": "U.N.La.M.",
+          "location": "home",
+          "goals_for": 50,
+          "goals_against": 26,
+          "margin": 24
+        },
+        "biggest_loss": {
+          "round": 13,
+          "opponent": "Municipalidad de Avellaneda",
+          "location": "home",
+          "goals_for": 25,
+          "goals_against": 31,
+          "margin": -6
+        }
+      },
+      {
+        "club": "Argentinos Juniors D",
+        "played": 15,
+        "won": 6,
+        "drawn": 1,
+        "lost": 8,
+        "points": 28,
+        "max_points": 45,
+        "points_effectiveness": 0.622,
+        "win_rate": 0.4,
+        "goals_for": 403,
+        "goals_against": 429,
+        "goal_difference": -26,
+        "goals_for_per_game": 26.87,
+        "goals_against_per_game": 28.6,
+        "home": {
+          "played": 7,
+          "points": 11,
+          "max_points": 21,
+          "points_effectiveness": 0.524,
+          "goals_for_per_game": 26.0,
+          "goals_against_per_game": 31.29
+        },
+        "away": {
+          "played": 8,
+          "points": 17,
+          "max_points": 24,
+          "points_effectiveness": 0.708,
+          "goals_for_per_game": 27.62,
+          "goals_against_per_game": 26.25
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 3,
+            "from_round": 9,
+            "to_round": 11
+          },
+          "longest_unbeaten": {
+            "length": 3,
+            "from_round": 5,
+            "to_round": 7
+          },
+          "longest_loss": {
+            "length": 4,
+            "from_round": 1,
+            "to_round": 4
+          },
+          "current_unbeaten": {
+            "length": 0,
+            "from_round": null,
+            "to_round": null
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "G",
+            "P",
+            "P",
+            "G",
+            "P"
+          ],
+          "points": 9,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 5,
+            "points": 5,
+            "max_points": 15,
+            "points_effectiveness": 0.333
+          },
+          "middle": {
+            "played": 5,
+            "points": 12,
+            "max_points": 15,
+            "points_effectiveness": 0.8
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 11,
+            "max_points": 15,
+            "points_effectiveness": 0.733
+          }
+        },
+        "biggest_win": {
+          "round": 14,
+          "opponent": "Defensores de Moreno",
+          "location": "away",
+          "goals_for": 29,
+          "goals_against": 22,
+          "margin": 7
+        },
+        "biggest_loss": {
+          "round": 8,
+          "opponent": "Deportivo Laferrere",
+          "location": "home",
+          "goals_for": 31,
+          "goals_against": 43,
+          "margin": -12
+        }
+      },
+      {
+        "club": "Banfield B",
+        "played": 15,
+        "won": 6,
+        "drawn": 1,
+        "lost": 8,
+        "points": 28,
+        "max_points": 45,
+        "points_effectiveness": 0.622,
+        "win_rate": 0.4,
+        "goals_for": 408,
+        "goals_against": 399,
+        "goal_difference": 9,
+        "goals_for_per_game": 27.2,
+        "goals_against_per_game": 26.6,
+        "home": {
+          "played": 7,
+          "points": 16,
+          "max_points": 21,
+          "points_effectiveness": 0.762,
+          "goals_for_per_game": 29.86,
+          "goals_against_per_game": 25.71
+        },
+        "away": {
+          "played": 8,
+          "points": 12,
+          "max_points": 24,
+          "points_effectiveness": 0.5,
+          "goals_for_per_game": 24.88,
+          "goals_against_per_game": 27.38
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 2,
+            "from_round": 14,
+            "to_round": 15
+          },
+          "longest_unbeaten": {
+            "length": 2,
+            "from_round": 14,
+            "to_round": 15
+          },
+          "longest_loss": {
+            "length": 3,
+            "from_round": 5,
+            "to_round": 7
+          },
+          "current_unbeaten": {
+            "length": 2,
+            "from_round": 14,
+            "to_round": 15
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "P",
+            "G",
+            "P",
+            "G",
+            "G"
+          ],
+          "points": 11,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 5,
+            "points": 7,
+            "max_points": 15,
+            "points_effectiveness": 0.467
+          },
+          "middle": {
+            "played": 5,
+            "points": 9,
+            "max_points": 15,
+            "points_effectiveness": 0.6
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 12,
+            "max_points": 15,
+            "points_effectiveness": 0.8
+          }
+        },
+        "biggest_win": {
+          "round": 8,
+          "opponent": "Club Deportivo Morón",
+          "location": "home",
+          "goals_for": 37,
+          "goals_against": 25,
+          "margin": 12
+        },
+        "biggest_loss": {
+          "round": 7,
+          "opponent": "Temperley",
+          "location": "away",
+          "goals_for": 23,
+          "goals_against": 33,
+          "margin": -10
+        }
+      },
+      {
+        "club": "Club Deportivo Morón",
+        "played": 15,
+        "won": 6,
+        "drawn": 1,
+        "lost": 8,
+        "points": 28,
+        "max_points": 45,
+        "points_effectiveness": 0.622,
+        "win_rate": 0.4,
+        "goals_for": 383,
+        "goals_against": 409,
+        "goal_difference": -26,
+        "goals_for_per_game": 25.53,
+        "goals_against_per_game": 27.27,
+        "home": {
+          "played": 7,
+          "points": 14,
+          "max_points": 21,
+          "points_effectiveness": 0.667,
+          "goals_for_per_game": 27.14,
+          "goals_against_per_game": 28.71
+        },
+        "away": {
+          "played": 8,
+          "points": 14,
+          "max_points": 24,
+          "points_effectiveness": 0.583,
+          "goals_for_per_game": 24.12,
+          "goals_against_per_game": 26.0
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 2,
+            "from_round": 13,
+            "to_round": 14
+          },
+          "longest_unbeaten": {
+            "length": 2,
+            "from_round": 6,
+            "to_round": 7
+          },
+          "longest_loss": {
+            "length": 3,
+            "from_round": 8,
+            "to_round": 10
+          },
+          "current_unbeaten": {
+            "length": 0,
+            "from_round": null,
+            "to_round": null
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "G",
+            "P",
+            "G",
+            "G",
+            "P"
+          ],
+          "points": 11,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 5,
+            "points": 5,
+            "max_points": 15,
+            "points_effectiveness": 0.333
+          },
+          "middle": {
+            "played": 5,
+            "points": 8,
+            "max_points": 15,
+            "points_effectiveness": 0.533
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 15,
+            "max_points": 15,
+            "points_effectiveness": 1.0
+          }
+        },
+        "biggest_win": {
+          "round": 4,
+          "opponent": "U.N.La.M.",
+          "location": "away",
+          "goals_for": 29,
+          "goals_against": 18,
+          "margin": 11
+        },
+        "biggest_loss": {
+          "round": 9,
+          "opponent": "Villa Calzada",
+          "location": "home",
+          "goals_for": 21,
+          "goals_against": 35,
+          "margin": -14
+        }
+      },
+      {
+        "club": "Muñiz Handball B",
+        "played": 15,
+        "won": 5,
+        "drawn": 1,
+        "lost": 9,
+        "points": 26,
+        "max_points": 45,
+        "points_effectiveness": 0.578,
+        "win_rate": 0.333,
+        "goals_for": 333,
+        "goals_against": 393,
+        "goal_difference": -60,
+        "goals_for_per_game": 22.2,
+        "goals_against_per_game": 26.2,
+        "home": {
+          "played": 8,
+          "points": 13,
+          "max_points": 24,
+          "points_effectiveness": 0.542,
+          "goals_for_per_game": 21.5,
+          "goals_against_per_game": 26.12
+        },
+        "away": {
+          "played": 7,
+          "points": 13,
+          "max_points": 21,
+          "points_effectiveness": 0.619,
+          "goals_for_per_game": 23.0,
+          "goals_against_per_game": 26.29
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 4,
+            "from_round": 1,
+            "to_round": 4
+          },
+          "longest_unbeaten": {
+            "length": 4,
+            "from_round": 1,
+            "to_round": 4
+          },
+          "longest_loss": {
+            "length": 6,
+            "from_round": 10,
+            "to_round": 15
+          },
+          "current_unbeaten": {
+            "length": 0,
+            "from_round": null,
+            "to_round": null
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ],
+          "points": 5,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 5,
+            "points": 7,
+            "max_points": 15,
+            "points_effectiveness": 0.467
+          },
+          "middle": {
+            "played": 6,
+            "points": 10,
+            "max_points": 18,
+            "points_effectiveness": 0.556
+          },
+          "bottom_five": {
+            "played": 4,
+            "points": 9,
+            "max_points": 12,
+            "points_effectiveness": 0.75
+          }
+        },
+        "biggest_win": {
+          "round": 6,
+          "opponent": "Defensores de Moreno",
+          "location": "away",
+          "goals_for": 22,
+          "goals_against": 11,
+          "margin": 11
+        },
+        "biggest_loss": {
+          "round": 11,
+          "opponent": "Ci.De.Co. B",
+          "location": "away",
+          "goals_for": 17,
+          "goals_against": 40,
+          "margin": -23
+        }
+      },
+      {
+        "club": "C.S. y D. Defensores de Banfield",
+        "played": 15,
+        "won": 3,
+        "drawn": 3,
+        "lost": 9,
+        "points": 24,
+        "max_points": 45,
+        "points_effectiveness": 0.533,
+        "win_rate": 0.2,
+        "goals_for": 390,
+        "goals_against": 452,
+        "goal_difference": -62,
+        "goals_for_per_game": 26.0,
+        "goals_against_per_game": 30.13,
+        "home": {
+          "played": 8,
+          "points": 15,
+          "max_points": 24,
+          "points_effectiveness": 0.625,
+          "goals_for_per_game": 27.12,
+          "goals_against_per_game": 29.0
+        },
+        "away": {
+          "played": 7,
+          "points": 9,
+          "max_points": 21,
+          "points_effectiveness": 0.429,
+          "goals_for_per_game": 24.71,
+          "goals_against_per_game": 31.43
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 1,
+            "from_round": 1,
+            "to_round": 1
+          },
+          "longest_unbeaten": {
+            "length": 2,
+            "from_round": 10,
+            "to_round": 11
+          },
+          "longest_loss": {
+            "length": 3,
+            "from_round": 2,
+            "to_round": 4
+          },
+          "current_unbeaten": {
+            "length": 1,
+            "from_round": 15,
+            "to_round": 15
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "E",
+            "P",
+            "P",
+            "P",
+            "E"
+          ],
+          "points": 7,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 5,
+            "points": 6,
+            "max_points": 15,
+            "points_effectiveness": 0.4
+          },
+          "middle": {
+            "played": 6,
+            "points": 9,
+            "max_points": 18,
+            "points_effectiveness": 0.5
+          },
+          "bottom_five": {
+            "played": 4,
+            "points": 9,
+            "max_points": 12,
+            "points_effectiveness": 0.75
+          }
+        },
+        "biggest_win": {
+          "round": 5,
+          "opponent": "Defensores de Moreno",
+          "location": "home",
+          "goals_for": 27,
+          "goals_against": 22,
+          "margin": 5
+        },
+        "biggest_loss": {
+          "round": 9,
+          "opponent": "Municipalidad de Avellaneda",
+          "location": "away",
+          "goals_for": 22,
+          "goals_against": 34,
+          "margin": -12
+        }
+      },
+      {
+        "club": "Defensores de Moreno",
+        "played": 15,
+        "won": 2,
+        "drawn": 0,
+        "lost": 13,
+        "points": 19,
+        "max_points": 45,
+        "points_effectiveness": 0.422,
+        "win_rate": 0.133,
+        "goals_for": 338,
+        "goals_against": 443,
+        "goal_difference": -105,
+        "goals_for_per_game": 22.53,
+        "goals_against_per_game": 29.53,
+        "home": {
+          "played": 8,
+          "points": 10,
+          "max_points": 24,
+          "points_effectiveness": 0.417,
+          "goals_for_per_game": 21.25,
+          "goals_against_per_game": 28.25
+        },
+        "away": {
+          "played": 7,
+          "points": 9,
+          "max_points": 21,
+          "points_effectiveness": 0.429,
+          "goals_for_per_game": 24.0,
+          "goals_against_per_game": 31.0
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 1,
+            "from_round": 3,
+            "to_round": 3
+          },
+          "longest_unbeaten": {
+            "length": 1,
+            "from_round": 3,
+            "to_round": 3
+          },
+          "longest_loss": {
+            "length": 9,
+            "from_round": 4,
+            "to_round": 12
+          },
+          "current_unbeaten": {
+            "length": 0,
+            "from_round": null,
+            "to_round": null
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "P",
+            "P",
+            "G",
+            "P",
+            "P"
+          ],
+          "points": 7,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 5,
+            "points": 5,
+            "max_points": 15,
+            "points_effectiveness": 0.333
+          },
+          "middle": {
+            "played": 6,
+            "points": 6,
+            "max_points": 18,
+            "points_effectiveness": 0.333
+          },
+          "bottom_five": {
+            "played": 4,
+            "points": 8,
+            "max_points": 12,
+            "points_effectiveness": 0.667
+          }
+        },
+        "biggest_win": {
+          "round": 13,
+          "opponent": "S.A.P.A.",
+          "location": "away",
+          "goals_for": 34,
+          "goals_against": 32,
+          "margin": 2
+        },
+        "biggest_loss": {
+          "round": 7,
+          "opponent": "Municipalidad de Avellaneda",
+          "location": "away",
+          "goals_for": 15,
+          "goals_against": 35,
+          "margin": -20
+        }
+      },
+      {
+        "club": "U.N.La.M.",
+        "played": 15,
+        "won": 1,
+        "drawn": 2,
+        "lost": 12,
+        "points": 19,
+        "max_points": 45,
+        "points_effectiveness": 0.422,
+        "win_rate": 0.067,
+        "goals_for": 348,
+        "goals_against": 451,
+        "goal_difference": -103,
+        "goals_for_per_game": 23.2,
+        "goals_against_per_game": 30.07,
+        "home": {
+          "played": 7,
+          "points": 8,
+          "max_points": 21,
+          "points_effectiveness": 0.381,
+          "goals_for_per_game": 24.71,
+          "goals_against_per_game": 29.14
+        },
+        "away": {
+          "played": 8,
+          "points": 11,
+          "max_points": 24,
+          "points_effectiveness": 0.458,
+          "goals_for_per_game": 21.88,
+          "goals_against_per_game": 30.88
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 1,
+            "from_round": 7,
+            "to_round": 7
+          },
+          "longest_unbeaten": {
+            "length": 3,
+            "from_round": 7,
+            "to_round": 9
+          },
+          "longest_loss": {
+            "length": 6,
+            "from_round": 1,
+            "to_round": 6
+          },
+          "current_unbeaten": {
+            "length": 0,
+            "from_round": null,
+            "to_round": null
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "P"
+          ],
+          "points": 5,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 5,
+            "points": 5,
+            "max_points": 15,
+            "points_effectiveness": 0.333
+          },
+          "middle": {
+            "played": 6,
+            "points": 6,
+            "max_points": 18,
+            "points_effectiveness": 0.333
+          },
+          "bottom_five": {
+            "played": 4,
+            "points": 8,
+            "max_points": 12,
+            "points_effectiveness": 0.667
+          }
+        },
+        "biggest_win": {
+          "round": 7,
+          "opponent": "C.S. y D. Defensores de Banfield",
+          "location": "away",
+          "goals_for": 31,
+          "goals_against": 29,
+          "margin": 2
+        },
+        "biggest_loss": {
+          "round": 15,
+          "opponent": "A.A.C.F. Quilmes C",
+          "location": "away",
+          "goals_for": 26,
+          "goals_against": 50,
+          "margin": -24
+        }
+      },
+      {
+        "club": "S.A.P.A.",
+        "played": 15,
+        "won": 0,
+        "drawn": 3,
+        "lost": 12,
+        "points": 18,
+        "max_points": 45,
+        "points_effectiveness": 0.4,
+        "win_rate": 0.0,
+        "goals_for": 401,
+        "goals_against": 491,
+        "goal_difference": -90,
+        "goals_for_per_game": 26.73,
+        "goals_against_per_game": 32.73,
+        "home": {
+          "played": 7,
+          "points": 8,
+          "max_points": 21,
+          "points_effectiveness": 0.381,
+          "goals_for_per_game": 27.86,
+          "goals_against_per_game": 32.0
+        },
+        "away": {
+          "played": 8,
+          "points": 10,
+          "max_points": 24,
+          "points_effectiveness": 0.417,
+          "goals_for_per_game": 25.75,
+          "goals_against_per_game": 33.38
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 0,
+            "from_round": null,
+            "to_round": null
+          },
+          "longest_unbeaten": {
+            "length": 1,
+            "from_round": 8,
+            "to_round": 8
+          },
+          "longest_loss": {
+            "length": 7,
+            "from_round": 1,
+            "to_round": 7
+          },
+          "current_unbeaten": {
+            "length": 1,
+            "from_round": 15,
+            "to_round": 15
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "P",
+            "P",
+            "P",
+            "P",
+            "E"
+          ],
+          "points": 6,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 5,
+            "points": 5,
+            "max_points": 15,
+            "points_effectiveness": 0.333
+          },
+          "middle": {
+            "played": 6,
+            "points": 7,
+            "max_points": 18,
+            "points_effectiveness": 0.389
+          },
+          "bottom_five": {
+            "played": 4,
+            "points": 6,
+            "max_points": 12,
+            "points_effectiveness": 0.5
+          }
+        },
+        "biggest_win": null,
+        "biggest_loss": {
+          "round": 3,
+          "opponent": "Ci.De.Co. B",
+          "location": "away",
+          "goals_for": 22,
+          "goals_against": 41,
+          "margin": -19
+        }
+      }
+    ],
+    "records": [
+      {
+        "key": "longest_unbeaten",
+        "label": "Mayor racha sin perder",
+        "club": "San Telmo B",
+        "value": 13,
+        "unit": "partidos",
+        "detail": "Fechas 3 a 15"
+      },
+      {
+        "key": "longest_win",
+        "label": "Mayor racha de victorias",
+        "club": "San Telmo B",
+        "value": 8,
+        "unit": "partidos",
+        "detail": "Fechas 3 a 10"
+      },
+      {
+        "key": "longest_loss",
+        "label": "Mayor racha de derrotas",
+        "club": "Defensores de Moreno",
+        "value": 9,
+        "unit": "partidos",
+        "detail": "Fechas 4 a 12"
+      },
+      {
+        "key": "best_attack",
+        "label": "Mayor promedio de goles a favor",
+        "club": "Deportivo Laferrere",
+        "value": 34.8,
+        "unit": "goles por partido",
+        "detail": "522 goles en 15 partidos"
+      },
+      {
+        "key": "best_defense",
+        "label": "Menor promedio de goles en contra",
+        "club": "Municipalidad de Avellaneda",
+        "value": 22.0,
+        "unit": "goles por partido",
+        "detail": "330 goles en contra en 15 partidos"
+      },
+      {
+        "key": "best_home",
+        "label": "Mejor efectividad como local",
+        "club": "San Telmo B",
+        "value": 1.0,
+        "unit": "de los puntos",
+        "detail": "24 de 24 puntos como local"
+      },
+      {
+        "key": "best_away",
+        "label": "Mejor efectividad como visitante",
+        "club": "Villa Calzada",
+        "value": 0.958,
+        "unit": "de los puntos",
+        "detail": "23 de 24 puntos como visitante"
+      },
+      {
+        "key": "best_form",
+        "label": "Mejor presente en los últimos 5",
+        "club": "Villa Calzada",
+        "value": 14,
+        "unit": "puntos",
+        "detail": "GGGGE"
+      },
+      {
+        "key": "perfect_vs_bottom_five",
+        "label": "Sin ceder puntos con los cinco últimos",
+        "clubs": [
+          "San Telmo B",
+          "Municipalidad de Avellaneda",
+          "Deportivo Laferrere",
+          "Temperley",
+          "Club Comunicaciones C",
+          "Club Deportivo Morón"
+        ],
+        "value": 6,
+        "unit": "equipos",
+        "detail": "Puntaje ideal contra el grupo inferior de la tabla"
+      }
+    ]
+  }
+}

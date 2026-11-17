@@ -2,8 +2,13 @@ import { Fragment, useEffect, useRef, useState, useMemo, startTransition } from 
 import { decodePublicReportCatalog, reportFileName, reportLabel, type PublicReportCatalog, type PublicReportCatalogEntry } from './catalog'
 import { decodePublicReport, type PhaseStats, type PlayerPublic, type PossessionSummary, type PublicReport } from './projection'
 import { Timeline } from './Timeline'
-import { Tournament } from './Tournament'
 import { decodePublicTournament, type PublicTournament } from './tournamentProjection'
+import { decodePublicCompetition, decodePublicForecast, decodePublicTournamentCatalog, type PublicCompetition, type PublicForecast, type PublicTournamentCatalog } from './publicCompetitions'
+import { Competitions } from './Competitions'
+import { CompetitionDetail } from './CompetitionDetail'
+import { Forecast } from './Forecast'
+import { SeasonProfile } from './SeasonProfile'
+import { normalizedClub } from './competitionFormat'
 
 const n = (value: unknown) => typeof value === 'number' ? value : 0
 const pct = (numerator: number, denominator: number) => denominator ? `${Math.round((numerator / denominator) * 100)}%` : '—'
@@ -21,7 +26,7 @@ function sapaSide(entry: PublicReportCatalogEntry) {
   return isSapa(entry.home_team) ? 'home' : isSapa(entry.away_team) ? 'away' : null
 }
 
-function SapaLanding({ catalog, tournament, onOpen, onTournament }: { catalog: PublicReportCatalog; tournament: PublicTournament | null; onOpen: (key: string) => void; onTournament: () => void }) {
+function SapaLanding({ catalog, tournament, tournamentCatalog, onOpen, onCompetitions, onForecast }: { catalog: PublicReportCatalog; tournament: PublicTournament | null; tournamentCatalog: PublicTournamentCatalog | null; onOpen: (key: string) => void; onCompetitions: () => void; onForecast: () => void }) {
   const sapaReports = catalog.reports.filter((entry) => sapaSide(entry))
   const entries = sapaReports.length ? sapaReports : catalog.reports
   const complete = entries.filter((entry) => entry.summary.coverage_status === 'complete')
@@ -48,8 +53,17 @@ function SapaLanding({ catalog, tournament, onOpen, onTournament }: { catalog: P
   const totalWithAverage = (value: number, reportsInSquad: number) => `${value} (${reportsInSquad ? (value / reportsInSquad).toFixed(1).replace('.', ',') : '—'})`
   const blockLabels = ['1T 0–10', '1T 10–20', '1T 20–30', '2T 0–10', '2T 10–20', '2T 20–30']
   return <main className="report-shell home-shell" aria-labelledby="sapa-home-title">
-    <header className="hero home-hero"><p className="eyebrow">SAPA · Centro de partidos</p><h1 id="sapa-home-title">Partidos <span>analizados</span></h1><p>Resultados y métricas derivados de análisis observados. No reemplazan la tabla oficial del torneo.</p><button className="home-link tournament-link" onClick={onTournament}>Ver torneo →</button></header>
-    {standing && <section className="sapa-tournament-bridge" aria-label="SAPA en el torneo"><div><p className="eyebrow">SAPA en el torneo</p><strong>#{standing.pos}</strong><span>posición actual · {standing.points} puntos</span></div><div><strong>{titleChance === undefined ? '—' : `${Math.round(titleChance * 100)}%`}</strong><span>probabilidad estimada de campeón</span></div><button onClick={onTournament}>Ver tabla, rivales y proyección →</button></section>}
+    <header className="hero home-hero"><p className="eyebrow">SAPA · Centro de partidos</p><h1 id="sapa-home-title">Partidos <span>analizados</span></h1><p>Resultados y métricas derivados de análisis observados. No reemplazan la tabla oficial del torneo.</p><div className="hero-actions"><button className="home-link tournament-link" onClick={onCompetitions}>Torneos 2026 →</button>{tournamentCatalog?.tournaments.some((entry) => entry.forecast_file) && <button className="home-link tournament-link" onClick={onForecast}>Pronóstico de cierre →</button>}</div></header>
+    {standing && <section className="sapa-tournament-bridge" aria-label="SAPA en el torneo"><div><p className="eyebrow">SAPA en el torneo</p><strong>#{standing.pos}</strong><span>posición actual · {standing.points} puntos</span></div><div><strong>{titleChance === undefined ? '—' : `${Math.round(titleChance * 100)}%`}</strong><span>probabilidad estimada de campeón</span></div><button onClick={onCompetitions}>Ver torneos →</button></section>}
+    {tournamentCatalog && <section className="home-competitions" aria-label="Torneos 2026">
+      <div className="section-heading"><div><p className="eyebrow">Temporada 2026</p><h2>Torneos</h2></div><button className="home-link" onClick={onCompetitions}>Ver todos →</button></div>
+      <div className="home-competition-row">{tournamentCatalog.tournaments.map((entry) => <article className="home-competition-card" key={entry.key}>
+        <span className={`status-pill ${entry.status}`}>{entry.status === 'in_progress' ? 'En curso' : 'Finalizado'}</span>
+        <strong>{entry.label}</strong>
+        {entry.summary.sapa ? <span>SAPA #{entry.summary.sapa.position} · {entry.summary.sapa.points} pts</span> : <span>Sin SAPA en este torneo</span>}
+        {entry.forecast_file && <button onClick={onForecast}>Pronóstico →</button>}
+      </article>)}</div>
+    </section>}
     <section className="home-summary" aria-label="Resumen de partidos completos analizados">
       <article><strong>{complete.length}</strong><span>partidos completos</span></article>
       <article><strong>{perMatch(total.goals)}</strong><span>goles SAPA por partido</span></article>
@@ -284,8 +298,15 @@ export default function App() {
   const [catalog, setCatalog] = useState<PublicReportCatalog | null>(null)
   const [catalogLoaded, setCatalogLoaded] = useState(false)
   const [selectedReportKey, setSelectedReportKey] = useState<string | null>(null)
-  const [view, setView] = useState<'home' | 'report' | 'tournament'>('home')
+  const [view, setView] = useState<'home' | 'report' | 'competitions' | 'competition' | 'forecast' | 'season'>('home')
   const [tournament, setTournament] = useState<PublicTournament | null>(null)
+  const [tournamentCatalog, setTournamentCatalog] = useState<PublicTournamentCatalog | null>(null)
+  const [competitions, setCompetitions] = useState<Record<string, PublicCompetition>>({})
+  const [activeCompetitionKey, setActiveCompetitionKey] = useState<string | null>(null)
+  const [forecast, setForecast] = useState<PublicForecast | null>(null)
+  const [seasonClub, setSeasonClub] = useState('Lanús C')
+  const [seasonCompetitions, setSeasonCompetitions] = useState<PublicCompetition[]>([])
+  const [publicMessage, setPublicMessage] = useState('')
   const [selectedBlock, setSelectedBlock] = useState<string | null>(null)
   const [playerSlug, setPlayerSlug] = useState('all')
 const [kind, setKind] = useState('all')
@@ -319,6 +340,15 @@ const [selectedIncidentRef, setSelectedIncidentRef] = useState<{ reference: stri
   }, [])
 
   useEffect(() => {
+    let active = true
+    fetch('tournaments.json')
+      .then((response) => response.ok ? response.json() : Promise.reject())
+      .then((data) => { if (active) setTournamentCatalog(decodePublicTournamentCatalog(data)) })
+      .catch(() => { if (active) { setTournamentCatalog(null); setPublicMessage('No se pudo cargar el catálogo de torneos.') } })
+    return () => { active = false }
+  }, [])
+
+  useEffect(() => {
     if (!catalogLoaded || (catalog && catalog.reports.length > 0 && !selectedReportKey)) return
     let active = true
     const file = selectedReportKey ? reportFileName(selectedReportKey) : 'report.json'
@@ -348,13 +378,130 @@ const [selectedIncidentRef, setSelectedIncidentRef] = useState<{ reference: stri
     })
   }
 
+  function entryFor(key: string) {
+    return tournamentCatalog?.tournaments.find((entry) => entry.key === key) ?? null
+  }
+
+  async function loadCompetition(key: string): Promise<PublicCompetition> {
+    const cached = competitions[key]
+    if (cached) return cached
+    const entry = entryFor(key)
+    if (!entry) throw new Error('No tournament entry')
+    const response = await fetch(entry.file)
+    if (!response.ok) throw new Error('Tournament fetch failed')
+    const decoded = decodePublicCompetition(await response.json())
+    setCompetitions((current) => ({ ...current, [key]: decoded }))
+    return decoded
+  }
+
+  async function openCompetition(key: string) {
+    setPublicMessage('Cargando torneo…')
+    setActiveCompetitionKey(key)
+    setView('competition')
+    try {
+      await loadCompetition(key)
+      setPublicMessage('')
+    } catch {
+      setPublicMessage('No se pudo abrir el torneo. Actualizá la página o volvé a intentar.')
+    }
+  }
+
+  async function openForecast() {
+    setView('forecast')
+    if (forecast) return
+    setPublicMessage('Cargando pronóstico…')
+    try {
+      const loaded = await loadForecast()
+      if (!loaded) {
+        setPublicMessage('El pronóstico todavía no está publicado.')
+        return
+      }
+      await loadCompetition(loaded.public_key)
+      setPublicMessage('')
+    } catch {
+      setPublicMessage('No se pudo abrir el pronóstico.')
+    }
+  }
+
+  async function loadForecast(): Promise<PublicForecast | null> {
+    if (forecast) return forecast
+    const entry = tournamentCatalog?.tournaments.find((item) => item.forecast_file)
+    if (!entry?.forecast_file) return null
+    const response = await fetch(entry.forecast_file)
+    if (!response.ok) throw new Error('Forecast fetch failed')
+    const decoded = decodePublicForecast(await response.json())
+    setForecast(decoded)
+    return decoded
+  }
+
+  async function openSeason(club: string) {
+    setSeasonClub(club)
+    setSeasonCompetitions([])
+    setView('season')
+    setPublicMessage('Cargando la temporada…')
+    const keys = ['permanencia-2026', 'apertura-zona-a-2026', 'apertura-zona-b-2026']
+    try {
+      const [loaded] = await Promise.all([
+        Promise.all(keys.map(async (key) => {
+          try { return await loadCompetition(key) } catch { return null }
+        })),
+        loadForecast().catch(() => null),
+      ])
+      const relevant = loaded.filter((item): item is PublicCompetition => item !== null && item.standings.some((row) => normalizedClub(row.club) === normalizedClub(club)))
+      relevant.sort((left, right) => left.public_key === 'permanencia-2026' ? 1 : right.public_key === 'permanencia-2026' ? -1 : left.public_key.localeCompare(right.public_key))
+      setSeasonCompetitions(relevant)
+      setPublicMessage(relevant.length ? '' : 'No encontramos partidos de ese club en los torneos publicados.')
+    } catch {
+      setPublicMessage('No se pudo abrir la temporada.')
+    }
+  }
+
+  const statusMessage = (text: string) => <main className="report-status"><p role="status">{text}</p></main>
+
   const reportIncidents = report?.incidents ?? []
   const types = useMemo(() => [...new Set(reportIncidents.map((incident) => incident.incident_type))], [reportIncidents])
   const filteredIncidents = useMemo(() => reportIncidents.filter((incident) => (playerSlug === 'all' || incident.player_slug === playerSlug) && (kind === 'all' || incident.incident_type === kind)), [reportIncidents, playerSlug, kind])
   const defaultVideoSeconds = reportIncidents.find((incident) => incident.video_seconds !== null)?.video_seconds ?? 0
-  if (view === 'tournament') return tournament ? <Tournament tournament={tournament} onBack={() => setView('home')} /> : <main className="report-status"><p role="status">Cargando torneo…</p></main>
+  if (view === 'competitions') {
+    if (!tournamentCatalog) return statusMessage(publicMessage || 'Cargando torneos…')
+    return <Competitions catalog={tournamentCatalog} onOpen={openCompetition} onForecast={openForecast} onHome={() => setView('home')} />
+  }
+  if (view === 'competition') {
+    const competition = activeCompetitionKey ? competitions[activeCompetitionKey] : null
+    if (!competition) return statusMessage(publicMessage || 'Cargando torneo…')
+    return <CompetitionDetail
+      competition={competition}
+      onBack={() => setView('competitions')}
+      onHome={() => setView('home')}
+      onForecast={competition.public_key === 'permanencia-2026' ? openForecast : undefined}
+      onSeason={competition.public_key === 'permanencia-2026' ? () => openSeason(forecast?.rival_profile.club ?? 'Lanús C') : undefined}
+    />
+  }
+  if (view === 'forecast') {
+    if (!forecast) return statusMessage(publicMessage || 'Cargando pronóstico…')
+    return <Forecast
+      forecast={forecast}
+      tournament={competitions['permanencia-2026'] ?? null}
+      onBack={() => setView('competitions')}
+      onHome={() => setView('home')}
+      onTournament={() => openCompetition('permanencia-2026')}
+      onSeason={() => openSeason(forecast.rival_profile.club ?? 'Lanús C')}
+    />
+  }
+  if (view === 'season') {
+    if (!seasonCompetitions.length) return statusMessage(publicMessage || 'Cargando la temporada…')
+    return <SeasonProfile
+      club={seasonClub}
+      competitions={seasonCompetitions}
+      forecast={forecast}
+      onBack={() => setView(forecast ? 'forecast' : 'competitions')}
+      onHome={() => setView('home')}
+      onForecast={openForecast}
+      onTournament={() => openCompetition('permanencia-2026')}
+    />
+  }
   if (!report) return <main className="report-status"><p role="status">{message}</p></main>
-  if (catalog && catalog.reports.length > 0 && view === 'home') return <SapaLanding catalog={catalog} tournament={tournament} onOpen={selectReport} onTournament={() => setView('tournament')} />
+  if (catalog && catalog.reports.length > 0 && view === 'home') return <SapaLanding catalog={catalog} tournament={tournament} tournamentCatalog={tournamentCatalog} onOpen={selectReport} onCompetitions={() => setView('competitions')} onForecast={openForecast} />
 
   const players = report.players ?? []
   const keepers = players.filter((player) => player.role === 'goalkeeper')
