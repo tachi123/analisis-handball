@@ -55,7 +55,8 @@ def validate_command(
         raise CanonicalValidationError("authenticated actor is required")
     if command.team_id is not None and command.team_id not in match_team_ids:
         raise CanonicalValidationError("team does not belong to the match")
-    player_ids = (player_id for player_id in (command.player_id, command.related_player_id, command.goalkeeper_id) if player_id is not None)
+    player_ids = (player_id for player_id in (command.player_id, command.related_player_id,
+                                              command.goalkeeper_id, command.blocker_id) if player_id is not None)
     for player_id in player_ids:
         if player_id not in roster_sources:
             raise CanonicalValidationError("player is not listed on the match roster or official planilla")
@@ -63,6 +64,10 @@ def validate_command(
         goalkeeper_team_id = (player_team_ids or {}).get(command.goalkeeper_id)
         if command.team_id is None or goalkeeper_team_id not in match_team_ids or goalkeeper_team_id == command.team_id:
             raise CanonicalValidationError("shot goalkeeper must belong to the opposing match team")
+    if command.blocker_id is not None:
+        blocker_team_id = (player_team_ids or {}).get(command.blocker_id)
+        if command.team_id is None or blocker_team_id not in match_team_ids or blocker_team_id == command.team_id:
+            raise CanonicalValidationError("shot blocker must belong to the opposing match team")
     if command.kind == "goalkeeper_change" and command.outcome == "active" and command.player_id is not None:
         player_team_id = (player_team_ids or {}).get(command.player_id)
         if command.team_id is None or player_team_id != command.team_id:
@@ -189,7 +194,9 @@ def _recovery(state: CanonicalMatchState, command: CanonicalEventCommand, event_
 def _shot(state: CanonicalMatchState, command: CanonicalEventCommand, event_id: int) -> None:
     if command.outcome not in {"goal", "save", "miss", "woodwork", "blocked"}:
         raise CanonicalValidationError("shot requires one terminal result: goal, save, miss, woodwork, or blocked")
-    keeper = command.goalkeeper_id if command.goalkeeper_id is not None else _opposing_goalkeeper(state, command.team_id)
+    keeper = command.goalkeeper_id
+    if keeper is None and command.outcome != "blocked":
+        keeper = _opposing_goalkeeper(state, command.team_id)
     state.shots.append(ShotTerminal(event_id, command.outcome, command.team_id, command.player_id, keeper))
     if command.outcome == "goal" and command.team_id is not None:
         state.analytical_score[command.team_id] = state.analytical_score.get(command.team_id, 0) + 1
@@ -327,6 +334,8 @@ def _payload_with_roster_sources(command: CanonicalEventCommand, roster_sources:
         payload["roster_source"] = roster_sources[command.player_id]
     if command.related_player_id is not None:
         payload["related_player_roster_source"] = roster_sources[command.related_player_id]
+    if command.blocker_id is not None:
+        payload["blocker_roster_source"] = roster_sources[command.blocker_id]
     return payload
 
 
@@ -478,6 +487,11 @@ def revise_event(db: Session, event_id: int, revision_input: CanonicalEventRevis
             payload["related_player_roster_source"] = roster_sources[revision_input.related_player_id]
         else:
             payload.pop("related_player_roster_source", None)
+    if "blocker_id" in explicit_fields:
+        if revision_input.blocker_id is not None:
+            payload["blocker_roster_source"] = roster_sources[revision_input.blocker_id]
+        else:
+            payload.pop("blocker_roster_source", None)
     payload["active"] = latest.payload.get("active", True)
     try:
         revision = CanonicalEventRevision(event_id=event.id, revision=latest.revision + 1, actor_id=actor.id,

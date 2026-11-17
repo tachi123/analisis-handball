@@ -16,6 +16,8 @@ The canonical event command supports the following shared context when it is kno
 | `uncertainty` | Explicit reasons the observation is limited. |
 | `evidence` | Fixture, official PDF, video, or unavailable-source references. |
 
+`blocker_id` identifies the opposing defender who blocked a shot when its outcome is `blocked`. It is optional, never inferred, and is not reused for assists or goalkeeper attribution.
+
 Only `confirmed` eligible observations contribute to derived analytical totals. `no_visible` and `ambiguous` remain unknown; `replay` is excluded. An observation with an unverified clock remains an observation, not an estimated timestamp.
 
 ## Official snapshot

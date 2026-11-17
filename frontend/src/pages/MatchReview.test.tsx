@@ -224,6 +224,28 @@ describe('MatchReview', () => {
     await waitFor(() => expect(saveAnalysisSession).toHaveBeenCalledWith(1, expect.objectContaining({ source: { url: 'https://youtu.be/zyxwvutsrq', availability_state: 'unknown' }, video_position_seconds: null, clock_start_video_seconds: null, anchors: [], time_segments: [] })))
   })
 
+  it('loads a YouTube source into a session that has none', async () => {
+    getAnalysisSession.mockResolvedValue({ ...session('complete', null), source: null, video_position_seconds: null, clock_start_video_seconds: null })
+    renderWorkspace('/match/1/review?run=21')
+
+    expect(await screen.findByText(/todavía no hay una fuente de video cargada/i)).toBeTruthy()
+    fireEvent.change(screen.getByLabelText(/url de video de youtube/i), { target: { value: 'https://www.youtube.com/watch?v=Y8jo8qrwdh8' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Cargar video' }))
+
+    await waitFor(() => expect(saveAnalysisSession).toHaveBeenCalledWith(1, expect.objectContaining({ mode: 'video', source: { url: 'https://www.youtube.com/watch?v=Y8jo8qrwdh8', availability_state: 'unknown' }, video_position_seconds: null, clock_start_video_seconds: null, anchors: [], time_segments: [] }), 21))
+  })
+
+  it('rejects an invalid YouTube URL before saving a missing source', async () => {
+    getAnalysisSession.mockResolvedValue({ ...session('complete', null), source: null })
+    renderWorkspace('/match/1/review?run=21')
+
+    fireEvent.change(await screen.findByLabelText(/url de video de youtube/i), { target: { value: 'https://example.com/video' } })
+    fireEvent.click(screen.getByRole('button', { name: 'Cargar video' }))
+
+    expect(await screen.findByText(/usá una url válida de youtube/i)).toBeTruthy()
+    expect(saveAnalysisSession).not.toHaveBeenCalled()
+  })
+
   it('requires an explicit kickoff selection when the active period has multiple pending kickoffs', async () => {
     getAnalysisSession.mockResolvedValue(session('complete', null))
     getCanonicalEvents.mockResolvedValue([pendingKickoff, { ...pendingKickoff, id: 8, evidence: [{ ...pendingKickoff.evidence![0], video_anchor_seconds: 23 }] }])

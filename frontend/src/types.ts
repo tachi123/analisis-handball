@@ -270,6 +270,7 @@ export interface CanonicalEventCommand {
   player_id: number | null
   related_player_id?: number | null
   goalkeeper_id?: number | null
+  blocker_id?: number | null
   outcome: string | null
   shot_zone?: ShotZone | null
   fact_kind: 'observed'

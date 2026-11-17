@@ -162,6 +162,37 @@ def test_revision_audits_prefilled_shot_correction_and_optional_opposing_goalkee
         engine.dispose()
 
 
+def test_blocked_shot_records_an_optional_opposing_blocker(tmp_path):
+    client, engine, _ = canonical_client(tmp_path)
+    headers = {"Authorization": f"Bearer {create_access_token({'sub': '1'})}"}
+    blocked = {"kind": "shot", "period": 1, "team_id": 1, "player_id": 10, "blocker_id": 20,
+               "outcome": "blocked", "evidence_state": "confirmed"}
+    try:
+        created = client.post("/api/v1/matches/1/canonical-events", json=blocked, headers=headers)
+        assert created.status_code == 201
+        assert created.json()["payload"]["blocker_id"] == 20
+        assert created.json()["payload"]["blocker_roster_source"] == "match_squad"
+        without_blocker = client.post("/api/v1/matches/1/canonical-events",
+                                      json={**blocked, "blocker_id": None}, headers=headers)
+        assert without_blocker.status_code == 201
+        own_team = client.post("/api/v1/matches/1/canonical-events",
+                               json={**blocked, "blocker_id": 11}, headers=headers)
+        assert own_team.status_code == 422
+        assert "opposing match team" in own_team.json()["detail"]
+        wrong_outcome = client.post("/api/v1/matches/1/canonical-events",
+                                    json={**blocked, "outcome": "goal"}, headers=headers)
+        assert wrong_outcome.status_code == 422
+        revised = client.patch(f"/api/v1/canonical-events/{created.json()['id']}",
+                               json={**blocked, "outcome": "save", "blocker_id": None,
+                                     "goalkeeper_id": 20, "reason": "corregido en video"}, headers=headers)
+        assert revised.status_code == 200
+        assert revised.json()["payload"]["blocker_id"] is None
+        assert "blocker_roster_source" not in revised.json()["payload"]
+    finally:
+        app.dependency_overrides.clear()
+        engine.dispose()
+
+
 def test_write_validation_rejects_invalid_outcomes_before_persistence_and_keeps_valid_shots(tmp_path):
     client, engine, factory = canonical_client(tmp_path)
     headers = {"Authorization": f"Bearer {create_access_token({'sub': '1'})}"}

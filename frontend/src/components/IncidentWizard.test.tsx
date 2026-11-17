@@ -139,6 +139,35 @@ it('records an optional opposing goalkeeper independently from the shooter and a
   cleanup()
 })
 
+it('records a blocked shot with an optional rival blocker instead of a goalkeeper or assistant', () => {
+  const onSubmit = renderWizard()
+  fireEvent.click(screen.getByRole('button', { name: /tiro al arco/i }))
+  fireEvent.click(screen.getByRole('button', { name: 'BLOQUEADO' }))
+
+  expect(screen.queryByText('Asistente (opcional)')).toBeNull()
+  expect(screen.queryByText('Arquero rival (opcional)')).toBeNull()
+  expect(screen.getByText('Defensor que bloquea (opcional)')).toBeTruthy()
+  fireEvent.change(screen.getAllByRole('combobox')[1], { target: { value: '20' } })
+  fireEvent.click(screen.getByRole('button', { name: /registrar blocked/i }))
+
+  expect(onSubmit).toHaveBeenCalledWith(expect.objectContaining({
+    kind: 'shot', outcome: 'blocked', blocker_id: 20, related_player_id: null, goalkeeper_id: null,
+  }))
+  cleanup()
+})
+
+it('clears the blocker when the shot result is no longer blocked', () => {
+  const onSubmit = renderWizard()
+  fireEvent.click(screen.getByRole('button', { name: /tiro al arco/i }))
+  fireEvent.click(screen.getByRole('button', { name: 'BLOQUEADO' }))
+  fireEvent.change(screen.getAllByRole('combobox')[1], { target: { value: '20' } })
+  fireEvent.click(screen.getByRole('button', { name: 'GOL' }))
+  fireEvent.click(screen.getByRole('button', { name: /registrar goal/i }))
+
+  expect(onSubmit).toHaveBeenCalledWith(expect.objectContaining({ outcome: 'goal', blocker_id: null }))
+  cleanup()
+})
+
 it.each([
   ['2 minutos', 'two_minute_exclusion'], ['Amarilla', 'yellow_card'], ['Roja', 'red_card'],
   ['Azul', 'blue_card'], ['7 metros', 'seven_meter'],

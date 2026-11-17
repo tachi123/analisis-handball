@@ -54,18 +54,21 @@ export function VideoSection({ session, player, playerUnavailable, saveSession, 
     ? <video ref={player.playerRef as React.RefObject<HTMLVideoElement>} src={localPlaybackUrl} className="mt-2 aspect-video w-full bg-black" title="Video local del partido" controls playsInline />
     : <div ref={player.playerRef as React.RefObject<HTMLDivElement>} className="mt-2 aspect-video w-full" title="Video del partido" />
   if (playerUnavailable) {
+    const hasSource = Boolean(session.source)
+    // A session may exist without a source (for example, a draft created before choosing the video).
+    const canSetSource = session.source?.provider !== 'local_private'
     return (
       <>{playerMount}<div role="alert" className="mt-2 rounded bg-amber-50 p-3">
-        <b>Reproducción no disponible.</b>
-        <p className="text-sm">Podés conservar una posición manual de video para revisar evidencia, aunque YouTube no pueda sincronizarse.</p>
+        <b>{hasSource ? 'Reproducción no disponible.' : 'Todavía no hay una fuente de video cargada.'}</b>
+        <p className="text-sm">{hasSource ? 'Podés conservar una posición manual de video para revisar evidencia, aunque YouTube no pueda sincronizarse.' : 'Cargá una URL de YouTube para poder revisar el partido con video.'}</p>
         <p className="mt-1 text-xs text-gray-600">Posición de video: {player.currentTime.toFixed(1)} s</p>
         {session.source?.provider === 'youtube' && <button className="btn mt-2" onClick={() => window.open(session.source!.original_url, '_blank', 'noopener,noreferrer')}>Abrir video en YouTube</button>}
-        {session.source?.provider === 'youtube' && <label className="mt-2 block text-sm">Reemplazar URL de video<input className="review-target mt-1 w-full rounded border p-2" value={sourceUrl} onChange={event => { setSourceUrl(event.target.value); setSourceError('') }} /></label>}
+        {canSetSource && <label className="mt-2 block text-sm">{hasSource ? 'Reemplazar URL de video' : 'URL de video de YouTube'}<input className="review-target mt-1 w-full rounded border p-2" value={sourceUrl} onChange={event => { setSourceUrl(event.target.value); setSourceError('') }} /></label>}
         {sourceError && <p role="alert" className="mt-2 text-sm text-red-700">{sourceError}</p>}
         {saveSession.isError && <p role="alert" className="mt-2 text-sm text-red-700">No se pudo guardar la fuente: {message(saveSession.error)}</p>}
         <div className="mt-2 flex gap-2">
           <button className="btn" onClick={() => { player.retry(); sessionQuery.refetch(); setNotice('Se reintentó cargar la fuente.') }}>Reintentar</button>
-          {session.source?.provider === 'youtube' && <button className="btn" disabled={saveSessionPending} onClick={() => { const url = sourceUrl.trim(); if (!supportedYouTubeUrl(url)) { setSourceError('Usá una URL válida de YouTube con un identificador de video.'); return } saveSession.mutate(replaceVideoSource(session, url)); setNotice('Fuente reemplazada. Esta fuente necesita un nuevo saque inicial para calibrar el reloj.') }}>Guardar reemplazo</button>}
+          {canSetSource && <button className="btn" disabled={saveSessionPending} onClick={() => { const url = sourceUrl.trim(); if (!supportedYouTubeUrl(url)) { setSourceError('Usá una URL válida de YouTube con un identificador de video.'); return } saveSession.mutate(replaceVideoSource(session, url)); setNotice(hasSource ? 'Fuente reemplazada. Esta fuente necesita un nuevo saque inicial para calibrar el reloj.' : 'Fuente cargada. Registrá el saque inicial para calibrar el reloj.') }}>{hasSource ? 'Guardar reemplazo' : 'Cargar video'}</button>}
         </div>
         {manualPositionControl}
       </div></>

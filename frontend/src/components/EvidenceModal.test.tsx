@@ -57,6 +57,29 @@ describe('EvidenceModal scenarios', () => {
     ]) }))
   })
 
+  it('swaps the goalkeeper for an optional rival blocker on a blocked shot revision', () => {
+    const onSave = vi.fn()
+    const blocked = { ...event, payload: { ...event.payload, kind: 'shot' as const, team_id: 1, player_id: 10, outcome: 'blocked', goalkeeper_id: 20 } }
+    render(<EvidenceModal event={blocked} source={null} currentTime={42} playable={false} clockUnverified={false} teams={{ home: { id: 1, name: 'Local' }, away: { id: 2, name: 'Visitante' } }} players={[{ key: 'home', jersey: 10, name: 'Tirador', side: 'home', playerId: 10 }, { key: 'away-1', jersey: 1, name: 'Arquero', side: 'away', playerId: 20 }, { key: 'away-4', jersey: 4, name: 'Defensor', side: 'away', playerId: 21 }]} onSave={onSave} onClose={vi.fn()} />)
+
+    expect(screen.queryByLabelText('Arquero rival (opcional)')).toBeNull()
+    fireEvent.change(screen.getByLabelText('Defensor que bloquea (opcional)'), { target: { value: '21' } })
+    fireEvent.click(screen.getByRole('button', { name: /guardar edición/i }))
+
+    expect(onSave).toHaveBeenCalledWith(expect.objectContaining({ outcome: 'blocked', blocker_id: 21, goalkeeper_id: null }))
+  })
+
+  it('does not persist a blocker when the result is corrected away from blocked', () => {
+    const onSave = vi.fn()
+    const blocked = { ...event, payload: { ...event.payload, kind: 'shot' as const, team_id: 1, player_id: 10, outcome: 'blocked', blocker_id: 21 } }
+    render(<EvidenceModal event={blocked} source={null} currentTime={42} playable={false} clockUnverified={false} teams={{ home: { id: 1, name: 'Local' }, away: { id: 2, name: 'Visitante' } }} players={[{ key: 'home', jersey: 10, name: 'Tirador', side: 'home', playerId: 10 }, { key: 'away-4', jersey: 4, name: 'Defensor', side: 'away', playerId: 21 }]} onSave={onSave} onClose={vi.fn()} />)
+
+    fireEvent.change(screen.getByLabelText('Resultado'), { target: { value: 'goal' } })
+    fireEvent.click(screen.getByRole('button', { name: /guardar edición/i }))
+
+    expect(onSave).toHaveBeenCalledWith(expect.objectContaining({ outcome: 'goal', blocker_id: null }))
+  })
+
   it('gives close, text, and radio-label controls a 44px review target', () => {
     render(<EvidenceModal event={event} source={null} currentTime={42} playable={false} clockUnverified={false} onSave={vi.fn()} onClose={vi.fn()} />)
 

@@ -172,6 +172,7 @@ export default function IncidentWizard({
     player_id: null,
     related_player_id: null,
     goalkeeper_id: null,
+    blocker_id: null,
     outcome: null,
     shot_zone: null,
     fact_kind: 'observed',
@@ -207,12 +208,13 @@ export default function IncidentWizard({
       player_id: null,
       related_player_id: null,
       goalkeeper_id: null,
+      blocker_id: null,
     })
   }
 
   const handleCategorySelect = (kind: CanonicalEventKind) => {
     // Categories reuse the primary player only where it still denotes an actor.
-    updateForm({ kind, outcome: null, related_player_id: null, goalkeeper_id: null, shot_zone: null,
+    updateForm({ kind, outcome: null, related_player_id: null, goalkeeper_id: null, blocker_id: null, shot_zone: null,
       player_id: kind === 'other' ? null : formData.player_id ?? null })
     setStep(kind === 'shot' ? 'shot' : kind === 'turnover' || kind === 'recovery' ? 'turnover' : kind === 'foul_sanction' ? 'foul' : kind === 'goalkeeper_change' ? 'gk' : 'team')
   }
@@ -225,7 +227,15 @@ export default function IncidentWizard({
     }
     const manualSeconds = Number(manualVideoSeconds)
     if (manualVideo && (!Number.isFinite(manualSeconds) || manualSeconds < 0)) { alert('Ingresá el tiempo del video local en segundos.'); return }
-    onSubmit({ ...formData, evidence: manualVideo ? [{ kind: 'video', reference: 'local-manual', video_anchor_seconds: manualSeconds, uncertainty: ['manual_local_video'] }] : formData.evidence } as CanonicalEventCommand)
+    const isBlockedShot = formData.kind === 'shot' && formData.outcome === 'blocked'
+    // A block is a rival defender's fact: it never carries an assistant or a goalkeeper.
+    const command = {
+      ...formData,
+      blocker_id: isBlockedShot ? formData.blocker_id ?? null : null,
+      related_player_id: isBlockedShot ? null : formData.related_player_id ?? null,
+      goalkeeper_id: isBlockedShot ? null : formData.goalkeeper_id ?? null,
+    }
+    onSubmit({ ...command, evidence: manualVideo ? [{ kind: 'video', reference: 'local-manual', video_anchor_seconds: manualSeconds, uncertainty: ['manual_local_video'] }] : formData.evidence } as CanonicalEventCommand)
     onClose()
   }
 
@@ -295,7 +305,9 @@ export default function IncidentWizard({
           <button
             key={o.value}
             className={shotOutcomeClass(o, formData.outcome === o.value)}
-            onClick={() => updateForm({ outcome: o.value })}
+            onClick={() => updateForm(o.value === 'blocked'
+              ? { outcome: o.value, related_player_id: null, goalkeeper_id: null }
+              : { outcome: o.value, blocker_id: null })}
             disabled={submitting}
             aria-pressed={formData.outcome === o.value}
           >
@@ -319,14 +331,18 @@ export default function IncidentWizard({
       </div>
 
       {renderPlayerSelector('Tirador', formData.player_id as number | null, id => updateForm({ player_id: id }))}
-      {renderPlayerSelector('Asistente (opcional)', formData.related_player_id as number | null, id => updateForm({ related_player_id: id }))}
-      {renderPlayerSelector('Arquero rival (opcional)', formData.goalkeeper_id as number | null, id => updateForm({ goalkeeper_id: id }), selectedTeamId ? (selectedTeamId === homeTeam?.id ? 'away' : 'home') : undefined)}
+      {formData.outcome === 'blocked'
+        ? renderPlayerSelector('Defensor que bloquea (opcional)', formData.blocker_id as number | null, id => updateForm({ blocker_id: id }), selectedTeamId ? (selectedTeamId === homeTeam?.id ? 'away' : 'home') : undefined)
+        : <>
+            {renderPlayerSelector('Asistente (opcional)', formData.related_player_id as number | null, id => updateForm({ related_player_id: id }))}
+            {renderPlayerSelector('Arquero rival (opcional)', formData.goalkeeper_id as number | null, id => updateForm({ goalkeeper_id: id }), selectedTeamId ? (selectedTeamId === homeTeam?.id ? 'away' : 'home') : undefined)}
+          </>}
 
       <div className="flex gap-2 pt-2">
         <button className="btn flex-1" onClick={handleSubmit} disabled={submitting || !formData.outcome}>
           {foulButtonLabel(formData.outcome)}
         </button>
-        <button className="btn btn-secondary" onClick={() => { setStep('category'); updateForm({ outcome: null, player_id: null, related_player_id: null }) }}>Volver</button>
+        <button className="btn btn-secondary" onClick={() => { setStep('category'); updateForm({ outcome: null, player_id: null, related_player_id: null, blocker_id: null }) }}>Volver</button>
       </div>
     </div>
   )

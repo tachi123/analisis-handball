@@ -42,4 +42,11 @@ describe('EventTimeline', () => {
     expect(screen.getByText(/Tirador: Tiradora/)).toBeTruthy()
     expect(screen.getByText(/Arquero rival: Arquera rival/)).toBeTruthy()
   })
+
+  it('shows the rival blocker instead of a goalkeeper for a blocked shot', () => {
+    const shot = { ...events[0], payload: { ...events[0].payload, team_id: 1, player_id: 10, outcome: 'blocked', blocker_id: 21, goalkeeper_id: 20 } }
+    render(<EventTimeline events={[shot]} selectedId={null} highlightedId={null} onSelect={vi.fn()} onRevise={vi.fn()} playerLabels={{ 10: 'Tiradora', 20: 'Arquera rival', 21: 'Defensora' }} />)
+    expect(screen.getByText(/Bloqueador: Defensora/)).toBeTruthy()
+    expect(screen.queryByText(/Arquero rival: Arquera rival/)).toBeNull()
+  })
 })

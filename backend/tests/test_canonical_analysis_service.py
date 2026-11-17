@@ -299,6 +299,39 @@ def test_shot_keeps_explicit_opposing_goalkeeper_without_reusing_related_player(
     assert state.shots[0].goalkeeper_id == 20
 
 
+def test_blocked_shot_accepts_an_optional_opposing_blocker():
+    command = command_for(team_id=1, player_id=10, outcome="blocked", blocker_id=20)
+    validate_command(command, actor_id=1, match_team_ids={1, 2},
+                     roster_sources={10: "match_squad", 20: "match_squad"},
+                     player_team_ids={10: 1, 20: 2})
+    state = apply_transition(CanonicalMatchState(), command, 1)
+
+    assert state.shots[0].result == "blocked"
+    assert state.shots[0].goalkeeper_id is None
+
+
+def test_blocked_shot_does_not_infer_the_active_goalkeeper():
+    state = CanonicalMatchState(active_goalkeepers={2: 20})
+    transition(state, 1, kind="shot", team_id=1, player_id=10, outcome="blocked")
+
+    assert state.shots[0].goalkeeper_id is None
+
+
+def test_blocker_must_belong_to_the_opposing_match_team():
+    with pytest.raises(CanonicalValidationError, match="shot blocker must belong"):
+        validate_command(command_for(team_id=1, player_id=10, outcome="blocked", blocker_id=11),
+                         actor_id=1, match_team_ids={1, 2},
+                         roster_sources={10: "match_squad", 11: "match_squad"},
+                         player_team_ids={10: 1, 11: 1})
+
+
+def test_blocker_is_only_valid_for_a_blocked_shot():
+    with pytest.raises(ValueError, match="blocker_id"):
+        command_for(team_id=1, player_id=10, outcome="goal", blocker_id=20)
+    with pytest.raises(ValueError, match="blocker_id"):
+        CanonicalEventCommand(kind="turnover", period=1, evidence_state="confirmed", blocker_id=20)
+
+
 def test_lineup_substitution_marks_player_active_and_related_player_inactive():
     state = CanonicalMatchState()
     transition(state, 1, kind="lineup_change", team_id=1, player_id=11, outcome="on")

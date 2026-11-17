@@ -338,6 +338,7 @@ class CanonicalEventCommand(BaseModel):
     player_id: Optional[int] = None
     related_player_id: Optional[int] = None
     goalkeeper_id: Optional[int] = None
+    blocker_id: Optional[int] = None
     outcome: Optional[str] = None
     shot_zone: Optional[ShotZone] = None
     fact_kind: CanonicalFactKind = "observed"
@@ -352,6 +353,8 @@ class CanonicalEventCommand(BaseModel):
             raise ValueError("shot_zone is only valid for shot events")
         if self.goalkeeper_id is not None and self.kind != "shot":
             raise ValueError("goalkeeper_id is only valid for shot events")
+        if self.blocker_id is not None and (self.kind != "shot" or self.outcome != "blocked"):
+            raise ValueError("blocker_id is only valid for blocked shot events")
         return self
 
 
