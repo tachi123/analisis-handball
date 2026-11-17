@@ -167,6 +167,17 @@
 .pending-card { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; padding: .9rem 1rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; }
 .pending-card > span { color: #64748b; font-size: .8rem; }
 
+/* Attack composition */
+.attack-composition-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 1rem; }
+.attack-table td, .attack-table th { white-space: nowrap; }
+.concentration-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; align-content: start; }
+.concentration-cards article { display: grid; gap: .15rem; padding: .7rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; }
+.concentration-cards p { margin: 0; color: #64748b; font-size: .7rem; font-weight: 800; letter-spacing: .03em; text-transform: uppercase; }
+.concentration-cards strong { color: #0f172a; font-size: 1.05rem; }
+.concentration-cards span { color: #64748b; font-size: .72rem; }
+.attack-notes { display: grid; gap: .2rem; margin-top: .8rem; padding: .8rem 1rem; background: #eff6ff; border-radius: 10px; color: #1e3a5f; font-size: .82rem; }
+.attack-notes p { margin: 0; }
+
 /* Home compact tournament row */
 .home-competitions { margin: 1.25rem 0; }
 .home-competitions .section-heading { align-items: center; }
@@ -186,6 +197,8 @@
   .fixture-grid { grid-template-columns: 1fr; }
   .sapa-spotlight-extra { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .season-block-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .attack-composition-grid { grid-template-columns: 1fr; }
+  .concentration-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 @media (max-width: 640px) {

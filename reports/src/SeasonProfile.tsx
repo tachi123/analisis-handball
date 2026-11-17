@@ -1,7 +1,7 @@
 import type { PublicCompetition, PublicForecast } from './publicCompetitions'
 import { ResultLegend, ResultStrip, type StripMatch } from './resultStrip'
 import { decimal, formatDate, formatShortDate, normalizedClub, percent, signed } from './competitionFormat'
-import { annualTotals, rosterContinuity, seasonMatches, seasonScorers } from './seasonData'
+import { annualTotals, attackComposition, rosterContinuity, seasonMatches, seasonScorers } from './seasonData'
 
 const shortCompetition = (competition: PublicCompetition) => competition.competition.startsWith('Apertura') ? `Apertura ${competition.zone ?? ''}`.trim() : competition.competition
 const competitionDisplay = (competition: PublicCompetition) => competition.competition + (competition.zone ? ` · Zona ${competition.zone}` : '')
@@ -37,6 +37,11 @@ export function SeasonProfile({ club, competitions, forecast, onBack, onHome, on
   const previousScorers = competitions.length > 1 ? seasonScorers([competitions[0]], club) : []
   const currentScorers = seasonScorers([competitions[competitions.length - 1]], club)
   const continuity = rosterContinuity(previousScorers, currentScorers)
+  const previousBlock = blocks[0]
+  const currentBlock = blocks[blocks.length - 1]
+  const composition = blocks.length > 1
+    ? attackComposition(previousScorers, currentScorers, previousBlock.standing?.goals_for ?? 0, currentBlock.standing?.goals_for ?? 0)
+    : null
   const pending = blocks.flatMap((block) => block.matches.filter((match) => match.result === 'pending'))
   const pendingFixture = forecast?.fixtures.find((fixture) => normalizedClub(fixture.home) === normalizedClub(club) || normalizedClub(fixture.away) === normalizedClub(club))
   const rivalHome = pendingFixture ? normalizedClub(pendingFixture.home) === normalizedClub(club) : false
@@ -105,6 +110,33 @@ export function SeasonProfile({ club, competitions, forecast, onBack, onHome, on
       </div>)}
       <ResultLegend />
     </section>
+
+    {composition && <section className="dashboard-section">
+      <div className="section-heading"><div><p className="eyebrow">Composición del ataque</p><h2>¿Cambió el patrón de goleadores?</h2></div><small>Goles por grupo y concentración. La planilla describe; no atribuye causas.</small></div>
+      <div className="attack-composition-grid">
+        <div className="table-wrap"><table className="player-table attack-table">
+          <thead><tr><th>Grupo</th><th>{previousBlock ? shortCompetition(previousBlock.competition) : 'Apertura'}</th><th>{currentBlock ? shortCompetition(currentBlock.competition) : 'Permanencia'}</th></tr></thead>
+          <tbody>
+            <tr><td>Retenidos ({composition.retained.players})</td><td>{composition.retained.previousGoals} ({percent(composition.previousTotal ? composition.retained.previousGoals / composition.previousTotal : 0, 1)})</td><td>{composition.retained.currentGoals} ({percent(composition.currentTotal ? composition.retained.currentGoals / composition.currentTotal : 0, 1)})</td></tr>
+            <tr><td>Se fueron ({composition.departed.players})</td><td>{composition.departed.goals} ({percent(composition.previousTotal ? composition.departed.goals / composition.previousTotal : 0, 1)})</td><td>—</td></tr>
+            <tr><td>Llegaron ({composition.arrived.players})</td><td>—</td><td>{composition.arrived.goals} ({percent(composition.currentTotal ? composition.arrived.goals / composition.currentTotal : 0, 1)})</td></tr>
+            <tr><td><strong>Total</strong></td><td><strong>{composition.previousTotal}</strong></td><td><strong>{composition.currentTotal}</strong></td></tr>
+          </tbody>
+        </table></div>
+        <div className="concentration-cards">
+          <article><p>Top 1</p><strong>{percent(composition.concentration.previous.top1, 1)} → {percent(composition.concentration.current.top1, 1)}</strong><span>goles del máximo goleador sobre el total</span></article>
+          <article><p>Top 3</p><strong>{percent(composition.concentration.previous.top3, 1)} → {percent(composition.concentration.current.top3, 1)}</strong><span>concentración del podio de goleadores</span></article>
+          <article><p>Top 5</p><strong>{percent(composition.concentration.previous.top5, 1)} → {percent(composition.concentration.current.top5, 1)}</strong><span>concentración de los cinco máximos</span></article>
+          <article><p>Con 10+ goles</p><strong>{composition.concentration.previous.scorers10} → {composition.concentration.current.scorers10}</strong><span>jugadores</span></article>
+          <article><p>Con 20+ goles</p><strong>{composition.concentration.previous.scorers20} → {composition.concentration.current.scorers20}</strong><span>jugadores</span></article>
+        </div>
+      </div>
+      <div className="attack-notes">
+        <p><strong>Llegaron:</strong> {composition.arrived.details.map((row) => `${row.name} ${row.goals}/${row.appearances}`).join(' · ') || '—'}</p>
+        <p><strong>Se fueron:</strong> {composition.departed.details.slice(0, 5).map((row) => `${row.name} ${row.goals}/${row.appearances}`).join(' · ') || '—'}{composition.departed.details.length > 5 ? ` · y ${composition.departed.details.length - 5} más` : ''}</p>
+      </div>
+      <p className="result-legend-note">La planilla no registra minutos, puestos, tiros ni asistencias. Por eso podemos mostrar cuánto aportaron los ingresos y si la concentración cambió, pero no afirmar que causaron la mejora.</p>
+    </section>}
 
     <section className="dashboard-section">
       <div className="section-heading"><div><p className="eyebrow">Goleadores del año</p><h2>Quiénes sostuvieron el ataque</h2></div><small>Goles / partidos. La muestra importa: no es lo mismo 29 goles en 5 partidos que 116 en 27.</small></div>
