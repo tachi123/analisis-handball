@@ -1,0 +1,4173 @@
+{
+  "source": {
+    "label": "FEMEBAL TournamentTracker - Torneo Metropolitano Apertura Zona B 2026 3ªM",
+    "captured_at": "2026-11-16",
+    "url": null,
+    "tracker_tournament_id": null,
+    "collection_method": "user-supplied tracker fixture HTML; normalized locally without automated import"
+  },
+  "stage": {
+    "season": 2026,
+    "name": "Apertura Zona B 2026 3ªM",
+    "category": "Mayores",
+    "division": "3ª División",
+    "gender": "Masculino"
+  },
+  "rounds": [
+    {
+      "number": 1,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f01-m01",
+          "fixture_key": "femebal:zona-b-2026:f01-m01",
+          "home": {
+            "club": "Atlanta",
+            "variant": null
+          },
+          "away": {
+            "club": "Ituzaingó",
+            "variant": null
+          },
+          "date": "2026-03-22",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 30,
+            "away": 21,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Atlanta",
+              "away": "C.A. Ituzaingó"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 30,
+              "away": 21
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f01-m02",
+          "fixture_key": "femebal:zona-b-2026:f01-m02",
+          "home": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B"
+          },
+          "away": {
+            "club": "Juana Manso",
+            "variant": null
+          },
+          "date": "2026-03-22",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 27,
+            "away": 39,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Tres de Febrero B",
+              "away": "VHC Juana Manso"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 27,
+              "away": 39
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f01-m03",
+          "fixture_key": "femebal:zona-b-2026:f01-m03",
+          "home": {
+            "club": "Lanús",
+            "variant": "C"
+          },
+          "away": {
+            "club": "Municipalidad de Pilar",
+            "variant": null
+          },
+          "date": "2026-03-22",
+          "time": "16:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 21,
+            "away": 26,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Lanús C",
+              "away": "Municipalidad de Pilar"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 21,
+              "away": 26
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f01-m04",
+          "fixture_key": "femebal:zona-b-2026:f01-m04",
+          "home": {
+            "club": "Palermo Handball",
+            "variant": null
+          },
+          "away": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C"
+          },
+          "date": "2026-03-22",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 27,
+            "away": 31,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Palermo Handball",
+              "away": "Municipalidad de Vicente López C"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 27,
+              "away": 31
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f01-m05",
+          "fixture_key": "femebal:zona-b-2026:f01-m05",
+          "home": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D"
+          },
+          "away": {
+            "club": "Chacarita Juniors",
+            "variant": null
+          },
+          "date": "2026-03-22",
+          "time": "20:15",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 18,
+            "away": 28,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "S.A.G. Polvorines D",
+              "away": "C.A. Chacarita Juniors"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 18,
+              "away": 28
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f01-m06",
+          "fixture_key": "femebal:zona-b-2026:f01-m06",
+          "home": {
+            "club": "Racing Club",
+            "variant": "B"
+          },
+          "away": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null
+          },
+          "date": "2026-03-22",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 22,
+            "away": 15,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Racing Club B",
+              "away": "Municipalidad de San Martín (Ce.M.E.F)"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 22,
+              "away": 15
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f01-m07",
+          "fixture_key": "femebal:zona-b-2026:f01-m07",
+          "home": {
+            "club": "G.E.I.",
+            "variant": "B"
+          },
+          "away": {
+            "club": "Municipalidad de Escobar",
+            "variant": null
+          },
+          "date": "2026-03-22",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 24,
+            "away": 32,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "G.E.I. B",
+              "away": "Municipalidad de Escobar"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 24,
+              "away": 32
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f01-m08",
+          "fixture_key": "femebal:zona-b-2026:f01-m08",
+          "home": {
+            "club": "A.E. Goethe",
+            "variant": "B"
+          },
+          "away": {
+            "club": "S.A.G. Villa Ballester",
+            "variant": "D"
+          },
+          "date": "2026-03-22",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 26,
+            "away": 25,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "A.E. Goethe B",
+              "away": "S.A.G. Villa Ballester D"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 26,
+              "away": 25
+            },
+            "planillas": []
+          }
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f02-m01",
+          "fixture_key": "femebal:zona-b-2026:f02-m01",
+          "home": {
+            "club": "Ituzaingó",
+            "variant": null
+          },
+          "away": {
+            "club": "S.A.G. Villa Ballester",
+            "variant": "D"
+          },
+          "date": "2026-03-29",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 24,
+            "away": 26,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Ituzaingó",
+              "away": "S.A.G. Villa Ballester D"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 24,
+              "away": 26
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f02-m02",
+          "fixture_key": "femebal:zona-b-2026:f02-m02",
+          "home": {
+            "club": "Municipalidad de Escobar",
+            "variant": null
+          },
+          "away": {
+            "club": "A.E. Goethe",
+            "variant": "B"
+          },
+          "date": "2026-03-29",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 0,
+            "away": 2,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Escobar",
+              "away": "A.E. Goethe B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 0,
+              "away": 2
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f02-m03",
+          "fixture_key": "femebal:zona-b-2026:f02-m03",
+          "home": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null
+          },
+          "away": {
+            "club": "G.E.I.",
+            "variant": "B"
+          },
+          "date": "2026-03-29",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 21,
+            "away": 24,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de San Martín (Ce.M.E.F)",
+              "away": "G.E.I. B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 21,
+              "away": 24
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f02-m04",
+          "fixture_key": "femebal:zona-b-2026:f02-m04",
+          "home": {
+            "club": "Chacarita Juniors",
+            "variant": null
+          },
+          "away": {
+            "club": "Racing Club",
+            "variant": "B"
+          },
+          "date": "2026-03-29",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 29,
+            "away": 24,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Chacarita Juniors",
+              "away": "Racing Club B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 29,
+              "away": 24
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f02-m05",
+          "fixture_key": "femebal:zona-b-2026:f02-m05",
+          "home": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C"
+          },
+          "away": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D"
+          },
+          "date": "2026-03-29",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 22,
+            "away": 23,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Vicente López C",
+              "away": "S.A.G. Polvorines D"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 22,
+              "away": 23
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f02-m06",
+          "fixture_key": "femebal:zona-b-2026:f02-m06",
+          "home": {
+            "club": "Municipalidad de Pilar",
+            "variant": null
+          },
+          "away": {
+            "club": "Palermo Handball",
+            "variant": null
+          },
+          "date": "2026-03-29",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 13,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Pilar",
+              "away": "Palermo Handball"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 13,
+              "away": 22
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f02-m07",
+          "fixture_key": "femebal:zona-b-2026:f02-m07",
+          "home": {
+            "club": "Juana Manso",
+            "variant": null
+          },
+          "away": {
+            "club": "Lanús",
+            "variant": "C"
+          },
+          "date": "2026-03-29",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 34,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "VHC Juana Manso",
+              "away": "C.A. Lanús C"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 34,
+              "away": 22
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f02-m08",
+          "fixture_key": "femebal:zona-b-2026:f02-m08",
+          "home": {
+            "club": "Atlanta",
+            "variant": null
+          },
+          "away": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B"
+          },
+          "date": "2026-03-29",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 22,
+            "away": 16,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Atlanta",
+              "away": "Municipalidad de Tres de Febrero B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 22,
+              "away": 16
+            },
+            "planillas": []
+          }
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f03-m01",
+          "fixture_key": "femebal:zona-b-2026:f03-m01",
+          "home": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B"
+          },
+          "away": {
+            "club": "Ituzaingó",
+            "variant": null
+          },
+          "date": "2026-04-12",
+          "time": "18:30",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 30,
+            "away": 24,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Tres de Febrero B",
+              "away": "C.A. Ituzaingó"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 30,
+              "away": 24
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f03-m02",
+          "fixture_key": "femebal:zona-b-2026:f03-m02",
+          "home": {
+            "club": "Lanús",
+            "variant": "C"
+          },
+          "away": {
+            "club": "Atlanta",
+            "variant": null
+          },
+          "date": "2026-04-12",
+          "time": "16:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 23,
+            "away": 28,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Lanús C",
+              "away": "C.A. Atlanta"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 23,
+              "away": 28
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f03-m03",
+          "fixture_key": "femebal:zona-b-2026:f03-m03",
+          "home": {
+            "club": "Palermo Handball",
+            "variant": null
+          },
+          "away": {
+            "club": "Juana Manso",
+            "variant": null
+          },
+          "date": "2026-04-12",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 28,
+            "away": 31,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Palermo Handball",
+              "away": "VHC Juana Manso"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 28,
+              "away": 31
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f03-m04",
+          "fixture_key": "femebal:zona-b-2026:f03-m04",
+          "home": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D"
+          },
+          "away": {
+            "club": "Municipalidad de Pilar",
+            "variant": null
+          },
+          "date": "2026-04-12",
+          "time": "16:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 26,
+            "away": 20,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "S.A.G. Polvorines D",
+              "away": "Municipalidad de Pilar"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 26,
+              "away": 20
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f03-m05",
+          "fixture_key": "femebal:zona-b-2026:f03-m05",
+          "home": {
+            "club": "Racing Club",
+            "variant": "B"
+          },
+          "away": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C"
+          },
+          "date": "2026-04-12",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 31,
+            "away": 26,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Racing Club B",
+              "away": "Municipalidad de Vicente López C"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 31,
+              "away": 26
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f03-m06",
+          "fixture_key": "femebal:zona-b-2026:f03-m06",
+          "home": {
+            "club": "G.E.I.",
+            "variant": "B"
+          },
+          "away": {
+            "club": "Chacarita Juniors",
+            "variant": null
+          },
+          "date": "2026-04-12",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 25,
+            "away": 24,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "G.E.I. B",
+              "away": "C.A. Chacarita Juniors"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 25,
+              "away": 24
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f03-m07",
+          "fixture_key": "femebal:zona-b-2026:f03-m07",
+          "home": {
+            "club": "A.E. Goethe",
+            "variant": "B"
+          },
+          "away": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null
+          },
+          "date": "2026-04-12",
+          "time": "16:15",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 27,
+            "away": 15,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "A.E. Goethe B",
+              "away": "Municipalidad de San Martín (Ce.M.E.F)"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 27,
+              "away": 15
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f03-m08",
+          "fixture_key": "femebal:zona-b-2026:f03-m08",
+          "home": {
+            "club": "S.A.G. Villa Ballester",
+            "variant": "D"
+          },
+          "away": {
+            "club": "Municipalidad de Escobar",
+            "variant": null
+          },
+          "date": "2026-04-12",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 27,
+            "away": 26,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "S.A.G. Villa Ballester D",
+              "away": "Municipalidad de Escobar"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 27,
+              "away": 26
+            },
+            "planillas": []
+          }
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f04-m01",
+          "fixture_key": "femebal:zona-b-2026:f04-m01",
+          "home": {
+            "club": "Ituzaingó",
+            "variant": null
+          },
+          "away": {
+            "club": "Municipalidad de Escobar",
+            "variant": null
+          },
+          "date": "2026-04-19",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 28,
+            "away": 38,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Ituzaingó",
+              "away": "Municipalidad de Escobar"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 28,
+              "away": 38
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f04-m02",
+          "fixture_key": "femebal:zona-b-2026:f04-m02",
+          "home": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null
+          },
+          "away": {
+            "club": "S.A.G. Villa Ballester",
+            "variant": "D"
+          },
+          "date": "2026-04-19",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 18,
+            "away": 18,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de San Martín (Ce.M.E.F)",
+              "away": "S.A.G. Villa Ballester D"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 18,
+              "away": 18
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f04-m03",
+          "fixture_key": "femebal:zona-b-2026:f04-m03",
+          "home": {
+            "club": "Chacarita Juniors",
+            "variant": null
+          },
+          "away": {
+            "club": "A.E. Goethe",
+            "variant": "B"
+          },
+          "date": "2026-04-19",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 34,
+            "away": 34,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Chacarita Juniors",
+              "away": "A.E. Goethe B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 34,
+              "away": 34
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f04-m04",
+          "fixture_key": "femebal:zona-b-2026:f04-m04",
+          "home": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C"
+          },
+          "away": {
+            "club": "G.E.I.",
+            "variant": "B"
+          },
+          "date": "2026-04-19",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 20,
+            "away": 21,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Vicente López C",
+              "away": "G.E.I. B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 20,
+              "away": 21
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f04-m05",
+          "fixture_key": "femebal:zona-b-2026:f04-m05",
+          "home": {
+            "club": "Municipalidad de Pilar",
+            "variant": null
+          },
+          "away": {
+            "club": "Racing Club",
+            "variant": "B"
+          },
+          "date": "2026-04-15",
+          "time": "21:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 23,
+            "away": 26,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Pilar",
+              "away": "Racing Club B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 23,
+              "away": 26
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f04-m06",
+          "fixture_key": "femebal:zona-b-2026:f04-m06",
+          "home": {
+            "club": "Juana Manso",
+            "variant": null
+          },
+          "away": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D"
+          },
+          "date": "2026-04-19",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 2,
+            "away": 0,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "VHC Juana Manso",
+              "away": "S.A.G. Polvorines D"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 2,
+              "away": 0
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f04-m07",
+          "fixture_key": "femebal:zona-b-2026:f04-m07",
+          "home": {
+            "club": "Atlanta",
+            "variant": null
+          },
+          "away": {
+            "club": "Palermo Handball",
+            "variant": null
+          },
+          "date": "2026-04-19",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 22,
+            "away": 17,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Atlanta",
+              "away": "Palermo Handball"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 22,
+              "away": 17
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f04-m08",
+          "fixture_key": "femebal:zona-b-2026:f04-m08",
+          "home": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B"
+          },
+          "away": {
+            "club": "Lanús",
+            "variant": "C"
+          },
+          "date": "2026-04-19",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 32,
+            "away": 24,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Tres de Febrero B",
+              "away": "C.A. Lanús C"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 32,
+              "away": 24
+            },
+            "planillas": []
+          }
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f05-m01",
+          "fixture_key": "femebal:zona-b-2026:f05-m01",
+          "home": {
+            "club": "Lanús",
+            "variant": "C"
+          },
+          "away": {
+            "club": "Ituzaingó",
+            "variant": null
+          },
+          "date": "2026-04-26",
+          "time": "16:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 30,
+            "away": 19,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Lanús C",
+              "away": "C.A. Ituzaingó"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 30,
+              "away": 19
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f05-m02",
+          "fixture_key": "femebal:zona-b-2026:f05-m02",
+          "home": {
+            "club": "Palermo Handball",
+            "variant": null
+          },
+          "away": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B"
+          },
+          "date": "2026-04-26",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 27,
+            "away": 26,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Palermo Handball",
+              "away": "Municipalidad de Tres de Febrero B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 27,
+              "away": 26
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f05-m03",
+          "fixture_key": "femebal:zona-b-2026:f05-m03",
+          "home": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D"
+          },
+          "away": {
+            "club": "Atlanta",
+            "variant": null
+          },
+          "date": "2026-04-26",
+          "time": "20:15",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 21,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "S.A.G. Polvorines D",
+              "away": "C.A. Atlanta"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 21,
+              "away": 22
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f05-m04",
+          "fixture_key": "femebal:zona-b-2026:f05-m04",
+          "home": {
+            "club": "Racing Club",
+            "variant": "B"
+          },
+          "away": {
+            "club": "Juana Manso",
+            "variant": null
+          },
+          "date": "2026-04-26",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 37,
+            "away": 32,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Racing Club B",
+              "away": "VHC Juana Manso"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 37,
+              "away": 32
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f05-m05",
+          "fixture_key": "femebal:zona-b-2026:f05-m05",
+          "home": {
+            "club": "G.E.I.",
+            "variant": "B"
+          },
+          "away": {
+            "club": "Municipalidad de Pilar",
+            "variant": null
+          },
+          "date": "2026-04-26",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 30,
+            "away": 15,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "G.E.I. B",
+              "away": "Municipalidad de Pilar"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 30,
+              "away": 15
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f05-m06",
+          "fixture_key": "femebal:zona-b-2026:f05-m06",
+          "home": {
+            "club": "A.E. Goethe",
+            "variant": "B"
+          },
+          "away": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C"
+          },
+          "date": "2026-04-26",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 31,
+            "away": 24,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "A.E. Goethe B",
+              "away": "Municipalidad de Vicente López C"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 31,
+              "away": 24
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f05-m07",
+          "fixture_key": "femebal:zona-b-2026:f05-m07",
+          "home": {
+            "club": "S.A.G. Villa Ballester",
+            "variant": "D"
+          },
+          "away": {
+            "club": "Chacarita Juniors",
+            "variant": null
+          },
+          "date": "2026-04-26",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 22,
+            "away": 21,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "S.A.G. Villa Ballester D",
+              "away": "C.A. Chacarita Juniors"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 22,
+              "away": 21
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f05-m08",
+          "fixture_key": "femebal:zona-b-2026:f05-m08",
+          "home": {
+            "club": "Municipalidad de Escobar",
+            "variant": null
+          },
+          "away": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null
+          },
+          "date": "2026-04-26",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 38,
+            "away": 21,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Escobar",
+              "away": "Municipalidad de San Martín (Ce.M.E.F)"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 38,
+              "away": 21
+            },
+            "planillas": []
+          }
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f06-m01",
+          "fixture_key": "femebal:zona-b-2026:f06-m01",
+          "home": {
+            "club": "Ituzaingó",
+            "variant": null
+          },
+          "away": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null
+          },
+          "date": "2026-05-03",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 27,
+            "away": 25,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Ituzaingó",
+              "away": "Municipalidad de San Martín (Ce.M.E.F)"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 27,
+              "away": 25
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f06-m02",
+          "fixture_key": "femebal:zona-b-2026:f06-m02",
+          "home": {
+            "club": "Chacarita Juniors",
+            "variant": null
+          },
+          "away": {
+            "club": "Municipalidad de Escobar",
+            "variant": null
+          },
+          "date": "2026-05-03",
+          "time": "20:15",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 28,
+            "away": 34,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Chacarita Juniors",
+              "away": "Municipalidad de Escobar"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 28,
+              "away": 34
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f06-m03",
+          "fixture_key": "femebal:zona-b-2026:f06-m03",
+          "home": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C"
+          },
+          "away": {
+            "club": "S.A.G. Villa Ballester",
+            "variant": "D"
+          },
+          "date": "2026-05-03",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 16,
+            "away": 30,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Vicente López C",
+              "away": "S.A.G. Villa Ballester D"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 16,
+              "away": 30
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f06-m04",
+          "fixture_key": "femebal:zona-b-2026:f06-m04",
+          "home": {
+            "club": "Municipalidad de Pilar",
+            "variant": null
+          },
+          "away": {
+            "club": "A.E. Goethe",
+            "variant": "B"
+          },
+          "date": "2026-04-22",
+          "time": "21:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 17,
+            "away": 34,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Pilar",
+              "away": "A.E. Goethe B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 17,
+              "away": 34
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f06-m05",
+          "fixture_key": "femebal:zona-b-2026:f06-m05",
+          "home": {
+            "club": "Juana Manso",
+            "variant": null
+          },
+          "away": {
+            "club": "G.E.I.",
+            "variant": "B"
+          },
+          "date": "2026-05-03",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 35,
+            "away": 25,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "VHC Juana Manso",
+              "away": "G.E.I. B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 35,
+              "away": 25
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f06-m06",
+          "fixture_key": "femebal:zona-b-2026:f06-m06",
+          "home": {
+            "club": "Atlanta",
+            "variant": null
+          },
+          "away": {
+            "club": "Racing Club",
+            "variant": "B"
+          },
+          "date": "2026-05-03",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 22,
+            "away": 21,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Atlanta",
+              "away": "Racing Club B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 22,
+              "away": 21
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f06-m07",
+          "fixture_key": "femebal:zona-b-2026:f06-m07",
+          "home": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B"
+          },
+          "away": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D"
+          },
+          "date": "2026-05-03",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 21,
+            "away": 26,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Tres de Febrero B",
+              "away": "S.A.G. Polvorines D"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 21,
+              "away": 26
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f06-m08",
+          "fixture_key": "femebal:zona-b-2026:f06-m08",
+          "home": {
+            "club": "Lanús",
+            "variant": "C"
+          },
+          "away": {
+            "club": "Palermo Handball",
+            "variant": null
+          },
+          "date": "2026-05-03",
+          "time": "16:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 30,
+            "away": 31,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Lanús C",
+              "away": "Palermo Handball"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 30,
+              "away": 31
+            },
+            "planillas": []
+          }
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f07-m01",
+          "fixture_key": "femebal:zona-b-2026:f07-m01",
+          "home": {
+            "club": "Palermo Handball",
+            "variant": null
+          },
+          "away": {
+            "club": "Ituzaingó",
+            "variant": null
+          },
+          "date": "2026-05-10",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 24,
+            "away": 25,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Palermo Handball",
+              "away": "C.A. Ituzaingó"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 24,
+              "away": 25
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f07-m02",
+          "fixture_key": "femebal:zona-b-2026:f07-m02",
+          "home": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D"
+          },
+          "away": {
+            "club": "Lanús",
+            "variant": "C"
+          },
+          "date": "2026-05-10",
+          "time": "16:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 30,
+            "away": 29,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "S.A.G. Polvorines D",
+              "away": "C.A. Lanús C"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 30,
+              "away": 29
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f07-m03",
+          "fixture_key": "femebal:zona-b-2026:f07-m03",
+          "home": {
+            "club": "Racing Club",
+            "variant": "B"
+          },
+          "away": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B"
+          },
+          "date": "2026-05-10",
+          "time": "18:30",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 31,
+            "away": 17,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Racing Club B",
+              "away": "Municipalidad de Tres de Febrero B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 31,
+              "away": 17
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f07-m04",
+          "fixture_key": "femebal:zona-b-2026:f07-m04",
+          "home": {
+            "club": "G.E.I.",
+            "variant": "B"
+          },
+          "away": {
+            "club": "Atlanta",
+            "variant": null
+          },
+          "date": "2026-05-10",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 27,
+            "away": 29,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "G.E.I. B",
+              "away": "C.A. Atlanta"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 27,
+              "away": 29
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f07-m05",
+          "fixture_key": "femebal:zona-b-2026:f07-m05",
+          "home": {
+            "club": "A.E. Goethe",
+            "variant": "B"
+          },
+          "away": {
+            "club": "Juana Manso",
+            "variant": null
+          },
+          "date": "2026-05-10",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 32,
+            "away": 26,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "A.E. Goethe B",
+              "away": "VHC Juana Manso"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 32,
+              "away": 26
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f07-m06",
+          "fixture_key": "femebal:zona-b-2026:f07-m06",
+          "home": {
+            "club": "S.A.G. Villa Ballester",
+            "variant": "D"
+          },
+          "away": {
+            "club": "Municipalidad de Pilar",
+            "variant": null
+          },
+          "date": "2026-05-10",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 32,
+            "away": 15,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "S.A.G. Villa Ballester D",
+              "away": "Municipalidad de Pilar"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 32,
+              "away": 15
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f07-m07",
+          "fixture_key": "femebal:zona-b-2026:f07-m07",
+          "home": {
+            "club": "Municipalidad de Escobar",
+            "variant": null
+          },
+          "away": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C"
+          },
+          "date": "2026-05-10",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 29,
+            "away": 25,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Escobar",
+              "away": "Municipalidad de Vicente López C"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 29,
+              "away": 25
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f07-m08",
+          "fixture_key": "femebal:zona-b-2026:f07-m08",
+          "home": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null
+          },
+          "away": {
+            "club": "Chacarita Juniors",
+            "variant": null
+          },
+          "date": "2026-05-10",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 24,
+            "away": 31,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de San Martín (Ce.M.E.F)",
+              "away": "C.A. Chacarita Juniors"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 24,
+              "away": 31
+            },
+            "planillas": []
+          }
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f08-m01",
+          "fixture_key": "femebal:zona-b-2026:f08-m01",
+          "home": {
+            "club": "Ituzaingó",
+            "variant": null
+          },
+          "away": {
+            "club": "Chacarita Juniors",
+            "variant": null
+          },
+          "date": "2026-05-17",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 23,
+            "away": 29,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Ituzaingó",
+              "away": "C.A. Chacarita Juniors"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 23,
+              "away": 29
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f08-m02",
+          "fixture_key": "femebal:zona-b-2026:f08-m02",
+          "home": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C"
+          },
+          "away": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null
+          },
+          "date": "2026-05-17",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 18,
+            "away": 32,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Vicente López C",
+              "away": "Municipalidad de San Martín (Ce.M.E.F)"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 18,
+              "away": 32
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f08-m03",
+          "fixture_key": "femebal:zona-b-2026:f08-m03",
+          "home": {
+            "club": "Municipalidad de Pilar",
+            "variant": null
+          },
+          "away": {
+            "club": "Municipalidad de Escobar",
+            "variant": null
+          },
+          "date": "2026-05-17",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 28,
+            "away": 37,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Pilar",
+              "away": "Municipalidad de Escobar"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 28,
+              "away": 37
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f08-m04",
+          "fixture_key": "femebal:zona-b-2026:f08-m04",
+          "home": {
+            "club": "Juana Manso",
+            "variant": null
+          },
+          "away": {
+            "club": "S.A.G. Villa Ballester",
+            "variant": "D"
+          },
+          "date": "2026-05-17",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 22,
+            "away": 25,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "VHC Juana Manso",
+              "away": "S.A.G. Villa Ballester D"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 22,
+              "away": 25
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f08-m05",
+          "fixture_key": "femebal:zona-b-2026:f08-m05",
+          "home": {
+            "club": "Atlanta",
+            "variant": null
+          },
+          "away": {
+            "club": "A.E. Goethe",
+            "variant": "B"
+          },
+          "date": "2026-05-17",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 17,
+            "away": 35,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Atlanta",
+              "away": "A.E. Goethe B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 17,
+              "away": 35
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f08-m06",
+          "fixture_key": "femebal:zona-b-2026:f08-m06",
+          "home": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B"
+          },
+          "away": {
+            "club": "G.E.I.",
+            "variant": "B"
+          },
+          "date": "2026-05-17",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 17,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Tres de Febrero B",
+              "away": "G.E.I. B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 17,
+              "away": 22
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f08-m07",
+          "fixture_key": "femebal:zona-b-2026:f08-m07",
+          "home": {
+            "club": "Lanús",
+            "variant": "C"
+          },
+          "away": {
+            "club": "Racing Club",
+            "variant": "B"
+          },
+          "date": "2026-05-17",
+          "time": "16:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 21,
+            "away": 20,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Lanús C",
+              "away": "Racing Club B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 21,
+              "away": 20
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f08-m08",
+          "fixture_key": "femebal:zona-b-2026:f08-m08",
+          "home": {
+            "club": "Palermo Handball",
+            "variant": null
+          },
+          "away": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D"
+          },
+          "date": "2026-05-17",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 29,
+            "away": 24,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Palermo Handball",
+              "away": "S.A.G. Polvorines D"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 29,
+              "away": 24
+            },
+            "planillas": []
+          }
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f09-m01",
+          "fixture_key": "femebal:zona-b-2026:f09-m01",
+          "home": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D"
+          },
+          "away": {
+            "club": "Ituzaingó",
+            "variant": null
+          },
+          "date": "2026-05-24",
+          "time": "18:30",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 27,
+            "away": 27,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "S.A.G. Polvorines D",
+              "away": "C.A. Ituzaingó"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 27,
+              "away": 27
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f09-m02",
+          "fixture_key": "femebal:zona-b-2026:f09-m02",
+          "home": {
+            "club": "Racing Club",
+            "variant": "B"
+          },
+          "away": {
+            "club": "Palermo Handball",
+            "variant": null
+          },
+          "date": "2026-05-24",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 38,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Racing Club B",
+              "away": "Palermo Handball"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 38,
+              "away": 22
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f09-m03",
+          "fixture_key": "femebal:zona-b-2026:f09-m03",
+          "home": {
+            "club": "G.E.I.",
+            "variant": "B"
+          },
+          "away": {
+            "club": "Lanús",
+            "variant": "C"
+          },
+          "date": "2026-05-24",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 24,
+            "away": 31,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "G.E.I. B",
+              "away": "C.A. Lanús C"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 24,
+              "away": 31
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f09-m04",
+          "fixture_key": "femebal:zona-b-2026:f09-m04",
+          "home": {
+            "club": "A.E. Goethe",
+            "variant": "B"
+          },
+          "away": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B"
+          },
+          "date": "2026-05-24",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 34,
+            "away": 18,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "A.E. Goethe B",
+              "away": "Municipalidad de Tres de Febrero B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 34,
+              "away": 18
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f09-m05",
+          "fixture_key": "femebal:zona-b-2026:f09-m05",
+          "home": {
+            "club": "S.A.G. Villa Ballester",
+            "variant": "D"
+          },
+          "away": {
+            "club": "Atlanta",
+            "variant": null
+          },
+          "date": "2026-05-24",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 28,
+            "away": 19,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "S.A.G. Villa Ballester D",
+              "away": "C.A. Atlanta"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 28,
+              "away": 19
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f09-m06",
+          "fixture_key": "femebal:zona-b-2026:f09-m06",
+          "home": {
+            "club": "Municipalidad de Escobar",
+            "variant": null
+          },
+          "away": {
+            "club": "Juana Manso",
+            "variant": null
+          },
+          "date": "2026-05-25",
+          "time": "16:15",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 33,
+            "away": 32,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Escobar",
+              "away": "VHC Juana Manso"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 33,
+              "away": 32
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f09-m07",
+          "fixture_key": "femebal:zona-b-2026:f09-m07",
+          "home": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null
+          },
+          "away": {
+            "club": "Municipalidad de Pilar",
+            "variant": null
+          },
+          "date": "2026-05-24",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 28,
+            "away": 25,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de San Martín (Ce.M.E.F)",
+              "away": "Municipalidad de Pilar"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 28,
+              "away": 25
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f09-m08",
+          "fixture_key": "femebal:zona-b-2026:f09-m08",
+          "home": {
+            "club": "Chacarita Juniors",
+            "variant": null
+          },
+          "away": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C"
+          },
+          "date": "2026-05-24",
+          "time": "20:15",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 30,
+            "away": 30,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Chacarita Juniors",
+              "away": "Municipalidad de Vicente López C"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 30,
+              "away": 30
+            },
+            "planillas": []
+          }
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f10-m01",
+          "fixture_key": "femebal:zona-b-2026:f10-m01",
+          "home": {
+            "club": "Ituzaingó",
+            "variant": null
+          },
+          "away": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C"
+          },
+          "date": "2026-05-31",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 27,
+            "away": 25,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Ituzaingó",
+              "away": "Municipalidad de Vicente López C"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 27,
+              "away": 25
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f10-m02",
+          "fixture_key": "femebal:zona-b-2026:f10-m02",
+          "home": {
+            "club": "Municipalidad de Pilar",
+            "variant": null
+          },
+          "away": {
+            "club": "Chacarita Juniors",
+            "variant": null
+          },
+          "date": "2026-05-31",
+          "time": "16:15",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 29,
+            "away": 21,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Pilar",
+              "away": "C.A. Chacarita Juniors"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 29,
+              "away": 21
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f10-m03",
+          "fixture_key": "femebal:zona-b-2026:f10-m03",
+          "home": {
+            "club": "Juana Manso",
+            "variant": null
+          },
+          "away": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null
+          },
+          "date": "2026-05-31",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 42,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "VHC Juana Manso",
+              "away": "Municipalidad de San Martín (Ce.M.E.F)"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 42,
+              "away": 22
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f10-m04",
+          "fixture_key": "femebal:zona-b-2026:f10-m04",
+          "home": {
+            "club": "Atlanta",
+            "variant": null
+          },
+          "away": {
+            "club": "Municipalidad de Escobar",
+            "variant": null
+          },
+          "date": "2026-05-31",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 25,
+            "away": 31,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Atlanta",
+              "away": "Municipalidad de Escobar"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 25,
+              "away": 31
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f10-m05",
+          "fixture_key": "femebal:zona-b-2026:f10-m05",
+          "home": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B"
+          },
+          "away": {
+            "club": "S.A.G. Villa Ballester",
+            "variant": "D"
+          },
+          "date": "2026-05-31",
+          "time": "16:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 16,
+            "away": 28,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Tres de Febrero B",
+              "away": "S.A.G. Villa Ballester D"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 16,
+              "away": 28
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f10-m06",
+          "fixture_key": "femebal:zona-b-2026:f10-m06",
+          "home": {
+            "club": "Lanús",
+            "variant": "C"
+          },
+          "away": {
+            "club": "A.E. Goethe",
+            "variant": "B"
+          },
+          "date": "2026-05-31",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 23,
+            "away": 25,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Lanús C",
+              "away": "A.E. Goethe B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 23,
+              "away": 25
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f10-m07",
+          "fixture_key": "femebal:zona-b-2026:f10-m07",
+          "home": {
+            "club": "Palermo Handball",
+            "variant": null
+          },
+          "away": {
+            "club": "G.E.I.",
+            "variant": "B"
+          },
+          "date": "2026-05-31",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 37,
+            "away": 23,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Palermo Handball",
+              "away": "G.E.I. B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 37,
+              "away": 23
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f10-m08",
+          "fixture_key": "femebal:zona-b-2026:f10-m08",
+          "home": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D"
+          },
+          "away": {
+            "club": "Racing Club",
+            "variant": "B"
+          },
+          "date": "2026-05-31",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 22,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "S.A.G. Polvorines D",
+              "away": "Racing Club B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 22,
+              "away": 22
+            },
+            "planillas": []
+          }
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f11-m01",
+          "fixture_key": "femebal:zona-b-2026:f11-m01",
+          "home": {
+            "club": "Racing Club",
+            "variant": "B"
+          },
+          "away": {
+            "club": "Ituzaingó",
+            "variant": null
+          },
+          "date": "2026-06-04",
+          "time": "21:30",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 26,
+            "away": 23,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Racing Club B",
+              "away": "C.A. Ituzaingó"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 26,
+              "away": 23
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f11-m02",
+          "fixture_key": "femebal:zona-b-2026:f11-m02",
+          "home": {
+            "club": "G.E.I.",
+            "variant": "B"
+          },
+          "away": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D"
+          },
+          "date": "2026-06-07",
+          "time": "20:15",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 30,
+            "away": 28,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "G.E.I. B",
+              "away": "S.A.G. Polvorines D"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 30,
+              "away": 28
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f11-m03",
+          "fixture_key": "femebal:zona-b-2026:f11-m03",
+          "home": {
+            "club": "A.E. Goethe",
+            "variant": "B"
+          },
+          "away": {
+            "club": "Palermo Handball",
+            "variant": null
+          },
+          "date": "2026-06-07",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 29,
+            "away": 19,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "A.E. Goethe B",
+              "away": "Palermo Handball"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 29,
+              "away": 19
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f11-m04",
+          "fixture_key": "femebal:zona-b-2026:f11-m04",
+          "home": {
+            "club": "S.A.G. Villa Ballester",
+            "variant": "D"
+          },
+          "away": {
+            "club": "Lanús",
+            "variant": "C"
+          },
+          "date": "2026-06-07",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 27,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "S.A.G. Villa Ballester D",
+              "away": "C.A. Lanús C"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 27,
+              "away": 22
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f11-m05",
+          "fixture_key": "femebal:zona-b-2026:f11-m05",
+          "home": {
+            "club": "Municipalidad de Escobar",
+            "variant": null
+          },
+          "away": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B"
+          },
+          "date": "2026-06-07",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 38,
+            "away": 23,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Escobar",
+              "away": "Municipalidad de Tres de Febrero B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 38,
+              "away": 23
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f11-m06",
+          "fixture_key": "femebal:zona-b-2026:f11-m06",
+          "home": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null
+          },
+          "away": {
+            "club": "Atlanta",
+            "variant": null
+          },
+          "date": "2026-06-07",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 21,
+            "away": 20,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de San Martín (Ce.M.E.F)",
+              "away": "C.A. Atlanta"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 21,
+              "away": 20
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f11-m07",
+          "fixture_key": "femebal:zona-b-2026:f11-m07",
+          "home": {
+            "club": "Chacarita Juniors",
+            "variant": null
+          },
+          "away": {
+            "club": "Juana Manso",
+            "variant": null
+          },
+          "date": "2026-06-07",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 26,
+            "away": 35,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Chacarita Juniors",
+              "away": "VHC Juana Manso"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 26,
+              "away": 35
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f11-m08",
+          "fixture_key": "femebal:zona-b-2026:f11-m08",
+          "home": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C"
+          },
+          "away": {
+            "club": "Municipalidad de Pilar",
+            "variant": null
+          },
+          "date": "2026-06-07",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 36,
+            "away": 19,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Vicente López C",
+              "away": "Municipalidad de Pilar"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 36,
+              "away": 19
+            },
+            "planillas": []
+          }
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f12-m01",
+          "fixture_key": "femebal:zona-b-2026:f12-m01",
+          "home": {
+            "club": "Ituzaingó",
+            "variant": null
+          },
+          "away": {
+            "club": "Municipalidad de Pilar",
+            "variant": null
+          },
+          "date": "2026-06-14",
+          "time": "16:15",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 28,
+            "away": 28,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Ituzaingó",
+              "away": "Municipalidad de Pilar"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 28,
+              "away": 28
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f12-m02",
+          "fixture_key": "femebal:zona-b-2026:f12-m02",
+          "home": {
+            "club": "Juana Manso",
+            "variant": null
+          },
+          "away": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C"
+          },
+          "date": "2026-06-14",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 32,
+            "away": 18,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "VHC Juana Manso",
+              "away": "Municipalidad de Vicente López C"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 32,
+              "away": 18
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f12-m03",
+          "fixture_key": "femebal:zona-b-2026:f12-m03",
+          "home": {
+            "club": "Atlanta",
+            "variant": null
+          },
+          "away": {
+            "club": "Chacarita Juniors",
+            "variant": null
+          },
+          "date": "2026-06-12",
+          "time": "21:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 17,
+            "away": 17,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Atlanta",
+              "away": "C.A. Chacarita Juniors"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 17,
+              "away": 17
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f12-m04",
+          "fixture_key": "femebal:zona-b-2026:f12-m04",
+          "home": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B"
+          },
+          "away": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null
+          },
+          "date": "2026-06-11",
+          "time": "21:30",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 14,
+            "away": 19,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Tres de Febrero B",
+              "away": "Municipalidad de San Martín (Ce.M.E.F)"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 14,
+              "away": 19
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f12-m05",
+          "fixture_key": "femebal:zona-b-2026:f12-m05",
+          "home": {
+            "club": "Lanús",
+            "variant": "C"
+          },
+          "away": {
+            "club": "Municipalidad de Escobar",
+            "variant": null
+          },
+          "date": "2026-06-14",
+          "time": "16:15",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 29,
+            "away": 39,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Lanús C",
+              "away": "Municipalidad de Escobar"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 29,
+              "away": 39
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f12-m06",
+          "fixture_key": "femebal:zona-b-2026:f12-m06",
+          "home": {
+            "club": "Palermo Handball",
+            "variant": null
+          },
+          "away": {
+            "club": "S.A.G. Villa Ballester",
+            "variant": "D"
+          },
+          "date": "2026-06-14",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 20,
+            "away": 30,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Palermo Handball",
+              "away": "S.A.G. Villa Ballester D"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 20,
+              "away": 30
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f12-m07",
+          "fixture_key": "femebal:zona-b-2026:f12-m07",
+          "home": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D"
+          },
+          "away": {
+            "club": "A.E. Goethe",
+            "variant": "B"
+          },
+          "date": "2026-06-14",
+          "time": "16:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 20,
+            "away": 28,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "S.A.G. Polvorines D",
+              "away": "A.E. Goethe B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 20,
+              "away": 28
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f12-m08",
+          "fixture_key": "femebal:zona-b-2026:f12-m08",
+          "home": {
+            "club": "Racing Club",
+            "variant": "B"
+          },
+          "away": {
+            "club": "G.E.I.",
+            "variant": "B"
+          },
+          "date": "2026-06-14",
+          "time": "18:30",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 36,
+            "away": 30,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Racing Club B",
+              "away": "G.E.I. B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 36,
+              "away": 30
+            },
+            "planillas": []
+          }
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f13-m01",
+          "fixture_key": "femebal:zona-b-2026:f13-m01",
+          "home": {
+            "club": "G.E.I.",
+            "variant": "B"
+          },
+          "away": {
+            "club": "Ituzaingó",
+            "variant": null
+          },
+          "date": "2026-06-28",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 34,
+            "away": 24,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "G.E.I. B",
+              "away": "C.A. Ituzaingó"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 34,
+              "away": 24
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f13-m02",
+          "fixture_key": "femebal:zona-b-2026:f13-m02",
+          "home": {
+            "club": "A.E. Goethe",
+            "variant": "B"
+          },
+          "away": {
+            "club": "Racing Club",
+            "variant": "B"
+          },
+          "date": "2026-06-28",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 27,
+            "away": 24,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "A.E. Goethe B",
+              "away": "Racing Club B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 27,
+              "away": 24
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f13-m03",
+          "fixture_key": "femebal:zona-b-2026:f13-m03",
+          "home": {
+            "club": "S.A.G. Villa Ballester",
+            "variant": "D"
+          },
+          "away": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D"
+          },
+          "date": "2026-06-28",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 30,
+            "away": 20,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "S.A.G. Villa Ballester D",
+              "away": "S.A.G. Polvorines D"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 30,
+              "away": 20
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f13-m04",
+          "fixture_key": "femebal:zona-b-2026:f13-m04",
+          "home": {
+            "club": "Municipalidad de Escobar",
+            "variant": null
+          },
+          "away": {
+            "club": "Palermo Handball",
+            "variant": null
+          },
+          "date": "2026-06-28",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 24,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Escobar",
+              "away": "Palermo Handball"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 24,
+              "away": 22
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f13-m05",
+          "fixture_key": "femebal:zona-b-2026:f13-m05",
+          "home": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null
+          },
+          "away": {
+            "club": "Lanús",
+            "variant": "C"
+          },
+          "date": "2026-06-28",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 25,
+            "away": 28,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de San Martín (Ce.M.E.F)",
+              "away": "C.A. Lanús C"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 25,
+              "away": 28
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f13-m06",
+          "fixture_key": "femebal:zona-b-2026:f13-m06",
+          "home": {
+            "club": "Chacarita Juniors",
+            "variant": null
+          },
+          "away": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B"
+          },
+          "date": "2026-06-28",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 35,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Chacarita Juniors",
+              "away": "Municipalidad de Tres de Febrero B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 35,
+              "away": 22
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f13-m07",
+          "fixture_key": "femebal:zona-b-2026:f13-m07",
+          "home": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C"
+          },
+          "away": {
+            "club": "Atlanta",
+            "variant": null
+          },
+          "date": "2026-06-28",
+          "time": "16:15",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 26,
+            "away": 25,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Vicente López C",
+              "away": "C.A. Atlanta"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 26,
+              "away": 25
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f13-m08",
+          "fixture_key": "femebal:zona-b-2026:f13-m08",
+          "home": {
+            "club": "Municipalidad de Pilar",
+            "variant": null
+          },
+          "away": {
+            "club": "Juana Manso",
+            "variant": null
+          },
+          "date": "2026-06-28",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 24,
+            "away": 30,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Pilar",
+              "away": "VHC Juana Manso"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 24,
+              "away": 30
+            },
+            "planillas": []
+          }
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f14-m01",
+          "fixture_key": "femebal:zona-b-2026:f14-m01",
+          "home": {
+            "club": "Ituzaingó",
+            "variant": null
+          },
+          "away": {
+            "club": "Juana Manso",
+            "variant": null
+          },
+          "date": "2026-07-05",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 25,
+            "away": 27,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Ituzaingó",
+              "away": "VHC Juana Manso"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 25,
+              "away": 27
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f14-m02",
+          "fixture_key": "femebal:zona-b-2026:f14-m02",
+          "home": {
+            "club": "Atlanta",
+            "variant": null
+          },
+          "away": {
+            "club": "Municipalidad de Pilar",
+            "variant": null
+          },
+          "date": "2026-07-05",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 16,
+            "away": 17,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Atlanta",
+              "away": "Municipalidad de Pilar"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 16,
+              "away": 17
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f14-m03",
+          "fixture_key": "femebal:zona-b-2026:f14-m03",
+          "home": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B"
+          },
+          "away": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C"
+          },
+          "date": "2026-07-05",
+          "time": "18:30",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 16,
+            "away": 31,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Tres de Febrero B",
+              "away": "Municipalidad de Vicente López C"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 16,
+              "away": 31
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f14-m04",
+          "fixture_key": "femebal:zona-b-2026:f14-m04",
+          "home": {
+            "club": "Lanús",
+            "variant": "C"
+          },
+          "away": {
+            "club": "Chacarita Juniors",
+            "variant": null
+          },
+          "date": "2026-07-05",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 27,
+            "away": 29,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Lanús C",
+              "away": "C.A. Chacarita Juniors"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 27,
+              "away": 29
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f14-m05",
+          "fixture_key": "femebal:zona-b-2026:f14-m05",
+          "home": {
+            "club": "Palermo Handball",
+            "variant": null
+          },
+          "away": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null
+          },
+          "date": "2026-07-05",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 24,
+            "away": 25,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Palermo Handball",
+              "away": "Municipalidad de San Martín (Ce.M.E.F)"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 24,
+              "away": 25
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f14-m06",
+          "fixture_key": "femebal:zona-b-2026:f14-m06",
+          "home": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D"
+          },
+          "away": {
+            "club": "Municipalidad de Escobar",
+            "variant": null
+          },
+          "date": "2026-07-05",
+          "time": "16:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 25,
+            "away": 36,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "S.A.G. Polvorines D",
+              "away": "Municipalidad de Escobar"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 25,
+              "away": 36
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f14-m07",
+          "fixture_key": "femebal:zona-b-2026:f14-m07",
+          "home": {
+            "club": "Racing Club",
+            "variant": "B"
+          },
+          "away": {
+            "club": "S.A.G. Villa Ballester",
+            "variant": "D"
+          },
+          "date": "2026-07-05",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 17,
+            "away": 31,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Racing Club B",
+              "away": "S.A.G. Villa Ballester D"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 17,
+              "away": 31
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f14-m08",
+          "fixture_key": "femebal:zona-b-2026:f14-m08",
+          "home": {
+            "club": "G.E.I.",
+            "variant": "B"
+          },
+          "away": {
+            "club": "A.E. Goethe",
+            "variant": "B"
+          },
+          "date": "2026-07-05",
+          "time": "20:15",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 26,
+            "away": 33,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "G.E.I. B",
+              "away": "A.E. Goethe B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 26,
+              "away": 33
+            },
+            "planillas": []
+          }
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f15-m01",
+          "fixture_key": "femebal:zona-b-2026:f15-m01",
+          "home": {
+            "club": "A.E. Goethe",
+            "variant": "B"
+          },
+          "away": {
+            "club": "Ituzaingó",
+            "variant": null
+          },
+          "date": "2026-07-12",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 33,
+            "away": 20,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "A.E. Goethe B",
+              "away": "C.A. Ituzaingó"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 33,
+              "away": 20
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f15-m02",
+          "fixture_key": "femebal:zona-b-2026:f15-m02",
+          "home": {
+            "club": "S.A.G. Villa Ballester",
+            "variant": "D"
+          },
+          "away": {
+            "club": "G.E.I.",
+            "variant": "B"
+          },
+          "date": "2026-07-12",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 33,
+            "away": 10,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "S.A.G. Villa Ballester D",
+              "away": "G.E.I. B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 33,
+              "away": 10
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f15-m03",
+          "fixture_key": "femebal:zona-b-2026:f15-m03",
+          "home": {
+            "club": "Municipalidad de Escobar",
+            "variant": null
+          },
+          "away": {
+            "club": "Racing Club",
+            "variant": "B"
+          },
+          "date": "2026-07-12",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 30,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Escobar",
+              "away": "Racing Club B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 30,
+              "away": 22
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f15-m04",
+          "fixture_key": "femebal:zona-b-2026:f15-m04",
+          "home": {
+            "club": "Municipalidad de San Martín (Ce.M.E.F)",
+            "variant": null
+          },
+          "away": {
+            "club": "S.A.G. Polvorines",
+            "variant": "D"
+          },
+          "date": "2026-07-12",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 28,
+            "away": 24,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de San Martín (Ce.M.E.F)",
+              "away": "S.A.G. Polvorines D"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 28,
+              "away": 24
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f15-m05",
+          "fixture_key": "femebal:zona-b-2026:f15-m05",
+          "home": {
+            "club": "Chacarita Juniors",
+            "variant": null
+          },
+          "away": {
+            "club": "Palermo Handball",
+            "variant": null
+          },
+          "date": "2026-07-12",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 30,
+            "away": 23,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Chacarita Juniors",
+              "away": "Palermo Handball"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 30,
+              "away": 23
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f15-m06",
+          "fixture_key": "femebal:zona-b-2026:f15-m06",
+          "home": {
+            "club": "Municipalidad de Vicente López",
+            "variant": "C"
+          },
+          "away": {
+            "club": "Lanús",
+            "variant": "C"
+          },
+          "date": "2026-07-12",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 21,
+            "away": 20,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Vicente López C",
+              "away": "C.A. Lanús C"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 21,
+              "away": 20
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f15-m07",
+          "fixture_key": "femebal:zona-b-2026:f15-m07",
+          "home": {
+            "club": "Municipalidad de Pilar",
+            "variant": null
+          },
+          "away": {
+            "club": "Municipalidad de Tres de Febrero",
+            "variant": "B"
+          },
+          "date": "2026-07-12",
+          "time": "18:00",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 22,
+            "away": 24,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Pilar",
+              "away": "Municipalidad de Tres de Febrero B"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 22,
+              "away": 24
+            },
+            "planillas": []
+          }
+        },
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-b-2026:f15-m08",
+          "fixture_key": "femebal:zona-b-2026:f15-m08",
+          "home": {
+            "club": "Juana Manso",
+            "variant": null
+          },
+          "away": {
+            "club": "Atlanta",
+            "variant": null
+          },
+          "date": "2026-07-12",
+          "time": "19:45",
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 36,
+            "away": 25,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "VHC Juana Manso",
+              "away": "C.A. Atlanta"
+            },
+            "tracker_state": "played",
+            "tracker_scores": {
+              "home": 36,
+              "away": 25
+            },
+            "planillas": []
+          }
+        }
+      ]
+    }
+  ]
+}

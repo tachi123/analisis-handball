@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "corrections": [
+    {
+      "fixture_key": "femebal:zona-b-2026:f02-m02",
+      "final_home_score": 0,
+      "final_away_score": 3,
+      "reason": "Suspended match: awarded 3-0 to A.E. Goethe B (winner 3 points, loser 0 and CP)."
+    }
+  ]
+}

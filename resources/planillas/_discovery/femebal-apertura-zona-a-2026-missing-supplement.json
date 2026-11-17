@@ -1,0 +1,250 @@
+{
+  "source": {
+    "label": "FEMEBAL Apertura Zona A 2026 3ªM - reviewed missing-match supplement",
+    "captured_at": "2026-11-16",
+    "collection_method": "user-supplied reviewed results and downloaded official sheets"
+  },
+  "stage": {
+    "season": 2026,
+    "name": "Apertura Zona A 2026 3ªM",
+    "category": "Mayores",
+    "division": "3ª División",
+    "gender": "Masculino"
+  },
+  "rounds": [
+    {
+      "number": 1,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-a-2026:missing-f01",
+          "fixture_key": "femebal:zona-a-2026:missing-f01",
+          "home": {
+            "club": "Defensores de Moreno",
+            "variant": null
+          },
+          "away": {
+            "club": "Villa Calzada",
+            "variant": null
+          },
+          "date": "2026-03-22",
+          "time": null,
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 20,
+            "away": 30,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Defensores de Moreno",
+              "away": "C.A. y S. Villa Calzada"
+            },
+            "tracker_scores": {
+              "home": 20,
+              "away": 30
+            },
+            "tracker_state": "played",
+            "planillas": []
+          }
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-a-2026:missing-f02",
+          "fixture_key": "femebal:zona-a-2026:missing-f02",
+          "home": {
+            "club": "Club Comunicaciones",
+            "variant": "C"
+          },
+          "away": {
+            "club": "Defensores de Moreno",
+            "variant": null
+          },
+          "date": "2026-03-29",
+          "time": null,
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 22,
+            "away": 18,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Club Comunicaciones C",
+              "away": "C.A. Defensores de Moreno"
+            },
+            "tracker_scores": {
+              "home": 22,
+              "away": 18
+            },
+            "tracker_state": "played",
+            "planillas": []
+          }
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-a-2026:missing-f03",
+          "fixture_key": "femebal:zona-a-2026:missing-f03",
+          "home": {
+            "club": "Defensores de Moreno",
+            "variant": null
+          },
+          "away": {
+            "club": "U.N.La.M.",
+            "variant": null
+          },
+          "date": "2026-04-12",
+          "time": null,
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 28,
+            "away": 26,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Defensores de Moreno",
+              "away": "U.N.La.M."
+            },
+            "tracker_scores": {
+              "home": 28,
+              "away": 26
+            },
+            "tracker_state": "played",
+            "planillas": []
+          }
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-a-2026:missing-f04",
+          "fixture_key": "femebal:zona-a-2026:missing-f04",
+          "home": {
+            "club": "Defensores de Moreno",
+            "variant": null
+          },
+          "away": {
+            "club": "San Telmo",
+            "variant": "B"
+          },
+          "date": "2026-04-19",
+          "time": null,
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 18,
+            "away": 22,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.A. Defensores de Moreno",
+              "away": "C.A. San Telmo B"
+            },
+            "tracker_scores": {
+              "home": 18,
+              "away": 22
+            },
+            "tracker_state": "played",
+            "planillas": []
+          }
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-a-2026:missing-f09",
+          "fixture_key": "femebal:zona-a-2026:missing-f09",
+          "home": {
+            "club": "Deportivo Laferrere",
+            "variant": null
+          },
+          "away": {
+            "club": "Banfield",
+            "variant": "B"
+          },
+          "date": "2026-05-24",
+          "time": null,
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 34,
+            "away": 33,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "C.S. y C. Deportivo Laferrere",
+              "away": "C.A. Banfield B"
+            },
+            "tracker_scores": {
+              "home": 34,
+              "away": 33
+            },
+            "tracker_state": "played",
+            "planillas": []
+          }
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "entries": [
+        {
+          "kind": "match",
+          "entry_key": "femebal:zona-a-2026:missing-f14",
+          "fixture_key": "femebal:zona-a-2026:missing-f14",
+          "home": {
+            "club": "Municipalidad de Avellaneda",
+            "variant": null
+          },
+          "away": {
+            "club": "Temperley",
+            "variant": null
+          },
+          "date": "2026-07-05",
+          "time": null,
+          "venue": null,
+          "court": null,
+          "result": {
+            "home": 28,
+            "away": 21,
+            "status": "reported"
+          },
+          "evidence": {
+            "tracker_labels": {
+              "home": "Municipalidad de Avellaneda",
+              "away": "C.A. Temperley"
+            },
+            "tracker_scores": {
+              "home": 28,
+              "away": 21
+            },
+            "tracker_state": "played",
+            "planillas": []
+          }
+        }
+      ]
+    }
+  ]
+}

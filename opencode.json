@@ -152,6 +152,25 @@
       }
     }
   },
+  "agents": {
+    "gentle-orchestrator": {
+      "permissions": [
+        { "action": "subagent", "resource": "general", "effect": "allow" },
+        { "action": "subagent", "resource": "explore", "effect": "allow" },
+        { "action": "subagent", "resource": "worker", "effect": "allow" },
+        { "action": "subagent", "resource": "sdd-apply", "effect": "allow" },
+        { "action": "subagent", "resource": "sdd-archive", "effect": "allow" },
+        { "action": "subagent", "resource": "sdd-design", "effect": "allow" },
+        { "action": "subagent", "resource": "sdd-explore", "effect": "allow" },
+        { "action": "subagent", "resource": "sdd-init", "effect": "allow" },
+        { "action": "subagent", "resource": "sdd-onboard", "effect": "allow" },
+        { "action": "subagent", "resource": "sdd-propose", "effect": "allow" },
+        { "action": "subagent", "resource": "sdd-spec", "effect": "allow" },
+        { "action": "subagent", "resource": "sdd-tasks", "effect": "allow" },
+        { "action": "subagent", "resource": "sdd-verify", "effect": "allow" }
+      ]
+    }
+  },
   "mcp": {
     "context7": {
       "enabled": true,
