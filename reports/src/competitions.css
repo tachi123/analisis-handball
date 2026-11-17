@@ -104,7 +104,9 @@
 .podium-wrap { border: 1px solid #e2e8f0; border-radius: 12px; }
 .podium-table td { vertical-align: middle; }
 .podium-table .podium-value { color: #1d4ed8; font-weight: 800; }
-.podium-table td .result-strip { min-width: 360px; }
+.podium-table td .result-strip { min-width: 0; }
+.form-cell { display: grid; gap: .2rem; }
+.form-cell small { color: #64748b; font-size: .7rem; }
 .show-all { margin-top: .7rem; border: 1px solid #bfdbfe; border-radius: 8px; background: #eff6ff; color: #1d4ed8; padding: .5rem .7rem; font: inherit; font-weight: 700; cursor: pointer; }
 
 .campaign-details { display: grid; gap: .6rem; }
@@ -208,7 +210,6 @@
   .season-match-row { grid-template-columns: 3rem 3.2rem 4.2rem minmax(6rem, 1fr); row-gap: .3rem; }
   .season-match-score { text-align: left; }
   .season-match-probabilities { grid-column: 1 / -1; }
-  .podium-table td .result-strip { min-width: 260px; }
   .sapa-next-fixture, .pending-card { align-items: flex-start; flex-direction: column; }
   .outcome-probabilities { width: 100%; justify-content: space-between; }
   .competition-card-actions { flex-wrap: wrap; }

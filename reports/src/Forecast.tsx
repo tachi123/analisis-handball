@@ -46,6 +46,11 @@ export function Forecast({ forecast, tournament, onBack, onHome, onTournament, o
   const sapaWin = sapaFixture ? (sapaHome ? sapaFixture.home_win_probability : sapaFixture.away_win_probability) : 0
   const sapaLoss = sapaFixture ? (sapaHome ? sapaFixture.away_win_probability : sapaFixture.home_win_probability) : 0
   const sapaRival = sapaFixture ? (sapaHome ? sapaFixture.away : sapaFixture.home) : forecast.rival_profile.club
+  const formSummary = (team: PublicForecast['teams'][number]) => {
+    const last = team.campaign.slice(-5)
+    const points = last.reduce((total, match) => total + (match.result === 'win' ? forecast.points_rule.win : match.result === 'draw' ? forecast.points_rule.draw : forecast.points_rule.loss), 0)
+    return { points, max: last.length * forecast.points_rule.win }
+  }
 
   return <main className="report-shell tournament-shell forecast-shell" aria-labelledby="forecast-page-title">
     <header className="hero">
@@ -85,7 +90,7 @@ export function Forecast({ forecast, tournament, onBack, onHome, onTournament, o
         <small>Podio = suma de las posiciones 1–3 en las mismas simulaciones. No se suman porcentajes redondeados.</small>
       </div>
       <div className="table-wrap podium-wrap"><table className="player-table podium-table">
-        <thead><tr><th>Equipo</th><th>1.º</th><th>2.º</th><th>3.º</th><th>Podio</th><th>Puesto esp.</th><th>Campaña en Permanencia</th></tr></thead>
+        <thead><tr><th>Equipo</th><th>1.º</th><th>2.º</th><th>3.º</th><th>Podio</th><th>Puesto esp.</th><th>Últimos 5</th></tr></thead>
         <tbody>{visible.map((team) => <tr key={team.club} className={isSapa(team.club) ? 'sapa-row' : ''}>
           <td><strong>{team.club}</strong></td>
           <td>{tinyPercent(team.finish_probabilities.first)}</td>
@@ -93,12 +98,12 @@ export function Forecast({ forecast, tournament, onBack, onHome, onTournament, o
           <td>{tinyPercent(team.finish_probabilities.third)}</td>
           <td className="podium-value">{tinyPercent(team.podium_probability)}</td>
           <td>{decimal(team.expected_position, 2)}</td>
-          <td><ResultStrip matches={campaignStrip(team)} compact label={`Campaña de ${team.club}`} /></td>
+          <td><div className="form-cell"><ResultStrip matches={campaignStrip(team).slice(-5)} compact label={`Últimos 5 de ${team.club}`} /><small>{formSummary(team).points} / {formSummary(team).max} pts</small></div></td>
         </tr>)}</tbody>
       </table></div>
       {contenders.length > 8 && <button className="show-all" onClick={() => setShowAll(!showAll)}>{showAll ? 'Ver menos' : `Ver todos los equipos (${contenders.length})`}</button>}
       <ResultLegend />
-      <p className="result-legend-note">Cada pastilla es una fecha: verde G (ganó), amarillo E (empató), rojo P (perdió). Pasá el mouse por una fecha para ver rival y marcador; el detalle completo está en «Campañas».</p>
+      <p className="result-legend-note">Cada pastilla es una fecha: verde G (ganó), amarillo E (empató), rojo P (perdió). En la tabla se ven las últimas 5; el camino completo, con rival y marcador, está en «Campañas».</p>
     </section>
 
     <section className="dashboard-section">

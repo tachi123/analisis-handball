@@ -77,18 +77,19 @@ The public hub now has three surfaces:
   standings with the points rule, round-by-round results with a coverage badge,
   scorers, discipline, and the competition marks.
 - **Pronóstico de cierre** (`forecast_permanencia-2026.json`): SAPA's finish
-  probabilities, the podium table, each contender's campaign as a G/E/P strip,
-  expandable match lists, and the pending fixtures.
+  probabilities, the podium table with a compact last-five form strip, each
+  contender's full campaign under «Campañas», and the pending fixtures.
 - **Temporada del rival** (`SeasonProfile.tsx`): all matches of the year from
   Apertura Zona B and Permanencia, annual totals, competition blocks, scorer
   splits, squad continuity, and the main marks.
 
 The podium table shows first/second/third and podium probability, ordered by
 podium and then by championship. Podium is folded from simulation counts, not
-from the displayed percentages. Each campaign pill is a round: green G, yellow
-E, red P, with the opponent and score in the title and the full list under
-«Campañas». Color is a reinforcement; the letter and the visible text always
-carry the meaning.
+from the displayed percentages. Its last column is the last five results as a
+compact G/E/P strip; the full campaign, with every round, opponent, and score,
+lives under «Campañas». Each pill is a round: green G, yellow E, red P, with the
+opponent and score in the title. Color is a reinforcement; the letter and the
+visible text always carry the meaning.
 
 `<0,1%` means the simulation produced a positive but very small estimate. A
 displayed zero is not a claim that a sporting outcome is impossible; it means no

@@ -34,6 +34,7 @@ describe('public competition views render with the shipped artifacts', () => {
     const html = renderToString(<Forecast forecast={forecast} tournament={permanencia} onBack={noop} onHome={noop} onTournament={noop} onSeason={noop} />)
     expect(html).toContain('Panorama de podio')
     expect(html).toContain('S.A.P.A.')
+    expect(html).toContain('Últimos 5')
     expect(html).toContain('result-pill win')
     expect(html).toContain('result-pill loss')
   })
