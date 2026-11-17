@@ -28,6 +28,7 @@ describe('public competition views render with the shipped artifacts', () => {
     expect(html).toContain('Tabla de posiciones')
     expect(html).toContain('Lanús C')
     expect(html).toContain('Rachas y extremos')
+    expect(html.indexOf('Rachas y extremos')).toBeLessThan(html.indexOf('Tabla de posiciones'))
   })
 
   it('renders the podium forecast with green/yellow/red campaign pills', () => {

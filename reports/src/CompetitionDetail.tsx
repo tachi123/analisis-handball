@@ -74,7 +74,7 @@ export function CompetitionDetail({ competition, onBack, onHome, onForecast, onS
         {onForecast && <button className="home-link" onClick={onForecast}>Pronóstico de cierre →</button>}
         {onSeason && <button className="home-link" onClick={onSeason}>Temporada 2026 de Lanús →</button>}
       </div>
-      <nav className="tournament-nav" aria-label="Secciones del torneo"><a href="#resumen">Resumen</a><a href="#posiciones">Posiciones</a><a href="#fechas">Fechas</a><a href="#goleadores">Goleadores</a><a href="#disciplina">Disciplina</a><a href="#marcas">Marcas</a></nav>
+      <nav className="tournament-nav" aria-label="Secciones del torneo"><a href="#resumen">Resumen</a><a href="#marcas">Marcas</a><a href="#posiciones">Posiciones</a><a href="#fechas">Fechas</a><a href="#goleadores">Goleadores</a><a href="#disciplina">Disciplina</a></nav>
     </header>
 
     <section className="rule-note" aria-label="Regla de puntos">
@@ -102,6 +102,17 @@ export function CompetitionDetail({ competition, onBack, onHome, onForecast, onS
         <div className="sapa-spotlight-form"><span>Últimos {sapaForm.length}</span><ResultStrip matches={sapaForm} compact label="Forma reciente de SAPA" /></div>
       </div>}
     </section>}
+
+    <section id="marcas" className="dashboard-section">
+      <div className="section-heading"><div><p className="eyebrow">Marcas</p><h2>Rachas y extremos del torneo</h2></div><small>Hechos observados, no causas tácticas.</small></div>
+      <div className="record-grid">{competition.insights.records.map((record) => <article className="record-card" key={record.key}>
+        <p>{record.label}</p>
+        <strong>{record.club ?? record.clubs?.join(' · ')}</strong>
+        <span>{record.unit === 'de los puntos' ? percent(record.value, 1) : decimal(record.value, record.value % 1 === 0 ? 0 : 1)} {record.unit}</span>
+        <small>{record.detail}</small>
+      </article>)}</div>
+      <p className="result-legend-note">Verde = ganó · amarillo = empató · rojo = perdió. El color refuerza el texto; nunca es la única señal.</p>
+    </section>
 
     <section id="posiciones" className="dashboard-section">
       <div className="section-heading">
@@ -157,17 +168,6 @@ export function CompetitionDetail({ competition, onBack, onHome, onForecast, onS
           <td><strong>{row.club}</strong></td><td>{row.goals}</td><td>{row.players}</td><td>{row.yellow}</td><td>{row.two_min}</td><td>{row.red}</td><td>{row.blue}</td>
         </tr>)}</tbody>
       </table></div>
-    </section>
-
-    <section id="marcas" className="dashboard-section">
-      <div className="section-heading"><div><p className="eyebrow">Marcas</p><h2>Rachas y extremos del torneo</h2></div><small>Hechos observados, no causas tácticas.</small></div>
-      <div className="record-grid">{competition.insights.records.map((record) => <article className="record-card" key={record.key}>
-        <p>{record.label}</p>
-        <strong>{record.club ?? record.clubs?.join(' · ')}</strong>
-        <span>{record.unit === 'de los puntos' ? percent(record.value, 1) : decimal(record.value, record.value % 1 === 0 ? 0 : 1)} {record.unit}</span>
-        <small>{record.detail}</small>
-      </article>)}</div>
-      <p className="result-legend-note">Verde = ganó · amarillo = empató · rojo = perdió. El color refuerza el texto; nunca es la única señal.</p>
     </section>
 
     <footer className="tournament-footnote">{isFinished ? 'Torneo finalizado' : 'Torneo en curso'} · Datos derivados de planillas FEMEBAL confirmadas y resultados informados. La cobertura puede ser parcial.</footer>
