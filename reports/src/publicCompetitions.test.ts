@@ -101,8 +101,6 @@ const validForecast = {
   season: 2026,
   updated_at: '2026-11-17',
   coverage,
-  simulations: 20000,
-  methodology: 'Estimación estadística.',
   points_rule: pointsRule,
   teams: [{
     club: 'S.A.P.A.',

@@ -104,20 +104,20 @@ export function CompetitionDetail({ competition, onBack, onHome, onForecast, onS
     </section>}
 
     <section id="marcas" className="dashboard-section">
-      <div className="section-heading"><div><p className="eyebrow">Marcas</p><h2>Rachas y extremos del torneo</h2></div><small>Hechos observados, no causas tácticas.</small></div>
+      <div className="section-heading"><div><p className="eyebrow">Marcas</p><h2>Rachas y extremos del torneo</h2></div></div>
       <div className="record-grid">{competition.insights.records.map((record) => <article className="record-card" key={record.key}>
         <p>{record.label}</p>
         <strong>{record.club ?? record.clubs?.join(' · ')}</strong>
         <span>{record.unit === 'de los puntos' ? percent(record.value, 1) : decimal(record.value, record.value % 1 === 0 ? 0 : 1)} {record.unit}</span>
         <small>{record.detail}</small>
       </article>)}</div>
-      <p className="result-legend-note">Verde = ganó · amarillo = empató · rojo = perdió. El color refuerza el texto; nunca es la única señal.</p>
+      <p className="result-legend-note">Verde = ganó · amarillo = empató · rojo = perdió.</p>
     </section>
 
     <section id="posiciones" className="dashboard-section">
       <div className="section-heading">
         <div><p className="eyebrow">Clasificación</p><h2>Tabla de posiciones</h2></div>
-        <small>Ordenada con el desempate olímpico del torneo. No reemplaza la tabla oficial de FEMEBAL.</small>
+        <small>Ordenada con el desempate olímpico del torneo.</small>
       </div>
       <div className="table-wrap"><table className="player-table standings-table">
         <thead><tr><th>#</th><th>Equipo</th><th>PJ</th><th>G</th><th>E</th><th>P</th><th>CP</th><th>GF</th><th>GC</th><th>Dif</th><th>Pts</th></tr></thead>
@@ -170,6 +170,6 @@ export function CompetitionDetail({ competition, onBack, onHome, onForecast, onS
       </table></div>
     </section>
 
-    <footer className="tournament-footnote">{isFinished ? 'Torneo finalizado' : 'Torneo en curso'} · Datos derivados de planillas FEMEBAL confirmadas y resultados informados. La cobertura puede ser parcial.</footer>
+    <footer className="tournament-footnote">{isFinished ? 'Torneo finalizado' : 'Torneo en curso'} · Datos derivados de planillas FEMEBAL confirmadas y resultados informados. No es la tabla oficial de FEMEBAL.</footer>
   </main>
 }

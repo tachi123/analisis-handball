@@ -224,7 +224,6 @@ def _coverage_rows(db: Any, stage_id: int) -> dict[str, Any]:
     label = f"{counted} de {total} partidos con resultado · {confirmed} planillas confirmadas"
     if suspended:
         label += f" · {suspended} suspendido{'s' if suspended != 1 else ''}"
-    label += " · no reemplaza la tabla oficial de FEMEBAL."
     return {
         "matches_total": total,
         "matches_counted": counted,
@@ -366,8 +365,6 @@ def build_forecast_document(stage_id: int = 9, key: str = FORECAST_KEY) -> dict[
         "season": season,
         "updated_at": date.today().isoformat(),
         "coverage": coverage,
-        "simulations": forecast["simulations"],
-        "methodology": forecast["methodology"],
         "points_rule": forecast["points_rule"],
         "teams": forecast["teams"],
         "fixtures": forecast["fixtures"],
@@ -466,12 +463,16 @@ def build_public_tournament(stage_id: int | None = None) -> dict[str, Any]:
             "rounds_played": rounds_played,
             "rounds_total": rounds_total,
             "status": "complete" if pending == 0 else "partial",
-            "label": f"Cubre las {rounds_played} fechas con resultados cargados; no reemplaza la tabla oficial de FEMEBAL.",
+            "label": f"Cubre las {rounds_played} fechas con resultados cargados.",
         },
         "standings": _standings_rows(standings),
         "scorers": _scorer_rows(players),
         "clubs": _club_rows(clubs),
-        "forecast": forecast,
+        "forecast": {
+            "points_rule": forecast["points_rule"],
+            "teams": forecast["teams"],
+            "fixtures": forecast["fixtures"],
+        },
     }
 
 

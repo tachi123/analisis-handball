@@ -128,9 +128,6 @@
 .fixture-grid article strong { color: #0f172a; font-size: .84rem; }
 .fixture-grid article span { color: #64748b; font-size: .74rem; }
 .fixture-grid .outcome-probabilities b { color: #0f172a; }
-.forecast-method { margin-top: 1rem; padding: .9rem 1rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; color: #334155; font-size: .84rem; }
-.forecast-method summary { cursor: pointer; font-weight: 700; color: #0f172a; }
-.forecast-method p { margin: .5rem 0 0; line-height: 1.5; }
 
 /* Season profile */
 .season-shell .hero { background: linear-gradient(120deg, #eff6ff, #fff7ed); }

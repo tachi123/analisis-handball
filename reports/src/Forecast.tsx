@@ -56,7 +56,7 @@ export function Forecast({ forecast, tournament, onBack, onHome, onTournament, o
     <header className="hero">
       <p className="eyebrow">Pronóstico · {forecast.competition} · {forecast.season}</p>
       <h1 id="forecast-page-title">Cierre y <span>podio</span></h1>
-      <p>{forecast.simulations.toLocaleString('es-AR')} simulaciones del fixture pendiente · Actualizado el {formatDate(forecast.updated_at)}.</p>
+      <p>Actualizado el {formatDate(forecast.updated_at)}.</p>
       <div className="hero-actions">
         <button className="home-link" onClick={onBack}>← Torneos</button>
         <button className="home-link" onClick={onHome}>Inicio</button>
@@ -69,7 +69,7 @@ export function Forecast({ forecast, tournament, onBack, onHome, onTournament, o
       <div className="sapa-forecast-title">
         <p className="eyebrow">Nuestro equipo</p>
         <h2>S.A.P.A.</h2>
-        <p>Estimación estadística, no una cuota ni una garantía.</p>
+        <p>Estimación estadística.</p>
       </div>
       {sapa ? <div className="finish-cards">
         <article><strong>{tinyPercent(sapa.finish_probabilities.first)}</strong><span>1.º</span></article>
@@ -87,7 +87,7 @@ export function Forecast({ forecast, tournament, onBack, onHome, onTournament, o
     <section className="dashboard-section">
       <div className="section-heading">
         <div><p className="eyebrow">Panorama de podio</p><h2>Quién puede terminar 1.º, 2.º o 3.º</h2></div>
-        <small>Podio = suma de las posiciones 1–3 en las mismas simulaciones. No se suman porcentajes redondeados.</small>
+        <small>Podio = 1.º + 2.º + 3.º.</small>
       </div>
       <div className="table-wrap podium-wrap"><table className="player-table podium-table">
         <thead><tr><th>Equipo</th><th>1.º</th><th>2.º</th><th>3.º</th><th>Podio</th><th>Puesto esp.</th><th>Últimos 5</th></tr></thead>
@@ -107,7 +107,7 @@ export function Forecast({ forecast, tournament, onBack, onHome, onTournament, o
     </section>
 
     <section className="dashboard-section">
-      <div className="section-heading"><div><p className="eyebrow">Campañas</p><h2>El camino jugado de cada aspirante</h2></div><small>Hechos observados, separados de las probabilidades futuras.</small></div>
+      <div className="section-heading"><div><p className="eyebrow">Campañas</p><h2>El camino jugado de cada aspirante</h2></div></div>
       <div className="campaign-details">{contenders.map((team) => <details key={team.club} open={isSapa(team.club)}>
         <summary><span><strong>{team.club}</strong><small>{team.campaign.length} partidos jugados · {tinyPercent(team.podium_probability)} de podio</small></span><span className="summary-strip"><ResultStrip matches={campaignStrip(team)} compact label={`Campaña de ${team.club}`} /></span></summary>
         <CampaignList team={team} />
@@ -126,9 +126,7 @@ export function Forecast({ forecast, tournament, onBack, onHome, onTournament, o
       })}</div>
     </section>
 
-    <details className="forecast-method"><summary>Cómo leer esta proyección</summary><p>{forecast.methodology}</p><p>La tabla se calcula con la regla de puntos del torneo ({forecast.points_rule.win}/{forecast.points_rule.draw}/{forecast.points_rule.loss}; suspendido {forecast.points_rule.suspended_win}/{forecast.points_rule.suspended_loss}) y el desempate olímpico. Los equipos con igualdad exacta después de todos los criterios comparten la probabilidad de puesto. Es una estimación: no asegura un resultado ni reemplaza la tabla oficial.</p></details>
-
     {tournament && <p className="table-empty">Cobertura del torneo: {tournament.coverage.label}</p>}
-    <footer className="tournament-footnote">Datos estáticos derivados de planillas FEMEBAL confirmadas y resultados informados. La web pública no consulta la API privada.</footer>
+    <footer className="tournament-footnote">Datos derivados de planillas FEMEBAL confirmadas y resultados informados.</footer>
   </main>
 }

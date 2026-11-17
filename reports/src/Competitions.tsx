@@ -12,7 +12,7 @@ export function Competitions({ catalog, onOpen, onForecast, onHome }: {
     <header className="hero">
       <p className="eyebrow">FEMEBAL · Temporada 2026</p>
       <h1 id="competitions-title">Torneos <span>2026</span></h1>
-      <p>Resultados y estadísticas derivados de las planillas oficiales cargadas. No reemplazan la tabla oficial de FEMEBAL.</p>
+      <p>Resultados y estadísticas derivados de las planillas cargadas.</p>
       <div className="hero-actions">
         <button className="home-link" onClick={onHome}>← Inicio</button>
         {forecastEntry && <button className="home-link" onClick={onForecast}>Pronóstico de cierre →</button>}
@@ -47,15 +47,15 @@ export function Competitions({ catalog, onOpen, onForecast, onHome }: {
       <div>
         <p className="eyebrow">Cómo se puntúa</p>
         <h3>Victoria 3 · Empate 2 · Derrota 1</h3>
-        <p>Un partido suspendido otorga 3 puntos al ganador y 0 al perdedor, y se marca como CP. Por eso una campaña de 11 victorias puede sumar 37 puntos. El desempate es olímpico: primero los partidos entre los equipos igualados.</p>
+        <p>Un partido suspendido otorga 3 puntos al ganador y 0 al perdedor, y se marca como CP. Por eso una campaña de 11 victorias puede sumar 37 puntos.</p>
       </div>
       <div>
         <p className="eyebrow">Cobertura</p>
         <h3>{catalog.tournaments.reduce((total, entry) => total + entry.coverage.matches_counted, 0)} partidos con resultado</h3>
-        <p>La cobertura indica qué partidos tienen planilla o resultado informado. No es una tabla oficial ni una proyección de los torneos finalizados.</p>
+        <p>La cobertura indica qué partidos tienen planilla o resultado informado.</p>
       </div>
     </section>
 
-    <footer className="tournament-footnote">Actualizado el {formatDate(catalog.generated_at)} · Datos estáticos derivados de planillas FEMEBAL confirmadas y resultados informados.</footer>
+    <footer className="tournament-footnote">Actualizado el {formatDate(catalog.generated_at)} · Datos derivados de planillas FEMEBAL confirmadas y resultados informados. No es la tabla oficial de FEMEBAL.</footer>
   </main>
 }

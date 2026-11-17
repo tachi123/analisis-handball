@@ -65,6 +65,7 @@ exportados y validados localmente; falta publicar.
 - La **planilla manda** sobre el score oficial; el tracker es `reported`.
 - La **fecha nominal del fixture** manda en `ScheduledMatch.scheduled_date`; la fecha real de juego queda en `Match.date` y `OfficialSnapshot.confirmed_date`.
 - **Desempate olímpico**: a igualdad de puntos manda primero el resultado entre los equipos igualados (mini-tabla); la diferencia general es el fallback. No ordenar por diferencia de gol directamente. Implementado en `backend/app/services/competition_ranking.py` y compartido por tabla, pronóstico e insights.
+- **La UI pública muestra datos y probabilidades, no la metodología interna**: no se publican simulaciones, textos de metodología ni las decisiones de normalización de nombres. Esas decisiones quedan en la documentación y el código.
 - Estadísticas solo de snapshots `is_confirmed=True` (el suspendido queda excluido).
 - `Match.scheduled_match_id` es único → al llegar la planilla se **actualiza** el Match, no se duplica.
 - Partido suspendido: ganador `3`, perdedor `0` y cuenta como `CP`, no derrota.

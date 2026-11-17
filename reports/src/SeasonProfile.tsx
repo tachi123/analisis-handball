@@ -89,7 +89,7 @@ export function SeasonProfile({ club, competitions, forecast, onBack, onHome, on
     </section>
 
     <section className="dashboard-section">
-      <div className="section-heading"><div><p className="eyebrow">Todos los partidos</p><h2>El año completo, fecha por fecha</h2></div><small>Verde G · amarillo E · rojo P. El color refuerza el resultado; siempre está el texto.</small></div>
+      <div className="section-heading"><div><p className="eyebrow">Todos los partidos</p><h2>El año completo, fecha por fecha</h2></div><small>Verde G · amarillo E · rojo P.</small></div>
       {blocks.map((block) => <div className="season-match-block" key={block.competition.public_key}>
         <div className="season-match-head"><h3>{competitionDisplay(block.competition)}</h3><span>{block.matches.length} partidos</span></div>
         <ResultStrip matches={stripFor(block.matches)} label={`Partidos de ${club} en ${shortCompetition(block.competition)}`} />
@@ -135,11 +135,10 @@ export function SeasonProfile({ club, competitions, forecast, onBack, onHome, on
         <p><strong>Llegaron:</strong> {composition.arrived.details.map((row) => `${row.name} ${row.goals}/${row.appearances}`).join(' · ') || '—'}</p>
         <p><strong>Se fueron:</strong> {composition.departed.details.slice(0, 5).map((row) => `${row.name} ${row.goals}/${row.appearances}`).join(' · ') || '—'}{composition.departed.details.length > 5 ? ` · y ${composition.departed.details.length - 5} más` : ''}</p>
       </div>
-      <p className="result-legend-note">La planilla no registra minutos, puestos, tiros ni asistencias. Por eso podemos mostrar cuánto aportaron los ingresos y si la concentración cambió, pero no afirmar que causaron la mejora.</p>
     </section>}
 
     <section className="dashboard-section">
-      <div className="section-heading"><div><p className="eyebrow">Goleadores del año</p><h2>Quiénes sostuvieron el ataque</h2></div><small>Goles / partidos. La muestra importa: no es lo mismo 29 goles en 5 partidos que 116 en 27.</small></div>
+      <div className="section-heading"><div><p className="eyebrow">Goleadores del año</p><h2>Quiénes sostuvieron el ataque</h2></div><small>Goles / partidos.</small></div>
       <div className="table-wrap"><table className="player-table season-scorers-table">
         <thead><tr><th>Jugador</th><th>Total</th><th>G/P</th>{competitions.map((competition) => <th key={competition.public_key}>{shortCompetition(competition)}</th>)}</tr></thead>
         <tbody>{scorers.slice(0, 12).map((row) => <tr key={row.name}>
@@ -153,25 +152,24 @@ export function SeasonProfile({ club, competitions, forecast, onBack, onHome, on
     </section>
 
     {competitions.length > 1 && <section className="dashboard-section">
-      <div className="section-heading"><div><p className="eyebrow">Continuidad</p><h2>¿Siguen los mismos jugadores?</h2></div><small>Coincidencia de nombres normalizados dentro del mismo club. No es un registro de pases.</small></div>
+      <div className="section-heading"><div><p className="eyebrow">Continuidad</p><h2>¿Siguen los mismos jugadores?</h2></div></div>
       <div className="continuity-card">
         <strong>{continuity.shared} de {continuity.current}</strong>
         <span>jugadores de {primary ? shortCompetition(primary.competition) : 'la competencia actual'} ya figuraban en {shortCompetition(competitions[0])}.</span>
         <b>{percent(continuity.retained, 1)}</b>
-        <small>Aproximación: un cambio de grafía cuenta como jugador nuevo y dos personas con el mismo nombre normalizado se cuentan una sola vez.</small>
       </div>
     </section>}
 
     {primary?.insight && <section className="dashboard-section">
-      <div className="section-heading"><div><p className="eyebrow">Marcas</p><h2>Rachas y rendimiento en {shortCompetition(primary.competition)}</h2></div><small>Hechos observados, no causas tácticas.</small></div>
+      <div className="section-heading"><div><p className="eyebrow">Marcas</p><h2>Rachas y rendimiento en {shortCompetition(primary.competition)}</h2></div></div>
       <div className="record-grid">
         <article className="record-card"><p>Mayor racha sin perder</p><strong>{primary.insight.streaks.longest_unbeaten.length} partidos</strong><span>{streakSpan(primary.insight.streaks.longest_unbeaten)}</span></article>
         <article className="record-card"><p>Mayor racha de victorias</p><strong>{primary.insight.streaks.longest_win.length} partidos</strong><span>{streakSpan(primary.insight.streaks.longest_win)}</span></article>
         <article className="record-card"><p>Forma reciente</p><strong>{primary.insight.form_last_5.points} / {primary.insight.form_last_5.max_points}</strong><span>{primary.insight.form_last_5.sequence.join(' · ')}</span></article>
         <article className="record-card"><p>Como local</p><strong>{percent(primary.insight.home.points_effectiveness, 1)}</strong><span>{primary.insight.home.points} de {primary.insight.home.max_points} puntos</span></article>
         <article className="record-card"><p>Como visitante</p><strong>{percent(primary.insight.away.points_effectiveness, 1)}</strong><span>{primary.insight.away.points} de {primary.insight.away.max_points} puntos</span></article>
-        <article className="record-card"><p>Contra el top 5</p><strong>{primary.insight.opponent_tiers.top_five.points} / {primary.insight.opponent_tiers.top_five.max_points}</strong><span>{percent(primary.insight.opponent_tiers.top_five.points_effectiveness, 1)} de efectividad</span></article>
-        <article className="record-card"><p>Contra los últimos 5</p><strong>{primary.insight.opponent_tiers.bottom_five.points} / {primary.insight.opponent_tiers.bottom_five.max_points}</strong><span>{percent(primary.insight.opponent_tiers.bottom_five.points_effectiveness, 1)} de efectividad</span></article>
+        <article className="record-card"><p>Contra el top 5</p><strong>{primary.insight.opponent_tiers.top_five.points} pts de {primary.insight.opponent_tiers.top_five.max_points}</strong><span>{primary.insight.opponent_tiers.top_five.played} partidos · {percent(primary.insight.opponent_tiers.top_five.points_effectiveness, 1)} de efectividad</span></article>
+        <article className="record-card"><p>Contra los últimos 5</p><strong>{primary.insight.opponent_tiers.bottom_five.points} pts de {primary.insight.opponent_tiers.bottom_five.max_points}</strong><span>{primary.insight.opponent_tiers.bottom_five.played} partidos · {percent(primary.insight.opponent_tiers.bottom_five.points_effectiveness, 1)} de efectividad</span></article>
         {primary.insight.biggest_win && <article className="record-card"><p>Mayor victoria</p><strong>{primary.insight.biggest_win.goals_for}–{primary.insight.biggest_win.goals_against}</strong><span>vs {primary.insight.biggest_win.opponent} · F{primary.insight.biggest_win.round}</span></article>}
         {primary.insight.biggest_loss && <article className="record-card"><p>Mayor derrota</p><strong>{primary.insight.biggest_loss.goals_for}–{primary.insight.biggest_loss.goals_against}</strong><span>vs {primary.insight.biggest_loss.opponent} · F{primary.insight.biggest_loss.round}</span></article>}
       </div>
@@ -179,7 +177,7 @@ export function SeasonProfile({ club, competitions, forecast, onBack, onHome, on
     </section>}
 
     {pending.length > 0 && <section className="dashboard-section pending-section">
-      <div className="section-heading"><div><p className="eyebrow">Pendiente</p><h2>El próximo partido</h2></div><small>Probabilidades estimadas, no una cuota.</small></div>
+      <div className="section-heading"><div><p className="eyebrow">Pendiente</p><h2>El próximo partido</h2></div><small>Probabilidades estimadas.</small></div>
       {pending.map((match) => <article className="pending-card" key={match.key}>
         <strong>{match.location === 'home' ? `${club} vs ${match.opponent}` : `${match.opponent} vs ${club}`}</strong>
         <span>Fecha {match.round} · {formatDate(match.date)} · {match.location === 'home' ? 'Local' : 'Visitante'}</span>
@@ -187,6 +185,6 @@ export function SeasonProfile({ club, competitions, forecast, onBack, onHome, on
       </article>)}
     </section>}
 
-    <footer className="tournament-footnote">Datos derivados de planillas FEMEBAL confirmadas y resultados informados. La ficha anual compara competencias distintas; los totales no son una tabla de posiciones.</footer>
+    <footer className="tournament-footnote">Datos derivados de planillas FEMEBAL confirmadas y resultados informados.</footer>
   </main>
 }

@@ -45,8 +45,6 @@ describe('decodePublicTournament', () => {
       ...valid,
       schema_version: 'tournament-v2',
       forecast: {
-        simulations: 20000,
-        methodology: 'Estimate only.',
         teams: [{ club: 'S.A.P.A.', champion_probability: 0.18, campaign: [{ round: 1, date: '2026-08-01', opponent: 'Lanús C', location: 'home', goals_for: 30, goals_against: 28, result: 'win' }] }],
         fixtures: [{ round: 14, date: '2026-11-14', home: 'S.A.P.A.', away: 'Lanús C', home_win_probability: 0.4, draw_probability: 0.1, away_win_probability: 0.5 }],
       },
@@ -60,8 +58,6 @@ describe('decodePublicTournament', () => {
       ...valid,
       schema_version: 'tournament-v2',
       forecast: {
-        simulations: 20000,
-        methodology: 'Estimate only.',
         points_rule: { win: 3, draw: 2, loss: 1, suspended_win: 3, suspended_loss: 0 },
         teams: [{
           club: 'S.A.P.A.',

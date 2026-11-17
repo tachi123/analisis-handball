@@ -219,8 +219,6 @@ export type PublicForecast = {
   season: number
   updated_at: string
   coverage: CompetitionCoverage
-  simulations: number
-  methodology: string
   points_rule: PointsRule
   teams: ForecastTeam[]
   fixtures: ForecastFixture[]
@@ -573,7 +571,7 @@ export function decodePublicCompetition(value: unknown): PublicCompetition {
 
 export function decodePublicForecast(value: unknown): PublicForecast {
   if (!isRecord(value)) throw new Error('The public forecast is not a JSON object.')
-  assertFields(value, ['schema_version', 'public_key', 'competition', 'tournament', 'season', 'updated_at', 'coverage', 'simulations', 'methodology', 'points_rule', 'teams', 'fixtures', 'rival_profile'], 'forecast')
+  assertFields(value, ['schema_version', 'public_key', 'competition', 'tournament', 'season', 'updated_at', 'coverage', 'points_rule', 'teams', 'fixtures', 'rival_profile'], 'forecast')
   if (value.schema_version !== 'forecast-v1') throw new Error('Unsupported public forecast version.')
   if (!Array.isArray(value.teams) || !Array.isArray(value.fixtures)) throw new Error('The public forecast has invalid lists.')
   if (!isRecord(value.rival_profile)) throw new Error('The public forecast has an invalid rival profile.')
@@ -587,8 +585,6 @@ export function decodePublicForecast(value: unknown): PublicForecast {
     season: assertNumber(value.season, 'season'),
     updated_at: assertString(value.updated_at, 'updated_at'),
     coverage: decodeCoverage(value.coverage),
-    simulations: assertNumber(value.simulations, 'simulations'),
-    methodology: assertString(value.methodology, 'methodology'),
     points_rule: decodePointsRule(value.points_rule),
     teams: value.teams.map((item) => {
       if (!isRecord(item)) throw new Error('The public forecast has an invalid team.')

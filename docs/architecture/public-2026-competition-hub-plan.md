@@ -72,7 +72,8 @@ analizados de SAPA y sumar un bloque compacto **«SAPA en 2026»**:
 - acceso a **Pronóstico de cierre** si hay fixture pendiente.
 
 No se mostrará una probabilidad como titular sin contexto: se rotulará como
-estimación, indicará fecha de actualización y enlazará a la metodología.
+estimación e indicará la fecha de actualización. La metodología y las decisiones
+internas del modelo quedan en esta documentación y en el código, no en la UI.
 
 ## Torneos 2026
 
@@ -128,7 +129,7 @@ video. Las definiciones públicas serán:
 | Forma | Últimos 5 partidos como `G/E/P` y puntos obtenidos. |
 | Top 5 / últimos 5 | Grupos disjuntos según la tabla del mismo dataset; en ligas chicas el grupo se reduce para no solaparse. |
 | Mayor victoria / derrota | Sólo partidos jugados; los resultados por suspendido no se presentan como goleadas. |
-| Continuidad de plantel | Nombres normalizados del mismo club entre dos competencias; se rotula como aproximación. |
+| Continuidad de plantel | Nombres normalizados del mismo club entre dos competencias. La aclaración metodológica es interna y no se muestra en el reporte. |
 
 **Marcas de competencia** (calculadas del mismo dataset, sin narrativa táctica):
 
@@ -170,8 +171,7 @@ llena de ceros:
 Pronósticos · Permanencia 2026
 ├── Panorama de podio             ← pantalla inicial
 ├── Fecha final y partidos        ← probabilidades G/E/P por fixture
-├── Caminos de los aspirantes     ← campañas de la competencia actual
-└── Metodología y límites
+└── Caminos de los aspirantes     ← campañas de la competencia actual
 ```
 
 La pantalla inicial tendrá tres elementos, en este orden:
@@ -242,7 +242,8 @@ las planillas permiten describir resultados y estadísticas, no causas de juego.
 4. **Continuidad de plantel**
    - cuántos jugadores de Permanencia ya figuraban en Apertura Zona B, calculado
      por nombre normalizado dentro del club;
-   - se rotula como aproximación y no se usa como insumo del pronóstico.
+   - el método de nombres normalizados es una decisión interna: no se muestra la
+     aclaración en la UI pública. No se usa como insumo del pronóstico.
 5. **Resumen anual descriptivo**
    - dos bloques comparables: Apertura y Permanencia;
    - totales anuales sólo como suma rotulada de competencias distintas, nunca
@@ -531,7 +532,11 @@ entonces publicar si se solicita.
 - El historial de Apertura sirve como contexto de competencia; el backtest
   muestra que no mejora la predicción de Permanencia y no se usa como prior.
 - La continuidad de plantel es una coincidencia de nombres normalizados, no un
-  registro de pases ni una afirmación sobre lesiones o disponibilidad.
+  registro de pases ni una afirmación sobre lesiones o disponibilidad. Es una
+  decisión interna y no se explicita en la UI pública.
+- La UI pública no muestra la metodología interna, el conteo de simulaciones ni
+  las decisiones de implementación; eso queda en esta documentación y en el
+  código.
 - El historial de Apertura no demuestra por sí mismo cómo jugará Lanús el
   próximo partido.
 - La web pública no consulta la API privada ni la base de datos en tiempo real.

@@ -19,7 +19,7 @@
         "rounds_played": 14,
         "rounds_total": 15,
         "status": "partial",
-        "label": "111 de 120 partidos con resultado · 110 planillas confirmadas · 1 suspendido · no reemplaza la tabla oficial de FEMEBAL."
+        "label": "111 de 120 partidos con resultado · 110 planillas confirmadas · 1 suspendido"
       },
       "updated_at": "2026-11-17",
       "file": "tournament_permanencia-2026.json",
@@ -55,7 +55,7 @@
         "rounds_played": 15,
         "rounds_total": 15,
         "status": "complete",
-        "label": "120 de 120 partidos con resultado · 116 planillas confirmadas · no reemplaza la tabla oficial de FEMEBAL."
+        "label": "120 de 120 partidos con resultado · 116 planillas confirmadas"
       },
       "updated_at": "2026-11-17",
       "file": "tournament_apertura-zona-a-2026.json",
@@ -86,7 +86,7 @@
         "rounds_played": 15,
         "rounds_total": 15,
         "status": "complete",
-        "label": "120 de 120 partidos con resultado · 119 planillas confirmadas · 1 suspendido · no reemplaza la tabla oficial de FEMEBAL."
+        "label": "120 de 120 partidos con resultado · 119 planillas confirmadas · 1 suspendido"
       },
       "updated_at": "2026-11-17",
       "file": "tournament_apertura-zona-b-2026.json",

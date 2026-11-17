@@ -54,8 +54,6 @@ export type TournamentPointsRule = {
 }
 
 export type TournamentForecast = {
-  simulations: number
-  methodology: string
   points_rule?: TournamentPointsRule
   teams: Array<{
     club: string
@@ -180,7 +178,7 @@ export function decodePublicTournament(value: unknown): PublicTournament {
   let forecast: TournamentForecast | undefined
   if (value.forecast !== undefined) {
     if (!isRecord(value.forecast)) throw new Error('The public tournament has invalid forecast data.')
-    assertFields(value.forecast, ['simulations', 'methodology', 'points_rule', 'teams', 'fixtures'], 'forecast')
+    assertFields(value.forecast, ['points_rule', 'teams', 'fixtures'], 'forecast')
     if (!Array.isArray(value.forecast.teams) || !Array.isArray(value.forecast.fixtures)) throw new Error('The public tournament has invalid forecast lists.')
     let pointsRule: TournamentPointsRule | undefined
     if (value.forecast.points_rule !== undefined) {
@@ -196,8 +194,6 @@ export function decodePublicTournament(value: unknown): PublicTournament {
       }
     }
     forecast = {
-      simulations: assertNumber(value.forecast.simulations, 'forecast simulations'),
-      methodology: assertString(value.forecast.methodology, 'forecast methodology'),
       ...(pointsRule ? { points_rule: pointsRule } : {}),
       teams: value.forecast.teams.map((item) => {
         if (!isRecord(item)) throw new Error('The public tournament has an invalid forecast team.')

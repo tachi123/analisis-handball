@@ -69,7 +69,7 @@ points rule, not in adding new signals.
 
 ## Reading the UI
 
-The public hub now has three surfaces:
+The public hub now has four surfaces:
 
 - **Torneos 2026** (`tournaments.json`): a catalog with coverage, SAPA's
   position, the next match, and a link to each tournament detail.
@@ -114,8 +114,7 @@ such finish occurred in the finite simulation run.
 `reports/public/forecast_permanencia-2026.json` uses `forecast-v1` and is
 allowlisted by `reports/src/publicCompetitions.ts`. It contains only:
 
-- competition, season, update date, coverage, simulation count, and
-  plain-language methodology;
+- competition, season, update date, and coverage;
 - the versioned points rule (`win`, `draw`, `loss`, `suspended_win`,
   `suspended_loss`);
 - club name, championship probability, `finish_probabilities` (`first`,
@@ -125,6 +124,11 @@ allowlisted by `reports/src/publicCompetitions.ts`. It contains only:
   score, and result;
 - the rival profile: the next SAPA rival and the public competitions that can be
   combined into the annual profile.
+
+The simulation count, methodology text, and internal model decisions are
+documented in this file and in the backend service, but are not published in
+the UI or the public artifact. The forecast still exposes its outputs and the
+competition rule needed to read them.
 
 `reports/public/tournament_<key>.json` uses `tournament-v3` and contains
 standings, scorers, club discipline, rounds with a per-match coverage badge,
