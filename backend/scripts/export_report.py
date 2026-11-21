@@ -589,6 +589,67 @@ team_summary = {
 
 phase_analysis = build_phase_analysis(eligible_events)
 
+# ── Official-sheet comparison ─────────────────────────────────────────
+# Video remains the source for chronological analysis.  The official sheet is
+# shown separately when its player attribution differs, so we never invent an
+# event time or silently mix two sources in player metrics.
+official_snapshot = db.query(OfficialSnapshot).filter(
+    OfficialSnapshot.match_id == match_id,
+    OfficialSnapshot.is_confirmed.is_(True),
+).order_by(OfficialSnapshot.created_at.desc(), OfficialSnapshot.id.desc()).first()
+
+def public_official_reconciliation(snapshot: OfficialSnapshot | None) -> dict:
+    if snapshot is None:
+        return {'status': 'unavailable', 'player_differences': []}
+
+    observed: dict[int, dict[str, int]] = {}
+    for event in eligible_events:
+        payload = event['payload']
+        player_id = payload.get('player_id')
+        if player_id is None:
+            continue
+        metric = None
+        if payload.get('kind') == 'shot' and payload.get('outcome') == 'goal':
+            metric = 'goals'
+        elif payload.get('kind') == 'foul_sanction' and payload.get('outcome') == 'two_minute_exclusion':
+            metric = 'two_minute'
+        if metric is not None:
+            observed.setdefault(player_id, {'goals': 0, 'two_minute': 0})[metric] += 1
+
+    official: dict[int, dict] = {}
+    for row in snapshot.players:
+        if row.player_id is None:
+            continue
+        item = official.setdefault(row.player_id, {
+            'side': row.side,
+            'player_name': row.name,
+            'jersey_number': row.jersey_number,
+            'goals': 0,
+            'two_minute': 0,
+        })
+        item['goals'] += row.official_goals
+        item['two_minute'] += row.official_2min
+
+    differences = []
+    for player_id in sorted(set(observed) | set(official)):
+        sheet = official.get(player_id)
+        if sheet is None:
+            continue
+        video = observed.get(player_id, {'goals': 0, 'two_minute': 0})
+        for metric in ('goals', 'two_minute'):
+            if video[metric] != sheet[metric]:
+                differences.append({
+                    'side': sheet['side'],
+                    'player_name': sheet['player_name'],
+                    'jersey_number': sheet['jersey_number'],
+                    'metric': metric,
+                    'video': video[metric],
+                    'official': sheet[metric],
+                })
+    return {'status': 'match' if not differences else 'differences', 'player_differences': differences}
+
+official_reconciliation = public_official_reconciliation(official_snapshot)
+
 # ── Build incidents ──────────────────────────────────────────────────
 # Incidents are chronological, period-separated events with public-safe data
 incidents = []
@@ -684,6 +745,7 @@ package_dict = {
     'source_status': source_status,
     'metrics': metrics_data.get('metrics', {}),
     'reconciliation': recon_data.get('discrepancies', []),
+    'official_reconciliation': official_reconciliation,
     'evidence': evidence_rows,
     'players': players_data,
     'team_summary': team_summary,
@@ -756,6 +818,7 @@ report = {
     },
     'metrics': metrics,
     'reconciliation': package_dict.get('reconciliation', []),
+    'official_reconciliation': package_dict.get('official_reconciliation', {'status': 'unavailable', 'player_differences': []}),
     'uncertainty_disclosure': package_dict.get('uncertainty_disclosure', ''),
     'players': package_dict.get('players'),
     'evidence': evidence_items,

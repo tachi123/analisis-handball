@@ -1,0 +1,5128 @@
+{
+  "schema_version": "public-report-v1",
+  "report_version": 1,
+  "match": {
+    "date": "2026-11-15",
+    "home_team": "S.A.P.A.",
+    "away_team": "Defensores de Moreno"
+  },
+  "source": {
+    "label": "Canonical eligible event ledger",
+    "status": "canonical-eligible"
+  },
+  "coaching": {
+    "question": "Match analysis",
+    "pattern_statement": "Match analysis covering 161 approved canonical events",
+    "action": {
+      "kind": "keep",
+      "text": "Export approved facts for public report"
+    }
+  },
+  "metrics": {
+    "turnovers": {
+      "count": 35,
+      "numerator": 0,
+      "denominator": "not_applicable",
+      "excluded": 0,
+      "unknown": 0,
+      "clock_unverified": 0
+    },
+    "shots": {
+      "count": 104,
+      "numerator": 57,
+      "denominator": 104,
+      "excluded": 0,
+      "unknown": 0,
+      "clock_unverified": 0
+    },
+    "discipline": {
+      "count": 11,
+      "numerator": 0,
+      "denominator": "not_applicable",
+      "excluded": 0,
+      "unknown": 0,
+      "clock_unverified": 0
+    },
+    "recoveries": {
+      "count": 5,
+      "numerator": 0,
+      "denominator": "not_applicable",
+      "excluded": 0,
+      "unknown": 0,
+      "clock_unverified": 0
+    },
+    "possessions": {
+      "count": 7,
+      "numerator": 7,
+      "denominator": "not_applicable",
+      "excluded": 0,
+      "unknown": 0,
+      "clock_unverified": 0
+    }
+  },
+  "reconciliation": [
+    {
+      "side": "home",
+      "official": 36,
+      "analytical": 36,
+      "discrepancy": 0
+    },
+    {
+      "side": "away",
+      "official": 21,
+      "analytical": 21,
+      "discrepancy": 0
+    }
+  ],
+  "official_reconciliation": {
+    "status": "differences",
+    "player_differences": [
+      {
+        "side": "home",
+        "player_name": "Ruano, Matheo",
+        "jersey_number": 77,
+        "metric": "goals",
+        "video": 1,
+        "official": 2
+      },
+      {
+        "side": "home",
+        "player_name": "Romero Boeris, Sebastian",
+        "jersey_number": 98,
+        "metric": "two_minute",
+        "video": 1,
+        "official": 2
+      },
+      {
+        "side": "home",
+        "player_name": "Martinez, Milo Ulises",
+        "jersey_number": 17,
+        "metric": "goals",
+        "video": 8,
+        "official": 6
+      },
+      {
+        "side": "home",
+        "player_name": "Gayoso Silva, Michel Javier",
+        "jersey_number": 76,
+        "metric": "goals",
+        "video": 0,
+        "official": 1
+      },
+      {
+        "side": "away",
+        "player_name": "Sosa Baez Gonzalez, Lautaro",
+        "jersey_number": 45,
+        "metric": "two_minute",
+        "video": 1,
+        "official": 2
+      },
+      {
+        "side": "away",
+        "player_name": "Bunjahed, Nicolas Ezequie",
+        "jersey_number": 90,
+        "metric": "two_minute",
+        "video": 0,
+        "official": 1
+      }
+    ]
+  },
+  "uncertainty_disclosure": "Generated from canonical analysis; partial data may apply",
+  "players": [
+    {
+      "slug": "ramirez-lorca-jaime-nahuel",
+      "name": "Ramirez Lorca, Jaime Nahuel",
+      "jersey_number": 1,
+      "team_side": "home",
+      "role": "goalkeeper",
+      "metrics": {
+        "saves": 14,
+        "shots_faced": 27,
+        "goals_conceded": 13,
+        "save_rate": 0.5185,
+        "saves_7m": 1,
+        "shots_faced_7m": 4,
+        "goals_conceded_7m": 3,
+        "save_rate_7m": 0.25,
+        "saves_counterattack": 0,
+        "shots_faced_counterattack": 1,
+        "goals_conceded_counterattack": 1,
+        "save_rate_counterattack": 0.0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "ruano-matheo",
+      "name": "Ruano, Matheo",
+      "jersey_number": 2,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 0.5,
+        "shots": 2,
+        "shots_on_target": 2,
+        "saves_against": 1,
+        "outside_or_woodwork": 0,
+        "goals": 1,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "gonzalez-ezequiel-matias",
+      "name": "Gonzalez, Ezequiel Matias",
+      "jersey_number": 10,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 1.0,
+        "shots": 1,
+        "shots_on_target": 1,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 1,
+        "assists": 0,
+        "turnovers": 1,
+        "recoveries": 1,
+        "sanctions": 1,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "sarrailh-pablo-eduardo",
+      "name": "Sarrailh, Pablo Eduardo",
+      "jersey_number": 11,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 0.5,
+        "shots": 2,
+        "shots_on_target": 2,
+        "saves_against": 1,
+        "outside_or_woodwork": 0,
+        "goals": 1,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 2,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "ramirez-nicolas",
+      "name": "Ramirez, Nicolas",
+      "jersey_number": 13,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 0.5,
+        "shots": 6,
+        "shots_on_target": 4,
+        "saves_against": 1,
+        "outside_or_woodwork": 2,
+        "goals": 3,
+        "assists": 0,
+        "turnovers": 1,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "correa-marcos-isauro",
+      "name": "Correa, Marcos Isauro",
+      "jersey_number": 33,
+      "team_side": "home",
+      "role": "goalkeeper",
+      "metrics": {
+        "saves": 4,
+        "shots_faced": 12,
+        "goals_conceded": 8,
+        "save_rate": 0.3333,
+        "saves_7m": 0,
+        "shots_faced_7m": 1,
+        "goals_conceded_7m": 1,
+        "save_rate_7m": 0.0,
+        "saves_counterattack": 0,
+        "shots_faced_counterattack": 2,
+        "goals_conceded_counterattack": 2,
+        "save_rate_counterattack": 0.0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "delpieri-mateo",
+      "name": "Delpieri, Mateo",
+      "jersey_number": 38,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 0.8462,
+        "shots": 13,
+        "shots_on_target": 11,
+        "saves_against": 0,
+        "outside_or_woodwork": 2,
+        "goals": 11,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "chavez-alexis-ezequiel",
+      "name": "Chavez, Alexis Ezequiel",
+      "jersey_number": 66,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 0.6667,
+        "shots": 3,
+        "shots_on_target": 3,
+        "saves_against": 1,
+        "outside_or_woodwork": 0,
+        "goals": 2,
+        "assists": 0,
+        "turnovers": 2,
+        "recoveries": 1,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "ramirez-gaston",
+      "name": "Ramirez, Gaston",
+      "jersey_number": 80,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 0.5,
+        "shots": 6,
+        "shots_on_target": 5,
+        "saves_against": 2,
+        "outside_or_woodwork": 1,
+        "goals": 3,
+        "assists": 0,
+        "turnovers": 3,
+        "recoveries": 0,
+        "sanctions": 1,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "mollo-skripnik-strelecki-lucian",
+      "name": "Mollo Skripnik Strelecki, Lucian...",
+      "jersey_number": 87,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 1.0,
+        "shots": 1,
+        "shots_on_target": 1,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 1,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "ferrari-jonas-horacio",
+      "name": "Ferrari, Jonas Horacio",
+      "jersey_number": 97,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 0.5,
+        "shots": 4,
+        "shots_on_target": 3,
+        "saves_against": 1,
+        "outside_or_woodwork": 1,
+        "goals": 2,
+        "assists": 0,
+        "turnovers": 2,
+        "recoveries": 0,
+        "sanctions": 2,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "romero-boeris-sebastian",
+      "name": "Romero Boeris, Sebastian",
+      "jersey_number": 98,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 0.2857,
+        "shots": 7,
+        "shots_on_target": 4,
+        "saves_against": 2,
+        "outside_or_woodwork": 2,
+        "goals": 2,
+        "assists": 0,
+        "turnovers": 1,
+        "recoveries": 0,
+        "sanctions": 1,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "martinez-milo-ulises",
+      "name": "Martinez, Milo Ulises",
+      "jersey_number": 17,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 1.0,
+        "shots": 8,
+        "shots_on_target": 8,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 8,
+        "assists": 0,
+        "turnovers": 4,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "grisolia-geronimo-gabriel",
+      "name": "Grisolia, Geronimo Gabriel",
+      "jersey_number": 27,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 0.5,
+        "shots": 2,
+        "shots_on_target": 2,
+        "saves_against": 1,
+        "outside_or_woodwork": 0,
+        "goals": 1,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 3,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "gayoso-silva-michel-javier",
+      "name": "Gayoso Silva, Michel Javier",
+      "jersey_number": 76,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 1,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "carruthers-benjamin",
+      "name": "Carruthers, Benjamin",
+      "jersey_number": 7,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 0.2,
+        "shots": 5,
+        "shots_on_target": 2,
+        "saves_against": 1,
+        "outside_or_woodwork": 2,
+        "goals": 1,
+        "assists": 0,
+        "turnovers": 5,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "delaloye-mateo-valentin",
+      "name": "Delaloye, Mateo Valentin",
+      "jersey_number": 11,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 0.6667,
+        "shots": 6,
+        "shots_on_target": 6,
+        "saves_against": 2,
+        "outside_or_woodwork": 0,
+        "goals": 4,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 1,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "ercoli-gonzalo-hernan",
+      "name": "Ercoli, Gonzalo Hernan",
+      "jersey_number": 12,
+      "team_side": "away",
+      "role": "goalkeeper",
+      "metrics": {
+        "saves": 1,
+        "shots_faced": 7,
+        "goals_conceded": 6,
+        "save_rate": 0.1429,
+        "saves_7m": 0,
+        "shots_faced_7m": 0,
+        "goals_conceded_7m": 0,
+        "save_rate_7m": null,
+        "saves_counterattack": 1,
+        "shots_faced_counterattack": 1,
+        "goals_conceded_counterattack": 0,
+        "save_rate_counterattack": 1.0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "lucero-mateo-gabriel",
+      "name": "Lucero, Mateo Gabriel",
+      "jersey_number": 14,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 0.5,
+        "shots": 8,
+        "shots_on_target": 6,
+        "saves_against": 2,
+        "outside_or_woodwork": 1,
+        "goals": 4,
+        "assists": 0,
+        "turnovers": 1,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 3,
+        "goals_7m": 2
+      },
+      "evidence": []
+    },
+    {
+      "slug": "madera-aragon-matias-nicolas",
+      "name": "Madera Aragon, Matias Nicolas",
+      "jersey_number": 24,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 1.0,
+        "shots": 1,
+        "shots_on_target": 1,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 1,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "cabred-lucas-fabrizio",
+      "name": "Cabred, Lucas Fabrizio",
+      "jersey_number": 26,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 0.5,
+        "shots": 8,
+        "shots_on_target": 7,
+        "saves_against": 3,
+        "outside_or_woodwork": 0,
+        "goals": 4,
+        "assists": 0,
+        "turnovers": 1,
+        "recoveries": 0,
+        "sanctions": 1,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "ercoli-santiago-ariel",
+      "name": "Ercoli, Santiago Ariel",
+      "jersey_number": 29,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 0.5,
+        "shots": 2,
+        "shots_on_target": 2,
+        "saves_against": 1,
+        "outside_or_woodwork": 0,
+        "goals": 1,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 1,
+        "goals_7m": 1
+      },
+      "evidence": []
+    },
+    {
+      "slug": "flores-gonzalo-nahuel",
+      "name": "Flores, Gonzalo Nahuel",
+      "jersey_number": 33,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 0.3333,
+        "shots": 6,
+        "shots_on_target": 6,
+        "saves_against": 4,
+        "outside_or_woodwork": 0,
+        "goals": 2,
+        "assists": 0,
+        "turnovers": 5,
+        "recoveries": 0,
+        "sanctions": 1,
+        "shots_7m": 1,
+        "goals_7m": 1
+      },
+      "evidence": []
+    },
+    {
+      "slug": "gerez-valenzuela-gabriel-mirk",
+      "name": "Gerez Valenzuela, Gabriel Mirk...",
+      "jersey_number": 19,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "nicholson-victorel-joaquin",
+      "name": "Nicholson Victorel, Joaquin",
+      "jersey_number": 27,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 0.5,
+        "shots": 4,
+        "shots_on_target": 3,
+        "saves_against": 1,
+        "outside_or_woodwork": 1,
+        "goals": 2,
+        "assists": 0,
+        "turnovers": 2,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "sosa-baez-gonzalez-lautaro",
+      "name": "Sosa Baez Gonzalez, Lautaro",
+      "jersey_number": 45,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 0.0,
+        "shots": 1,
+        "shots_on_target": 1,
+        "saves_against": 1,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 1,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "lacuadra-valentin-leonel",
+      "name": "Lacuadra, Valentin Leonel",
+      "jersey_number": 8,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 0.0,
+        "shots": 1,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 1,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 1,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "delaloye-bautista-ariel",
+      "name": "Delaloye, Bautista Ariel",
+      "jersey_number": 1,
+      "team_side": "away",
+      "role": "goalkeeper",
+      "metrics": {
+        "saves": 9,
+        "shots_faced": 39,
+        "goals_conceded": 30,
+        "save_rate": 0.2308,
+        "saves_7m": 0,
+        "shots_faced_7m": 0,
+        "goals_conceded_7m": 0,
+        "save_rate_7m": null,
+        "saves_counterattack": 1,
+        "shots_faced_counterattack": 13,
+        "goals_conceded_counterattack": 12,
+        "save_rate_counterattack": 0.0769
+      },
+      "evidence": []
+    },
+    {
+      "slug": "bunjahed-nicolas-ezequie",
+      "name": "Bunjahed, Nicolas Ezequie",
+      "jersey_number": 90,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 1,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "florez-thiago-emiliano",
+      "name": "Florez, Thiago Emiliano",
+      "jersey_number": 3,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 0.0,
+        "shots": 2,
+        "shots_on_target": 1,
+        "saves_against": 1,
+        "outside_or_woodwork": 1,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 2,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "pavia-bautista",
+      "name": "Pavia, Bautista",
+      "jersey_number": 21,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 0.4,
+        "shots": 5,
+        "shots_on_target": 4,
+        "saves_against": 2,
+        "outside_or_woodwork": 1,
+        "goals": 2,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "romanello-martin-esteban",
+      "name": "Romanello, Martin Esteban",
+      "jersey_number": 24,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    }
+  ],
+  "evidence": [
+    {
+      "reference": "Sequence 1",
+      "period": 1,
+      "regulation_seconds": 0.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 2",
+      "period": 1,
+      "regulation_seconds": 35.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 3",
+      "period": 1,
+      "regulation_seconds": 41.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 4",
+      "period": 1,
+      "regulation_seconds": 47.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 5",
+      "period": 1,
+      "regulation_seconds": 82.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 6",
+      "period": 1,
+      "regulation_seconds": 115.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 7",
+      "period": 1,
+      "regulation_seconds": 128.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 8",
+      "period": 1,
+      "regulation_seconds": 183.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 9",
+      "period": 1,
+      "regulation_seconds": 194.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 10",
+      "period": 1,
+      "regulation_seconds": 204.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 11",
+      "period": 1,
+      "regulation_seconds": 234.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 12",
+      "period": 1,
+      "regulation_seconds": 238.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 13",
+      "period": 1,
+      "regulation_seconds": 264.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 14",
+      "period": 1,
+      "regulation_seconds": 275.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 15",
+      "period": 1,
+      "regulation_seconds": 342.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 16",
+      "period": 1,
+      "regulation_seconds": 356.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 17",
+      "period": 1,
+      "regulation_seconds": 367.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 18",
+      "period": 1,
+      "regulation_seconds": 399.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 19",
+      "period": 1,
+      "regulation_seconds": 422.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 20",
+      "period": 1,
+      "regulation_seconds": 435.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 21",
+      "period": 1,
+      "regulation_seconds": 476.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 22",
+      "period": 1,
+      "regulation_seconds": 482.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 23",
+      "period": 1,
+      "regulation_seconds": 486.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 24",
+      "period": 1,
+      "regulation_seconds": 493.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 25",
+      "period": 1,
+      "regulation_seconds": 524.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 26",
+      "period": 1,
+      "regulation_seconds": 541.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 27",
+      "period": 1,
+      "regulation_seconds": 570.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 28",
+      "period": 1,
+      "regulation_seconds": 612.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 29",
+      "period": 1,
+      "regulation_seconds": 618.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 30",
+      "period": 1,
+      "regulation_seconds": 660.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 31",
+      "period": 1,
+      "regulation_seconds": 672.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 32",
+      "period": 1,
+      "regulation_seconds": 681.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 33",
+      "period": 1,
+      "regulation_seconds": 714.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 34",
+      "period": 1,
+      "regulation_seconds": 733.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 35",
+      "period": 1,
+      "regulation_seconds": 748.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 36",
+      "period": 1,
+      "regulation_seconds": 784.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 37",
+      "period": 1,
+      "regulation_seconds": 792.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 38",
+      "period": 1,
+      "regulation_seconds": 866.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 39",
+      "period": 1,
+      "regulation_seconds": 894.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 40",
+      "period": 1,
+      "regulation_seconds": 941.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 41",
+      "period": 1,
+      "regulation_seconds": 946.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 42",
+      "period": 1,
+      "regulation_seconds": 993.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 43",
+      "period": 1,
+      "regulation_seconds": 1086.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 44",
+      "period": 1,
+      "regulation_seconds": 1091.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 45",
+      "period": 1,
+      "regulation_seconds": 1098.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 46",
+      "period": 1,
+      "regulation_seconds": 1102.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 47",
+      "period": 1,
+      "regulation_seconds": 1144.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 48",
+      "period": 1,
+      "regulation_seconds": 1162.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 49",
+      "period": 1,
+      "regulation_seconds": 1191.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 50",
+      "period": 1,
+      "regulation_seconds": 1203.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 51",
+      "period": 1,
+      "regulation_seconds": 1255.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 52",
+      "period": 1,
+      "regulation_seconds": 1271.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 53",
+      "period": 1,
+      "regulation_seconds": 1295.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 54",
+      "period": 1,
+      "regulation_seconds": 1308.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 55",
+      "period": 1,
+      "regulation_seconds": 1317.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 56",
+      "period": 1,
+      "regulation_seconds": 1351.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 57",
+      "period": 1,
+      "regulation_seconds": 1400.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 58",
+      "period": 1,
+      "regulation_seconds": 1454.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 59",
+      "period": 1,
+      "regulation_seconds": 1461.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 60",
+      "period": 1,
+      "regulation_seconds": 1501.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 61",
+      "period": 1,
+      "regulation_seconds": 1511.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 62",
+      "period": 1,
+      "regulation_seconds": 1558.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 63",
+      "period": 1,
+      "regulation_seconds": 1565.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 64",
+      "period": 1,
+      "regulation_seconds": 1578.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 65",
+      "period": 1,
+      "regulation_seconds": 1615.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 66",
+      "period": 1,
+      "regulation_seconds": 1632.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 67",
+      "period": 1,
+      "regulation_seconds": 1636.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 68",
+      "period": 1,
+      "regulation_seconds": 1764.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 69",
+      "period": 1,
+      "regulation_seconds": 1797.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 70",
+      "period": 1,
+      "regulation_seconds": 1807.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 71",
+      "period": 1,
+      "regulation_seconds": 1817.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 72",
+      "period": 1,
+      "regulation_seconds": 1855.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 73",
+      "period": 1,
+      "regulation_seconds": 1865.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 74",
+      "period": 1,
+      "regulation_seconds": 1915.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 75",
+      "period": 1,
+      "regulation_seconds": 1937.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 76",
+      "period": 1,
+      "regulation_seconds": 1943.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 77",
+      "period": 1,
+      "regulation_seconds": 1949.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 78",
+      "period": 2,
+      "regulation_seconds": 0.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 79",
+      "period": 2,
+      "regulation_seconds": 32.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 80",
+      "period": 2,
+      "regulation_seconds": 63.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 81",
+      "period": 2,
+      "regulation_seconds": 80.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 82",
+      "period": 2,
+      "regulation_seconds": 108.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 83",
+      "period": 2,
+      "regulation_seconds": 140.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 84",
+      "period": 2,
+      "regulation_seconds": 146.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 85",
+      "period": 2,
+      "regulation_seconds": 184.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 86",
+      "period": 2,
+      "regulation_seconds": 194.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 87",
+      "period": 2,
+      "regulation_seconds": 204.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 88",
+      "period": 2,
+      "regulation_seconds": 222.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 89",
+      "period": 2,
+      "regulation_seconds": 251.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 90",
+      "period": 2,
+      "regulation_seconds": 264.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 91",
+      "period": 2,
+      "regulation_seconds": 300.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 92",
+      "period": 2,
+      "regulation_seconds": 304.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 93",
+      "period": 2,
+      "regulation_seconds": 336.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 94",
+      "period": 2,
+      "regulation_seconds": 340.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 95",
+      "period": 2,
+      "regulation_seconds": 371.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 96",
+      "period": 2,
+      "regulation_seconds": 381.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 97",
+      "period": 2,
+      "regulation_seconds": 421.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 98",
+      "period": 2,
+      "regulation_seconds": 442.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 99",
+      "period": 2,
+      "regulation_seconds": 451.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 100",
+      "period": 2,
+      "regulation_seconds": 458.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 101",
+      "period": 2,
+      "regulation_seconds": 484.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 102",
+      "period": 2,
+      "regulation_seconds": 522.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 103",
+      "period": 2,
+      "regulation_seconds": 563.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 104",
+      "period": 2,
+      "regulation_seconds": 618.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 105",
+      "period": 2,
+      "regulation_seconds": 645.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 106",
+      "period": 2,
+      "regulation_seconds": 700.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 107",
+      "period": 2,
+      "regulation_seconds": 724.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 108",
+      "period": 2,
+      "regulation_seconds": 759.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 109",
+      "period": 2,
+      "regulation_seconds": 773.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 110",
+      "period": 2,
+      "regulation_seconds": 789.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 111",
+      "period": 2,
+      "regulation_seconds": 826.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 112",
+      "period": 2,
+      "regulation_seconds": 857.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 113",
+      "period": 2,
+      "regulation_seconds": 871.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 114",
+      "period": 2,
+      "regulation_seconds": 930.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 115",
+      "period": 2,
+      "regulation_seconds": 954.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 116",
+      "period": 2,
+      "regulation_seconds": 993.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 117",
+      "period": 2,
+      "regulation_seconds": 1001.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 118",
+      "period": 2,
+      "regulation_seconds": 1030.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 119",
+      "period": 2,
+      "regulation_seconds": 1035.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 120",
+      "period": 2,
+      "regulation_seconds": 1080.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 121",
+      "period": 2,
+      "regulation_seconds": 1086.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 122",
+      "period": 2,
+      "regulation_seconds": 1110.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 123",
+      "period": 2,
+      "regulation_seconds": 1128.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 124",
+      "period": 2,
+      "regulation_seconds": 1144.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 125",
+      "period": 2,
+      "regulation_seconds": 1161.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 126",
+      "period": 2,
+      "regulation_seconds": 1177.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 127",
+      "period": 2,
+      "regulation_seconds": 1189.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 128",
+      "period": 2,
+      "regulation_seconds": 1196.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 129",
+      "period": 2,
+      "regulation_seconds": 1244.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 130",
+      "period": 2,
+      "regulation_seconds": 1257.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 131",
+      "period": 2,
+      "regulation_seconds": 1279.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 132",
+      "period": 2,
+      "regulation_seconds": 1307.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 133",
+      "period": 2,
+      "regulation_seconds": 1313.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 134",
+      "period": 2,
+      "regulation_seconds": 1339.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 135",
+      "period": 2,
+      "regulation_seconds": 1370.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 136",
+      "period": 2,
+      "regulation_seconds": 1417.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 137",
+      "period": 2,
+      "regulation_seconds": 1457.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 138",
+      "period": 2,
+      "regulation_seconds": 1472.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 139",
+      "period": 2,
+      "regulation_seconds": 1490.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 140",
+      "period": 2,
+      "regulation_seconds": 1539.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 141",
+      "period": 2,
+      "regulation_seconds": 1572.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 142",
+      "period": 2,
+      "regulation_seconds": 1581.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 143",
+      "period": 2,
+      "regulation_seconds": 1585.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 144",
+      "period": 2,
+      "regulation_seconds": 1589.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 145",
+      "period": 2,
+      "regulation_seconds": 1650.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 146",
+      "period": 2,
+      "regulation_seconds": 1670.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 147",
+      "period": 2,
+      "regulation_seconds": 1698.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 148",
+      "period": 2,
+      "regulation_seconds": 1706.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 149",
+      "period": 2,
+      "regulation_seconds": 1731.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 150",
+      "period": 2,
+      "regulation_seconds": 1758.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 151",
+      "period": 2,
+      "regulation_seconds": 1765.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 152",
+      "period": 2,
+      "regulation_seconds": 1780.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 153",
+      "period": 2,
+      "regulation_seconds": 1832.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 154",
+      "period": 2,
+      "regulation_seconds": 1873.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 155",
+      "period": 2,
+      "regulation_seconds": 1883.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 156",
+      "period": 2,
+      "regulation_seconds": 1913.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 157",
+      "period": 2,
+      "regulation_seconds": 1913.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 158",
+      "period": 2,
+      "regulation_seconds": 1978.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 159",
+      "period": 2,
+      "regulation_seconds": 1983.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 160",
+      "period": 2,
+      "regulation_seconds": 1993.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 161",
+      "period": 2,
+      "regulation_seconds": 2002.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    }
+  ],
+  "coverage": {
+    "analyzed_periods": [
+      1,
+      2
+    ],
+    "status": "complete",
+    "label": null
+  },
+  "team_summary": {
+    "home": {
+      "name": "S.A.P.A.",
+      "side": "home",
+      "shots": 55,
+      "goals": 36,
+      "turnovers": 16,
+      "recoveries": 5,
+      "sanctions": 7,
+      "shots_on_target": 46,
+      "saves_against": 10,
+      "outside_or_woodwork": 8,
+      "blocked": 1
+    },
+    "away": {
+      "name": "Defensores de Moreno",
+      "side": "away",
+      "shots": 49,
+      "goals": 21,
+      "turnovers": 19,
+      "recoveries": 0,
+      "sanctions": 4,
+      "shots_on_target": 39,
+      "saves_against": 18,
+      "outside_or_woodwork": 7,
+      "blocked": 3
+    }
+  },
+  "phase_analysis": {
+    "block_seconds": 600,
+    "blocks": [
+      {
+        "period": 1,
+        "start_seconds": 0,
+        "end_seconds": 600,
+        "clock_overrun_seconds": 0,
+        "home": {
+          "shots": 8,
+          "goals": 4,
+          "turnovers": 4,
+          "recoveries": 0,
+          "sanctions": 0,
+          "shots_on_target": 4,
+          "saves_against": 0,
+          "outside_or_woodwork": 4,
+          "blocked": 0
+        },
+        "away": {
+          "shots": 7,
+          "goals": 3,
+          "turnovers": 7,
+          "recoveries": 0,
+          "sanctions": 0,
+          "shots_on_target": 5,
+          "saves_against": 2,
+          "outside_or_woodwork": 2,
+          "blocked": 0
+        },
+        "winner": "home",
+        "possessions": {
+          "home": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          },
+          "away": {
+            "closed_possessions": 1,
+            "valid_possessions": 1,
+            "average_seconds": 35,
+            "median_seconds": 35,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 1,
+            "excluded_timeout": 0
+          }
+        }
+      },
+      {
+        "period": 1,
+        "start_seconds": 600,
+        "end_seconds": 1200,
+        "clock_overrun_seconds": 0,
+        "home": {
+          "shots": 8,
+          "goals": 5,
+          "turnovers": 3,
+          "recoveries": 0,
+          "sanctions": 1,
+          "shots_on_target": 6,
+          "saves_against": 1,
+          "outside_or_woodwork": 1,
+          "blocked": 1
+        },
+        "away": {
+          "shots": 7,
+          "goals": 3,
+          "turnovers": 3,
+          "recoveries": 0,
+          "sanctions": 0,
+          "shots_on_target": 5,
+          "saves_against": 2,
+          "outside_or_woodwork": 1,
+          "blocked": 1
+        },
+        "winner": "home",
+        "possessions": {
+          "home": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          },
+          "away": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          }
+        }
+      },
+      {
+        "period": 1,
+        "start_seconds": 1200,
+        "end_seconds": 1800,
+        "clock_overrun_seconds": 149,
+        "home": {
+          "shots": 11,
+          "goals": 8,
+          "turnovers": 1,
+          "recoveries": 0,
+          "sanctions": 2,
+          "shots_on_target": 11,
+          "saves_against": 3,
+          "outside_or_woodwork": 0,
+          "blocked": 0
+        },
+        "away": {
+          "shots": 9,
+          "goals": 3,
+          "turnovers": 3,
+          "recoveries": 0,
+          "sanctions": 0,
+          "shots_on_target": 6,
+          "saves_against": 3,
+          "outside_or_woodwork": 2,
+          "blocked": 1
+        },
+        "winner": "home",
+        "possessions": {
+          "home": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          },
+          "away": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          }
+        }
+      },
+      {
+        "period": 2,
+        "start_seconds": 0,
+        "end_seconds": 600,
+        "clock_overrun_seconds": 0,
+        "home": {
+          "shots": 6,
+          "goals": 6,
+          "turnovers": 5,
+          "recoveries": 3,
+          "sanctions": 2,
+          "shots_on_target": 6,
+          "saves_against": 0,
+          "outside_or_woodwork": 0,
+          "blocked": 0
+        },
+        "away": {
+          "shots": 8,
+          "goals": 6,
+          "turnovers": 1,
+          "recoveries": 0,
+          "sanctions": 0,
+          "shots_on_target": 7,
+          "saves_against": 1,
+          "outside_or_woodwork": 0,
+          "blocked": 1
+        },
+        "winner": "draw",
+        "possessions": {
+          "home": {
+            "closed_possessions": 4,
+            "valid_possessions": 4,
+            "average_seconds": 17,
+            "median_seconds": 16,
+            "ended_in_shot": 2,
+            "ended_in_turnover": 2,
+            "excluded_timeout": 0
+          },
+          "away": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          }
+        }
+      },
+      {
+        "period": 2,
+        "start_seconds": 600,
+        "end_seconds": 1200,
+        "clock_overrun_seconds": 0,
+        "home": {
+          "shots": 10,
+          "goals": 5,
+          "turnovers": 1,
+          "recoveries": 1,
+          "sanctions": 0,
+          "shots_on_target": 8,
+          "saves_against": 3,
+          "outside_or_woodwork": 2,
+          "blocked": 0
+        },
+        "away": {
+          "shots": 8,
+          "goals": 2,
+          "turnovers": 2,
+          "recoveries": 0,
+          "sanctions": 2,
+          "shots_on_target": 7,
+          "saves_against": 5,
+          "outside_or_woodwork": 1,
+          "blocked": 0
+        },
+        "winner": "home",
+        "possessions": {
+          "home": {
+            "closed_possessions": 1,
+            "valid_possessions": 1,
+            "average_seconds": 6,
+            "median_seconds": 6,
+            "ended_in_shot": 1,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          },
+          "away": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          }
+        }
+      },
+      {
+        "period": 2,
+        "start_seconds": 1200,
+        "end_seconds": 1800,
+        "clock_overrun_seconds": 202,
+        "home": {
+          "shots": 12,
+          "goals": 8,
+          "turnovers": 2,
+          "recoveries": 1,
+          "sanctions": 2,
+          "shots_on_target": 11,
+          "saves_against": 3,
+          "outside_or_woodwork": 1,
+          "blocked": 0
+        },
+        "away": {
+          "shots": 10,
+          "goals": 4,
+          "turnovers": 3,
+          "recoveries": 0,
+          "sanctions": 2,
+          "shots_on_target": 9,
+          "saves_against": 5,
+          "outside_or_woodwork": 1,
+          "blocked": 0
+        },
+        "winner": "home",
+        "possessions": {
+          "home": {
+            "closed_possessions": 1,
+            "valid_possessions": 1,
+            "average_seconds": 5,
+            "median_seconds": 5,
+            "ended_in_shot": 1,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          },
+          "away": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          }
+        }
+      }
+    ],
+    "scoring_runs": [
+      {
+        "team_side": "home",
+        "goals": 2,
+        "start": {
+          "period": 1,
+          "seconds": 82
+        },
+        "end": {
+          "period": 1,
+          "seconds": 128
+        }
+      },
+      {
+        "team_side": "away",
+        "goals": 2,
+        "start": {
+          "period": 1,
+          "seconds": 524
+        },
+        "end": {
+          "period": 1,
+          "seconds": 618
+        }
+      },
+      {
+        "team_side": "home",
+        "goals": 4,
+        "start": {
+          "period": 1,
+          "seconds": 748
+        },
+        "end": {
+          "period": 1,
+          "seconds": 1102
+        }
+      },
+      {
+        "team_side": "away",
+        "goals": 2,
+        "start": {
+          "period": 1,
+          "seconds": 1144
+        },
+        "end": {
+          "period": 1,
+          "seconds": 1308
+        }
+      },
+      {
+        "team_side": "home",
+        "goals": 4,
+        "start": {
+          "period": 1,
+          "seconds": 1400
+        },
+        "end": {
+          "period": 1,
+          "seconds": 1565
+        }
+      },
+      {
+        "team_side": "home",
+        "goals": 3,
+        "start": {
+          "period": 1,
+          "seconds": 1797
+        },
+        "end": {
+          "period": 1,
+          "seconds": 1937
+        }
+      },
+      {
+        "team_side": "home",
+        "goals": 2,
+        "start": {
+          "period": 2,
+          "seconds": 108
+        },
+        "end": {
+          "period": 2,
+          "seconds": 146
+        }
+      },
+      {
+        "team_side": "away",
+        "goals": 2,
+        "start": {
+          "period": 2,
+          "seconds": 184
+        },
+        "end": {
+          "period": 2,
+          "seconds": 204
+        }
+      },
+      {
+        "team_side": "home",
+        "goals": 2,
+        "start": {
+          "period": 2,
+          "seconds": 264
+        },
+        "end": {
+          "period": 2,
+          "seconds": 304
+        }
+      },
+      {
+        "team_side": "home",
+        "goals": 4,
+        "start": {
+          "period": 2,
+          "seconds": 1001
+        },
+        "end": {
+          "period": 2,
+          "seconds": 1128
+        }
+      },
+      {
+        "team_side": "home",
+        "goals": 2,
+        "start": {
+          "period": 2,
+          "seconds": 1313
+        },
+        "end": {
+          "period": 2,
+          "seconds": 1370
+        }
+      },
+      {
+        "team_side": "home",
+        "goals": 2,
+        "start": {
+          "period": 2,
+          "seconds": 1539
+        },
+        "end": {
+          "period": 2,
+          "seconds": 1589
+        }
+      },
+      {
+        "team_side": "home",
+        "goals": 2,
+        "start": {
+          "period": 2,
+          "seconds": 1698
+        },
+        "end": {
+          "period": 2,
+          "seconds": 1731
+        }
+      }
+    ],
+    "quick_concessions": [
+      {
+        "conceding_side": "home",
+        "scoring_side": "away",
+        "seconds_after_terminal": 4,
+        "terminal_kind": "turnover",
+        "terminal_outcome": "steal",
+        "at": {
+          "period": 1,
+          "seconds": 238
+        }
+      },
+      {
+        "conceding_side": "home",
+        "scoring_side": "away",
+        "seconds_after_terminal": 6,
+        "terminal_kind": "turnover",
+        "terminal_outcome": "walking",
+        "at": {
+          "period": 1,
+          "seconds": 618
+        }
+      },
+      {
+        "conceding_side": "away",
+        "scoring_side": "home",
+        "seconds_after_terminal": 5,
+        "terminal_kind": "shot",
+        "terminal_outcome": "blocked",
+        "at": {
+          "period": 1,
+          "seconds": 946
+        }
+      },
+      {
+        "conceding_side": "away",
+        "scoring_side": "home",
+        "seconds_after_terminal": 9,
+        "terminal_kind": "shot",
+        "terminal_outcome": "goal",
+        "at": {
+          "period": 1,
+          "seconds": 1317
+        }
+      },
+      {
+        "conceding_side": "away",
+        "scoring_side": "home",
+        "seconds_after_terminal": 7,
+        "terminal_kind": "shot",
+        "terminal_outcome": "save",
+        "at": {
+          "period": 1,
+          "seconds": 1461
+        }
+      },
+      {
+        "conceding_side": "away",
+        "scoring_side": "home",
+        "seconds_after_terminal": 10,
+        "terminal_kind": "turnover",
+        "terminal_outcome": "bad_pass",
+        "at": {
+          "period": 1,
+          "seconds": 1511
+        }
+      },
+      {
+        "conceding_side": "away",
+        "scoring_side": "home",
+        "seconds_after_terminal": 7,
+        "terminal_kind": "shot",
+        "terminal_outcome": "blocked",
+        "at": {
+          "period": 1,
+          "seconds": 1565
+        }
+      },
+      {
+        "conceding_side": "away",
+        "scoring_side": "home",
+        "seconds_after_terminal": 10,
+        "terminal_kind": "shot",
+        "terminal_outcome": "miss",
+        "at": {
+          "period": 1,
+          "seconds": 1817
+        }
+      },
+      {
+        "conceding_side": "home",
+        "scoring_side": "away",
+        "seconds_after_terminal": 10,
+        "terminal_kind": "turnover",
+        "terminal_outcome": "bad_pass",
+        "at": {
+          "period": 2,
+          "seconds": 204
+        }
+      },
+      {
+        "conceding_side": "away",
+        "scoring_side": "home",
+        "seconds_after_terminal": 10,
+        "terminal_kind": "shot",
+        "terminal_outcome": "goal",
+        "at": {
+          "period": 2,
+          "seconds": 381
+        }
+      },
+      {
+        "conceding_side": "away",
+        "scoring_side": "home",
+        "seconds_after_terminal": 8,
+        "terminal_kind": "turnover",
+        "terminal_outcome": "bad_pass",
+        "at": {
+          "period": 2,
+          "seconds": 1001
+        }
+      },
+      {
+        "conceding_side": "away",
+        "scoring_side": "home",
+        "seconds_after_terminal": 5,
+        "terminal_kind": "shot",
+        "terminal_outcome": "save",
+        "at": {
+          "period": 2,
+          "seconds": 1035
+        }
+      },
+      {
+        "conceding_side": "away",
+        "scoring_side": "home",
+        "seconds_after_terminal": 6,
+        "terminal_kind": "turnover",
+        "terminal_outcome": "bad_pass",
+        "at": {
+          "period": 2,
+          "seconds": 1313
+        }
+      },
+      {
+        "conceding_side": "away",
+        "scoring_side": "home",
+        "seconds_after_terminal": 4,
+        "terminal_kind": "turnover",
+        "terminal_outcome": "bad_pass",
+        "at": {
+          "period": 2,
+          "seconds": 1589
+        }
+      },
+      {
+        "conceding_side": "home",
+        "scoring_side": "away",
+        "seconds_after_terminal": 10,
+        "terminal_kind": "shot",
+        "terminal_outcome": "goal",
+        "at": {
+          "period": 2,
+          "seconds": 1883
+        }
+      }
+    ],
+    "goalkeeper_context": {
+      "home": {
+        "total": {
+          "opponent_attempts": 49,
+          "opponent_on_target": 39,
+          "goals_conceded": 21,
+          "saves": 18,
+          "seven_meters": {
+            "attempts": 5,
+            "on_target": 5,
+            "goals": 4,
+            "saves": 1
+          }
+        },
+        "first_half": {
+          "opponent_attempts": 23,
+          "opponent_on_target": 16,
+          "goals_conceded": 9,
+          "saves": 7,
+          "seven_meters": {
+            "attempts": 2,
+            "on_target": 2,
+            "goals": 2,
+            "saves": 0
+          }
+        },
+        "second_half": {
+          "opponent_attempts": 26,
+          "opponent_on_target": 23,
+          "goals_conceded": 12,
+          "saves": 11,
+          "seven_meters": {
+            "attempts": 3,
+            "on_target": 3,
+            "goals": 2,
+            "saves": 1
+          }
+        }
+      },
+      "away": {
+        "total": {
+          "opponent_attempts": 55,
+          "opponent_on_target": 46,
+          "goals_conceded": 36,
+          "saves": 10,
+          "seven_meters": {
+            "attempts": 0,
+            "on_target": 0,
+            "goals": 0,
+            "saves": 0
+          }
+        },
+        "first_half": {
+          "opponent_attempts": 27,
+          "opponent_on_target": 21,
+          "goals_conceded": 17,
+          "saves": 4,
+          "seven_meters": {
+            "attempts": 0,
+            "on_target": 0,
+            "goals": 0,
+            "saves": 0
+          }
+        },
+        "second_half": {
+          "opponent_attempts": 28,
+          "opponent_on_target": 25,
+          "goals_conceded": 19,
+          "saves": 6,
+          "seven_meters": {
+            "attempts": 0,
+            "on_target": 0,
+            "goals": 0,
+            "saves": 0
+          }
+        }
+      }
+    }
+  },
+  "incidents": [
+    {
+      "reference": "Sequence 1",
+      "period": 1,
+      "regulation_seconds": 0.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 0.0:0.0",
+      "incident_type": "Incidencia de juego",
+      "outcome": "kickoff",
+      "team_side": "away",
+      "player_name": null,
+      "player_slug": null,
+      "event_kind": "other",
+      "video_seconds": 107.700971
+    },
+    {
+      "reference": "Sequence 2",
+      "period": 1,
+      "regulation_seconds": 35.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 0.0:35.0",
+      "incident_type": "Pérdida",
+      "outcome": "Pase perdido",
+      "team_side": "away",
+      "player_name": "Bunjahed, Nicolas Ezequie",
+      "player_slug": "bunjahed-nicolas-ezequie",
+      "event_kind": "turnover",
+      "video_seconds": 142.866529
+    },
+    {
+      "reference": "Sequence 3",
+      "period": 1,
+      "regulation_seconds": 41.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 0.0:41.0",
+      "incident_type": "Pérdida",
+      "outcome": "steal",
+      "team_side": "home",
+      "player_name": "Ramirez, Gaston",
+      "player_slug": "ramirez-gaston",
+      "event_kind": "turnover",
+      "video_seconds": 148.660949
+    },
+    {
+      "reference": "Sequence 4",
+      "period": 1,
+      "regulation_seconds": 47.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 0.0:47.0",
+      "incident_type": "Pérdida",
+      "outcome": "Pase perdido",
+      "team_side": "away",
+      "player_name": "Flores, Gonzalo Nahuel",
+      "player_slug": "flores-gonzalo-nahuel",
+      "event_kind": "turnover",
+      "video_seconds": 155.117364
+    },
+    {
+      "reference": "Sequence 5",
+      "period": 1,
+      "regulation_seconds": 82.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 1.0:22.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Delpieri, Mateo",
+      "player_slug": "delpieri-mateo",
+      "event_kind": "shot",
+      "video_seconds": 189.209665
+    },
+    {
+      "reference": "Sequence 6",
+      "period": 1,
+      "regulation_seconds": 115.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 1.0:55.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Fuera",
+      "team_side": "away",
+      "player_name": "Lacuadra, Valentin Leonel",
+      "player_slug": "lacuadra-valentin-leonel",
+      "event_kind": "shot",
+      "video_seconds": 223.189241
+    },
+    {
+      "reference": "Sequence 7",
+      "period": 1,
+      "regulation_seconds": 128.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 2.0:8.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Ramirez, Gaston",
+      "player_slug": "ramirez-gaston",
+      "event_kind": "shot",
+      "video_seconds": 235.257168
+    },
+    {
+      "reference": "Sequence 8",
+      "period": 1,
+      "regulation_seconds": 183.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 3.0:3.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "away",
+      "player_name": "Carruthers, Benjamin",
+      "player_slug": "carruthers-benjamin",
+      "event_kind": "shot",
+      "video_seconds": 290.311264
+    },
+    {
+      "reference": "Sequence 9",
+      "period": 1,
+      "regulation_seconds": 194.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 3.0:14.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Martinez, Milo Ulises",
+      "player_slug": "martinez-milo-ulises",
+      "event_kind": "shot",
+      "video_seconds": 301.630797
+    },
+    {
+      "reference": "Sequence 10",
+      "period": 1,
+      "regulation_seconds": 204.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 3.0:24.0",
+      "incident_type": "Pérdida",
+      "outcome": "Pase perdido",
+      "team_side": "away",
+      "player_name": "Carruthers, Benjamin",
+      "player_slug": "carruthers-benjamin",
+      "event_kind": "turnover",
+      "video_seconds": 311.500567
+    },
+    {
+      "reference": "Sequence 11",
+      "period": 1,
+      "regulation_seconds": 234.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 3.0:54.0",
+      "incident_type": "Pérdida",
+      "outcome": "steal",
+      "team_side": "home",
+      "player_name": "Martinez, Milo Ulises",
+      "player_slug": "martinez-milo-ulises",
+      "event_kind": "turnover",
+      "video_seconds": 341.35069
+    },
+    {
+      "reference": "Sequence 12",
+      "period": 1,
+      "regulation_seconds": 238.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 3.0:58.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "away",
+      "player_name": "Flores, Gonzalo Nahuel",
+      "player_slug": "flores-gonzalo-nahuel",
+      "event_kind": "shot",
+      "video_seconds": 345.729779
+    },
+    {
+      "reference": "Sequence 13",
+      "period": 1,
+      "regulation_seconds": 264.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 4.0:24.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Fuera",
+      "team_side": "home",
+      "player_name": "Ferrari, Jonas Horacio",
+      "player_slug": "ferrari-jonas-horacio",
+      "event_kind": "shot",
+      "video_seconds": 371.836728
+    },
+    {
+      "reference": "Sequence 14",
+      "period": 1,
+      "regulation_seconds": 275.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 4.0:35.0",
+      "incident_type": "Pérdida",
+      "outcome": "Recepción perdida",
+      "team_side": "away",
+      "player_name": "Flores, Gonzalo Nahuel",
+      "player_slug": "flores-gonzalo-nahuel",
+      "event_kind": "turnover",
+      "video_seconds": 382.416037
+    },
+    {
+      "reference": "Sequence 15",
+      "period": 1,
+      "regulation_seconds": 342.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 5.0:42.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Fuera",
+      "team_side": "home",
+      "player_name": "Ramirez, Nicolas",
+      "player_slug": "ramirez-nicolas",
+      "event_kind": "shot",
+      "video_seconds": 449.221149
+    },
+    {
+      "reference": "Sequence 16",
+      "period": 1,
+      "regulation_seconds": 356.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 5.0:56.0",
+      "incident_type": "Pérdida",
+      "outcome": "Pase perdido",
+      "team_side": "away",
+      "player_name": "Carruthers, Benjamin",
+      "player_slug": "carruthers-benjamin",
+      "event_kind": "turnover",
+      "video_seconds": 464.005004
+    },
+    {
+      "reference": "Sequence 17",
+      "period": 1,
+      "regulation_seconds": 367.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 6.0:7.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Fuera",
+      "team_side": "home",
+      "player_name": "Delpieri, Mateo",
+      "player_slug": "delpieri-mateo",
+      "event_kind": "shot",
+      "video_seconds": 474.237441
+    },
+    {
+      "reference": "Sequence 19",
+      "period": 1,
+      "regulation_seconds": 399.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 6.0:39.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "away",
+      "player_name": "Nicholson Victorel, Joaquin",
+      "player_slug": "nicholson-victorel-joaquin",
+      "event_kind": "shot",
+      "video_seconds": 507.086771
+    },
+    {
+      "reference": "Sequence 20",
+      "period": 1,
+      "regulation_seconds": 422.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 7.0:2.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "away",
+      "player_name": "Delaloye, Mateo Valentin",
+      "player_slug": "delaloye-mateo-valentin",
+      "event_kind": "shot",
+      "video_seconds": 529.823896
+    },
+    {
+      "reference": "Sequence 21",
+      "period": 1,
+      "regulation_seconds": 435.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 7.0:15.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Delpieri, Mateo",
+      "player_slug": "delpieri-mateo",
+      "event_kind": "shot",
+      "video_seconds": 543.023011
+    },
+    {
+      "reference": "Sequence 22",
+      "period": 1,
+      "regulation_seconds": 476.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 7.0:56.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Palo/Travesaño",
+      "team_side": "away",
+      "player_name": "Nicholson Victorel, Joaquin",
+      "player_slug": "nicholson-victorel-joaquin",
+      "event_kind": "shot",
+      "video_seconds": 583.904243
+    },
+    {
+      "reference": "Sequence 23",
+      "period": 1,
+      "regulation_seconds": 482.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 8.0:2.0",
+      "incident_type": "Pérdida",
+      "outcome": "Pase perdido",
+      "team_side": "home",
+      "player_name": "Ferrari, Jonas Horacio",
+      "player_slug": "ferrari-jonas-horacio",
+      "event_kind": "turnover",
+      "video_seconds": 589.39549
+    },
+    {
+      "reference": "Sequence 24",
+      "period": 1,
+      "regulation_seconds": 486.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 8.0:6.0",
+      "incident_type": "Pérdida",
+      "outcome": "Pase perdido",
+      "team_side": "away",
+      "player_name": "Lacuadra, Valentin Leonel",
+      "player_slug": "lacuadra-valentin-leonel",
+      "event_kind": "turnover",
+      "video_seconds": 593.868926
+    },
+    {
+      "reference": "Sequence 25",
+      "period": 1,
+      "regulation_seconds": 493.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 8.0:13.0",
+      "incident_type": "Pérdida",
+      "outcome": "Recepción perdida",
+      "team_side": "home",
+      "player_name": "Gonzalez, Ezequiel Matias",
+      "player_slug": "gonzalez-ezequiel-matias",
+      "event_kind": "turnover",
+      "video_seconds": 600.638604
+    },
+    {
+      "reference": "Sequence 26",
+      "period": 1,
+      "regulation_seconds": 524.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 8.0:44.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "away",
+      "player_name": "Nicholson Victorel, Joaquin",
+      "player_slug": "nicholson-victorel-joaquin",
+      "event_kind": "shot",
+      "video_seconds": 631.62695
+    },
+    {
+      "reference": "Sequence 27",
+      "period": 1,
+      "regulation_seconds": 541.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 9.0:1.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Fuera",
+      "team_side": "home",
+      "player_name": "Delpieri, Mateo",
+      "player_slug": "delpieri-mateo",
+      "event_kind": "shot",
+      "video_seconds": 648.998962
+    },
+    {
+      "reference": "Sequence 28",
+      "period": 1,
+      "regulation_seconds": 570.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 9.0:30.0",
+      "incident_type": "Pérdida",
+      "outcome": "walking",
+      "team_side": "away",
+      "player_name": "Carruthers, Benjamin",
+      "player_slug": "carruthers-benjamin",
+      "event_kind": "turnover",
+      "video_seconds": 677.935954
+    },
+    {
+      "reference": "Sequence 29",
+      "period": 1,
+      "regulation_seconds": 612.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 10.0:12.0",
+      "incident_type": "Pérdida",
+      "outcome": "walking",
+      "team_side": "home",
+      "player_name": "Martinez, Milo Ulises",
+      "player_slug": "martinez-milo-ulises",
+      "event_kind": "turnover",
+      "video_seconds": 719.311559
+    },
+    {
+      "reference": "Sequence 30",
+      "period": 1,
+      "regulation_seconds": 618.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 10.0:18.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "away",
+      "player_name": "Delaloye, Mateo Valentin",
+      "player_slug": "delaloye-mateo-valentin",
+      "event_kind": "shot",
+      "video_seconds": 725.718248
+    },
+    {
+      "reference": "Sequence 31",
+      "period": 1,
+      "regulation_seconds": 660.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 11.0:0.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Martinez, Milo Ulises",
+      "player_slug": "martinez-milo-ulises",
+      "event_kind": "shot",
+      "video_seconds": 767.992078
+    },
+    {
+      "reference": "Sequence 32",
+      "period": 1,
+      "regulation_seconds": 672.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 11.0:12.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "away",
+      "player_name": "Flores, Gonzalo Nahuel",
+      "player_slug": "flores-gonzalo-nahuel",
+      "event_kind": "shot",
+      "video_seconds": 779.680212
+    },
+    {
+      "reference": "Sequence 33",
+      "period": 1,
+      "regulation_seconds": 681.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 11.0:21.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "home",
+      "player_name": "Ramirez, Gaston",
+      "player_slug": "ramirez-gaston",
+      "event_kind": "shot",
+      "video_seconds": 788.521998
+    },
+    {
+      "reference": "Sequence 34",
+      "period": 1,
+      "regulation_seconds": 714.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 11.0:54.0",
+      "incident_type": "Sanción",
+      "outcome": "seven_meter",
+      "team_side": "home",
+      "player_name": "Ramirez, Gaston",
+      "player_slug": "ramirez-gaston",
+      "event_kind": "foul_sanction",
+      "video_seconds": 821.457736
+    },
+    {
+      "reference": "Sequence 35",
+      "period": 1,
+      "regulation_seconds": 733.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 12.0:13.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "away",
+      "player_name": "Flores, Gonzalo Nahuel",
+      "player_slug": "flores-gonzalo-nahuel",
+      "event_kind": "shot",
+      "video_seconds": 840.84916
+    },
+    {
+      "reference": "Sequence 36",
+      "period": 1,
+      "regulation_seconds": 748.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 12.0:28.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Martinez, Milo Ulises",
+      "player_slug": "martinez-milo-ulises",
+      "event_kind": "shot",
+      "video_seconds": 855.929966
+    },
+    {
+      "reference": "Sequence 37",
+      "period": 1,
+      "regulation_seconds": 784.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 13.0:4.0",
+      "incident_type": "Pérdida",
+      "outcome": "Pase perdido",
+      "team_side": "away",
+      "player_name": "Nicholson Victorel, Joaquin",
+      "player_slug": "nicholson-victorel-joaquin",
+      "event_kind": "turnover",
+      "video_seconds": 891.246355
+    },
+    {
+      "reference": "Sequence 38",
+      "period": 1,
+      "regulation_seconds": 792.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 13.0:12.0",
+      "incident_type": "Pérdida",
+      "outcome": "area_violation",
+      "team_side": "home",
+      "player_name": "Ramirez, Nicolas",
+      "player_slug": "ramirez-nicolas",
+      "event_kind": "turnover",
+      "video_seconds": 899.653069
+    },
+    {
+      "reference": "Sequence 39",
+      "period": 1,
+      "regulation_seconds": 866.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 14.0:26.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Palo/Travesaño",
+      "team_side": "away",
+      "player_name": "Carruthers, Benjamin",
+      "player_slug": "carruthers-benjamin",
+      "event_kind": "shot",
+      "video_seconds": 973.377351
+    },
+    {
+      "reference": "Sequence 40",
+      "period": 1,
+      "regulation_seconds": 894.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 14.0:54.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Ramirez, Gaston",
+      "player_slug": "ramirez-gaston",
+      "event_kind": "shot",
+      "video_seconds": 1001.319778
+    },
+    {
+      "reference": "Sequence 41",
+      "period": 1,
+      "regulation_seconds": 941.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 15.0:41.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Bloqueado",
+      "team_side": "away",
+      "player_name": "Lucero, Mateo Gabriel",
+      "player_slug": "lucero-mateo-gabriel",
+      "event_kind": "shot",
+      "video_seconds": 1048.261025
+    },
+    {
+      "reference": "Sequence 42",
+      "period": 1,
+      "regulation_seconds": 946.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 15.0:46.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Ramirez, Gaston",
+      "player_slug": "ramirez-gaston",
+      "event_kind": "shot",
+      "video_seconds": 1053.486464
+    },
+    {
+      "reference": "Sequence 43",
+      "period": 1,
+      "regulation_seconds": 993.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 16.0:33.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "away",
+      "player_name": "Carruthers, Benjamin",
+      "player_slug": "carruthers-benjamin",
+      "event_kind": "shot",
+      "video_seconds": 1100.693668
+    },
+    {
+      "reference": "Sequence 44",
+      "period": 1,
+      "regulation_seconds": 1086.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 18.0:6.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Bloqueado",
+      "team_side": "home",
+      "player_name": "Romero Boeris, Sebastian",
+      "player_slug": "romero-boeris-sebastian",
+      "event_kind": "shot",
+      "video_seconds": 1194.036385
+    },
+    {
+      "reference": "Sequence 45",
+      "period": 1,
+      "regulation_seconds": 1091.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 18.0:11.0",
+      "incident_type": "Pérdida",
+      "outcome": "Pase perdido",
+      "team_side": "away",
+      "player_name": "Delaloye, Bautista Ariel",
+      "player_slug": "delaloye-bautista-ariel",
+      "event_kind": "turnover",
+      "video_seconds": 1198.868372
+    },
+    {
+      "reference": "Sequence 46",
+      "period": 1,
+      "regulation_seconds": 1098.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 18.0:18.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Palo/Travesaño",
+      "team_side": "home",
+      "player_name": "Romero Boeris, Sebastian",
+      "player_slug": "romero-boeris-sebastian",
+      "event_kind": "shot",
+      "video_seconds": 1205.627972
+    },
+    {
+      "reference": "Sequence 47",
+      "period": 1,
+      "regulation_seconds": 1102.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 18.0:22.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Ramirez, Nicolas",
+      "player_slug": "ramirez-nicolas",
+      "event_kind": "shot",
+      "video_seconds": 1209.287301
+    },
+    {
+      "reference": "Sequence 48",
+      "period": 1,
+      "regulation_seconds": 1144.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 19.0:4.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "away",
+      "player_name": "Lucero, Mateo Gabriel",
+      "player_slug": "lucero-mateo-gabriel",
+      "event_kind": "shot",
+      "video_seconds": 1252.036578
+    },
+    {
+      "reference": "Sequence 49",
+      "period": 1,
+      "regulation_seconds": 1162.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 19.0:22.0",
+      "incident_type": "Pérdida",
+      "outcome": "offensive_foul",
+      "team_side": "home",
+      "player_name": "Romero Boeris, Sebastian",
+      "player_slug": "romero-boeris-sebastian",
+      "event_kind": "turnover",
+      "video_seconds": 1269.630994
+    },
+    {
+      "reference": "Sequence 50",
+      "period": 1,
+      "regulation_seconds": 1191.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 19.0:51.0",
+      "incident_type": "Pérdida",
+      "outcome": "steal",
+      "team_side": "away",
+      "player_name": "Carruthers, Benjamin",
+      "player_slug": "carruthers-benjamin",
+      "event_kind": "turnover",
+      "video_seconds": 1298.243785
+    },
+    {
+      "reference": "Sequence 51",
+      "period": 1,
+      "regulation_seconds": 1203.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 20.0:3.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "home",
+      "player_name": "Ruano, Matheo",
+      "player_slug": "ruano-matheo",
+      "event_kind": "shot",
+      "video_seconds": 1310.818186
+    },
+    {
+      "reference": "Sequence 52",
+      "period": 1,
+      "regulation_seconds": 1255.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 20.0:55.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Fuera",
+      "team_side": "away",
+      "player_name": "Lucero, Mateo Gabriel",
+      "player_slug": "lucero-mateo-gabriel",
+      "event_kind": "shot",
+      "video_seconds": 1362.857465
+    },
+    {
+      "reference": "Sequence 53",
+      "period": 1,
+      "regulation_seconds": 1271.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 21.0:11.0",
+      "incident_type": "Incidencia de juego",
+      "outcome": "timeout",
+      "team_side": "home",
+      "player_name": null,
+      "player_slug": null,
+      "event_kind": "other",
+      "video_seconds": 1378.680462
+    },
+    {
+      "reference": "Sequence 54",
+      "period": 1,
+      "regulation_seconds": 1295.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 21.0:35.0",
+      "incident_type": "Pérdida",
+      "outcome": "area_violation",
+      "team_side": "home",
+      "player_name": "Martinez, Milo Ulises",
+      "player_slug": "martinez-milo-ulises",
+      "event_kind": "turnover",
+      "video_seconds": 1402.581286
+    },
+    {
+      "reference": "Sequence 55",
+      "period": 1,
+      "regulation_seconds": 1308.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 21.0:48.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "away",
+      "player_name": "Lucero, Mateo Gabriel",
+      "player_slug": "lucero-mateo-gabriel",
+      "event_kind": "shot",
+      "video_seconds": 1415.755838
+    },
+    {
+      "reference": "Sequence 56",
+      "period": 1,
+      "regulation_seconds": 1317.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 21.0:57.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Martinez, Milo Ulises",
+      "player_slug": "martinez-milo-ulises",
+      "event_kind": "shot",
+      "video_seconds": 1424.836045
+    },
+    {
+      "reference": "Sequence 57",
+      "period": 1,
+      "regulation_seconds": 1351.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 22.0:31.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "away",
+      "player_name": "Madera Aragon, Matias Nicolas",
+      "player_slug": "madera-aragon-matias-nicolas",
+      "event_kind": "shot",
+      "video_seconds": 1458.495341
+    },
+    {
+      "reference": "Sequence 58",
+      "period": 1,
+      "regulation_seconds": 1400.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 23.0:20.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Martinez, Milo Ulises",
+      "player_slug": "martinez-milo-ulises",
+      "event_kind": "shot",
+      "video_seconds": 1507.764323
+    },
+    {
+      "reference": "Sequence 59",
+      "period": 1,
+      "regulation_seconds": 1454.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 24.0:14.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "away",
+      "player_name": "Flores, Gonzalo Nahuel",
+      "player_slug": "flores-gonzalo-nahuel",
+      "event_kind": "shot",
+      "video_seconds": 1561.698257
+    },
+    {
+      "reference": "Sequence 60",
+      "period": 1,
+      "regulation_seconds": 1461.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 24.0:21.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Martinez, Milo Ulises",
+      "player_slug": "martinez-milo-ulises",
+      "event_kind": "shot",
+      "video_seconds": 1569.170363
+    },
+    {
+      "reference": "Sequence 61",
+      "period": 1,
+      "regulation_seconds": 1501.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 25.0:1.0",
+      "incident_type": "Pérdida",
+      "outcome": "Pase perdido",
+      "team_side": "away",
+      "player_name": "Flores, Gonzalo Nahuel",
+      "player_slug": "flores-gonzalo-nahuel",
+      "event_kind": "turnover",
+      "video_seconds": 1608.651674
+    },
+    {
+      "reference": "Sequence 62",
+      "period": 1,
+      "regulation_seconds": 1511.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 25.0:11.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Delpieri, Mateo",
+      "player_slug": "delpieri-mateo",
+      "event_kind": "shot",
+      "video_seconds": 1618.226462
+    },
+    {
+      "reference": "Sequence 63",
+      "period": 1,
+      "regulation_seconds": 1558.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 25.0:58.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Bloqueado",
+      "team_side": "away",
+      "player_name": "Carruthers, Benjamin",
+      "player_slug": "carruthers-benjamin",
+      "event_kind": "shot",
+      "video_seconds": 1665.415577
+    },
+    {
+      "reference": "Sequence 64",
+      "period": 1,
+      "regulation_seconds": 1565.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 26.0:5.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Delpieri, Mateo",
+      "player_slug": "delpieri-mateo",
+      "event_kind": "shot",
+      "video_seconds": 1672.309095
+    },
+    {
+      "reference": "Sequence 65",
+      "period": 1,
+      "regulation_seconds": 1578.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 26.0:18.0",
+      "incident_type": "Sanción",
+      "outcome": "seven_meter",
+      "team_side": "home",
+      "player_name": "Sarrailh, Pablo Eduardo",
+      "player_slug": "sarrailh-pablo-eduardo",
+      "event_kind": "foul_sanction",
+      "video_seconds": 1686.058746
+    },
+    {
+      "reference": "Sequence 67",
+      "period": 1,
+      "regulation_seconds": 1615.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 26.0:55.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "away",
+      "player_name": "Lucero, Mateo Gabriel",
+      "player_slug": "lucero-mateo-gabriel",
+      "event_kind": "shot",
+      "video_seconds": 1722.419239
+    },
+    {
+      "reference": "Sequence 68",
+      "period": 1,
+      "regulation_seconds": 1632.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 27.0:12.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "home",
+      "player_name": "Romero Boeris, Sebastian",
+      "player_slug": "romero-boeris-sebastian",
+      "event_kind": "shot",
+      "video_seconds": 1740.101113
+    },
+    {
+      "reference": "Sequence 69",
+      "period": 1,
+      "regulation_seconds": 1636.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 27.0:16.0",
+      "incident_type": "Sanción",
+      "outcome": "Exclusión 2 min",
+      "team_side": "home",
+      "player_name": "Romero Boeris, Sebastian",
+      "player_slug": "romero-boeris-sebastian",
+      "event_kind": "foul_sanction",
+      "video_seconds": 1743.866111
+    },
+    {
+      "reference": "Sequence 70",
+      "period": 1,
+      "regulation_seconds": 1764.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 29.0:24.0",
+      "incident_type": "Pérdida",
+      "outcome": "Pasivo",
+      "team_side": "away",
+      "player_name": "Carruthers, Benjamin",
+      "player_slug": "carruthers-benjamin",
+      "event_kind": "turnover",
+      "video_seconds": 1871.782861
+    },
+    {
+      "reference": "Sequence 71",
+      "period": 1,
+      "regulation_seconds": 1797.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 29.0:57.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Delpieri, Mateo",
+      "player_slug": "delpieri-mateo",
+      "event_kind": "shot",
+      "video_seconds": 1904.668926
+    },
+    {
+      "reference": "Sequence 72",
+      "period": 1,
+      "regulation_seconds": 1807.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 30.0:7.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Fuera",
+      "team_side": "away",
+      "player_name": "Carruthers, Benjamin",
+      "player_slug": "carruthers-benjamin",
+      "event_kind": "shot",
+      "video_seconds": 1914.438019
+    },
+    {
+      "reference": "Sequence 73",
+      "period": 1,
+      "regulation_seconds": 1817.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 30.0:17.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Delpieri, Mateo",
+      "player_slug": "delpieri-mateo",
+      "event_kind": "shot",
+      "video_seconds": 1924.57552
+    },
+    {
+      "reference": "Sequence 74",
+      "period": 1,
+      "regulation_seconds": 1855.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 30.0:55.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "away",
+      "player_name": "Lucero, Mateo Gabriel",
+      "player_slug": "lucero-mateo-gabriel",
+      "event_kind": "shot",
+      "video_seconds": 1962.24028
+    },
+    {
+      "reference": "Sequence 75",
+      "period": 1,
+      "regulation_seconds": 1865.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 31.0:5.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "home",
+      "player_name": "Ferrari, Jonas Horacio",
+      "player_slug": "ferrari-jonas-horacio",
+      "event_kind": "shot",
+      "video_seconds": 1972.37065
+    },
+    {
+      "reference": "Sequence 76",
+      "period": 1,
+      "regulation_seconds": 1915.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 31.0:55.0",
+      "incident_type": "Pérdida",
+      "outcome": "Pase perdido",
+      "team_side": "away",
+      "player_name": "Lucero, Mateo Gabriel",
+      "player_slug": "lucero-mateo-gabriel",
+      "event_kind": "turnover",
+      "video_seconds": 2022.530611
+    },
+    {
+      "reference": "Sequence 77",
+      "period": 1,
+      "regulation_seconds": 1937.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 32.0:17.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Sarrailh, Pablo Eduardo",
+      "player_slug": "sarrailh-pablo-eduardo",
+      "event_kind": "shot",
+      "video_seconds": 2044.621508
+    },
+    {
+      "reference": "Sequence 78",
+      "period": 1,
+      "regulation_seconds": 1943.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 32.0:23.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "away",
+      "player_name": "Cabred, Lucas Fabrizio",
+      "player_slug": "cabred-lucas-fabrizio",
+      "event_kind": "shot",
+      "video_seconds": 2050.924248
+    },
+    {
+      "reference": "Sequence 79",
+      "period": 1,
+      "regulation_seconds": 1949.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 32.0:29.0",
+      "incident_type": "Incidencia de juego",
+      "outcome": "period_end",
+      "team_side": "home",
+      "player_name": null,
+      "player_slug": null,
+      "event_kind": "other",
+      "video_seconds": 2057.165611
+    },
+    {
+      "reference": "Sequence 80",
+      "period": 2,
+      "regulation_seconds": 0.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 0.0:0.0",
+      "incident_type": "Incidencia de juego",
+      "outcome": "kickoff",
+      "team_side": "home",
+      "player_name": null,
+      "player_slug": null,
+      "event_kind": "other",
+      "video_seconds": 2060.980894
+    },
+    {
+      "reference": "Sequence 81",
+      "period": 2,
+      "regulation_seconds": 32.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 0.0:32.0",
+      "incident_type": "Pérdida",
+      "outcome": "walking",
+      "team_side": "home",
+      "player_name": "Martinez, Milo Ulises",
+      "player_slug": "martinez-milo-ulises",
+      "event_kind": "turnover",
+      "video_seconds": 2092.802015
+    },
+    {
+      "reference": "Sequence 82",
+      "period": 2,
+      "regulation_seconds": 63.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 1.0:3.0",
+      "incident_type": "Sanción",
+      "outcome": "seven_meter",
+      "team_side": "home",
+      "player_name": "Ferrari, Jonas Horacio",
+      "player_slug": "ferrari-jonas-horacio",
+      "event_kind": "foul_sanction",
+      "video_seconds": 2124.120404
+    },
+    {
+      "reference": "Sequence 83",
+      "period": 2,
+      "regulation_seconds": 80.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 1.0:20.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "away",
+      "player_name": "Lucero, Mateo Gabriel",
+      "player_slug": "lucero-mateo-gabriel",
+      "event_kind": "shot",
+      "video_seconds": 2141.185528
+    },
+    {
+      "reference": "Sequence 84",
+      "period": 2,
+      "regulation_seconds": 108.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 1.0:48.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Martinez, Milo Ulises",
+      "player_slug": "martinez-milo-ulises",
+      "event_kind": "shot",
+      "video_seconds": 2168.907386
+    },
+    {
+      "reference": "Sequence 85",
+      "period": 2,
+      "regulation_seconds": 140.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 2.0:20.0",
+      "incident_type": "Recuperación",
+      "outcome": "steal",
+      "team_side": "home",
+      "player_name": "Grisolia, Geronimo Gabriel",
+      "player_slug": "grisolia-geronimo-gabriel",
+      "event_kind": "recovery",
+      "video_seconds": 2200.591924
+    },
+    {
+      "reference": "Sequence 86",
+      "period": 2,
+      "regulation_seconds": 146.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 2.0:26.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Delpieri, Mateo",
+      "player_slug": "delpieri-mateo",
+      "event_kind": "shot",
+      "video_seconds": 2207.175353
+    },
+    {
+      "reference": "Sequence 87",
+      "period": 2,
+      "regulation_seconds": 184.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 3.0:4.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "away",
+      "player_name": "Cabred, Lucas Fabrizio",
+      "player_slug": "cabred-lucas-fabrizio",
+      "event_kind": "shot",
+      "video_seconds": 2244.605179
+    },
+    {
+      "reference": "Sequence 88",
+      "period": 2,
+      "regulation_seconds": 194.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 3.0:14.0",
+      "incident_type": "Pérdida",
+      "outcome": "Pase perdido",
+      "team_side": "home",
+      "player_name": "Chavez, Alexis Ezequiel",
+      "player_slug": "chavez-alexis-ezequiel",
+      "event_kind": "turnover",
+      "video_seconds": 2254.55818
+    },
+    {
+      "reference": "Sequence 89",
+      "period": 2,
+      "regulation_seconds": 204.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 3.0:24.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "away",
+      "player_name": "Pavia, Bautista",
+      "player_slug": "pavia-bautista",
+      "event_kind": "shot",
+      "video_seconds": 2264.812277
+    },
+    {
+      "reference": "Sequence 90",
+      "period": 2,
+      "regulation_seconds": 222.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 3.0:42.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Delpieri, Mateo",
+      "player_slug": "delpieri-mateo",
+      "event_kind": "shot",
+      "video_seconds": 2283.266545
+    },
+    {
+      "reference": "Sequence 91",
+      "period": 2,
+      "regulation_seconds": 251.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 4.0:11.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "away",
+      "player_name": "Cabred, Lucas Fabrizio",
+      "player_slug": "cabred-lucas-fabrizio",
+      "event_kind": "shot",
+      "video_seconds": 2312.439175
+    },
+    {
+      "reference": "Sequence 92",
+      "period": 2,
+      "regulation_seconds": 264.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 4.0:24.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Martinez, Milo Ulises",
+      "player_slug": "martinez-milo-ulises",
+      "event_kind": "shot",
+      "video_seconds": 2325.122577
+    },
+    {
+      "reference": "Sequence 93",
+      "period": 2,
+      "regulation_seconds": 300.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 5.0:0.0",
+      "incident_type": "Recuperación",
+      "outcome": "steal",
+      "team_side": "home",
+      "player_name": "Grisolia, Geronimo Gabriel",
+      "player_slug": "grisolia-geronimo-gabriel",
+      "event_kind": "recovery",
+      "video_seconds": 2360.86528
+    },
+    {
+      "reference": "Sequence 94",
+      "period": 2,
+      "regulation_seconds": 304.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 5.0:4.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Grisolia, Geronimo Gabriel",
+      "player_slug": "grisolia-geronimo-gabriel",
+      "event_kind": "shot",
+      "video_seconds": 2365.18725
+    },
+    {
+      "reference": "Sequence 95",
+      "period": 2,
+      "regulation_seconds": 336.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 5.0:36.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Bloqueado",
+      "team_side": "away",
+      "player_name": "Cabred, Lucas Fabrizio",
+      "player_slug": "cabred-lucas-fabrizio",
+      "event_kind": "shot",
+      "video_seconds": 2396.783035
+    },
+    {
+      "reference": "Sequence 96",
+      "period": 2,
+      "regulation_seconds": 340.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 5.0:40.0",
+      "incident_type": "Pérdida",
+      "outcome": "Pase perdido",
+      "team_side": "home",
+      "player_name": "Ramirez Lorca, Jaime Nahuel",
+      "player_slug": "ramirez-lorca-jaime-nahuel",
+      "event_kind": "turnover",
+      "video_seconds": 2400.735359
+    },
+    {
+      "reference": "Sequence 97",
+      "period": 2,
+      "regulation_seconds": 371.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 6.0:11.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "away",
+      "player_name": "Cabred, Lucas Fabrizio",
+      "player_slug": "cabred-lucas-fabrizio",
+      "event_kind": "shot",
+      "video_seconds": 2431.678886
+    },
+    {
+      "reference": "Sequence 98",
+      "period": 2,
+      "regulation_seconds": 381.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 6.0:21.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Delpieri, Mateo",
+      "player_slug": "delpieri-mateo",
+      "event_kind": "shot",
+      "video_seconds": 2441.894645
+    },
+    {
+      "reference": "Sequence 99",
+      "period": 2,
+      "regulation_seconds": 421.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 7.0:1.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "away",
+      "player_name": "Cabred, Lucas Fabrizio",
+      "player_slug": "cabred-lucas-fabrizio",
+      "event_kind": "shot",
+      "video_seconds": 2481.94228
+    },
+    {
+      "reference": "Sequence 100",
+      "period": 2,
+      "regulation_seconds": 442.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 7.0:22.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "away",
+      "player_name": "Cabred, Lucas Fabrizio",
+      "player_slug": "cabred-lucas-fabrizio",
+      "event_kind": "shot",
+      "video_seconds": 2502.627492
+    },
+    {
+      "reference": "Sequence 101",
+      "period": 2,
+      "regulation_seconds": 451.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 7.0:31.0",
+      "incident_type": "Pérdida",
+      "outcome": "offensive_foul",
+      "team_side": "home",
+      "player_name": "Ferrari, Jonas Horacio",
+      "player_slug": "ferrari-jonas-horacio",
+      "event_kind": "turnover",
+      "video_seconds": 2511.912048
+    },
+    {
+      "reference": "Sequence 102",
+      "period": 2,
+      "regulation_seconds": 458.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 7.0:38.0",
+      "incident_type": "Recuperación",
+      "outcome": "steal",
+      "team_side": "home",
+      "player_name": "Grisolia, Geronimo Gabriel",
+      "player_slug": "grisolia-geronimo-gabriel",
+      "event_kind": "recovery",
+      "video_seconds": 2518.865963
+    },
+    {
+      "reference": "Sequence 103",
+      "period": 2,
+      "regulation_seconds": 484.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 8.0:4.0",
+      "incident_type": "Pérdida",
+      "outcome": "Recepción perdida",
+      "team_side": "home",
+      "player_name": "Gayoso Silva, Michel Javier",
+      "player_slug": "gayoso-silva-michel-javier",
+      "event_kind": "turnover",
+      "video_seconds": 2545.334735
+    },
+    {
+      "reference": "Sequence 104",
+      "period": 2,
+      "regulation_seconds": 522.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 8.0:42.0",
+      "incident_type": "Sanción",
+      "outcome": "Exclusión 2 min",
+      "team_side": "home",
+      "player_name": "Ferrari, Jonas Horacio",
+      "player_slug": "ferrari-jonas-horacio",
+      "event_kind": "foul_sanction",
+      "video_seconds": 2583.068382
+    },
+    {
+      "reference": "Sequence 105",
+      "period": 2,
+      "regulation_seconds": 563.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 9.0:23.0",
+      "incident_type": "Pérdida",
+      "outcome": "Pase perdido",
+      "team_side": "away",
+      "player_name": "Flores, Gonzalo Nahuel",
+      "player_slug": "flores-gonzalo-nahuel",
+      "event_kind": "turnover",
+      "video_seconds": 2623.549484
+    },
+    {
+      "reference": "Sequence 106",
+      "period": 2,
+      "regulation_seconds": 618.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 10.0:18.0",
+      "incident_type": "Sanción",
+      "outcome": "Exclusión 2 min",
+      "team_side": "away",
+      "player_name": "Flores, Gonzalo Nahuel",
+      "player_slug": "flores-gonzalo-nahuel",
+      "event_kind": "foul_sanction",
+      "video_seconds": 2678.863806
+    },
+    {
+      "reference": "Sequence 107",
+      "period": 2,
+      "regulation_seconds": 645.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 10.0:45.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "home",
+      "player_name": "Romero Boeris, Sebastian",
+      "player_slug": "romero-boeris-sebastian",
+      "event_kind": "shot",
+      "video_seconds": 2705.997866
+    },
+    {
+      "reference": "Sequence 108",
+      "period": 2,
+      "regulation_seconds": 700.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 11.0:40.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "away",
+      "player_name": "Pavia, Bautista",
+      "player_slug": "pavia-bautista",
+      "event_kind": "shot",
+      "video_seconds": 2761.206012
+    },
+    {
+      "reference": "Sequence 109",
+      "period": 2,
+      "regulation_seconds": 724.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 12.0:4.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "home",
+      "player_name": "Grisolia, Geronimo Gabriel",
+      "player_slug": "grisolia-geronimo-gabriel",
+      "event_kind": "shot",
+      "video_seconds": 2785.339967
+    },
+    {
+      "reference": "Sequence 110",
+      "period": 2,
+      "regulation_seconds": 759.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 12.0:39.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Palo/Travesaño",
+      "team_side": "away",
+      "player_name": "Pavia, Bautista",
+      "player_slug": "pavia-bautista",
+      "event_kind": "shot",
+      "video_seconds": 2819.643376
+    },
+    {
+      "reference": "Sequence 111",
+      "period": 2,
+      "regulation_seconds": 773.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 12.0:53.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Mollo Skripnik Strelecki, Lucian...",
+      "player_slug": "mollo-skripnik-strelecki-lucian",
+      "event_kind": "shot",
+      "video_seconds": 2833.743147
+    },
+    {
+      "reference": "Sequence 112",
+      "period": 2,
+      "regulation_seconds": 789.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 13.0:9.0",
+      "incident_type": "Incidencia de juego",
+      "outcome": "timeout",
+      "team_side": "away",
+      "player_name": null,
+      "player_slug": null,
+      "event_kind": "other",
+      "video_seconds": 2849.848277
+    },
+    {
+      "reference": "Sequence 113",
+      "period": 2,
+      "regulation_seconds": 826.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 13.0:46.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "away",
+      "player_name": "Cabred, Lucas Fabrizio",
+      "player_slug": "cabred-lucas-fabrizio",
+      "event_kind": "shot",
+      "video_seconds": 2887.024577
+    },
+    {
+      "reference": "Sequence 114",
+      "period": 2,
+      "regulation_seconds": 857.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 14.0:17.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Fuera",
+      "team_side": "home",
+      "player_name": "Ramirez, Gaston",
+      "player_slug": "ramirez-gaston",
+      "event_kind": "shot",
+      "video_seconds": 2918.086616
+    },
+    {
+      "reference": "Sequence 115",
+      "period": 2,
+      "regulation_seconds": 871.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 14.0:31.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "away",
+      "player_name": "Delaloye, Mateo Valentin",
+      "player_slug": "delaloye-mateo-valentin",
+      "event_kind": "shot",
+      "video_seconds": 2932.127296
+    },
+    {
+      "reference": "Sequence 116",
+      "period": 2,
+      "regulation_seconds": 930.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 15.0:30.0",
+      "incident_type": "Sanción",
+      "outcome": "Exclusión 2 min",
+      "team_side": "away",
+      "player_name": "Cabred, Lucas Fabrizio",
+      "player_slug": "cabred-lucas-fabrizio",
+      "event_kind": "foul_sanction",
+      "video_seconds": 2990.825243
+    },
+    {
+      "reference": "Sequence 117",
+      "period": 2,
+      "regulation_seconds": 954.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 15.0:54.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "home",
+      "player_name": "Ramirez, Gaston",
+      "player_slug": "ramirez-gaston",
+      "event_kind": "shot",
+      "video_seconds": 3015.049876
+    },
+    {
+      "reference": "Sequence 118",
+      "period": 2,
+      "regulation_seconds": 993.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 16.0:33.0",
+      "incident_type": "Pérdida",
+      "outcome": "Pase perdido",
+      "team_side": "away",
+      "player_name": "Flores, Gonzalo Nahuel",
+      "player_slug": "flores-gonzalo-nahuel",
+      "event_kind": "turnover",
+      "video_seconds": 3054.315018
+    },
+    {
+      "reference": "Sequence 119",
+      "period": 2,
+      "regulation_seconds": 1001.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 16.0:41.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Delpieri, Mateo",
+      "player_slug": "delpieri-mateo",
+      "event_kind": "shot",
+      "video_seconds": 3062.283083
+    },
+    {
+      "reference": "Sequence 120",
+      "period": 2,
+      "regulation_seconds": 1030.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 17.0:10.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "away",
+      "player_name": "Flores, Gonzalo Nahuel",
+      "player_slug": "flores-gonzalo-nahuel",
+      "event_kind": "shot",
+      "video_seconds": 3091.146698
+    },
+    {
+      "reference": "Sequence 121",
+      "period": 2,
+      "regulation_seconds": 1035.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 17.0:15.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Delpieri, Mateo",
+      "player_slug": "delpieri-mateo",
+      "event_kind": "shot",
+      "video_seconds": 3095.625282
+    },
+    {
+      "reference": "Sequence 122",
+      "period": 2,
+      "regulation_seconds": 1080.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 18.0:0.0",
+      "incident_type": "Recuperación",
+      "outcome": "steal",
+      "team_side": "home",
+      "player_name": "Gonzalez, Ezequiel Matias",
+      "player_slug": "gonzalez-ezequiel-matias",
+      "event_kind": "recovery",
+      "video_seconds": 3140.985619
+    },
+    {
+      "reference": "Sequence 123",
+      "period": 2,
+      "regulation_seconds": 1086.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 18.0:6.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Ramirez, Nicolas",
+      "player_slug": "ramirez-nicolas",
+      "event_kind": "shot",
+      "video_seconds": 3147.11766
+    },
+    {
+      "reference": "Sequence 124",
+      "period": 2,
+      "regulation_seconds": 1110.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 18.0:30.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "away",
+      "player_name": "Flores, Gonzalo Nahuel",
+      "player_slug": "flores-gonzalo-nahuel",
+      "event_kind": "shot",
+      "video_seconds": 3171.392518
+    },
+    {
+      "reference": "Sequence 125",
+      "period": 2,
+      "regulation_seconds": 1128.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 18.0:48.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Romero Boeris, Sebastian",
+      "player_slug": "romero-boeris-sebastian",
+      "event_kind": "shot",
+      "video_seconds": 3188.658366
+    },
+    {
+      "reference": "Sequence 126",
+      "period": 2,
+      "regulation_seconds": 1144.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 19.0:4.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "away",
+      "player_name": "Pavia, Bautista",
+      "player_slug": "pavia-bautista",
+      "event_kind": "shot",
+      "video_seconds": 3205.222536
+    },
+    {
+      "reference": "Sequence 127",
+      "period": 2,
+      "regulation_seconds": 1161.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 19.0:21.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Fuera",
+      "team_side": "home",
+      "player_name": "Ramirez, Nicolas",
+      "player_slug": "ramirez-nicolas",
+      "event_kind": "shot",
+      "video_seconds": 3221.692469
+    },
+    {
+      "reference": "Sequence 128",
+      "period": 2,
+      "regulation_seconds": 1177.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 19.0:37.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "away",
+      "player_name": "Delaloye, Mateo Valentin",
+      "player_slug": "delaloye-mateo-valentin",
+      "event_kind": "shot",
+      "video_seconds": 3238.447963
+    },
+    {
+      "reference": "Sequence 129",
+      "period": 2,
+      "regulation_seconds": 1189.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 19.0:49.0",
+      "incident_type": "Pérdida",
+      "outcome": "Pase perdido",
+      "team_side": "home",
+      "player_name": "Ramirez, Gaston",
+      "player_slug": "ramirez-gaston",
+      "event_kind": "turnover",
+      "video_seconds": 3250.335861
+    },
+    {
+      "reference": "Sequence 130",
+      "period": 2,
+      "regulation_seconds": 1196.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 19.0:56.0",
+      "incident_type": "Pérdida",
+      "outcome": "Recepción perdida",
+      "team_side": "away",
+      "player_name": "Nicholson Victorel, Joaquin",
+      "player_slug": "nicholson-victorel-joaquin",
+      "event_kind": "turnover",
+      "video_seconds": 3256.49336
+    },
+    {
+      "reference": "Sequence 131",
+      "period": 2,
+      "regulation_seconds": 1244.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 20.0:44.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "home",
+      "player_name": "Chavez, Alexis Ezequiel",
+      "player_slug": "chavez-alexis-ezequiel",
+      "event_kind": "shot",
+      "video_seconds": 3305.007313
+    },
+    {
+      "reference": "Sequence 132",
+      "period": 2,
+      "regulation_seconds": 1257.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 20.0:57.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Palo/Travesaño",
+      "team_side": "away",
+      "player_name": "Florez, Thiago Emiliano",
+      "player_slug": "florez-thiago-emiliano",
+      "event_kind": "shot",
+      "video_seconds": 3317.739149
+    },
+    {
+      "reference": "Sequence 133",
+      "period": 2,
+      "regulation_seconds": 1279.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 21.0:19.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Palo/Travesaño",
+      "team_side": "home",
+      "player_name": "Romero Boeris, Sebastian",
+      "player_slug": "romero-boeris-sebastian",
+      "event_kind": "shot",
+      "video_seconds": 3339.76366
+    },
+    {
+      "reference": "Sequence 134",
+      "period": 2,
+      "regulation_seconds": 1307.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 21.0:47.0",
+      "incident_type": "Pérdida",
+      "outcome": "Pase perdido",
+      "team_side": "away",
+      "player_name": "Cabred, Lucas Fabrizio",
+      "player_slug": "cabred-lucas-fabrizio",
+      "event_kind": "turnover",
+      "video_seconds": 3367.782356
+    },
+    {
+      "reference": "Sequence 135",
+      "period": 2,
+      "regulation_seconds": 1313.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 21.0:53.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Gonzalez, Ezequiel Matias",
+      "player_slug": "gonzalez-ezequiel-matias",
+      "event_kind": "shot",
+      "video_seconds": 3374.473487
+    },
+    {
+      "reference": "Sequence 136",
+      "period": 2,
+      "regulation_seconds": 1339.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 22.0:19.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "away",
+      "player_name": "Delaloye, Mateo Valentin",
+      "player_slug": "delaloye-mateo-valentin",
+      "event_kind": "shot",
+      "video_seconds": 3400.23064
+    },
+    {
+      "reference": "Sequence 137",
+      "period": 2,
+      "regulation_seconds": 1370.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 22.0:50.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Romero Boeris, Sebastian",
+      "player_slug": "romero-boeris-sebastian",
+      "event_kind": "shot",
+      "video_seconds": 3431.225505
+    },
+    {
+      "reference": "Sequence 138",
+      "period": 2,
+      "regulation_seconds": 1417.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 23.0:37.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "away",
+      "player_name": "Pavia, Bautista",
+      "player_slug": "pavia-bautista",
+      "event_kind": "shot",
+      "video_seconds": 3478.035705
+    },
+    {
+      "reference": "Sequence 139",
+      "period": 2,
+      "regulation_seconds": 1457.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 24.0:17.0",
+      "incident_type": "Pérdida",
+      "outcome": "Recepción perdida",
+      "team_side": "home",
+      "player_name": "Ramirez, Gaston",
+      "player_slug": "ramirez-gaston",
+      "event_kind": "turnover",
+      "video_seconds": 3517.898456
+    },
+    {
+      "reference": "Sequence 140",
+      "period": 2,
+      "regulation_seconds": 1472.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 24.0:32.0",
+      "incident_type": "Sanción",
+      "outcome": "Exclusión 2 min",
+      "team_side": "home",
+      "player_name": "Sarrailh, Pablo Eduardo",
+      "player_slug": "sarrailh-pablo-eduardo",
+      "event_kind": "foul_sanction",
+      "video_seconds": 3532.521749
+    },
+    {
+      "reference": "Sequence 141",
+      "period": 2,
+      "regulation_seconds": 1490.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 24.0:50.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "away",
+      "player_name": "Lucero, Mateo Gabriel",
+      "player_slug": "lucero-mateo-gabriel",
+      "event_kind": "shot",
+      "video_seconds": 3551.268046
+    },
+    {
+      "reference": "Sequence 142",
+      "period": 2,
+      "regulation_seconds": 1539.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 25.0:39.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Chavez, Alexis Ezequiel",
+      "player_slug": "chavez-alexis-ezequiel",
+      "event_kind": "shot",
+      "video_seconds": 3599.883858
+    },
+    {
+      "reference": "Sequence 143",
+      "period": 2,
+      "regulation_seconds": 1572.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 26.0:12.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "away",
+      "player_name": "Florez, Thiago Emiliano",
+      "player_slug": "florez-thiago-emiliano",
+      "event_kind": "shot",
+      "video_seconds": 3633.274743
+    },
+    {
+      "reference": "Sequence 144",
+      "period": 2,
+      "regulation_seconds": 1581.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 26.0:21.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "home",
+      "player_name": "Ramirez, Nicolas",
+      "player_slug": "ramirez-nicolas",
+      "event_kind": "shot",
+      "video_seconds": 3641.515567
+    },
+    {
+      "reference": "Sequence 145",
+      "period": 2,
+      "regulation_seconds": 1585.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 26.0:25.0",
+      "incident_type": "Pérdida",
+      "outcome": "Pase perdido",
+      "team_side": "away",
+      "player_name": "Florez, Thiago Emiliano",
+      "player_slug": "florez-thiago-emiliano",
+      "event_kind": "turnover",
+      "video_seconds": 3646.350886
+    },
+    {
+      "reference": "Sequence 146",
+      "period": 2,
+      "regulation_seconds": 1589.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 26.0:29.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Ramirez, Nicolas",
+      "player_slug": "ramirez-nicolas",
+      "event_kind": "shot",
+      "video_seconds": 3650.124926
+    },
+    {
+      "reference": "Sequence 147",
+      "period": 2,
+      "regulation_seconds": 1650.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 27.0:30.0",
+      "incident_type": "Sanción",
+      "outcome": "Exclusión 2 min",
+      "team_side": "home",
+      "player_name": "Gonzalez, Ezequiel Matias",
+      "player_slug": "gonzalez-ezequiel-matias",
+      "event_kind": "foul_sanction",
+      "video_seconds": 3711.40592
+    },
+    {
+      "reference": "Sequence 148",
+      "period": 2,
+      "regulation_seconds": 1670.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 27.0:50.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "away",
+      "player_name": "Ercoli, Santiago Ariel",
+      "player_slug": "ercoli-santiago-ariel",
+      "event_kind": "shot",
+      "video_seconds": 3730.760755
+    },
+    {
+      "reference": "Sequence 149",
+      "period": 2,
+      "regulation_seconds": 1698.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 28.0:18.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Ruano, Matheo",
+      "player_slug": "ruano-matheo",
+      "event_kind": "shot",
+      "video_seconds": 3758.738296
+    },
+    {
+      "reference": "Sequence 150",
+      "period": 2,
+      "regulation_seconds": 1706.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 28.0:26.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "away",
+      "player_name": "Ercoli, Santiago Ariel",
+      "player_slug": "ercoli-santiago-ariel",
+      "event_kind": "shot",
+      "video_seconds": 3766.728889
+    },
+    {
+      "reference": "Sequence 151",
+      "period": 2,
+      "regulation_seconds": 1731.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 28.0:51.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Ferrari, Jonas Horacio",
+      "player_slug": "ferrari-jonas-horacio",
+      "event_kind": "shot",
+      "video_seconds": 3792.063471
+    },
+    {
+      "reference": "Sequence 152",
+      "period": 2,
+      "regulation_seconds": 1758.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 29.0:18.0",
+      "incident_type": "Pérdida",
+      "outcome": "walking",
+      "team_side": "away",
+      "player_name": "Florez, Thiago Emiliano",
+      "player_slug": "florez-thiago-emiliano",
+      "event_kind": "turnover",
+      "video_seconds": 3819.319436
+    },
+    {
+      "reference": "Sequence 153",
+      "period": 2,
+      "regulation_seconds": 1765.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 29.0:25.0",
+      "incident_type": "Pérdida",
+      "outcome": "Pase perdido",
+      "team_side": "home",
+      "player_name": "Chavez, Alexis Ezequiel",
+      "player_slug": "chavez-alexis-ezequiel",
+      "event_kind": "turnover",
+      "video_seconds": 3826.124536
+    },
+    {
+      "reference": "Sequence 154",
+      "period": 2,
+      "regulation_seconds": 1780.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 29.0:40.0",
+      "incident_type": "Sanción",
+      "outcome": "Exclusión 2 min",
+      "team_side": "away",
+      "player_name": "Sosa Baez Gonzalez, Lautaro",
+      "player_slug": "sosa-baez-gonzalez-lautaro",
+      "event_kind": "foul_sanction",
+      "video_seconds": 3841.205733
+    },
+    {
+      "reference": "Sequence 155",
+      "period": 2,
+      "regulation_seconds": 1832.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 30.0:32.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "away",
+      "player_name": "Delaloye, Mateo Valentin",
+      "player_slug": "delaloye-mateo-valentin",
+      "event_kind": "shot",
+      "video_seconds": 3893.172527
+    },
+    {
+      "reference": "Sequence 156",
+      "period": 2,
+      "regulation_seconds": 1873.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 31.0:13.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Ferrari, Jonas Horacio",
+      "player_slug": "ferrari-jonas-horacio",
+      "event_kind": "shot",
+      "video_seconds": 3933.78322
+    },
+    {
+      "reference": "Sequence 157",
+      "period": 2,
+      "regulation_seconds": 1883.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 31.0:23.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "away",
+      "player_name": "Nicholson Victorel, Joaquin",
+      "player_slug": "nicholson-victorel-joaquin",
+      "event_kind": "shot",
+      "video_seconds": 3943.745137
+    },
+    {
+      "reference": "Sequence 158",
+      "period": 2,
+      "regulation_seconds": 1913.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 31.0:53.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "home",
+      "player_name": "Sarrailh, Pablo Eduardo",
+      "player_slug": "sarrailh-pablo-eduardo",
+      "event_kind": "shot",
+      "video_seconds": 3974.170794
+    },
+    {
+      "reference": "Sequence 159",
+      "period": 2,
+      "regulation_seconds": 1913.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 31.0:53.0",
+      "incident_type": "Sanción",
+      "outcome": "Exclusión 2 min",
+      "team_side": "away",
+      "player_name": "Delaloye, Mateo Valentin",
+      "player_slug": "delaloye-mateo-valentin",
+      "event_kind": "foul_sanction",
+      "video_seconds": 3974.308628
+    },
+    {
+      "reference": "Sequence 160",
+      "period": 2,
+      "regulation_seconds": 1978.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 32.0:58.0",
+      "incident_type": "Recuperación",
+      "outcome": "steal",
+      "team_side": "home",
+      "player_name": "Chavez, Alexis Ezequiel",
+      "player_slug": "chavez-alexis-ezequiel",
+      "event_kind": "recovery",
+      "video_seconds": 4039.023311
+    },
+    {
+      "reference": "Sequence 161",
+      "period": 2,
+      "regulation_seconds": 1983.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 33.0:3.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Chavez, Alexis Ezequiel",
+      "player_slug": "chavez-alexis-ezequiel",
+      "event_kind": "shot",
+      "video_seconds": 4043.801918
+    },
+    {
+      "reference": "Sequence 162",
+      "period": 2,
+      "regulation_seconds": 1993.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 33.0:13.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "away",
+      "player_name": "Sosa Baez Gonzalez, Lautaro",
+      "player_slug": "sosa-baez-gonzalez-lautaro",
+      "event_kind": "shot",
+      "video_seconds": 4053.534707
+    },
+    {
+      "reference": "Sequence 163",
+      "period": 2,
+      "regulation_seconds": 2002.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 33.0:22.0",
+      "incident_type": "Incidencia de juego",
+      "outcome": "period_end",
+      "team_side": "home",
+      "player_name": null,
+      "player_slug": null,
+      "event_kind": "other",
+      "video_seconds": 4063.106862
+    }
+  ],
+  "video": {
+    "provider": "youtube",
+    "video_id": "Y8jo8qrwdh8",
+    "availability": "player_error"
+  },
+  "official_sheet_confirmed": true,
+  "official_sheet": null
+}

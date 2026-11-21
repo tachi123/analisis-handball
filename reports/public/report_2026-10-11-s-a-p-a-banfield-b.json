@@ -74,6 +74,51 @@
       "discrepancy": 0
     }
   ],
+  "official_reconciliation": {
+    "status": "differences",
+    "player_differences": [
+      {
+        "side": "home",
+        "player_name": "Sarrailh, Pablo Eduardo",
+        "jersey_number": 11,
+        "metric": "two_minute",
+        "video": 0,
+        "official": 2
+      },
+      {
+        "side": "away",
+        "player_name": "Brizuela, Lucio Nicolas",
+        "jersey_number": 27,
+        "metric": "goals",
+        "video": 6,
+        "official": 4
+      },
+      {
+        "side": "away",
+        "player_name": "Gonzalez, Julian Gabriel",
+        "jersey_number": 30,
+        "metric": "goals",
+        "video": 4,
+        "official": 5
+      },
+      {
+        "side": "away",
+        "player_name": "Senaris, Tomas",
+        "jersey_number": 33,
+        "metric": "goals",
+        "video": 4,
+        "official": 5
+      },
+      {
+        "side": "away",
+        "player_name": "Arevalo, Bautista Damian",
+        "jersey_number": 38,
+        "metric": "two_minute",
+        "video": 1,
+        "official": 2
+      }
+    ]
+  },
   "uncertainty_disclosure": "Generated from canonical analysis; partial data may apply",
   "players": [
     {
@@ -105,10 +150,10 @@
       "team_side": "home",
       "role": "field_player",
       "metrics": {
-        "shot_conversion": 1.0,
-        "shots": 1,
-        "shots_on_target": 1,
-        "saves_against": 0,
+        "shot_conversion": 0.5,
+        "shots": 2,
+        "shots_on_target": 2,
+        "saves_against": 1,
         "outside_or_woodwork": 0,
         "goals": 1,
         "assists": 0,
@@ -303,10 +348,10 @@
       "team_side": "home",
       "role": "field_player",
       "metrics": {
-        "shot_conversion": 0.3636,
-        "shots": 11,
-        "shots_on_target": 10,
-        "saves_against": 6,
+        "shot_conversion": 0.4,
+        "shots": 10,
+        "shots_on_target": 9,
+        "saves_against": 5,
         "outside_or_woodwork": 1,
         "goals": 4,
         "assists": 0,
@@ -4564,8 +4609,8 @@
       "incident_type": "Lanzamiento",
       "outcome": "Atajada",
       "team_side": "home",
-      "player_name": "Grisolia, Geronimo Gabriel",
-      "player_slug": "grisolia-geronimo-gabriel",
+      "player_name": "Ruano, Matheo",
+      "player_slug": "ruano-matheo",
       "event_kind": "shot",
       "video_seconds": 3506.588664
     },

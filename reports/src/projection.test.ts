@@ -46,6 +46,11 @@ describe('public report projection', () => {
     expect(result.reconciliation[0]).toEqual({ side: 'home', official: 20, analytical: 19, discrepancy: -1 })
     expect(result.incidents[0]).toMatchObject({ event_kind: 'shot', video_seconds: 10 })
   })
+  it('keeps official-sheet differences separate from video metrics', () => {
+    const result = decodePublicReport({ ...publicReport, official_reconciliation: { status: 'differences', player_differences: [{ side: 'home', player_name: 'Player', jersey_number: 17, metric: 'goals', video: 8, official: 6 }] } })
+    expect(result.official_reconciliation).toEqual({ status: 'differences', player_differences: [{ side: 'home', player_name: 'Player', jersey_number: '17', metric: 'goals', video: 8, official: 6 }] })
+    expect(() => decodePublicReport({ ...publicReport, official_reconciliation: { status: 'differences', player_differences: [{ side: 'home', player_name: 'Player', jersey_number: 17, metric: 'goals', video: 8, official: 6, database_id: 1 }] } })).toThrow('restricted field')
+  })
   it('accepts absent players (legacy reports backward-compatible)', () => {
     // Legacy reports without players should work fine
     const result = decodePublicReport(publicReport)

@@ -74,6 +74,75 @@
       "discrepancy": 0
     }
   ],
+  "official_reconciliation": {
+    "status": "differences",
+    "player_differences": [
+      {
+        "side": "home",
+        "player_name": "Ramirez, Nicolas",
+        "jersey_number": 13,
+        "metric": "goals",
+        "video": 3,
+        "official": 4
+      },
+      {
+        "side": "home",
+        "player_name": "Delpieri, Mateo",
+        "jersey_number": 38,
+        "metric": "two_minute",
+        "video": 0,
+        "official": 2
+      },
+      {
+        "side": "home",
+        "player_name": "Martinez, Milo Ulises",
+        "jersey_number": 17,
+        "metric": "goals",
+        "video": 5,
+        "official": 4
+      },
+      {
+        "side": "away",
+        "player_name": "Martinez, Joaquin Ariel",
+        "jersey_number": 24,
+        "metric": "goals",
+        "video": 0,
+        "official": 1
+      },
+      {
+        "side": "away",
+        "player_name": "Pineiro, Dante",
+        "jersey_number": 6,
+        "metric": "two_minute",
+        "video": 0,
+        "official": 1
+      },
+      {
+        "side": "away",
+        "player_name": "Romanello, Matias Ezequiel",
+        "jersey_number": 7,
+        "metric": "goals",
+        "video": 1,
+        "official": 0
+      },
+      {
+        "side": "away",
+        "player_name": "Salgado, Mariano Agustin",
+        "jersey_number": 22,
+        "metric": "goals",
+        "video": 1,
+        "official": 0
+      },
+      {
+        "side": "away",
+        "player_name": "Almiron, Facundo Sebastian",
+        "jersey_number": 3,
+        "metric": "goals",
+        "video": 1,
+        "official": 2
+      }
+    ]
+  },
   "uncertainty_disclosure": "Generated from canonical analysis; partial data may apply",
   "players": [
     {

@@ -556,23 +556,24 @@ class PDFService:
             raise ValueError("Partido o planilla oficial no encontrados")
         repaired = 0
         for row in snapshot.players:
-            if row.player_id is not None:
-                continue
-            team_id = match.home_team_id if row.side == "home" else match.away_team_id
-            if team_id is None:
-                raise ValueError("La planilla no puede vincular jugadores sin equipos definidos")
-            class ConfirmedPlayer:
-                existing_player_id = None
-                name = row.name
-                jersey_number = row.jersey_number
-            player = PDFService._resolve_confirmed_player(db, team_id, ConfirmedPlayer)
-            row.player_id = player.id
-            if not db.query(MatchSquad).filter(MatchSquad.match_id == match.id, MatchSquad.player_id == player.id).first():
-                db.add(MatchSquad(match_id=match.id, player_id=player.id, jersey_number=row.jersey_number,
-                                  official_goals=row.official_goals, official_yellow=row.official_yellow,
-                                  official_2min=row.official_2min, official_red=row.official_red,
-                                  official_blue=row.official_blue))
-            repaired += 1
+            player_id = row.player_id
+            if player_id is None:
+                team_id = match.home_team_id if row.side == "home" else match.away_team_id
+                if team_id is None:
+                    raise ValueError("La planilla no puede vincular jugadores sin equipos definidos")
+                class ConfirmedPlayer:
+                    existing_player_id = None
+                    name = row.name
+                    jersey_number = row.jersey_number
+                player_id = PDFService._resolve_confirmed_player(db, team_id, ConfirmedPlayer).id
+                row.player_id = player_id
+                repaired += 1
+            if not db.query(MatchSquad).filter(MatchSquad.match_id == match.id, MatchSquad.player_id == player_id).first():
+                db.add(MatchSquad(match_id=match.id, player_id=player_id, jersey_number=row.jersey_number,
+                                   official_goals=row.official_goals, official_yellow=row.official_yellow,
+                                   official_2min=row.official_2min, official_red=row.official_red,
+                                   official_blue=row.official_blue))
+                repaired += 1
         if repaired:
             db.commit()
         return repaired

@@ -74,6 +74,123 @@
       "discrepancy": 0
     }
   ],
+  "official_reconciliation": {
+    "status": "differences",
+    "player_differences": [
+      {
+        "side": "home",
+        "player_name": "Gonzalez, Ezequiel Matias",
+        "jersey_number": 10,
+        "metric": "goals",
+        "video": 3,
+        "official": 2
+      },
+      {
+        "side": "home",
+        "player_name": "Delpieri, Mateo",
+        "jersey_number": 38,
+        "metric": "goals",
+        "video": 6,
+        "official": 8
+      },
+      {
+        "side": "home",
+        "player_name": "Delpieri, Mateo",
+        "jersey_number": 38,
+        "metric": "two_minute",
+        "video": 0,
+        "official": 1
+      },
+      {
+        "side": "home",
+        "player_name": "Chavez, Alexis Ezequiel",
+        "jersey_number": 66,
+        "metric": "goals",
+        "video": 3,
+        "official": 2
+      },
+      {
+        "side": "home",
+        "player_name": "Mollo Skripnik Strelecki, Lucian...",
+        "jersey_number": 87,
+        "metric": "two_minute",
+        "video": 1,
+        "official": 0
+      },
+      {
+        "side": "home",
+        "player_name": "Ferrari, Jonas Horacio",
+        "jersey_number": 97,
+        "metric": "goals",
+        "video": 2,
+        "official": 1
+      },
+      {
+        "side": "home",
+        "player_name": "Mollo Skripnik Strelecki, Juan Ig...",
+        "jersey_number": 7,
+        "metric": "two_minute",
+        "video": 1,
+        "official": 2
+      },
+      {
+        "side": "away",
+        "player_name": "Viggiano, Valentin Nicolas",
+        "jersey_number": 3,
+        "metric": "two_minute",
+        "video": 3,
+        "official": 2
+      },
+      {
+        "side": "away",
+        "player_name": "Delmoro, Lucas",
+        "jersey_number": 6,
+        "metric": "goals",
+        "video": 1,
+        "official": 0
+      },
+      {
+        "side": "away",
+        "player_name": "Innella, Gaston",
+        "jersey_number": 7,
+        "metric": "goals",
+        "video": 9,
+        "official": 8
+      },
+      {
+        "side": "away",
+        "player_name": "Gigante, Roberto Juan",
+        "jersey_number": 11,
+        "metric": "goals",
+        "video": 2,
+        "official": 3
+      },
+      {
+        "side": "away",
+        "player_name": "Gigante, Roberto Juan",
+        "jersey_number": 11,
+        "metric": "two_minute",
+        "video": 0,
+        "official": 1
+      },
+      {
+        "side": "away",
+        "player_name": "Iglesias, Genaro",
+        "jersey_number": 14,
+        "metric": "two_minute",
+        "video": 0,
+        "official": 1
+      },
+      {
+        "side": "away",
+        "player_name": "Lovera, Alan Jorge Leonel",
+        "jersey_number": 16,
+        "metric": "goals",
+        "video": 0,
+        "official": 1
+      }
+    ]
+  },
   "uncertainty_disclosure": "Generated from canonical analysis; partial data may apply",
   "players": [
     {
@@ -99,22 +216,22 @@
       "evidence": []
     },
     {
-      "slug": "mollo-skripnik-strelecki-juan-ig",
-      "name": "Mollo Skripnik Strelecki, Juan Ig...",
-      "jersey_number": 7,
+      "slug": "ruano-matheo",
+      "name": "Ruano, Matheo",
+      "jersey_number": 2,
       "team_side": "home",
       "role": "field_player",
       "metrics": {
-        "shot_conversion": 0.0,
-        "shots": 3,
-        "shots_on_target": 3,
-        "saves_against": 3,
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
         "outside_or_woodwork": 0,
         "goals": 0,
         "assists": 0,
-        "turnovers": 1,
-        "recoveries": 1,
-        "sanctions": 1,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
         "shots_7m": 0,
         "goals_7m": 0
       },
@@ -161,72 +278,6 @@
         "sanctions": 0,
         "shots_7m": 1,
         "goals_7m": 1
-      },
-      "evidence": []
-    },
-    {
-      "slug": "martinez-milo-ulises",
-      "name": "Martinez, Milo Ulises",
-      "jersey_number": 17,
-      "team_side": "home",
-      "role": "field_player",
-      "metrics": {
-        "shot_conversion": 0.5556,
-        "shots": 9,
-        "shots_on_target": 9,
-        "saves_against": 4,
-        "outside_or_woodwork": 0,
-        "goals": 5,
-        "assists": 0,
-        "turnovers": 4,
-        "recoveries": 0,
-        "sanctions": 0,
-        "shots_7m": 0,
-        "goals_7m": 0
-      },
-      "evidence": []
-    },
-    {
-      "slug": "ruano-matheo",
-      "name": "Ruano, Matheo",
-      "jersey_number": 2,
-      "team_side": "home",
-      "role": "field_player",
-      "metrics": {
-        "shot_conversion": null,
-        "shots": 0,
-        "shots_on_target": 0,
-        "saves_against": 0,
-        "outside_or_woodwork": 0,
-        "goals": 0,
-        "assists": 0,
-        "turnovers": 0,
-        "recoveries": 0,
-        "sanctions": 0,
-        "shots_7m": 0,
-        "goals_7m": 0
-      },
-      "evidence": []
-    },
-    {
-      "slug": "grisolia-geronimo-gabriel",
-      "name": "Grisolia, Geronimo Gabriel",
-      "jersey_number": 27,
-      "team_side": "home",
-      "role": "field_player",
-      "metrics": {
-        "shot_conversion": null,
-        "shots": 0,
-        "shots_on_target": 0,
-        "saves_against": 0,
-        "outside_or_woodwork": 0,
-        "goals": 0,
-        "assists": 0,
-        "turnovers": 0,
-        "recoveries": 0,
-        "sanctions": 0,
-        "shots_7m": 0,
-        "goals_7m": 0
       },
       "evidence": []
     },
@@ -357,6 +408,72 @@
         "turnovers": 10,
         "recoveries": 1,
         "sanctions": 1,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "mollo-skripnik-strelecki-juan-ig",
+      "name": "Mollo Skripnik Strelecki, Juan Ig...",
+      "jersey_number": 7,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 0.0,
+        "shots": 3,
+        "shots_on_target": 3,
+        "saves_against": 3,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 1,
+        "recoveries": 1,
+        "sanctions": 1,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "martinez-milo-ulises",
+      "name": "Martinez, Milo Ulises",
+      "jersey_number": 17,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 0.5556,
+        "shots": 9,
+        "shots_on_target": 9,
+        "saves_against": 4,
+        "outside_or_woodwork": 0,
+        "goals": 5,
+        "assists": 0,
+        "turnovers": 4,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "grisolia-geronimo-gabriel",
+      "name": "Grisolia, Geronimo Gabriel",
+      "jersey_number": 27,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
         "shots_7m": 0,
         "goals_7m": 0
       },

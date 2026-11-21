@@ -1,0 +1,1410 @@
+{
+  "schema_version": "public-report-v1",
+  "report_version": 1,
+  "match": {
+    "date": "2026-06-07",
+    "home_team": "S.A.P.A.",
+    "away_team": "Villa Calzada"
+  },
+  "source": {
+    "label": "Canonical eligible event ledger",
+    "status": "canonical-eligible"
+  },
+  "coaching": {
+    "question": "Match analysis",
+    "pattern_statement": "Match analysis covering 4 approved canonical events",
+    "action": {
+      "kind": "keep",
+      "text": "Export approved facts for public report"
+    }
+  },
+  "metrics": {
+    "shots": {
+      "count": 3,
+      "numerator": 2,
+      "denominator": 3,
+      "excluded": 0,
+      "unknown": 0,
+      "clock_unverified": 0
+    },
+    "possessions": {
+      "count": 1,
+      "numerator": 1,
+      "denominator": "not_applicable",
+      "excluded": 0,
+      "unknown": 0,
+      "clock_unverified": 0
+    }
+  },
+  "reconciliation": [
+    {
+      "side": "home",
+      "official": 24,
+      "analytical": 1,
+      "discrepancy": -23
+    },
+    {
+      "side": "away",
+      "official": 25,
+      "analytical": 1,
+      "discrepancy": -24
+    }
+  ],
+  "official_reconciliation": {
+    "status": "differences",
+    "player_differences": [
+      {
+        "side": "home",
+        "player_name": "Ruano, Matheo",
+        "jersey_number": 2,
+        "metric": "goals",
+        "video": 0,
+        "official": 2
+      },
+      {
+        "side": "home",
+        "player_name": "Gonzalez, Ezequiel Matias",
+        "jersey_number": 10,
+        "metric": "goals",
+        "video": 0,
+        "official": 1
+      },
+      {
+        "side": "home",
+        "player_name": "Sarrailh, Pablo Eduardo",
+        "jersey_number": 11,
+        "metric": "goals",
+        "video": 0,
+        "official": 2
+      },
+      {
+        "side": "home",
+        "player_name": "Sarrailh, Pablo Eduardo",
+        "jersey_number": 11,
+        "metric": "two_minute",
+        "video": 0,
+        "official": 1
+      },
+      {
+        "side": "home",
+        "player_name": "Ramirez, Nicolas",
+        "jersey_number": 13,
+        "metric": "goals",
+        "video": 0,
+        "official": 1
+      },
+      {
+        "side": "home",
+        "player_name": "Delpieri, Mateo",
+        "jersey_number": 38,
+        "metric": "goals",
+        "video": 0,
+        "official": 3
+      },
+      {
+        "side": "home",
+        "player_name": "Delpieri, Mateo",
+        "jersey_number": 38,
+        "metric": "two_minute",
+        "video": 0,
+        "official": 1
+      },
+      {
+        "side": "home",
+        "player_name": "Ramirez, Gaston",
+        "jersey_number": 80,
+        "metric": "two_minute",
+        "video": 0,
+        "official": 1
+      },
+      {
+        "side": "home",
+        "player_name": "Ferrari, Jonas Horacio",
+        "jersey_number": 97,
+        "metric": "goals",
+        "video": 0,
+        "official": 6
+      },
+      {
+        "side": "home",
+        "player_name": "Romero Boeris, Sebastian",
+        "jersey_number": 98,
+        "metric": "goals",
+        "video": 1,
+        "official": 9
+      },
+      {
+        "side": "away",
+        "player_name": "Robledo, Franco Daniel",
+        "jersey_number": 3,
+        "metric": "goals",
+        "video": 0,
+        "official": 9
+      },
+      {
+        "side": "away",
+        "player_name": "Paez Martinez, Leandro Marcel...",
+        "jersey_number": 8,
+        "metric": "goals",
+        "video": 0,
+        "official": 1
+      },
+      {
+        "side": "away",
+        "player_name": "Paez Martinez, Leandro Marcel...",
+        "jersey_number": 8,
+        "metric": "two_minute",
+        "video": 0,
+        "official": 1
+      },
+      {
+        "side": "away",
+        "player_name": "Sosa, Juan Ignacio",
+        "jersey_number": 9,
+        "metric": "two_minute",
+        "video": 0,
+        "official": 1
+      },
+      {
+        "side": "away",
+        "player_name": "Sandoval, Gonzalo Matias",
+        "jersey_number": 19,
+        "metric": "goals",
+        "video": 0,
+        "official": 2
+      },
+      {
+        "side": "away",
+        "player_name": "Sandoval, Gonzalo Matias",
+        "jersey_number": 19,
+        "metric": "two_minute",
+        "video": 0,
+        "official": 1
+      },
+      {
+        "side": "away",
+        "player_name": "Seip, Benegas Gustavo Gabriel",
+        "jersey_number": 21,
+        "metric": "goals",
+        "video": 0,
+        "official": 1
+      },
+      {
+        "side": "away",
+        "player_name": "Solis, Demian Nicolas",
+        "jersey_number": 22,
+        "metric": "goals",
+        "video": 0,
+        "official": 2
+      },
+      {
+        "side": "away",
+        "player_name": "Bandeo, Alexis Agustin",
+        "jersey_number": 25,
+        "metric": "goals",
+        "video": 0,
+        "official": 7
+      },
+      {
+        "side": "away",
+        "player_name": "Coronel Besada, Ciro",
+        "jersey_number": 31,
+        "metric": "goals",
+        "video": 0,
+        "official": 1
+      },
+      {
+        "side": "away",
+        "player_name": "Astorga, Mauricio Adrian",
+        "jersey_number": 44,
+        "metric": "goals",
+        "video": 0,
+        "official": 1
+      },
+      {
+        "side": "away",
+        "player_name": "Astorga, Mauricio Adrian",
+        "jersey_number": 44,
+        "metric": "two_minute",
+        "video": 0,
+        "official": 1
+      }
+    ]
+  },
+  "uncertainty_disclosure": "Generated from canonical analysis; partial data may apply",
+  "players": [
+    {
+      "slug": "ramirez-lorca-jaime-nahuel",
+      "name": "Ramirez Lorca, Jaime Nahuel",
+      "jersey_number": 1,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "ruano-matheo",
+      "name": "Ruano, Matheo",
+      "jersey_number": 2,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "gonzalez-ezequiel-matias",
+      "name": "Gonzalez, Ezequiel Matias",
+      "jersey_number": 10,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "sarrailh-pablo-eduardo",
+      "name": "Sarrailh, Pablo Eduardo",
+      "jersey_number": 11,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "ramirez-nicolas",
+      "name": "Ramirez, Nicolas",
+      "jersey_number": 13,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "correa-marcos-isauro",
+      "name": "Correa, Marcos Isauro",
+      "jersey_number": 33,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "delpieri-mateo",
+      "name": "Delpieri, Mateo",
+      "jersey_number": 38,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "peralta-juan-ignacio",
+      "name": "Peralta, Juan Ignacio",
+      "jersey_number": 43,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "chavez-alexis-ezequiel",
+      "name": "Chavez, Alexis Ezequiel",
+      "jersey_number": 66,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "gayoso-silva-michel-javier",
+      "name": "Gayoso Silva, Michel Javier",
+      "jersey_number": 76,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "ramirez-gaston",
+      "name": "Ramirez, Gaston",
+      "jersey_number": 80,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "mollo-skripnik-strelecki-lucian",
+      "name": "Mollo Skripnik Strelecki, Lucian...",
+      "jersey_number": 87,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "ferrari-jonas-horacio",
+      "name": "Ferrari, Jonas Horacio",
+      "jersey_number": 97,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "romero-boeris-sebastian",
+      "name": "Romero Boeris, Sebastian",
+      "jersey_number": 98,
+      "team_side": "home",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 1.0,
+        "shots": 1,
+        "shots_on_target": 1,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 1,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "robledo-franco-daniel",
+      "name": "Robledo, Franco Daniel",
+      "jersey_number": 3,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "martinese-tadeo-ricardo",
+      "name": "Martinese, Tadeo Ricardo",
+      "jersey_number": 5,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "paez-martinez-leandro-marcel",
+      "name": "Paez Martinez, Leandro Marcel...",
+      "jersey_number": 8,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "sosa-juan-ignacio",
+      "name": "Sosa, Juan Ignacio",
+      "jersey_number": 9,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 1.0,
+        "shots": 1,
+        "shots_on_target": 1,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 1,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "navarro-maximiliano-agustin",
+      "name": "Navarro, Maximiliano Agustin",
+      "jersey_number": 13,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "gerez-nicolas-ezequiel",
+      "name": "Gerez, Nicolas Ezequiel",
+      "jersey_number": 18,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "sandoval-gonzalo-matias",
+      "name": "Sandoval, Gonzalo Matias",
+      "jersey_number": 19,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "seip-benegas-gustavo-gabriel",
+      "name": "Seip, Benegas Gustavo Gabriel",
+      "jersey_number": 21,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "solis-demian-nicolas",
+      "name": "Solis, Demian Nicolas",
+      "jersey_number": 22,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": 0.0,
+        "shots": 1,
+        "shots_on_target": 1,
+        "saves_against": 1,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "belizan-quiroga-matias-agusti",
+      "name": "Belizan Quiroga, Matias Agusti...",
+      "jersey_number": 24,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "bandeo-alexis-agustin",
+      "name": "Bandeo, Alexis Agustin",
+      "jersey_number": 25,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "coronel-besada-ciro",
+      "name": "Coronel Besada, Ciro",
+      "jersey_number": 31,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "galvan-lautaro-andres",
+      "name": "Galvan, Lautaro Andres",
+      "jersey_number": 32,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "alvarez-rodrigo-yamil",
+      "name": "Alvarez, Rodrigo Yamil",
+      "jersey_number": 40,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "astorga-mauricio-adrian",
+      "name": "Astorga, Mauricio Adrian",
+      "jersey_number": 44,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    },
+    {
+      "slug": "di-pilato-lucas-gabriel",
+      "name": "Di Pilato, Lucas Gabriel",
+      "jersey_number": 99,
+      "team_side": "away",
+      "role": "field_player",
+      "metrics": {
+        "shot_conversion": null,
+        "shots": 0,
+        "shots_on_target": 0,
+        "saves_against": 0,
+        "outside_or_woodwork": 0,
+        "goals": 0,
+        "assists": 0,
+        "turnovers": 0,
+        "recoveries": 0,
+        "sanctions": 0,
+        "shots_7m": 0,
+        "goals_7m": 0
+      },
+      "evidence": []
+    }
+  ],
+  "evidence": [
+    {
+      "reference": "Sequence 1",
+      "period": 1,
+      "regulation_seconds": 0.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 2",
+      "period": 1,
+      "regulation_seconds": 40.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 3",
+      "period": 1,
+      "regulation_seconds": 67.0,
+      "clock_unverified": false,
+      "observation": "Canonical observation",
+      "media_available": false
+    },
+    {
+      "reference": "Sequence 4",
+      "period": 1,
+      "regulation_seconds": null,
+      "clock_unverified": true,
+      "observation": "Canonical observation",
+      "media_available": false
+    }
+  ],
+  "coverage": {
+    "analyzed_periods": [
+      1
+    ],
+    "status": "partial",
+    "label": "Analysis covering periods 1"
+  },
+  "team_summary": {
+    "home": {
+      "name": "S.A.P.A.",
+      "side": "home",
+      "shots": 1,
+      "goals": 1,
+      "turnovers": 0,
+      "recoveries": 0,
+      "sanctions": 0,
+      "shots_on_target": 1,
+      "saves_against": 0,
+      "outside_or_woodwork": 0,
+      "blocked": 0
+    },
+    "away": {
+      "name": "Villa Calzada",
+      "side": "away",
+      "shots": 2,
+      "goals": 1,
+      "turnovers": 0,
+      "recoveries": 0,
+      "sanctions": 0,
+      "shots_on_target": 2,
+      "saves_against": 1,
+      "outside_or_woodwork": 0,
+      "blocked": 0
+    }
+  },
+  "phase_analysis": {
+    "block_seconds": 600,
+    "blocks": [
+      {
+        "period": 1,
+        "start_seconds": 0,
+        "end_seconds": 600,
+        "clock_overrun_seconds": 0,
+        "home": {
+          "shots": 1,
+          "goals": 1,
+          "turnovers": 0,
+          "recoveries": 0,
+          "sanctions": 0,
+          "shots_on_target": 1,
+          "saves_against": 0,
+          "outside_or_woodwork": 0,
+          "blocked": 0
+        },
+        "away": {
+          "shots": 1,
+          "goals": 1,
+          "turnovers": 0,
+          "recoveries": 0,
+          "sanctions": 0,
+          "shots_on_target": 1,
+          "saves_against": 0,
+          "outside_or_woodwork": 0,
+          "blocked": 0
+        },
+        "winner": "draw",
+        "possessions": {
+          "home": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          },
+          "away": {
+            "closed_possessions": 1,
+            "valid_possessions": 1,
+            "average_seconds": 40,
+            "median_seconds": 40,
+            "ended_in_shot": 1,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          }
+        }
+      },
+      {
+        "period": 1,
+        "start_seconds": 600,
+        "end_seconds": 1200,
+        "clock_overrun_seconds": 0,
+        "home": {
+          "shots": 0,
+          "goals": 0,
+          "turnovers": 0,
+          "recoveries": 0,
+          "sanctions": 0,
+          "shots_on_target": 0,
+          "saves_against": 0,
+          "outside_or_woodwork": 0,
+          "blocked": 0
+        },
+        "away": {
+          "shots": 0,
+          "goals": 0,
+          "turnovers": 0,
+          "recoveries": 0,
+          "sanctions": 0,
+          "shots_on_target": 0,
+          "saves_against": 0,
+          "outside_or_woodwork": 0,
+          "blocked": 0
+        },
+        "winner": "draw",
+        "possessions": {
+          "home": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          },
+          "away": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          }
+        }
+      },
+      {
+        "period": 1,
+        "start_seconds": 1200,
+        "end_seconds": 1800,
+        "clock_overrun_seconds": 0,
+        "home": {
+          "shots": 0,
+          "goals": 0,
+          "turnovers": 0,
+          "recoveries": 0,
+          "sanctions": 0,
+          "shots_on_target": 0,
+          "saves_against": 0,
+          "outside_or_woodwork": 0,
+          "blocked": 0
+        },
+        "away": {
+          "shots": 0,
+          "goals": 0,
+          "turnovers": 0,
+          "recoveries": 0,
+          "sanctions": 0,
+          "shots_on_target": 0,
+          "saves_against": 0,
+          "outside_or_woodwork": 0,
+          "blocked": 0
+        },
+        "winner": "draw",
+        "possessions": {
+          "home": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          },
+          "away": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          }
+        }
+      },
+      {
+        "period": 2,
+        "start_seconds": 0,
+        "end_seconds": 600,
+        "clock_overrun_seconds": 0,
+        "home": {
+          "shots": 0,
+          "goals": 0,
+          "turnovers": 0,
+          "recoveries": 0,
+          "sanctions": 0,
+          "shots_on_target": 0,
+          "saves_against": 0,
+          "outside_or_woodwork": 0,
+          "blocked": 0
+        },
+        "away": {
+          "shots": 0,
+          "goals": 0,
+          "turnovers": 0,
+          "recoveries": 0,
+          "sanctions": 0,
+          "shots_on_target": 0,
+          "saves_against": 0,
+          "outside_or_woodwork": 0,
+          "blocked": 0
+        },
+        "winner": "draw",
+        "possessions": {
+          "home": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          },
+          "away": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          }
+        }
+      },
+      {
+        "period": 2,
+        "start_seconds": 600,
+        "end_seconds": 1200,
+        "clock_overrun_seconds": 0,
+        "home": {
+          "shots": 0,
+          "goals": 0,
+          "turnovers": 0,
+          "recoveries": 0,
+          "sanctions": 0,
+          "shots_on_target": 0,
+          "saves_against": 0,
+          "outside_or_woodwork": 0,
+          "blocked": 0
+        },
+        "away": {
+          "shots": 0,
+          "goals": 0,
+          "turnovers": 0,
+          "recoveries": 0,
+          "sanctions": 0,
+          "shots_on_target": 0,
+          "saves_against": 0,
+          "outside_or_woodwork": 0,
+          "blocked": 0
+        },
+        "winner": "draw",
+        "possessions": {
+          "home": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          },
+          "away": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          }
+        }
+      },
+      {
+        "period": 2,
+        "start_seconds": 1200,
+        "end_seconds": 1800,
+        "clock_overrun_seconds": 0,
+        "home": {
+          "shots": 0,
+          "goals": 0,
+          "turnovers": 0,
+          "recoveries": 0,
+          "sanctions": 0,
+          "shots_on_target": 0,
+          "saves_against": 0,
+          "outside_or_woodwork": 0,
+          "blocked": 0
+        },
+        "away": {
+          "shots": 0,
+          "goals": 0,
+          "turnovers": 0,
+          "recoveries": 0,
+          "sanctions": 0,
+          "shots_on_target": 0,
+          "saves_against": 0,
+          "outside_or_woodwork": 0,
+          "blocked": 0
+        },
+        "winner": "draw",
+        "possessions": {
+          "home": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          },
+          "away": {
+            "closed_possessions": 0,
+            "valid_possessions": 0,
+            "average_seconds": null,
+            "median_seconds": null,
+            "ended_in_shot": 0,
+            "ended_in_turnover": 0,
+            "excluded_timeout": 0
+          }
+        }
+      }
+    ],
+    "scoring_runs": [],
+    "quick_concessions": [],
+    "goalkeeper_context": {
+      "home": {
+        "total": {
+          "opponent_attempts": 2,
+          "opponent_on_target": 2,
+          "goals_conceded": 1,
+          "saves": 1,
+          "seven_meters": {
+            "attempts": 0,
+            "on_target": 0,
+            "goals": 0,
+            "saves": 0
+          }
+        },
+        "first_half": {
+          "opponent_attempts": 2,
+          "opponent_on_target": 2,
+          "goals_conceded": 1,
+          "saves": 1,
+          "seven_meters": {
+            "attempts": 0,
+            "on_target": 0,
+            "goals": 0,
+            "saves": 0
+          }
+        },
+        "second_half": {
+          "opponent_attempts": 0,
+          "opponent_on_target": 0,
+          "goals_conceded": 0,
+          "saves": 0,
+          "seven_meters": {
+            "attempts": 0,
+            "on_target": 0,
+            "goals": 0,
+            "saves": 0
+          }
+        }
+      },
+      "away": {
+        "total": {
+          "opponent_attempts": 1,
+          "opponent_on_target": 1,
+          "goals_conceded": 1,
+          "saves": 0,
+          "seven_meters": {
+            "attempts": 0,
+            "on_target": 0,
+            "goals": 0,
+            "saves": 0
+          }
+        },
+        "first_half": {
+          "opponent_attempts": 1,
+          "opponent_on_target": 1,
+          "goals_conceded": 1,
+          "saves": 0,
+          "seven_meters": {
+            "attempts": 0,
+            "on_target": 0,
+            "goals": 0,
+            "saves": 0
+          }
+        },
+        "second_half": {
+          "opponent_attempts": 0,
+          "opponent_on_target": 0,
+          "goals_conceded": 0,
+          "saves": 0,
+          "seven_meters": {
+            "attempts": 0,
+            "on_target": 0,
+            "goals": 0,
+            "saves": 0
+          }
+        }
+      }
+    }
+  },
+  "incidents": [
+    {
+      "reference": "Sequence 2",
+      "period": 1,
+      "regulation_seconds": 0.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 0.0:0.0",
+      "incident_type": "Incidencia de juego",
+      "outcome": "kickoff",
+      "team_side": "away",
+      "player_name": null,
+      "player_slug": null,
+      "event_kind": "other",
+      "video_seconds": 108.861397
+    },
+    {
+      "reference": "Sequence 5",
+      "period": 1,
+      "regulation_seconds": null,
+      "clock_unverified": true,
+      "clock_label": "Reloj sin verificar",
+      "incident_type": "Lanzamiento",
+      "outcome": "Atajada",
+      "team_side": "away",
+      "player_name": "Solis, Demian Nicolas",
+      "player_slug": "solis-demian-nicolas",
+      "event_kind": "shot",
+      "video_seconds": 189.831995
+    },
+    {
+      "reference": "Sequence 3",
+      "period": 1,
+      "regulation_seconds": 40.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 0.0:40.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "away",
+      "player_name": "Sosa, Juan Ignacio",
+      "player_slug": "sosa-juan-ignacio",
+      "event_kind": "shot",
+      "video_seconds": 148.560298
+    },
+    {
+      "reference": "Sequence 4",
+      "period": 1,
+      "regulation_seconds": 67.0,
+      "clock_unverified": false,
+      "clock_label": "Tiempo oficial 1.0:7.0",
+      "incident_type": "Lanzamiento",
+      "outcome": "Gol",
+      "team_side": "home",
+      "player_name": "Romero Boeris, Sebastian",
+      "player_slug": "romero-boeris-sebastian",
+      "event_kind": "shot",
+      "video_seconds": 175.679992
+    }
+  ],
+  "video": {
+    "provider": "youtube",
+    "video_id": "PFl25LsaxM0",
+    "availability": "unknown"
+  },
+  "official_sheet_confirmed": true,
+  "official_sheet": null
+}

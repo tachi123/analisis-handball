@@ -58,6 +58,7 @@ export type PublicReport = {
   metrics: Record<string, Record<string, string | number | null>>
   players: Array<PlayerPublic> | null
   reconciliation: Array<{ side: string | null; official: string | number | null; analytical: string | number | null; discrepancy?: string | number | null }>
+  official_reconciliation: { status: 'match' | 'differences' | 'unavailable'; player_differences: Array<{ side: 'home' | 'away'; player_name: string; jersey_number: string | null; metric: 'goals' | 'two_minute'; video: number; official: number }> }
   uncertainty_disclosure: string | null
   coverage: { analyzed_periods: number[] | null; status: 'partial' | 'complete' | null; label: string | null } | null
   evidence: Array<{ reference: string; period: number | null; regulation_seconds: number | null; clock_unverified: boolean; observation: string | null; media_available: boolean; media_url?: string }>
@@ -119,7 +120,7 @@ function decodeEvidence(value: unknown, allowedNames: string[]) {
 export function decodePublicReport(value: unknown): PublicReport {
   if (!isRecord(value)) throw new Error('The public report is not a JSON object.')
   // Validate root allowlist
-  const rootAllowed = ['schema_version', 'report_version', 'match', 'source', 'coaching', 'metrics', 'players', 'reconciliation', 'uncertainty_disclosure', 'coverage', 'evidence', 'team_summary', 'incidents', 'video', 'phase_analysis', 'official_sheet_confirmed', 'official_sheet']
+  const rootAllowed = ['schema_version', 'report_version', 'match', 'source', 'coaching', 'metrics', 'players', 'reconciliation', 'official_reconciliation', 'uncertainty_disclosure', 'coverage', 'evidence', 'team_summary', 'incidents', 'video', 'phase_analysis', 'official_sheet_confirmed', 'official_sheet']
   fields(value as Record<string, unknown>, rootAllowed, forbidden)
   if (value.schema_version !== 'public-report-v1' || typeof value.report_version !== 'number') throw new Error('Unsupported public report version.')
   if (value.official_sheet_confirmed !== undefined && typeof value.official_sheet_confirmed !== 'boolean') throw new Error('The public report has invalid official sheet data.')
@@ -218,6 +219,19 @@ export function decodePublicReport(value: unknown): PublicReport {
     }
     return { side: entry.side ?? null, official: entry.official ?? null, analytical: entry.analytical ?? null, ...(entry.discrepancy !== undefined ? { discrepancy: entry.discrepancy as string | number | null } : {}) }
   })
+  let official_reconciliation: PublicReport['official_reconciliation'] = { status: 'unavailable', player_differences: [] }
+  if (value.official_reconciliation !== undefined) {
+    const raw = requiredRecord(value.official_reconciliation)
+    fields(raw, ['status', 'player_differences'], forbidden)
+    if (raw.status !== 'match' && raw.status !== 'differences' && raw.status !== 'unavailable' || !Array.isArray(raw.player_differences)) throw new Error('The public report has invalid official reconciliation data.')
+    const player_differences = raw.player_differences.map((item: unknown) => {
+      const entry = requiredRecord(item)
+      fields(entry, ['side', 'player_name', 'jersey_number', 'metric', 'video', 'official'], forbidden)
+      if ((entry.side !== 'home' && entry.side !== 'away') || !isString(entry.player_name) || (entry.jersey_number !== null && entry.jersey_number !== undefined && typeof entry.jersey_number !== 'string' && typeof entry.jersey_number !== 'number') || (entry.metric !== 'goals' && entry.metric !== 'two_minute') || typeof entry.video !== 'number' || typeof entry.official !== 'number') throw new Error('The public report has invalid official reconciliation data.')
+      return { side: entry.side as 'home' | 'away', player_name: entry.player_name, jersey_number: entry.jersey_number === null || entry.jersey_number === undefined ? null : String(entry.jersey_number), metric: entry.metric as 'goals' | 'two_minute', video: entry.video, official: entry.official }
+    })
+    official_reconciliation = { status: raw.status, player_differences }
+  }
   // Optional coverage
   let coverage: PublicReport['coverage'] = null
   if ('coverage' in value) {
@@ -387,6 +401,7 @@ export function decodePublicReport(value: unknown): PublicReport {
 metrics: normalizedMetrics,
     players,
     reconciliation: reconciliation as PublicReport['reconciliation'],
+    official_reconciliation,
     uncertainty_disclosure: value.uncertainty_disclosure ?? null,
     coverage,
     team_summary,
