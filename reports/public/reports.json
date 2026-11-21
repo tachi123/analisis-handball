@@ -68,23 +68,6 @@
         "video_available": true,
         "official_sheet_confirmed": true
       }
-    },
-    {
-      "key": "2026-06-07-s-a-p-a-villa-calzada",
-      "date": "2026-06-07",
-      "home_team": "S.A.P.A.",
-      "away_team": "Villa Calzada",
-      "summary": {
-        "home_goals": 1,
-        "away_goals": 1,
-        "home_shots": 1,
-        "away_shots": 2,
-        "home_turnovers": 0,
-        "away_turnovers": 0,
-        "coverage_status": "partial",
-        "video_available": true,
-        "official_sheet_confirmed": true
-      }
     }
   ],
   "player_summary": [
