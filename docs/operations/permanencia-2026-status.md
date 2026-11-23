@@ -5,13 +5,14 @@
 
 ## Estado en una línea
 
-Torneo FEMEBAL Permanencia 2026 (stage `9`) completo hasta la fecha 14 (7/8):
-fixture, 111 planillas oficiales (110 confirmadas + 1 suspendida), 343 jugadores
-reconciliados, tabla de posiciones con regla de puntos `3/2/1` (+ suspendido
-`3/0`) y desempate olímpico, estadísticas por jugador/club, y reporte público
-centrado en SAPA. La fecha 15 se juega el 2026-11-22. El hub público 2026 ya
-tiene catálogo, detalle de torneo, pronóstico de podio y ficha anual de Lanús
-exportados y validados localmente; falta publicar.
+Torneo FEMEBAL Permanencia 2026 (stage `9`) con 118/120 resultados: fixture,
+111 planillas oficiales (110 confirmadas + 1 suspendida), 7 resultados
+informados de la fecha 15, 343 jugadores reconciliados, tabla de posiciones
+con regla de puntos `3/2/1` (+ suspendido `3/0`) y desempate olímpico,
+estadísticas por jugador/club, y reporte público centrado en SAPA. Quedan
+pendientes Municipalidad de Pilar–U.N.La.M. (fecha 14) y Lanús C–SAPA (fecha
+15). El hub público 2026 ya tiene catálogo, detalle de torneo, pronóstico de
+podio y ficha anual de Lanús exportados y validados localmente; falta publicar.
 
 ## Hecho
 
@@ -20,7 +21,7 @@ exportados y validados localmente; falta publicar.
 | Fixture (120 partidos / 15 fechas) | Importado, stage 9, `femebal:00067XXX`. |
 | Planillas oficiales | 111 = 110 confirmadas + 1 suspendida. Fechas 1–13 completas (8/8). |
 | Fecha 14 | 7/8 confirmadas. Falta Municipalidad de Pilar–U.N.La.M. |
-| Fecha 15 | Programada para 2026-11-22; **no jugada**. |
+| Fecha 15 | 7/8 resultados informados el 2026-11-22; pendiente Lanús C–SAPA. |
 | Jugadores/clubes | 343 jugadores, 3111 filas confirmadas, 0 pendientes. Vincular por nombre normalizado + club; el dorsal puede variar. |
 | Posiciones | Derivadas on-the-fly, con columna CP. Regla en `backend/config/points_rules.json` y desempate olímpico en `backend/app/services/competition_ranking.py`. |
 | Estadísticas | Por jugador y por club, solo planillas `is_confirmed=True`. |
@@ -51,8 +52,9 @@ exportados y validados localmente; falta publicar.
 
 1. **Fecha 14**: cargar Municipalidad de Pilar–U.N.La.M. cuando exista planilla o
    resultado oficial.
-2. **Fecha 15** (2026-11-22): bajar PDF, `discover_planillas` →
-   `load_femebal_reconciled_planillas` → `reconcile_official_planilla_players`.
+2. **Fecha 15**: cargar Lanús C–SAPA cuando finalice; después bajar los PDFs de
+   toda la fecha, `discover_planillas` → `load_femebal_reconciled_planillas` →
+   `reconcile_official_planilla_players` para reemplazar los resultados informados.
 3. **Reexportar el hub tras cada nueva planilla**:
    `export_public_competitions.py` → copiar catálogo, tres torneos, pronóstico y
    `tournament.json` a `reports/public` → `npm --prefix reports test` → build.

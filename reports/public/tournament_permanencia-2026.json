@@ -5,18 +5,18 @@
   "competition": "Permanencia 2026",
   "zone": null,
   "season": 2026,
-  "updated_at": "2026-11-17",
+  "updated_at": "2026-11-23",
   "coverage": {
     "matches_total": 120,
-    "matches_counted": 111,
+    "matches_counted": 118,
     "planillas_confirmed": 110,
-    "reported_only": 0,
+    "reported_only": 7,
     "suspended": 1,
-    "pending": 9,
-    "rounds_played": 14,
+    "pending": 2,
+    "rounds_played": 15,
     "rounds_total": 15,
     "status": "partial",
-    "label": "111 de 120 partidos con resultado · 110 planillas confirmadas · 1 suspendido"
+    "label": "118 de 120 partidos con resultado · 110 planillas confirmadas · 1 suspendido"
   },
   "points_rule": {
     "win": 3,
@@ -28,6 +28,19 @@
   "standings": [
     {
       "pos": 1,
+      "club": "Palermo Handball",
+      "played": 15,
+      "won": 11,
+      "drawn": 0,
+      "lost": 4,
+      "penalized": 0,
+      "goals_for": 435,
+      "goals_against": 357,
+      "goal_difference": 78,
+      "points": 37
+    },
+    {
+      "pos": 2,
       "club": "Lanús C",
       "played": 14,
       "won": 11,
@@ -40,20 +53,33 @@
       "points": 37
     },
     {
-      "pos": 2,
-      "club": "Palermo Handball",
-      "played": 14,
-      "won": 11,
+      "pos": 3,
+      "club": "Municipalidad de Vicente López C",
+      "played": 15,
+      "won": 10,
       "drawn": 0,
-      "lost": 3,
+      "lost": 5,
       "penalized": 0,
-      "goals_for": 418,
-      "goals_against": 339,
-      "goal_difference": 79,
-      "points": 36
+      "goals_for": 424,
+      "goals_against": 383,
+      "goal_difference": 41,
+      "points": 35
     },
     {
-      "pos": 3,
+      "pos": 4,
+      "club": "S.A.G. Polvorines D",
+      "played": 15,
+      "won": 10,
+      "drawn": 0,
+      "lost": 5,
+      "penalized": 0,
+      "goals_for": 398,
+      "goals_against": 379,
+      "goal_difference": 19,
+      "points": 35
+    },
+    {
+      "pos": 5,
       "club": "S.A.P.A.",
       "played": 14,
       "won": 10,
@@ -66,173 +92,147 @@
       "points": 35
     },
     {
-      "pos": 4,
-      "club": "Municipalidad de Vicente López C",
-      "played": 14,
-      "won": 10,
-      "drawn": 0,
-      "lost": 4,
-      "penalized": 0,
-      "goals_for": 399,
-      "goals_against": 355,
-      "goal_difference": 44,
-      "points": 34
-    },
-    {
-      "pos": 5,
-      "club": "S.A.G. Polvorines D",
-      "played": 14,
-      "won": 9,
-      "drawn": 0,
-      "lost": 5,
-      "penalized": 0,
-      "goals_for": 368,
-      "goals_against": 359,
-      "goal_difference": 9,
-      "points": 32
-    },
-    {
       "pos": 6,
       "club": "Banfield B",
-      "played": 14,
+      "played": 15,
       "won": 8,
       "drawn": 1,
-      "lost": 5,
+      "lost": 6,
       "penalized": 0,
-      "goals_for": 386,
-      "goals_against": 332,
-      "goal_difference": 54,
-      "points": 31
+      "goals_for": 407,
+      "goals_against": 354,
+      "goal_difference": 53,
+      "points": 32
     },
     {
       "pos": 7,
       "club": "Muñiz Handball B",
-      "played": 14,
+      "played": 15,
       "won": 8,
       "drawn": 0,
-      "lost": 6,
+      "lost": 7,
       "penalized": 0,
-      "goals_for": 341,
-      "goals_against": 323,
-      "goal_difference": 18,
-      "points": 30
+      "goals_for": 362,
+      "goals_against": 345,
+      "goal_difference": 17,
+      "points": 31
     },
     {
       "pos": 8,
       "club": "Club Deportivo Morón",
-      "played": 14,
-      "won": 6,
+      "played": 15,
+      "won": 7,
       "drawn": 1,
       "lost": 7,
       "penalized": 0,
-      "goals_for": 377,
-      "goals_against": 386,
-      "goal_difference": -9,
-      "points": 27
+      "goals_for": 399,
+      "goals_against": 407,
+      "goal_difference": -8,
+      "points": 30
     },
     {
       "pos": 9,
       "club": "Municipalidad de Pilar",
-      "played": 13,
-      "won": 6,
+      "played": 14,
+      "won": 7,
       "drawn": 1,
       "lost": 6,
       "penalized": 0,
-      "goals_for": 328,
-      "goals_against": 331,
-      "goal_difference": -3,
-      "points": 26
+      "goals_for": 359,
+      "goals_against": 352,
+      "goal_difference": 7,
+      "points": 29
     },
     {
       "pos": 10,
-      "club": "Municipalidad de Tres de Febrero B",
-      "played": 14,
-      "won": 6,
-      "drawn": 0,
-      "lost": 8,
-      "penalized": 0,
-      "goals_for": 361,
-      "goals_against": 378,
-      "goal_difference": -17,
-      "points": 26
-    },
-    {
-      "pos": 11,
       "club": "C.S. y D. Defensores de Banfield",
-      "played": 14,
-      "won": 5,
+      "played": 15,
+      "won": 6,
       "drawn": 1,
       "lost": 8,
       "penalized": 0,
-      "goals_for": 383,
-      "goals_against": 379,
-      "goal_difference": 4,
-      "points": 25
+      "goals_for": 411,
+      "goals_against": 404,
+      "goal_difference": 7,
+      "points": 28
+    },
+    {
+      "pos": 11,
+      "club": "Municipalidad de Tres de Febrero B",
+      "played": 15,
+      "won": 6,
+      "drawn": 0,
+      "lost": 9,
+      "penalized": 0,
+      "goals_for": 382,
+      "goals_against": 409,
+      "goal_difference": -27,
+      "points": 27
     },
     {
       "pos": 12,
       "club": "Municipalidad de San Martín (Ce.M.E.F)",
-      "played": 14,
+      "played": 15,
       "won": 4,
-      "drawn": 3,
+      "drawn": 4,
       "lost": 7,
       "penalized": 0,
-      "goals_for": 297,
-      "goals_against": 314,
+      "goals_for": 321,
+      "goals_against": 338,
       "goal_difference": -17,
-      "points": 25
+      "points": 27
     },
     {
       "pos": 13,
       "club": "Argentinos Juniors D",
-      "played": 14,
+      "played": 15,
       "won": 5,
-      "drawn": 0,
+      "drawn": 1,
       "lost": 9,
       "penalized": 0,
-      "goals_for": 340,
-      "goals_against": 388,
+      "goals_for": 364,
+      "goals_against": 412,
       "goal_difference": -48,
-      "points": 24
+      "points": 26
     },
     {
       "pos": 14,
       "club": "U.N.La.M.",
-      "played": 13,
-      "won": 3,
+      "played": 14,
+      "won": 4,
       "drawn": 0,
       "lost": 10,
       "penalized": 0,
-      "goals_for": 276,
-      "goals_against": 327,
-      "goal_difference": -51,
-      "points": 19
+      "goals_for": 294,
+      "goals_against": 344,
+      "goal_difference": -50,
+      "points": 22
     },
     {
       "pos": 15,
       "club": "Defensores de Moreno",
-      "played": 14,
-      "won": 2,
+      "played": 15,
+      "won": 3,
       "drawn": 0,
       "lost": 12,
       "penalized": 0,
-      "goals_for": 320,
-      "goals_against": 433,
-      "goal_difference": -113,
-      "points": 18
+      "goals_for": 342,
+      "goals_against": 454,
+      "goal_difference": -112,
+      "points": 21
     },
     {
       "pos": 16,
       "club": "Ituzaingó",
-      "played": 14,
+      "played": 15,
       "won": 2,
       "drawn": 1,
-      "lost": 10,
+      "lost": 11,
       "penalized": 1,
-      "goals_for": 326,
-      "goals_against": 374,
-      "goal_difference": -48,
-      "points": 18
+      "goals_for": 346,
+      "goals_against": 404,
+      "goal_difference": -58,
+      "points": 19
     }
   ],
   "scorers": [
@@ -5048,23 +5048,23 @@
         {
           "home": "U.N.La.M.",
           "away": "Palermo Handball",
-          "home_goals": null,
-          "away_goals": null,
-          "coverage": "pending"
+          "home_goals": 18,
+          "away_goals": 17,
+          "coverage": "reported"
         },
         {
           "home": "Municipalidad de Tres de Febrero B",
           "away": "Municipalidad de Pilar",
-          "home_goals": null,
-          "away_goals": null,
-          "coverage": "pending"
+          "home_goals": 21,
+          "away_goals": 31,
+          "coverage": "reported"
         },
         {
           "home": "Defensores de Moreno",
           "away": "Banfield B",
-          "home_goals": null,
-          "away_goals": null,
-          "coverage": "pending"
+          "home_goals": 22,
+          "away_goals": 21,
+          "coverage": "reported"
         },
         {
           "home": "Lanús C",
@@ -5076,38 +5076,139 @@
         {
           "home": "C.S. y D. Defensores de Banfield",
           "away": "Municipalidad de Vicente López C",
-          "home_goals": null,
-          "away_goals": null,
-          "coverage": "pending"
+          "home_goals": 28,
+          "away_goals": 25,
+          "coverage": "reported"
         },
         {
           "home": "Argentinos Juniors D",
           "away": "Municipalidad de San Martín (Ce.M.E.F)",
-          "home_goals": null,
-          "away_goals": null,
-          "coverage": "pending"
+          "home_goals": 24,
+          "away_goals": 24,
+          "coverage": "reported"
         },
         {
           "home": "Muñiz Handball B",
           "away": "Club Deportivo Morón",
-          "home_goals": null,
-          "away_goals": null,
-          "coverage": "pending"
+          "home_goals": 21,
+          "away_goals": 22,
+          "coverage": "reported"
         },
         {
           "home": "S.A.G. Polvorines D",
           "away": "Ituzaingó",
-          "home_goals": null,
-          "away_goals": null,
-          "coverage": "pending"
+          "home_goals": 30,
+          "away_goals": 20,
+          "coverage": "reported"
         }
       ]
     }
   ],
   "insights": {
-    "matches_counted": 111,
+    "matches_counted": 118,
     "suspended_matches": 1,
     "clubs": [
+      {
+        "club": "Palermo Handball",
+        "played": 15,
+        "won": 11,
+        "drawn": 0,
+        "lost": 4,
+        "points": 37,
+        "max_points": 45,
+        "points_effectiveness": 0.822,
+        "win_rate": 0.733,
+        "goals_for": 435,
+        "goals_against": 357,
+        "goal_difference": 78,
+        "goals_for_per_game": 29.0,
+        "goals_against_per_game": 23.8,
+        "home": {
+          "played": 7,
+          "points": 21,
+          "max_points": 21,
+          "points_effectiveness": 1.0,
+          "goals_for_per_game": 29.71,
+          "goals_against_per_game": 20.86
+        },
+        "away": {
+          "played": 8,
+          "points": 16,
+          "max_points": 24,
+          "points_effectiveness": 0.667,
+          "goals_for_per_game": 28.38,
+          "goals_against_per_game": 26.38
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 5,
+            "from_round": 10,
+            "to_round": 14
+          },
+          "longest_unbeaten": {
+            "length": 5,
+            "from_round": 10,
+            "to_round": 14
+          },
+          "longest_loss": {
+            "length": 1,
+            "from_round": 3,
+            "to_round": 3
+          },
+          "current_unbeaten": {
+            "length": 0,
+            "from_round": null,
+            "to_round": null
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "G",
+            "G",
+            "G",
+            "G",
+            "P"
+          ],
+          "points": 13,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 4,
+            "points": 8,
+            "max_points": 12,
+            "points_effectiveness": 0.667
+          },
+          "middle": {
+            "played": 6,
+            "points": 16,
+            "max_points": 18,
+            "points_effectiveness": 0.889
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 13,
+            "max_points": 15,
+            "points_effectiveness": 0.867
+          }
+        },
+        "biggest_win": {
+          "round": 4,
+          "opponent": "Defensores de Moreno",
+          "location": "home",
+          "goals_for": 32,
+          "goals_against": 16,
+          "margin": 16
+        },
+        "biggest_loss": {
+          "round": 7,
+          "opponent": "Municipalidad de Vicente López C",
+          "location": "away",
+          "goals_for": 26,
+          "goals_against": 32,
+          "margin": -6
+        }
+      },
       {
         "club": "Lanús C",
         "played": 14,
@@ -5210,56 +5311,157 @@
         }
       },
       {
-        "club": "Palermo Handball",
-        "played": 14,
-        "won": 11,
+        "club": "Municipalidad de Vicente López C",
+        "played": 15,
+        "won": 10,
         "drawn": 0,
-        "lost": 3,
-        "points": 36,
-        "max_points": 42,
-        "points_effectiveness": 0.857,
-        "win_rate": 0.786,
-        "goals_for": 418,
-        "goals_against": 339,
-        "goal_difference": 79,
-        "goals_for_per_game": 29.86,
-        "goals_against_per_game": 24.21,
+        "lost": 5,
+        "points": 35,
+        "max_points": 45,
+        "points_effectiveness": 0.778,
+        "win_rate": 0.667,
+        "goals_for": 424,
+        "goals_against": 383,
+        "goal_difference": 41,
+        "goals_for_per_game": 28.27,
+        "goals_against_per_game": 25.53,
         "home": {
-          "played": 7,
-          "points": 21,
-          "max_points": 21,
-          "points_effectiveness": 1.0,
-          "goals_for_per_game": 29.71,
-          "goals_against_per_game": 20.86
+          "played": 8,
+          "points": 20,
+          "max_points": 24,
+          "points_effectiveness": 0.833,
+          "goals_for_per_game": 28.5,
+          "goals_against_per_game": 24.25
         },
         "away": {
           "played": 7,
           "points": 15,
           "max_points": 21,
           "points_effectiveness": 0.714,
-          "goals_for_per_game": 30.0,
-          "goals_against_per_game": 27.57
+          "goals_for_per_game": 28.0,
+          "goals_against_per_game": 27.0
         },
         "streaks": {
           "longest_win": {
             "length": 5,
-            "from_round": 10,
-            "to_round": 14
+            "from_round": 1,
+            "to_round": 5
           },
           "longest_unbeaten": {
             "length": 5,
+            "from_round": 1,
+            "to_round": 5
+          },
+          "longest_loss": {
+            "length": 2,
+            "from_round": 11,
+            "to_round": 12
+          },
+          "current_unbeaten": {
+            "length": 0,
+            "from_round": null,
+            "to_round": null
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "P",
+            "P",
+            "G",
+            "P",
+            "P"
+          ],
+          "points": 7,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 4,
+            "points": 10,
+            "max_points": 12,
+            "points_effectiveness": 0.833
+          },
+          "middle": {
+            "played": 6,
+            "points": 14,
+            "max_points": 18,
+            "points_effectiveness": 0.778
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 11,
+            "max_points": 15,
+            "points_effectiveness": 0.733
+          }
+        },
+        "biggest_win": {
+          "round": 1,
+          "opponent": "Argentinos Juniors D",
+          "location": "home",
+          "goals_for": 28,
+          "goals_against": 19,
+          "margin": 9
+        },
+        "biggest_loss": {
+          "round": 6,
+          "opponent": "Municipalidad de San Martín (Ce.M.E.F)",
+          "location": "away",
+          "goals_for": 22,
+          "goals_against": 27,
+          "margin": -5
+        }
+      },
+      {
+        "club": "S.A.G. Polvorines D",
+        "played": 15,
+        "won": 10,
+        "drawn": 0,
+        "lost": 5,
+        "points": 35,
+        "max_points": 45,
+        "points_effectiveness": 0.778,
+        "win_rate": 0.667,
+        "goals_for": 398,
+        "goals_against": 379,
+        "goal_difference": 19,
+        "goals_for_per_game": 26.53,
+        "goals_against_per_game": 25.27,
+        "home": {
+          "played": 7,
+          "points": 21,
+          "max_points": 21,
+          "points_effectiveness": 1.0,
+          "goals_for_per_game": 27.57,
+          "goals_against_per_game": 22.57
+        },
+        "away": {
+          "played": 8,
+          "points": 14,
+          "max_points": 24,
+          "points_effectiveness": 0.583,
+          "goals_for_per_game": 25.62,
+          "goals_against_per_game": 27.62
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 4,
             "from_round": 10,
-            "to_round": 14
+            "to_round": 13
+          },
+          "longest_unbeaten": {
+            "length": 4,
+            "from_round": 10,
+            "to_round": 13
           },
           "longest_loss": {
             "length": 1,
-            "from_round": 3,
-            "to_round": 3
+            "from_round": 1,
+            "to_round": 1
           },
           "current_unbeaten": {
-            "length": 5,
-            "from_round": 10,
-            "to_round": 14
+            "length": 1,
+            "from_round": 15,
+            "to_round": 15
           }
         },
         "form_last_5": {
@@ -5267,10 +5469,10 @@
             "G",
             "G",
             "G",
-            "G",
+            "P",
             "G"
           ],
-          "points": 15,
+          "points": 13,
           "max_points": 15
         },
         "opponent_tiers": {
@@ -5282,32 +5484,32 @@
           },
           "middle": {
             "played": 6,
-            "points": 16,
+            "points": 14,
             "max_points": 18,
-            "points_effectiveness": 0.889
+            "points_effectiveness": 0.778
           },
           "bottom_five": {
-            "played": 4,
-            "points": 12,
-            "max_points": 12,
-            "points_effectiveness": 1.0
+            "played": 5,
+            "points": 13,
+            "max_points": 15,
+            "points_effectiveness": 0.867
           }
         },
         "biggest_win": {
-          "round": 4,
-          "opponent": "Defensores de Moreno",
+          "round": 15,
+          "opponent": "Ituzaingó",
           "location": "home",
-          "goals_for": 32,
-          "goals_against": 16,
-          "margin": 16
+          "goals_for": 30,
+          "goals_against": 20,
+          "margin": 10
         },
         "biggest_loss": {
-          "round": 7,
-          "opponent": "Municipalidad de Vicente López C",
+          "round": 1,
+          "opponent": "Club Deportivo Morón",
           "location": "away",
-          "goals_for": 26,
-          "goals_against": 32,
-          "margin": -6
+          "goals_for": 22,
+          "goals_against": 33,
+          "margin": -11
         }
       },
       {
@@ -5412,222 +5614,20 @@
         }
       },
       {
-        "club": "Municipalidad de Vicente López C",
-        "played": 14,
-        "won": 10,
-        "drawn": 0,
-        "lost": 4,
-        "points": 34,
-        "max_points": 42,
-        "points_effectiveness": 0.81,
-        "win_rate": 0.714,
-        "goals_for": 399,
-        "goals_against": 355,
-        "goal_difference": 44,
-        "goals_for_per_game": 28.5,
-        "goals_against_per_game": 25.36,
-        "home": {
-          "played": 8,
-          "points": 20,
-          "max_points": 24,
-          "points_effectiveness": 0.833,
-          "goals_for_per_game": 28.5,
-          "goals_against_per_game": 24.25
-        },
-        "away": {
-          "played": 6,
-          "points": 14,
-          "max_points": 18,
-          "points_effectiveness": 0.778,
-          "goals_for_per_game": 28.5,
-          "goals_against_per_game": 26.83
-        },
-        "streaks": {
-          "longest_win": {
-            "length": 5,
-            "from_round": 1,
-            "to_round": 5
-          },
-          "longest_unbeaten": {
-            "length": 5,
-            "from_round": 1,
-            "to_round": 5
-          },
-          "longest_loss": {
-            "length": 2,
-            "from_round": 11,
-            "to_round": 12
-          },
-          "current_unbeaten": {
-            "length": 0,
-            "from_round": null,
-            "to_round": null
-          }
-        },
-        "form_last_5": {
-          "sequence": [
-            "G",
-            "P",
-            "P",
-            "G",
-            "P"
-          ],
-          "points": 9,
-          "max_points": 15
-        },
-        "opponent_tiers": {
-          "top_five": {
-            "played": 4,
-            "points": 10,
-            "max_points": 12,
-            "points_effectiveness": 0.833
-          },
-          "middle": {
-            "played": 5,
-            "points": 13,
-            "max_points": 15,
-            "points_effectiveness": 0.867
-          },
-          "bottom_five": {
-            "played": 5,
-            "points": 11,
-            "max_points": 15,
-            "points_effectiveness": 0.733
-          }
-        },
-        "biggest_win": {
-          "round": 1,
-          "opponent": "Argentinos Juniors D",
-          "location": "home",
-          "goals_for": 28,
-          "goals_against": 19,
-          "margin": 9
-        },
-        "biggest_loss": {
-          "round": 6,
-          "opponent": "Municipalidad de San Martín (Ce.M.E.F)",
-          "location": "away",
-          "goals_for": 22,
-          "goals_against": 27,
-          "margin": -5
-        }
-      },
-      {
-        "club": "S.A.G. Polvorines D",
-        "played": 14,
-        "won": 9,
-        "drawn": 0,
-        "lost": 5,
-        "points": 32,
-        "max_points": 42,
-        "points_effectiveness": 0.762,
-        "win_rate": 0.643,
-        "goals_for": 368,
-        "goals_against": 359,
-        "goal_difference": 9,
-        "goals_for_per_game": 26.29,
-        "goals_against_per_game": 25.64,
-        "home": {
-          "played": 6,
-          "points": 18,
-          "max_points": 18,
-          "points_effectiveness": 1.0,
-          "goals_for_per_game": 27.17,
-          "goals_against_per_game": 23.0
-        },
-        "away": {
-          "played": 8,
-          "points": 14,
-          "max_points": 24,
-          "points_effectiveness": 0.583,
-          "goals_for_per_game": 25.62,
-          "goals_against_per_game": 27.62
-        },
-        "streaks": {
-          "longest_win": {
-            "length": 4,
-            "from_round": 10,
-            "to_round": 13
-          },
-          "longest_unbeaten": {
-            "length": 4,
-            "from_round": 10,
-            "to_round": 13
-          },
-          "longest_loss": {
-            "length": 1,
-            "from_round": 1,
-            "to_round": 1
-          },
-          "current_unbeaten": {
-            "length": 0,
-            "from_round": null,
-            "to_round": null
-          }
-        },
-        "form_last_5": {
-          "sequence": [
-            "G",
-            "G",
-            "G",
-            "G",
-            "P"
-          ],
-          "points": 13,
-          "max_points": 15
-        },
-        "opponent_tiers": {
-          "top_five": {
-            "played": 4,
-            "points": 8,
-            "max_points": 12,
-            "points_effectiveness": 0.667
-          },
-          "middle": {
-            "played": 6,
-            "points": 14,
-            "max_points": 18,
-            "points_effectiveness": 0.778
-          },
-          "bottom_five": {
-            "played": 4,
-            "points": 10,
-            "max_points": 12,
-            "points_effectiveness": 0.833
-          }
-        },
-        "biggest_win": {
-          "round": 7,
-          "opponent": "U.N.La.M.",
-          "location": "away",
-          "goals_for": 29,
-          "goals_against": 21,
-          "margin": 8
-        },
-        "biggest_loss": {
-          "round": 1,
-          "opponent": "Club Deportivo Morón",
-          "location": "away",
-          "goals_for": 22,
-          "goals_against": 33,
-          "margin": -11
-        }
-      },
-      {
         "club": "Banfield B",
-        "played": 14,
+        "played": 15,
         "won": 8,
         "drawn": 1,
-        "lost": 5,
-        "points": 31,
-        "max_points": 42,
-        "points_effectiveness": 0.738,
-        "win_rate": 0.571,
-        "goals_for": 386,
-        "goals_against": 332,
-        "goal_difference": 54,
-        "goals_for_per_game": 27.57,
-        "goals_against_per_game": 23.71,
+        "lost": 6,
+        "points": 32,
+        "max_points": 45,
+        "points_effectiveness": 0.711,
+        "win_rate": 0.533,
+        "goals_for": 407,
+        "goals_against": 354,
+        "goal_difference": 53,
+        "goals_for_per_game": 27.13,
+        "goals_against_per_game": 23.6,
         "home": {
           "played": 8,
           "points": 16,
@@ -5637,12 +5637,12 @@
           "goals_against_per_game": 24.38
         },
         "away": {
-          "played": 6,
-          "points": 15,
-          "max_points": 18,
-          "points_effectiveness": 0.833,
-          "goals_for_per_game": 25.0,
-          "goals_against_per_game": 22.83
+          "played": 7,
+          "points": 16,
+          "max_points": 21,
+          "points_effectiveness": 0.762,
+          "goals_for_per_game": 24.43,
+          "goals_against_per_game": 22.71
         },
         "streaks": {
           "longest_win": {
@@ -5661,20 +5661,20 @@
             "to_round": 12
           },
           "current_unbeaten": {
-            "length": 2,
-            "from_round": 13,
-            "to_round": 14
+            "length": 0,
+            "from_round": null,
+            "to_round": null
           }
         },
         "form_last_5": {
           "sequence": [
-            "E",
             "P",
             "P",
             "G",
-            "G"
+            "G",
+            "P"
           ],
-          "points": 10,
+          "points": 9,
           "max_points": 15
         },
         "opponent_tiers": {
@@ -5691,10 +5691,10 @@
             "points_effectiveness": 0.733
           },
           "bottom_five": {
-            "played": 4,
-            "points": 12,
-            "max_points": 12,
-            "points_effectiveness": 1.0
+            "played": 5,
+            "points": 13,
+            "max_points": 15,
+            "points_effectiveness": 0.867
           }
         },
         "biggest_win": {
@@ -5716,26 +5716,26 @@
       },
       {
         "club": "Muñiz Handball B",
-        "played": 14,
+        "played": 15,
         "won": 8,
         "drawn": 0,
-        "lost": 6,
-        "points": 30,
-        "max_points": 42,
-        "points_effectiveness": 0.714,
-        "win_rate": 0.571,
-        "goals_for": 341,
-        "goals_against": 323,
-        "goal_difference": 18,
-        "goals_for_per_game": 24.36,
-        "goals_against_per_game": 23.07,
+        "lost": 7,
+        "points": 31,
+        "max_points": 45,
+        "points_effectiveness": 0.689,
+        "win_rate": 0.533,
+        "goals_for": 362,
+        "goals_against": 345,
+        "goal_difference": 17,
+        "goals_for_per_game": 24.13,
+        "goals_against_per_game": 23.0,
         "home": {
-          "played": 6,
-          "points": 14,
-          "max_points": 18,
-          "points_effectiveness": 0.778,
-          "goals_for_per_game": 27.33,
-          "goals_against_per_game": 23.5
+          "played": 7,
+          "points": 15,
+          "max_points": 21,
+          "points_effectiveness": 0.714,
+          "goals_for_per_game": 26.43,
+          "goals_against_per_game": 23.29
         },
         "away": {
           "played": 8,
@@ -5762,20 +5762,20 @@
             "to_round": 3
           },
           "current_unbeaten": {
-            "length": 1,
-            "from_round": 14,
-            "to_round": 14
+            "length": 0,
+            "from_round": null,
+            "to_round": null
           }
         },
         "form_last_5": {
           "sequence": [
             "G",
+            "P",
+            "P",
             "G",
-            "P",
-            "P",
-            "G"
+            "P"
           ],
-          "points": 11,
+          "points": 9,
           "max_points": 15
         },
         "opponent_tiers": {
@@ -5786,10 +5786,10 @@
             "points_effectiveness": 0.333
           },
           "middle": {
-            "played": 4,
-            "points": 10,
-            "max_points": 12,
-            "points_effectiveness": 0.833
+            "played": 5,
+            "points": 11,
+            "max_points": 15,
+            "points_effectiveness": 0.733
           },
           "bottom_five": {
             "played": 5,
@@ -5817,19 +5817,19 @@
       },
       {
         "club": "Club Deportivo Morón",
-        "played": 14,
-        "won": 6,
+        "played": 15,
+        "won": 7,
         "drawn": 1,
         "lost": 7,
-        "points": 27,
-        "max_points": 42,
-        "points_effectiveness": 0.643,
-        "win_rate": 0.429,
-        "goals_for": 377,
-        "goals_against": 386,
-        "goal_difference": -9,
-        "goals_for_per_game": 26.93,
-        "goals_against_per_game": 27.57,
+        "points": 30,
+        "max_points": 45,
+        "points_effectiveness": 0.667,
+        "win_rate": 0.467,
+        "goals_for": 399,
+        "goals_against": 407,
+        "goal_difference": -8,
+        "goals_for_per_game": 26.6,
+        "goals_against_per_game": 27.13,
         "home": {
           "played": 8,
           "points": 15,
@@ -5839,12 +5839,12 @@
           "goals_against_per_game": 28.25
         },
         "away": {
-          "played": 6,
-          "points": 12,
-          "max_points": 18,
-          "points_effectiveness": 0.667,
-          "goals_for_per_game": 24.17,
-          "goals_against_per_game": 26.67
+          "played": 7,
+          "points": 15,
+          "max_points": 21,
+          "points_effectiveness": 0.714,
+          "goals_for_per_game": 23.86,
+          "goals_against_per_game": 25.86
         },
         "streaks": {
           "longest_win": {
@@ -5863,20 +5863,20 @@
             "to_round": 8
           },
           "current_unbeaten": {
-            "length": 1,
+            "length": 2,
             "from_round": 14,
-            "to_round": 14
+            "to_round": 15
           }
         },
         "form_last_5": {
           "sequence": [
-            "P",
             "G",
             "P",
             "P",
+            "G",
             "G"
           ],
-          "points": 9,
+          "points": 11,
           "max_points": 15
         },
         "opponent_tiers": {
@@ -5887,10 +5887,10 @@
             "points_effectiveness": 0.6
           },
           "middle": {
-            "played": 4,
-            "points": 4,
-            "max_points": 12,
-            "points_effectiveness": 0.333
+            "played": 5,
+            "points": 7,
+            "max_points": 15,
+            "points_effectiveness": 0.467
           },
           "bottom_five": {
             "played": 5,
@@ -5918,19 +5918,19 @@
       },
       {
         "club": "Municipalidad de Pilar",
-        "played": 13,
-        "won": 6,
+        "played": 14,
+        "won": 7,
         "drawn": 1,
         "lost": 6,
-        "points": 26,
-        "max_points": 39,
-        "points_effectiveness": 0.667,
-        "win_rate": 0.462,
-        "goals_for": 328,
-        "goals_against": 331,
-        "goal_difference": -3,
-        "goals_for_per_game": 25.23,
-        "goals_against_per_game": 25.46,
+        "points": 29,
+        "max_points": 42,
+        "points_effectiveness": 0.69,
+        "win_rate": 0.5,
+        "goals_for": 359,
+        "goals_against": 352,
+        "goal_difference": 7,
+        "goals_for_per_game": 25.64,
+        "goals_against_per_game": 25.14,
         "home": {
           "played": 7,
           "points": 16,
@@ -5940,12 +5940,12 @@
           "goals_against_per_game": 23.86
         },
         "away": {
-          "played": 6,
-          "points": 10,
-          "max_points": 18,
-          "points_effectiveness": 0.556,
-          "goals_for_per_game": 25.17,
-          "goals_against_per_game": 27.33
+          "played": 7,
+          "points": 13,
+          "max_points": 21,
+          "points_effectiveness": 0.619,
+          "goals_for_per_game": 26.0,
+          "goals_against_per_game": 26.43
         },
         "streaks": {
           "longest_win": {
@@ -5964,20 +5964,20 @@
             "to_round": 11
           },
           "current_unbeaten": {
-            "length": 0,
-            "from_round": null,
-            "to_round": null
+            "length": 1,
+            "from_round": 15,
+            "to_round": 15
           }
         },
         "form_last_5": {
           "sequence": [
-            "E",
             "P",
             "P",
             "G",
-            "P"
+            "P",
+            "G"
           ],
-          "points": 8,
+          "points": 9,
           "max_points": 15
         },
         "opponent_tiers": {
@@ -5988,9 +5988,9 @@
             "points_effectiveness": 0.333
           },
           "middle": {
-            "played": 4,
-            "points": 12,
-            "max_points": 12,
+            "played": 5,
+            "points": 15,
+            "max_points": 15,
             "points_effectiveness": 1.0
           },
           "bottom_five": {
@@ -6018,27 +6018,128 @@
         }
       },
       {
+        "club": "C.S. y D. Defensores de Banfield",
+        "played": 15,
+        "won": 6,
+        "drawn": 1,
+        "lost": 8,
+        "points": 28,
+        "max_points": 45,
+        "points_effectiveness": 0.622,
+        "win_rate": 0.4,
+        "goals_for": 411,
+        "goals_against": 404,
+        "goal_difference": 7,
+        "goals_for_per_game": 27.4,
+        "goals_against_per_game": 26.93,
+        "home": {
+          "played": 7,
+          "points": 17,
+          "max_points": 21,
+          "points_effectiveness": 0.81,
+          "goals_for_per_game": 28.71,
+          "goals_against_per_game": 23.14
+        },
+        "away": {
+          "played": 8,
+          "points": 11,
+          "max_points": 24,
+          "points_effectiveness": 0.458,
+          "goals_for_per_game": 26.25,
+          "goals_against_per_game": 30.25
+        },
+        "streaks": {
+          "longest_win": {
+            "length": 1,
+            "from_round": 1,
+            "to_round": 1
+          },
+          "longest_unbeaten": {
+            "length": 3,
+            "from_round": 13,
+            "to_round": 15
+          },
+          "longest_loss": {
+            "length": 3,
+            "from_round": 10,
+            "to_round": 12
+          },
+          "current_unbeaten": {
+            "length": 3,
+            "from_round": 13,
+            "to_round": 15
+          }
+        },
+        "form_last_5": {
+          "sequence": [
+            "P",
+            "P",
+            "G",
+            "E",
+            "G"
+          ],
+          "points": 10,
+          "max_points": 15
+        },
+        "opponent_tiers": {
+          "top_five": {
+            "played": 5,
+            "points": 9,
+            "max_points": 15,
+            "points_effectiveness": 0.6
+          },
+          "middle": {
+            "played": 5,
+            "points": 7,
+            "max_points": 15,
+            "points_effectiveness": 0.467
+          },
+          "bottom_five": {
+            "played": 5,
+            "points": 12,
+            "max_points": 15,
+            "points_effectiveness": 0.8
+          }
+        },
+        "biggest_win": {
+          "round": 6,
+          "opponent": "Defensores de Moreno",
+          "location": "home",
+          "goals_for": 33,
+          "goals_against": 16,
+          "margin": 17
+        },
+        "biggest_loss": {
+          "round": 8,
+          "opponent": "Palermo Handball",
+          "location": "away",
+          "goals_for": 21,
+          "goals_against": 34,
+          "margin": -13
+        }
+      },
+      {
         "club": "Municipalidad de Tres de Febrero B",
-        "played": 14,
+        "played": 15,
         "won": 6,
         "drawn": 0,
-        "lost": 8,
-        "points": 26,
-        "max_points": 42,
-        "points_effectiveness": 0.619,
-        "win_rate": 0.429,
-        "goals_for": 361,
-        "goals_against": 378,
-        "goal_difference": -17,
-        "goals_for_per_game": 25.79,
-        "goals_against_per_game": 27.0,
+        "lost": 9,
+        "points": 27,
+        "max_points": 45,
+        "points_effectiveness": 0.6,
+        "win_rate": 0.4,
+        "goals_for": 382,
+        "goals_against": 409,
+        "goal_difference": -27,
+        "goals_for_per_game": 25.47,
+        "goals_against_per_game": 27.27,
         "home": {
-          "played": 6,
-          "points": 14,
-          "max_points": 18,
-          "points_effectiveness": 0.778,
-          "goals_for_per_game": 28.5,
-          "goals_against_per_game": 24.83
+          "played": 7,
+          "points": 15,
+          "max_points": 21,
+          "points_effectiveness": 0.714,
+          "goals_for_per_game": 27.43,
+          "goals_against_per_game": 25.71
         },
         "away": {
           "played": 8,
@@ -6074,11 +6175,11 @@
           "sequence": [
             "G",
             "G",
-            "G",
+            "P",
             "P",
             "P"
           ],
-          "points": 11,
+          "points": 9,
           "max_points": 15
         },
         "opponent_tiers": {
@@ -6089,10 +6190,10 @@
             "points_effectiveness": 0.467
           },
           "middle": {
-            "played": 4,
-            "points": 8,
-            "max_points": 12,
-            "points_effectiveness": 0.667
+            "played": 5,
+            "points": 9,
+            "max_points": 15,
+            "points_effectiveness": 0.6
           },
           "bottom_five": {
             "played": 5,
@@ -6119,121 +6220,20 @@
         }
       },
       {
-        "club": "C.S. y D. Defensores de Banfield",
-        "played": 14,
-        "won": 5,
-        "drawn": 1,
-        "lost": 8,
-        "points": 25,
-        "max_points": 42,
-        "points_effectiveness": 0.595,
-        "win_rate": 0.357,
-        "goals_for": 383,
-        "goals_against": 379,
-        "goal_difference": 4,
-        "goals_for_per_game": 27.36,
-        "goals_against_per_game": 27.07,
-        "home": {
-          "played": 6,
-          "points": 14,
-          "max_points": 18,
-          "points_effectiveness": 0.778,
-          "goals_for_per_game": 28.83,
-          "goals_against_per_game": 22.83
-        },
-        "away": {
-          "played": 8,
-          "points": 11,
-          "max_points": 24,
-          "points_effectiveness": 0.458,
-          "goals_for_per_game": 26.25,
-          "goals_against_per_game": 30.25
-        },
-        "streaks": {
-          "longest_win": {
-            "length": 1,
-            "from_round": 1,
-            "to_round": 1
-          },
-          "longest_unbeaten": {
-            "length": 2,
-            "from_round": 13,
-            "to_round": 14
-          },
-          "longest_loss": {
-            "length": 3,
-            "from_round": 10,
-            "to_round": 12
-          },
-          "current_unbeaten": {
-            "length": 2,
-            "from_round": 13,
-            "to_round": 14
-          }
-        },
-        "form_last_5": {
-          "sequence": [
-            "P",
-            "P",
-            "P",
-            "G",
-            "E"
-          ],
-          "points": 8,
-          "max_points": 15
-        },
-        "opponent_tiers": {
-          "top_five": {
-            "played": 4,
-            "points": 6,
-            "max_points": 12,
-            "points_effectiveness": 0.5
-          },
-          "middle": {
-            "played": 5,
-            "points": 7,
-            "max_points": 15,
-            "points_effectiveness": 0.467
-          },
-          "bottom_five": {
-            "played": 5,
-            "points": 12,
-            "max_points": 15,
-            "points_effectiveness": 0.8
-          }
-        },
-        "biggest_win": {
-          "round": 6,
-          "opponent": "Defensores de Moreno",
-          "location": "home",
-          "goals_for": 33,
-          "goals_against": 16,
-          "margin": 17
-        },
-        "biggest_loss": {
-          "round": 8,
-          "opponent": "Palermo Handball",
-          "location": "away",
-          "goals_for": 21,
-          "goals_against": 34,
-          "margin": -13
-        }
-      },
-      {
         "club": "Municipalidad de San Martín (Ce.M.E.F)",
-        "played": 14,
+        "played": 15,
         "won": 4,
-        "drawn": 3,
+        "drawn": 4,
         "lost": 7,
-        "points": 25,
-        "max_points": 42,
-        "points_effectiveness": 0.595,
-        "win_rate": 0.286,
-        "goals_for": 297,
-        "goals_against": 314,
+        "points": 27,
+        "max_points": 45,
+        "points_effectiveness": 0.6,
+        "win_rate": 0.267,
+        "goals_for": 321,
+        "goals_against": 338,
         "goal_difference": -17,
-        "goals_for_per_game": 21.21,
-        "goals_against_per_game": 22.43,
+        "goals_for_per_game": 21.4,
+        "goals_against_per_game": 22.53,
         "home": {
           "played": 8,
           "points": 17,
@@ -6243,12 +6243,12 @@
           "goals_against_per_game": 21.0
         },
         "away": {
-          "played": 6,
-          "points": 8,
-          "max_points": 18,
-          "points_effectiveness": 0.444,
-          "goals_for_per_game": 19.83,
-          "goals_against_per_game": 24.33
+          "played": 7,
+          "points": 10,
+          "max_points": 21,
+          "points_effectiveness": 0.476,
+          "goals_for_per_game": 20.43,
+          "goals_against_per_game": 24.29
         },
         "streaks": {
           "longest_win": {
@@ -6267,20 +6267,20 @@
             "to_round": 2
           },
           "current_unbeaten": {
-            "length": 1,
+            "length": 2,
             "from_round": 14,
-            "to_round": 14
+            "to_round": 15
           }
         },
         "form_last_5": {
           "sequence": [
-            "G",
             "P",
             "G",
             "P",
+            "E",
             "E"
           ],
-          "points": 10,
+          "points": 9,
           "max_points": 15
         },
         "opponent_tiers": {
@@ -6297,10 +6297,10 @@
             "points_effectiveness": 0.5
           },
           "bottom_five": {
-            "played": 3,
-            "points": 9,
-            "max_points": 9,
-            "points_effectiveness": 1.0
+            "played": 4,
+            "points": 11,
+            "max_points": 12,
+            "points_effectiveness": 0.917
           }
         },
         "biggest_win": {
@@ -6322,26 +6322,26 @@
       },
       {
         "club": "Argentinos Juniors D",
-        "played": 14,
+        "played": 15,
         "won": 5,
-        "drawn": 0,
+        "drawn": 1,
         "lost": 9,
-        "points": 24,
-        "max_points": 42,
-        "points_effectiveness": 0.571,
-        "win_rate": 0.357,
-        "goals_for": 340,
-        "goals_against": 388,
+        "points": 26,
+        "max_points": 45,
+        "points_effectiveness": 0.578,
+        "win_rate": 0.333,
+        "goals_for": 364,
+        "goals_against": 412,
         "goal_difference": -48,
-        "goals_for_per_game": 24.29,
-        "goals_against_per_game": 27.71,
+        "goals_for_per_game": 24.27,
+        "goals_against_per_game": 27.47,
         "home": {
-          "played": 6,
-          "points": 12,
-          "max_points": 18,
+          "played": 7,
+          "points": 14,
+          "max_points": 21,
           "points_effectiveness": 0.667,
-          "goals_for_per_game": 25.67,
-          "goals_against_per_game": 26.83
+          "goals_for_per_game": 25.43,
+          "goals_against_per_game": 26.43
         },
         "away": {
           "played": 8,
@@ -6368,20 +6368,20 @@
             "to_round": 12
           },
           "current_unbeaten": {
-            "length": 0,
-            "from_round": null,
-            "to_round": null
+            "length": 1,
+            "from_round": 15,
+            "to_round": 15
           }
         },
         "form_last_5": {
           "sequence": [
             "P",
             "P",
-            "P",
             "G",
-            "P"
+            "P",
+            "E"
           ],
-          "points": 7,
+          "points": 8,
           "max_points": 15
         },
         "opponent_tiers": {
@@ -6398,10 +6398,10 @@
             "points_effectiveness": 0.556
           },
           "bottom_five": {
-            "played": 3,
-            "points": 9,
-            "max_points": 9,
-            "points_effectiveness": 1.0
+            "played": 4,
+            "points": 11,
+            "max_points": 12,
+            "points_effectiveness": 0.917
           }
         },
         "biggest_win": {
@@ -6423,26 +6423,26 @@
       },
       {
         "club": "U.N.La.M.",
-        "played": 13,
-        "won": 3,
+        "played": 14,
+        "won": 4,
         "drawn": 0,
         "lost": 10,
-        "points": 19,
-        "max_points": 39,
-        "points_effectiveness": 0.487,
-        "win_rate": 0.231,
-        "goals_for": 276,
-        "goals_against": 327,
-        "goal_difference": -51,
-        "goals_for_per_game": 21.23,
-        "goals_against_per_game": 25.15,
+        "points": 22,
+        "max_points": 42,
+        "points_effectiveness": 0.524,
+        "win_rate": 0.286,
+        "goals_for": 294,
+        "goals_against": 344,
+        "goal_difference": -50,
+        "goals_for_per_game": 21.0,
+        "goals_against_per_game": 24.57,
         "home": {
-          "played": 7,
-          "points": 11,
-          "max_points": 21,
-          "points_effectiveness": 0.524,
-          "goals_for_per_game": 21.86,
-          "goals_against_per_game": 23.29
+          "played": 8,
+          "points": 14,
+          "max_points": 24,
+          "points_effectiveness": 0.583,
+          "goals_for_per_game": 21.38,
+          "goals_against_per_game": 22.5
         },
         "away": {
           "played": 6,
@@ -6469,28 +6469,28 @@
             "to_round": 10
           },
           "current_unbeaten": {
-            "length": 0,
-            "from_round": null,
-            "to_round": null
+            "length": 1,
+            "from_round": 15,
+            "to_round": 15
           }
         },
         "form_last_5": {
           "sequence": [
             "P",
-            "P",
             "G",
             "P",
-            "P"
+            "P",
+            "G"
           ],
-          "points": 7,
+          "points": 9,
           "max_points": 15
         },
         "opponent_tiers": {
           "top_five": {
-            "played": 4,
-            "points": 6,
-            "max_points": 12,
-            "points_effectiveness": 0.5
+            "played": 5,
+            "points": 9,
+            "max_points": 15,
+            "points_effectiveness": 0.6
           },
           "middle": {
             "played": 5,
@@ -6524,26 +6524,26 @@
       },
       {
         "club": "Defensores de Moreno",
-        "played": 14,
-        "won": 2,
+        "played": 15,
+        "won": 3,
         "drawn": 0,
         "lost": 12,
-        "points": 18,
-        "max_points": 42,
-        "points_effectiveness": 0.429,
-        "win_rate": 0.143,
-        "goals_for": 320,
-        "goals_against": 433,
-        "goal_difference": -113,
-        "goals_for_per_game": 22.86,
-        "goals_against_per_game": 30.93,
+        "points": 21,
+        "max_points": 45,
+        "points_effectiveness": 0.467,
+        "win_rate": 0.2,
+        "goals_for": 342,
+        "goals_against": 454,
+        "goal_difference": -112,
+        "goals_for_per_game": 22.8,
+        "goals_against_per_game": 30.27,
         "home": {
-          "played": 6,
-          "points": 8,
-          "max_points": 18,
-          "points_effectiveness": 0.444,
-          "goals_for_per_game": 24.83,
-          "goals_against_per_game": 28.67
+          "played": 7,
+          "points": 11,
+          "max_points": 21,
+          "points_effectiveness": 0.524,
+          "goals_for_per_game": 24.43,
+          "goals_against_per_game": 27.57
         },
         "away": {
           "played": 8,
@@ -6570,18 +6570,18 @@
             "to_round": 8
           },
           "current_unbeaten": {
-            "length": 0,
-            "from_round": null,
-            "to_round": null
+            "length": 1,
+            "from_round": 15,
+            "to_round": 15
           }
         },
         "form_last_5": {
           "sequence": [
-            "G",
             "P",
             "P",
             "P",
-            "P"
+            "P",
+            "G"
           ],
           "points": 7,
           "max_points": 15
@@ -6594,10 +6594,10 @@
             "points_effectiveness": 0.467
           },
           "middle": {
-            "played": 5,
-            "points": 5,
-            "max_points": 15,
-            "points_effectiveness": 0.333
+            "played": 6,
+            "points": 8,
+            "max_points": 18,
+            "points_effectiveness": 0.444
           },
           "bottom_five": {
             "played": 4,
@@ -6625,19 +6625,19 @@
       },
       {
         "club": "Ituzaingó",
-        "played": 14,
+        "played": 15,
         "won": 2,
         "drawn": 1,
-        "lost": 11,
-        "points": 18,
-        "max_points": 42,
-        "points_effectiveness": 0.429,
-        "win_rate": 0.143,
-        "goals_for": 326,
-        "goals_against": 374,
-        "goal_difference": -48,
-        "goals_for_per_game": 23.29,
-        "goals_against_per_game": 26.71,
+        "lost": 12,
+        "points": 19,
+        "max_points": 45,
+        "points_effectiveness": 0.422,
+        "win_rate": 0.133,
+        "goals_for": 346,
+        "goals_against": 404,
+        "goal_difference": -58,
+        "goals_for_per_game": 23.07,
+        "goals_against_per_game": 26.93,
         "home": {
           "played": 8,
           "points": 12,
@@ -6647,12 +6647,12 @@
           "goals_against_per_game": 26.88
         },
         "away": {
-          "played": 6,
-          "points": 6,
-          "max_points": 18,
+          "played": 7,
+          "points": 7,
+          "max_points": 21,
           "points_effectiveness": 0.333,
-          "goals_for_per_game": 22.0,
-          "goals_against_per_game": 26.5
+          "goals_for_per_game": 21.71,
+          "goals_against_per_game": 27.0
         },
         "streaks": {
           "longest_win": {
@@ -6678,9 +6678,9 @@
         },
         "form_last_5": {
           "sequence": [
-            "P",
             "E",
             "G",
+            "P",
             "P",
             "P"
           ],
@@ -6689,10 +6689,10 @@
         },
         "opponent_tiers": {
           "top_five": {
-            "played": 4,
-            "points": 5,
-            "max_points": 12,
-            "points_effectiveness": 0.417
+            "played": 5,
+            "points": 6,
+            "max_points": 15,
+            "points_effectiveness": 0.4
           },
           "middle": {
             "played": 6,
@@ -6762,14 +6762,14 @@
         "key": "best_defense",
         "label": "Menor promedio de goles en contra",
         "club": "Municipalidad de San Martín (Ce.M.E.F)",
-        "value": 22.43,
+        "value": 22.53,
         "unit": "goles por partido",
-        "detail": "314 goles en contra en 14 partidos"
+        "detail": "338 goles en contra en 15 partidos"
       },
       {
         "key": "best_home",
         "label": "Mejor efectividad como local",
-        "club": "Palermo Handball",
+        "club": "S.A.G. Polvorines D",
         "value": 1.0,
         "unit": "de los puntos",
         "detail": "21 de 21 puntos como local"
@@ -6785,23 +6785,19 @@
       {
         "key": "best_form",
         "label": "Mejor presente en los últimos 5",
-        "club": "Palermo Handball",
-        "value": 15,
+        "club": "S.A.P.A.",
+        "value": 14,
         "unit": "puntos",
-        "detail": "GGGGG"
+        "detail": "EGGGG"
       },
       {
         "key": "perfect_vs_bottom_five",
         "label": "Sin ceder puntos con los cinco últimos",
         "clubs": [
-          "Palermo Handball",
           "S.A.P.A.",
-          "Banfield B",
-          "Muñiz Handball B",
-          "Municipalidad de San Martín (Ce.M.E.F)",
-          "Argentinos Juniors D"
+          "Muñiz Handball B"
         ],
-        "value": 6,
+        "value": 2,
         "unit": "equipos",
         "detail": "Puntaje ideal contra el grupo inferior de la tabla"
       }

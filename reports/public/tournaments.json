@@ -1,6 +1,6 @@
 {
   "schema_version": "tournaments-v1",
-  "generated_at": "2026-11-17",
+  "generated_at": "2026-11-23",
   "tournaments": [
     {
       "key": "permanencia-2026",
@@ -11,22 +11,22 @@
       "status": "in_progress",
       "coverage": {
         "matches_total": 120,
-        "matches_counted": 111,
+        "matches_counted": 118,
         "planillas_confirmed": 110,
-        "reported_only": 0,
+        "reported_only": 7,
         "suspended": 1,
-        "pending": 9,
-        "rounds_played": 14,
+        "pending": 2,
+        "rounds_played": 15,
         "rounds_total": 15,
         "status": "partial",
-        "label": "111 de 120 partidos con resultado · 110 planillas confirmadas · 1 suspendido"
+        "label": "118 de 120 partidos con resultado · 110 planillas confirmadas · 1 suspendido"
       },
-      "updated_at": "2026-11-17",
+      "updated_at": "2026-11-23",
       "file": "tournament_permanencia-2026.json",
       "forecast_file": "forecast_permanencia-2026.json",
       "summary": {
         "sapa": {
-          "position": 3,
+          "position": 5,
           "points": 35,
           "played": 14
         }
@@ -57,7 +57,7 @@
         "status": "complete",
         "label": "120 de 120 partidos con resultado · 116 planillas confirmadas"
       },
-      "updated_at": "2026-11-17",
+      "updated_at": "2026-11-23",
       "file": "tournament_apertura-zona-a-2026.json",
       "forecast_file": null,
       "summary": {
@@ -88,7 +88,7 @@
         "status": "complete",
         "label": "120 de 120 partidos con resultado · 119 planillas confirmadas · 1 suspendido"
       },
-      "updated_at": "2026-11-17",
+      "updated_at": "2026-11-23",
       "file": "tournament_apertura-zona-b-2026.json",
       "forecast_file": null,
       "summary": {

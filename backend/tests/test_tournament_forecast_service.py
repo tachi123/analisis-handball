@@ -2,9 +2,11 @@ from app.services.competition_ranking import RankedResult, TeamRecord, apply_res
 from app.services.standings_service import load_point_rules
 from app.services.tournament_forecast_service import (
     HistoricalResult,
+    PlayerMatchObservation,
     RemainingFixture,
     _expected_goals,
     _fit_goal_model,
+    build_player_match_forecast,
     build_forecast,
 )
 
@@ -123,3 +125,25 @@ def test_apply_result_uses_the_versioned_points_rule():
     assert records["Beta"].points == 11
     assert records["Alpha"].goal_difference == 4
     assert records["Beta"].goals_for == 26
+
+
+def test_player_forecast_is_selected_squad_only_and_reconciles_to_team_goals():
+    observations = [
+        PlayerMatchObservation("Top scorer", 1, 6, True, False, 30),
+        PlayerMatchObservation("Top scorer", 2, 5, False, False, 28),
+        PlayerMatchObservation("Contributor", 1, 2, False, False, 30),
+        PlayerMatchObservation("Contributor", 2, 3, True, True, 28),
+        # A non-selected player must not receive any upcoming probability.
+        PlayerMatchObservation("Absent", 2, 9, False, False, 28),
+    ]
+
+    projected = build_player_match_forecast(["Top scorer", "Contributor"], observations, 24)
+
+    assert [row["name"] for row in projected] == ["Top scorer", "Contributor"]
+    assert round(sum(row["expected_goals"] for row in projected), 1) == 24.0
+    top = projected[0]
+    contributor = projected[1]
+    assert top["one_or_more_goals_probability"] > contributor["one_or_more_goals_probability"]
+    assert contributor["ejection_probability"] > 0
+    assert top["appearances"] == 2
+    assert top["confidence"] == "exploratory"

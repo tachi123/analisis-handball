@@ -46,6 +46,7 @@ export function Forecast({ forecast, tournament, onBack, onHome, onTournament, o
   const sapaWin = sapaFixture ? (sapaHome ? sapaFixture.home_win_probability : sapaFixture.away_win_probability) : 0
   const sapaLoss = sapaFixture ? (sapaHome ? sapaFixture.away_win_probability : sapaFixture.home_win_probability) : 0
   const sapaRival = sapaFixture ? (sapaHome ? sapaFixture.away : sapaFixture.home) : forecast.rival_profile.club
+  const rivalForecast = forecast.teams.find((team) => team.club === sapaRival)
   const formSummary = (team: PublicForecast['teams'][number]) => {
     const last = team.campaign.slice(-5)
     const points = last.reduce((total, match) => total + (match.result === 'win' ? forecast.points_rule.win : match.result === 'draw' ? forecast.points_rule.draw : forecast.points_rule.loss), 0)
@@ -83,6 +84,30 @@ export function Forecast({ forecast, tournament, onBack, onHome, onTournament, o
         <div className="outcome-probabilities"><span><b>{percent(sapaWin)}</b> gana</span><span><b>{percent(sapaFixture.draw_probability)}</b> empata</span><span><b>{percent(sapaLoss)}</b> pierde</span></div>
       </article>}
     </section>
+
+    {forecast.player_forecast && <section className="dashboard-section player-forecast-section" aria-labelledby="player-forecast-title">
+      <div className="section-heading">
+        <div><p className="eyebrow">SAPA vs {forecast.player_forecast.opponent}</p><h2 id="player-forecast-title">Pronóstico personal de la convocatoria</h2></div>
+        <small>{forecast.player_forecast.location === 'home' ? 'Local' : 'Visitante'} · {decimal(forecast.player_forecast.expected_team_goals, 1)} goles esperados del equipo.</small>
+      </div>
+      <div className="player-forecast-context">
+        <strong>{forecast.player_forecast.opponent} llega como principal aspirante al título{rivalForecast ? ` (${percent(rivalForecast.champion_probability)})` : ''}.</strong>
+        <span>Los goles se ajustan por la defensa de cada rival enfrentado, forma reciente, localía y la proyección del cruce; las tarjetas usan planillas confirmadas.</span>
+      </div>
+      <div className="table-wrap player-forecast-wrap"><table className="player-table player-forecast-table">
+        <thead><tr><th>Jugador</th><th>Goles esp.</th><th>1+ gol</th><th>3+ goles</th><th>2 min</th><th>Roja / azul</th><th>Muestra</th></tr></thead>
+        <tbody>{forecast.player_forecast.players.map((player) => <tr key={player.name}>
+          <td><strong>{player.name}</strong><small>{player.appearances} presencias</small></td>
+          <td>{decimal(player.expected_goals, 2)}</td>
+          <td className="projection-primary">{percent(player.one_or_more_goals_probability)}</td>
+          <td>{percent(player.three_or_more_goals_probability)}</td>
+          <td>{percent(player.two_minute_probability)}</td>
+          <td>{percent(player.ejection_probability)}</td>
+          <td><span className={`forecast-confidence ${player.confidence}`}>{player.confidence === 'strong' ? 'Fuerte' : player.confidence === 'moderate' ? 'Moderada' : 'Exploratoria'}</span></td>
+        </tr>)}</tbody>
+      </table></div>
+      <p className="forecast-disclosure">Probabilidades condicionadas a esta convocatoria. Son estimaciones estadísticas, no garantías. “Roja / azul” es un evento poco frecuente y por eso conserva mayor incertidumbre.</p>
+    </section>}
 
     <section className="dashboard-section">
       <div className="section-heading">

@@ -211,6 +211,23 @@ export type ForecastFixture = {
   away_win_probability: number
 }
 
+export type PlayerMatchForecast = {
+  team: string
+  opponent: string
+  location: 'home' | 'away'
+  expected_team_goals: number
+  players: Array<{
+    name: string
+    appearances: number
+    expected_goals: number
+    one_or_more_goals_probability: number
+    three_or_more_goals_probability: number
+    two_minute_probability: number
+    ejection_probability: number
+    confidence: 'strong' | 'moderate' | 'exploratory'
+  }>
+}
+
 export type PublicForecast = {
   schema_version: 'forecast-v1'
   public_key: string
@@ -222,6 +239,7 @@ export type PublicForecast = {
   points_rule: PointsRule
   teams: ForecastTeam[]
   fixtures: ForecastFixture[]
+  player_forecast?: PlayerMatchForecast
   rival_profile: { club: string | null; competitions: Array<{ key: string; label: string }> }
 }
 
@@ -571,12 +589,40 @@ export function decodePublicCompetition(value: unknown): PublicCompetition {
 
 export function decodePublicForecast(value: unknown): PublicForecast {
   if (!isRecord(value)) throw new Error('The public forecast is not a JSON object.')
-  assertFields(value, ['schema_version', 'public_key', 'competition', 'tournament', 'season', 'updated_at', 'coverage', 'points_rule', 'teams', 'fixtures', 'rival_profile'], 'forecast')
+  assertFields(value, ['schema_version', 'public_key', 'competition', 'tournament', 'season', 'updated_at', 'coverage', 'points_rule', 'teams', 'fixtures', 'player_forecast', 'rival_profile'], 'forecast')
   if (value.schema_version !== 'forecast-v1') throw new Error('Unsupported public forecast version.')
   if (!Array.isArray(value.teams) || !Array.isArray(value.fixtures)) throw new Error('The public forecast has invalid lists.')
   if (!isRecord(value.rival_profile)) throw new Error('The public forecast has an invalid rival profile.')
   assertFields(value.rival_profile, ['club', 'competitions'], 'rival profile')
   if (!Array.isArray(value.rival_profile.competitions)) throw new Error('The public forecast has an invalid rival competition list.')
+  let playerForecast: PlayerMatchForecast | undefined
+  if (value.player_forecast !== undefined) {
+    if (!isRecord(value.player_forecast)) throw new Error('The public forecast has an invalid player forecast.')
+    assertFields(value.player_forecast, ['team', 'opponent', 'location', 'expected_team_goals', 'players'], 'player forecast')
+    if (value.player_forecast.location !== 'home' && value.player_forecast.location !== 'away') throw new Error('The public forecast has an invalid player forecast location.')
+    if (!Array.isArray(value.player_forecast.players)) throw new Error('The public forecast has an invalid player forecast list.')
+    playerForecast = {
+      team: assertString(value.player_forecast.team, 'player forecast team'),
+      opponent: assertString(value.player_forecast.opponent, 'player forecast opponent'),
+      location: value.player_forecast.location,
+      expected_team_goals: assertNumber(value.player_forecast.expected_team_goals, 'player forecast expected team goals'),
+      players: value.player_forecast.players.map((player) => {
+        if (!isRecord(player)) throw new Error('The public forecast has an invalid player projection.')
+        assertFields(player, ['name', 'appearances', 'expected_goals', 'one_or_more_goals_probability', 'three_or_more_goals_probability', 'two_minute_probability', 'ejection_probability', 'confidence'], 'player projection')
+        if (player.confidence !== 'strong' && player.confidence !== 'moderate' && player.confidence !== 'exploratory') throw new Error('The public forecast has an invalid player forecast confidence.')
+        return {
+          name: assertString(player.name, 'player forecast name'),
+          appearances: assertNumber(player.appearances, 'player forecast appearances'),
+          expected_goals: assertNumber(player.expected_goals, 'player forecast expected goals'),
+          one_or_more_goals_probability: assertNumber(player.one_or_more_goals_probability, 'player forecast 1+ goals'),
+          three_or_more_goals_probability: assertNumber(player.three_or_more_goals_probability, 'player forecast 3+ goals'),
+          two_minute_probability: assertNumber(player.two_minute_probability, 'player forecast two-minute'),
+          ejection_probability: assertNumber(player.ejection_probability, 'player forecast ejection'),
+          confidence: player.confidence,
+        }
+      }),
+    }
+  }
   return {
     schema_version: 'forecast-v1',
     public_key: assertString(value.public_key, 'public key'),
@@ -632,6 +678,7 @@ export function decodePublicForecast(value: unknown): PublicForecast {
         away_win_probability: assertNumber(item.away_win_probability, 'away probability'),
       }
     }),
+    ...(playerForecast ? { player_forecast: playerForecast } : {}),
     rival_profile: {
       club: assertNullableString(value.rival_profile.club, 'rival club'),
       competitions: value.rival_profile.competitions.map((item) => {

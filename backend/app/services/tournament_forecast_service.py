@@ -48,6 +48,97 @@ class RemainingFixture:
         return self.status not in {"suspended", "cancelled"}
 
 
+@dataclass(frozen=True)
+class PlayerMatchObservation:
+    """Confirmed-sheet contribution for a selected player in one match."""
+
+    name: str
+    round_number: int
+    goals: int
+    two_minute: bool
+    ejected: bool
+    expected_team_goals: float
+
+
+def _poisson_at_least(mean: float, threshold: int) -> float:
+    """Return P(X >= threshold) for a Poisson scoring count."""
+    cumulative = 0.0
+    probability = exp(-mean)
+    for goals in range(threshold):
+        if goals:
+            probability *= mean / goals
+        cumulative += probability
+    return 1 - cumulative
+
+
+def build_player_match_forecast(
+    squad: list[str],
+    observations: list[PlayerMatchObservation],
+    expected_team_goals: float,
+) -> list[dict[str, Any]]:
+    """Project selected players from confirmed sheets and opponent-adjusted context.
+
+    Each player's scoring share is estimated from his goals relative to SAPA's
+    expected team goals in the opponents already faced.  Exponential recency
+    weights and a small shared prior prevent a short run from becoming a false
+    certainty; selected-player shares are then reconciled to the team goal
+    forecast for the upcoming fixture.
+    """
+    if not squad or expected_team_goals <= 0:
+        return []
+
+    latest_round = max((item.round_number for item in observations), default=0)
+    weighted: dict[str, dict[str, float]] = {
+        name: {"goals": 0.0, "exposure": 0.0, "appearances": 0.0, "actual_appearances": 0.0, "two_minute": 0.0, "ejected": 0.0}
+        for name in squad
+    }
+    for item in observations:
+        if item.name not in weighted or item.expected_team_goals <= 0:
+            continue
+        weight = exp(-log(2) * max(0, latest_round - item.round_number) / RECENCY_HALF_LIFE_ROUNDS)
+        row = weighted[item.name]
+        row["goals"] += weight * item.goals
+        row["exposure"] += weight * item.expected_team_goals
+        row["appearances"] += weight
+        row["actual_appearances"] += 1
+        row["two_minute"] += weight * int(item.two_minute)
+        row["ejected"] += weight * int(item.ejected)
+
+    total_appearances = sum(row["appearances"] for row in weighted.values())
+    two_minute_baseline = sum(row["two_minute"] for row in weighted.values()) / total_appearances if total_appearances else 0.0
+    ejection_baseline = sum(row["ejected"] for row in weighted.values()) / total_appearances if total_appearances else 0.0
+
+    # A prior of 1.5 goals over eight contextual expected team goals smooths
+    # sparse scorers while preserving the relative confirmed-sheet evidence.
+    shares = {
+        name: (row["goals"] + 1.5) / (row["exposure"] + 8.0)
+        for name, row in weighted.items()
+    }
+    share_total = sum(shares.values())
+    rows = []
+    for name in squad:
+        row = weighted[name]
+        mean = expected_team_goals * shares[name] / share_total
+        appearances = int(row["actual_appearances"])
+        # Eight weighted appearances of shared team discipline is deliberately
+        # conservative for rare cards and prevents zero-history certainty.
+        two_minute_probability = (row["two_minute"] + 8 * two_minute_baseline) / (row["appearances"] + 8)
+        ejection_probability = (row["ejected"] + 16 * ejection_baseline) / (row["appearances"] + 16)
+        rows.append(
+            {
+                "name": name,
+                "appearances": appearances,
+                "expected_goals": round(mean, 2),
+                "one_or_more_goals_probability": round(_poisson_at_least(mean, 1), 4),
+                "three_or_more_goals_probability": round(_poisson_at_least(mean, 3), 4),
+                "two_minute_probability": round(two_minute_probability, 4),
+                "ejection_probability": round(ejection_probability, 4),
+                "confidence": "strong" if appearances >= 10 else "moderate" if appearances >= 5 else "exploratory",
+            }
+        )
+    return sorted(rows, key=lambda row: (-row["expected_goals"], row["name"]))
+
+
 def _poisson_cdf(mean: float) -> list[float]:
     probability = exp(-mean)
     total = probability

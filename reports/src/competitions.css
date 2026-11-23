@@ -129,6 +129,20 @@
 .fixture-grid article span { color: #64748b; font-size: .74rem; }
 .fixture-grid .outcome-probabilities b { color: #0f172a; }
 
+.player-forecast-section { margin-top: 1.25rem; }
+.player-forecast-context { display: grid; gap: .25rem; margin: .8rem 0; padding: .8rem 1rem; background: #fff7ed; border: 1px solid #fed7aa; border-radius: 10px; color: #7c2d12; }
+.player-forecast-context strong { font-size: .88rem; }
+.player-forecast-context span, .forecast-disclosure { font-size: .78rem; line-height: 1.45; }
+.player-forecast-wrap { border: 1px solid #e2e8f0; border-radius: 12px; }
+.player-forecast-table { min-width: 720px; }
+.player-forecast-table td small { display: block; margin-top: .12rem; color: #64748b; font-size: .7rem; }
+.projection-primary { color: #1d4ed8; font-weight: 800; }
+.forecast-confidence { display: inline-block; padding: .16rem .42rem; border-radius: 999px; font-size: .68rem; font-weight: 800; }
+.forecast-confidence.strong { background: #dcfce7; color: #166534; }
+.forecast-confidence.moderate { background: #fef3c7; color: #92400e; }
+.forecast-confidence.exploratory { background: #f1f5f9; color: #475569; }
+.forecast-disclosure { margin: .65rem 0 0; color: #64748b; }
+
 /* Season profile */
 .season-shell .hero { background: linear-gradient(120deg, #eff6ff, #fff7ed); }
 .annual-summary { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: .6rem; margin: 1.25rem 0; padding: 1rem; background: #0f2b52; border-radius: 14px; color: #f8fafc; }

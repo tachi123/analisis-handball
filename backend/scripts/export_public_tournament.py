@@ -18,7 +18,15 @@ from app.database import SessionLocal
 from app.models import Match, ScheduledMatch, TournamentStage
 from app.services.standings_service import compute_standings, load_point_rules
 from app.services.statistics_service import club_statistics, player_statistics
-from app.services.tournament_forecast_service import HistoricalResult, RemainingFixture, build_forecast
+from app.services.tournament_forecast_service import (
+    HistoricalResult,
+    PlayerMatchObservation,
+    RemainingFixture,
+    _expected_goals,
+    _fit_goal_model,
+    build_forecast,
+    build_player_match_forecast,
+)
 from app.services.tournament_insights_service import ObservedMatch, club_insights
 
 STAGE_ID = int(os.getenv("PUBLIC_TOURNAMENT_STAGE_ID", "9"))
@@ -29,6 +37,16 @@ PUBLIC_COMPETITIONS: tuple[dict[str, Any], ...] = (
     {"key": "apertura-zona-b-2026", "stage_id": 11, "label": "Apertura 2026 · Zona B", "competition": "Apertura 2026", "zone": "B"},
 )
 FORECAST_KEY = "permanencia-2026"
+
+# Confirmed by the SAPA staff for the 2026 Permanencia final round.  Match the
+# official-sheet spelling through stable surname/first-name fragments so public
+# output uses the registered name, never a nickname typed into the report.
+SAPA_LANUS_SQUAD_TOKENS = (
+    "sarrailh", "gonzalez", "ramirezlorca", "ruano", "romeroboeris", "ferrari",
+    "ramireznicolas", "romanello", "delpieri", "correa", "chavez",
+    "molloskripnikstreleckijuan", "molloskripnikstreleckilucian", "ramirezgaston",
+    "grisolia", "martinez",
+)
 
 
 def _standings_rows(standings: dict[str, Any]) -> list[dict[str, Any]]:
@@ -125,6 +143,14 @@ def _forecast_rows(db: Any, stage_id: int, standings: dict[str, Any]) -> dict[st
     forecast = build_forecast(standings["teams"], history, fixtures)
     for team in forecast["teams"]:
         team["campaign"] = sorted(campaign[team["club"]], key=lambda match: match["round"])
+    sapa_fixture = next(
+        (fixture for fixture in fixtures if _is_sapa(fixture.home) or _is_sapa(fixture.away)),
+        None,
+    )
+    if sapa_fixture is not None:
+        player_forecast = _player_forecast_rows(db, scheduled, standings, history, sapa_fixture)
+        if player_forecast is not None:
+            forecast["player_forecast"] = player_forecast
     return forecast
 
 
@@ -293,6 +319,70 @@ def _is_sapa(value: str) -> bool:
     return _normalize(value) == "sapa"
 
 
+def _is_selected_sapa_player(name: str) -> bool:
+    normalized = _normalize(name)
+    return any(token in normalized for token in SAPA_LANUS_SQUAD_TOKENS)
+
+
+def _player_forecast_rows(
+    db: Any,
+    scheduled: list[ScheduledMatch],
+    standings: dict[str, Any],
+    history: list[HistoricalResult],
+    fixture: RemainingFixture,
+) -> dict[str, Any] | None:
+    """Build a selected-SAPA-player forecast for the pending Lanús fixture."""
+    if not (_is_sapa(fixture.home) or _is_sapa(fixture.away)):
+        return None
+
+    teams = [row["name"] for row in standings["teams"]]
+    model = _fit_goal_model(teams, history)
+    home_expected, away_expected = _expected_goals(fixture.home, fixture.away, model)
+    expected_sapa_goals = home_expected if _is_sapa(fixture.home) else away_expected
+    observations: list[PlayerMatchObservation] = []
+    selected_players: dict[str, str] = {}
+    for item in scheduled:
+        match, snapshot, home_score, away_score = _fixture_state(db, item)
+        if snapshot is None or home_score is None or away_score is None:
+            continue
+        home, away = _club_name(item.home_registration), _club_name(item.away_registration)
+        if not (_is_sapa(home) or _is_sapa(away)):
+            continue
+        expected_home, expected_away = _expected_goals(home, away, model)
+        sapa_side = "home" if _is_sapa(home) else "away"
+        expected = expected_home if sapa_side == "home" else expected_away
+        for player in snapshot.players:
+            if player.side != sapa_side or not _is_selected_sapa_player(player.name):
+                continue
+            # Official PDFs occasionally abbreviate a given name differently.
+            # Reconciliation gives us the stable player identity; retain the
+            # first public official spelling as the display label.
+            player_key = f"player:{player.player_id}" if player.player_id is not None else _normalize(player.name)
+            selected_players.setdefault(player_key, player.name)
+            observations.append(
+                PlayerMatchObservation(
+                    name=player_key,
+                    round_number=item.round.round_number,
+                    goals=player.official_goals,
+                    two_minute=player.official_2min > 0,
+                    ejected=player.official_red > 0 or player.official_blue > 0,
+                    expected_team_goals=expected,
+                )
+            )
+    if not selected_players:
+        return None
+    players = build_player_match_forecast(sorted(selected_players), observations, expected_sapa_goals)
+    for player in players:
+        player["name"] = selected_players[player["name"]]
+    return {
+        "team": "S.A.P.A.",
+        "opponent": fixture.away if _is_sapa(fixture.home) else fixture.home,
+        "location": "home" if _is_sapa(fixture.home) else "away",
+        "expected_team_goals": round(expected_sapa_goals, 2),
+        "players": players,
+    }
+
+
 def build_competition(entry: dict[str, Any]) -> dict[str, Any]:
     stage_id = int(entry["stage_id"])
     with SessionLocal() as db:
@@ -368,6 +458,7 @@ def build_forecast_document(stage_id: int = 9, key: str = FORECAST_KEY) -> dict[
         "points_rule": forecast["points_rule"],
         "teams": forecast["teams"],
         "fixtures": forecast["fixtures"],
+        **({"player_forecast": forecast["player_forecast"]} if "player_forecast" in forecast else {}),
         "rival_profile": {
             "club": rival,
             "competitions": [
