@@ -1,6 +1,6 @@
 {
   "schema_version": "tournaments-v1",
-  "generated_at": "2026-11-23",
+  "generated_at": "2026-11-25",
   "tournaments": [
     {
       "key": "permanencia-2026",
@@ -8,35 +8,30 @@
       "competition": "Permanencia 2026",
       "zone": null,
       "season": 2026,
-      "status": "in_progress",
+      "status": "finished",
       "coverage": {
         "matches_total": 120,
-        "matches_counted": 118,
-        "planillas_confirmed": 110,
+        "matches_counted": 120,
+        "planillas_confirmed": 112,
         "reported_only": 7,
         "suspended": 1,
-        "pending": 2,
+        "pending": 0,
         "rounds_played": 15,
         "rounds_total": 15,
-        "status": "partial",
-        "label": "118 de 120 partidos con resultado · 110 planillas confirmadas · 1 suspendido"
+        "status": "complete",
+        "label": "120 de 120 partidos con resultado · 112 planillas confirmadas · 1 suspendido"
       },
-      "updated_at": "2026-11-23",
+      "updated_at": "2026-11-25",
       "file": "tournament_permanencia-2026.json",
       "forecast_file": "forecast_permanencia-2026.json",
       "summary": {
         "sapa": {
-          "position": 5,
-          "points": 35,
-          "played": 14
+          "position": 3,
+          "points": 36,
+          "played": 15
         }
       },
-      "next_match": {
-        "round": 15,
-        "date": "2026-11-22",
-        "opponent": "Lanús C",
-        "location": "away"
-      }
+      "next_match": null
     },
     {
       "key": "apertura-zona-a-2026",
@@ -57,7 +52,7 @@
         "status": "complete",
         "label": "120 de 120 partidos con resultado · 116 planillas confirmadas"
       },
-      "updated_at": "2026-11-23",
+      "updated_at": "2026-11-25",
       "file": "tournament_apertura-zona-a-2026.json",
       "forecast_file": null,
       "summary": {
@@ -88,7 +83,7 @@
         "status": "complete",
         "label": "120 de 120 partidos con resultado · 119 planillas confirmadas · 1 suspendido"
       },
-      "updated_at": "2026-11-23",
+      "updated_at": "2026-11-25",
       "file": "tournament_apertura-zona-b-2026.json",
       "forecast_file": null,
       "summary": {

@@ -8,31 +8,32 @@ const apertura = decodePublicCompetition(read('tournament_apertura-zona-b-2026.j
 const permanencia = decodePublicCompetition(read('tournament_permanencia-2026.json'))
 
 describe('Lanús 2026 season calculations', () => {
-  it('collects every match, including the pending final round', () => {
+  it('collects every match, including the confirmed final round', () => {
     const aperturaMatches = seasonMatches(apertura, 'Lanús C')
     const permanenciaMatches = seasonMatches(permanencia, 'Lanús C')
     expect(aperturaMatches).toHaveLength(15)
     expect(permanenciaMatches).toHaveLength(15)
-    const pending = permanenciaMatches.find((match) => match.result === 'pending')
-    expect(pending?.round).toBe(15)
-    expect(pending?.opponent).toBe('S.A.P.A.')
-    expect(pending?.location).toBe('home')
+    const final = permanenciaMatches.find((match) => match.round === 15)
+    expect(final?.result).toBe('win')
+    expect(final?.opponent).toBe('S.A.P.A.')
+    expect(final?.goalsFor).toBe(31)
+    expect(final?.goalsAgainst).toBe(30)
   })
 
   it('adds the annual totals without merging tables', () => {
     const totals = annualTotals([apertura, permanencia], 'Lanús C')
-    expect(totals.played).toBe(29)
-    expect(totals.points).toBe(60)
-    expect(totals.maxPoints).toBe(87)
-    expect(totals.goalsFor).toBe(800)
-    expect(totals.goalsAgainst).toBe(766)
+    expect(totals.played).toBe(30)
+    expect(totals.points).toBe(63)
+    expect(totals.maxPoints).toBe(90)
+    expect(totals.goalsFor).toBe(831)
+    expect(totals.goalsAgainst).toBe(796)
   })
 
   it('groups the annual scorers by normalized name', () => {
     const scorers = seasonScorers([apertura, permanencia], 'Lanús C')
     const szymborski = scorers.find((row) => row.name.toLowerCase().includes('szymborski') && row.name.toLowerCase().includes('lautaro'))
-    expect(szymborski?.goals).toBe(116)
-    expect(szymborski?.appearances).toBe(27)
+    expect(szymborski?.goals).toBe(119)
+    expect(szymborski?.appearances).toBe(28)
     expect(szymborski?.byCompetition).toHaveLength(2)
   })
 
@@ -49,16 +50,16 @@ describe('Lanús 2026 season calculations', () => {
   it('describes the attack composition without claiming causality', () => {
     const previous = seasonScorers([apertura], 'Lanús C')
     const current = seasonScorers([permanencia], 'Lanús C')
-    const composition = attackComposition(previous, current, 380, 420)
+    const composition = attackComposition(previous, current, 380, 451)
 
     expect(composition.retained.players).toBe(19)
     expect(composition.retained.previousGoals).toBe(306)
-    expect(composition.retained.currentGoals).toBe(330)
+    expect(composition.retained.currentGoals).toBe(347)
     expect(composition.departed.goals).toBe(74)
-    expect(composition.arrived.goals).toBe(90)
+    expect(composition.arrived.goals).toBe(104)
     expect(composition.arrived.players).toBe(3)
     expect(composition.arrived.details[0].name).toContain('Barreto')
     expect(composition.concentration.previous.top3).toBeCloseTo(0.405, 3)
-    expect(composition.concentration.current.top5).toBeCloseTo(0.590, 3)
+    expect(composition.concentration.current.top5).toBeCloseTo(0.594, 3)
   })
 })

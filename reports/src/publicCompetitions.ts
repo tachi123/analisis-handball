@@ -228,6 +228,15 @@ export type PlayerMatchForecast = {
   }>
 }
 
+export type ForecastArchive = {
+  key: string
+  title: string
+  captured_at: string
+  fixture: { round: number; date: string | null; home: string; away: string }
+  result: { home_goals: number; away_goals: number }
+  forecast: PublicForecast
+}
+
 export type PublicForecast = {
   schema_version: 'forecast-v1'
   public_key: string
@@ -240,6 +249,7 @@ export type PublicForecast = {
   teams: ForecastTeam[]
   fixtures: ForecastFixture[]
   player_forecast?: PlayerMatchForecast
+  archives: ForecastArchive[]
   rival_profile: { club: string | null; competitions: Array<{ key: string; label: string }> }
 }
 
@@ -589,7 +599,7 @@ export function decodePublicCompetition(value: unknown): PublicCompetition {
 
 export function decodePublicForecast(value: unknown): PublicForecast {
   if (!isRecord(value)) throw new Error('The public forecast is not a JSON object.')
-  assertFields(value, ['schema_version', 'public_key', 'competition', 'tournament', 'season', 'updated_at', 'coverage', 'points_rule', 'teams', 'fixtures', 'player_forecast', 'rival_profile'], 'forecast')
+  assertFields(value, ['schema_version', 'public_key', 'competition', 'tournament', 'season', 'updated_at', 'coverage', 'points_rule', 'teams', 'fixtures', 'player_forecast', 'archives', 'rival_profile'], 'forecast')
   if (value.schema_version !== 'forecast-v1') throw new Error('Unsupported public forecast version.')
   if (!Array.isArray(value.teams) || !Array.isArray(value.fixtures)) throw new Error('The public forecast has invalid lists.')
   if (!isRecord(value.rival_profile)) throw new Error('The public forecast has an invalid rival profile.')
@@ -623,6 +633,32 @@ export function decodePublicForecast(value: unknown): PublicForecast {
       }),
     }
   }
+  const archives: ForecastArchive[] = value.archives === undefined ? [] : (() => {
+    if (!Array.isArray(value.archives)) throw new Error('The public forecast has an invalid archive list.')
+    return value.archives.map((archive) => {
+      if (!isRecord(archive)) throw new Error('The public forecast has an invalid archive.')
+      assertFields(archive, ['key', 'title', 'captured_at', 'fixture', 'result', 'forecast'], 'forecast archive')
+      if (!isRecord(archive.fixture) || !isRecord(archive.result)) throw new Error('The public forecast has an invalid archive match.')
+      assertFields(archive.fixture, ['round', 'date', 'home', 'away'], 'forecast archive fixture')
+      assertFields(archive.result, ['home_goals', 'away_goals'], 'forecast archive result')
+      return {
+        key: assertString(archive.key, 'forecast archive key'),
+        title: assertString(archive.title, 'forecast archive title'),
+        captured_at: assertString(archive.captured_at, 'forecast archive capture date'),
+        fixture: {
+          round: assertNumber(archive.fixture.round, 'forecast archive fixture round'),
+          date: assertNullableString(archive.fixture.date, 'forecast archive fixture date'),
+          home: assertString(archive.fixture.home, 'forecast archive fixture home'),
+          away: assertString(archive.fixture.away, 'forecast archive fixture away'),
+        },
+        result: {
+          home_goals: assertNumber(archive.result.home_goals, 'forecast archive home result'),
+          away_goals: assertNumber(archive.result.away_goals, 'forecast archive away result'),
+        },
+        forecast: decodePublicForecast(archive.forecast),
+      }
+    })
+  })()
   return {
     schema_version: 'forecast-v1',
     public_key: assertString(value.public_key, 'public key'),
@@ -679,6 +715,7 @@ export function decodePublicForecast(value: unknown): PublicForecast {
       }
     }),
     ...(playerForecast ? { player_forecast: playerForecast } : {}),
+    archives,
     rival_profile: {
       club: assertNullableString(value.rival_profile.club, 'rival club'),
       competitions: value.rival_profile.competitions.map((item) => {

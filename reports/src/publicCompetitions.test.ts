@@ -160,4 +160,18 @@ describe('decodePublicForecast', () => {
     const poisoned = { ...validForecast, teams: [{ ...validForecast.teams[0], raw_payload: 'x' }] }
     expect(() => decodePublicForecast(poisoned)).toThrow(/restricted field/)
   })
+
+  it('decodes a public pre-match forecast archive', () => {
+    const decoded = decodePublicForecast({
+      ...validForecast,
+      archives: [{
+        key: 'lanus-sapa', title: 'Pronóstico previo', captured_at: '2026-11-23',
+        fixture: { round: 15, date: '2026-11-22', home: 'Lanús C', away: 'S.A.P.A.' },
+        result: { home_goals: 31, away_goals: 30 },
+        forecast: validForecast,
+      }],
+    })
+    expect(decoded.archives[0].result.away_goals).toBe(30)
+    expect(decoded.archives[0].forecast.player_forecast).toBeUndefined()
+  })
 })

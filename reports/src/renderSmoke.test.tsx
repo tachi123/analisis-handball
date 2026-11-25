@@ -31,13 +31,14 @@ describe('public competition views render with the shipped artifacts', () => {
     expect(html.indexOf('Rachas y extremos')).toBeLessThan(html.indexOf('Tabla de posiciones'))
   })
 
-  it('renders the podium forecast with green/yellow/red campaign pills', () => {
+  it('renders the completed closing view with its preserved pre-match appendix', () => {
     const html = renderToString(<Forecast forecast={forecast} tournament={permanencia} onBack={noop} onHome={noop} onTournament={noop} onSeason={noop} />)
-    expect(html).toContain('Panorama de podio')
+    expect(html).toContain('Cierre')
+    expect(html).toContain('confirmado')
+    expect(html).toContain('Anexo reutilizable')
+    expect(html).toContain('Resultado final confirmado')
     expect(html).toContain('S.A.P.A.')
-    expect(html).toContain('Últimos 5')
-    expect(html).toContain('result-pill win')
-    expect(html).toContain('result-pill loss')
+    expect(html).toContain('Pronóstico personal de la convocatoria')
   })
 
   it('renders the full annual profile with every match', () => {
@@ -48,7 +49,7 @@ describe('public competition views render with the shipped artifacts', () => {
     expect(html).toContain('Continuidad')
     expect(html).toContain('Composición del ataque')
     expect(html).toContain('Barreto')
-    expect(html).toContain('21,4%')
+    expect(html).toContain('15,5%')
     expect(html).toContain('F1')
     expect(html).toContain('F15')
   })

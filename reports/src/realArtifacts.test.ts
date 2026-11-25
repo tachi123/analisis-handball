@@ -17,10 +17,12 @@ describe('shipped public artifacts', () => {
     }
   })
 
-  it('decode the forecast and the legacy fallback', () => {
+  it('decodes the completed forecast and retains its pre-match archive', () => {
     const forecast = decodePublicForecast(read('forecast_permanencia-2026.json'))
-    expect(forecast.teams.length).toBe(16)
-    expect(forecast.rival_profile.club).toBe('Lanús C')
+    expect(forecast.teams).toHaveLength(0)
+    expect(forecast.archives).toHaveLength(1)
+    expect(forecast.archives[0].forecast.teams).toHaveLength(16)
+    expect(forecast.archives[0].result).toEqual({ home_goals: 31, away_goals: 30 })
     const legacy = decodePublicTournament(read('tournament.json'))
     expect(legacy.forecast?.points_rule?.win).toBe(3)
   })

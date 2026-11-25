@@ -2,16 +2,29 @@
   "schema_version": "tournament-v2",
   "tournament": "Torneo Permanencia 2026 3ªM",
   "season": 2026,
-  "updated_at": "2026-11-23",
+  "updated_at": "2026-11-25",
   "coverage": {
     "rounds_played": 15,
     "rounds_total": 15,
-    "status": "partial",
+    "status": "complete",
     "label": "Cubre las 15 fechas con resultados cargados."
   },
   "standings": [
     {
       "pos": 1,
+      "club": "Lanús C",
+      "played": 15,
+      "won": 12,
+      "drawn": 1,
+      "lost": 2,
+      "penalized": 0,
+      "goals_for": 451,
+      "goals_against": 386,
+      "goal_difference": 65,
+      "points": 40
+    },
+    {
+      "pos": 2,
       "club": "Palermo Handball",
       "played": 15,
       "won": 11,
@@ -24,20 +37,20 @@
       "points": 37
     },
     {
-      "pos": 2,
-      "club": "Lanús C",
-      "played": 14,
-      "won": 11,
+      "pos": 3,
+      "club": "S.A.P.A.",
+      "played": 15,
+      "won": 10,
       "drawn": 1,
-      "lost": 2,
+      "lost": 4,
       "penalized": 0,
-      "goals_for": 420,
-      "goals_against": 356,
-      "goal_difference": 64,
-      "points": 37
+      "goals_for": 413,
+      "goals_against": 380,
+      "goal_difference": 33,
+      "points": 36
     },
     {
-      "pos": 3,
+      "pos": 4,
       "club": "Municipalidad de Vicente López C",
       "played": 15,
       "won": 10,
@@ -50,7 +63,7 @@
       "points": 35
     },
     {
-      "pos": 4,
+      "pos": 5,
       "club": "S.A.G. Polvorines D",
       "played": 15,
       "won": 10,
@@ -63,20 +76,20 @@
       "points": 35
     },
     {
-      "pos": 5,
-      "club": "S.A.P.A.",
-      "played": 14,
-      "won": 10,
+      "pos": 6,
+      "club": "Municipalidad de Pilar",
+      "played": 15,
+      "won": 8,
       "drawn": 1,
-      "lost": 3,
+      "lost": 6,
       "penalized": 0,
-      "goals_for": 383,
-      "goals_against": 349,
-      "goal_difference": 34,
-      "points": 35
+      "goals_for": 385,
+      "goals_against": 376,
+      "goal_difference": 9,
+      "points": 32
     },
     {
-      "pos": 6,
+      "pos": 7,
       "club": "Banfield B",
       "played": 15,
       "won": 8,
@@ -89,7 +102,7 @@
       "points": 32
     },
     {
-      "pos": 7,
+      "pos": 8,
       "club": "Muñiz Handball B",
       "played": 15,
       "won": 8,
@@ -102,7 +115,7 @@
       "points": 31
     },
     {
-      "pos": 8,
+      "pos": 9,
       "club": "Club Deportivo Morón",
       "played": 15,
       "won": 7,
@@ -113,19 +126,6 @@
       "goals_against": 407,
       "goal_difference": -8,
       "points": 30
-    },
-    {
-      "pos": 9,
-      "club": "Municipalidad de Pilar",
-      "played": 14,
-      "won": 7,
-      "drawn": 1,
-      "lost": 6,
-      "penalized": 0,
-      "goals_for": 359,
-      "goals_against": 352,
-      "goal_difference": 7,
-      "points": 29
     },
     {
       "pos": 10,
@@ -182,15 +182,15 @@
     {
       "pos": 14,
       "club": "U.N.La.M.",
-      "played": 14,
+      "played": 15,
       "won": 4,
       "drawn": 0,
-      "lost": 10,
+      "lost": 11,
       "penalized": 0,
-      "goals_for": 294,
-      "goals_against": 344,
-      "goal_difference": -50,
-      "points": 22
+      "goals_for": 318,
+      "goals_against": 370,
+      "goal_difference": -52,
+      "points": 23
     },
     {
       "pos": 15,
@@ -276,6 +276,17 @@
       "goals_per_game": 7.82
     },
     {
+      "name": "Vergara, Braian Ezequiel",
+      "club": "Municipalidad de Pilar",
+      "appearances": 14,
+      "goals": 83,
+      "yellow": 0,
+      "two_min": 5,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 5.93
+    },
+    {
       "name": "Innella, Gaston",
       "club": "Palermo Handball",
       "appearances": 14,
@@ -298,26 +309,37 @@
       "goals_per_game": 5.43
     },
     {
-      "name": "Vergara, Braian Ezequiel",
-      "club": "Municipalidad de Pilar",
-      "appearances": 13,
-      "goals": 76,
-      "yellow": 0,
-      "two_min": 5,
-      "red": 1,
-      "blue": 0,
-      "goals_per_game": 5.85
-    },
-    {
       "name": "Delpieri, Mateo",
       "club": "S.A.P.A.",
-      "appearances": 14,
-      "goals": 73,
+      "appearances": 15,
+      "goals": 74,
       "yellow": 2,
       "two_min": 7,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 5.21
+      "goals_per_game": 4.93
+    },
+    {
+      "name": "Barreto, Mariano Nicolas",
+      "club": "Lanús C",
+      "appearances": 15,
+      "goals": 70,
+      "yellow": 1,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 4.67
+    },
+    {
+      "name": "Gomez, Leandro Luis Nicolas",
+      "club": "U.N.La.M.",
+      "appearances": 13,
+      "goals": 69,
+      "yellow": 0,
+      "two_min": 6,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 5.31
     },
     {
       "name": "Ferrari, Felipe",
@@ -353,6 +375,17 @@
       "goals_per_game": 5.08
     },
     {
+      "name": "Ayala, Axel Tomas Gabr",
+      "club": "Lanús C",
+      "appearances": 15,
+      "goals": 65,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 4.33
+    },
+    {
       "name": "Ferrante, Rodrigo",
       "club": "Club Deportivo Morón",
       "appearances": 14,
@@ -375,15 +408,15 @@
       "goals_per_game": 4.5
     },
     {
-      "name": "Gomez, Leandro Luis Nicolas",
-      "club": "U.N.La.M.",
-      "appearances": 12,
-      "goals": 63,
+      "name": "Ramos, Lautaro Manuel",
+      "club": "Municipalidad de Pilar",
+      "appearances": 14,
+      "goals": 61,
       "yellow": 0,
-      "two_min": 5,
+      "two_min": 6,
       "red": 1,
       "blue": 0,
-      "goals_per_game": 5.25
+      "goals_per_game": 4.36
     },
     {
       "name": "Lucero, Mateo Gabriel",
@@ -397,26 +430,15 @@
       "goals_per_game": 4.36
     },
     {
-      "name": "Ayala, Axel Tomas Gabr",
-      "club": "Lanús C",
+      "name": "Roldan, Diego Tomas",
+      "club": "Municipalidad de Pilar",
       "appearances": 14,
-      "goals": 61,
+      "goals": 59,
       "yellow": 0,
       "two_min": 0,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 4.36
-    },
-    {
-      "name": "Barreto, Mariano Nicolas",
-      "club": "Lanús C",
-      "appearances": 14,
-      "goals": 60,
-      "yellow": 1,
-      "two_min": 3,
-      "red": 1,
-      "blue": 0,
-      "goals_per_game": 4.29
+      "goals_per_game": 4.21
     },
     {
       "name": "Magallan, Gonzalo Hernan",
@@ -425,17 +447,6 @@
       "goals": 56,
       "yellow": 0,
       "two_min": 1,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 4.31
-    },
-    {
-      "name": "Roldan, Diego Tomas",
-      "club": "Municipalidad de Pilar",
-      "appearances": 13,
-      "goals": 56,
-      "yellow": 0,
-      "two_min": 0,
       "red": 0,
       "blue": 0,
       "goals_per_game": 4.31
@@ -463,17 +474,6 @@
       "goals_per_game": 4.23
     },
     {
-      "name": "Ramos, Lautaro Manuel",
-      "club": "Municipalidad de Pilar",
-      "appearances": 13,
-      "goals": 55,
-      "yellow": 0,
-      "two_min": 5,
-      "red": 1,
-      "blue": 0,
-      "goals_per_game": 4.23
-    },
-    {
       "name": "Ruiz, Juan Agustin",
       "club": "S.A.G. Polvorines D",
       "appearances": 12,
@@ -483,6 +483,17 @@
       "red": 0,
       "blue": 0,
       "goals_per_game": 4.5
+    },
+    {
+      "name": "Martinez, Milo Ulises",
+      "club": "S.A.P.A.",
+      "appearances": 12,
+      "goals": 53,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 4.42
     },
     {
       "name": "Navarro, Jonatan Gonzalo",
@@ -507,17 +518,6 @@
       "goals_per_game": 4.33
     },
     {
-      "name": "Martinez, Milo Ulises",
-      "club": "S.A.P.A.",
-      "appearances": 11,
-      "goals": 52,
-      "yellow": 0,
-      "two_min": 1,
-      "red": 1,
-      "blue": 0,
-      "goals_per_game": 4.73
-    },
-    {
       "name": "Gobbi, Ignacio",
       "club": "Municipalidad de Vicente López C",
       "appearances": 10,
@@ -527,6 +527,17 @@
       "red": 0,
       "blue": 0,
       "goals_per_game": 5.2
+    },
+    {
+      "name": "Romero Boeris, Sebastian",
+      "club": "S.A.P.A.",
+      "appearances": 9,
+      "goals": 50,
+      "yellow": 1,
+      "two_min": 11,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 5.56
     },
     {
       "name": "Encina, Dante Daniel",
@@ -551,6 +562,17 @@
       "goals_per_game": 3.62
     },
     {
+      "name": "Saune, Francisco Javier",
+      "club": "Municipalidad de Pilar",
+      "appearances": 8,
+      "goals": 46,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 1,
+      "blue": 1,
+      "goals_per_game": 5.75
+    },
+    {
       "name": "Fernandez, Agustin Gabriel",
       "club": "Ituzaingó",
       "appearances": 7,
@@ -560,6 +582,28 @@
       "red": 0,
       "blue": 0,
       "goals_per_game": 6.57
+    },
+    {
+      "name": "Guccione, Nicolas",
+      "club": "Lanús C",
+      "appearances": 15,
+      "goals": 45,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.0
+    },
+    {
+      "name": "Szymborski, Lautaro",
+      "club": "Lanús C",
+      "appearances": 14,
+      "goals": 45,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 3.21
     },
     {
       "name": "Pallarini, Lautaro Adrian",
@@ -595,17 +639,6 @@
       "goals_per_game": 3.14
     },
     {
-      "name": "Guccione, Nicolas",
-      "club": "Lanús C",
-      "appearances": 14,
-      "goals": 44,
-      "yellow": 0,
-      "two_min": 4,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 3.14
-    },
-    {
       "name": "Delaloye, Mateo Valentin",
       "club": "Defensores de Moreno",
       "appearances": 14,
@@ -615,6 +648,17 @@
       "red": 1,
       "blue": 0,
       "goals_per_game": 3.07
+    },
+    {
+      "name": "Vazquez, Leonardo Ariel",
+      "club": "Lanús C",
+      "appearances": 13,
+      "goals": 43,
+      "yellow": 0,
+      "two_min": 5,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 3.31
     },
     {
       "name": "Lares, Joaquin Nahuel",
@@ -628,28 +672,6 @@
       "goals_per_game": 3.31
     },
     {
-      "name": "Szymborski, Lautaro",
-      "club": "Lanús C",
-      "appearances": 13,
-      "goals": 42,
-      "yellow": 0,
-      "two_min": 2,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 3.23
-    },
-    {
-      "name": "Romero Boeris, Sebastian",
-      "club": "S.A.P.A.",
-      "appearances": 8,
-      "goals": 42,
-      "yellow": 0,
-      "two_min": 10,
-      "red": 1,
-      "blue": 0,
-      "goals_per_game": 5.25
-    },
-    {
       "name": "Cabred, Lucas Fabrizio",
       "club": "Defensores de Moreno",
       "appearances": 13,
@@ -659,17 +681,6 @@
       "red": 0,
       "blue": 0,
       "goals_per_game": 3.15
-    },
-    {
-      "name": "Vazquez, Leonardo Ariel",
-      "club": "Lanús C",
-      "appearances": 12,
-      "goals": 41,
-      "yellow": 0,
-      "two_min": 5,
-      "red": 1,
-      "blue": 0,
-      "goals_per_game": 3.42
     },
     {
       "name": "Flores, Gonzalo Nahuel",
@@ -691,17 +702,6 @@
       "two_min": 4,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 5.86
-    },
-    {
-      "name": "Saune, Francisco Javier",
-      "club": "Municipalidad de Pilar",
-      "appearances": 7,
-      "goals": 41,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 1,
-      "blue": 1,
       "goals_per_game": 5.86
     },
     {
@@ -749,6 +749,17 @@
       "goals_per_game": 4.33
     },
     {
+      "name": "Vedia, Tomas",
+      "club": "Lanús C",
+      "appearances": 15,
+      "goals": 38,
+      "yellow": 0,
+      "two_min": 5,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.53
+    },
+    {
       "name": "Levy, Leonardo G.",
       "club": "Argentinos Juniors D",
       "appearances": 11,
@@ -769,6 +780,17 @@
       "red": 0,
       "blue": 0,
       "goals_per_game": 2.64
+    },
+    {
+      "name": "Pineiro, Dante",
+      "club": "U.N.La.M.",
+      "appearances": 10,
+      "goals": 36,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 3.6
     },
     {
       "name": "Scofano, Gian Luca",
@@ -837,6 +859,28 @@
       "goals_per_game": 3.4
     },
     {
+      "name": "Ramirez, Nicolas",
+      "club": "S.A.P.A.",
+      "appearances": 12,
+      "goals": 33,
+      "yellow": 2,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.75
+    },
+    {
+      "name": "Moreira, Adrian",
+      "club": "Lanús C",
+      "appearances": 6,
+      "goals": 33,
+      "yellow": 1,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 5.5
+    },
+    {
       "name": "Galvan, Juan Pablo",
       "club": "Club Deportivo Morón",
       "appearances": 13,
@@ -881,15 +925,15 @@
       "goals_per_game": 2.21
     },
     {
-      "name": "Vedia, Tomas",
-      "club": "Lanús C",
-      "appearances": 14,
+      "name": "Ramirez, Gaston",
+      "club": "S.A.P.A.",
+      "appearances": 12,
       "goals": 31,
       "yellow": 0,
-      "two_min": 4,
+      "two_min": 0,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 2.21
+      "goals_per_game": 2.58
     },
     {
       "name": "Dembinski, Santino Hernan",
@@ -927,13 +971,13 @@
     {
       "name": "Siesicki, Ivan Ariel",
       "club": "Lanús C",
-      "appearances": 14,
+      "appearances": 15,
       "goals": 30,
       "yellow": 0,
       "two_min": 0,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 2.14
+      "goals_per_game": 2.0
     },
     {
       "name": "Garcia, Emiliano Angel",
@@ -958,26 +1002,26 @@
       "goals_per_game": 2.73
     },
     {
-      "name": "Pineiro, Dante",
-      "club": "U.N.La.M.",
-      "appearances": 9,
+      "name": "Sarrailh, Pablo Eduardo",
+      "club": "S.A.P.A.",
+      "appearances": 10,
       "goals": 30,
       "yellow": 0,
       "two_min": 3,
-      "red": 0,
+      "red": 1,
       "blue": 0,
-      "goals_per_game": 3.33
+      "goals_per_game": 3.0
     },
     {
-      "name": "Ramirez, Nicolas",
-      "club": "S.A.P.A.",
-      "appearances": 11,
+      "name": "Gimenez Correa, Joaquin Gabri...",
+      "club": "Municipalidad de Pilar",
+      "appearances": 13,
       "goals": 29,
-      "yellow": 2,
-      "two_min": 2,
-      "red": 0,
+      "yellow": 1,
+      "two_min": 7,
+      "red": 2,
       "blue": 0,
-      "goals_per_game": 2.64
+      "goals_per_game": 2.23
     },
     {
       "name": "Hoyos, Alan Nahuel",
@@ -991,17 +1035,6 @@
       "goals_per_game": 3.62
     },
     {
-      "name": "Moreira, Adrian",
-      "club": "Lanús C",
-      "appearances": 5,
-      "goals": 29,
-      "yellow": 1,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 5.8
-    },
-    {
       "name": "Mendoza, Alexis Agustin",
       "club": "Muñiz Handball B",
       "appearances": 14,
@@ -1011,28 +1044,6 @@
       "red": 0,
       "blue": 0,
       "goals_per_game": 2.0
-    },
-    {
-      "name": "Ramirez, Gaston",
-      "club": "S.A.P.A.",
-      "appearances": 11,
-      "goals": 28,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 2.55
-    },
-    {
-      "name": "Sarrailh, Pablo Eduardo",
-      "club": "S.A.P.A.",
-      "appearances": 9,
-      "goals": 28,
-      "yellow": 0,
-      "two_min": 3,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 3.11
     },
     {
       "name": "Gomes Persello, Marcos Ezequ...",
@@ -1046,15 +1057,15 @@
       "goals_per_game": 3.5
     },
     {
-      "name": "Gimenez Correa, Joaquin Gabri...",
-      "club": "Municipalidad de Pilar",
-      "appearances": 12,
+      "name": "Chavez, Alexis Ezequiel",
+      "club": "S.A.P.A.",
+      "appearances": 9,
       "goals": 27,
-      "yellow": 1,
-      "two_min": 7,
-      "red": 2,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 1,
       "blue": 0,
-      "goals_per_game": 2.25
+      "goals_per_game": 3.0
     },
     {
       "name": "Sommer, Martin",
@@ -1068,6 +1079,28 @@
       "goals_per_game": 3.38
     },
     {
+      "name": "Almiron, Facundo Sebastian",
+      "club": "U.N.La.M.",
+      "appearances": 14,
+      "goals": 26,
+      "yellow": 1,
+      "two_min": 5,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.86
+    },
+    {
+      "name": "Mollo Skripnik Strelecki, Lucian...",
+      "club": "S.A.P.A.",
+      "appearances": 13,
+      "goals": 26,
+      "yellow": 1,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.0
+    },
+    {
       "name": "Brokoff, Mariano Alejandro",
       "club": "Argentinos Juniors D",
       "appearances": 13,
@@ -1077,28 +1110,6 @@
       "red": 0,
       "blue": 0,
       "goals_per_game": 2.0
-    },
-    {
-      "name": "Almiron, Facundo Sebastian",
-      "club": "U.N.La.M.",
-      "appearances": 13,
-      "goals": 26,
-      "yellow": 1,
-      "two_min": 5,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 2.0
-    },
-    {
-      "name": "Chavez, Alexis Ezequiel",
-      "club": "S.A.P.A.",
-      "appearances": 8,
-      "goals": 26,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 3.25
     },
     {
       "name": "Magallanes, Matias Andres",
@@ -1178,17 +1189,6 @@
       "goals_per_game": 5.0
     },
     {
-      "name": "Mollo Skripnik Strelecki, Lucian...",
-      "club": "S.A.P.A.",
-      "appearances": 12,
-      "goals": 24,
-      "yellow": 1,
-      "two_min": 2,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 2.0
-    },
-    {
       "name": "Maldonado, Joel Agustin",
       "club": "Banfield B",
       "appearances": 8,
@@ -1233,6 +1233,17 @@
       "goals_per_game": 1.64
     },
     {
+      "name": "Ferrari, Jonas Horacio",
+      "club": "S.A.P.A.",
+      "appearances": 12,
+      "goals": 23,
+      "yellow": 0,
+      "two_min": 7,
+      "red": 2,
+      "blue": 0,
+      "goals_per_game": 1.92
+    },
+    {
       "name": "Romero Canete, Alcides Antoni...",
       "club": "C.S. y D. Defensores de Banfield",
       "appearances": 12,
@@ -1255,6 +1266,28 @@
       "goals_per_game": 2.3
     },
     {
+      "name": "Torrico Camacho, Kevin Alan",
+      "club": "U.N.La.M.",
+      "appearances": 4,
+      "goals": 23,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 5.75
+    },
+    {
+      "name": "Roldan, Facundo Carlos",
+      "club": "Municipalidad de Pilar",
+      "appearances": 14,
+      "goals": 22,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 1.57
+    },
+    {
       "name": "Gimenez Asciutto, Mateo",
       "club": "Palermo Handball",
       "appearances": 14,
@@ -1275,6 +1308,17 @@
       "red": 0,
       "blue": 0,
       "goals_per_game": 1.57
+    },
+    {
+      "name": "Grisolia, Geronimo Gabriel",
+      "club": "S.A.P.A.",
+      "appearances": 11,
+      "goals": 22,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 2.0
     },
     {
       "name": "Garcia, Thiago Gabriel Anibal",
@@ -1332,34 +1376,12 @@
       "goals_per_game": 1.62
     },
     {
-      "name": "Ferrari, Jonas Horacio",
-      "club": "S.A.P.A.",
-      "appearances": 11,
-      "goals": 21,
-      "yellow": 0,
-      "two_min": 6,
-      "red": 2,
-      "blue": 0,
-      "goals_per_game": 1.91
-    },
-    {
       "name": "Rayan, Tomas Uriel",
       "club": "Argentinos Juniors D",
       "appearances": 10,
       "goals": 21,
       "yellow": 0,
       "two_min": 2,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 2.1
-    },
-    {
-      "name": "Grisolia, Geronimo Gabriel",
-      "club": "S.A.P.A.",
-      "appearances": 10,
-      "goals": 21,
-      "yellow": 0,
-      "two_min": 0,
       "red": 0,
       "blue": 0,
       "goals_per_game": 2.1
@@ -1400,13 +1422,13 @@
     {
       "name": "Diaz, Enrique Adrian",
       "club": "Lanús C",
-      "appearances": 14,
+      "appearances": 15,
       "goals": 20,
       "yellow": 0,
       "two_min": 4,
       "red": 1,
       "blue": 0,
-      "goals_per_game": 1.43
+      "goals_per_game": 1.33
     },
     {
       "name": "Toto, Miguel Ignacio",
@@ -1415,17 +1437,6 @@
       "goals": 20,
       "yellow": 0,
       "two_min": 7,
-      "red": 1,
-      "blue": 0,
-      "goals_per_game": 1.54
-    },
-    {
-      "name": "Roldan, Facundo Carlos",
-      "club": "Municipalidad de Pilar",
-      "appearances": 13,
-      "goals": 20,
-      "yellow": 0,
-      "two_min": 2,
       "red": 1,
       "blue": 0,
       "goals_per_game": 1.54
@@ -1651,18 +1662,29 @@
       "goals_per_game": 2.0
     },
     {
+      "name": "Elorga Studer, Julian Alexis",
+      "club": "Lanús C",
+      "appearances": 15,
+      "goals": 15,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
+    },
+    {
       "name": "Gonzalez, Ezequiel Matias",
       "club": "S.A.P.A.",
-      "appearances": 14,
+      "appearances": 15,
       "goals": 15,
       "yellow": 0,
       "two_min": 1,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 1.07
+      "goals_per_game": 1.0
     },
     {
-      "name": "Elorga Studer, Julian Alexis",
+      "name": "Szymborski, Ignacio",
       "club": "Lanús C",
       "appearances": 14,
       "goals": 15,
@@ -1673,15 +1695,15 @@
       "goals_per_game": 1.07
     },
     {
-      "name": "Szymborski, Ignacio",
-      "club": "Lanús C",
-      "appearances": 13,
+      "name": "Romanello, Matias Ezequiel",
+      "club": "U.N.La.M.",
+      "appearances": 12,
       "goals": 15,
       "yellow": 0,
-      "two_min": 0,
+      "two_min": 1,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 1.15
+      "goals_per_game": 1.25
     },
     {
       "name": "Mariscal, Benjamin Thiago",
@@ -1730,13 +1752,13 @@
     {
       "name": "Chena Ponce, Manuel Alberto",
       "club": "Lanús C",
-      "appearances": 9,
+      "appearances": 10,
       "goals": 15,
       "yellow": 0,
       "two_min": 2,
       "red": 1,
       "blue": 0,
-      "goals_per_game": 1.67
+      "goals_per_game": 1.5
     },
     {
       "name": "Luna, Leandro Nahuel",
@@ -1748,17 +1770,6 @@
       "red": 1,
       "blue": 0,
       "goals_per_game": 2.14
-    },
-    {
-      "name": "Torrico Camacho, Kevin Alan",
-      "club": "U.N.La.M.",
-      "appearances": 3,
-      "goals": 15,
-      "yellow": 0,
-      "two_min": 1,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 5.0
     },
     {
       "name": "Caceres, Nestor Matias",
@@ -1822,17 +1833,6 @@
       "goals": 13,
       "yellow": 0,
       "two_min": 7,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 1.18
-    },
-    {
-      "name": "Romanello, Matias Ezequiel",
-      "club": "U.N.La.M.",
-      "appearances": 11,
-      "goals": 13,
-      "yellow": 0,
-      "two_min": 1,
       "red": 0,
       "blue": 0,
       "goals_per_game": 1.18
@@ -2005,13 +2005,13 @@
     {
       "name": "Ruano, Matheo",
       "club": "S.A.P.A.",
-      "appearances": 14,
+      "appearances": 15,
       "goals": 10,
       "yellow": 0,
       "two_min": 0,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 0.71
+      "goals_per_game": 0.67
     },
     {
       "name": "Mazzola, Fausto",
@@ -2104,13 +2104,13 @@
     {
       "name": "Gagliardi, Juan Franco",
       "club": "Lanús C",
-      "appearances": 4,
+      "appearances": 5,
       "goals": 10,
       "yellow": 0,
       "two_min": 0,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 2.5
+      "goals_per_game": 2.0
     },
     {
       "name": "Tobares, Lisandro Joaquin",
@@ -2221,6 +2221,17 @@
       "red": 0,
       "blue": 0,
       "goals_per_game": 0.5
+    },
+    {
+      "name": "Mollo Skripnik Strelecki, Juan Ig...",
+      "club": "S.A.P.A.",
+      "appearances": 11,
+      "goals": 7,
+      "yellow": 1,
+      "two_min": 4,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.64
     },
     {
       "name": "Zabala, Gianfranco Luciano",
@@ -2344,6 +2355,17 @@
       "goals_per_game": 3.5
     },
     {
+      "name": "Salgado, Mariano Agustin",
+      "club": "U.N.La.M.",
+      "appearances": 14,
+      "goals": 6,
+      "yellow": 0,
+      "two_min": 4,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.43
+    },
+    {
       "name": "Fagioli, Federico Enzo",
       "club": "Club Deportivo Morón",
       "appearances": 13,
@@ -2357,13 +2379,13 @@
     {
       "name": "Inofre, Facundo Joel",
       "club": "Municipalidad de Pilar",
-      "appearances": 11,
+      "appearances": 12,
       "goals": 6,
       "yellow": 0,
       "two_min": 1,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 0.55
+      "goals_per_game": 0.5
     },
     {
       "name": "Choque, Leandro Ezequie",
@@ -2390,13 +2412,13 @@
     {
       "name": "Pereyra Galetti, Fernando Emm...",
       "club": "U.N.La.M.",
-      "appearances": 13,
+      "appearances": 14,
       "goals": 5,
       "yellow": 0,
       "two_min": 0,
       "red": 0,
       "blue": 0,
-      "goals_per_game": 0.38
+      "goals_per_game": 0.36
     },
     {
       "name": "Vazquez, Luciano Nahuel",
@@ -2410,6 +2432,17 @@
       "goals_per_game": 0.38
     },
     {
+      "name": "Paturlanne, Mateo Santino",
+      "club": "Municipalidad de Pilar",
+      "appearances": 11,
+      "goals": 5,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.45
+    },
+    {
       "name": "Wilberger Castelli, Matias Aleja...",
       "club": "Argentinos Juniors D",
       "appearances": 10,
@@ -2417,28 +2450,6 @@
       "yellow": 0,
       "two_min": 1,
       "red": 1,
-      "blue": 0,
-      "goals_per_game": 0.5
-    },
-    {
-      "name": "Mollo Skripnik Strelecki, Juan Ig...",
-      "club": "S.A.P.A.",
-      "appearances": 10,
-      "goals": 5,
-      "yellow": 1,
-      "two_min": 4,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.5
-    },
-    {
-      "name": "Paturlanne, Mateo Santino",
-      "club": "Municipalidad de Pilar",
-      "appearances": 10,
-      "goals": 5,
-      "yellow": 0,
-      "two_min": 1,
-      "red": 0,
       "blue": 0,
       "goals_per_game": 0.5
     },
@@ -2542,17 +2553,6 @@
       "goals_per_game": 2.5
     },
     {
-      "name": "Salgado, Mariano Agustin",
-      "club": "U.N.La.M.",
-      "appearances": 13,
-      "goals": 4,
-      "yellow": 0,
-      "two_min": 3,
-      "red": 1,
-      "blue": 0,
-      "goals_per_game": 0.31
-    },
-    {
       "name": "Postel, Matias Simon",
       "club": "S.A.G. Polvorines D",
       "appearances": 13,
@@ -2595,6 +2595,17 @@
       "red": 0,
       "blue": 0,
       "goals_per_game": 0.67
+    },
+    {
+      "name": "Romanello, Martin Esteban",
+      "club": "S.A.P.A.",
+      "appearances": 4,
+      "goals": 4,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 1.0
     },
     {
       "name": "Olivera, Lucas Enrique",
@@ -2654,11 +2665,22 @@
     {
       "name": "Cabelli, Lautaro Agustin",
       "club": "Lanús C",
-      "appearances": 13,
+      "appearances": 14,
       "goals": 3,
       "yellow": 0,
       "two_min": 1,
       "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.21
+    },
+    {
+      "name": "Lopardo, Brian Ezequiel",
+      "club": "U.N.La.M.",
+      "appearances": 13,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 2,
+      "red": 1,
       "blue": 0,
       "goals_per_game": 0.23
     },
@@ -2672,17 +2694,6 @@
       "red": 1,
       "blue": 0,
       "goals_per_game": 0.23
-    },
-    {
-      "name": "Lopardo, Brian Ezequiel",
-      "club": "U.N.La.M.",
-      "appearances": 12,
-      "goals": 3,
-      "yellow": 0,
-      "two_min": 2,
-      "red": 1,
-      "blue": 0,
-      "goals_per_game": 0.25
     },
     {
       "name": "Delmoro, Lucas",
@@ -2705,6 +2716,17 @@
       "red": 0,
       "blue": 0,
       "goals_per_game": 0.27
+    },
+    {
+      "name": "Mastinu, Martin Nicolas",
+      "club": "Municipalidad de Pilar",
+      "appearances": 10,
+      "goals": 3,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.3
     },
     {
       "name": "Farina, Martin Ezequiel",
@@ -2900,17 +2922,6 @@
       "goals": 2,
       "yellow": 0,
       "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.22
-    },
-    {
-      "name": "Mastinu, Martin Nicolas",
-      "club": "Municipalidad de Pilar",
-      "appearances": 9,
-      "goals": 2,
-      "yellow": 0,
-      "two_min": 1,
       "red": 0,
       "blue": 0,
       "goals_per_game": 0.22
@@ -3125,6 +3136,28 @@
       "goals_per_game": 0.07
     },
     {
+      "name": "Cordoba, Maximiliano Fabian",
+      "club": "Municipalidad de Pilar",
+      "appearances": 12,
+      "goals": 1,
+      "yellow": 0,
+      "two_min": 3,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.08
+    },
+    {
+      "name": "Siesicki, David Emmanuel",
+      "club": "Lanús C",
+      "appearances": 12,
+      "goals": 1,
+      "yellow": 2,
+      "two_min": 8,
+      "red": 1,
+      "blue": 0,
+      "goals_per_game": 0.08
+    },
+    {
       "name": "Martinez, Victor Emmanuel",
       "club": "Municipalidad de Pilar",
       "appearances": 12,
@@ -3143,28 +3176,6 @@
       "yellow": 0,
       "two_min": 2,
       "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.09
-    },
-    {
-      "name": "Cordoba, Maximiliano Fabian",
-      "club": "Municipalidad de Pilar",
-      "appearances": 11,
-      "goals": 1,
-      "yellow": 0,
-      "two_min": 3,
-      "red": 1,
-      "blue": 0,
-      "goals_per_game": 0.09
-    },
-    {
-      "name": "Siesicki, David Emmanuel",
-      "club": "Lanús C",
-      "appearances": 11,
-      "goals": 1,
-      "yellow": 2,
-      "two_min": 8,
-      "red": 1,
       "blue": 0,
       "goals_per_game": 0.09
     },
@@ -3244,17 +3255,6 @@
       "red": 0,
       "blue": 0,
       "goals_per_game": 0.25
-    },
-    {
-      "name": "Romanello, Martin Esteban",
-      "club": "S.A.P.A.",
-      "appearances": 3,
-      "goals": 1,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.33
     },
     {
       "name": "Bunjahed, Nicolas Ezequie",
@@ -3356,6 +3356,39 @@
       "goals_per_game": 1.0
     },
     {
+      "name": "Ramirez Lorca, Jaime Nahuel",
+      "club": "S.A.P.A.",
+      "appearances": 15,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Correa, Marcos Isauro",
+      "club": "S.A.P.A.",
+      "appearances": 15,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Fernandez, Eduardo Ismael",
+      "club": "Municipalidad de Pilar",
+      "appearances": 14,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
       "name": "Canovas De La Vega, Daniel Al...",
       "club": "Argentinos Juniors D",
       "appearances": 14,
@@ -3369,28 +3402,6 @@
     {
       "name": "Acevedo, Ruben Oscar",
       "club": "Muñiz Handball B",
-      "appearances": 14,
-      "goals": 0,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.0
-    },
-    {
-      "name": "Ramirez Lorca, Jaime Nahuel",
-      "club": "S.A.P.A.",
-      "appearances": 14,
-      "goals": 0,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.0
-    },
-    {
-      "name": "Correa, Marcos Isauro",
-      "club": "S.A.P.A.",
       "appearances": 14,
       "goals": 0,
       "yellow": 0,
@@ -3444,23 +3455,34 @@
       "goals_per_game": 0.0
     },
     {
-      "name": "Fernandez, Eduardo Ismael",
-      "club": "Municipalidad de Pilar",
-      "appearances": 13,
-      "goals": 0,
-      "yellow": 0,
-      "two_min": 1,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.0
-    },
-    {
       "name": "Galliani, Ivan Nicolas",
       "club": "Municipalidad de Tres de Febrero B",
       "appearances": 13,
       "goals": 0,
       "yellow": 0,
       "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Fretes, Lorenzo Raul",
+      "club": "U.N.La.M.",
+      "appearances": 12,
+      "goals": 0,
+      "yellow": 1,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
+      "name": "Aguilar, Tomas Agustin",
+      "club": "Lanús C",
+      "appearances": 12,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 2,
       "red": 0,
       "blue": 0,
       "goals_per_game": 0.0
@@ -3510,34 +3532,12 @@
       "goals_per_game": 0.0
     },
     {
-      "name": "Fretes, Lorenzo Raul",
-      "club": "U.N.La.M.",
-      "appearances": 11,
-      "goals": 0,
-      "yellow": 1,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.0
-    },
-    {
       "name": "Gallardo, Javier Rodrigo",
       "club": "C.S. y D. Defensores de Banfield",
       "appearances": 11,
       "goals": 0,
       "yellow": 0,
       "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.0
-    },
-    {
-      "name": "Aguilar, Tomas Agustin",
-      "club": "Lanús C",
-      "appearances": 11,
-      "goals": 0,
-      "yellow": 0,
-      "two_min": 2,
       "red": 0,
       "blue": 0,
       "goals_per_game": 0.0
@@ -3565,6 +3565,17 @@
       "goals_per_game": 0.0
     },
     {
+      "name": "Ferreyra De La Cruz, Gonzalo",
+      "club": "Municipalidad de Pilar",
+      "appearances": 9,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 0,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
       "name": "Arreigada, Francisco Valen",
       "club": "Muñiz Handball B",
       "appearances": 9,
@@ -3578,17 +3589,6 @@
     {
       "name": "Castillo, Javier Alejandro",
       "club": "Ituzaingó",
-      "appearances": 8,
-      "goals": 0,
-      "yellow": 0,
-      "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.0
-    },
-    {
-      "name": "Ferreyra De La Cruz, Gonzalo",
-      "club": "Municipalidad de Pilar",
       "appearances": 8,
       "goals": 0,
       "yellow": 0,
@@ -3763,6 +3763,17 @@
       "goals_per_game": 0.0
     },
     {
+      "name": "Rogers Ford, Joaquin Alejandr...",
+      "club": "Municipalidad de Pilar",
+      "appearances": 3,
+      "goals": 0,
+      "yellow": 0,
+      "two_min": 1,
+      "red": 0,
+      "blue": 0,
+      "goals_per_game": 0.0
+    },
+    {
       "name": "Taboada Moreira, Ian Carlo",
       "club": "Lanús C",
       "appearances": 3,
@@ -3813,17 +3824,6 @@
       "goals": 0,
       "yellow": 0,
       "two_min": 0,
-      "red": 0,
-      "blue": 0,
-      "goals_per_game": 0.0
-    },
-    {
-      "name": "Rogers Ford, Joaquin Alejandr...",
-      "club": "Municipalidad de Pilar",
-      "appearances": 2,
-      "goals": 0,
-      "yellow": 0,
-      "two_min": 1,
       "red": 0,
       "blue": 0,
       "goals_per_game": 0.0
@@ -3997,10 +3997,10 @@
   "clubs": [
     {
       "club": "Lanús C",
-      "appearances": 219,
-      "goals": 420,
+      "appearances": 235,
+      "goals": 451,
       "yellow": 4,
-      "two_min": 37,
+      "two_min": 38,
       "red": 5,
       "blue": 0,
       "players": 22
@@ -4014,6 +4014,16 @@
       "red": 6,
       "blue": 0,
       "players": 21
+    },
+    {
+      "club": "S.A.P.A.",
+      "appearances": 210,
+      "goals": 413,
+      "yellow": 7,
+      "two_min": 39,
+      "red": 6,
+      "blue": 0,
+      "players": 22
     },
     {
       "club": "Municipalidad de Vicente López C",
@@ -4046,16 +4056,6 @@
       "players": 21
     },
     {
-      "club": "S.A.P.A.",
-      "appearances": 194,
-      "goals": 383,
-      "yellow": 6,
-      "two_min": 37,
-      "red": 4,
-      "blue": 0,
-      "players": 22
-    },
-    {
       "club": "Club Deportivo Morón",
       "appearances": 203,
       "goals": 377,
@@ -4086,6 +4086,16 @@
       "players": 21
     },
     {
+      "club": "Municipalidad de Pilar",
+      "appearances": 192,
+      "goals": 354,
+      "yellow": 1,
+      "two_min": 36,
+      "red": 9,
+      "blue": 2,
+      "players": 21
+    },
+    {
       "club": "Muñiz Handball B",
       "appearances": 201,
       "goals": 341,
@@ -4104,16 +4114,6 @@
       "red": 5,
       "blue": 0,
       "players": 23
-    },
-    {
-      "club": "Municipalidad de Pilar",
-      "appearances": 179,
-      "goals": 328,
-      "yellow": 1,
-      "two_min": 34,
-      "red": 9,
-      "blue": 2,
-      "players": 21
     },
     {
       "club": "Ituzaingó",
@@ -4136,6 +4136,16 @@
       "players": 23
     },
     {
+      "club": "U.N.La.M.",
+      "appearances": 171,
+      "goals": 300,
+      "yellow": 3,
+      "two_min": 28,
+      "red": 5,
+      "blue": 0,
+      "players": 18
+    },
+    {
       "club": "Municipalidad de San Martín (Ce.M.E.F)",
       "appearances": 172,
       "goals": 295,
@@ -4144,16 +4154,6 @@
       "red": 8,
       "blue": 0,
       "players": 16
-    },
-    {
-      "club": "U.N.La.M.",
-      "appearances": 162,
-      "goals": 276,
-      "yellow": 3,
-      "two_min": 26,
-      "red": 4,
-      "blue": 0,
-      "players": 18
     }
   ],
   "forecast": {
@@ -4164,2359 +4164,7 @@
       "suspended_win": 3,
       "suspended_loss": 0
     },
-    "teams": [
-      {
-        "club": "Lanús C",
-        "champion_probability": 0.7663,
-        "finish_probabilities": {
-          "first": 0.7663,
-          "second": 0.2337,
-          "third": 0.0
-        },
-        "podium_probability": 1.0,
-        "expected_position": 1.23,
-        "campaign": [
-          {
-            "round": 1,
-            "date": "2026-08-09",
-            "opponent": "Banfield B",
-            "location": "away",
-            "goals_for": 28,
-            "goals_against": 26,
-            "result": "win"
-          },
-          {
-            "round": 2,
-            "date": "2026-08-16",
-            "opponent": "Municipalidad de Pilar",
-            "location": "home",
-            "goals_for": 31,
-            "goals_against": 27,
-            "result": "win"
-          },
-          {
-            "round": 3,
-            "date": "2026-08-23",
-            "opponent": "U.N.La.M.",
-            "location": "away",
-            "goals_for": 24,
-            "goals_against": 18,
-            "result": "win"
-          },
-          {
-            "round": 4,
-            "date": "2026-08-30",
-            "opponent": "Municipalidad de Tres de Febrero B",
-            "location": "home",
-            "goals_for": 30,
-            "goals_against": 26,
-            "result": "win"
-          },
-          {
-            "round": 5,
-            "date": "2026-09-06",
-            "opponent": "Defensores de Moreno",
-            "location": "away",
-            "goals_for": 35,
-            "goals_against": 23,
-            "result": "win"
-          },
-          {
-            "round": 6,
-            "date": "2026-09-13",
-            "opponent": "Palermo Handball",
-            "location": "away",
-            "goals_for": 19,
-            "goals_against": 32,
-            "result": "loss"
-          },
-          {
-            "round": 7,
-            "date": "2026-09-20",
-            "opponent": "C.S. y D. Defensores de Banfield",
-            "location": "home",
-            "goals_for": 40,
-            "goals_against": 28,
-            "result": "win"
-          },
-          {
-            "round": 8,
-            "date": "2026-09-27",
-            "opponent": "Argentinos Juniors D",
-            "location": "away",
-            "goals_for": 33,
-            "goals_against": 22,
-            "result": "win"
-          },
-          {
-            "round": 9,
-            "date": "2026-10-04",
-            "opponent": "Muñiz Handball B",
-            "location": "home",
-            "goals_for": 31,
-            "goals_against": 22,
-            "result": "win"
-          },
-          {
-            "round": 10,
-            "date": "2026-10-11",
-            "opponent": "S.A.G. Polvorines D",
-            "location": "away",
-            "goals_for": 27,
-            "goals_against": 30,
-            "result": "loss"
-          },
-          {
-            "round": 11,
-            "date": "2026-10-22",
-            "opponent": "Ituzaingó",
-            "location": "home",
-            "goals_for": 30,
-            "goals_against": 30,
-            "result": "draw"
-          },
-          {
-            "round": 12,
-            "date": "2026-11-01",
-            "opponent": "Club Deportivo Morón",
-            "location": "away",
-            "goals_for": 31,
-            "goals_against": 28,
-            "result": "win"
-          },
-          {
-            "round": 13,
-            "date": "2026-11-08",
-            "opponent": "Municipalidad de San Martín (Ce.M.E.F)",
-            "location": "home",
-            "goals_for": 35,
-            "goals_against": 20,
-            "result": "win"
-          },
-          {
-            "round": 14,
-            "date": "2026-11-15",
-            "opponent": "Municipalidad de Vicente López C",
-            "location": "away",
-            "goals_for": 26,
-            "goals_against": 24,
-            "result": "win"
-          }
-        ]
-      },
-      {
-        "club": "S.A.P.A.",
-        "champion_probability": 0.2337,
-        "finish_probabilities": {
-          "first": 0.2337,
-          "second": 0.0418,
-          "third": 0.7246
-        },
-        "podium_probability": 1.0,
-        "expected_position": 2.49,
-        "campaign": [
-          {
-            "round": 1,
-            "date": "2026-08-09",
-            "opponent": "C.S. y D. Defensores de Banfield",
-            "location": "home",
-            "goals_for": 27,
-            "goals_against": 36,
-            "result": "loss"
-          },
-          {
-            "round": 2,
-            "date": "2026-08-16",
-            "opponent": "Argentinos Juniors D",
-            "location": "away",
-            "goals_for": 29,
-            "goals_against": 23,
-            "result": "win"
-          },
-          {
-            "round": 3,
-            "date": "2026-08-23",
-            "opponent": "Muñiz Handball B",
-            "location": "home",
-            "goals_for": 22,
-            "goals_against": 20,
-            "result": "win"
-          },
-          {
-            "round": 4,
-            "date": "2026-08-30",
-            "opponent": "S.A.G. Polvorines D",
-            "location": "away",
-            "goals_for": 25,
-            "goals_against": 30,
-            "result": "loss"
-          },
-          {
-            "round": 5,
-            "date": "2026-09-06",
-            "opponent": "Ituzaingó",
-            "location": "home",
-            "goals_for": 32,
-            "goals_against": 23,
-            "result": "win"
-          },
-          {
-            "round": 6,
-            "date": "2026-09-13",
-            "opponent": "Club Deportivo Morón",
-            "location": "away",
-            "goals_for": 32,
-            "goals_against": 29,
-            "result": "win"
-          },
-          {
-            "round": 7,
-            "date": "2026-09-20",
-            "opponent": "Municipalidad de San Martín (Ce.M.E.F)",
-            "location": "home",
-            "goals_for": 22,
-            "goals_against": 17,
-            "result": "win"
-          },
-          {
-            "round": 8,
-            "date": "2026-09-27",
-            "opponent": "Municipalidad de Vicente López C",
-            "location": "away",
-            "goals_for": 25,
-            "goals_against": 30,
-            "result": "loss"
-          },
-          {
-            "round": 9,
-            "date": "2026-10-04",
-            "opponent": "Palermo Handball",
-            "location": "home",
-            "goals_for": 29,
-            "goals_against": 26,
-            "result": "win"
-          },
-          {
-            "round": 10,
-            "date": "2026-10-11",
-            "opponent": "Banfield B",
-            "location": "home",
-            "goals_for": 31,
-            "goals_against": 31,
-            "result": "draw"
-          },
-          {
-            "round": 11,
-            "date": "2026-10-25",
-            "opponent": "Municipalidad de Pilar",
-            "location": "away",
-            "goals_for": 25,
-            "goals_against": 24,
-            "result": "win"
-          },
-          {
-            "round": 12,
-            "date": "2026-11-01",
-            "opponent": "U.N.La.M.",
-            "location": "home",
-            "goals_for": 28,
-            "goals_against": 20,
-            "result": "win"
-          },
-          {
-            "round": 13,
-            "date": "2026-11-08",
-            "opponent": "Municipalidad de Tres de Febrero B",
-            "location": "away",
-            "goals_for": 20,
-            "goals_against": 19,
-            "result": "win"
-          },
-          {
-            "round": 14,
-            "date": "2026-11-15",
-            "opponent": "Defensores de Moreno",
-            "location": "home",
-            "goals_for": 36,
-            "goals_against": 21,
-            "result": "win"
-          }
-        ]
-      },
-      {
-        "club": "Palermo Handball",
-        "champion_probability": 0.0,
-        "finish_probabilities": {
-          "first": 0.0,
-          "second": 0.7246,
-          "third": 0.2754
-        },
-        "podium_probability": 1.0,
-        "expected_position": 2.28,
-        "campaign": [
-          {
-            "round": 1,
-            "date": "2026-08-09",
-            "opponent": "Ituzaingó",
-            "location": "away",
-            "goals_for": 35,
-            "goals_against": 21,
-            "result": "win"
-          },
-          {
-            "round": 2,
-            "date": "2026-08-16",
-            "opponent": "Municipalidad de Tres de Febrero B",
-            "location": "home",
-            "goals_for": 28,
-            "goals_against": 26,
-            "result": "win"
-          },
-          {
-            "round": 3,
-            "date": "2026-08-23",
-            "opponent": "Club Deportivo Morón",
-            "location": "away",
-            "goals_for": 35,
-            "goals_against": 39,
-            "result": "loss"
-          },
-          {
-            "round": 4,
-            "date": "2026-08-30",
-            "opponent": "Defensores de Moreno",
-            "location": "home",
-            "goals_for": 32,
-            "goals_against": 16,
-            "result": "win"
-          },
-          {
-            "round": 5,
-            "date": "2026-09-06",
-            "opponent": "Municipalidad de San Martín (Ce.M.E.F)",
-            "location": "away",
-            "goals_for": 25,
-            "goals_against": 23,
-            "result": "win"
-          },
-          {
-            "round": 6,
-            "date": "2026-09-13",
-            "opponent": "Lanús C",
-            "location": "home",
-            "goals_for": 32,
-            "goals_against": 19,
-            "result": "win"
-          },
-          {
-            "round": 7,
-            "date": "2026-09-20",
-            "opponent": "Municipalidad de Vicente López C",
-            "location": "away",
-            "goals_for": 26,
-            "goals_against": 32,
-            "result": "loss"
-          },
-          {
-            "round": 8,
-            "date": "2026-09-27",
-            "opponent": "C.S. y D. Defensores de Banfield",
-            "location": "home",
-            "goals_for": 34,
-            "goals_against": 21,
-            "result": "win"
-          },
-          {
-            "round": 9,
-            "date": "2026-10-04",
-            "opponent": "S.A.P.A.",
-            "location": "away",
-            "goals_for": 26,
-            "goals_against": 29,
-            "result": "loss"
-          },
-          {
-            "round": 10,
-            "date": "2026-10-11",
-            "opponent": "Argentinos Juniors D",
-            "location": "home",
-            "goals_for": 30,
-            "goals_against": 21,
-            "result": "win"
-          },
-          {
-            "round": 11,
-            "date": "2026-10-25",
-            "opponent": "Banfield B",
-            "location": "away",
-            "goals_for": 29,
-            "goals_against": 27,
-            "result": "win"
-          },
-          {
-            "round": 12,
-            "date": "2026-11-01",
-            "opponent": "Muñiz Handball B",
-            "location": "home",
-            "goals_for": 24,
-            "goals_against": 23,
-            "result": "win"
-          },
-          {
-            "round": 13,
-            "date": "2026-11-08",
-            "opponent": "Municipalidad de Pilar",
-            "location": "away",
-            "goals_for": 34,
-            "goals_against": 22,
-            "result": "win"
-          },
-          {
-            "round": 14,
-            "date": "2026-11-15",
-            "opponent": "S.A.G. Polvorines D",
-            "location": "home",
-            "goals_for": 28,
-            "goals_against": 20,
-            "result": "win"
-          },
-          {
-            "round": 15,
-            "date": "2026-11-22",
-            "opponent": "U.N.La.M.",
-            "location": "away",
-            "goals_for": 17,
-            "goals_against": 18,
-            "result": "loss"
-          }
-        ]
-      },
-      {
-        "club": "Municipalidad de Vicente López C",
-        "champion_probability": 0.0,
-        "finish_probabilities": {
-          "first": 0.0,
-          "second": 0.0,
-          "third": 0.0
-        },
-        "podium_probability": 0.0,
-        "expected_position": 4.0,
-        "campaign": [
-          {
-            "round": 1,
-            "date": "2026-08-09",
-            "opponent": "Argentinos Juniors D",
-            "location": "home",
-            "goals_for": 28,
-            "goals_against": 19,
-            "result": "win"
-          },
-          {
-            "round": 2,
-            "date": "2026-08-16",
-            "opponent": "Muñiz Handball B",
-            "location": "away",
-            "goals_for": 31,
-            "goals_against": 28,
-            "result": "win"
-          },
-          {
-            "round": 3,
-            "date": "2026-08-23",
-            "opponent": "S.A.G. Polvorines D",
-            "location": "home",
-            "goals_for": 29,
-            "goals_against": 26,
-            "result": "win"
-          },
-          {
-            "round": 4,
-            "date": "2026-08-30",
-            "opponent": "Ituzaingó",
-            "location": "away",
-            "goals_for": 27,
-            "goals_against": 22,
-            "result": "win"
-          },
-          {
-            "round": 5,
-            "date": "2026-09-06",
-            "opponent": "Club Deportivo Morón",
-            "location": "home",
-            "goals_for": 29,
-            "goals_against": 22,
-            "result": "win"
-          },
-          {
-            "round": 6,
-            "date": "2026-09-13",
-            "opponent": "Municipalidad de San Martín (Ce.M.E.F)",
-            "location": "away",
-            "goals_for": 22,
-            "goals_against": 27,
-            "result": "loss"
-          },
-          {
-            "round": 7,
-            "date": "2026-09-20",
-            "opponent": "Palermo Handball",
-            "location": "home",
-            "goals_for": 32,
-            "goals_against": 26,
-            "result": "win"
-          },
-          {
-            "round": 8,
-            "date": "2026-09-27",
-            "opponent": "S.A.P.A.",
-            "location": "home",
-            "goals_for": 30,
-            "goals_against": 25,
-            "result": "win"
-          },
-          {
-            "round": 9,
-            "date": "2026-10-04",
-            "opponent": "Banfield B",
-            "location": "away",
-            "goals_for": 29,
-            "goals_against": 26,
-            "result": "win"
-          },
-          {
-            "round": 10,
-            "date": "2026-10-11",
-            "opponent": "Municipalidad de Pilar",
-            "location": "home",
-            "goals_for": 27,
-            "goals_against": 18,
-            "result": "win"
-          },
-          {
-            "round": 11,
-            "date": "2026-10-25",
-            "opponent": "U.N.La.M.",
-            "location": "away",
-            "goals_for": 31,
-            "goals_against": 32,
-            "result": "loss"
-          },
-          {
-            "round": 12,
-            "date": "2026-11-01",
-            "opponent": "Municipalidad de Tres de Febrero B",
-            "location": "home",
-            "goals_for": 29,
-            "goals_against": 32,
-            "result": "loss"
-          },
-          {
-            "round": 13,
-            "date": "2026-11-08",
-            "opponent": "Defensores de Moreno",
-            "location": "away",
-            "goals_for": 31,
-            "goals_against": 26,
-            "result": "win"
-          },
-          {
-            "round": 14,
-            "date": "2026-11-15",
-            "opponent": "Lanús C",
-            "location": "home",
-            "goals_for": 24,
-            "goals_against": 26,
-            "result": "loss"
-          },
-          {
-            "round": 15,
-            "date": "2026-11-22",
-            "opponent": "C.S. y D. Defensores de Banfield",
-            "location": "away",
-            "goals_for": 25,
-            "goals_against": 28,
-            "result": "loss"
-          }
-        ]
-      },
-      {
-        "club": "S.A.G. Polvorines D",
-        "champion_probability": 0.0,
-        "finish_probabilities": {
-          "first": 0.0,
-          "second": 0.0,
-          "third": 0.0
-        },
-        "podium_probability": 0.0,
-        "expected_position": 5.0,
-        "campaign": [
-          {
-            "round": 1,
-            "date": "2026-08-09",
-            "opponent": "Club Deportivo Morón",
-            "location": "away",
-            "goals_for": 22,
-            "goals_against": 33,
-            "result": "loss"
-          },
-          {
-            "round": 2,
-            "date": "2026-08-16",
-            "opponent": "Municipalidad de San Martín (Ce.M.E.F)",
-            "location": "home",
-            "goals_for": 22,
-            "goals_against": 16,
-            "result": "win"
-          },
-          {
-            "round": 3,
-            "date": "2026-08-23",
-            "opponent": "Municipalidad de Vicente López C",
-            "location": "away",
-            "goals_for": 26,
-            "goals_against": 29,
-            "result": "loss"
-          },
-          {
-            "round": 4,
-            "date": "2026-08-30",
-            "opponent": "S.A.P.A.",
-            "location": "home",
-            "goals_for": 30,
-            "goals_against": 25,
-            "result": "win"
-          },
-          {
-            "round": 5,
-            "date": "2026-09-06",
-            "opponent": "Banfield B",
-            "location": "away",
-            "goals_for": 25,
-            "goals_against": 29,
-            "result": "loss"
-          },
-          {
-            "round": 6,
-            "date": "2026-09-13",
-            "opponent": "Municipalidad de Pilar",
-            "location": "home",
-            "goals_for": 26,
-            "goals_against": 24,
-            "result": "win"
-          },
-          {
-            "round": 7,
-            "date": "2026-10-08",
-            "opponent": "U.N.La.M.",
-            "location": "away",
-            "goals_for": 29,
-            "goals_against": 21,
-            "result": "win"
-          },
-          {
-            "round": 8,
-            "date": "2026-09-27",
-            "opponent": "Municipalidad de Tres de Febrero B",
-            "location": "home",
-            "goals_for": 29,
-            "goals_against": 24,
-            "result": "win"
-          },
-          {
-            "round": 9,
-            "date": "2026-10-04",
-            "opponent": "Defensores de Moreno",
-            "location": "away",
-            "goals_for": 28,
-            "goals_against": 31,
-            "result": "loss"
-          },
-          {
-            "round": 10,
-            "date": "2026-10-11",
-            "opponent": "Lanús C",
-            "location": "home",
-            "goals_for": 30,
-            "goals_against": 27,
-            "result": "win"
-          },
-          {
-            "round": 11,
-            "date": "2026-10-25",
-            "opponent": "C.S. y D. Defensores de Banfield",
-            "location": "away",
-            "goals_for": 26,
-            "goals_against": 25,
-            "result": "win"
-          },
-          {
-            "round": 12,
-            "date": "2026-11-01",
-            "opponent": "Argentinos Juniors D",
-            "location": "home",
-            "goals_for": 26,
-            "goals_against": 22,
-            "result": "win"
-          },
-          {
-            "round": 13,
-            "date": "2026-10-28",
-            "opponent": "Muñiz Handball B",
-            "location": "away",
-            "goals_for": 29,
-            "goals_against": 25,
-            "result": "win"
-          },
-          {
-            "round": 14,
-            "date": "2026-11-15",
-            "opponent": "Palermo Handball",
-            "location": "away",
-            "goals_for": 20,
-            "goals_against": 28,
-            "result": "loss"
-          },
-          {
-            "round": 15,
-            "date": "2026-11-22",
-            "opponent": "Ituzaingó",
-            "location": "home",
-            "goals_for": 30,
-            "goals_against": 20,
-            "result": "win"
-          }
-        ]
-      },
-      {
-        "club": "Municipalidad de Pilar",
-        "champion_probability": 0.0,
-        "finish_probabilities": {
-          "first": 0.0,
-          "second": 0.0,
-          "third": 0.0
-        },
-        "podium_probability": 0.0,
-        "expected_position": 6.37,
-        "campaign": [
-          {
-            "round": 1,
-            "date": "2026-08-09",
-            "opponent": "Defensores de Moreno",
-            "location": "home",
-            "goals_for": 31,
-            "goals_against": 19,
-            "result": "win"
-          },
-          {
-            "round": 2,
-            "date": "2026-08-16",
-            "opponent": "Lanús C",
-            "location": "away",
-            "goals_for": 27,
-            "goals_against": 31,
-            "result": "loss"
-          },
-          {
-            "round": 3,
-            "date": "2026-08-23",
-            "opponent": "C.S. y D. Defensores de Banfield",
-            "location": "home",
-            "goals_for": 25,
-            "goals_against": 23,
-            "result": "win"
-          },
-          {
-            "round": 4,
-            "date": "2026-08-30",
-            "opponent": "Argentinos Juniors D",
-            "location": "away",
-            "goals_for": 29,
-            "goals_against": 32,
-            "result": "loss"
-          },
-          {
-            "round": 5,
-            "date": "2026-09-04",
-            "opponent": "Muñiz Handball B",
-            "location": "home",
-            "goals_for": 23,
-            "goals_against": 21,
-            "result": "win"
-          },
-          {
-            "round": 6,
-            "date": "2026-09-13",
-            "opponent": "S.A.G. Polvorines D",
-            "location": "away",
-            "goals_for": 24,
-            "goals_against": 26,
-            "result": "loss"
-          },
-          {
-            "round": 7,
-            "date": "2026-09-20",
-            "opponent": "Ituzaingó",
-            "location": "home",
-            "goals_for": 30,
-            "goals_against": 23,
-            "result": "win"
-          },
-          {
-            "round": 8,
-            "date": "2026-09-27",
-            "opponent": "Club Deportivo Morón",
-            "location": "away",
-            "goals_for": 29,
-            "goals_against": 25,
-            "result": "win"
-          },
-          {
-            "round": 9,
-            "date": "2026-10-04",
-            "opponent": "Municipalidad de San Martín (Ce.M.E.F)",
-            "location": "home",
-            "goals_for": 22,
-            "goals_against": 22,
-            "result": "draw"
-          },
-          {
-            "round": 10,
-            "date": "2026-10-11",
-            "opponent": "Municipalidad de Vicente López C",
-            "location": "away",
-            "goals_for": 18,
-            "goals_against": 27,
-            "result": "loss"
-          },
-          {
-            "round": 11,
-            "date": "2026-10-25",
-            "opponent": "S.A.P.A.",
-            "location": "home",
-            "goals_for": 24,
-            "goals_against": 25,
-            "result": "loss"
-          },
-          {
-            "round": 12,
-            "date": "2026-11-01",
-            "opponent": "Banfield B",
-            "location": "away",
-            "goals_for": 24,
-            "goals_against": 23,
-            "result": "win"
-          },
-          {
-            "round": 13,
-            "date": "2026-11-08",
-            "opponent": "Palermo Handball",
-            "location": "home",
-            "goals_for": 22,
-            "goals_against": 34,
-            "result": "loss"
-          },
-          {
-            "round": 15,
-            "date": "2026-11-22",
-            "opponent": "Municipalidad de Tres de Febrero B",
-            "location": "away",
-            "goals_for": 31,
-            "goals_against": 21,
-            "result": "win"
-          }
-        ]
-      },
-      {
-        "club": "Banfield B",
-        "champion_probability": 0.0,
-        "finish_probabilities": {
-          "first": 0.0,
-          "second": 0.0,
-          "third": 0.0
-        },
-        "podium_probability": 0.0,
-        "expected_position": 6.79,
-        "campaign": [
-          {
-            "round": 1,
-            "date": "2026-08-09",
-            "opponent": "Lanús C",
-            "location": "home",
-            "goals_for": 26,
-            "goals_against": 28,
-            "result": "loss"
-          },
-          {
-            "round": 2,
-            "date": "2026-08-16",
-            "opponent": "C.S. y D. Defensores de Banfield",
-            "location": "away",
-            "goals_for": 28,
-            "goals_against": 27,
-            "result": "win"
-          },
-          {
-            "round": 3,
-            "date": "2026-08-23",
-            "opponent": "Argentinos Juniors D",
-            "location": "home",
-            "goals_for": 41,
-            "goals_against": 24,
-            "result": "win"
-          },
-          {
-            "round": 4,
-            "date": "2026-08-30",
-            "opponent": "Muñiz Handball B",
-            "location": "away",
-            "goals_for": 20,
-            "goals_against": 21,
-            "result": "loss"
-          },
-          {
-            "round": 5,
-            "date": "2026-09-06",
-            "opponent": "S.A.G. Polvorines D",
-            "location": "home",
-            "goals_for": 29,
-            "goals_against": 25,
-            "result": "win"
-          },
-          {
-            "round": 6,
-            "date": "2026-09-13",
-            "opponent": "Ituzaingó",
-            "location": "away",
-            "goals_for": 26,
-            "goals_against": 21,
-            "result": "win"
-          },
-          {
-            "round": 7,
-            "date": "2026-09-20",
-            "opponent": "Club Deportivo Morón",
-            "location": "home",
-            "goals_for": 27,
-            "goals_against": 18,
-            "result": "win"
-          },
-          {
-            "round": 8,
-            "date": "2026-09-27",
-            "opponent": "Municipalidad de San Martín (Ce.M.E.F)",
-            "location": "away",
-            "goals_for": 23,
-            "goals_against": 18,
-            "result": "win"
-          },
-          {
-            "round": 9,
-            "date": "2026-10-04",
-            "opponent": "Municipalidad de Vicente López C",
-            "location": "home",
-            "goals_for": 26,
-            "goals_against": 29,
-            "result": "loss"
-          },
-          {
-            "round": 10,
-            "date": "2026-10-11",
-            "opponent": "S.A.P.A.",
-            "location": "away",
-            "goals_for": 31,
-            "goals_against": 31,
-            "result": "draw"
-          },
-          {
-            "round": 11,
-            "date": "2026-10-25",
-            "opponent": "Palermo Handball",
-            "location": "home",
-            "goals_for": 27,
-            "goals_against": 29,
-            "result": "loss"
-          },
-          {
-            "round": 12,
-            "date": "2026-11-01",
-            "opponent": "Municipalidad de Pilar",
-            "location": "home",
-            "goals_for": 23,
-            "goals_against": 24,
-            "result": "loss"
-          },
-          {
-            "round": 13,
-            "date": "2026-11-08",
-            "opponent": "U.N.La.M.",
-            "location": "away",
-            "goals_for": 22,
-            "goals_against": 19,
-            "result": "win"
-          },
-          {
-            "round": 14,
-            "date": "2026-11-15",
-            "opponent": "Municipalidad de Tres de Febrero B",
-            "location": "home",
-            "goals_for": 37,
-            "goals_against": 18,
-            "result": "win"
-          },
-          {
-            "round": 15,
-            "date": "2026-11-22",
-            "opponent": "Defensores de Moreno",
-            "location": "away",
-            "goals_for": 21,
-            "goals_against": 22,
-            "result": "loss"
-          }
-        ]
-      },
-      {
-        "club": "Muñiz Handball B",
-        "champion_probability": 0.0,
-        "finish_probabilities": {
-          "first": 0.0,
-          "second": 0.0,
-          "third": 0.0
-        },
-        "podium_probability": 0.0,
-        "expected_position": 7.83,
-        "campaign": [
-          {
-            "round": 1,
-            "date": "2026-08-09",
-            "opponent": "Municipalidad de San Martín (Ce.M.E.F)",
-            "location": "away",
-            "goals_for": 23,
-            "goals_against": 19,
-            "result": "win"
-          },
-          {
-            "round": 2,
-            "date": "2026-08-16",
-            "opponent": "Municipalidad de Vicente López C",
-            "location": "home",
-            "goals_for": 28,
-            "goals_against": 31,
-            "result": "loss"
-          },
-          {
-            "round": 3,
-            "date": "2026-08-23",
-            "opponent": "S.A.P.A.",
-            "location": "away",
-            "goals_for": 20,
-            "goals_against": 22,
-            "result": "loss"
-          },
-          {
-            "round": 4,
-            "date": "2026-08-30",
-            "opponent": "Banfield B",
-            "location": "home",
-            "goals_for": 21,
-            "goals_against": 20,
-            "result": "win"
-          },
-          {
-            "round": 5,
-            "date": "2026-09-04",
-            "opponent": "Municipalidad de Pilar",
-            "location": "away",
-            "goals_for": 21,
-            "goals_against": 23,
-            "result": "loss"
-          },
-          {
-            "round": 6,
-            "date": "2026-09-13",
-            "opponent": "U.N.La.M.",
-            "location": "home",
-            "goals_for": 35,
-            "goals_against": 16,
-            "result": "win"
-          },
-          {
-            "round": 7,
-            "date": "2026-09-20",
-            "opponent": "Municipalidad de Tres de Febrero B",
-            "location": "away",
-            "goals_for": 23,
-            "goals_against": 20,
-            "result": "win"
-          },
-          {
-            "round": 8,
-            "date": "2026-09-27",
-            "opponent": "Defensores de Moreno",
-            "location": "home",
-            "goals_for": 28,
-            "goals_against": 22,
-            "result": "win"
-          },
-          {
-            "round": 9,
-            "date": "2026-10-04",
-            "opponent": "Lanús C",
-            "location": "away",
-            "goals_for": 22,
-            "goals_against": 31,
-            "result": "loss"
-          },
-          {
-            "round": 10,
-            "date": "2026-10-11",
-            "opponent": "C.S. y D. Defensores de Banfield",
-            "location": "home",
-            "goals_for": 27,
-            "goals_against": 23,
-            "result": "win"
-          },
-          {
-            "round": 11,
-            "date": "2026-10-25",
-            "opponent": "Argentinos Juniors D",
-            "location": "away",
-            "goals_for": 24,
-            "goals_against": 23,
-            "result": "win"
-          },
-          {
-            "round": 12,
-            "date": "2026-11-01",
-            "opponent": "Palermo Handball",
-            "location": "away",
-            "goals_for": 23,
-            "goals_against": 24,
-            "result": "loss"
-          },
-          {
-            "round": 13,
-            "date": "2026-10-28",
-            "opponent": "S.A.G. Polvorines D",
-            "location": "home",
-            "goals_for": 25,
-            "goals_against": 29,
-            "result": "loss"
-          },
-          {
-            "round": 14,
-            "date": "2026-11-15",
-            "opponent": "Ituzaingó",
-            "location": "away",
-            "goals_for": 21,
-            "goals_against": 20,
-            "result": "win"
-          },
-          {
-            "round": 15,
-            "date": "2026-11-22",
-            "opponent": "Club Deportivo Morón",
-            "location": "home",
-            "goals_for": 21,
-            "goals_against": 22,
-            "result": "loss"
-          }
-        ]
-      },
-      {
-        "club": "Club Deportivo Morón",
-        "champion_probability": 0.0,
-        "finish_probabilities": {
-          "first": 0.0,
-          "second": 0.0,
-          "third": 0.0
-        },
-        "podium_probability": 0.0,
-        "expected_position": 9.0,
-        "campaign": [
-          {
-            "round": 1,
-            "date": "2026-08-09",
-            "opponent": "S.A.G. Polvorines D",
-            "location": "home",
-            "goals_for": 33,
-            "goals_against": 22,
-            "result": "win"
-          },
-          {
-            "round": 2,
-            "date": "2026-08-16",
-            "opponent": "Ituzaingó",
-            "location": "away",
-            "goals_for": 29,
-            "goals_against": 28,
-            "result": "win"
-          },
-          {
-            "round": 3,
-            "date": "2026-08-23",
-            "opponent": "Palermo Handball",
-            "location": "home",
-            "goals_for": 39,
-            "goals_against": 35,
-            "result": "win"
-          },
-          {
-            "round": 4,
-            "date": "2026-08-30",
-            "opponent": "Municipalidad de San Martín (Ce.M.E.F)",
-            "location": "home",
-            "goals_for": 21,
-            "goals_against": 21,
-            "result": "draw"
-          },
-          {
-            "round": 5,
-            "date": "2026-09-06",
-            "opponent": "Municipalidad de Vicente López C",
-            "location": "away",
-            "goals_for": 22,
-            "goals_against": 29,
-            "result": "loss"
-          },
-          {
-            "round": 6,
-            "date": "2026-09-13",
-            "opponent": "S.A.P.A.",
-            "location": "home",
-            "goals_for": 29,
-            "goals_against": 32,
-            "result": "loss"
-          },
-          {
-            "round": 7,
-            "date": "2026-09-20",
-            "opponent": "Banfield B",
-            "location": "away",
-            "goals_for": 18,
-            "goals_against": 27,
-            "result": "loss"
-          },
-          {
-            "round": 8,
-            "date": "2026-09-27",
-            "opponent": "Municipalidad de Pilar",
-            "location": "home",
-            "goals_for": 25,
-            "goals_against": 29,
-            "result": "loss"
-          },
-          {
-            "round": 9,
-            "date": "2026-10-04",
-            "opponent": "U.N.La.M.",
-            "location": "away",
-            "goals_for": 22,
-            "goals_against": 18,
-            "result": "win"
-          },
-          {
-            "round": 10,
-            "date": "2026-10-09",
-            "opponent": "Municipalidad de Tres de Febrero B",
-            "location": "home",
-            "goals_for": 26,
-            "goals_against": 28,
-            "result": "loss"
-          },
-          {
-            "round": 11,
-            "date": "2026-10-25",
-            "opponent": "Defensores de Moreno",
-            "location": "away",
-            "goals_for": 32,
-            "goals_against": 26,
-            "result": "win"
-          },
-          {
-            "round": 12,
-            "date": "2026-11-01",
-            "opponent": "Lanús C",
-            "location": "home",
-            "goals_for": 28,
-            "goals_against": 31,
-            "result": "loss"
-          },
-          {
-            "round": 13,
-            "date": "2026-11-08",
-            "opponent": "C.S. y D. Defensores de Banfield",
-            "location": "away",
-            "goals_for": 22,
-            "goals_against": 32,
-            "result": "loss"
-          },
-          {
-            "round": 14,
-            "date": "2026-11-15",
-            "opponent": "Argentinos Juniors D",
-            "location": "home",
-            "goals_for": 31,
-            "goals_against": 28,
-            "result": "win"
-          },
-          {
-            "round": 15,
-            "date": "2026-11-22",
-            "opponent": "Muñiz Handball B",
-            "location": "away",
-            "goals_for": 22,
-            "goals_against": 21,
-            "result": "win"
-          }
-        ]
-      },
-      {
-        "club": "C.S. y D. Defensores de Banfield",
-        "champion_probability": 0.0,
-        "finish_probabilities": {
-          "first": 0.0,
-          "second": 0.0,
-          "third": 0.0
-        },
-        "podium_probability": 0.0,
-        "expected_position": 10.0,
-        "campaign": [
-          {
-            "round": 1,
-            "date": "2026-08-09",
-            "opponent": "S.A.P.A.",
-            "location": "away",
-            "goals_for": 36,
-            "goals_against": 27,
-            "result": "win"
-          },
-          {
-            "round": 2,
-            "date": "2026-08-16",
-            "opponent": "Banfield B",
-            "location": "home",
-            "goals_for": 27,
-            "goals_against": 28,
-            "result": "loss"
-          },
-          {
-            "round": 3,
-            "date": "2026-08-23",
-            "opponent": "Municipalidad de Pilar",
-            "location": "away",
-            "goals_for": 23,
-            "goals_against": 25,
-            "result": "loss"
-          },
-          {
-            "round": 4,
-            "date": "2026-08-30",
-            "opponent": "U.N.La.M.",
-            "location": "home",
-            "goals_for": 29,
-            "goals_against": 20,
-            "result": "win"
-          },
-          {
-            "round": 5,
-            "date": "2026-09-06",
-            "opponent": "Municipalidad de Tres de Febrero B",
-            "location": "away",
-            "goals_for": 23,
-            "goals_against": 32,
-            "result": "loss"
-          },
-          {
-            "round": 6,
-            "date": "2026-09-13",
-            "opponent": "Defensores de Moreno",
-            "location": "home",
-            "goals_for": 33,
-            "goals_against": 16,
-            "result": "win"
-          },
-          {
-            "round": 7,
-            "date": "2026-09-20",
-            "opponent": "Lanús C",
-            "location": "away",
-            "goals_for": 28,
-            "goals_against": 40,
-            "result": "loss"
-          },
-          {
-            "round": 8,
-            "date": "2026-09-27",
-            "opponent": "Palermo Handball",
-            "location": "away",
-            "goals_for": 21,
-            "goals_against": 34,
-            "result": "loss"
-          },
-          {
-            "round": 9,
-            "date": "2026-10-04",
-            "opponent": "Argentinos Juniors D",
-            "location": "home",
-            "goals_for": 27,
-            "goals_against": 25,
-            "result": "win"
-          },
-          {
-            "round": 10,
-            "date": "2026-10-11",
-            "opponent": "Muñiz Handball B",
-            "location": "away",
-            "goals_for": 23,
-            "goals_against": 27,
-            "result": "loss"
-          },
-          {
-            "round": 11,
-            "date": "2026-10-25",
-            "opponent": "S.A.G. Polvorines D",
-            "location": "home",
-            "goals_for": 25,
-            "goals_against": 26,
-            "result": "loss"
-          },
-          {
-            "round": 12,
-            "date": "2026-11-01",
-            "opponent": "Ituzaingó",
-            "location": "away",
-            "goals_for": 28,
-            "goals_against": 29,
-            "result": "loss"
-          },
-          {
-            "round": 13,
-            "date": "2026-11-08",
-            "opponent": "Club Deportivo Morón",
-            "location": "home",
-            "goals_for": 32,
-            "goals_against": 22,
-            "result": "win"
-          },
-          {
-            "round": 14,
-            "date": "2026-11-15",
-            "opponent": "Municipalidad de San Martín (Ce.M.E.F)",
-            "location": "away",
-            "goals_for": 28,
-            "goals_against": 28,
-            "result": "draw"
-          },
-          {
-            "round": 15,
-            "date": "2026-11-22",
-            "opponent": "Municipalidad de Vicente López C",
-            "location": "home",
-            "goals_for": 28,
-            "goals_against": 25,
-            "result": "win"
-          }
-        ]
-      },
-      {
-        "club": "Municipalidad de Tres de Febrero B",
-        "champion_probability": 0.0,
-        "finish_probabilities": {
-          "first": 0.0,
-          "second": 0.0,
-          "third": 0.0
-        },
-        "podium_probability": 0.0,
-        "expected_position": 11.0,
-        "campaign": [
-          {
-            "round": 1,
-            "date": "2026-08-09",
-            "opponent": "U.N.La.M.",
-            "location": "away",
-            "goals_for": 12,
-            "goals_against": 23,
-            "result": "loss"
-          },
-          {
-            "round": 2,
-            "date": "2026-08-16",
-            "opponent": "Palermo Handball",
-            "location": "away",
-            "goals_for": 26,
-            "goals_against": 28,
-            "result": "loss"
-          },
-          {
-            "round": 3,
-            "date": "2026-08-23",
-            "opponent": "Defensores de Moreno",
-            "location": "home",
-            "goals_for": 38,
-            "goals_against": 26,
-            "result": "win"
-          },
-          {
-            "round": 4,
-            "date": "2026-08-30",
-            "opponent": "Lanús C",
-            "location": "away",
-            "goals_for": 26,
-            "goals_against": 30,
-            "result": "loss"
-          },
-          {
-            "round": 5,
-            "date": "2026-09-06",
-            "opponent": "C.S. y D. Defensores de Banfield",
-            "location": "home",
-            "goals_for": 32,
-            "goals_against": 23,
-            "result": "win"
-          },
-          {
-            "round": 6,
-            "date": "2026-09-13",
-            "opponent": "Argentinos Juniors D",
-            "location": "away",
-            "goals_for": 24,
-            "goals_against": 27,
-            "result": "loss"
-          },
-          {
-            "round": 7,
-            "date": "2026-09-20",
-            "opponent": "Muñiz Handball B",
-            "location": "home",
-            "goals_for": 20,
-            "goals_against": 23,
-            "result": "loss"
-          },
-          {
-            "round": 8,
-            "date": "2026-09-27",
-            "opponent": "S.A.G. Polvorines D",
-            "location": "away",
-            "goals_for": 24,
-            "goals_against": 29,
-            "result": "loss"
-          },
-          {
-            "round": 9,
-            "date": "2026-10-04",
-            "opponent": "Ituzaingó",
-            "location": "home",
-            "goals_for": 38,
-            "goals_against": 34,
-            "result": "win"
-          },
-          {
-            "round": 10,
-            "date": "2026-10-09",
-            "opponent": "Club Deportivo Morón",
-            "location": "away",
-            "goals_for": 28,
-            "goals_against": 26,
-            "result": "win"
-          },
-          {
-            "round": 11,
-            "date": "2026-10-25",
-            "opponent": "Municipalidad de San Martín (Ce.M.E.F)",
-            "location": "home",
-            "goals_for": 24,
-            "goals_against": 23,
-            "result": "win"
-          },
-          {
-            "round": 12,
-            "date": "2026-11-01",
-            "opponent": "Municipalidad de Vicente López C",
-            "location": "away",
-            "goals_for": 32,
-            "goals_against": 29,
-            "result": "win"
-          },
-          {
-            "round": 13,
-            "date": "2026-11-08",
-            "opponent": "S.A.P.A.",
-            "location": "home",
-            "goals_for": 19,
-            "goals_against": 20,
-            "result": "loss"
-          },
-          {
-            "round": 14,
-            "date": "2026-11-15",
-            "opponent": "Banfield B",
-            "location": "away",
-            "goals_for": 18,
-            "goals_against": 37,
-            "result": "loss"
-          },
-          {
-            "round": 15,
-            "date": "2026-11-22",
-            "opponent": "Municipalidad de Pilar",
-            "location": "home",
-            "goals_for": 21,
-            "goals_against": 31,
-            "result": "loss"
-          }
-        ]
-      },
-      {
-        "club": "Municipalidad de San Martín (Ce.M.E.F)",
-        "champion_probability": 0.0,
-        "finish_probabilities": {
-          "first": 0.0,
-          "second": 0.0,
-          "third": 0.0
-        },
-        "podium_probability": 0.0,
-        "expected_position": 12.0,
-        "campaign": [
-          {
-            "round": 1,
-            "date": "2026-08-09",
-            "opponent": "Muñiz Handball B",
-            "location": "home",
-            "goals_for": 19,
-            "goals_against": 23,
-            "result": "loss"
-          },
-          {
-            "round": 2,
-            "date": "2026-08-16",
-            "opponent": "S.A.G. Polvorines D",
-            "location": "away",
-            "goals_for": 16,
-            "goals_against": 22,
-            "result": "loss"
-          },
-          {
-            "round": 3,
-            "date": "2026-08-23",
-            "opponent": "Ituzaingó",
-            "location": "home",
-            "goals_for": 2,
-            "goals_against": 0,
-            "result": "win"
-          },
-          {
-            "round": 4,
-            "date": "2026-08-30",
-            "opponent": "Club Deportivo Morón",
-            "location": "away",
-            "goals_for": 21,
-            "goals_against": 21,
-            "result": "draw"
-          },
-          {
-            "round": 5,
-            "date": "2026-09-06",
-            "opponent": "Palermo Handball",
-            "location": "home",
-            "goals_for": 23,
-            "goals_against": 25,
-            "result": "loss"
-          },
-          {
-            "round": 6,
-            "date": "2026-09-13",
-            "opponent": "Municipalidad de Vicente López C",
-            "location": "home",
-            "goals_for": 27,
-            "goals_against": 22,
-            "result": "win"
-          },
-          {
-            "round": 7,
-            "date": "2026-09-20",
-            "opponent": "S.A.P.A.",
-            "location": "away",
-            "goals_for": 17,
-            "goals_against": 22,
-            "result": "loss"
-          },
-          {
-            "round": 8,
-            "date": "2026-09-27",
-            "opponent": "Banfield B",
-            "location": "home",
-            "goals_for": 18,
-            "goals_against": 23,
-            "result": "loss"
-          },
-          {
-            "round": 9,
-            "date": "2026-10-04",
-            "opponent": "Municipalidad de Pilar",
-            "location": "away",
-            "goals_for": 22,
-            "goals_against": 22,
-            "result": "draw"
-          },
-          {
-            "round": 10,
-            "date": "2026-10-11",
-            "opponent": "U.N.La.M.",
-            "location": "home",
-            "goals_for": 24,
-            "goals_against": 23,
-            "result": "win"
-          },
-          {
-            "round": 11,
-            "date": "2026-10-25",
-            "opponent": "Municipalidad de Tres de Febrero B",
-            "location": "away",
-            "goals_for": 23,
-            "goals_against": 24,
-            "result": "loss"
-          },
-          {
-            "round": 12,
-            "date": "2026-11-01",
-            "opponent": "Defensores de Moreno",
-            "location": "home",
-            "goals_for": 37,
-            "goals_against": 24,
-            "result": "win"
-          },
-          {
-            "round": 13,
-            "date": "2026-11-08",
-            "opponent": "Lanús C",
-            "location": "away",
-            "goals_for": 20,
-            "goals_against": 35,
-            "result": "loss"
-          },
-          {
-            "round": 14,
-            "date": "2026-11-15",
-            "opponent": "C.S. y D. Defensores de Banfield",
-            "location": "home",
-            "goals_for": 28,
-            "goals_against": 28,
-            "result": "draw"
-          },
-          {
-            "round": 15,
-            "date": "2026-11-22",
-            "opponent": "Argentinos Juniors D",
-            "location": "away",
-            "goals_for": 24,
-            "goals_against": 24,
-            "result": "draw"
-          }
-        ]
-      },
-      {
-        "club": "Argentinos Juniors D",
-        "champion_probability": 0.0,
-        "finish_probabilities": {
-          "first": 0.0,
-          "second": 0.0,
-          "third": 0.0
-        },
-        "podium_probability": 0.0,
-        "expected_position": 13.0,
-        "campaign": [
-          {
-            "round": 1,
-            "date": "2026-08-09",
-            "opponent": "Municipalidad de Vicente López C",
-            "location": "away",
-            "goals_for": 19,
-            "goals_against": 28,
-            "result": "loss"
-          },
-          {
-            "round": 2,
-            "date": "2026-08-16",
-            "opponent": "S.A.P.A.",
-            "location": "home",
-            "goals_for": 23,
-            "goals_against": 29,
-            "result": "loss"
-          },
-          {
-            "round": 3,
-            "date": "2026-08-23",
-            "opponent": "Banfield B",
-            "location": "away",
-            "goals_for": 24,
-            "goals_against": 41,
-            "result": "loss"
-          },
-          {
-            "round": 4,
-            "date": "2026-08-30",
-            "opponent": "Municipalidad de Pilar",
-            "location": "home",
-            "goals_for": 32,
-            "goals_against": 29,
-            "result": "win"
-          },
-          {
-            "round": 5,
-            "date": "2026-09-06",
-            "opponent": "U.N.La.M.",
-            "location": "away",
-            "goals_for": 23,
-            "goals_against": 22,
-            "result": "win"
-          },
-          {
-            "round": 6,
-            "date": "2026-09-13",
-            "opponent": "Municipalidad de Tres de Febrero B",
-            "location": "home",
-            "goals_for": 27,
-            "goals_against": 24,
-            "result": "win"
-          },
-          {
-            "round": 7,
-            "date": "2026-09-20",
-            "opponent": "Defensores de Moreno",
-            "location": "away",
-            "goals_for": 24,
-            "goals_against": 22,
-            "result": "win"
-          },
-          {
-            "round": 8,
-            "date": "2026-09-27",
-            "opponent": "Lanús C",
-            "location": "home",
-            "goals_for": 22,
-            "goals_against": 33,
-            "result": "loss"
-          },
-          {
-            "round": 9,
-            "date": "2026-10-04",
-            "opponent": "C.S. y D. Defensores de Banfield",
-            "location": "away",
-            "goals_for": 25,
-            "goals_against": 27,
-            "result": "loss"
-          },
-          {
-            "round": 10,
-            "date": "2026-10-11",
-            "opponent": "Palermo Handball",
-            "location": "away",
-            "goals_for": 21,
-            "goals_against": 30,
-            "result": "loss"
-          },
-          {
-            "round": 11,
-            "date": "2026-10-25",
-            "opponent": "Muñiz Handball B",
-            "location": "home",
-            "goals_for": 23,
-            "goals_against": 24,
-            "result": "loss"
-          },
-          {
-            "round": 12,
-            "date": "2026-11-01",
-            "opponent": "S.A.G. Polvorines D",
-            "location": "away",
-            "goals_for": 22,
-            "goals_against": 26,
-            "result": "loss"
-          },
-          {
-            "round": 13,
-            "date": "2026-11-08",
-            "opponent": "Ituzaingó",
-            "location": "home",
-            "goals_for": 27,
-            "goals_against": 22,
-            "result": "win"
-          },
-          {
-            "round": 14,
-            "date": "2026-11-15",
-            "opponent": "Club Deportivo Morón",
-            "location": "away",
-            "goals_for": 28,
-            "goals_against": 31,
-            "result": "loss"
-          },
-          {
-            "round": 15,
-            "date": "2026-11-22",
-            "opponent": "Municipalidad de San Martín (Ce.M.E.F)",
-            "location": "home",
-            "goals_for": 24,
-            "goals_against": 24,
-            "result": "draw"
-          }
-        ]
-      },
-      {
-        "club": "U.N.La.M.",
-        "champion_probability": 0.0,
-        "finish_probabilities": {
-          "first": 0.0,
-          "second": 0.0,
-          "third": 0.0
-        },
-        "podium_probability": 0.0,
-        "expected_position": 14.0,
-        "campaign": [
-          {
-            "round": 1,
-            "date": "2026-08-09",
-            "opponent": "Municipalidad de Tres de Febrero B",
-            "location": "home",
-            "goals_for": 23,
-            "goals_against": 12,
-            "result": "win"
-          },
-          {
-            "round": 2,
-            "date": "2026-08-16",
-            "opponent": "Defensores de Moreno",
-            "location": "away",
-            "goals_for": 22,
-            "goals_against": 21,
-            "result": "win"
-          },
-          {
-            "round": 3,
-            "date": "2026-08-23",
-            "opponent": "Lanús C",
-            "location": "home",
-            "goals_for": 18,
-            "goals_against": 24,
-            "result": "loss"
-          },
-          {
-            "round": 4,
-            "date": "2026-08-30",
-            "opponent": "C.S. y D. Defensores de Banfield",
-            "location": "away",
-            "goals_for": 20,
-            "goals_against": 29,
-            "result": "loss"
-          },
-          {
-            "round": 5,
-            "date": "2026-09-06",
-            "opponent": "Argentinos Juniors D",
-            "location": "home",
-            "goals_for": 22,
-            "goals_against": 23,
-            "result": "loss"
-          },
-          {
-            "round": 6,
-            "date": "2026-09-13",
-            "opponent": "Muñiz Handball B",
-            "location": "away",
-            "goals_for": 16,
-            "goals_against": 35,
-            "result": "loss"
-          },
-          {
-            "round": 7,
-            "date": "2026-10-08",
-            "opponent": "S.A.G. Polvorines D",
-            "location": "home",
-            "goals_for": 21,
-            "goals_against": 29,
-            "result": "loss"
-          },
-          {
-            "round": 8,
-            "date": "2026-09-27",
-            "opponent": "Ituzaingó",
-            "location": "away",
-            "goals_for": 22,
-            "goals_against": 27,
-            "result": "loss"
-          },
-          {
-            "round": 9,
-            "date": "2026-10-04",
-            "opponent": "Club Deportivo Morón",
-            "location": "home",
-            "goals_for": 18,
-            "goals_against": 22,
-            "result": "loss"
-          },
-          {
-            "round": 10,
-            "date": "2026-10-11",
-            "opponent": "Municipalidad de San Martín (Ce.M.E.F)",
-            "location": "away",
-            "goals_for": 23,
-            "goals_against": 24,
-            "result": "loss"
-          },
-          {
-            "round": 11,
-            "date": "2026-10-25",
-            "opponent": "Municipalidad de Vicente López C",
-            "location": "home",
-            "goals_for": 32,
-            "goals_against": 31,
-            "result": "win"
-          },
-          {
-            "round": 12,
-            "date": "2026-11-01",
-            "opponent": "S.A.P.A.",
-            "location": "away",
-            "goals_for": 20,
-            "goals_against": 28,
-            "result": "loss"
-          },
-          {
-            "round": 13,
-            "date": "2026-11-08",
-            "opponent": "Banfield B",
-            "location": "home",
-            "goals_for": 19,
-            "goals_against": 22,
-            "result": "loss"
-          },
-          {
-            "round": 15,
-            "date": "2026-11-22",
-            "opponent": "Palermo Handball",
-            "location": "home",
-            "goals_for": 18,
-            "goals_against": 17,
-            "result": "win"
-          }
-        ]
-      },
-      {
-        "club": "Defensores de Moreno",
-        "champion_probability": 0.0,
-        "finish_probabilities": {
-          "first": 0.0,
-          "second": 0.0,
-          "third": 0.0
-        },
-        "podium_probability": 0.0,
-        "expected_position": 15.0,
-        "campaign": [
-          {
-            "round": 1,
-            "date": "2026-08-09",
-            "opponent": "Municipalidad de Pilar",
-            "location": "away",
-            "goals_for": 19,
-            "goals_against": 31,
-            "result": "loss"
-          },
-          {
-            "round": 2,
-            "date": "2026-08-16",
-            "opponent": "U.N.La.M.",
-            "location": "home",
-            "goals_for": 21,
-            "goals_against": 22,
-            "result": "loss"
-          },
-          {
-            "round": 3,
-            "date": "2026-08-23",
-            "opponent": "Municipalidad de Tres de Febrero B",
-            "location": "away",
-            "goals_for": 26,
-            "goals_against": 38,
-            "result": "loss"
-          },
-          {
-            "round": 4,
-            "date": "2026-08-30",
-            "opponent": "Palermo Handball",
-            "location": "away",
-            "goals_for": 16,
-            "goals_against": 32,
-            "result": "loss"
-          },
-          {
-            "round": 5,
-            "date": "2026-09-06",
-            "opponent": "Lanús C",
-            "location": "home",
-            "goals_for": 23,
-            "goals_against": 35,
-            "result": "loss"
-          },
-          {
-            "round": 6,
-            "date": "2026-09-13",
-            "opponent": "C.S. y D. Defensores de Banfield",
-            "location": "away",
-            "goals_for": 16,
-            "goals_against": 33,
-            "result": "loss"
-          },
-          {
-            "round": 7,
-            "date": "2026-09-20",
-            "opponent": "Argentinos Juniors D",
-            "location": "home",
-            "goals_for": 22,
-            "goals_against": 24,
-            "result": "loss"
-          },
-          {
-            "round": 8,
-            "date": "2026-09-27",
-            "opponent": "Muñiz Handball B",
-            "location": "away",
-            "goals_for": 22,
-            "goals_against": 28,
-            "result": "loss"
-          },
-          {
-            "round": 9,
-            "date": "2026-10-04",
-            "opponent": "S.A.G. Polvorines D",
-            "location": "home",
-            "goals_for": 31,
-            "goals_against": 28,
-            "result": "win"
-          },
-          {
-            "round": 10,
-            "date": "2026-10-09",
-            "opponent": "Ituzaingó",
-            "location": "away",
-            "goals_for": 27,
-            "goals_against": 26,
-            "result": "win"
-          },
-          {
-            "round": 11,
-            "date": "2026-10-25",
-            "opponent": "Club Deportivo Morón",
-            "location": "home",
-            "goals_for": 26,
-            "goals_against": 32,
-            "result": "loss"
-          },
-          {
-            "round": 12,
-            "date": "2026-11-01",
-            "opponent": "Municipalidad de San Martín (Ce.M.E.F)",
-            "location": "away",
-            "goals_for": 24,
-            "goals_against": 37,
-            "result": "loss"
-          },
-          {
-            "round": 13,
-            "date": "2026-11-08",
-            "opponent": "Municipalidad de Vicente López C",
-            "location": "home",
-            "goals_for": 26,
-            "goals_against": 31,
-            "result": "loss"
-          },
-          {
-            "round": 14,
-            "date": "2026-11-15",
-            "opponent": "S.A.P.A.",
-            "location": "away",
-            "goals_for": 21,
-            "goals_against": 36,
-            "result": "loss"
-          },
-          {
-            "round": 15,
-            "date": "2026-11-22",
-            "opponent": "Banfield B",
-            "location": "home",
-            "goals_for": 22,
-            "goals_against": 21,
-            "result": "win"
-          }
-        ]
-      },
-      {
-        "club": "Ituzaingó",
-        "champion_probability": 0.0,
-        "finish_probabilities": {
-          "first": 0.0,
-          "second": 0.0,
-          "third": 0.0
-        },
-        "podium_probability": 0.0,
-        "expected_position": 16.0,
-        "campaign": [
-          {
-            "round": 1,
-            "date": "2026-08-09",
-            "opponent": "Palermo Handball",
-            "location": "home",
-            "goals_for": 21,
-            "goals_against": 35,
-            "result": "loss"
-          },
-          {
-            "round": 2,
-            "date": "2026-08-16",
-            "opponent": "Club Deportivo Morón",
-            "location": "home",
-            "goals_for": 28,
-            "goals_against": 29,
-            "result": "loss"
-          },
-          {
-            "round": 3,
-            "date": "2026-08-23",
-            "opponent": "Municipalidad de San Martín (Ce.M.E.F)",
-            "location": "away",
-            "goals_for": 0,
-            "goals_against": 2,
-            "result": "loss"
-          },
-          {
-            "round": 4,
-            "date": "2026-08-30",
-            "opponent": "Municipalidad de Vicente López C",
-            "location": "home",
-            "goals_for": 22,
-            "goals_against": 27,
-            "result": "loss"
-          },
-          {
-            "round": 5,
-            "date": "2026-09-06",
-            "opponent": "S.A.P.A.",
-            "location": "away",
-            "goals_for": 23,
-            "goals_against": 32,
-            "result": "loss"
-          },
-          {
-            "round": 6,
-            "date": "2026-09-13",
-            "opponent": "Banfield B",
-            "location": "home",
-            "goals_for": 21,
-            "goals_against": 26,
-            "result": "loss"
-          },
-          {
-            "round": 7,
-            "date": "2026-09-20",
-            "opponent": "Municipalidad de Pilar",
-            "location": "away",
-            "goals_for": 23,
-            "goals_against": 30,
-            "result": "loss"
-          },
-          {
-            "round": 8,
-            "date": "2026-09-27",
-            "opponent": "U.N.La.M.",
-            "location": "home",
-            "goals_for": 27,
-            "goals_against": 22,
-            "result": "win"
-          },
-          {
-            "round": 9,
-            "date": "2026-10-04",
-            "opponent": "Municipalidad de Tres de Febrero B",
-            "location": "away",
-            "goals_for": 34,
-            "goals_against": 38,
-            "result": "loss"
-          },
-          {
-            "round": 10,
-            "date": "2026-10-09",
-            "opponent": "Defensores de Moreno",
-            "location": "home",
-            "goals_for": 26,
-            "goals_against": 27,
-            "result": "loss"
-          },
-          {
-            "round": 11,
-            "date": "2026-10-22",
-            "opponent": "Lanús C",
-            "location": "away",
-            "goals_for": 30,
-            "goals_against": 30,
-            "result": "draw"
-          },
-          {
-            "round": 12,
-            "date": "2026-11-01",
-            "opponent": "C.S. y D. Defensores de Banfield",
-            "location": "home",
-            "goals_for": 29,
-            "goals_against": 28,
-            "result": "win"
-          },
-          {
-            "round": 13,
-            "date": "2026-11-08",
-            "opponent": "Argentinos Juniors D",
-            "location": "away",
-            "goals_for": 22,
-            "goals_against": 27,
-            "result": "loss"
-          },
-          {
-            "round": 14,
-            "date": "2026-11-15",
-            "opponent": "Muñiz Handball B",
-            "location": "home",
-            "goals_for": 20,
-            "goals_against": 21,
-            "result": "loss"
-          },
-          {
-            "round": 15,
-            "date": "2026-11-22",
-            "opponent": "S.A.G. Polvorines D",
-            "location": "away",
-            "goals_for": 20,
-            "goals_against": 30,
-            "result": "loss"
-          }
-        ]
-      }
-    ],
-    "fixtures": [
-      {
-        "round": 14,
-        "date": "2026-11-15",
-        "home": "Municipalidad de Pilar",
-        "away": "U.N.La.M.",
-        "home_win_probability": 0.7969,
-        "draw_probability": 0.0398,
-        "away_win_probability": 0.1633
-      },
-      {
-        "round": 15,
-        "date": "2026-11-22",
-        "home": "Lanús C",
-        "away": "S.A.P.A.",
-        "home_win_probability": 0.7256,
-        "draw_probability": 0.0426,
-        "away_win_probability": 0.2317
-      }
-    ]
+    "teams": [],
+    "fixtures": []
   }
 }

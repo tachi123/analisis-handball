@@ -142,6 +142,19 @@
 .forecast-confidence.moderate { background: #fef3c7; color: #92400e; }
 .forecast-confidence.exploratory { background: #f1f5f9; color: #475569; }
 .forecast-disclosure { margin: .65rem 0 0; color: #64748b; }
+.forecast-complete { grid-template-columns: 1fr; }
+.forecast-complete .table-empty { margin: 0; }
+.forecast-archive { margin-top: 1.5rem; border: 1px solid #cbd5e1; background: #f8fafc; }
+.forecast-archive-result { margin: .8rem 0; color: #334155; }
+.forecast-archive-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
+.forecast-archive-card { display: grid; gap: .35rem; padding: .9rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; }
+.forecast-archive-card > p { margin: 0; color: #64748b; font-size: .72rem; font-weight: 800; letter-spacing: .03em; text-transform: uppercase; }
+.forecast-archive-card > strong { color: #0f172a; }
+.forecast-archive-card > span { color: #64748b; font-size: .8rem; }
+.forecast-archive-card .finish-cards { grid-template-columns: repeat(5, minmax(56px, 1fr)); }
+.forecast-archive-details { margin-top: .8rem; padding: .8rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; }
+.forecast-archive-details summary { cursor: pointer; color: #1d4ed8; font-weight: 800; }
+.forecast-archive-details .table-wrap { margin-top: .8rem; }
 
 /* Season profile */
 .season-shell .hero { background: linear-gradient(120deg, #eff6ff, #fff7ed); }
@@ -208,6 +221,7 @@
   .finish-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .annual-summary { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .fixture-grid { grid-template-columns: 1fr; }
+  .forecast-archive-grid { grid-template-columns: 1fr; }
   .sapa-spotlight-extra { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .season-block-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .attack-composition-grid { grid-template-columns: 1fr; }

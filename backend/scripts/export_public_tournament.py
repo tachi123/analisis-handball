@@ -37,6 +37,7 @@ PUBLIC_COMPETITIONS: tuple[dict[str, Any], ...] = (
     {"key": "apertura-zona-b-2026", "stage_id": 11, "label": "Apertura 2026 · Zona B", "competition": "Apertura 2026", "zone": "B"},
 )
 FORECAST_KEY = "permanencia-2026"
+FORECAST_ARCHIVES_DIR = Path(__file__).resolve().parents[1] / "config" / "public_forecast_archives"
 
 # Confirmed by the SAPA staff for the 2026 Permanencia final round.  Match the
 # official-sheet spelling through stable surname/first-name fragments so public
@@ -103,6 +104,33 @@ def _club_rows(clubs: dict[str, Any]) -> list[dict[str, Any]]:
 
 def _club_name(registration: Any) -> str:
     return registration.competition_team.display_name
+
+
+def _forecast_archives() -> list[dict[str, Any]]:
+    """Return reviewed, public-safe pre-match forecast snapshots.
+
+    Forecasts disappear once every fixture is played.  Their archived snapshots
+    remain useful for review and future comparison, so keep them as static,
+    versioned public documents rather than recalculating them from final data.
+    """
+    if not FORECAST_ARCHIVES_DIR.is_dir():
+        return []
+    archives = []
+    for path in sorted(FORECAST_ARCHIVES_DIR.glob("*.json")):
+        archive = json.loads(path.read_text(encoding="utf-8"))
+        if archive.get("schema_version") != "forecast-archive-v1":
+            raise ValueError(f"Unsupported forecast archive: {path.name}")
+        archives.append(
+            {
+                "key": archive["key"],
+                "title": archive["title"],
+                "captured_at": archive["captured_at"],
+                "fixture": archive["fixture"],
+                "result": archive["result"],
+                "forecast": archive["forecast"],
+            }
+        )
+    return archives
 
 
 def _forecast_rows(db: Any, stage_id: int, standings: dict[str, Any]) -> dict[str, Any]:
@@ -459,6 +487,7 @@ def build_forecast_document(stage_id: int = 9, key: str = FORECAST_KEY) -> dict[
         "teams": forecast["teams"],
         "fixtures": forecast["fixtures"],
         **({"player_forecast": forecast["player_forecast"]} if "player_forecast" in forecast else {}),
+        "archives": _forecast_archives(),
         "rival_profile": {
             "club": rival,
             "competitions": [
